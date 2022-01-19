@@ -60,7 +60,7 @@ This model was contributed by [novice03](https://huggingface.co/novice03>). The 
 
 <div class="docstring">
 
-<docstring><name>class transformers.SwinConfig</name><anchor>transformers.SwinConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15085/src/transformers/models/swin/configuration_swin.py#L29</source><parameters>[{"name": "image_size", "val": " = 224"}, {"name": "patch_size", "val": " = 4"}, {"name": "num_channels", "val": " = 3"}, {"name": "embed_dim", "val": " = 96"}, {"name": "depths", "val": " = [2, 2, 6, 2]"}, {"name": "num_heads", "val": " = [3, 6, 12, 24]"}, {"name": "window_size", "val": " = 7"}, {"name": "mlp_ratio", "val": " = 4.0"}, {"name": "qkv_bias", "val": " = True"}, {"name": "drop_rate", "val": " = 0.0"}, {"name": "attn_drop_rate", "val": " = 0.0"}, {"name": "drop_path_rate", "val": " = 0.1"}, {"name": "hidden_act", "val": " = 'gelu'"}, {"name": "use_absolute_embeddings", "val": " = False"}, {"name": "patch_norm", "val": " = True"}, {"name": "initializer_range", "val": " = 0.02"}, {"name": "layer_norm_eps", "val": " = 1e-05"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **image_size** (`int`, *optional*, defaults to 224) --
+<docstring><name>class transformers.SwinConfig</name><anchor>transformers.SwinConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15085/src/transformers/models/swin/configuration_swin.py#L29</source><parameters>[{"name": "image_size", "val": " = 224"}, {"name": "patch_size", "val": " = 4"}, {"name": "num_channels", "val": " = 3"}, {"name": "embed_dim", "val": " = 96"}, {"name": "depths", "val": " = [2, 2, 6, 2]"}, {"name": "num_heads", "val": " = [3, 6, 12, 24]"}, {"name": "window_size", "val": " = 7"}, {"name": "mlp_ratio", "val": " = 4.0"}, {"name": "qkv_bias", "val": " = True"}, {"name": "hidden_dropout_prob", "val": " = 0.0"}, {"name": "attention_probs_dropout_prob", "val": " = 0.0"}, {"name": "drop_path_rate", "val": " = 0.1"}, {"name": "hidden_act", "val": " = 'gelu'"}, {"name": "use_absolute_embeddings", "val": " = False"}, {"name": "patch_norm", "val": " = True"}, {"name": "initializer_range", "val": " = 0.02"}, {"name": "layer_norm_eps", "val": " = 1e-05"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **image_size** (`int`, *optional*, defaults to 224) --
   The size (resolution) of each image.
 - **patch_size** (`int`, *optional*, defaults to 4) --
   The size (resolution) of each patch.
@@ -79,13 +79,13 @@ This model was contributed by [novice03](https://huggingface.co/novice03>). The 
 - **qkv_bias** (`bool`, *optional*, defaults to True) --
   Whether or not a learnable bias should be added to the queries, keys and values.
 - **hidden_dropout_prob** (`float`, *optional*, defaults to 0.0) --
-  The dropout probability for all fully connected layers in the embeddings, encoder, and pooler.
+  The dropout probability for all fully connected layers in the embeddings and encoder.
 - **attention_probs_dropout_prob** (`float`, *optional*, defaults to 0.0) --
   The dropout ratio for the attention probabilities.
 - **drop_path_rate** (`float`, *optional*, defaults to 0.1) --
   Stochastic depth rate.
 - **hidden_act** (`str` or `function`, *optional*, defaults to `"gelu"`) --
-  The non-linear activation function (function or string) in the encoder and pooler. If string, `"gelu"`,
+  The non-linear activation function (function or string) in the encoder. If string, `"gelu"`,
   `"relu"`, `"selu"` and `"gelu_new"` are supported.
 - **use_absolute_embeddings** (`bool`, *optional*, defaults to False) --
   Whether or not to add absolute position embeddings to the patch embeddings.
