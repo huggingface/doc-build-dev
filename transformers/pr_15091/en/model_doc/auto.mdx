@@ -171,7 +171,7 @@ Likewise, if your `NewModel` is a subclass of [PreTrainedModel](/docs/transforme
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoConfig</name><anchor>transformers.AutoConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/configuration_auto.py#L498</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoConfig</name><anchor>transformers.AutoConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/configuration_auto.py#L501</source><parameters>[]</parameters></docstring>
 
 This is a generic configuration class that will be instantiated as one of the configuration classes of the library
 when created with the [from_pretrained()](/docs/transformers/pr_15091/en/model_doc/auto#transformers.AutoConfig.from_pretrained) class method.
@@ -181,7 +181,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoConfig.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/configuration_auto.py#L521</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoConfig.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/configuration_auto.py#L524</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   Can be either:
 
   - A string, the *model id* of a pretrained model configuration hosted inside a model repo on
@@ -294,6 +294,7 @@ is loaded, or when it's missing, by falling back to using pattern matching on `p
 - **speech_to_text_2** -- [Speech2Text2Config](/docs/transformers/pr_15091/en/model_doc/speech_to_text_2#transformers.Speech2Text2Config) (Speech2Text2 model)
 - **splinter** -- [SplinterConfig](/docs/transformers/pr_15091/en/model_doc/splinter#transformers.SplinterConfig) (Splinter model)
 - **squeezebert** -- [SqueezeBertConfig](/docs/transformers/pr_15091/en/model_doc/squeezebert#transformers.SqueezeBertConfig) (SqueezeBERT model)
+- **swin** -- [SwinConfig](/docs/transformers/pr_15091/en/model_doc/swin#transformers.SwinConfig) (Swin model)
 - **t5** -- [T5Config](/docs/transformers/pr_15091/en/model_doc/t5#transformers.T5Config) (T5 model)
 - **tapas** -- [TapasConfig](/docs/transformers/pr_15091/en/model_doc/tapas#transformers.TapasConfig) (TAPAS model)
 - **transfo-xl** -- [TransfoXLConfig](/docs/transformers/pr_15091/en/model_doc/transfo-xl#transformers.TransfoXLConfig) (Transformer-XL model)
@@ -350,7 +351,7 @@ True
 
 </div>
 <div class="docstring">
-<docstring><name>register</name><anchor>transformers.AutoConfig.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/configuration_auto.py#L643</source><parameters>[{"name": "model_type", "val": ""}, {"name": "config", "val": ""}]</parameters><paramsdesc>- **model_type** (`str`) -- The model type like "bert" or "gpt".
+<docstring><name>register</name><anchor>transformers.AutoConfig.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/configuration_auto.py#L646</source><parameters>[{"name": "model_type", "val": ""}, {"name": "config", "val": ""}]</parameters><paramsdesc>- **model_type** (`str`) -- The model type like "bert" or "gpt".
 - **config** ([PretrainedConfig](/docs/transformers/pr_15091/en/main_classes/configuration#transformers.PretrainedConfig)) -- The config to register.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Register a new configuration for this class.
@@ -539,7 +540,7 @@ Register a new tokenizer in this mapping.
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoFeatureExtractor</name><anchor>transformers.AutoFeatureExtractor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/feature_extraction_auto.py#L66</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoFeatureExtractor</name><anchor>transformers.AutoFeatureExtractor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/feature_extraction_auto.py#L67</source><parameters>[]</parameters></docstring>
 
 This is a generic feature extractor class that will be instantiated as one of the feature extractor classes of the
 library when created with the [AutoFeatureExtractor.from_pretrained()](/docs/transformers/pr_15091/en/model_doc/auto#transformers.AutoFeatureExtractor.from_pretrained) class method.
@@ -549,7 +550,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoFeatureExtractor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/feature_extraction_auto.py#L80</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoFeatureExtractor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/feature_extraction_auto.py#L81</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   This can be either:
 
   - a string, the *model id* of a pretrained feature_extractor hosted inside a model repo on
@@ -603,6 +604,7 @@ missing, by falling back to using pattern matching on `pretrained_model_name_or_
 - **layoutlmv2** -- [LayoutLMv2FeatureExtractor](/docs/transformers/pr_15091/en/model_doc/layoutlmv2#transformers.LayoutLMv2FeatureExtractor) (LayoutLMv2 model)
 - **perceiver** -- [PerceiverFeatureExtractor](/docs/transformers/pr_15091/en/model_doc/perceiver#transformers.PerceiverFeatureExtractor) (Perceiver model)
 - **speech_to_text** -- [Speech2TextFeatureExtractor](/docs/transformers/pr_15091/en/model_doc/speech_to_text#transformers.Speech2TextFeatureExtractor) (Speech2Text model)
+- **swin** -- [ViTFeatureExtractor](/docs/transformers/pr_15091/en/model_doc/vit#transformers.ViTFeatureExtractor) (Swin model)
 - **vit** -- [ViTFeatureExtractor](/docs/transformers/pr_15091/en/model_doc/vit#transformers.ViTFeatureExtractor) (ViT model)
 - **vit_mae** -- [ViTFeatureExtractor](/docs/transformers/pr_15091/en/model_doc/vit#transformers.ViTFeatureExtractor) (ViTMAE model)
 - **wav2vec2** -- [Wav2Vec2FeatureExtractor](/docs/transformers/pr_15091/en/model_doc/wav2vec2#transformers.Wav2Vec2FeatureExtractor) (Wav2Vec2 model)
@@ -720,7 +722,7 @@ Examples:
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModel</name><anchor>transformers.AutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L627</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModel</name><anchor>transformers.AutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L629</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the base model classes of the library when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -795,6 +797,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [Speech2TextConfig](/docs/transformers/pr_15091/en/model_doc/speech_to_text#transformers.Speech2TextConfig) configuration class: [Speech2TextModel](/docs/transformers/pr_15091/en/model_doc/speech_to_text#transformers.Speech2TextModel) (Speech2Text model)
   - [SplinterConfig](/docs/transformers/pr_15091/en/model_doc/splinter#transformers.SplinterConfig) configuration class: [SplinterModel](/docs/transformers/pr_15091/en/model_doc/splinter#transformers.SplinterModel) (Splinter model)
   - [SqueezeBertConfig](/docs/transformers/pr_15091/en/model_doc/squeezebert#transformers.SqueezeBertConfig) configuration class: [SqueezeBertModel](/docs/transformers/pr_15091/en/model_doc/squeezebert#transformers.SqueezeBertModel) (SqueezeBERT model)
+  - [SwinConfig](/docs/transformers/pr_15091/en/model_doc/swin#transformers.SwinConfig) configuration class: [SwinModel](/docs/transformers/pr_15091/en/model_doc/swin#transformers.SwinModel) (Swin model)
   - [T5Config](/docs/transformers/pr_15091/en/model_doc/t5#transformers.T5Config) configuration class: [T5Model](/docs/transformers/pr_15091/en/model_doc/t5#transformers.T5Model) (T5 model)
   - [TapasConfig](/docs/transformers/pr_15091/en/model_doc/tapas#transformers.TapasConfig) configuration class: [TapasModel](/docs/transformers/pr_15091/en/model_doc/tapas#transformers.TapasModel) (TAPAS model)
   - [TransfoXLConfig](/docs/transformers/pr_15091/en/model_doc/transfo-xl#transformers.TransfoXLConfig) configuration class: [TransfoXLModel](/docs/transformers/pr_15091/en/model_doc/transfo-xl#transformers.TransfoXLModel) (Transformer-XL model)
@@ -972,6 +975,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **speech_to_text** -- [Speech2TextModel](/docs/transformers/pr_15091/en/model_doc/speech_to_text#transformers.Speech2TextModel) (Speech2Text model)
 - **splinter** -- [SplinterModel](/docs/transformers/pr_15091/en/model_doc/splinter#transformers.SplinterModel) (Splinter model)
 - **squeezebert** -- [SqueezeBertModel](/docs/transformers/pr_15091/en/model_doc/squeezebert#transformers.SqueezeBertModel) (SqueezeBERT model)
+- **swin** -- [SwinModel](/docs/transformers/pr_15091/en/model_doc/swin#transformers.SwinModel) (Swin model)
 - **t5** -- [T5Model](/docs/transformers/pr_15091/en/model_doc/t5#transformers.T5Model) (T5 model)
 - **tapas** -- [TapasModel](/docs/transformers/pr_15091/en/model_doc/tapas#transformers.TapasModel) (TAPAS model)
 - **transfo-xl** -- [TransfoXLModel](/docs/transformers/pr_15091/en/model_doc/transfo-xl#transformers.TransfoXLModel) (Transformer-XL model)
@@ -1022,7 +1026,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForPreTraining</name><anchor>transformers.AutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L634</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForPreTraining</name><anchor>transformers.AutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L636</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a pretraining head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -1242,7 +1246,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForCausalLM</name><anchor>transformers.AutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L649</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForCausalLM</name><anchor>transformers.AutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L651</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a causal language modeling head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -1452,7 +1456,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForMaskedLM</name><anchor>transformers.AutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L656</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForMaskedLM</name><anchor>transformers.AutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L658</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a masked language modeling head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -1664,7 +1668,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForSeq2SeqLM</name><anchor>transformers.AutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L663</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForSeq2SeqLM</name><anchor>transformers.AutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L665</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence-to-sequence language modeling head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -1840,7 +1844,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForSequenceClassification</name><anchor>transformers.AutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L672</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForSequenceClassification</name><anchor>transformers.AutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L674</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence classification head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -2072,7 +2076,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForMultipleChoice</name><anchor>transformers.AutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L706</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForMultipleChoice</name><anchor>transformers.AutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L708</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a multiple choice head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -2270,7 +2274,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForNextSentencePrediction</name><anchor>transformers.AutoModelForNextSentencePrediction</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L713</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForNextSentencePrediction</name><anchor>transformers.AutoModelForNextSentencePrediction</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L715</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a next sentence prediction head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -2426,7 +2430,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForTokenClassification</name><anchor>transformers.AutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L699</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForTokenClassification</name><anchor>transformers.AutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L701</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a token classification head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -2634,7 +2638,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForQuestionAnswering</name><anchor>transformers.AutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L681</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForQuestionAnswering</name><anchor>transformers.AutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L683</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a question answering head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -2854,7 +2858,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForTableQuestionAnswering</name><anchor>transformers.AutoModelForTableQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L688</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForTableQuestionAnswering</name><anchor>transformers.AutoModelForTableQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L690</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a table question answering head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -3002,7 +3006,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForImageClassification</name><anchor>transformers.AutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L722</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForImageClassification</name><anchor>transformers.AutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L724</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a image classification head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -3021,6 +3025,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [ImageGPTConfig](/docs/transformers/pr_15091/en/model_doc/imagegpt#transformers.ImageGPTConfig) configuration class: [ImageGPTForImageClassification](/docs/transformers/pr_15091/en/model_doc/imagegpt#transformers.ImageGPTForImageClassification) (ImageGPT model)
   - [PerceiverConfig](/docs/transformers/pr_15091/en/model_doc/perceiver#transformers.PerceiverConfig) configuration class: [PerceiverForImageClassificationLearned](/docs/transformers/pr_15091/en/model_doc/perceiver#transformers.PerceiverForImageClassificationLearned) or [PerceiverForImageClassificationFourier](/docs/transformers/pr_15091/en/model_doc/perceiver#transformers.PerceiverForImageClassificationFourier) or [PerceiverForImageClassificationConvProcessing](/docs/transformers/pr_15091/en/model_doc/perceiver#transformers.PerceiverForImageClassificationConvProcessing) (Perceiver model)
   - [SegformerConfig](/docs/transformers/pr_15091/en/model_doc/segformer#transformers.SegformerConfig) configuration class: [SegformerForImageClassification](/docs/transformers/pr_15091/en/model_doc/segformer#transformers.SegformerForImageClassification) (SegFormer model)
+  - [SwinConfig](/docs/transformers/pr_15091/en/model_doc/swin#transformers.SwinConfig) configuration class: [SwinForImageClassification](/docs/transformers/pr_15091/en/model_doc/swin#transformers.SwinForImageClassification) (Swin model)
   - [ViTConfig](/docs/transformers/pr_15091/en/model_doc/vit#transformers.ViTConfig) configuration class: [ViTForImageClassification](/docs/transformers/pr_15091/en/model_doc/vit#transformers.ViTForImageClassification) (ViT model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the model classes of the library (with a image classification head) from a configuration.
@@ -3126,6 +3131,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **imagegpt** -- [ImageGPTForImageClassification](/docs/transformers/pr_15091/en/model_doc/imagegpt#transformers.ImageGPTForImageClassification) (ImageGPT model)
 - **perceiver** -- [PerceiverForImageClassificationLearned](/docs/transformers/pr_15091/en/model_doc/perceiver#transformers.PerceiverForImageClassificationLearned) or [PerceiverForImageClassificationFourier](/docs/transformers/pr_15091/en/model_doc/perceiver#transformers.PerceiverForImageClassificationFourier) or [PerceiverForImageClassificationConvProcessing](/docs/transformers/pr_15091/en/model_doc/perceiver#transformers.PerceiverForImageClassificationConvProcessing) (Perceiver model)
 - **segformer** -- [SegformerForImageClassification](/docs/transformers/pr_15091/en/model_doc/segformer#transformers.SegformerForImageClassification) (SegFormer model)
+- **swin** -- [SwinForImageClassification](/docs/transformers/pr_15091/en/model_doc/swin#transformers.SwinForImageClassification) (Swin model)
 - **vit** -- [ViTForImageClassification](/docs/transformers/pr_15091/en/model_doc/vit#transformers.ViTForImageClassification) (ViT model)
 
 The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
@@ -3160,7 +3166,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForVision2Seq</name><anchor>transformers.AutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L743</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForVision2Seq</name><anchor>transformers.AutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L745</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a vision-to-text modeling head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -3308,7 +3314,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForAudioClassification</name><anchor>transformers.AutoModelForAudioClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L750</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForAudioClassification</name><anchor>transformers.AutoModelForAudioClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L752</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a audio classification head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -3468,7 +3474,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForAudioFrameClassification</name><anchor>transformers.AutoModelForAudioFrameClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L773</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForAudioFrameClassification</name><anchor>transformers.AutoModelForAudioFrameClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L775</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a audio frame (token) classification head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -3620,7 +3626,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForCTC</name><anchor>transformers.AutoModelForCTC</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L757</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForCTC</name><anchor>transformers.AutoModelForCTC</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L759</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a connectionist temporal classification head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -3780,7 +3786,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForSpeechSeq2Seq</name><anchor>transformers.AutoModelForSpeechSeq2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L764</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForSpeechSeq2Seq</name><anchor>transformers.AutoModelForSpeechSeq2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L766</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence-to-sequence speech-to-text modeing head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -3930,7 +3936,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForAudioXVector</name><anchor>transformers.AutoModelForAudioXVector</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L782</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForAudioXVector</name><anchor>transformers.AutoModelForAudioXVector</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L784</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a audio retrieval via x-vector head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -4082,7 +4088,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForObjectDetection</name><anchor>transformers.AutoModelForObjectDetection</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L736</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForObjectDetection</name><anchor>transformers.AutoModelForObjectDetection</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L738</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a object detection head) when created
 with the `from_pretrained()` class method or the `from_config()` class
@@ -4230,7 +4236,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForImageSegmentation</name><anchor>transformers.AutoModelForImageSegmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L729</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForImageSegmentation</name><anchor>transformers.AutoModelForImageSegmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15091/src/transformers/models/auto/modeling_auto.py#L731</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a image segmentation head) when created
 with the `from_pretrained()` class method or the `from_config()` class
