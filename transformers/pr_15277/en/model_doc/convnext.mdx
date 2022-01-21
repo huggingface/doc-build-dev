@@ -52,15 +52,15 @@ and outperforming Swin Transformers on COCO detection and ADE20K segmentation, w
 
 Tips:
 
-- One can use the ['AutoFeatureExtractor`] API to prepare images for the model.
+- One can use the [AutoFeatureExtractor](/docs/transformers/pr_15277/en/model_doc/auto#transformers.AutoFeatureExtractor) API to prepare images for the model.
 
-This model was contributed by [nielsr](&amp;lt;https://huggingface.co/nielsr). The original code can be found [here](https://github.com/facebookresearch/ConvNeXt).
+This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found [here](https://github.com/facebookresearch/ConvNeXt).
 
 <h2 id="transformers.ConvNextConfig">ConvNextConfig</h2>
 
 <div class="docstring">
 
-<docstring><name>class transformers.ConvNextConfig</name><anchor>transformers.ConvNextConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15277/src/transformers/models/convnext/configuration_convnext.py#L29</source><parameters>[{"name": "num_channels", "val": " = 3"}, {"name": "num_stages", "val": " = 4"}, {"name": "dims", "val": " = [96, 192, 384, 768]"}, {"name": "depths", "val": " = [3, 3, 9, 3]"}, {"name": "hidden_act", "val": " = 'gelu'"}, {"name": "initializer_range", "val": " = 0.02"}, {"name": "layer_norm_eps", "val": " = 1e-12"}, {"name": "is_encoder_decoder", "val": " = False"}, {"name": "layer_scale_init_value", "val": " = 1e-06"}, {"name": "drop_path_rate", "val": " = 0.0"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **num_channels** (`int`, *optional*, defaults to `3`) --
+<docstring><name>class transformers.ConvNextConfig</name><anchor>transformers.ConvNextConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15277/src/transformers/models/convnext/configuration_convnext.py#L29</source><parameters>[{"name": "num_channels", "val": " = 3"}, {"name": "num_stages", "val": " = 4"}, {"name": "dims", "val": " = [96, 192, 384, 768]"}, {"name": "depths", "val": " = [3, 3, 9, 3]"}, {"name": "hidden_act", "val": " = 'gelu'"}, {"name": "initializer_range", "val": " = 0.02"}, {"name": "layer_norm_eps", "val": " = 1e-12"}, {"name": "is_encoder_decoder", "val": " = False"}, {"name": "layer_scale_init_value", "val": " = 1e-06"}, {"name": "drop_path_rate", "val": " = 0.0"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **num_channels** (`int`, *optional*, defaults to 3) --
   The number of input channels.
 - **num_stages** (`int`, optional, defaults to 4) --
   The number of stages in the model.
@@ -80,7 +80,7 @@ This model was contributed by [nielsr](&amp;lt;https://huggingface.co/nielsr). T
 - **drop_path_rate** (`float`, *optional*, defaults to 0.0) --
   The drop rate for stochastic depth.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
-This is the configuration class to store the configuration of a [~ConvNextModel](/docs/transformers/pr_15277/en/model_doc/convnext#transformers.ConvNextModel). It is used to instantiate an
+This is the configuration class to store the configuration of a [ConvNextModel](/docs/transformers/pr_15277/en/model_doc/convnext#transformers.ConvNextModel). It is used to instantiate an
 ConvNeXT model according to the specified arguments, defining the model architecture. Instantiating a configuration
 with the defaults will yield a similar configuration to that of the ConvNeXT
 [facebook/convnext-tiny-224](https://huggingface.co/facebook/convnext-tiny-224) architecture.
