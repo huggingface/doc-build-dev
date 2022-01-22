@@ -2018,6 +2018,7 @@ Summarization example:
 Mask filling example:
 
 ```python
+>>> import jax
 >>> from transformers import BartTokenizer, FlaxBartForConditionalGeneration
 
 >>> model = FlaxBartForConditionalGeneration.from_pretrained("facebook/bart-large")
@@ -2029,7 +2030,7 @@ Mask filling example:
 >>> logits = model(input_ids).logits
 >>> masked_index = (input_ids[0] == tokenizer.mask_token_id).nonzero()[0].item()
 >>> probs = jax.nn.softmax(logits[0, masked_index], axis=0)
->>> values, predictions = jax.lax.top_k(probs)
+>>> values, predictions = jax.lax.top_k(probs, k=1)
 
 >>> tokenizer.decode(predictions).split()
 ```
@@ -2197,7 +2198,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxBartForSequenceClassification</name><anchor>transformers.FlaxBartForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15291/src/transformers/models/bart/modeling_flax_bart.py#L1642</source><parameters>[{"name": "config", "val": ": BartConfig"}, {"name": "input_shape", "val": ": typing.Tuple[int] = (1, 1)"}, {"name": "seed", "val": ": int = 0"}, {"name": "dtype", "val": ": dtype = <class 'jax._src.numpy.lax_numpy.float32'>"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([BartConfig](/docs/transformers/pr_15291/en/model_doc/bart#transformers.BartConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.FlaxBartForSequenceClassification</name><anchor>transformers.FlaxBartForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15291/src/transformers/models/bart/modeling_flax_bart.py#L1643</source><parameters>[{"name": "config", "val": ": BartConfig"}, {"name": "input_shape", "val": ": typing.Tuple[int] = (1, 1)"}, {"name": "seed", "val": ": int = 0"}, {"name": "dtype", "val": ": dtype = <class 'jax._src.numpy.lax_numpy.float32'>"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([BartConfig](/docs/transformers/pr_15291/en/model_doc/bart#transformers.BartConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15291/en/main_classes/model#transformers.FlaxPreTrainedModel.from_pretrained) method to load the model weights.
 - **dtype** (`jax.numpy.dtype`, *optional*, defaults to `jax.numpy.float32`) --
@@ -2514,7 +2515,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxBartForQuestionAnswering</name><anchor>transformers.FlaxBartForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15291/src/transformers/models/bart/modeling_flax_bart.py#L1729</source><parameters>[{"name": "config", "val": ": BartConfig"}, {"name": "input_shape", "val": ": typing.Tuple[int] = (1, 1)"}, {"name": "seed", "val": ": int = 0"}, {"name": "dtype", "val": ": dtype = <class 'jax._src.numpy.lax_numpy.float32'>"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([BartConfig](/docs/transformers/pr_15291/en/model_doc/bart#transformers.BartConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.FlaxBartForQuestionAnswering</name><anchor>transformers.FlaxBartForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15291/src/transformers/models/bart/modeling_flax_bart.py#L1730</source><parameters>[{"name": "config", "val": ": BartConfig"}, {"name": "input_shape", "val": ": typing.Tuple[int] = (1, 1)"}, {"name": "seed", "val": ": int = 0"}, {"name": "dtype", "val": ": dtype = <class 'jax._src.numpy.lax_numpy.float32'>"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([BartConfig](/docs/transformers/pr_15291/en/model_doc/bart#transformers.BartConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15291/en/main_classes/model#transformers.FlaxPreTrainedModel.from_pretrained) method to load the model weights.
 - **dtype** (`jax.numpy.dtype`, *optional*, defaults to `jax.numpy.float32`) --
