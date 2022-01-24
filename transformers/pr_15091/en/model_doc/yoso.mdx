@@ -68,10 +68,10 @@ Tips:
 
 - The YOSO attention algorithm is implemented through custom CUDA kernels, functions written in CUDA C++ that can be executed multiple times
 in parallel on a GPU.
-- The kernels provide a fast_hash function, which approximates the random projections of the queries and keys using the Fast Hadamard Transform. Using these
-hash codes, the lsh_cumulation function approximates self-attention via LSH-based Bernoulli sampling.
+- The kernels provide a `fast_hash` function, which approximates the random projections of the queries and keys using the Fast Hadamard Transform. Using these
+hash codes, the `lsh_cumulation` function approximates self-attention via LSH-based Bernoulli sampling.
 - To ensure that the kernels are compiled successfuly, the user must install the correct version of PyTorch and cudatoolkit. Alternatively,
-the user may set use_expectation = True to use YOSO-E, which does not require compiling CUDA kernels.
+the user may set `config.use_expectation = True` to use YOSO-E, which does not require compiling CUDA kernels.
 
 <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/yoso_architecture.jpg"
 alt="drawing" width="600"/> 
@@ -292,10 +292,10 @@ the latter silently ignores them.
 Example:
 
 ```python
->>> from transformers import NystromformerTokenizer, YosoModel
+>>> from transformers import AutoTokenizer, YosoModel
 >>> import torch
 
->>> tokenizer = NystromformerTokenizer.from_pretrained("uw-madison/yoso-4096")
+>>> tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 >>> model = YosoModel.from_pretrained("uw-madison/yoso-4096")
 
 >>> inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
@@ -558,10 +558,10 @@ the latter silently ignores them.
 Example:
 
 ```python
->>> from transformers import NystromformerTokenizer, YosoForMaskedLM
+>>> from transformers import AutoTokenizer, YosoForMaskedLM
 >>> import torch
 
->>> tokenizer = NystromformerTokenizer.from_pretrained("uw-madison/yoso-4096")
+>>> tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 >>> model = YosoForMaskedLM.from_pretrained("uw-madison/yoso-4096")
 
 >>> inputs = tokenizer("The capital of France is [MASK].", return_tensors="pt")
@@ -676,10 +676,10 @@ the latter silently ignores them.
 Example of single-label classification:
 
 ```python
->>> from transformers import NystromformerTokenizer, YosoForSequenceClassification
+>>> from transformers import AutoTokenizer, YosoForSequenceClassification
 >>> import torch
 
->>> tokenizer = NystromformerTokenizer.from_pretrained("uw-madison/yoso-4096")
+>>> tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 >>> model = YosoForSequenceClassification.from_pretrained("uw-madison/yoso-4096")
 
 >>> inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
@@ -692,10 +692,10 @@ Example of single-label classification:
 Example of multi-label classification:
 
 ```python
->>> from transformers import NystromformerTokenizer, YosoForSequenceClassification
+>>> from transformers import AutoTokenizer, YosoForSequenceClassification
 >>> import torch
 
->>> tokenizer = NystromformerTokenizer.from_pretrained("uw-madison/yoso-4096")
+>>> tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 >>> model = YosoForSequenceClassification.from_pretrained("uw-madison/yoso-4096", problem_type="multi_label_classification")
 
 >>> inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
@@ -811,10 +811,10 @@ the latter silently ignores them.
 Example:
 
 ```python
->>> from transformers import NystromformerTokenizer, YosoForMultipleChoice
+>>> from transformers import AutoTokenizer, YosoForMultipleChoice
 >>> import torch
 
->>> tokenizer = NystromformerTokenizer.from_pretrained("uw-madison/yoso-4096")
+>>> tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 >>> model = YosoForMultipleChoice.from_pretrained("uw-madison/yoso-4096")
 
 >>> prompt = "In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced."
@@ -932,10 +932,10 @@ the latter silently ignores them.
 Example:
 
 ```python
->>> from transformers import NystromformerTokenizer, YosoForTokenClassification
+>>> from transformers import AutoTokenizer, YosoForTokenClassification
 >>> import torch
 
->>> tokenizer = NystromformerTokenizer.from_pretrained("uw-madison/yoso-4096")
+>>> tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 >>> model = YosoForTokenClassification.from_pretrained("uw-madison/yoso-4096")
 
 >>> inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
@@ -1055,10 +1055,10 @@ the latter silently ignores them.
 Example:
 
 ```python
->>> from transformers import NystromformerTokenizer, YosoForQuestionAnswering
+>>> from transformers import AutoTokenizer, YosoForQuestionAnswering
 >>> import torch
 
->>> tokenizer = NystromformerTokenizer.from_pretrained("uw-madison/yoso-4096")
+>>> tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 >>> model = YosoForQuestionAnswering.from_pretrained("uw-madison/yoso-4096")
 
 >>> question, text = "Who was Jim Henson?", "Jim Henson was a nice puppet"
