@@ -554,7 +554,7 @@ loaded very simply into 🤗 transformers. Take a look at the [Using tokenizers 
 
 <div class="docstring">
 
-<docstring><name>class transformers.PreTrainedTokenizerFast</name><anchor>transformers.PreTrainedTokenizerFast</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L76</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model_max_length** (`int`, *optional*) --
+<docstring><name>class transformers.PreTrainedTokenizerFast</name><anchor>transformers.PreTrainedTokenizerFast</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L77</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model_max_length** (`int`, *optional*) --
   The maximum length (in number of tokens) for the inputs to the transformer model. When the tokenizer is
   loaded with [from_pretrained()](/docs/transformers/pr_15319/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.from_pretrained), this will be set to the
   value stored for the associated model in `max_model_input_sizes` (see above). If no value is provided, will
@@ -928,7 +928,7 @@ tokenizer.push_to_hub("my-finetuned-bert", repo_url="https://huggingface.co/sgug
 
 </div>
 <div class="docstring">
-<docstring><name>convert\_ids\_to\_tokens</name><anchor>transformers.PreTrainedTokenizerFast.convert_ids_to_tokens</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L290</source><parameters>[{"name": "ids", "val": ": typing.Union[int, typing.List[int]]"}, {"name": "skip_special_tokens", "val": ": bool = False"}]</parameters><paramsdesc>- **ids** (`int` or `List[int]`) --
+<docstring><name>convert\_ids\_to\_tokens</name><anchor>transformers.PreTrainedTokenizerFast.convert_ids_to_tokens</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L292</source><parameters>[{"name": "ids", "val": ": typing.Union[int, typing.List[int]]"}, {"name": "skip_special_tokens", "val": ": bool = False"}]</parameters><paramsdesc>- **ids** (`int` or `List[int]`) --
   The token id (or token ids) to convert to tokens.
 - **skip_special_tokens** (`bool`, *optional*, defaults to `False`) --
   Whether or not to remove special tokens in the decoding.</paramsdesc><paramgroups>0</paramgroups><rettype>`str` or `List[str]`</rettype><retdesc>The decoded token(s).</retdesc></docstring>
@@ -945,7 +945,7 @@ added tokens.
 
 </div>
 <div class="docstring">
-<docstring><name>convert\_tokens\_to\_ids</name><anchor>transformers.PreTrainedTokenizerFast.convert_tokens_to_ids</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L232</source><parameters>[{"name": "tokens", "val": ": typing.Union[str, typing.List[str]]"}]</parameters><paramsdesc>- **tokens** (`str` or `List[str]`) -- One or several token(s) to convert to token id(s).</paramsdesc><paramgroups>0</paramgroups><rettype>`int` or `List[int]`</rettype><retdesc>The token id or list of token ids.</retdesc></docstring>
+<docstring><name>convert\_tokens\_to\_ids</name><anchor>transformers.PreTrainedTokenizerFast.convert_tokens_to_ids</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L234</source><parameters>[{"name": "tokens", "val": ": typing.Union[str, typing.List[str]]"}]</parameters><paramsdesc>- **tokens** (`str` or `List[str]`) -- One or several token(s) to convert to token id(s).</paramsdesc><paramgroups>0</paramgroups><rettype>`int` or `List[int]`</rettype><retdesc>The token id or list of token ids.</retdesc></docstring>
 
 Converts a token string (or a sequence of tokens) in a single integer id (or a sequence of ids), using the
 vocabulary.
@@ -959,7 +959,7 @@ vocabulary.
 
 </div>
 <div class="docstring">
-<docstring><name>get\_added\_vocab</name><anchor>transformers.PreTrainedTokenizerFast.get_added_vocab</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L153</source><parameters>[]</parameters><rettype>`Dict[str, int]`</rettype><retdesc>The added tokens.</retdesc></docstring>
+<docstring><name>get\_added\_vocab</name><anchor>transformers.PreTrainedTokenizerFast.get_added_vocab</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L155</source><parameters>[]</parameters><rettype>`Dict[str, int]`</rettype><retdesc>The added tokens.</retdesc></docstring>
 
 Returns the added tokens in the vocabulary as a dictionary of token to index.
 
@@ -970,7 +970,7 @@ Returns the added tokens in the vocabulary as a dictionary of token to index.
 
 </div>
 <div class="docstring">
-<docstring><name>num\_special\_tokens\_to\_add</name><anchor>transformers.PreTrainedTokenizerFast.num_special_tokens_to_add</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L269</source><parameters>[{"name": "pair", "val": ": bool = False"}]</parameters><paramsdesc>- **pair** (`bool`, *optional*, defaults to `False`) --
+<docstring><name>num\_special\_tokens\_to\_add</name><anchor>transformers.PreTrainedTokenizerFast.num_special_tokens_to_add</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L271</source><parameters>[{"name": "pair", "val": ": bool = False"}]</parameters><paramsdesc>- **pair** (`bool`, *optional*, defaults to `False`) --
   Whether the number of added tokens should be computed in the case of a sequence pair or a single
   sequence.</paramsdesc><paramgroups>0</paramgroups><rettype>`int`</rettype><retdesc>Number of special tokens added to sequences.</retdesc></docstring>
 
@@ -992,7 +992,7 @@ this inside your training loop.
 
 </div>
 <div class="docstring">
-<docstring><name>set\_truncation\_and\_padding</name><anchor>transformers.PreTrainedTokenizerFast.set_truncation_and_padding</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L319</source><parameters>[{"name": "padding_strategy", "val": ": PaddingStrategy"}, {"name": "truncation_strategy", "val": ": TruncationStrategy"}, {"name": "max_length", "val": ": int"}, {"name": "stride", "val": ": int"}, {"name": "pad_to_multiple_of", "val": ": typing.Optional[int]"}]</parameters><paramsdesc>- **padding_strategy** ([PaddingStrategy](/docs/transformers/pr_15319/en/internal/file_utils#transformers.file_utils.PaddingStrategy)) --
+<docstring><name>set\_truncation\_and\_padding</name><anchor>transformers.PreTrainedTokenizerFast.set_truncation_and_padding</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L321</source><parameters>[{"name": "padding_strategy", "val": ": PaddingStrategy"}, {"name": "truncation_strategy", "val": ": TruncationStrategy"}, {"name": "max_length", "val": ": int"}, {"name": "stride", "val": ": int"}, {"name": "pad_to_multiple_of", "val": ": typing.Optional[int]"}]</parameters><paramsdesc>- **padding_strategy** ([PaddingStrategy](/docs/transformers/pr_15319/en/internal/file_utils#transformers.file_utils.PaddingStrategy)) --
   The kind of padding that will be applied to the input
 - **truncation_strategy** ([TruncationStrategy](/docs/transformers/pr_15319/en/internal/tokenization_utils#transformers.tokenization_utils_base.TruncationStrategy)) --
   The kind of truncation that will be applied to the input
@@ -1016,7 +1016,7 @@ section.
 
 </div>
 <div class="docstring">
-<docstring><name>train\_new\_from\_iterator</name><anchor>transformers.PreTrainedTokenizerFast.train_new_from_iterator</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L602</source><parameters>[{"name": "text_iterator", "val": ""}, {"name": "vocab_size", "val": ""}, {"name": "new_special_tokens", "val": " = None"}, {"name": "special_tokens_map", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **text_iterator** (generator of `List[str]`) --
+<docstring><name>train\_new\_from\_iterator</name><anchor>transformers.PreTrainedTokenizerFast.train_new_from_iterator</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/tokenization_utils_fast.py#L604</source><parameters>[{"name": "text_iterator", "val": ""}, {"name": "vocab_size", "val": ""}, {"name": "new_special_tokens", "val": " = None"}, {"name": "special_tokens_map", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **text_iterator** (generator of `List[str]`) --
   The training corpus. Should be a generator of batches of texts, for instance a list of lists of texts
   if you have everything in memory.
 - **vocab_size** (`int`) --
