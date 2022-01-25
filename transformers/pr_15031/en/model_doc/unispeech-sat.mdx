@@ -403,7 +403,6 @@ Example:
 >>> last_hidden_states = outputs.last_hidden_state
 >>> list(last_hidden_states.shape)
 
-
 ```
 
 
@@ -526,7 +525,6 @@ Example:
 >>> transcription = processor.batch_decode(predicted_ids)
 >>> transcription[0]
 'mister quilter is the aposle of the middle classes and we are glad to welcome his gospel'
-
 ```
 
 ```python
@@ -673,7 +671,6 @@ Example:
 >>> predicted_label = model.config.id2label[predicted_class_ids]
 >>> predicted_label
 label
-
 ```
 
 ```python
@@ -813,7 +810,6 @@ Example:
 >>> labels = (probabilities > 0.5).long()
 >>> labels[0].tolist()
 [0, 0]
-
 ```
 
 
@@ -945,7 +941,6 @@ Example:
 ...     print("Speakers are not the same!")
 >>> round(similarity.item(), 2)
 0.97
-
 ```
 
 
