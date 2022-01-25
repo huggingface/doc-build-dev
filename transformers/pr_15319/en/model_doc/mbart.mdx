@@ -287,7 +287,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.MBartTokenizer</name><anchor>transformers.MBartTokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/models/mbart/tokenization_mbart.py#L50</source><parameters>[{"name": "vocab_file", "val": ""}, {"name": "bos_token", "val": " = '<s>'"}, {"name": "eos_token", "val": " = '</s>'"}, {"name": "sep_token", "val": " = '</s>'"}, {"name": "cls_token", "val": " = '<s>'"}, {"name": "unk_token", "val": " = '<unk>'"}, {"name": "pad_token", "val": " = '<pad>'"}, {"name": "mask_token", "val": " = '<mask>'"}, {"name": "tokenizer_file", "val": " = None"}, {"name": "src_lang", "val": " = None"}, {"name": "tgt_lang", "val": " = None"}, {"name": "sp_model_kwargs", "val": ": typing.Union[typing.Dict[str, typing.Any], NoneType] = None"}, {"name": "additional_special_tokens", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.MBartTokenizer</name><anchor>transformers.MBartTokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/models/mbart/tokenization_mbart.py#L50</source><parameters>[{"name": "vocab_file", "val": ""}, {"name": "bos_token", "val": " = '<s>'"}, {"name": "eos_token", "val": " = '</s>'"}, {"name": "sep_token", "val": " = '</s>'"}, {"name": "cls_token", "val": " = '<s>'"}, {"name": "unk_token", "val": " = '<unk>'"}, {"name": "pad_token", "val": " = '<pad>'"}, {"name": "mask_token", "val": " = '<mask>'"}, {"name": "src_lang", "val": " = None"}, {"name": "tgt_lang", "val": " = None"}, {"name": "sp_model_kwargs", "val": ": typing.Union[typing.Dict[str, typing.Any], NoneType] = None"}, {"name": "additional_special_tokens", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 Construct an MBART tokenizer.
 
@@ -313,7 +313,7 @@ Examples:
 
 
 <div class="docstring">
-<docstring><name>as\_target\_tokenizer</name><anchor>transformers.MBartTokenizer.as_target_tokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/models/mbart/tokenization_mbart.py#L335</source><parameters>[]</parameters></docstring>
+<docstring><name>as\_target\_tokenizer</name><anchor>transformers.MBartTokenizer.as_target_tokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/models/mbart/tokenization_mbart.py#L333</source><parameters>[]</parameters></docstring>
 
 Temporarily sets the tokenizer for encoding the targets. Useful for tokenizer associated to
 sequence-to-sequence models that need a slightly different processing for the labels.
@@ -321,7 +321,7 @@ sequence-to-sequence models that need a slightly different processing for the la
 
 </div>
 <div class="docstring">
-<docstring><name>build\_inputs\_with\_special\_tokens</name><anchor>transformers.MBartTokenizer.build_inputs_with_special_tokens</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/models/mbart/tokenization_mbart.py#L218</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
+<docstring><name>build\_inputs\_with\_special\_tokens</name><anchor>transformers.MBartTokenizer.build_inputs_with_special_tokens</anchor><source>https://github.com/huggingface/transformers/blob/pr_15319/src/transformers/models/mbart/tokenization_mbart.py#L216</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
   List of IDs to which the special tokens will be added.
 - **token_ids_1** (`List[int]`, *optional*) --
   Optional second list of IDs for sequence pairs.</paramsdesc><paramgroups>0</paramgroups><rettype>`List[int]`</rettype><retdesc>List of [input IDs](../glossary#input-ids) with the appropriate special tokens.</retdesc></docstring>
