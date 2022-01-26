@@ -418,7 +418,7 @@ positions."
 
 
 <div class="docstring">
-<docstring><name>block\_has\_answer</name><anchor>transformers.RealmRetriever.block_has_answer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/retrieval_realm.py#L128</source><parameters>[{"name": "concat_inputs", "val": ""}, {"name": "answer_ids", "val": ""}]</parameters></docstring>
+<docstring><name>block\_has\_answer</name><anchor>transformers.RealmRetriever.block_has_answer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/retrieval_realm.py#L125</source><parameters>[{"name": "concat_inputs", "val": ""}, {"name": "answer_ids", "val": ""}]</parameters></docstring>
 check if retrieved_blocks has answers.
 
 </div></div>
@@ -427,7 +427,7 @@ check if retrieved_blocks has answers.
 
 <div class="docstring">
 
-<docstring><name>class transformers.RealmEmbedder</name><anchor>transformers.RealmEmbedder</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1146</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.RealmEmbedder</name><anchor>transformers.RealmEmbedder</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1145</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15297/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 The embedder of REALM outputting projected score that will be used to calculate relevance score.
@@ -440,7 +440,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.RealmEmbedder.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1160</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.RealmEmbedder.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1159</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RealmTokenizer](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15297/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -484,7 +484,7 @@ behavior.
   Whether or not to return the hidden states of all layers. See `hidden_states` under returned tensors for
   more detail.
 - **return_dict** (`bool`, *optional*) --
-  Whether or not to return a [ModelOutput](/docs/transformers/pr_15297/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.realm.modeling_realm.RealmEmbedderOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.realm.modeling_realm.RealmEmbedderOutput` or a tuple of
+  Whether or not to return a [ModelOutput](/docs/transformers/pr_15297/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.realm.modeling_realm.RealmEmbedderOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.realm.modeling_realm.RealmEmbedderOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) and inputs.
 
@@ -536,7 +536,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.RealmScorer</name><anchor>transformers.RealmScorer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1226</source><parameters>[{"name": "config", "val": ""}, {"name": "query_embedder", "val": " = None"}]</parameters><paramsdesc>- **config** ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.RealmScorer</name><anchor>transformers.RealmScorer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1225</source><parameters>[{"name": "config", "val": ""}, {"name": "query_embedder", "val": " = None"}]</parameters><paramsdesc>- **config** ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) -- Model configuration class with all the parameters of the model.
 Initializing with a config file does not load the weights associated with the model, only the
 configuration. Check out the [from_pretrained()](/docs/transformers/pr_15297/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.
 - **query_embedder** ([RealmEmbedder](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmEmbedder)) --
@@ -555,7 +555,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.RealmScorer.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1242</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "candidate_input_ids", "val": " = None"}, {"name": "candidate_attention_mask", "val": " = None"}, {"name": "candidate_token_type_ids", "val": " = None"}, {"name": "candidate_inputs_embeds", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.RealmScorer.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1241</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "candidate_input_ids", "val": " = None"}, {"name": "candidate_attention_mask", "val": " = None"}, {"name": "candidate_token_type_ids", "val": " = None"}, {"name": "candidate_inputs_embeds", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RealmTokenizer](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15297/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -626,7 +626,7 @@ behavior.
 - **candidate_inputs_embeds** (`torch.FloatTensor` of shape `(batch_size * num_candidates, sequence_length, hidden_size)`, *optional*) --
   Optionally, instead of passing `candidate_input_ids` you can choose to directly pass an embedded
   representation. This is useful if you want more control over how to convert *candidate_input_ids* indices
-  into associated vectors than the model's internal embedding lookup matrix.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.realm.modeling_realm.RealmScorerOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.realm.modeling_realm.RealmScorerOutput` or a tuple of
+  into associated vectors than the model's internal embedding lookup matrix.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.realm.modeling_realm.RealmScorerOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.realm.modeling_realm.RealmScorerOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) and inputs.
 
@@ -680,7 +680,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.RealmKnowledgeAugEncoder</name><anchor>transformers.RealmKnowledgeAugEncoder</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1373</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.RealmKnowledgeAugEncoder</name><anchor>transformers.RealmKnowledgeAugEncoder</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1372</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15297/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 The knowledge-augmented encoder of REALM outputting masked language model logits and marginal log-likelihood loss.
@@ -693,7 +693,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.RealmKnowledgeAugEncoder.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1392</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "relevance_score", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "mlm_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, num_candidates, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.RealmKnowledgeAugEncoder.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1391</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "relevance_score", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "mlm_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, num_candidates, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RealmTokenizer](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15297/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -809,7 +809,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.RealmReader</name><anchor>transformers.RealmReader</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1521</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.RealmReader</name><anchor>transformers.RealmReader</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1520</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15297/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 The reader of REALM.
@@ -822,7 +822,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.RealmReader.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1535</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "relevance_score", "val": " = None"}, {"name": "start_positions", "val": " = None"}, {"name": "end_positions", "val": " = None"}, {"name": "has_answers", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(reader_beam_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.RealmReader.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1534</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "relevance_score", "val": " = None"}, {"name": "block_mask", "val": " = None"}, {"name": "start_positions", "val": " = None"}, {"name": "end_positions", "val": " = None"}, {"name": "has_answers", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(reader_beam_size, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RealmTokenizer](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15297/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -869,17 +869,19 @@ behavior.
   Whether or not to return a [ModelOutput](/docs/transformers/pr_15297/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.
 
 - **relevance_score** (`torch.FloatTensor` of shape `(searcher_beam_size,)`, *optional*) --
-  Relevance score, which must be specified if you want to compute the marginal log loss.
-- **start_positions** (`torch.LongTensor` of shape `(batch_size,)`, *optional*) --
+  Relevance score, which must be specified if you want to compute the logits and marginal log loss.
+- **block_mask** (`torch.LongTensor` of shape `(searcher_beam_size, sequence_length)`, *optional*) --
+  The mask of evidence block, which must be specified if you want to compute the logits and marginal log loss.
+- **start_positions** (`torch.LongTensor` of shape `(searcher_beam_size,)`, *optional*) --
   Labels for position (index) of the start of the labelled span for computing the token classification loss.
   Positions are clamped to the length of the sequence (`sequence_length`). Position outside of the sequence
   are not taken into account for computing the loss.
-- **end_positions** (`torch.LongTensor` of shape `(batch_size,)`, *optional*) --
+- **end_positions** (`torch.LongTensor` of shape `(searcher_beam_size,)`, *optional*) --
   Labels for position (index) of the end of the labelled span for computing the token classification loss.
   Positions are clamped to the length of the sequence (`sequence_length`). Position outside of the sequence
   are not taken into account for computing the loss.
 - **has_answers** (`torch.BoolTensor` of shape `(searcher_beam_size,)`, *optional*) --
-  Whether or not the evidence block has answer(s).</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.realm.modeling_realm.RealmReaderOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.realm.modeling_realm.RealmReaderOutput` or a tuple of
+  Whether or not the evidence block has answer(s).</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.realm.modeling_realm.RealmReaderOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.realm.modeling_realm.RealmReaderOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) and inputs.
 
@@ -924,7 +926,7 @@ the latter silently ignores them.
 
 <div class="docstring">
 
-<docstring><name>class transformers.RealmForOpenQA</name><anchor>transformers.RealmForOpenQA</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1722</source><parameters>[{"name": "config", "val": ""}, {"name": "retriever", "val": " = None"}]</parameters><paramsdesc>- **config** ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.RealmForOpenQA</name><anchor>transformers.RealmForOpenQA</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1724</source><parameters>[{"name": "config", "val": ""}, {"name": "retriever", "val": " = None"}]</parameters><paramsdesc>- **config** ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15297/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 `RealmForOpenQA` for end-to-end open domain question answering.
@@ -937,7 +939,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.RealmForOpenQA.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1783</source><parameters>[{"name": "input_ids", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "answer_ids", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(1, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.RealmForOpenQA.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1785</source><parameters>[{"name": "input_ids", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "answer_ids", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(1, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RealmTokenizer](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15297/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -964,7 +966,7 @@ behavior.
   config.vocab_size]` (see `input_ids` docstring) Tokens with indices set to `-1` are ignored (masked), the
   loss is only computed for the tokens with labels in `[0, ..., config.vocab_size]`
 - **return_dict** (`bool`, *optional*) --
-  Whether or not to return a [ModelOutput](/docs/transformers/pr_15297/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.realm.modeling_realm.RealmForOpenQAOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.realm.modeling_realm.RealmForOpenQAOutput` or a tuple of
+  Whether or not to return a [ModelOutput](/docs/transformers/pr_15297/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.realm.modeling_realm.RealmForOpenQAOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.realm.modeling_realm.RealmForOpenQAOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([RealmConfig](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmConfig)) and inputs.
 
