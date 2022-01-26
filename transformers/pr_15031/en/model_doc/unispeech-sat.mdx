@@ -390,6 +390,7 @@ Example:
 >>> from datasets import load_dataset
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("microsoft/unispeech-sat-base-plus")
@@ -510,6 +511,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("microsoft/unispeech-sat-base-plus")
@@ -533,6 +535,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("microsoft/unispeech-sat-base-plus")
@@ -656,6 +659,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("microsoft/unispeech-sat-base-plus")
@@ -795,6 +799,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("microsoft/unispeech-sat-base-plus-sd")
@@ -879,7 +884,7 @@ behavior.
 - **labels** (`torch.LongTensor` of shape `(batch_size,)`, *optional*) --
   Labels for computing the sequence classification/regression loss. Indices should be in `[0, ...,
   config.num_labels - 1]`. If `config.num_labels == 1` a regression loss is computed (Mean-Square loss), If
-  `config.num_labels > 1` a classification loss is computed (Cross-Entropy).</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.unispeech_sat.modeling_unispeech_sat.XVectorOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.unispeech_sat.modeling_unispeech_sat.XVectorOutput` or a tuple of
+  `config.num_labels > 1` a classification loss is computed (Cross-Entropy).</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.unispeech_sat.modeling_unispeech_sat.XVectorOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.unispeech_sat.modeling_unispeech_sat.XVectorOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([UniSpeechSatConfig](/docs/transformers/pr_15031/en/model_doc/unispeech-sat#transformers.UniSpeechSatConfig)) and inputs.
 
@@ -919,6 +924,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("microsoft/unispeech-sat-base-plus-sv")

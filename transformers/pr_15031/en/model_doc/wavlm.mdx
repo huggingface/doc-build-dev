@@ -365,6 +365,7 @@ Example:
 >>> from datasets import load_dataset
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("patrickvonplaten/wavlm-libri-clean-100h-base-plus")
@@ -483,6 +484,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("patrickvonplaten/wavlm-libri-clean-100h-base-plus")
@@ -506,6 +508,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("patrickvonplaten/wavlm-libri-clean-100h-base-plus")
@@ -627,10 +630,11 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
->>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("microsoft/wavlm-base-plus")
->>> model = WavLMForSequenceClassification.from_pretrained("microsoft/wavlm-base-plus")
+>>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("hf-internal-testing/tiny-random-wavlm")
+>>> model = WavLMForSequenceClassification.from_pretrained("hf-internal-testing/tiny-random-wavlm")
 
 >>> # audio file is decoded on the fly
 >>> inputs = feature_extractor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
@@ -641,7 +645,7 @@ Example:
 >>> predicted_class_ids = torch.argmax(logits, dim=-1)
 >>> predicted_label = model.config.id2label[predicted_class_ids]
 >>> predicted_label
-label
+'no'
 ```
 
 ```python
@@ -657,7 +661,7 @@ label
 >>> inputs["labels"] = torch.tensor([model.config.label2id[target_label]])
 >>> loss = model(**inputs).loss
 >>> round(loss.item(), 2)
-0.69
+0.7
 ```
 
 
@@ -764,6 +768,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("microsoft/wavlm-base-plus-sd")
@@ -846,7 +851,7 @@ behavior.
 - **labels** (`torch.LongTensor` of shape `(batch_size,)`, *optional*) --
   Labels for computing the sequence classification/regression loss. Indices should be in `[0, ...,
   config.num_labels - 1]`. If `config.num_labels == 1` a regression loss is computed (Mean-Square loss), If
-  `config.num_labels > 1` a classification loss is computed (Cross-Entropy).</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.wavlm.modeling_wavlm.XVectorOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.wavlm.modeling_wavlm.XVectorOutput` or a tuple of
+  `config.num_labels > 1` a classification loss is computed (Cross-Entropy).</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.wavlm.modeling_wavlm.XVectorOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.wavlm.modeling_wavlm.XVectorOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([WavLMConfig](/docs/transformers/pr_15031/en/model_doc/wavlm#transformers.WavLMConfig)) and inputs.
 
@@ -886,6 +891,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("microsoft/wavlm-base-plus-sv")

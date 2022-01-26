@@ -414,6 +414,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("facebook/hubert-large-ls960-ft")
@@ -437,6 +438,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("facebook/hubert-large-ls960-ft")
@@ -559,6 +561,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("superb/hubert-base-superb-ks")

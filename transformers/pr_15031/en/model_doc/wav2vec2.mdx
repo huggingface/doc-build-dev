@@ -1021,6 +1021,7 @@ Example:
 >>> from datasets import load_dataset
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
@@ -1140,6 +1141,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
@@ -1163,6 +1165,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
@@ -1285,6 +1288,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("superb/wav2vec2-base-superb-ks")
@@ -1423,6 +1427,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("superb/wav2vec2-base-superb-sd")
@@ -1506,7 +1511,7 @@ behavior.
 - **labels** (`torch.LongTensor` of shape `(batch_size,)`, *optional*) --
   Labels for computing the sequence classification/regression loss. Indices should be in `[0, ...,
   config.num_labels - 1]`. If `config.num_labels == 1` a regression loss is computed (Mean-Square loss), If
-  `config.num_labels > 1` a classification loss is computed (Cross-Entropy).</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.wav2vec2.modeling_wav2vec2.XVectorOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.wav2vec2.modeling_wav2vec2.XVectorOutput` or a tuple of
+  `config.num_labels > 1` a classification loss is computed (Cross-Entropy).</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.wav2vec2.modeling_wav2vec2.XVectorOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.wav2vec2.modeling_wav2vec2.XVectorOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([Wav2Vec2Config](/docs/transformers/pr_15031/en/model_doc/wav2vec2#transformers.Wav2Vec2Config)) and inputs.
 
@@ -1546,6 +1551,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("superb/wav2vec2-base-superb-sv")
@@ -2125,7 +2131,7 @@ elements depending on the configuration (`&amp;lt;class 'transformers.models.wav
 
   Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
   heads.</retdesc></docstring>
-The `FlaxWav2Vec2PreTrainedModel` forward method, overrides the `__call__` special method.
+The `FlaxWav2Vec2PreTrainedModel`forward method, overrides the `__call__` special method.
 
 <Tip>
 
@@ -2257,7 +2263,7 @@ elements depending on the configuration (`&amp;lt;class 'transformers.models.wav
 
   Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
   heads.</retdesc></docstring>
-The `FlaxWav2Vec2PreTrainedModel` forward method, overrides the `__call__` special method.
+The `FlaxWav2Vec2PreTrainedModel`forward method, overrides the `__call__` special method.
 
 <Tip>
 

@@ -371,6 +371,7 @@ Example:
 >>> from datasets import load_dataset
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("microsoft/unispeech-large-1500h-cv")
@@ -490,6 +491,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("microsoft/unispeech-large-1500h-cv")
@@ -513,6 +515,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> processor = Wav2Vec2Processor.from_pretrained("microsoft/unispeech-large-1500h-cv")
@@ -635,6 +638,7 @@ Example:
 >>> import torch
 
 >>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
+>>> dataset = dataset.sort("id")
 >>> sampling_rate = dataset.features["audio"].sampling_rate
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("microsoft/unispeech-large-1500h-cv")
