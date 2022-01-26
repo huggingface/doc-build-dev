@@ -19,6 +19,8 @@
     title: Preprocessing data
   - local: training
     title: Fine-tuning a pretrained model
+  - local: accelerate
+    title: Distributed training with 🤗 Accelerate
   - local: model_sharing
     title: Model sharing and uploading
   - local: tokenizer_summary
@@ -268,6 +270,8 @@
       title: Splinter
     - local: model_doc/squeezebert
       title: SqueezeBERT
+    - local: model_doc/swin
+      title: Swin Transformer
     - local: model_doc/t5
       title: T5
     - local: model_doc/t5v1.1
