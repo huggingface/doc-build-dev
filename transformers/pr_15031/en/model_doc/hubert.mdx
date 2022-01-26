@@ -429,7 +429,7 @@ Example:
 >>> # transcribe speech
 >>> transcription = processor.batch_decode(predicted_ids)
 >>> transcription[0]
-'mister quilter is the aposle of the middle classes and we are glad to welcome his gospel'
+'MISTER QUILTER IS THE APOSTLE OF THE MIDDLE CLASSES AND WE ARE GLAD TO WELCOME HIS GOSPEL'
 ```
 
 ```python
@@ -452,7 +452,7 @@ Example:
 >>> # compute loss
 >>> loss = model(**inputs).loss
 >>> round(loss.item(), 2)
-12.51
+22.68
 ```
 
 
@@ -573,10 +573,10 @@ Example:
 >>> with torch.no_grad():
 ...     logits = model(**inputs).logits
 
->>> predicted_class_ids = torch.argmax(logits, dim=-1)
+>>> predicted_class_ids = torch.argmax(logits, dim=-1).item()
 >>> predicted_label = model.config.id2label[predicted_class_ids]
 >>> predicted_label
-label
+'_unknown_'
 ```
 
 ```python
@@ -592,7 +592,7 @@ label
 >>> inputs["labels"] = torch.tensor([model.config.label2id[target_label]])
 >>> loss = model(**inputs).loss
 >>> round(loss.item(), 2)
-0.69
+8.53
 ```
 
 
