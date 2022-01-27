@@ -82,12 +82,12 @@ Class for [ConvNextModel](/docs/transformers/pr_15277/en/model_doc/convnext#tran
 
 <div class="docstring">
 
-<docstring><name>class transformers.ConvNextConfig</name><anchor>transformers.ConvNextConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15277/src/transformers/models/convnext/configuration_convnext.py#L29</source><parameters>[{"name": "num_channels", "val": " = 3"}, {"name": "num_stages", "val": " = 4"}, {"name": "dims", "val": " = None"}, {"name": "depths", "val": " = None"}, {"name": "hidden_act", "val": " = 'gelu'"}, {"name": "initializer_range", "val": " = 0.02"}, {"name": "layer_norm_eps", "val": " = 1e-12"}, {"name": "is_encoder_decoder", "val": " = False"}, {"name": "layer_scale_init_value", "val": " = 1e-06"}, {"name": "drop_path_rate", "val": " = 0.0"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **num_channels** (`int`, *optional*, defaults to 3) --
+<docstring><name>class transformers.ConvNextConfig</name><anchor>transformers.ConvNextConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15277/src/transformers/models/convnext/configuration_convnext.py#L29</source><parameters>[{"name": "num_channels", "val": " = 3"}, {"name": "num_stages", "val": " = 4"}, {"name": "hidden_sizes", "val": " = None"}, {"name": "depths", "val": " = None"}, {"name": "hidden_act", "val": " = 'gelu'"}, {"name": "initializer_range", "val": " = 0.02"}, {"name": "layer_norm_eps", "val": " = 1e-12"}, {"name": "is_encoder_decoder", "val": " = False"}, {"name": "layer_scale_init_value", "val": " = 1e-06"}, {"name": "drop_path_rate", "val": " = 0.0"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **num_channels** (`int`, *optional*, defaults to 3) --
   The number of input channels.
 - **num_stages** (`int`, optional, defaults to 4) --
   The number of stages in the model.
-- **dims** (`List[int]`, *optional*, defaults to [96, 192, 384, 768]) --
-  Dimensionality of each stage.
+- **hidden_sizes** (`List[int]`, *optional*, defaults to [96, 192, 384, 768]) --
+  Dimensionality (hidden size) at each stage.
 - **depths** (`List[int]`, *optional*, defaults to [3, 3, 9, 3]) --
   Depth (number of blocks) for each stage.
 - **hidden_act** (`str` or `function`, *optional*, defaults to `"gelu"`) --
@@ -215,7 +215,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.ConvNextForImageClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15277/src/transformers/models/convnext/modeling_convnext.py#L359</source><parameters>[{"name": "pixel_values", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
+<docstring><name>forward</name><anchor>transformers.ConvNextForImageClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15277/src/transformers/models/convnext/modeling_convnext.py#L361</source><parameters>[{"name": "pixel_values", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
   Pixel values. Pixel values can be obtained using [AutoFeatureExtractor](/docs/transformers/pr_15277/en/model_doc/auto#transformers.AutoFeatureExtractor). See
   `AutoFeatureExtractor.__call__()`for details.
 
