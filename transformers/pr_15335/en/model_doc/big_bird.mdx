@@ -236,7 +236,7 @@ this superclass for more information regarding those methods.
 
 
 <div class="docstring">
-<docstring><name>build\_inputs\_with\_special\_tokens</name><anchor>transformers.BigBirdTokenizer.build_inputs_with_special_tokens</anchor><source>https://github.com/huggingface/transformers/blob/pr_15335/src/transformers/models/big_bird/tokenization_big_bird.py#L197</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
+<docstring><name>build\_inputs\_with\_special\_tokens</name><anchor>transformers.BigBirdTokenizer.build_inputs_with_special_tokens</anchor><source>https://github.com/huggingface/transformers/blob/pr_15335/src/transformers/models/big_bird/tokenization_big_bird.py#L201</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
   List of IDs to which the special tokens will be added.
 - **token_ids_1** (`List[int]`, *optional*) --
   Optional second list of IDs for sequence pairs.</paramsdesc><paramgroups>0</paramgroups><rettype>`List[int]`</rettype><retdesc>List of [input IDs](../glossary#input-ids) with the appropriate special tokens.</retdesc></docstring>
@@ -256,7 +256,7 @@ adding special tokens. A Big Bird sequence has the following format:
 
 </div>
 <div class="docstring">
-<docstring><name>get\_special\_tokens\_mask</name><anchor>transformers.BigBirdTokenizer.get_special_tokens_mask</anchor><source>https://github.com/huggingface/transformers/blob/pr_15335/src/transformers/models/big_bird/tokenization_big_bird.py#L222</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}, {"name": "already_has_special_tokens", "val": ": bool = False"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
+<docstring><name>get\_special\_tokens\_mask</name><anchor>transformers.BigBirdTokenizer.get_special_tokens_mask</anchor><source>https://github.com/huggingface/transformers/blob/pr_15335/src/transformers/models/big_bird/tokenization_big_bird.py#L226</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}, {"name": "already_has_special_tokens", "val": ": bool = False"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
   List of IDs.
 - **token_ids_1** (`List[int]`, *optional*) --
   Optional second list of IDs for sequence pairs.
@@ -275,7 +275,7 @@ special tokens using the tokenizer `prepare_for_model` method.
 
 </div>
 <div class="docstring">
-<docstring><name>create\_token\_type\_ids\_from\_sequences</name><anchor>transformers.BigBirdTokenizer.create_token_type_ids_from_sequences</anchor><source>https://github.com/huggingface/transformers/blob/pr_15335/src/transformers/models/big_bird/tokenization_big_bird.py#L249</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
+<docstring><name>create\_token\_type\_ids\_from\_sequences</name><anchor>transformers.BigBirdTokenizer.create_token_type_ids_from_sequences</anchor><source>https://github.com/huggingface/transformers/blob/pr_15335/src/transformers/models/big_bird/tokenization_big_bird.py#L253</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
   List of IDs.
 - **token_ids_1** (`List[int]`, *optional*) --
   Optional second list of IDs for sequence pairs.</paramsdesc><paramgroups>0</paramgroups><rettype>`List[int]`</rettype><retdesc>List of [token type IDs](../glossary#token-type-ids) according to the given sequence(s).</retdesc></docstring>
@@ -1416,7 +1416,7 @@ behavior.
 - **end_positions** (`torch.LongTensor` of shape `(batch_size,)`, *optional*) --
   Labels for position (index) of the end of the labelled span for computing the token classification loss.
   Positions are clamped to the length of the sequence (`sequence_length`). Position outside of the sequence
-  are not taken into account for computing the loss.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.big_bird.modeling_big_bird.BigBirdForQuestionAnsweringModelOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.big_bird.modeling_big_bird.BigBirdForQuestionAnsweringModelOutput` or a tuple of
+  are not taken into account for computing the loss.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.big_bird.modeling_big_bird.BigBirdForQuestionAnsweringModelOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.big_bird.modeling_big_bird.BigBirdForQuestionAnsweringModelOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([BigBirdConfig](/docs/transformers/pr_15335/en/model_doc/big_bird#transformers.BigBirdConfig)) and inputs.
 
@@ -1561,7 +1561,7 @@ elements depending on the configuration ([BigBirdConfig](/docs/transformers/pr_1
 
   Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
   heads.</retdesc></docstring>
-The `FlaxBigBirdPreTrainedModel` forward method, overrides the `__call__` special method.
+The `FlaxBigBirdPreTrainedModel`forward method, overrides the `__call__` special method.
 
 <Tip>
 
@@ -1669,7 +1669,7 @@ Finally, this model supports inherent JAX features such as:
   - 0 indicates the head is **masked**.
 
 - **return_dict** (`bool`, *optional*) --
-  Whether or not to return a [ModelOutput](/docs/transformers/pr_15335/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.big_bird.modeling_flax_big_bird.FlaxBigBirdForPreTrainingOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.big_bird.modeling_flax_big_bird.FlaxBigBirdForPreTrainingOutput` or a tuple of
+  Whether or not to return a [ModelOutput](/docs/transformers/pr_15335/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.big_bird.modeling_flax_big_bird.FlaxBigBirdForPreTrainingOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.big_bird.modeling_flax_big_bird.FlaxBigBirdForPreTrainingOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([BigBirdConfig](/docs/transformers/pr_15335/en/model_doc/big_bird#transformers.BigBirdConfig)) and inputs.
 
@@ -1685,7 +1685,7 @@ elements depending on the configuration ([BigBirdConfig](/docs/transformers/pr_1
 
   Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
   heads.</retdesc></docstring>
-The `FlaxBigBirdPreTrainedModel` forward method, overrides the `__call__` special method.
+The `FlaxBigBirdPreTrainedModel`forward method, overrides the `__call__` special method.
 
 <Tip>
 
@@ -1805,7 +1805,7 @@ elements depending on the configuration ([BigBirdConfig](/docs/transformers/pr_1
 
   Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
   heads.</retdesc></docstring>
-The `FlaxBigBirdPreTrainedModel` forward method, overrides the `__call__` special method.
+The `FlaxBigBirdPreTrainedModel`forward method, overrides the `__call__` special method.
 
 <Tip>
 
@@ -1927,7 +1927,7 @@ elements depending on the configuration ([BigBirdConfig](/docs/transformers/pr_1
 
   Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
   heads.</retdesc></docstring>
-The `FlaxBigBirdPreTrainedModel` forward method, overrides the `__call__` special method.
+The `FlaxBigBirdPreTrainedModel`forward method, overrides the `__call__` special method.
 
 <Tip>
 
@@ -2051,7 +2051,7 @@ elements depending on the configuration ([BigBirdConfig](/docs/transformers/pr_1
 
   Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
   heads.</retdesc></docstring>
-The `FlaxBigBirdPreTrainedModel` forward method, overrides the `__call__` special method.
+The `FlaxBigBirdPreTrainedModel`forward method, overrides the `__call__` special method.
 
 <Tip>
 
@@ -2177,7 +2177,7 @@ elements depending on the configuration ([BigBirdConfig](/docs/transformers/pr_1
 
   Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
   heads.</retdesc></docstring>
-The `FlaxBigBirdPreTrainedModel` forward method, overrides the `__call__` special method.
+The `FlaxBigBirdPreTrainedModel`forward method, overrides the `__call__` special method.
 
 <Tip>
 
@@ -2285,7 +2285,7 @@ Finally, this model supports inherent JAX features such as:
   - 0 indicates the head is **masked**.
 
 - **return_dict** (`bool`, *optional*) --
-  Whether or not to return a [ModelOutput](/docs/transformers/pr_15335/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.big_bird.modeling_flax_big_bird.FlaxBigBirdForQuestionAnsweringModelOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.big_bird.modeling_flax_big_bird.FlaxBigBirdForQuestionAnsweringModelOutput` or a tuple of
+  Whether or not to return a [ModelOutput](/docs/transformers/pr_15335/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.big_bird.modeling_flax_big_bird.FlaxBigBirdForQuestionAnsweringModelOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.big_bird.modeling_flax_big_bird.FlaxBigBirdForQuestionAnsweringModelOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([BigBirdConfig](/docs/transformers/pr_15335/en/model_doc/big_bird#transformers.BigBirdConfig)) and inputs.
 
