@@ -419,19 +419,6 @@ Example:
 ```
 
 ```python
->>> from transformers import Wav2Vec2Processor, SEWDForCTC
->>> from datasets import load_dataset
->>> import torch
-
->>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
->>> dataset = dataset.sort("id")
->>> sampling_rate = dataset.features["audio"].sampling_rate
-
->>> processor = Wav2Vec2Processor.from_pretrained("asapp/sew-d-tiny-100k-ft-ls100h")
->>> model = SEWDForCTC.from_pretrained("asapp/sew-d-tiny-100k-ft-ls100h")
-
->>> # audio file is decoded on the fly
->>> inputs = processor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
 >>> with processor.as_target_processor():
 ...     inputs["labels"] = processor(dataset[0]["text"], return_tensors="pt").input_ids
 
@@ -555,13 +542,6 @@ Example:
 ```
 
 ```python
->>> from transformers import Wav2Vec2FeatureExtractor, SEWDForSequenceClassification
->>> from datasets import load_dataset
->>> import torch
-
->>> # audio file is decoded on the fly
->>> inputs = feature_extractor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
-
 >>> # compute loss - target_label is e.g. "down"
 >>> target_label = model.config.id2label[0]
 >>> inputs["labels"] = torch.tensor([model.config.label2id[target_label]])

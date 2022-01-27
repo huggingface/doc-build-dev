@@ -530,19 +530,6 @@ Example:
 ```
 
 ```python
->>> from transformers import Wav2Vec2Processor, UniSpeechSatForCTC
->>> from datasets import load_dataset
->>> import torch
-
->>> dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
->>> dataset = dataset.sort("id")
->>> sampling_rate = dataset.features["audio"].sampling_rate
-
->>> processor = Wav2Vec2Processor.from_pretrained("microsoft/unispeech-sat-base-100h-libri-ft")
->>> model = UniSpeechSatForCTC.from_pretrained("microsoft/unispeech-sat-base-100h-libri-ft")
-
->>> # audio file is decoded on the fly
->>> inputs = processor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
 >>> with processor.as_target_processor():
 ...     inputs["labels"] = processor(dataset[0]["text"], return_tensors="pt").input_ids
 
@@ -678,13 +665,6 @@ Example:
 ```
 
 ```python
->>> from transformers import Wav2Vec2FeatureExtractor, UniSpeechSatForSequenceClassification
->>> from datasets import load_dataset
->>> import torch
-
->>> # audio file is decoded on the fly
->>> inputs = feature_extractor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
-
 >>> # compute loss - target_label is e.g. "down"
 >>> target_label = model.config.id2label[0]
 >>> inputs["labels"] = torch.tensor([model.config.label2id[target_label]])
@@ -806,7 +786,7 @@ Example:
 >>> model = UniSpeechSatForAudioFrameClassification.from_pretrained("microsoft/unispeech-sat-base-plus-sd")
 
 >>> # audio file is decoded on the fly
->>> inputs = feature_extractor(dataset[0]["audio"]["array"], return_tensors="pt")
+>>> inputs = feature_extractor(dataset[0]["audio"]["array"], return_tensors="pt", sampling_rate=sampling_rate)
 >>> with torch.no_grad():
 ...     logits = model(**inputs).logits
 
