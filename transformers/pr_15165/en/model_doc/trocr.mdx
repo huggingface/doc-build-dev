@@ -95,7 +95,8 @@ into a single instance to both extract the input features and decode the predict
 >>> processor = TrOCRProcessor.from_pretrained("microsoft/trocr-base-handwritten") 
 >>> model = VisionEncoderDecoderModel.from_pretrained("microsoft/trocr-base-handwritten")
 
->>> # load image from the IAM dataset url = "https://fki.tic.heia-fr.ch/static/img/a01-122-02.jpg" 
+>>> # load image from the IAM dataset 
+>>> url = "https://fki.tic.heia-fr.ch/static/img/a01-122-02.jpg" 
 >>> image = Image.open(requests.get(url, stream=True).raw).convert("RGB")
 
 >>> pixel_values = processor(image, return_tensors="pt").pixel_values 
@@ -200,7 +201,7 @@ more information.
 <docstring><name>\_\_call\_\_</name><anchor>transformers.TrOCRProcessor.__call__</anchor><source>https://github.com/huggingface/transformers/blob/pr_15165/src/transformers/models/trocr/processing_trocr.py#L114</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 When used in normal mode, this method forwards all its arguments to AutoFeatureExtractor's
-`__call__()` and returns its output. If used in the context
+`__call__()`and returns its output. If used in the context
 [as_target_processor()](/docs/transformers/pr_15165/en/model_doc/trocr#transformers.TrOCRProcessor.as_target_processor) this method forwards all its arguments to TrOCRTokenizer's
 `__call__`. Please refer to the doctsring of the above two methods for more information.
 
