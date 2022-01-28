@@ -1,0 +1,42 @@
+---
+local: efficient-training
+sections:
+- local: memory-needs-during-training
+  title: Memory Needs During Training
+- local: choose-your-scale
+  title: Choose Your Scale
+title: Efficient Training
+---
+<script>
+import Tip from "./Tip.svelte";
+import Youtube from "./Youtube.svelte";
+import Docstring from "./Docstring.svelte";
+import CodeBlock from "./CodeBlock.svelte";
+import CodeBlockFw from "./CodeBlockFw.svelte";
+import ColabDropdown from "./ColabDropdown.svelte";
+import IconCopyLink from "./IconCopyLink.svelte";
+export let fw: "pt" | "tf"
+</script>
+<!--Copyright 2020 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+-->
+
+<h1 id="efficient-training">Efficient Training</h1>
+
+
+
+<h2 id="memory-needs-during-training">Memory Needs During Training</h2>
+
+16-18x number of model params
+
+<h2 id="choose-your-scale">Choose Your Scale</h2>
+
+- [One GPU](perf_train_gpu_one)
+- [Many GPUs](perf_train_gpu_many)

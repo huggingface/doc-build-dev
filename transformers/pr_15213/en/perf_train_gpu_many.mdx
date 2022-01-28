@@ -1,0 +1,121 @@
+---
+local: efficient-training-on-multiple-gpu
+sections:
+- local: less-memory
+  sections:
+  - local: fp16
+    title: fp16
+  - local: bf16
+    title: bf16
+  - local: gradient-accumulation
+    title: Gradient Accumulation
+  - local: gradient-checkpointing
+    title: Gradient Checkpointing
+  - local: optimizer
+    title: Optimizer
+  title: Less Memory
+- local: faster-speed
+  sections:
+  - local: dp-vs-ddp
+    title: DP vs DDP
+  - local: gradient-accumulation
+    title: Gradient Accumulation
+  - local: batch-sizes
+    title: Batch sizes
+  title: Faster Speed
+- local: scalability-strategy
+  title: Scalability Strategy
+- local: hardware
+  title: Hardware
+title: Efficient Training on Multiple GPU
+---
+<script>
+import Tip from "./Tip.svelte";
+import Youtube from "./Youtube.svelte";
+import Docstring from "./Docstring.svelte";
+import CodeBlock from "./CodeBlock.svelte";
+import CodeBlockFw from "./CodeBlockFw.svelte";
+import ColabDropdown from "./ColabDropdown.svelte";
+import IconCopyLink from "./IconCopyLink.svelte";
+export let fw: "pt" | "tf"
+</script>
+<!--Copyright 2020 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+-->
+
+<h1 id="efficient-training-on-multiple-gpu">Efficient Training on Multiple GPU</h1>
+
+
+
+<h2 id="less-memory">Less Memory</h2>
+
+
+<h3 id="fp16">fp16</h3>
+
+<h3 id="bf16">bf16</h3>
+
+<h3 id="gradient-accumulation">Gradient Accumulation</h3>
+
+<h3 id="gradient-checkpointing">Gradient Checkpointing</h3>
+
+<h3 id="optimizer">Optimizer</h3>
+
+
+<h2 id="faster-speed">Faster Speed</h2>
+
+<h3 id="dp-vs-ddp">DP vs DDP</h3>
+
+<h3 id="gradient-accumulation">Gradient Accumulation</h3>
+
+<h3 id="batch-sizes">Batch sizes</h3>
+
+
+
+<h2 id="scalability-strategy">Scalability Strategy</h2>
+
+**⇨ Single Node / Multi-GPU**
+
+* Model fits onto a single GPU:
+
+    1. DDP - Distributed DP
+    2. ZeRO - may or may not be faster depending on the situation and configuration used
+
+* Model doesn't fit onto a single GPU:
+
+    1. PP
+    2. ZeRO
+    3. TP
+
+    With very fast intra-node connectivity of NVLINK or NVSwitch all three should be mostly on par, without these PP will be faster than TP or ZeRO. The degree of TP may also make a difference. Best to experiment to find the winner on your particular setup.
+
+    TP is almost always used within a single node. That is TP size &amp;lt;= gpus per node.
+
+* Largest Layer not fitting into a single GPU:
+
+    1. If not using ZeRO - must use TP, as PP alone won't be able to fit.
+    2. With ZeRO see the same entry for "Single GPU" above
+
+
+**⇨ Multi-Node / Multi-GPU**
+
+* When you have fast inter-node connectivity:
+
+    1. ZeRO - as it requires close to no modifications to the model
+    2. PP+TP+DP - less communications, but requires massive changes to the model
+
+* when you have slow inter-node connectivity and still low on GPU memory:
+
+    1. DP+PP+TP+ZeRO-1
+
+
+
+
+
+<h2 id="hardware">Hardware</h2>
