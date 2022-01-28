@@ -522,7 +522,7 @@ Speech2Text.
 
 <div class="docstring">
 
-<docstring><name>class transformers.Speech2TextModel</name><anchor>transformers.Speech2TextModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_speech_to_text.py#L1123</source><parameters>[{"name": "config", "val": ": Speech2TextConfig"}]</parameters><paramsdesc>- **config** ([Speech2TextConfig](/docs/transformers/pr_15113/en/model_doc/speech_to_text#transformers.Speech2TextConfig)) --
+<docstring><name>class transformers.Speech2TextModel</name><anchor>transformers.Speech2TextModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_speech_to_text.py#L1124</source><parameters>[{"name": "config", "val": ": Speech2TextConfig"}]</parameters><paramsdesc>- **config** ([Speech2TextConfig](/docs/transformers/pr_15113/en/model_doc/speech_to_text#transformers.Speech2TextConfig)) --
   Model configuration class with all the parameters of the model. Initializing with a config file does not
   load the weights associated with the model, only the configuration. Check out the
   [from_pretrained()](/docs/transformers/pr_15113/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -540,7 +540,7 @@ and behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Speech2TextModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_speech_to_text.py#L1145</source><parameters>[{"name": "input_features", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "decoder_input_ids", "val": " = None"}, {"name": "decoder_attention_mask", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "decoder_head_mask", "val": " = None"}, {"name": "cross_attn_head_mask", "val": " = None"}, {"name": "encoder_outputs", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "decoder_inputs_embeds", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_features** (`torch.LongTensor` of shape `(batch_size, sequence_length, feature_size)`) --
+<docstring><name>forward</name><anchor>transformers.Speech2TextModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_speech_to_text.py#L1146</source><parameters>[{"name": "input_features", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "decoder_input_ids", "val": " = None"}, {"name": "decoder_attention_mask", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "decoder_head_mask", "val": " = None"}, {"name": "cross_attn_head_mask", "val": " = None"}, {"name": "encoder_outputs", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "decoder_inputs_embeds", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_features** (`torch.LongTensor` of shape `(batch_size, sequence_length, feature_size)`) --
   Float values of fbank features extracted from the raw speech waveform. Raw speech waveform can be obtained
   by loading a `.flac` or `.wav` audio file into an array of type `List[float]` or a `numpy.ndarray`, *e.g.*
   via the soundfile library (`pip install soundfile`). To prepare the array into `input_features`, the
@@ -699,7 +699,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Speech2TextForConditionalGeneration</name><anchor>transformers.Speech2TextForConditionalGeneration</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_speech_to_text.py#L1236</source><parameters>[{"name": "config", "val": ": Speech2TextConfig"}]</parameters><paramsdesc>- **config** ([Speech2TextConfig](/docs/transformers/pr_15113/en/model_doc/speech_to_text#transformers.Speech2TextConfig)) --
+<docstring><name>class transformers.Speech2TextForConditionalGeneration</name><anchor>transformers.Speech2TextForConditionalGeneration</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_speech_to_text.py#L1237</source><parameters>[{"name": "config", "val": ": Speech2TextConfig"}]</parameters><paramsdesc>- **config** ([Speech2TextConfig](/docs/transformers/pr_15113/en/model_doc/speech_to_text#transformers.Speech2TextConfig)) --
   Model configuration class with all the parameters of the model. Initializing with a config file does not
   load the weights associated with the model, only the configuration. Check out the
   [from_pretrained()](/docs/transformers/pr_15113/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -717,7 +717,7 @@ and behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Speech2TextForConditionalGeneration.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_speech_to_text.py#L1273</source><parameters>[{"name": "input_features", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "decoder_input_ids", "val": " = None"}, {"name": "decoder_attention_mask", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "decoder_head_mask", "val": " = None"}, {"name": "cross_attn_head_mask", "val": " = None"}, {"name": "encoder_outputs", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "decoder_inputs_embeds", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_features** (`torch.LongTensor` of shape `(batch_size, sequence_length, feature_size)`) --
+<docstring><name>forward</name><anchor>transformers.Speech2TextForConditionalGeneration.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_speech_to_text.py#L1274</source><parameters>[{"name": "input_features", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "decoder_input_ids", "val": " = None"}, {"name": "decoder_attention_mask", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "decoder_head_mask", "val": " = None"}, {"name": "cross_attn_head_mask", "val": " = None"}, {"name": "encoder_outputs", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "decoder_inputs_embeds", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_features** (`torch.LongTensor` of shape `(batch_size, sequence_length, feature_size)`) --
   Float values of fbank features extracted from the raw speech waveform. Raw speech waveform can be obtained
   by loading a `.flac` or `.wav` audio file into an array of type `List[float]` or a `numpy.ndarray`, *e.g.*
   via the soundfile library (`pip install soundfile`). To prepare the array into `input_features`, the
@@ -892,7 +892,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFSpeech2TextModel</name><anchor>transformers.TFSpeech2TextModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_tf_speech_to_text.py#L1258</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([Speech2TextConfig](/docs/transformers/pr_15113/en/model_doc/speech_to_text#transformers.Speech2TextConfig)) --
+<docstring><name>class transformers.TFSpeech2TextModel</name><anchor>transformers.TFSpeech2TextModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_tf_speech_to_text.py#L1252</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([Speech2TextConfig](/docs/transformers/pr_15113/en/model_doc/speech_to_text#transformers.Speech2TextConfig)) --
   Model configuration class with all the parameters of the model. Initializing with a config file does not
   load the weights associated with the model, only the configuration. Check out the
   [from_pretrained()](/docs/transformers/pr_15113/en/main_classes/model#transformers.TFPreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -931,7 +931,7 @@ first positional argument :
 
 
 <div class="docstring">
-<docstring><name>call</name><anchor>transformers.TFSpeech2TextModel.call</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_tf_speech_to_text.py#L1270</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "decoder_input_ids", "val": " = None"}, {"name": "decoder_attention_mask", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "decoder_head_mask", "val": " = None"}, {"name": "cross_attn_head_mask", "val": " = None"}, {"name": "encoder_outputs", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "decoder_inputs_embeds", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}, {"name": "training", "val": " = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`tf.Tensor` of shape `(&amp;lcub;0})`) --
+<docstring><name>call</name><anchor>transformers.TFSpeech2TextModel.call</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_tf_speech_to_text.py#L1264</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "decoder_input_ids", "val": " = None"}, {"name": "decoder_attention_mask", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "decoder_head_mask", "val": " = None"}, {"name": "cross_attn_head_mask", "val": " = None"}, {"name": "encoder_outputs", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "decoder_inputs_embeds", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}, {"name": "training", "val": " = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`tf.Tensor` of shape `(&amp;lcub;0})`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [Speech2TextTokenizer](/docs/transformers/pr_15113/en/model_doc/speech_to_text#transformers.Speech2TextTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15113/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -1075,7 +1075,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFSpeech2TextForConditionalGeneration</name><anchor>transformers.TFSpeech2TextForConditionalGeneration</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_tf_speech_to_text.py#L1361</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([Speech2TextConfig](/docs/transformers/pr_15113/en/model_doc/speech_to_text#transformers.Speech2TextConfig)) --
+<docstring><name>class transformers.TFSpeech2TextForConditionalGeneration</name><anchor>transformers.TFSpeech2TextForConditionalGeneration</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_tf_speech_to_text.py#L1355</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([Speech2TextConfig](/docs/transformers/pr_15113/en/model_doc/speech_to_text#transformers.Speech2TextConfig)) --
   Model configuration class with all the parameters of the model. Initializing with a config file does not
   load the weights associated with the model, only the configuration. Check out the
   [from_pretrained()](/docs/transformers/pr_15113/en/main_classes/model#transformers.TFPreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -1114,7 +1114,7 @@ first positional argument :
 
 
 <div class="docstring">
-<docstring><name>call</name><anchor>transformers.TFSpeech2TextForConditionalGeneration.call</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_tf_speech_to_text.py#L1394</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "decoder_input_ids", "val": " = None"}, {"name": "decoder_attention_mask", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "decoder_head_mask", "val": " = None"}, {"name": "cross_attn_head_mask", "val": " = None"}, {"name": "encoder_outputs", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "decoder_inputs_embeds", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}, {"name": "training", "val": " = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`tf.Tensor` of shape `(&amp;lcub;0})`) --
+<docstring><name>call</name><anchor>transformers.TFSpeech2TextForConditionalGeneration.call</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/models/speech_to_text/modeling_tf_speech_to_text.py#L1388</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "decoder_input_ids", "val": " = None"}, {"name": "decoder_attention_mask", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "decoder_head_mask", "val": " = None"}, {"name": "cross_attn_head_mask", "val": " = None"}, {"name": "encoder_outputs", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "decoder_inputs_embeds", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}, {"name": "training", "val": " = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`tf.Tensor` of shape `(&amp;lcub;0})`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [Speech2TextTokenizer](/docs/transformers/pr_15113/en/model_doc/speech_to_text#transformers.Speech2TextTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15113/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -1261,12 +1261,12 @@ Example:
 
 >>> ds = load_dataset("hf-internal-testing/librispeech_asr_dummy", "clean", split="validation")
 >>> ds = ds.map(map_to_array)
->>> ds.set_format(type='tf')
+>>> ds.set_format(type="tf")
 
 >>> input_features = processor(
 ...     ds["speech"][0], sampling_rate=16000, return_tensors="tf"
 >>> ).input_features  # Batch size 1
->>> generated_ids = model.generate(inputs=input_features)
+>>> generated_ids = model.generate(input_features)
 
 >>> transcription = processor.batch_decode(generated_ids)
 ```
