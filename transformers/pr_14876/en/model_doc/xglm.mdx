@@ -269,7 +269,7 @@ not make use of token type ids, therefore a list of zeros is returned.
 
 <div class="docstring">
 
-<docstring><name>class transformers.XGLMTokenizerFast</name><anchor>transformers.XGLMTokenizerFast</anchor><source>https://github.com/huggingface/transformers/blob/pr_14876/src/transformers/models/xglm/tokenization_xglm_fast.py#L47</source><parameters>[{"name": "vocab_file", "val": " = None"}, {"name": "tokenizer_file", "val": " = None"}, {"name": "bos_token", "val": " = '<s>'"}, {"name": "eos_token", "val": " = '</s>'"}, {"name": "sep_token", "val": " = '</s>'"}, {"name": "cls_token", "val": " = '<s>'"}, {"name": "unk_token", "val": " = '<unk>'"}, {"name": "pad_token", "val": " = '<pad>'"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **vocab_file** (`str`) --
+<docstring><name>class transformers.XGLMTokenizerFast</name><anchor>transformers.XGLMTokenizerFast</anchor><source>https://github.com/huggingface/transformers/blob/pr_14876/src/transformers/models/xglm/tokenization_xglm_fast.py#L50</source><parameters>[{"name": "vocab_file", "val": " = None"}, {"name": "tokenizer_file", "val": " = None"}, {"name": "bos_token", "val": " = '<s>'"}, {"name": "eos_token", "val": " = '</s>'"}, {"name": "sep_token", "val": " = '</s>'"}, {"name": "cls_token", "val": " = '<s>'"}, {"name": "unk_token", "val": " = '<unk>'"}, {"name": "pad_token", "val": " = '<pad>'"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **vocab_file** (`str`) --
   Path to the vocabulary file.
 - **bos_token** (`str`, *optional*, defaults to `"<s>"`) --
   The beginning of sequence token that was used during pretraining. Can be used a sequence classifier token.
@@ -318,7 +318,7 @@ refer to this superclass for more information regarding those methods.
 
 
 <div class="docstring">
-<docstring><name>build\_inputs\_with\_special\_tokens</name><anchor>transformers.XGLMTokenizerFast.build_inputs_with_special_tokens</anchor><source>https://github.com/huggingface/transformers/blob/pr_14876/src/transformers/models/xglm/tokenization_xglm_fast.py#L137</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
+<docstring><name>build\_inputs\_with\_special\_tokens</name><anchor>transformers.XGLMTokenizerFast.build_inputs_with_special_tokens</anchor><source>https://github.com/huggingface/transformers/blob/pr_14876/src/transformers/models/xglm/tokenization_xglm_fast.py#L140</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
   List of IDs to which the special tokens will be added.
 - **token_ids_1** (`List[int]`, *optional*) --
   Optional second list of IDs for sequence pairs.</paramsdesc><paramgroups>0</paramgroups><rettype>`List[int]`</rettype><retdesc>List of [input IDs](../glossary#input-ids) with the appropriate special tokens.</retdesc></docstring>
@@ -338,7 +338,7 @@ adding special tokens. An XLM-RoBERTa sequence has the following format:
 
 </div>
 <div class="docstring">
-<docstring><name>create\_token\_type\_ids\_from\_sequences</name><anchor>transformers.XGLMTokenizerFast.create_token_type_ids_from_sequences</anchor><source>https://github.com/huggingface/transformers/blob/pr_14876/src/transformers/models/xglm/tokenization_xglm_fast.py#L162</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
+<docstring><name>create\_token\_type\_ids\_from\_sequences</name><anchor>transformers.XGLMTokenizerFast.create_token_type_ids_from_sequences</anchor><source>https://github.com/huggingface/transformers/blob/pr_14876/src/transformers/models/xglm/tokenization_xglm_fast.py#L165</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) --
   List of IDs.
 - **token_ids_1** (`List[int]`, *optional*) --
   Optional second list of IDs for sequence pairs.</paramsdesc><paramgroups>0</paramgroups><rettype>`List[int]`</rettype><retdesc>List of zeros.</retdesc></docstring>
