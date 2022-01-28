@@ -940,7 +940,16 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.RealmForOpenQA.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1788</source><parameters>[{"name": "input_ids", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "answer_ids", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(1, sequence_length)`) --
+<docstring><name>block\_embedding\_to</name><anchor>transformers.RealmForOpenQA.block_embedding_to</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1750</source><parameters>[{"name": "device", "val": ""}]</parameters><paramsdesc>- **device** (`str` or `torch.device`) --
+  The device that `self.block_emb` will be sent to.</paramsdesc><paramgroups>0</paramgroups></docstring>
+Send `self.block_emb` to a specific device. This is useful for accelerating training and inference speed.
+
+
+
+
+</div>
+<div class="docstring">
+<docstring><name>forward</name><anchor>transformers.RealmForOpenQA.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15297/src/transformers/models/realm/modeling_realm.py#L1798</source><parameters>[{"name": "input_ids", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "answer_ids", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(1, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RealmTokenizer](/docs/transformers/pr_15297/en/model_doc/realm#transformers.RealmTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15297/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
