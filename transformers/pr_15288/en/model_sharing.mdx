@@ -102,7 +102,7 @@ Then use `notebook_login` to sign-in to the Hub, and follow the link [here](http
 
 <h2 id="convert-a-model-for-all-frameworks">Convert a model for all frameworks</h2>
 
-To ensure your model can be used by someone working with a different framework, we recommend you convert and upload your model with both PyTorch and TensorFlow checkpoints. While users are still able to load your model from a different framework if you skip this step, it will be slower because 🤗 Transformers will need to convert the checkpoint on-the-fly. 
+To ensure your model can be used by someone working with a different framework, we recommend you convert and upload your model with both PyTorch and TensorFlow checkpoints. While users are still able to load your model from a different framework if you skip this step, it will be slower because 🤗 Transformers will need to convert the checkpoint on-the-fly.
 
 Converting a checkpoint for another framework is easy. Make sure you have PyTorch and TensorFlow installed (see [here](installation) for installation instructions), and then find the specific model for your task in the other framework. 
 
@@ -123,6 +123,14 @@ Similarly, specify `from_tf=True` to convert a checkpoint from TensorFlow to PyT
 ```py
 >>> pt_model = DistilBertForSequenceClassification.from_pretrained("path/to/awesome-name-you-picked", from_tf=True)
 >>> pt_model.save_pretrained("path/to/awesome-name-you-picked")
+```
+
+If a model is available in Flax, you can also convert a checkpoint from PyTorch to Flax:
+
+```py
+>>> flax_model = FlaxDistilBertForSequenceClassification.from_pretrained(
+...     "path/to/awesome-name-you-picked", from_pt=True
+... )
 ```
 
 <h2 id="push-a-model-with-trainer">Push a model with `Trainer`</h2>
