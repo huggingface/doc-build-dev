@@ -171,7 +171,7 @@ Likewise, if your `NewModel` is a subclass of [PreTrainedModel](/docs/transforme
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoConfig</name><anchor>transformers.AutoConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/configuration_auto.py#L498</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoConfig</name><anchor>transformers.AutoConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/configuration_auto.py#L506</source><parameters>[]</parameters></docstring>
 
 This is a generic configuration class that will be instantiated as one of the configuration classes of the library
 when created with the [from_pretrained()](/docs/transformers/pr_15256/en/model_doc/auto#transformers.AutoConfig.from_pretrained) class method.
@@ -181,7 +181,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoConfig.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/configuration_auto.py#L521</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoConfig.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/configuration_auto.py#L529</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   Can be either:
 
   - A string, the *model id* of a pretrained model configuration hosted inside a model repo on
@@ -309,10 +309,13 @@ is loaded, or when it's missing, by falling back to using pattern matching on `p
 - **vit_mae** -- [ViTMAEConfig](/docs/transformers/pr_15256/en/model_doc/vit_mae#transformers.ViTMAEConfig) (ViTMAE model)
 - **wav2vec2** -- [Wav2Vec2Config](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2Config) (Wav2Vec2 model)
 - **wavlm** -- [WavLMConfig](/docs/transformers/pr_15256/en/model_doc/wavlm#transformers.WavLMConfig) (WavLM model)
+- **xglm** -- [XGLMConfig](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMConfig) (XGLM model)
 - **xlm** -- [XLMConfig](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMConfig) (XLM model)
 - **xlm-prophetnet** -- [XLMProphetNetConfig](/docs/transformers/pr_15256/en/model_doc/xlm-prophetnet#transformers.XLMProphetNetConfig) (XLMProphetNet model)
 - **xlm-roberta** -- [XLMRobertaConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaConfig) (XLM-RoBERTa model)
+- **xlm-roberta-xl** -- [XLMRobertaXLConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLConfig) (XLM-RoBERTa-XL model)
 - **xlnet** -- [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) (XLNet model)
+- **yoso** -- [YosoConfig](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoConfig) (YOSO model)
 
 
 
@@ -350,7 +353,7 @@ True
 
 </div>
 <div class="docstring">
-<docstring><name>register</name><anchor>transformers.AutoConfig.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/configuration_auto.py#L643</source><parameters>[{"name": "model_type", "val": ""}, {"name": "config", "val": ""}]</parameters><paramsdesc>- **model_type** (`str`) -- The model type like "bert" or "gpt".
+<docstring><name>register</name><anchor>transformers.AutoConfig.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/configuration_auto.py#L651</source><parameters>[{"name": "model_type", "val": ""}, {"name": "config", "val": ""}]</parameters><paramsdesc>- **model_type** (`str`) -- The model type like "bert" or "gpt".
 - **config** ([PretrainedConfig](/docs/transformers/pr_15256/en/main_classes/configuration#transformers.PretrainedConfig)) -- The config to register.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Register a new configuration for this class.
@@ -364,7 +367,7 @@ Register a new configuration for this class.
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoTokenizer</name><anchor>transformers.AutoTokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/tokenization_auto.py#L343</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoTokenizer</name><anchor>transformers.AutoTokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/tokenization_auto.py#L350</source><parameters>[]</parameters></docstring>
 
 This is a generic tokenizer class that will be instantiated as one of the tokenizer classes of the library when
 created with the [AutoTokenizer.from_pretrained()](/docs/transformers/pr_15256/en/model_doc/auto#transformers.AutoTokenizer.from_pretrained) class method.
@@ -374,7 +377,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoTokenizer.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/tokenization_auto.py#L357</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "*inputs", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoTokenizer.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/tokenization_auto.py#L364</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "*inputs", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   Can be either:
 
   - A string, the *model id* of a predefined tokenizer hosted inside a model repo on huggingface.co.
@@ -496,6 +499,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **transfo-xl** -- [TransfoXLTokenizer](/docs/transformers/pr_15256/en/model_doc/transfo-xl#transformers.TransfoXLTokenizer) (Transformer-XL model)
 - **wav2vec2** -- [Wav2Vec2CTCTokenizer](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2CTCTokenizer) (Wav2Vec2 model)
 - **wav2vec2_phoneme** -- [Wav2Vec2PhonemeCTCTokenizer](/docs/transformers/pr_15256/en/model_doc/wav2vec2_phoneme#transformers.Wav2Vec2PhonemeCTCTokenizer) (Wav2Vec2Phoneme model)
+- **xglm** -- [XGLMTokenizer](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMTokenizer) or [XGLMTokenizerFast](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMTokenizerFast) (XGLM model)
 - **xlm** -- [XLMTokenizer](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMTokenizer) (XLM model)
 - **xlm-prophetnet** -- [XLMProphetNetTokenizer](/docs/transformers/pr_15256/en/model_doc/xlm-prophetnet#transformers.XLMProphetNetTokenizer) (XLMProphetNet model)
 - **xlm-roberta** -- [XLMRobertaTokenizer](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaTokenizer) or [XLMRobertaTokenizerFast](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaTokenizerFast) (XLM-RoBERTa model)
@@ -520,7 +524,7 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>register</name><anchor>transformers.AutoTokenizer.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/tokenization_auto.py#L547</source><parameters>[{"name": "config_class", "val": ""}, {"name": "slow_tokenizer_class", "val": " = None"}, {"name": "fast_tokenizer_class", "val": " = None"}]</parameters><paramsdesc>- **config_class** ([PretrainedConfig](/docs/transformers/pr_15256/en/main_classes/configuration#transformers.PretrainedConfig)) --
+<docstring><name>register</name><anchor>transformers.AutoTokenizer.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/tokenization_auto.py#L554</source><parameters>[{"name": "config_class", "val": ""}, {"name": "slow_tokenizer_class", "val": " = None"}, {"name": "fast_tokenizer_class", "val": " = None"}]</parameters><paramsdesc>- **config_class** ([PretrainedConfig](/docs/transformers/pr_15256/en/main_classes/configuration#transformers.PretrainedConfig)) --
   The configuration corresponding to the model to register.
 - **slow_tokenizer_class** (`PretrainedTokenizer`, *optional*) --
   The slow tokenizer to register.
@@ -539,7 +543,7 @@ Register a new tokenizer in this mapping.
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoFeatureExtractor</name><anchor>transformers.AutoFeatureExtractor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/feature_extraction_auto.py#L67</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoFeatureExtractor</name><anchor>transformers.AutoFeatureExtractor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/feature_extraction_auto.py#L68</source><parameters>[]</parameters></docstring>
 
 This is a generic feature extractor class that will be instantiated as one of the feature extractor classes of the
 library when created with the [AutoFeatureExtractor.from_pretrained()](/docs/transformers/pr_15256/en/model_doc/auto#transformers.AutoFeatureExtractor.from_pretrained) class method.
@@ -549,7 +553,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoFeatureExtractor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/feature_extraction_auto.py#L81</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoFeatureExtractor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/feature_extraction_auto.py#L82</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   This can be either:
 
   - a string, the *model id* of a pretrained feature_extractor hosted inside a model repo on
@@ -602,6 +606,7 @@ missing, by falling back to using pattern matching on `pretrained_model_name_or_
 - **hubert** -- [Wav2Vec2FeatureExtractor](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2FeatureExtractor) (Hubert model)
 - **layoutlmv2** -- [LayoutLMv2FeatureExtractor](/docs/transformers/pr_15256/en/model_doc/layoutlmv2#transformers.LayoutLMv2FeatureExtractor) (LayoutLMv2 model)
 - **perceiver** -- [PerceiverFeatureExtractor](/docs/transformers/pr_15256/en/model_doc/perceiver#transformers.PerceiverFeatureExtractor) (Perceiver model)
+- **segformer** -- [SegformerFeatureExtractor](/docs/transformers/pr_15256/en/model_doc/segformer#transformers.SegformerFeatureExtractor) (SegFormer model)
 - **speech_to_text** -- [Speech2TextFeatureExtractor](/docs/transformers/pr_15256/en/model_doc/speech_to_text#transformers.Speech2TextFeatureExtractor) (Speech2Text model)
 - **swin** -- [ViTFeatureExtractor](/docs/transformers/pr_15256/en/model_doc/vit#transformers.ViTFeatureExtractor) (Swin model)
 - **vit** -- [ViTFeatureExtractor](/docs/transformers/pr_15256/en/model_doc/vit#transformers.ViTFeatureExtractor) (ViT model)
@@ -721,10 +726,10 @@ Examples:
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModel</name><anchor>transformers.AutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L621</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModel</name><anchor>transformers.AutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L639</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the base model classes of the library when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -809,16 +814,19 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [VisualBertConfig](/docs/transformers/pr_15256/en/model_doc/visual_bert#transformers.VisualBertConfig) configuration class: [VisualBertModel](/docs/transformers/pr_15256/en/model_doc/visual_bert#transformers.VisualBertModel) (VisualBert model)
   - [Wav2Vec2Config](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2Config) configuration class: [Wav2Vec2Model](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2Model) (Wav2Vec2 model)
   - [WavLMConfig](/docs/transformers/pr_15256/en/model_doc/wavlm#transformers.WavLMConfig) configuration class: [WavLMModel](/docs/transformers/pr_15256/en/model_doc/wavlm#transformers.WavLMModel) (WavLM model)
+  - [XGLMConfig](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMConfig) configuration class: [XGLMModel](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMModel) (XGLM model)
   - [XLMConfig](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMConfig) configuration class: [XLMModel](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMModel) (XLM model)
   - [XLMProphetNetConfig](/docs/transformers/pr_15256/en/model_doc/xlm-prophetnet#transformers.XLMProphetNetConfig) configuration class: [XLMProphetNetModel](/docs/transformers/pr_15256/en/model_doc/xlm-prophetnet#transformers.XLMProphetNetModel) (XLMProphetNet model)
   - [XLMRobertaConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaConfig) configuration class: [XLMRobertaModel](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaModel) (XLM-RoBERTa model)
-  - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetModel](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetModel) (XLNet model)</paramsdesc><paramgroups>0</paramgroups></docstring>
+  - [XLMRobertaXLConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLConfig) configuration class: [XLMRobertaXLModel](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLModel) (XLM-RoBERTa-XL model)
+  - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetModel](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetModel) (XLNet model)
+  - [YosoConfig](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoConfig) configuration class: [YosoModel](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoModel) (YOSO model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the base model classes of the library from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -986,10 +994,13 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **vit_mae** -- [ViTMAEModel](/docs/transformers/pr_15256/en/model_doc/vit_mae#transformers.ViTMAEModel) (ViTMAE model)
 - **wav2vec2** -- [Wav2Vec2Model](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2Model) (Wav2Vec2 model)
 - **wavlm** -- [WavLMModel](/docs/transformers/pr_15256/en/model_doc/wavlm#transformers.WavLMModel) (WavLM model)
+- **xglm** -- [XGLMModel](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMModel) (XGLM model)
 - **xlm** -- [XLMModel](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMModel) (XLM model)
 - **xlm-prophetnet** -- [XLMProphetNetModel](/docs/transformers/pr_15256/en/model_doc/xlm-prophetnet#transformers.XLMProphetNetModel) (XLMProphetNet model)
 - **xlm-roberta** -- [XLMRobertaModel](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaModel) (XLM-RoBERTa model)
+- **xlm-roberta-xl** -- [XLMRobertaXLModel](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLModel) (XLM-RoBERTa-XL model)
 - **xlnet** -- [XLNetModel](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetModel) (XLNet model)
+- **yoso** -- [YosoModel](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoModel) (YOSO model)
 
 The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
 deactivated). To train the model, you should first set it back in training mode with `model.train()`
@@ -1023,10 +1034,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForPreTraining</name><anchor>transformers.AutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L628</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForPreTraining</name><anchor>transformers.AutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L646</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a pretraining head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -1073,13 +1084,14 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [Wav2Vec2Config](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2Config) configuration class: [Wav2Vec2ForPreTraining](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2ForPreTraining) (Wav2Vec2 model)
   - [XLMConfig](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMConfig) configuration class: [XLMWithLMHeadModel](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMWithLMHeadModel) (XLM model)
   - [XLMRobertaConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaConfig) configuration class: [XLMRobertaForMaskedLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForMaskedLM) (XLM-RoBERTa model)
+  - [XLMRobertaXLConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLConfig) configuration class: [XLMRobertaXLForMaskedLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForMaskedLM) (XLM-RoBERTa-XL model)
   - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetLMHeadModel](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetLMHeadModel) (XLNet model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the model classes of the library (with a pretraining head) from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -1209,6 +1221,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **wav2vec2** -- [Wav2Vec2ForPreTraining](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2ForPreTraining) (Wav2Vec2 model)
 - **xlm** -- [XLMWithLMHeadModel](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMWithLMHeadModel) (XLM model)
 - **xlm-roberta** -- [XLMRobertaForMaskedLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForMaskedLM) (XLM-RoBERTa model)
+- **xlm-roberta-xl** -- [XLMRobertaXLForMaskedLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForMaskedLM) (XLM-RoBERTa-XL model)
 - **xlnet** -- [XLNetLMHeadModel](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetLMHeadModel) (XLNet model)
 
 The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
@@ -1243,10 +1256,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForCausalLM</name><anchor>transformers.AutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L643</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForCausalLM</name><anchor>transformers.AutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L661</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a causal language modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -1284,16 +1297,18 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [Speech2Text2Config](/docs/transformers/pr_15256/en/model_doc/speech_to_text_2#transformers.Speech2Text2Config) configuration class: [Speech2Text2ForCausalLM](/docs/transformers/pr_15256/en/model_doc/speech_to_text_2#transformers.Speech2Text2ForCausalLM) (Speech2Text2 model)
   - [TrOCRConfig](/docs/transformers/pr_15256/en/model_doc/trocr#transformers.TrOCRConfig) configuration class: [TrOCRForCausalLM](/docs/transformers/pr_15256/en/model_doc/trocr#transformers.TrOCRForCausalLM) (TrOCR model)
   - [TransfoXLConfig](/docs/transformers/pr_15256/en/model_doc/transfo-xl#transformers.TransfoXLConfig) configuration class: [TransfoXLLMHeadModel](/docs/transformers/pr_15256/en/model_doc/transfo-xl#transformers.TransfoXLLMHeadModel) (Transformer-XL model)
+  - [XGLMConfig](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMConfig) configuration class: [XGLMForCausalLM](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMForCausalLM) (XGLM model)
   - [XLMConfig](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMConfig) configuration class: [XLMWithLMHeadModel](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMWithLMHeadModel) (XLM model)
   - [XLMProphetNetConfig](/docs/transformers/pr_15256/en/model_doc/xlm-prophetnet#transformers.XLMProphetNetConfig) configuration class: [XLMProphetNetForCausalLM](/docs/transformers/pr_15256/en/model_doc/xlm-prophetnet#transformers.XLMProphetNetForCausalLM) (XLMProphetNet model)
   - [XLMRobertaConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaConfig) configuration class: [XLMRobertaForCausalLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForCausalLM) (XLM-RoBERTa model)
+  - [XLMRobertaXLConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLConfig) configuration class: [XLMRobertaXLForCausalLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForCausalLM) (XLM-RoBERTa-XL model)
   - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetLMHeadModel](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetLMHeadModel) (XLNet model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the model classes of the library (with a causal language modeling head) from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -1414,9 +1429,11 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **speech_to_text_2** -- [Speech2Text2ForCausalLM](/docs/transformers/pr_15256/en/model_doc/speech_to_text_2#transformers.Speech2Text2ForCausalLM) (Speech2Text2 model)
 - **transfo-xl** -- [TransfoXLLMHeadModel](/docs/transformers/pr_15256/en/model_doc/transfo-xl#transformers.TransfoXLLMHeadModel) (Transformer-XL model)
 - **trocr** -- [TrOCRForCausalLM](/docs/transformers/pr_15256/en/model_doc/trocr#transformers.TrOCRForCausalLM) (TrOCR model)
+- **xglm** -- [XGLMForCausalLM](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMForCausalLM) (XGLM model)
 - **xlm** -- [XLMWithLMHeadModel](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMWithLMHeadModel) (XLM model)
 - **xlm-prophetnet** -- [XLMProphetNetForCausalLM](/docs/transformers/pr_15256/en/model_doc/xlm-prophetnet#transformers.XLMProphetNetForCausalLM) (XLMProphetNet model)
 - **xlm-roberta** -- [XLMRobertaForCausalLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForCausalLM) (XLM-RoBERTa model)
+- **xlm-roberta-xl** -- [XLMRobertaXLForCausalLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForCausalLM) (XLM-RoBERTa-XL model)
 - **xlnet** -- [XLNetLMHeadModel](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetLMHeadModel) (XLNet model)
 
 The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
@@ -1451,10 +1468,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForMaskedLM</name><anchor>transformers.AutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L650</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForMaskedLM</name><anchor>transformers.AutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L668</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a masked language modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -1494,15 +1511,17 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [RobertaConfig](/docs/transformers/pr_15256/en/model_doc/roberta#transformers.RobertaConfig) configuration class: [RobertaForMaskedLM](/docs/transformers/pr_15256/en/model_doc/roberta#transformers.RobertaForMaskedLM) (RoBERTa model)
   - [SqueezeBertConfig](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertConfig) configuration class: [SqueezeBertForMaskedLM](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertForMaskedLM) (SqueezeBERT model)
   - [TapasConfig](/docs/transformers/pr_15256/en/model_doc/tapas#transformers.TapasConfig) configuration class: [TapasForMaskedLM](/docs/transformers/pr_15256/en/model_doc/tapas#transformers.TapasForMaskedLM) (TAPAS model)
-  - [Wav2Vec2Config](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2Config) configuration class: `Wav2Vec2ForMaskedLM` (Wav2Vec2 model)
+  - [Wav2Vec2Config](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2Config) configuration class: `Wav2Vec2ForMaskedLM`(Wav2Vec2 model)
   - [XLMConfig](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMConfig) configuration class: [XLMWithLMHeadModel](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMWithLMHeadModel) (XLM model)
-  - [XLMRobertaConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaConfig) configuration class: [XLMRobertaForMaskedLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForMaskedLM) (XLM-RoBERTa model)</paramsdesc><paramgroups>0</paramgroups></docstring>
+  - [XLMRobertaConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaConfig) configuration class: [XLMRobertaForMaskedLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForMaskedLM) (XLM-RoBERTa model)
+  - [XLMRobertaXLConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLConfig) configuration class: [XLMRobertaXLForMaskedLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForMaskedLM) (XLM-RoBERTa-XL model)
+  - [YosoConfig](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoConfig) configuration class: [YosoForMaskedLM](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoForMaskedLM) (YOSO model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the model classes of the library (with a masked language modeling head) from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -1625,9 +1644,11 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **roformer** -- [RoFormerForMaskedLM](/docs/transformers/pr_15256/en/model_doc/roformer#transformers.RoFormerForMaskedLM) (RoFormer model)
 - **squeezebert** -- [SqueezeBertForMaskedLM](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertForMaskedLM) (SqueezeBERT model)
 - **tapas** -- [TapasForMaskedLM](/docs/transformers/pr_15256/en/model_doc/tapas#transformers.TapasForMaskedLM) (TAPAS model)
-- **wav2vec2** -- `Wav2Vec2ForMaskedLM` (Wav2Vec2 model)
+- **wav2vec2** -- `Wav2Vec2ForMaskedLM`(Wav2Vec2 model)
 - **xlm** -- [XLMWithLMHeadModel](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMWithLMHeadModel) (XLM model)
 - **xlm-roberta** -- [XLMRobertaForMaskedLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForMaskedLM) (XLM-RoBERTa model)
+- **xlm-roberta-xl** -- [XLMRobertaXLForMaskedLM](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForMaskedLM) (XLM-RoBERTa-XL model)
+- **yoso** -- [YosoForMaskedLM](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoForMaskedLM) (YOSO model)
 
 The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
 deactivated). To train the model, you should first set it back in training mode with `model.train()`
@@ -1661,10 +1682,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForSeq2SeqLM</name><anchor>transformers.AutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L657</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForSeq2SeqLM</name><anchor>transformers.AutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L675</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence-to-sequence language modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -1695,7 +1716,7 @@ Instantiates one of the model classes of the library (with a sequence-to-sequenc
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -1837,10 +1858,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForSequenceClassification</name><anchor>transformers.AutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L666</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForSequenceClassification</name><anchor>transformers.AutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L684</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -1892,13 +1913,15 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [TransfoXLConfig](/docs/transformers/pr_15256/en/model_doc/transfo-xl#transformers.TransfoXLConfig) configuration class: [TransfoXLForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/transfo-xl#transformers.TransfoXLForSequenceClassification) (Transformer-XL model)
   - [XLMConfig](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMConfig) configuration class: [XLMForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMForSequenceClassification) (XLM model)
   - [XLMRobertaConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaConfig) configuration class: [XLMRobertaForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForSequenceClassification) (XLM-RoBERTa model)
-  - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForSequenceClassification) (XLNet model)</paramsdesc><paramgroups>0</paramgroups></docstring>
+  - [XLMRobertaXLConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLConfig) configuration class: [XLMRobertaXLForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForSequenceClassification) (XLM-RoBERTa-XL model)
+  - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForSequenceClassification) (XLNet model)
+  - [YosoConfig](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoConfig) configuration class: [YosoForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoForSequenceClassification) (YOSO model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the model classes of the library (with a sequence classification head) from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -2033,7 +2056,9 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **transfo-xl** -- [TransfoXLForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/transfo-xl#transformers.TransfoXLForSequenceClassification) (Transformer-XL model)
 - **xlm** -- [XLMForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMForSequenceClassification) (XLM model)
 - **xlm-roberta** -- [XLMRobertaForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForSequenceClassification) (XLM-RoBERTa model)
+- **xlm-roberta-xl** -- [XLMRobertaXLForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForSequenceClassification) (XLM-RoBERTa-XL model)
 - **xlnet** -- [XLNetForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForSequenceClassification) (XLNet model)
+- **yoso** -- [YosoForSequenceClassification](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoForSequenceClassification) (YOSO model)
 
 The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
 deactivated). To train the model, you should first set it back in training mode with `model.train()`
@@ -2067,10 +2092,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForMultipleChoice</name><anchor>transformers.AutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L700</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForMultipleChoice</name><anchor>transformers.AutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L718</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a multiple choice head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -2105,13 +2130,15 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [SqueezeBertConfig](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertConfig) configuration class: [SqueezeBertForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertForMultipleChoice) (SqueezeBERT model)
   - [XLMConfig](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMConfig) configuration class: [XLMForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMForMultipleChoice) (XLM model)
   - [XLMRobertaConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaConfig) configuration class: [XLMRobertaForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForMultipleChoice) (XLM-RoBERTa model)
-  - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForMultipleChoice) (XLNet model)</paramsdesc><paramgroups>0</paramgroups></docstring>
+  - [XLMRobertaXLConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLConfig) configuration class: [XLMRobertaXLForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForMultipleChoice) (XLM-RoBERTa-XL model)
+  - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForMultipleChoice) (XLNet model)
+  - [YosoConfig](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoConfig) configuration class: [YosoForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoForMultipleChoice) (YOSO model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the model classes of the library (with a multiple choice head) from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -2229,7 +2256,9 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **squeezebert** -- [SqueezeBertForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertForMultipleChoice) (SqueezeBERT model)
 - **xlm** -- [XLMForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMForMultipleChoice) (XLM model)
 - **xlm-roberta** -- [XLMRobertaForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForMultipleChoice) (XLM-RoBERTa model)
+- **xlm-roberta-xl** -- [XLMRobertaXLForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForMultipleChoice) (XLM-RoBERTa-XL model)
 - **xlnet** -- [XLNetForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForMultipleChoice) (XLNet model)
+- **yoso** -- [YosoForMultipleChoice](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoForMultipleChoice) (YOSO model)
 
 The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
 deactivated). To train the model, you should first set it back in training mode with `model.train()`
@@ -2263,10 +2292,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForNextSentencePrediction</name><anchor>transformers.AutoModelForNextSentencePrediction</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L707</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForNextSentencePrediction</name><anchor>transformers.AutoModelForNextSentencePrediction</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L725</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a next sentence prediction head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -2287,7 +2316,7 @@ Instantiates one of the model classes of the library (with a next sentence predi
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -2419,10 +2448,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForTokenClassification</name><anchor>transformers.AutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L693</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForTokenClassification</name><anchor>transformers.AutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L711</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a token classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -2462,13 +2491,15 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [SqueezeBertConfig](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertConfig) configuration class: [SqueezeBertForTokenClassification](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertForTokenClassification) (SqueezeBERT model)
   - [XLMConfig](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMConfig) configuration class: [XLMForTokenClassification](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMForTokenClassification) (XLM model)
   - [XLMRobertaConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaConfig) configuration class: [XLMRobertaForTokenClassification](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForTokenClassification) (XLM-RoBERTa model)
-  - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetForTokenClassification](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForTokenClassification) (XLNet model)</paramsdesc><paramgroups>0</paramgroups></docstring>
+  - [XLMRobertaXLConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLConfig) configuration class: [XLMRobertaXLForTokenClassification](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForTokenClassification) (XLM-RoBERTa-XL model)
+  - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetForTokenClassification](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForTokenClassification) (XLNet model)
+  - [YosoConfig](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoConfig) configuration class: [YosoForTokenClassification](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoForTokenClassification) (YOSO model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the model classes of the library (with a token classification head) from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -2591,7 +2622,9 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **squeezebert** -- [SqueezeBertForTokenClassification](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertForTokenClassification) (SqueezeBERT model)
 - **xlm** -- [XLMForTokenClassification](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMForTokenClassification) (XLM model)
 - **xlm-roberta** -- [XLMRobertaForTokenClassification](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForTokenClassification) (XLM-RoBERTa model)
+- **xlm-roberta-xl** -- [XLMRobertaXLForTokenClassification](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForTokenClassification) (XLM-RoBERTa-XL model)
 - **xlnet** -- [XLNetForTokenClassification](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForTokenClassification) (XLNet model)
+- **yoso** -- [YosoForTokenClassification](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoForTokenClassification) (YOSO model)
 
 The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
 deactivated). To train the model, you should first set it back in training mode with `model.train()`
@@ -2625,10 +2658,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForQuestionAnswering</name><anchor>transformers.AutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L675</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForQuestionAnswering</name><anchor>transformers.AutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L693</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a question answering head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -2674,13 +2707,15 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [SqueezeBertConfig](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertConfig) configuration class: [SqueezeBertForQuestionAnswering](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertForQuestionAnswering) (SqueezeBERT model)
   - [XLMConfig](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMConfig) configuration class: [XLMForQuestionAnsweringSimple](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMForQuestionAnsweringSimple) (XLM model)
   - [XLMRobertaConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaConfig) configuration class: [XLMRobertaForQuestionAnswering](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForQuestionAnswering) (XLM-RoBERTa model)
-  - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetForQuestionAnsweringSimple](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForQuestionAnsweringSimple) (XLNet model)</paramsdesc><paramgroups>0</paramgroups></docstring>
+  - [XLMRobertaXLConfig](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLConfig) configuration class: [XLMRobertaXLForQuestionAnswering](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForQuestionAnswering) (XLM-RoBERTa-XL model)
+  - [XLNetConfig](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetConfig) configuration class: [XLNetForQuestionAnsweringSimple](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForQuestionAnsweringSimple) (XLNet model)
+  - [YosoConfig](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoConfig) configuration class: [YosoForQuestionAnswering](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoForQuestionAnswering) (YOSO model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the model classes of the library (with a question answering head) from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -2809,7 +2844,9 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **squeezebert** -- [SqueezeBertForQuestionAnswering](/docs/transformers/pr_15256/en/model_doc/squeezebert#transformers.SqueezeBertForQuestionAnswering) (SqueezeBERT model)
 - **xlm** -- [XLMForQuestionAnsweringSimple](/docs/transformers/pr_15256/en/model_doc/xlm#transformers.XLMForQuestionAnsweringSimple) (XLM model)
 - **xlm-roberta** -- [XLMRobertaForQuestionAnswering](/docs/transformers/pr_15256/en/model_doc/xlm-roberta#transformers.XLMRobertaForQuestionAnswering) (XLM-RoBERTa model)
+- **xlm-roberta-xl** -- [XLMRobertaXLForQuestionAnswering](/docs/transformers/pr_15256/en/model_doc/xlm-roberta-xl#transformers.XLMRobertaXLForQuestionAnswering) (XLM-RoBERTa-XL model)
 - **xlnet** -- [XLNetForQuestionAnsweringSimple](/docs/transformers/pr_15256/en/model_doc/xlnet#transformers.XLNetForQuestionAnsweringSimple) (XLNet model)
+- **yoso** -- [YosoForQuestionAnswering](/docs/transformers/pr_15256/en/model_doc/yoso#transformers.YosoForQuestionAnswering) (YOSO model)
 
 The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
 deactivated). To train the model, you should first set it back in training mode with `model.train()`
@@ -2843,10 +2880,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForTableQuestionAnswering</name><anchor>transformers.AutoModelForTableQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L682</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForTableQuestionAnswering</name><anchor>transformers.AutoModelForTableQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L700</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a table question answering head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -2863,7 +2900,7 @@ Instantiates one of the model classes of the library (with a table question answ
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -2991,10 +3028,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForImageClassification</name><anchor>transformers.AutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L716</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForImageClassification</name><anchor>transformers.AutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L734</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a image classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -3017,7 +3054,7 @@ Instantiates one of the model classes of the library (with a image classificatio
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -3151,10 +3188,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForVision2Seq</name><anchor>transformers.AutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L737</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForVision2Seq</name><anchor>transformers.AutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L755</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a vision-to-text modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -3171,7 +3208,7 @@ Instantiates one of the model classes of the library (with a vision-to-text mode
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -3299,10 +3336,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForAudioClassification</name><anchor>transformers.AutoModelForAudioClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L744</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForAudioClassification</name><anchor>transformers.AutoModelForAudioClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L762</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a audio classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -3325,7 +3362,7 @@ Instantiates one of the model classes of the library (with a audio classificatio
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -3459,10 +3496,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForAudioFrameClassification</name><anchor>transformers.AutoModelForAudioFrameClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L767</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForAudioFrameClassification</name><anchor>transformers.AutoModelForAudioFrameClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L785</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a audio frame (token) classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -3481,7 +3518,7 @@ Instantiates one of the model classes of the library (with a audio frame (token)
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -3611,10 +3648,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForCTC</name><anchor>transformers.AutoModelForCTC</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L751</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForCTC</name><anchor>transformers.AutoModelForCTC</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L769</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a connectionist temporal classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -3637,7 +3674,7 @@ Instantiates one of the model classes of the library (with a connectionist tempo
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -3771,10 +3808,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForSpeechSeq2Seq</name><anchor>transformers.AutoModelForSpeechSeq2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L758</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForSpeechSeq2Seq</name><anchor>transformers.AutoModelForSpeechSeq2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L776</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence-to-sequence speech-to-text modeing head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -3792,7 +3829,7 @@ Instantiates one of the model classes of the library (with a sequence-to-sequenc
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -3921,10 +3958,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForAudioXVector</name><anchor>transformers.AutoModelForAudioXVector</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L776</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForAudioXVector</name><anchor>transformers.AutoModelForAudioXVector</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L794</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a audio retrieval via x-vector head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -3943,7 +3980,7 @@ Instantiates one of the model classes of the library (with a audio retrieval via
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -4073,10 +4110,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForObjectDetection</name><anchor>transformers.AutoModelForObjectDetection</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L730</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForObjectDetection</name><anchor>transformers.AutoModelForObjectDetection</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L748</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a object detection head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -4093,7 +4130,7 @@ Instantiates one of the model classes of the library (with a object detection he
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -4221,10 +4258,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForImageSegmentation</name><anchor>transformers.AutoModelForImageSegmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L723</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForImageSegmentation</name><anchor>transformers.AutoModelForImageSegmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_auto.py#L741</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a image segmentation head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -4241,7 +4278,7 @@ Instantiates one of the model classes of the library (with a image segmentation 
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -4372,7 +4409,7 @@ True
 <docstring><name>class transformers.TFAutoModel</name><anchor>transformers.TFAutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L360</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the base model classes of the library when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -4428,7 +4465,7 @@ Instantiates one of the base model classes of the library from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -4589,7 +4626,7 @@ True
 <docstring><name>class transformers.TFAutoModelForPreTraining</name><anchor>transformers.TFAutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L367</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a pretraining head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -4627,7 +4664,7 @@ Instantiates one of the model classes of the library (with a pretraining head) f
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -4770,7 +4807,7 @@ True
 <docstring><name>class transformers.TFAutoModelForCausalLM</name><anchor>transformers.TFAutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L382</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a causal language modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -4796,7 +4833,7 @@ Instantiates one of the model classes of the library (with a causal language mod
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -4927,7 +4964,7 @@ True
 <docstring><name>class transformers.TFAutoModelForImageClassification</name><anchor>transformers.TFAutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L389</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a image classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -4944,7 +4981,7 @@ Instantiates one of the model classes of the library (with a image classificatio
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -5066,7 +5103,7 @@ True
 <docstring><name>class transformers.TFAutoModelForMaskedLM</name><anchor>transformers.TFAutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L403</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a masked language modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -5102,7 +5139,7 @@ Instantiates one of the model classes of the library (with a masked language mod
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -5243,7 +5280,7 @@ True
 <docstring><name>class transformers.TFAutoModelForSeq2SeqLM</name><anchor>transformers.TFAutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L410</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence-to-sequence language modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -5269,7 +5306,7 @@ Instantiates one of the model classes of the library (with a sequence-to-sequenc
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -5400,7 +5437,7 @@ True
 <docstring><name>class transformers.TFAutoModelForSequenceClassification</name><anchor>transformers.TFAutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L419</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -5441,7 +5478,7 @@ Instantiates one of the model classes of the library (with a sequence classifica
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -5587,7 +5624,7 @@ True
 <docstring><name>class transformers.TFAutoModelForMultipleChoice</name><anchor>transformers.TFAutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L455</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a multiple choice head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -5620,7 +5657,7 @@ Instantiates one of the model classes of the library (with a multiple choice hea
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -5758,7 +5795,7 @@ True
 <docstring><name>class transformers.TFAutoModelForTableQuestionAnswering</name><anchor>transformers.TFAutoModelForTableQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L435</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a table question answering head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -5775,7 +5812,7 @@ Instantiates one of the model classes of the library (with a table question answ
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -5897,7 +5934,7 @@ True
 <docstring><name>class transformers.TFAutoModelForTokenClassification</name><anchor>transformers.TFAutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L446</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a token classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -5933,7 +5970,7 @@ Instantiates one of the model classes of the library (with a token classificatio
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -6074,7 +6111,7 @@ True
 <docstring><name>class transformers.TFAutoModelForQuestionAnswering</name><anchor>transformers.TFAutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L428</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a question answering head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -6109,7 +6146,7 @@ Instantiates one of the model classes of the library (with a question answering 
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -6249,7 +6286,7 @@ True
 <docstring><name>class transformers.TFAutoModelForVision2Seq</name><anchor>transformers.TFAutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_tf_auto.py#L396</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a vision-to-text modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -6266,7 +6303,7 @@ Instantiates one of the model classes of the library (with a vision-to-text mode
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -6385,10 +6422,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModel</name><anchor>transformers.FlaxAutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L218</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModel</name><anchor>transformers.FlaxAutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L220</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the base model classes of the library when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -6421,13 +6458,14 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [T5Config](/docs/transformers/pr_15256/en/model_doc/t5#transformers.T5Config) configuration class: [FlaxT5Model](/docs/transformers/pr_15256/en/model_doc/t5#transformers.FlaxT5Model) (T5 model)
   - [ViTConfig](/docs/transformers/pr_15256/en/model_doc/vit#transformers.ViTConfig) configuration class: [FlaxViTModel](/docs/transformers/pr_15256/en/model_doc/vit#transformers.FlaxViTModel) (ViT model)
   - [VisionTextDualEncoderConfig](/docs/transformers/pr_15256/en/model_doc/vision-text-dual-encoder#transformers.VisionTextDualEncoderConfig) configuration class: [FlaxVisionTextDualEncoderModel](/docs/transformers/pr_15256/en/model_doc/vision-text-dual-encoder#transformers.FlaxVisionTextDualEncoderModel) (VisionTextDualEncoder model)
-  - [Wav2Vec2Config](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2Config) configuration class: [FlaxWav2Vec2Model](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.FlaxWav2Vec2Model) (Wav2Vec2 model)</paramsdesc><paramgroups>0</paramgroups></docstring>
+  - [Wav2Vec2Config](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.Wav2Vec2Config) configuration class: [FlaxWav2Vec2Model](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.FlaxWav2Vec2Model) (Wav2Vec2 model)
+  - [XGLMConfig](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMConfig) configuration class: [FlaxXGLMModel](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.FlaxXGLMModel) (XGLM model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the base model classes of the library from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -6538,6 +6576,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **vision-text-dual-encoder** -- [FlaxVisionTextDualEncoderModel](/docs/transformers/pr_15256/en/model_doc/vision-text-dual-encoder#transformers.FlaxVisionTextDualEncoderModel) (VisionTextDualEncoder model)
 - **vit** -- [FlaxViTModel](/docs/transformers/pr_15256/en/model_doc/vit#transformers.FlaxViTModel) (ViT model)
 - **wav2vec2** -- [FlaxWav2Vec2Model](/docs/transformers/pr_15256/en/model_doc/wav2vec2#transformers.FlaxWav2Vec2Model) (Wav2Vec2 model)
+- **xglm** -- [FlaxXGLMModel](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.FlaxXGLMModel) (XGLM model)
 
 
 
@@ -6568,10 +6607,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForCausalLM</name><anchor>transformers.FlaxAutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L232</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForCausalLM</name><anchor>transformers.FlaxAutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L234</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a causal language modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -6584,13 +6623,14 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
   - [GPT2Config](/docs/transformers/pr_15256/en/model_doc/gpt2#transformers.GPT2Config) configuration class: [FlaxGPT2LMHeadModel](/docs/transformers/pr_15256/en/model_doc/gpt2#transformers.FlaxGPT2LMHeadModel) (OpenAI GPT-2 model)
   - [GPTJConfig](/docs/transformers/pr_15256/en/model_doc/gptj#transformers.GPTJConfig) configuration class: [FlaxGPTJForCausalLM](/docs/transformers/pr_15256/en/model_doc/gptj#transformers.FlaxGPTJForCausalLM) (GPT-J model)
-  - [GPTNeoConfig](/docs/transformers/pr_15256/en/model_doc/gpt_neo#transformers.GPTNeoConfig) configuration class: [FlaxGPTNeoForCausalLM](/docs/transformers/pr_15256/en/model_doc/gpt_neo#transformers.FlaxGPTNeoForCausalLM) (GPT Neo model)</paramsdesc><paramgroups>0</paramgroups></docstring>
+  - [GPTNeoConfig](/docs/transformers/pr_15256/en/model_doc/gpt_neo#transformers.GPTNeoConfig) configuration class: [FlaxGPTNeoForCausalLM](/docs/transformers/pr_15256/en/model_doc/gpt_neo#transformers.FlaxGPTNeoForCausalLM) (GPT Neo model)
+  - [XGLMConfig](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.XGLMConfig) configuration class: [FlaxXGLMForCausalLM](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.FlaxXGLMForCausalLM) (XGLM model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the model classes of the library (with a causal language modeling head) from a configuration.
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -6681,6 +6721,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **gpt2** -- [FlaxGPT2LMHeadModel](/docs/transformers/pr_15256/en/model_doc/gpt2#transformers.FlaxGPT2LMHeadModel) (OpenAI GPT-2 model)
 - **gpt_neo** -- [FlaxGPTNeoForCausalLM](/docs/transformers/pr_15256/en/model_doc/gpt_neo#transformers.FlaxGPTNeoForCausalLM) (GPT Neo model)
 - **gptj** -- [FlaxGPTJForCausalLM](/docs/transformers/pr_15256/en/model_doc/gptj#transformers.FlaxGPTJForCausalLM) (GPT-J model)
+- **xglm** -- [FlaxXGLMForCausalLM](/docs/transformers/pr_15256/en/model_doc/xglm#transformers.FlaxXGLMForCausalLM) (XGLM model)
 
 
 
@@ -6711,10 +6752,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForPreTraining</name><anchor>transformers.FlaxAutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L225</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForPreTraining</name><anchor>transformers.FlaxAutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L227</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a pretraining head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -6741,7 +6782,7 @@ Instantiates one of the model classes of the library (with a pretraining head) f
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -6870,10 +6911,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForMaskedLM</name><anchor>transformers.FlaxAutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L239</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForMaskedLM</name><anchor>transformers.FlaxAutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L241</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a masked language modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -6898,7 +6939,7 @@ Instantiates one of the model classes of the library (with a masked language mod
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -7025,10 +7066,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForSeq2SeqLM</name><anchor>transformers.FlaxAutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L246</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForSeq2SeqLM</name><anchor>transformers.FlaxAutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L248</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence-to-sequence language modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -7053,7 +7094,7 @@ Instantiates one of the model classes of the library (with a sequence-to-sequenc
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -7180,10 +7221,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForSequenceClassification</name><anchor>transformers.FlaxAutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L255</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForSequenceClassification</name><anchor>transformers.FlaxAutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L257</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -7208,7 +7249,7 @@ Instantiates one of the model classes of the library (with a sequence classifica
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -7335,10 +7376,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForQuestionAnswering</name><anchor>transformers.FlaxAutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L264</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForQuestionAnswering</name><anchor>transformers.FlaxAutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L266</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a question answering head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -7363,7 +7404,7 @@ Instantiates one of the model classes of the library (with a question answering 
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -7490,10 +7531,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForTokenClassification</name><anchor>transformers.FlaxAutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L271</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForTokenClassification</name><anchor>transformers.FlaxAutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L273</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a token classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -7516,7 +7557,7 @@ Instantiates one of the model classes of the library (with a token classificatio
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -7641,10 +7682,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForMultipleChoice</name><anchor>transformers.FlaxAutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L280</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForMultipleChoice</name><anchor>transformers.FlaxAutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L282</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a multiple choice head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -7667,7 +7708,7 @@ Instantiates one of the model classes of the library (with a multiple choice hea
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -7792,10 +7833,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForNextSentencePrediction</name><anchor>transformers.FlaxAutoModelForNextSentencePrediction</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L287</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForNextSentencePrediction</name><anchor>transformers.FlaxAutoModelForNextSentencePrediction</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L289</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a next sentence prediction head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -7812,7 +7853,7 @@ Instantiates one of the model classes of the library (with a next sentence predi
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -7931,10 +7972,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForImageClassification</name><anchor>transformers.FlaxAutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L296</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForImageClassification</name><anchor>transformers.FlaxAutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L298</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a image classification head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -7952,7 +7993,7 @@ Instantiates one of the model classes of the library (with a image classificatio
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
@@ -8072,10 +8113,10 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxAutoModelForVision2Seq</name><anchor>transformers.FlaxAutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L305</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.FlaxAutoModelForVision2Seq</name><anchor>transformers.FlaxAutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15256/src/transformers/models/auto/modeling_flax_auto.py#L307</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a vision-to-text modeling head) when created
-with the `from_pretrained()` class method or the `from_config()` class
+with the `from_pretrained()`class method or the `from_config()`class
 method.
 
 This class cannot be instantiated directly using `__init__()` (throws an error).
@@ -8092,7 +8133,7 @@ Instantiates one of the model classes of the library (with a vision-to-text mode
 
 Note:
 Loading a model from its configuration file does **not** load the model weights. It only affects the
-model's configuration. Use `from_pretrained()` to load the model weights.
+model's configuration. Use `from_pretrained()`to load the model weights.
 
 
 
