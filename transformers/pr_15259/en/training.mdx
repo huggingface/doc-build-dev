@@ -206,17 +206,17 @@ Then fine-tune your model by calling [train()](/docs/transformers/pr_15259/en/ma
 
 <h3 id="convert-dataset-to-tensorflow-format">Convert dataset to TensorFlow format</h3>
 
-First, you need a [`DataCollator`](main_classes/data_collator) to assemble your tensors into a batch. You can use [DataCollatorWithPadding](/docs/transformers/pr_15259/en/main_classes/data_collator#transformers.DataCollatorWithPadding) to also apply a padding strategy. This will pad each input to the longest length in each batch (also known as _dynamic padding_), which will speed up your training. Make sure you specify `return_tensors` to return TensorFlow tensors:
+The [DefaultDataCollator](/docs/transformers/pr_15259/en/main_classes/data_collator#transformers.DefaultDataCollator) assembles tensors into a batch for the model to train on. Make sure you specify `return_tensors` to return TensorFlow tensors:
 
 ```py
->>> from transformers import DataCollatorWithPadding
+>>> from transformers import DefaultDataCollator
 
->>> data_collator = DataCollatorWithPadding(tokenizer=tokenizer, return_tensors="tf")
+>>> data_collator = DefaultDataCollator(return_tensors="tf")
 ```
 
 <Tip>
 
-[Trainer](/docs/transformers/pr_15259/en/main_classes/trainer#transformers.Trainer) uses [transformers.DataCollatorWithPadding](/docs/transformers/pr_15259/en/main_classes/data_collator#transformers.DataCollatorWithPadding) by default so you don't have to explicitly specify it.
+[Trainer](/docs/transformers/pr_15259/en/main_classes/trainer#transformers.Trainer) uses [DataCollatorWithPadding](/docs/transformers/pr_15259/en/main_classes/data_collator#transformers.DataCollatorWithPadding) by default so you don't need to explicitly specify a data collator.
 
 </Tip>
 
