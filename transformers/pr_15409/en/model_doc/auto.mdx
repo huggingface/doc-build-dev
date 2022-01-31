@@ -367,7 +367,7 @@ Register a new configuration for this class.
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoTokenizer</name><anchor>transformers.AutoTokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15409/src/transformers/models/auto/tokenization_auto.py#L343</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoTokenizer</name><anchor>transformers.AutoTokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15409/src/transformers/models/auto/tokenization_auto.py#L350</source><parameters>[]</parameters></docstring>
 
 This is a generic tokenizer class that will be instantiated as one of the tokenizer classes of the library when
 created with the [AutoTokenizer.from_pretrained()](/docs/transformers/pr_15409/en/model_doc/auto#transformers.AutoTokenizer.from_pretrained) class method.
@@ -377,7 +377,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoTokenizer.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15409/src/transformers/models/auto/tokenization_auto.py#L357</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "*inputs", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoTokenizer.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15409/src/transformers/models/auto/tokenization_auto.py#L364</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "*inputs", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   Can be either:
 
   - A string, the *model id* of a predefined tokenizer hosted inside a model repo on huggingface.co.
@@ -499,6 +499,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **transfo-xl** -- [TransfoXLTokenizer](/docs/transformers/pr_15409/en/model_doc/transfo-xl#transformers.TransfoXLTokenizer) (Transformer-XL model)
 - **wav2vec2** -- [Wav2Vec2CTCTokenizer](/docs/transformers/pr_15409/en/model_doc/wav2vec2#transformers.Wav2Vec2CTCTokenizer) (Wav2Vec2 model)
 - **wav2vec2_phoneme** -- [Wav2Vec2PhonemeCTCTokenizer](/docs/transformers/pr_15409/en/model_doc/wav2vec2_phoneme#transformers.Wav2Vec2PhonemeCTCTokenizer) (Wav2Vec2Phoneme model)
+- **xglm** -- [XGLMTokenizer](/docs/transformers/pr_15409/en/model_doc/xglm#transformers.XGLMTokenizer) or [XGLMTokenizerFast](/docs/transformers/pr_15409/en/model_doc/xglm#transformers.XGLMTokenizerFast) (XGLM model)
 - **xlm** -- [XLMTokenizer](/docs/transformers/pr_15409/en/model_doc/xlm#transformers.XLMTokenizer) (XLM model)
 - **xlm-prophetnet** -- [XLMProphetNetTokenizer](/docs/transformers/pr_15409/en/model_doc/xlm-prophetnet#transformers.XLMProphetNetTokenizer) (XLMProphetNet model)
 - **xlm-roberta** -- [XLMRobertaTokenizer](/docs/transformers/pr_15409/en/model_doc/xlm-roberta#transformers.XLMRobertaTokenizer) or [XLMRobertaTokenizerFast](/docs/transformers/pr_15409/en/model_doc/xlm-roberta#transformers.XLMRobertaTokenizerFast) (XLM-RoBERTa model)
@@ -523,7 +524,7 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>register</name><anchor>transformers.AutoTokenizer.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15409/src/transformers/models/auto/tokenization_auto.py#L547</source><parameters>[{"name": "config_class", "val": ""}, {"name": "slow_tokenizer_class", "val": " = None"}, {"name": "fast_tokenizer_class", "val": " = None"}]</parameters><paramsdesc>- **config_class** ([PretrainedConfig](/docs/transformers/pr_15409/en/main_classes/configuration#transformers.PretrainedConfig)) --
+<docstring><name>register</name><anchor>transformers.AutoTokenizer.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15409/src/transformers/models/auto/tokenization_auto.py#L554</source><parameters>[{"name": "config_class", "val": ""}, {"name": "slow_tokenizer_class", "val": " = None"}, {"name": "fast_tokenizer_class", "val": " = None"}]</parameters><paramsdesc>- **config_class** ([PretrainedConfig](/docs/transformers/pr_15409/en/main_classes/configuration#transformers.PretrainedConfig)) --
   The configuration corresponding to the model to register.
 - **slow_tokenizer_class** (`PretrainedTokenizer`, *optional*) --
   The slow tokenizer to register.
@@ -542,7 +543,7 @@ Register a new tokenizer in this mapping.
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoFeatureExtractor</name><anchor>transformers.AutoFeatureExtractor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15409/src/transformers/models/auto/feature_extraction_auto.py#L67</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoFeatureExtractor</name><anchor>transformers.AutoFeatureExtractor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15409/src/transformers/models/auto/feature_extraction_auto.py#L68</source><parameters>[]</parameters></docstring>
 
 This is a generic feature extractor class that will be instantiated as one of the feature extractor classes of the
 library when created with the [AutoFeatureExtractor.from_pretrained()](/docs/transformers/pr_15409/en/model_doc/auto#transformers.AutoFeatureExtractor.from_pretrained) class method.
@@ -552,7 +553,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoFeatureExtractor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15409/src/transformers/models/auto/feature_extraction_auto.py#L81</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoFeatureExtractor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15409/src/transformers/models/auto/feature_extraction_auto.py#L82</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   This can be either:
 
   - a string, the *model id* of a pretrained feature_extractor hosted inside a model repo on
@@ -605,6 +606,7 @@ missing, by falling back to using pattern matching on `pretrained_model_name_or_
 - **hubert** -- [Wav2Vec2FeatureExtractor](/docs/transformers/pr_15409/en/model_doc/wav2vec2#transformers.Wav2Vec2FeatureExtractor) (Hubert model)
 - **layoutlmv2** -- [LayoutLMv2FeatureExtractor](/docs/transformers/pr_15409/en/model_doc/layoutlmv2#transformers.LayoutLMv2FeatureExtractor) (LayoutLMv2 model)
 - **perceiver** -- [PerceiverFeatureExtractor](/docs/transformers/pr_15409/en/model_doc/perceiver#transformers.PerceiverFeatureExtractor) (Perceiver model)
+- **segformer** -- [SegformerFeatureExtractor](/docs/transformers/pr_15409/en/model_doc/segformer#transformers.SegformerFeatureExtractor) (SegFormer model)
 - **speech_to_text** -- [Speech2TextFeatureExtractor](/docs/transformers/pr_15409/en/model_doc/speech_to_text#transformers.Speech2TextFeatureExtractor) (Speech2Text model)
 - **swin** -- [ViTFeatureExtractor](/docs/transformers/pr_15409/en/model_doc/vit#transformers.ViTFeatureExtractor) (Swin model)
 - **vit** -- [ViTFeatureExtractor](/docs/transformers/pr_15409/en/model_doc/vit#transformers.ViTFeatureExtractor) (ViT model)
