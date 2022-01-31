@@ -395,7 +395,7 @@ Takes care of tying weights embeddings afterwards if the model class has a `tie_
 
 </div>
 <div class="docstring">
-<docstring><name>save\_pretrained</name><anchor>transformers.PreTrainedModel.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/modeling_utils.py#L994</source><parameters>[{"name": "save_directory", "val": ": typing.Union[str, os.PathLike]"}, {"name": "save_config", "val": ": bool = True"}, {"name": "state_dict", "val": ": typing.Optional[dict] = None"}, {"name": "save_function", "val": ": typing.Callable = <function save at 0x7fa9915050d0>"}, {"name": "push_to_hub", "val": ": bool = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
+<docstring><name>save\_pretrained</name><anchor>transformers.PreTrainedModel.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/modeling_utils.py#L994</source><parameters>[{"name": "save_directory", "val": ": typing.Union[str, os.PathLike]"}, {"name": "save_config", "val": ": bool = True"}, {"name": "state_dict", "val": ": typing.Optional[dict] = None"}, {"name": "save_function", "val": ": typing.Callable = <function save at 0x7fbc54d890d0>"}, {"name": "push_to_hub", "val": ": bool = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
   Directory to which to save. Will be created if it doesn't exist.
 - **save_config** (`bool`, *optional*, defaults to `True`) --
   Whether or not to save the config of the model. Useful when in distributed training like TPUs and need
@@ -537,7 +537,7 @@ re-use e.g. Albert or Universal Transformers, or if doing long-range modeling wi
 
 </div>
 <div class="docstring">
-<docstring><name>get\_extended\_attention\_mask</name><anchor>transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/modeling_utils.py#L250</source><parameters>[{"name": "attention_mask", "val": ": Tensor"}, {"name": "input_shape", "val": ": typing.Tuple[int]"}, {"name": "device", "val": ": <property object at 0x7fa9291a4130>"}]</parameters><paramsdesc>- **attention_mask** (`torch.Tensor`) --
+<docstring><name>get\_extended\_attention\_mask</name><anchor>transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/modeling_utils.py#L250</source><parameters>[{"name": "attention_mask", "val": ": Tensor"}, {"name": "input_shape", "val": ": typing.Tuple[int]"}, {"name": "device", "val": ": <property object at 0x7fbbeca201d0>"}]</parameters><paramsdesc>- **attention_mask** (`torch.Tensor`) --
   Mask with ones indicating tokens to attend to, zeros for tokens to ignore.
 - **input_shape** (`Tuple[int]`) --
   The shape of the input to the model.
@@ -2071,7 +2071,7 @@ A class containing all of the functions supporting generation, to be used as a m
 
 
 <div class="docstring">
-<docstring><name>adjust\_logits\_during\_generation</name><anchor>transformers.generation_tf_utils.TFGenerationMixin.adjust_logits_during_generation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/generation_tf_utils.py#L1487</source><parameters>[{"name": "logits", "val": ""}, {"name": "cur_len", "val": ""}, {"name": "max_length", "val": ""}, {"name": "forced_bos_token_id", "val": ""}, {"name": "forced_eos_token_id", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>adjust\_logits\_during\_generation</name><anchor>transformers.generation_tf_utils.TFGenerationMixin.adjust_logits_during_generation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15113/src/transformers/generation_tf_utils.py#L1490</source><parameters>[{"name": "logits", "val": ""}, {"name": "cur_len", "val": ""}, {"name": "max_length", "val": ""}, {"name": "forced_bos_token_id", "val": ""}, {"name": "forced_eos_token_id", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 Implement in subclasses of [PreTrainedModel](/docs/transformers/pr_15113/en/main_classes/model#transformers.PreTrainedModel) for custom behavior to adjust the logits in the generate method.
 
