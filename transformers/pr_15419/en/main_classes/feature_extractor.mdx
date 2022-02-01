@@ -273,7 +273,7 @@ Mixin that contain utilities for preparing image features.
 
 
 <div class="docstring">
-<docstring><name>center\_crop</name><anchor>transformers.ImageFeatureExtractionMixin.center_crop</anchor><source>https://github.com/huggingface/transformers/blob/pr_15419/src/transformers/image_utils.py#L249</source><parameters>[{"name": "image", "val": ""}, {"name": "size", "val": ""}]</parameters><paramsdesc>- **image** (`PIL.Image.Image` or `np.ndarray` or `torch.Tensor`) --
+<docstring><name>center\_crop</name><anchor>transformers.ImageFeatureExtractionMixin.center_crop</anchor><source>https://github.com/huggingface/transformers/blob/pr_15419/src/transformers/image_utils.py#L250</source><parameters>[{"name": "image", "val": ""}, {"name": "size", "val": ""}]</parameters><paramsdesc>- **image** (`PIL.Image.Image` or `np.ndarray` or `torch.Tensor`) --
   The image to resize.
 - **size** (`int` or `Tuple[int, int]`) --
   The size to which crop the image.</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -313,7 +313,8 @@ if it's a PIL Image.
 - **resample** (`int`, *optional*, defaults to `PIL.Image.BILINEAR`) --
   The filter to user for resampling.
 - **default_to_square** (`bool`, *optional*, defaults to `True`) --
-  If set to `False`, will replicate
+  How to convert `size` when it is a single int. If set to `True`, the `size` will be converted to a
+  square (`size`,`size`). If set to `False`, will replicate
   [`torchvision.transforms.Resize`](https://pytorch.org/vision/stable/transforms.html#torchvision.transforms.Resize)
   with support for resizing only the smallest edge and providing an optional `max_size`.
 - **max_size** (`int`, *optional*, defaults to `None`) --
