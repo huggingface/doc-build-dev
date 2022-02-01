@@ -417,6 +417,17 @@ From a `pretrained_model_name_or_path`, resolve to a dictionary of parameters, t
 
 </div>
 <div class="docstring">
+<docstring><name>register\_for\_auto\_class</name><anchor>transformers.PretrainedConfig.register_for_auto_class</anchor><source>https://github.com/huggingface/transformers/blob/pr_15379/src/transformers/configuration_utils.py#L863</source><parameters>[{"name": "auto_class", "val": " = 'AutoConfig'"}]</parameters><paramsdesc>- **auto_class** (`str` or `type`, *optional*, defaults to `"AutoConfig"`) --
+  The auto class to register this new configuration with.</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Register this class with a given auto class. This should only be used for custom configurations as the ones in
+the library are already mapped with `AutoConfig`.
+
+
+
+
+</div>
+<div class="docstring">
 <docstring><name>save\_pretrained</name><anchor>transformers.PretrainedConfig.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15379/src/transformers/configuration_utils.py#L398</source><parameters>[{"name": "save_directory", "val": ": typing.Union[str, os.PathLike]"}, {"name": "push_to_hub", "val": ": bool = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
   Directory where the configuration JSON file will be saved (will be created if it does not exist).
 - **push_to_hub** (`bool`, *optional*, defaults to `False`) --
