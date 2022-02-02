@@ -73,7 +73,7 @@ This model was contributed by [nielsr](https://huggingface.co/nielsr). The origi
   Tuple of `torch.FloatTensor` (one for the output of each stage) of shape `(batch_size, num_channels,
   height, width)`. Hidden-states (also called feature maps) of the model at the output of each stage.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
-Class for [ConvNextModel](/docs/transformers/pr_15277/en/model_doc/convnext#transformers.ConvNextModel)'s outputs, with potential hidden states.
+Class for [ConvNextModel](/docs/transformers/pr_15277/en/model_doc/convnext#transformers.ConvNextModel)'s outputs, with potential hidden states (feature maps).
 
 
 
@@ -143,7 +143,8 @@ Example:
   `PIL.Image.BILINEAR`, `PIL.Image.HAMMING`, `PIL.Image.BICUBIC` or `PIL.Image.LANCZOS`. Only has an effect
   if `do_resize` is set to `True`.
 - **crop_pct** (`float`, *optional*) --
-  The percentage of the image to crop. If `None`, then a cropping percentage of 224 / 256 is used.
+  The percentage of the image to crop. If `None`, then a cropping percentage of 224 / 256 is used. Only has
+  an effect if `do_resize` is set to `True` and `size` &amp;lt; 384.
 - **do_normalize** (`bool`, *optional*, defaults to `True`) --
   Whether or not to normalize the input with mean and standard deviation.
 - **image_mean** (`List[int]`, defaults to `[0.485, 0.456, 0.406]`) --
