@@ -336,7 +336,7 @@ Example:
 ...     outputs = model(**inputs)
 
 >>> last_hidden_states = outputs.last_hidden_state
->>> print(last_hidden_states.shape)
+>>> list(last_hidden_states.shape)
 [1, 197, 768]
 ```
 
@@ -439,7 +439,7 @@ Example:
 >>> # model predicts one of the 1000 ImageNet classes
 >>> predicted_label = logits.argmax(-1).item()
 >>> print(model.config.id2label[predicted_label])
-'tabby, tabby cat'
+'Egyptian cat'
 ```
 
 
