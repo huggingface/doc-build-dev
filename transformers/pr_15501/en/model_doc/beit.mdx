@@ -547,8 +547,7 @@ behavior.
 - **labels** (`torch.LongTensor` of shape `(batch_size,)`, *optional*) --
   Labels for computing the image classification/regression loss. Indices should be in `[0, ...,
   config.num_labels - 1]`. If `config.num_labels == 1` a regression loss is computed (Mean-Square loss), If
-  `config.num_labels > 1` a classification loss is computed (Cross-Entropy).
-- **return_dict** = return_dict if return_dict is not None else self.config.use_return_dict --</paramsdesc><paramgroups>0</paramgroups><rettype>[transformers.modeling_outputs.SequenceClassifierOutput](/docs/transformers/pr_15501/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput) or `tuple(torch.FloatTensor)`</rettype><retdesc>A [transformers.modeling_outputs.SequenceClassifierOutput](/docs/transformers/pr_15501/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput) or a tuple of
+  `config.num_labels > 1` a classification loss is computed (Cross-Entropy).</paramsdesc><paramgroups>0</paramgroups><rettype>[transformers.modeling_outputs.SequenceClassifierOutput](/docs/transformers/pr_15501/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput) or `tuple(torch.FloatTensor)`</rettype><retdesc>A [transformers.modeling_outputs.SequenceClassifierOutput](/docs/transformers/pr_15501/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput) or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([BeitConfig](/docs/transformers/pr_15501/en/model_doc/beit#transformers.BeitConfig)) and inputs.
 
