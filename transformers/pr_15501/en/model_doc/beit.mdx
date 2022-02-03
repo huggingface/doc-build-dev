@@ -353,15 +353,14 @@ behavior.
   Whether or not to return the hidden states of all layers. See `hidden_states` under returned tensors for
   more detail.
 - **return_dict** (`bool`, *optional*) --
-  Whether or not to return a [ModelOutput](/docs/transformers/pr_15501/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>[transformers.modeling_outputs.BaseModelOutputWithPooling](/docs/transformers/pr_15501/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling) or `tuple(torch.FloatTensor)`</rettype><retdesc>A [transformers.modeling_outputs.BaseModelOutputWithPooling](/docs/transformers/pr_15501/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling) or a tuple of
+  Whether or not to return a [ModelOutput](/docs/transformers/pr_15501/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>[transformers.models.beit.modeling_beit.BeitModelOutputWithPooling](/docs/transformers/pr_15501/en/model_doc/beit#transformers.models.beit.modeling_beit.BeitModelOutputWithPooling) or `tuple(torch.FloatTensor)`</rettype><retdesc>A [transformers.models.beit.modeling_beit.BeitModelOutputWithPooling](/docs/transformers/pr_15501/en/model_doc/beit#transformers.models.beit.modeling_beit.BeitModelOutputWithPooling) or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([BeitConfig](/docs/transformers/pr_15501/en/model_doc/beit#transformers.BeitConfig)) and inputs.
 
 - **last_hidden_state** (`torch.FloatTensor` of shape `(batch_size, sequence_length, hidden_size)`) -- Sequence of hidden-states at the output of the last layer of the model.
-- **pooler_output** (`torch.FloatTensor` of shape `(batch_size, hidden_size)`) -- Last layer hidden-state of the first token of the sequence (classification token) after further processing
-  through the layers used for the auxiliary pretraining task. E.g. for BERT-family of models, this returns
-  the classification token after processing through a linear layer and a tanh activation function. The linear
-  layer weights are trained from the next sentence prediction (classification) objective during pretraining.
+- **pooler_output** (`torch.FloatTensor` of shape `(batch_size, hidden_size)`) -- Average of the last layer hidden states of the patch tokens (excluding the *[CLS]* token) if
+  *config.use_mean_pooling* is set to True. If set to False, then the final hidden state of the *[CLS]* token
+  will be returned.
 - **hidden_states** (`tuple(torch.FloatTensor)`, *optional*, returned when `output_hidden_states=True` is passed or when `config.output_hidden_states=True`) -- Tuple of `torch.FloatTensor` (one for the output of the embeddings + one for the output of each layer) of
   shape `(batch_size, sequence_length, hidden_size)`.
 
