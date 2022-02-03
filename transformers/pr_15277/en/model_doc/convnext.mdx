@@ -57,7 +57,7 @@ and outperforming Swin Transformers on COCO detection and ADE20K segmentation, w
 
 Tips:
 
-- One can use the [AutoFeatureExtractor](/docs/transformers/pr_15277/en/model_doc/auto#transformers.AutoFeatureExtractor) API to prepare images for the model.
+- See the code examples below each model regarding usage.
 
 This model was contributed by [nielsr](https://huggingface.co/nielsr). The original code can be found [here](https://github.com/facebookresearch/ConvNeXt).
 
@@ -88,7 +88,7 @@ Class for [ConvNextModel](/docs/transformers/pr_15277/en/model_doc/convnext#tran
 <docstring><name>class transformers.ConvNextConfig</name><anchor>transformers.ConvNextConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15277/src/transformers/models/convnext/configuration_convnext.py#L29</source><parameters>[{"name": "num_channels", "val": " = 3"}, {"name": "patch_size", "val": " = 4"}, {"name": "num_stages", "val": " = 4"}, {"name": "hidden_sizes", "val": " = None"}, {"name": "depths", "val": " = None"}, {"name": "hidden_act", "val": " = 'gelu'"}, {"name": "initializer_range", "val": " = 0.02"}, {"name": "layer_norm_eps", "val": " = 1e-12"}, {"name": "is_encoder_decoder", "val": " = False"}, {"name": "layer_scale_init_value", "val": " = 1e-06"}, {"name": "drop_path_rate", "val": " = 0.0"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **num_channels** (`int`, *optional*, defaults to 3) --
   The number of input channels.
 - **patch_size** (`int`, optional, defaults to 4) --
-  Patch size to use in the stem layer.
+  Patch size to use in the patch embedding layer.
 - **num_stages** (`int`, optional, defaults to 4) --
   The number of stages in the model.
 - **hidden_sizes** (`List[int]`, *optional*, defaults to [96, 192, 384, 768]) --
