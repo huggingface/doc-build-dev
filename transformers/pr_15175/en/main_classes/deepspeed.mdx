@@ -61,6 +61,8 @@ sections:
     title: ZeRO-3 and Infinity Nuances
   - local: zero-inference
     title: ZeRO Inference
+  - local: memory-requirements
+    title: Memory Requirements
   - local: filing-issues
     title: Filing Issues
   - local: troubleshooting
@@ -119,7 +121,7 @@ won't be possible on a single GPU.
 
 🤗 Transformers integrates [DeepSpeed](https://github.com/microsoft/DeepSpeed) via 2 options:
 
-1. Integration of the core DeepSpeed features via [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer). This is everything done for you type
+1. Integration of the core DeepSpeed features via [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer). This is an everything-done-for-you type
    of integration - just supply your custom config file or use our template and you have nothing else to do. Most of
    this document is focused on this feature.
 2. If you don't use [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer) and want to use your own Trainer where you integrated DeepSpeed
@@ -185,7 +187,7 @@ TORCH_CUDA_ARCH_LIST="8.6" DS_BUILD_CPU_ADAM=1 DS_BUILD_UTILS=1 pip install . \
 --disable-pip-version-check 2>&1 | tee build.log
 ```
 
-If you intend to use NVMe offload you will need to also include `DS_BUILD_AIO=1` in the instructions above (and also
+If you intend to use NVMe offload you will also need to include `DS_BUILD_AIO=1` in the instructions above (and also
 install *libaio-dev* system-wide).
 
 Edit `TORCH_CUDA_ARCH_LIST` to insert the code for the architectures of the GPU cards you intend to use. Assuming all
@@ -222,7 +224,7 @@ You can check the archs pytorch was built with using:
 python -c "import torch; print(torch.cuda.get_arch_list())"
 ```
 
-Here is how to find out the arch for one of the installed GPU. For example, for GPU 0:
+Here is how to find out the arch for one of the installed GPUs. For example, for GPU 0:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python -c "import torch; \
@@ -257,7 +259,7 @@ following:
 2. add a new argument `--deepspeed ds_config.json`, where `ds_config.json` is the DeepSpeed configuration file as
    documented [here](https://www.deepspeed.ai/docs/config-json/). The file naming is up to you.
 
-Therefore, if your original command line looked as following:
+Therefore, if your original command line looked as follows:
 
 ```bash
 python -m torch.distributed.launch --nproc_per_node=2 your_program.py &amp;lt;normal cl args>
@@ -302,7 +304,7 @@ For some practical usage examples, please, see this [post](https://github.com/hu
 
 <h3 id="deployment-with-one-gpu">Deployment with one GPU</h3>
 
-To deploy DeepSpeed with one GPU adjust the [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer) command line arguments as following:
+To deploy DeepSpeed with one GPU adjust the [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer) command line arguments as follows:
 
 ```bash
 deepspeed --num_gpus=1 examples/pytorch/translation/run_translation.py \
@@ -648,7 +650,7 @@ Do note that some values, such as `scheduler.params.total_num_steps` are calcula
 <h3 id="zero">ZeRO</h3>
 
 [Zero Redundancy Optimizer (ZeRO)](https://www.deepspeed.ai/tutorials/zero/) is the workhorse of DeepSpeed. It
-support 3 different levels (stages) of optimization. The first one is not quite interesting for scalability purposes,
+supports 3 different levels (stages) of optimization. The first one is not quite interesting for scalability purposes,
 therefore this document focuses on stages 2 and 3. Stage 3 is further improved by the latest addition of ZeRO-Infinity.
 You will find more indepth information in the DeepSpeed documentation.
 
@@ -669,7 +671,7 @@ going to use.
 
 <h4 id="zero2-config">ZeRO-2 Config</h4>
 
-The following is an example configuration for ZeRO stage 2:
+The following is an example of configuration for ZeRO stage 2:
 
 ```json
 &amp;lcub;
@@ -697,8 +699,8 @@ The following is an example configuration for ZeRO stage 2:
   footprint (`5e8 x 2Bytes x 2 x 4.5`). Therefore, if you have a GPU with 8GB or less RAM, to avoid getting
   OOM-errors you will need to reduce those parameters to about `2e8`, which would require 3.6GB. You will want to do
   the same on larger capacity GPU as well, if you're starting to hit OOM.
-- when reducing these buffers you're trading communication speed to avail more GPU RAM. The smaller the buffer size,
-  the slower the communication, and the more GPU RAM will be available to other tasks. So if a bigger batch size is
+- when reducing these buffers you're trading communication speed to avail more GPU RAM. The smaller the buffer size is,
+  the slower the communication gets, and the more GPU RAM will be available to other tasks. So if a bigger batch size is
   important, getting a slightly slower training time could be a good trade.
 
 
@@ -707,7 +709,7 @@ The following is an example configuration for ZeRO stage 2:
 
 <h4 id="zero3-config">ZeRO-3 Config</h4>
 
-The following is an example configuration for ZeRO stage 3:
+The following is an example of configuration for ZeRO stage 3:
 
 ```json
 &amp;lcub;
@@ -750,7 +752,7 @@ and its typically accessed much faster than normal CPU memory.
 
 If hitting OOM reduce `stage3_max_live_parameters` and `stage3_max_reuse_distance`. They should have minimal impact
 on performance unless you are doing activation checkpointing. `1e9` would consume ~2GB. The memory is shared by
-`stage3_max_live_parameters` and `stage3_max_reuse_distance`, so its not additive, its just 2GB total.
+`stage3_max_live_parameters` and `stage3_max_reuse_distance`, so it's not additive, it's just 2GB total.
 
 `stage3_max_live_parameters` is the upper limit on how many full parameters you want to keep on the GPU at any given
 time. "reuse distance" is a metric we are using to figure out when will a parameter be used again in the future, and we
@@ -1711,10 +1713,66 @@ deepspeed examples/pytorch/translation/run_translation.py \
 Since for inference there is no need for additional large memory used by the optimizer states and the gradients you
 should be able to fit much larger batches and/or sequence length onto the same hardware.
 
-
 Additionally DeepSpeed is currently developing a related product called Deepspeed-Inference which has no relationship
 to the ZeRO technology, but instead uses tensor parallelism to scale models that can't fit onto a single GPU. This is a
 work in progress and we will provide the integration once that product is complete.
+
+
+<h3 id="memory-requirements">Memory Requirements</h3>
+
+Since Deepspeed ZeRO can offload memory to CPU (and NVMe) the framework provides utils that allow one to tell how much CPU and GPU memory will be needed depending on the number of GPUs being used.
+
+Let's estimate how much memory is needed to finetune "bigscience/T0_3B" on a single GPU:
+
+```bash
+$ python -c 'from transformers import AutoModel; \
+from deepspeed.runtime.zero.stage3 import estimate_zero3_model_states_mem_needs_all_live; \
+model = AutoModel.from_pretrained("bigscience/T0_3B"); \
+estimate_zero3_model_states_mem_needs_all_live(model, num_gpus_per_node=1, num_nodes=1)'
+[...]
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 1 GPU per node.
+SW: Model with 2783M total params, 65M largest layer params.
+  per CPU  |  per GPU |   Options
+   70.00GB |   0.25GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+   70.00GB |   0.25GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+   62.23GB |   5.43GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+   62.23GB |   5.43GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    0.37GB |  46.91GB | offload_param=none, offload_optimizer=none, zero_init=1
+   15.56GB |  46.91GB | offload_param=none, offload_optimizer=none, zero_init=0
+```
+
+So you can fit it on a single 80GB GPU and no CPU offload, or a tiny 8GB GPU but then need ~60GB of CPU memory. (Remember this is just the memory for params, optimizer states and gradients - you will need a bit more memory for cuda kernels, activations and temps.)
+
+Then it's a tradeoff of cost vs speed. It'll be cheaper to buy/rent a smaller GPU (or less GPUs since you can use multiple GPUs with Deepspeed ZeRO. But then it'll be slower, so even if you don't care about how fast something will be done, the slowdown has a direct impact on the duration of using the GPU and thus bigger cost. So experiment and compare which works the best.
+
+If you have enough GPU memory make sure to disable the CPU/NVMe offload as it'll make everything faster.
+
+For example, let's repeat the same for 2 GPUs:
+
+```bash
+$ python -c 'from transformers import AutoModel; \
+from deepspeed.runtime.zero.stage3 import estimate_zero3_model_states_mem_needs_all_live; \
+model = AutoModel.from_pretrained("bigscience/T0_3B"); \
+estimate_zero3_model_states_mem_needs_all_live(model, num_gpus_per_node=2, num_nodes=1)'
+[...]
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 2 GPUs per node.
+SW: Model with 2783M total params, 65M largest layer params.
+  per CPU  |  per GPU |   Options
+   70.00GB |   0.25GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+   70.00GB |   0.25GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+   62.23GB |   2.84GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+   62.23GB |   2.84GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    0.74GB |  23.58GB | offload_param=none, offload_optimizer=none, zero_init=1
+   31.11GB |  23.58GB | offload_param=none, offload_optimizer=none, zero_init=0
+
+```
+
+So here you'd want 2x 32GB GPUs or higher without offloading to CPU.
+
+For full information please see [memory estimators](https://deepspeed.readthedocs.io/en/latest/memory.html).
+
 
 
 <h3 id="filing-issues">Filing Issues</h3>
@@ -1771,9 +1829,7 @@ If the `deepspeed` process gets killed at launch time without a traceback, that 
 to allocate more CPU memory than your system has or your process is allowed to allocate and the OS kernel killed that
 process. This is because your configuration file most likely has either `offload_optimizer` or `offload_param` or
 both configured to offload to `cpu`. If you have NVMe, experiment with offloading to NVMe if you're running under
-ZeRO-3.
-
-Work is being done to enable estimating how much memory is needed for a specific model: [PR](https://github.com/microsoft/DeepSpeed/pull/965).
+ZeRO-3. Here is how you can [estimate how much memory is needed for a specific model](https://deepspeed.readthedocs.io/en/latest/memory.html).
 
 
 
@@ -1782,7 +1838,7 @@ Work is being done to enable estimating how much memory is needed for a specific
 
 <h3 id="notes">Notes</h3>
 
-- DeepSpeed works with the PyTorch [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer) but not TF `TFTrainer`.
+- DeepSpeed works with the PyTorch [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer) but not TF `TFTrainer`
 - While DeepSpeed has a pip installable PyPI package, it is highly recommended that it gets installed from [source](https://github.com/microsoft/deepspeed#installation) to best match your hardware and also if you need to enable
   certain features, like 1-bit Adam, which aren't available in the pypi distribution.
 - You don't have to use the [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer) to use DeepSpeed with 🤗 Transformers - you can use any model
@@ -1796,7 +1852,7 @@ Work is being done to enable estimating how much memory is needed for a specific
 <h2 id="nontrainer-deepspeed-integration">Non-Trainer Deepspeed Integration</h2>
 
 The [HfDeepSpeedConfig](/docs/transformers/pr_15175/en/main_classes/deepspeed#transformers.deepspeed.HfDeepSpeedConfig) is used to integrate Deepspeed into the 🤗 Transformers core
-functionality, when [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer) is not used.
+functionality, when [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer) is not used. The only thing that it does is handling Deepspeed ZeRO 3 param gathering and automatically splitting the model onto multiple gpus during `from_pretrained` call. Everything else you have to do by yourself.
 
 When using [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer) everything is automatically taken care of.
 
@@ -1807,10 +1863,11 @@ For example for a pretrained model:
 
 ```python
 from transformers.deepspeed import HfDeepSpeedConfig
-from transformers import AutoModel, deepspeed
+from transformers import AutoModel
+import deepspeed
 
 ds_config = &amp;lcub;...}  # deepspeed config object or path to the file
-# must run before instantiating the model
+# must run before instantiating the model to detect zero 3
 dschf = HfDeepSpeedConfig(ds_config)  # keep this object alive
 model = AutoModel.from_pretrained("gpt2")
 engine = deepspeed.initialize(model=model, config_params=ds_config, ...)
@@ -1820,15 +1877,18 @@ or for non-pretrained model:
 
 ```python
 from transformers.deepspeed import HfDeepSpeedConfig
-from transformers import AutoModel, AutoConfig, deepspeed
+from transformers import AutoModel, AutoConfig
+import deepspeed
 
 ds_config = &amp;lcub;...}  # deepspeed config object or path to the file
-# must run before instantiating the model
+# must run before instantiating the model to detect zero 3
 dschf = HfDeepSpeedConfig(ds_config)  # keep this object alive
 config = AutoConfig.from_pretrained("gpt2")
 model = AutoModel.from_config(config)
 engine = deepspeed.initialize(model=model, config_params=ds_config, ...)
 ```
+
+Please note that if you're not using the [Trainer](/docs/transformers/pr_15175/en/main_classes/trainer#transformers.Trainer) integration, you're completely on your own. Basically follow the documentation on the [Deepspeed](https://www.deepspeed.ai/) website. Also you have to configure explicitly the config file - you can't use `"auto"` values and you will have to put real values instead.
 
 <h2 id="transformers.deepspeed.HfDeepSpeedConfig">HfDeepSpeedConfig</h2>
 
