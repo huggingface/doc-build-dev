@@ -443,7 +443,7 @@ Subclass and override this method to inject custom behavior.
 
 </div>
 <div class="docstring">
-<docstring><name>log\_metrics</name><anchor>transformers.trainer_pt_utils.log_metrics</anchor><source>https://github.com/huggingface/transformers/blob/pr_13831/src/transformers/trainer_pt_utils.py#L853</source><parameters>[{"name": "split", "val": ""}, {"name": "metrics", "val": ""}]</parameters><paramsdesc>- **split** (`str`) --
+<docstring><name>log\_metrics</name><anchor>transformers.trainer_pt_utils.log_metrics</anchor><source>https://github.com/huggingface/transformers/blob/pr_13831/src/transformers/trainer_pt_utils.py#L855</source><parameters>[{"name": "split", "val": ""}, {"name": "metrics", "val": ""}]</parameters><paramsdesc>- **split** (`str`) --
   Mode/split name: one of `train`, `eval`, `test`
 - **metrics** (`Dict[str, float]`) --
   The metrics returned from train/evaluate/predictmetrics: metrics dict</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -524,7 +524,7 @@ For best performance you may want to consider turning the memory profiling off f
 
 </div>
 <div class="docstring">
-<docstring><name>metrics\_format</name><anchor>transformers.trainer_pt_utils.metrics_format</anchor><source>https://github.com/huggingface/transformers/blob/pr_13831/src/transformers/trainer_pt_utils.py#L827</source><parameters>[{"name": "metrics", "val": ": typing.Dict[str, float]"}]</parameters><paramsdesc>- **metrics** (`Dict[str, float]`) --
+<docstring><name>metrics\_format</name><anchor>transformers.trainer_pt_utils.metrics_format</anchor><source>https://github.com/huggingface/transformers/blob/pr_13831/src/transformers/trainer_pt_utils.py#L829</source><parameters>[{"name": "metrics", "val": ": typing.Dict[str, float]"}]</parameters><paramsdesc>- **metrics** (`Dict[str, float]`) --
   The metrics returned from train/evaluate/predict</paramsdesc><paramgroups>0</paramgroups><rettype>metrics (`Dict[str, float]`)</rettype><retdesc>The reformatted metrics</retdesc></docstring>
 
 Reformat Trainer metrics values to a human-readable format
@@ -663,7 +663,7 @@ Remove a callback from the current list of `TrainerCallback`.
 
 </div>
 <div class="docstring">
-<docstring><name>save\_metrics</name><anchor>transformers.trainer_pt_utils.save_metrics</anchor><source>https://github.com/huggingface/transformers/blob/pr_13831/src/transformers/trainer_pt_utils.py#L943</source><parameters>[{"name": "split", "val": ""}, {"name": "metrics", "val": ""}, {"name": "combined", "val": " = True"}]</parameters><paramsdesc>- **split** (`str`) --
+<docstring><name>save\_metrics</name><anchor>transformers.trainer_pt_utils.save_metrics</anchor><source>https://github.com/huggingface/transformers/blob/pr_13831/src/transformers/trainer_pt_utils.py#L945</source><parameters>[{"name": "split", "val": ""}, {"name": "metrics", "val": ""}, {"name": "combined", "val": " = True"}]</parameters><paramsdesc>- **split** (`str`) --
   Mode/split name: one of `train`, `eval`, `test`, `all`
 - **metrics** (`Dict[str, float]`) --
   The metrics returned from train/evaluate/predict
@@ -692,7 +692,7 @@ Will only save from the main process.
 
 </div>
 <div class="docstring">
-<docstring><name>save\_state</name><anchor>transformers.trainer_pt_utils.save_state</anchor><source>https://github.com/huggingface/transformers/blob/pr_13831/src/transformers/trainer_pt_utils.py#L981</source><parameters>[]</parameters></docstring>
+<docstring><name>save\_state</name><anchor>transformers.trainer_pt_utils.save_state</anchor><source>https://github.com/huggingface/transformers/blob/pr_13831/src/transformers/trainer_pt_utils.py#L983</source><parameters>[]</parameters></docstring>
 
 Saves the Trainer state, since Trainer.save_model saves only the tokenizer with the model
 
