@@ -447,12 +447,12 @@ information.
     huggingface.co. Valid model ids can be located at the root-level, like `bert-base-uncased`, or
     namespaced under a user or organization name, like `dbmdz/bert-base-german-cased`.
   - a path to a *directory* containing a feature extractor file saved using the
-    [save_pretrained()](/docs/transformers/pr_15549/en/main_classes/feature_extractor#transformers.feature_extraction_utils.FeatureExtractionMixin.save_pretrained) method, e.g., `./my_model_directory/`.
+    [save_pretrained()](/docs/transformers/pr_15549/en/main_classes/feature_extractor#transformers.FeatureExtractionMixin.save_pretrained) method, e.g., `./my_model_directory/`.
   - a path or url to a saved feature extractor JSON *file*, e.g.,
     `./my_model_directory/preprocessor_config.json`.
 **kwargs --
 Additional keyword arguments passed along to both
-[from_pretrained()](/docs/transformers/pr_15549/en/main_classes/feature_extractor#transformers.feature_extraction_utils.FeatureExtractionMixin.from_pretrained) and
+[from_pretrained()](/docs/transformers/pr_15549/en/main_classes/feature_extractor#transformers.FeatureExtractionMixin.from_pretrained) and
 `from_pretrained`.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiate a processor associated with a pretrained model.
@@ -460,7 +460,7 @@ Instantiate a processor associated with a pretrained model.
 <Tip>
 
 This class method is simply calling the feature extractor
-[from_pretrained()](/docs/transformers/pr_15549/en/main_classes/feature_extractor#transformers.feature_extraction_utils.FeatureExtractionMixin.from_pretrained) and the tokenizer
+[from_pretrained()](/docs/transformers/pr_15549/en/main_classes/feature_extractor#transformers.FeatureExtractionMixin.from_pretrained) and the tokenizer
 `from_pretrained` methods. Please refer to the docstrings of the
 methods above for more information.
 
@@ -480,7 +480,7 @@ can be reloaded using the [from_pretrained()](/docs/transformers/pr_15549/en/mai
 
 <Tip>
 
-This class method is simply calling [save_pretrained()](/docs/transformers/pr_15549/en/main_classes/feature_extractor#transformers.feature_extraction_utils.FeatureExtractionMixin.save_pretrained) and
+This class method is simply calling [save_pretrained()](/docs/transformers/pr_15549/en/main_classes/feature_extractor#transformers.FeatureExtractionMixin.save_pretrained) and
 `save_pretrained`. Please refer to the docstrings of the methods
 above for more information.
 
