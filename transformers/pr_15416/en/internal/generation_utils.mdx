@@ -1149,7 +1149,7 @@ token_ids: the tokens generated thus far to reset the state of the progress thro
 
 <div class="docstring">
 
-<docstring><name>class transformers.BeamScorer</name><anchor>transformers.BeamScorer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L123</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.BeamScorer</name><anchor>transformers.BeamScorer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L88</source><parameters>[]</parameters></docstring>
 
 Abstract base class for all beam scorers that are used for [beam_search()](/docs/transformers/pr_15416/en/main_classes/model#transformers.generation_utils.GenerationMixin.beam_search) and
 [beam_sample()](/docs/transformers/pr_15416/en/main_classes/model#transformers.generation_utils.GenerationMixin.beam_sample).
@@ -1157,7 +1157,7 @@ Abstract base class for all beam scorers that are used for [beam_search()](/docs
 
 
 <div class="docstring">
-<docstring><name>process</name><anchor>transformers.BeamScorer.process</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L129</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "next_scores", "val": ": FloatTensor"}, {"name": "next_tokens", "val": ": LongTensor"}, {"name": "next_indices", "val": ": LongTensor"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size * num_beams, sequence_length)`) --
+<docstring><name>process</name><anchor>transformers.BeamScorer.process</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L94</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "next_scores", "val": ": FloatTensor"}, {"name": "next_tokens", "val": ": LongTensor"}, {"name": "next_indices", "val": ": LongTensor"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size * num_beams, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using any class inheriting from [PreTrainedTokenizer](/docs/transformers/pr_15416/en/main_classes/tokenizer#transformers.PreTrainedTokenizer). See
@@ -1191,7 +1191,7 @@ Abstract base class for all beam scorers that are used for [beam_search()](/docs
 
 </div>
 <div class="docstring">
-<docstring><name>finalize</name><anchor>transformers.BeamScorer.finalize</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L141</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "next_scores", "val": ": FloatTensor"}, {"name": "next_tokens", "val": ": LongTensor"}, {"name": "next_indices", "val": ": LongTensor"}, {"name": "max_length", "val": ": int"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size * num_beams, sequence_length)`) --
+<docstring><name>finalize</name><anchor>transformers.BeamScorer.finalize</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L106</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "next_scores", "val": ": FloatTensor"}, {"name": "next_tokens", "val": ": LongTensor"}, {"name": "next_indices", "val": ": LongTensor"}, {"name": "max_length", "val": ": int"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size * num_beams, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using any class inheriting from [PreTrainedTokenizer](/docs/transformers/pr_15416/en/main_classes/tokenizer#transformers.PreTrainedTokenizer). See
@@ -1222,7 +1222,7 @@ due to the `eos_token_id`.</retdesc></docstring>
 
 <div class="docstring">
 
-<docstring><name>class transformers.BeamSearchScorer</name><anchor>transformers.BeamSearchScorer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L155</source><parameters>[{"name": "batch_size", "val": ": int"}, {"name": "num_beams", "val": ": int"}, {"name": "device", "val": ": device"}, {"name": "length_penalty", "val": ": typing.Optional[float] = 1.0"}, {"name": "do_early_stopping", "val": ": typing.Optional[bool] = False"}, {"name": "num_beam_hyps_to_keep", "val": ": typing.Optional[int] = 1"}, {"name": "num_beam_groups", "val": ": typing.Optional[int] = 1"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **batch_size** (`int`) --
+<docstring><name>class transformers.BeamSearchScorer</name><anchor>transformers.BeamSearchScorer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L120</source><parameters>[{"name": "batch_size", "val": ": int"}, {"name": "num_beams", "val": ": int"}, {"name": "device", "val": ": device"}, {"name": "length_penalty", "val": ": typing.Optional[float] = 1.0"}, {"name": "do_early_stopping", "val": ": typing.Optional[bool] = False"}, {"name": "num_beam_hyps_to_keep", "val": ": typing.Optional[int] = 1"}, {"name": "num_beam_groups", "val": ": typing.Optional[int] = 1"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **batch_size** (`int`) --
   Batch Size of `input_ids` for which standard beam search decoding is run in parallel.
 - **max_length** (`int`) --
   The maximum length of the sequence to be generated.
@@ -1261,7 +1261,7 @@ implementation](https://github.com/ashwinkalyan/dbs/blob/master/dbs/beam_utils.l
 
 <div class="docstring">
 
-<docstring><name>class transformers.ConstrainedBeamSearchScorer</name><anchor>transformers.ConstrainedBeamSearchScorer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L390</source><parameters>[{"name": "batch_size", "val": ": int"}, {"name": "num_beams", "val": ": int"}, {"name": "constraints", "val": ": typing.List[transformers.generation_beam_constraints.Constraint]"}, {"name": "device", "val": ": device"}, {"name": "length_penalty", "val": ": typing.Optional[float] = 1.0"}, {"name": "do_early_stopping", "val": ": typing.Optional[bool] = False"}, {"name": "num_beam_hyps_to_keep", "val": ": typing.Optional[int] = 1"}, {"name": "num_beam_groups", "val": ": typing.Optional[int] = 1"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **batch_size** (`int`) --
+<docstring><name>class transformers.ConstrainedBeamSearchScorer</name><anchor>transformers.ConstrainedBeamSearchScorer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L355</source><parameters>[{"name": "batch_size", "val": ": int"}, {"name": "num_beams", "val": ": int"}, {"name": "constraints", "val": ": typing.List[transformers.generation_beam_constraints.Constraint]"}, {"name": "device", "val": ": device"}, {"name": "length_penalty", "val": ": typing.Optional[float] = 1.0"}, {"name": "do_early_stopping", "val": ": typing.Optional[bool] = False"}, {"name": "num_beam_hyps_to_keep", "val": ": typing.Optional[int] = 1"}, {"name": "num_beam_groups", "val": ": typing.Optional[int] = 1"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **batch_size** (`int`) --
   Batch Size of `input_ids` for which standard beam search decoding is run in parallel.
 - **max_length** (`int`) --
   The maximum length of the sequence to be generated.
@@ -1294,7 +1294,7 @@ implementation](https://github.com/ashwinkalyan/dbs/blob/master/dbs/beam_utils.l
 
 
 <div class="docstring">
-<docstring><name>process</name><anchor>transformers.ConstrainedBeamSearchScorer.process</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L484</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "next_scores", "val": ": FloatTensor"}, {"name": "next_tokens", "val": ": LongTensor"}, {"name": "next_indices", "val": ": LongTensor"}, {"name": "scores_for_all_vocab", "val": ": FloatTensor"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size * num_beams, sequence_length)`) --
+<docstring><name>process</name><anchor>transformers.ConstrainedBeamSearchScorer.process</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_beam_search.py#L449</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "next_scores", "val": ": FloatTensor"}, {"name": "next_tokens", "val": ": LongTensor"}, {"name": "next_indices", "val": ": LongTensor"}, {"name": "scores_for_all_vocab", "val": ": FloatTensor"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size * num_beams, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using any class inheriting from [PreTrainedTokenizer](/docs/transformers/pr_15416/en/main_classes/tokenizer#transformers.PreTrainedTokenizer). See
@@ -1314,12 +1314,14 @@ implementation](https://github.com/ashwinkalyan/dbs/blob/master/dbs/beam_utils.l
 - **eos_token_id** (`int`, *optional*) --
   The id of the *end-of-sequence* token.</paramsdesc><paramgroups>0</paramgroups><rettype>`UserDict`</rettype><retdesc>A dictionary composed of the fields as defined above:
 
-- **next_beam_scores** (`torch.FloatTensor` of shape `(batch_size * num_beams)`) -- Updated scores of all
-  non-finished beams.
-- **next_beam_tokens** (`torch.FloatTensor` of shape `(batch_size * num_beams)`) -- Next tokens to be added
-  to the non-finished beam_hypotheses.
+- **next_beam_scores** (`torch.FloatTensor` of shape `(batch_size * num_beams)`) -- Updated scores of
+  all
+non-finished beams.
+- **next_beam_tokens** (`torch.FloatTensor` of shape `(batch_size * num_beams)`) -- Next tokens to be
+  added
+to the non-finished beam_hypotheses.
 - **next_beam_indices** (`torch.FloatTensor` of shape `(batch_size * num_beams)`) -- Beam indices
-  indicating to which beam the next tokens shall be added.</retdesc></docstring>
+indicating to which beam the next tokens shall be added.</retdesc></docstring>
 
 
 
@@ -1335,7 +1337,7 @@ implementation](https://github.com/ashwinkalyan/dbs/blob/master/dbs/beam_utils.l
 
 <div class="docstring">
 
-<docstring><name>transformers.top\_k\_top\_p\_filtering</name><anchor>transformers.top_k_top_p_filtering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_utils.py#L3157</source><parameters>[{"name": "logits", "val": ": FloatTensor"}, {"name": "top_k", "val": ": int = 0"}, {"name": "top_p", "val": ": float = 1.0"}, {"name": "filter_value", "val": ": float = -inf"}, {"name": "min_tokens_to_keep", "val": ": int = 1"}]</parameters><paramsdesc>logits -- logits distribution shape (batch size, vocabulary size)
+<docstring><name>transformers.top\_k\_top\_p\_filtering</name><anchor>transformers.top_k_top_p_filtering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_utils.py#L3156</source><parameters>[{"name": "logits", "val": ": FloatTensor"}, {"name": "top_k", "val": ": int = 0"}, {"name": "top_p", "val": ": float = 1.0"}, {"name": "filter_value", "val": ": float = -inf"}, {"name": "min_tokens_to_keep", "val": ": int = 1"}]</parameters><paramsdesc>logits -- logits distribution shape (batch size, vocabulary size)
 - **top_k** (`int`, *optional*, defaults to 0) --
   If > 0, only keep the top k tokens with highest probability (top-k filtering)
 - **top_p** (`float`, *optional*, defaults to 1.0) --
@@ -1355,7 +1357,7 @@ From: https://gist.github.com/thomwolf/1a5a29f6962089e871b94cbd09daf317
 
 <div class="docstring">
 
-<docstring><name>transformers.tf\_top\_k\_top\_p\_filtering</name><anchor>transformers.tf_top_k_top_p_filtering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_tf_utils.py#L1569</source><parameters>[{"name": "logits", "val": ""}, {"name": "top_k", "val": " = 0"}, {"name": "top_p", "val": " = 1.0"}, {"name": "filter_value", "val": " = -inf"}, {"name": "min_tokens_to_keep", "val": " = 1"}]</parameters><paramsdesc>logits -- logits distribution shape (batch size, vocabulary size)
+<docstring><name>transformers.tf\_top\_k\_top\_p\_filtering</name><anchor>transformers.tf_top_k_top_p_filtering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15416/src/transformers/generation_tf_utils.py#L1565</source><parameters>[{"name": "logits", "val": ""}, {"name": "top_k", "val": " = 0"}, {"name": "top_p", "val": " = 1.0"}, {"name": "filter_value", "val": " = -inf"}, {"name": "min_tokens_to_keep", "val": " = 1"}]</parameters><paramsdesc>logits -- logits distribution shape (batch size, vocabulary size)
 - **top_k** (`int`, *optional*, defaults to 0) --
   If > 0, only keep the top k tokens with highest probability (top-k filtering)
 - **top_p** (`float`, *optional*, defaults to 1.0) --
