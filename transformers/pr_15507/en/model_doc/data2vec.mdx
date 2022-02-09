@@ -27,7 +27,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -148,7 +148,7 @@ Examples:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecForTextModel</name><anchor>transformers.Data2VecForTextModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L691</source><parameters>[{"name": "config", "val": ""}, {"name": "add_pooling_layer", "val": " = True"}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
+<docstring><name>class transformers.Data2VecForTextModel</name><anchor>transformers.Data2VecForTextModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L690</source><parameters>[{"name": "config", "val": ""}, {"name": "add_pooling_layer", "val": " = True"}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
   model. Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 The bare Data2Vec Model transformer outputting raw hidden-states without any specific head on top.
@@ -178,7 +178,7 @@ to `True`. To be used in a Seq2Seq model, the model needs to initialized with bo
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecForTextModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L736</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "encoder_hidden_states", "val": " = None"}, {"name": "encoder_attention_mask", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecForTextModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L734</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "encoder_hidden_states", "val": " = None"}, {"name": "encoder_attention_mask", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RobertaTokenizer](/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15507/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -310,7 +310,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecForCausalLM</name><anchor>transformers.Data2VecForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L877</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
+<docstring><name>class transformers.Data2VecForCausalLM</name><anchor>transformers.Data2VecForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L875</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
   model. Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 Data2Vec Model with a `language modeling` head on top for CLM fine-tuning.
@@ -328,7 +328,7 @@ and behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecForCausalLM.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L903</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "encoder_hidden_states", "val": " = None"}, {"name": "encoder_attention_mask", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecForCausalLM.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L901</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "encoder_hidden_states", "val": " = None"}, {"name": "encoder_attention_mask", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "past_key_values", "val": " = None"}, {"name": "use_cache", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RobertaTokenizer](/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15507/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -461,7 +461,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecForMaskedLM</name><anchor>transformers.Data2VecForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1029</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
+<docstring><name>class transformers.Data2VecForMaskedLM</name><anchor>transformers.Data2VecForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1027</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
   model. Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 data2vec Model with a `language modeling` head on top.
@@ -479,7 +479,7 @@ and behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecForMaskedLM.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1058</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "encoder_hidden_states", "val": " = None"}, {"name": "encoder_attention_mask", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecForMaskedLM.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1056</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "encoder_hidden_states", "val": " = None"}, {"name": "encoder_attention_mask", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RobertaTokenizer](/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15507/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -585,7 +585,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecForSequenceClassification</name><anchor>transformers.Data2VecForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1159</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
+<docstring><name>class transformers.Data2VecForSequenceClassification</name><anchor>transformers.Data2VecForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1157</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
   model. Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -606,7 +606,7 @@ and behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecForSequenceClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1173</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecForSequenceClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1171</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RobertaTokenizer](/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15507/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -725,7 +725,7 @@ Example of multi-label classification:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecForMultipleChoice</name><anchor>transformers.Data2VecForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1257</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
+<docstring><name>class transformers.Data2VecForMultipleChoice</name><anchor>transformers.Data2VecForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1255</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
   model. Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -746,7 +746,7 @@ and behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecForMultipleChoice.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1270</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, num_choices, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecForMultipleChoice.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1268</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, num_choices, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RobertaTokenizer](/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15507/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -857,7 +857,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecForTokenClassification</name><anchor>transformers.Data2VecForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1352</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
+<docstring><name>class transformers.Data2VecForTokenClassification</name><anchor>transformers.Data2VecForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1350</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
   model. Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -878,7 +878,7 @@ and behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecForTokenClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1370</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecForTokenClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1368</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RobertaTokenizer](/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15507/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
@@ -980,7 +980,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecForQuestionAnswering</name><anchor>transformers.Data2VecForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1460</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
+<docstring><name>class transformers.Data2VecForQuestionAnswering</name><anchor>transformers.Data2VecForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1458</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig)) -- Model configuration class with all the parameters of the
   model. Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -1001,7 +1001,7 @@ and behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecForQuestionAnswering.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1474</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "start_positions", "val": " = None"}, {"name": "end_positions", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecForQuestionAnswering.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec.py#L1472</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "start_positions", "val": " = None"}, {"name": "end_positions", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RobertaTokenizer](/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15507/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and
