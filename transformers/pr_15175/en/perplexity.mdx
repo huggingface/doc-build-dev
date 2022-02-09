@@ -13,7 +13,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -31,7 +31,7 @@ specific language governing permissions and limitations under the License.
 
 <h1 id="perplexity-of-fixedlength-models">Perplexity of fixed-length models</h1>
 
-<ColabDropdown hydrate-props={{
+<DocNotebookDropdown hydrate-props={{
   classNames: "absolute z-10 right-0 top-0",
   options:[
     {label: "Mixed", value: "https://colab.research.google.com/github/huggingface/notebooks/blob/master/transformers_doc/perplexity.ipynb"},
