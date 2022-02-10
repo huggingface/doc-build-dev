@@ -17,7 +17,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -56,6 +56,8 @@ By default a [Trainer](/docs/transformers/pr_13831/en/main_classes/trainer#trans
 - [CometCallback](/docs/transformers/pr_13831/en/main_classes/callback#transformers.integrations.CometCallback) if [comet_ml](https://www.comet.ml/site/) is installed.
 - [MLflowCallback](/docs/transformers/pr_13831/en/main_classes/callback#transformers.integrations.MLflowCallback) if [mlflow](https://www.mlflow.org/) is installed.
 - [AzureMLCallback](/docs/transformers/pr_13831/en/main_classes/callback#transformers.integrations.AzureMLCallback) if [azureml-sdk](https://pypi.org/project/azureml-sdk/) is
+  installed.
+- [CodeCarbonCallback](/docs/transformers/pr_13831/en/main_classes/callback#transformers.integrations.CodeCarbonCallback) if [codecarbon](https://pypi.org/project/codecarbon/) is
   installed.
 
 The main class that implements callbacks is [TrainerCallback](/docs/transformers/pr_13831/en/main_classes/callback#transformers.TrainerCallback). It gets the
@@ -218,6 +220,15 @@ without a remote storage will just copy the files to your artifact location.
 <docstring><name>class transformers.integrations.AzureMLCallback</name><anchor>transformers.integrations.AzureMLCallback</anchor><source>https://github.com/huggingface/transformers/blob/pr_13831/src/transformers/integrations.py#L736</source><parameters>[{"name": "azureml_run", "val": " = None"}]</parameters></docstring>
 
 A [TrainerCallback](/docs/transformers/pr_13831/en/main_classes/callback#transformers.TrainerCallback) that sends the logs to [AzureML](https://pypi.org/project/azureml-sdk/).
+
+
+</div>
+
+<div class="docstring">
+
+<docstring><name>class transformers.integrations.CodeCarbonCallback</name><anchor>transformers.integrations.CodeCarbonCallback</anchor><source>https://github.com/huggingface/transformers/blob/pr_13831/src/transformers/integrations.py#L919</source><parameters>[]</parameters></docstring>
+
+A [TrainerCallback](/docs/transformers/pr_13831/en/main_classes/callback#transformers.TrainerCallback) that tracks the CO2 emission of training.
 
 
 </div>

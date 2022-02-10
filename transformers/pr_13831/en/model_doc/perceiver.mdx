@@ -65,7 +65,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -1038,7 +1038,7 @@ Examples:
 ...     project_pos_dim=256,
 ...     trainable_position_encoding_kwargs=dict(
 ...         num_channels=256,
-...         index_dims=config.image_size ** 2,
+...         index_dims=config.image_size**2,
 ...     ),
 ... )
 
