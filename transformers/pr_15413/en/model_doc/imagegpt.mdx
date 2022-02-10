@@ -21,7 +21,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -190,7 +190,7 @@ Constructs an ImageGPT feature extractor. This feature extractor can be used to 
 resolution (such as 32x32 or 64x64), normalize them and finally color quantize them to obtain sequences of "pixel
 values" (color clusters).
 
-This feature extractor inherits from `FeatureExtractionMixin` which contains most of the main methods. Users
+This feature extractor inherits from [FeatureExtractionMixin](/docs/transformers/pr_15413/en/main_classes/feature_extractor#transformers.FeatureExtractionMixin) which contains most of the main methods. Users
 should refer to this superclass for more information regarding those methods.
 
 
