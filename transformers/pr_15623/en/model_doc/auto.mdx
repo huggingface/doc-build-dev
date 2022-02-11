@@ -4566,7 +4566,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModel</name><anchor>transformers.TFAutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L371</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModel</name><anchor>transformers.TFAutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L376</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the base model classes of the library when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -4597,6 +4597,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [FlaubertConfig](/docs/transformers/pr_15623/en/model_doc/flaubert#transformers.FlaubertConfig) configuration class: [TFFlaubertModel](/docs/transformers/pr_15623/en/model_doc/flaubert#transformers.TFFlaubertModel) (FlauBERT model)
   - [FunnelConfig](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.FunnelConfig) configuration class: [TFFunnelModel](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.TFFunnelModel) or [TFFunnelBaseModel](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.TFFunnelBaseModel) (Funnel Transformer model)
   - [GPT2Config](/docs/transformers/pr_15623/en/model_doc/gpt2#transformers.GPT2Config) configuration class: [TFGPT2Model](/docs/transformers/pr_15623/en/model_doc/gpt2#transformers.TFGPT2Model) (OpenAI GPT-2 model)
+  - [GPTJConfig](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.GPTJConfig) configuration class: [TFGPTJModel](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.TFGPTJModel) (GPT-J model)
   - [HubertConfig](/docs/transformers/pr_15623/en/model_doc/hubert#transformers.HubertConfig) configuration class: [TFHubertModel](/docs/transformers/pr_15623/en/model_doc/hubert#transformers.TFHubertModel) (Hubert model)
   - [LEDConfig](/docs/transformers/pr_15623/en/model_doc/led#transformers.LEDConfig) configuration class: [TFLEDModel](/docs/transformers/pr_15623/en/model_doc/led#transformers.TFLEDModel) (LED model)
   - [LayoutLMConfig](/docs/transformers/pr_15623/en/model_doc/layoutlm#transformers.LayoutLMConfig) configuration class: [TFLayoutLMModel](/docs/transformers/pr_15623/en/model_doc/layoutlm#transformers.TFLayoutLMModel) (LayoutLM model)
@@ -4731,6 +4732,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **flaubert** -- [TFFlaubertModel](/docs/transformers/pr_15623/en/model_doc/flaubert#transformers.TFFlaubertModel) (FlauBERT model)
 - **funnel** -- [TFFunnelModel](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.TFFunnelModel) or [TFFunnelBaseModel](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.TFFunnelBaseModel) (Funnel Transformer model)
 - **gpt2** -- [TFGPT2Model](/docs/transformers/pr_15623/en/model_doc/gpt2#transformers.TFGPT2Model) (OpenAI GPT-2 model)
+- **gptj** -- [TFGPTJModel](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.TFGPTJModel) (GPT-J model)
 - **hubert** -- [TFHubertModel](/docs/transformers/pr_15623/en/model_doc/hubert#transformers.TFHubertModel) (Hubert model)
 - **layoutlm** -- [TFLayoutLMModel](/docs/transformers/pr_15623/en/model_doc/layoutlm#transformers.TFLayoutLMModel) (LayoutLM model)
 - **led** -- [TFLEDModel](/docs/transformers/pr_15623/en/model_doc/led#transformers.TFLEDModel) (LED model)
@@ -4785,7 +4787,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForPreTraining</name><anchor>transformers.TFAutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L378</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForPreTraining</name><anchor>transformers.TFAutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L383</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a pretraining head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -4966,7 +4968,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForCausalLM</name><anchor>transformers.TFAutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L393</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForCausalLM</name><anchor>transformers.TFAutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L398</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a causal language modeling head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -4983,6 +4985,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [BertConfig](/docs/transformers/pr_15623/en/model_doc/bert#transformers.BertConfig) configuration class: [TFBertLMHeadModel](/docs/transformers/pr_15623/en/model_doc/bert#transformers.TFBertLMHeadModel) (BERT model)
   - [CTRLConfig](/docs/transformers/pr_15623/en/model_doc/ctrl#transformers.CTRLConfig) configuration class: [TFCTRLLMHeadModel](/docs/transformers/pr_15623/en/model_doc/ctrl#transformers.TFCTRLLMHeadModel) (CTRL model)
   - [GPT2Config](/docs/transformers/pr_15623/en/model_doc/gpt2#transformers.GPT2Config) configuration class: [TFGPT2LMHeadModel](/docs/transformers/pr_15623/en/model_doc/gpt2#transformers.TFGPT2LMHeadModel) (OpenAI GPT-2 model)
+  - [GPTJConfig](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.GPTJConfig) configuration class: [TFGPTJForCausalLM](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.TFGPTJForCausalLM) (GPT-J model)
   - [OpenAIGPTConfig](/docs/transformers/pr_15623/en/model_doc/openai-gpt#transformers.OpenAIGPTConfig) configuration class: [TFOpenAIGPTLMHeadModel](/docs/transformers/pr_15623/en/model_doc/openai-gpt#transformers.TFOpenAIGPTLMHeadModel) (OpenAI GPT model)
   - [RemBertConfig](/docs/transformers/pr_15623/en/model_doc/rembert#transformers.RemBertConfig) configuration class: [TFRemBertForCausalLM](/docs/transformers/pr_15623/en/model_doc/rembert#transformers.TFRemBertForCausalLM) (RemBERT model)
   - [RoFormerConfig](/docs/transformers/pr_15623/en/model_doc/roformer#transformers.RoFormerConfig) configuration class: [TFRoFormerForCausalLM](/docs/transformers/pr_15623/en/model_doc/roformer#transformers.TFRoFormerForCausalLM) (RoFormer model)
@@ -5086,6 +5089,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **bert** -- [TFBertLMHeadModel](/docs/transformers/pr_15623/en/model_doc/bert#transformers.TFBertLMHeadModel) (BERT model)
 - **ctrl** -- [TFCTRLLMHeadModel](/docs/transformers/pr_15623/en/model_doc/ctrl#transformers.TFCTRLLMHeadModel) (CTRL model)
 - **gpt2** -- [TFGPT2LMHeadModel](/docs/transformers/pr_15623/en/model_doc/gpt2#transformers.TFGPT2LMHeadModel) (OpenAI GPT-2 model)
+- **gptj** -- [TFGPTJForCausalLM](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.TFGPTJForCausalLM) (GPT-J model)
 - **openai-gpt** -- [TFOpenAIGPTLMHeadModel](/docs/transformers/pr_15623/en/model_doc/openai-gpt#transformers.TFOpenAIGPTLMHeadModel) (OpenAI GPT model)
 - **rembert** -- [TFRemBertForCausalLM](/docs/transformers/pr_15623/en/model_doc/rembert#transformers.TFRemBertForCausalLM) (RemBERT model)
 - **roberta** -- [TFRobertaForCausalLM](/docs/transformers/pr_15623/en/model_doc/roberta#transformers.TFRobertaForCausalLM) (RoBERTa model)
@@ -5123,7 +5127,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForImageClassification</name><anchor>transformers.TFAutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L400</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForImageClassification</name><anchor>transformers.TFAutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L405</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a image classification head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -5262,7 +5266,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForMaskedLM</name><anchor>transformers.TFAutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L414</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForMaskedLM</name><anchor>transformers.TFAutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L419</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a masked language modeling head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -5439,7 +5443,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForSeq2SeqLM</name><anchor>transformers.TFAutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L421</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForSeq2SeqLM</name><anchor>transformers.TFAutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L426</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence-to-sequence language modeling head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -5596,7 +5600,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForSequenceClassification</name><anchor>transformers.TFAutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L430</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForSequenceClassification</name><anchor>transformers.TFAutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L435</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence classification head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -5622,6 +5626,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [FlaubertConfig](/docs/transformers/pr_15623/en/model_doc/flaubert#transformers.FlaubertConfig) configuration class: [TFFlaubertForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/flaubert#transformers.TFFlaubertForSequenceClassification) (FlauBERT model)
   - [FunnelConfig](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.FunnelConfig) configuration class: [TFFunnelForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.TFFunnelForSequenceClassification) (Funnel Transformer model)
   - [GPT2Config](/docs/transformers/pr_15623/en/model_doc/gpt2#transformers.GPT2Config) configuration class: [TFGPT2ForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/gpt2#transformers.TFGPT2ForSequenceClassification) (OpenAI GPT-2 model)
+  - [GPTJConfig](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.GPTJConfig) configuration class: [TFGPTJForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.TFGPTJForSequenceClassification) (GPT-J model)
   - [LayoutLMConfig](/docs/transformers/pr_15623/en/model_doc/layoutlm#transformers.LayoutLMConfig) configuration class: [TFLayoutLMForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/layoutlm#transformers.TFLayoutLMForSequenceClassification) (LayoutLM model)
   - [LongformerConfig](/docs/transformers/pr_15623/en/model_doc/longformer#transformers.LongformerConfig) configuration class: [TFLongformerForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/longformer#transformers.TFLongformerForSequenceClassification) (Longformer model)
   - [MPNetConfig](/docs/transformers/pr_15623/en/model_doc/mpnet#transformers.MPNetConfig) configuration class: [TFMPNetForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/mpnet#transformers.TFMPNetForSequenceClassification) (MPNet model)
@@ -5740,6 +5745,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **flaubert** -- [TFFlaubertForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/flaubert#transformers.TFFlaubertForSequenceClassification) (FlauBERT model)
 - **funnel** -- [TFFunnelForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.TFFunnelForSequenceClassification) (Funnel Transformer model)
 - **gpt2** -- [TFGPT2ForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/gpt2#transformers.TFGPT2ForSequenceClassification) (OpenAI GPT-2 model)
+- **gptj** -- [TFGPTJForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.TFGPTJForSequenceClassification) (GPT-J model)
 - **layoutlm** -- [TFLayoutLMForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/layoutlm#transformers.TFLayoutLMForSequenceClassification) (LayoutLM model)
 - **longformer** -- [TFLongformerForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/longformer#transformers.TFLongformerForSequenceClassification) (Longformer model)
 - **mobilebert** -- [TFMobileBertForSequenceClassification](/docs/transformers/pr_15623/en/model_doc/mobilebert#transformers.TFMobileBertForSequenceClassification) (MobileBERT model)
@@ -5783,7 +5789,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForMultipleChoice</name><anchor>transformers.TFAutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L466</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForMultipleChoice</name><anchor>transformers.TFAutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L471</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a multiple choice head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -5954,7 +5960,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForTableQuestionAnswering</name><anchor>transformers.TFAutoModelForTableQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L446</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForTableQuestionAnswering</name><anchor>transformers.TFAutoModelForTableQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L451</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a table question answering head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -6093,7 +6099,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForTokenClassification</name><anchor>transformers.TFAutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L457</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForTokenClassification</name><anchor>transformers.TFAutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L462</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a token classification head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -6270,7 +6276,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForQuestionAnswering</name><anchor>transformers.TFAutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L439</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForQuestionAnswering</name><anchor>transformers.TFAutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L444</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a question answering head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -6294,6 +6300,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [ElectraConfig](/docs/transformers/pr_15623/en/model_doc/electra#transformers.ElectraConfig) configuration class: [TFElectraForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/electra#transformers.TFElectraForQuestionAnswering) (ELECTRA model)
   - [FlaubertConfig](/docs/transformers/pr_15623/en/model_doc/flaubert#transformers.FlaubertConfig) configuration class: [TFFlaubertForQuestionAnsweringSimple](/docs/transformers/pr_15623/en/model_doc/flaubert#transformers.TFFlaubertForQuestionAnsweringSimple) (FlauBERT model)
   - [FunnelConfig](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.FunnelConfig) configuration class: [TFFunnelForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.TFFunnelForQuestionAnswering) (Funnel Transformer model)
+  - [GPTJConfig](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.GPTJConfig) configuration class: [TFGPTJForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.TFGPTJForQuestionAnswering) (GPT-J model)
   - [LongformerConfig](/docs/transformers/pr_15623/en/model_doc/longformer#transformers.LongformerConfig) configuration class: [TFLongformerForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/longformer#transformers.TFLongformerForQuestionAnswering) (Longformer model)
   - [MPNetConfig](/docs/transformers/pr_15623/en/model_doc/mpnet#transformers.MPNetConfig) configuration class: [TFMPNetForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/mpnet#transformers.TFMPNetForQuestionAnswering) (MPNet model)
   - [MobileBertConfig](/docs/transformers/pr_15623/en/model_doc/mobilebert#transformers.MobileBertConfig) configuration class: [TFMobileBertForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/mobilebert#transformers.TFMobileBertForQuestionAnswering) (MobileBERT model)
@@ -6406,6 +6413,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **electra** -- [TFElectraForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/electra#transformers.TFElectraForQuestionAnswering) (ELECTRA model)
 - **flaubert** -- [TFFlaubertForQuestionAnsweringSimple](/docs/transformers/pr_15623/en/model_doc/flaubert#transformers.TFFlaubertForQuestionAnsweringSimple) (FlauBERT model)
 - **funnel** -- [TFFunnelForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/funnel#transformers.TFFunnelForQuestionAnswering) (Funnel Transformer model)
+- **gptj** -- [TFGPTJForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/gptj#transformers.TFGPTJForQuestionAnswering) (GPT-J model)
 - **longformer** -- [TFLongformerForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/longformer#transformers.TFLongformerForQuestionAnswering) (Longformer model)
 - **mobilebert** -- [TFMobileBertForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/mobilebert#transformers.TFMobileBertForQuestionAnswering) (MobileBERT model)
 - **mpnet** -- [TFMPNetForQuestionAnswering](/docs/transformers/pr_15623/en/model_doc/mpnet#transformers.TFMPNetForQuestionAnswering) (MPNet model)
@@ -6445,7 +6453,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForVision2Seq</name><anchor>transformers.TFAutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L407</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForVision2Seq</name><anchor>transformers.TFAutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L412</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a vision-to-text modeling head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -6584,7 +6592,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFAutoModelForSpeechSeq2Seq</name><anchor>transformers.TFAutoModelForSpeechSeq2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L482</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.TFAutoModelForSpeechSeq2Seq</name><anchor>transformers.TFAutoModelForSpeechSeq2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15623/src/transformers/models/auto/modeling_tf_auto.py#L487</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence-to-sequence speech-to-text modeling head) when created
 with the `from_pretrained()`class method or the `from_config()`class
