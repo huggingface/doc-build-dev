@@ -383,6 +383,12 @@ Prunes heads of the base model.
 Register this class with a given auto class. This should only be used for custom models as the ones in the
 library are already mapped with an auto class.
 
+<Tip warning=&amp;lcub;true}>
+
+This API is experimental and may have some slight breaking changes in the next releases.
+
+</Tip>
+
 
 
 
@@ -406,7 +412,7 @@ Takes care of tying weights embeddings afterwards if the model class has a `tie_
 
 </div>
 <div class="docstring">
-<docstring><name>save\_pretrained</name><anchor>transformers.PreTrainedModel.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_utils.py#L999</source><parameters>[{"name": "save_directory", "val": ": typing.Union[str, os.PathLike]"}, {"name": "save_config", "val": ": bool = True"}, {"name": "state_dict", "val": ": typing.Optional[dict] = None"}, {"name": "save_function", "val": ": typing.Callable = <function save at 0x7f7e3937b280>"}, {"name": "push_to_hub", "val": ": bool = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
+<docstring><name>save\_pretrained</name><anchor>transformers.PreTrainedModel.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_utils.py#L999</source><parameters>[{"name": "save_directory", "val": ": typing.Union[str, os.PathLike]"}, {"name": "save_config", "val": ": bool = True"}, {"name": "state_dict", "val": ": typing.Optional[dict] = None"}, {"name": "save_function", "val": ": typing.Callable = <function save at 0x7fafdd5c3280>"}, {"name": "push_to_hub", "val": ": bool = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
   Directory to which to save. Will be created if it doesn't exist.
 - **save_config** (`bool`, *optional*, defaults to `True`) --
   Whether or not to save the config of the model. Useful when in distributed training like TPUs and need
@@ -548,7 +554,7 @@ re-use e.g. Albert or Universal Transformers, or if doing long-range modeling wi
 
 </div>
 <div class="docstring">
-<docstring><name>get\_extended\_attention\_mask</name><anchor>transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_utils.py#L271</source><parameters>[{"name": "attention_mask", "val": ": Tensor"}, {"name": "input_shape", "val": ": typing.Tuple[int]"}, {"name": "device", "val": ": <property object at 0x7f7dd0fa5270>"}]</parameters><paramsdesc>- **attention_mask** (`torch.Tensor`) --
+<docstring><name>get\_extended\_attention\_mask</name><anchor>transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_utils.py#L271</source><parameters>[{"name": "attention_mask", "val": ": Tensor"}, {"name": "input_shape", "val": ": typing.Tuple[int]"}, {"name": "device", "val": ": <property object at 0x7faf751f0220>"}]</parameters><paramsdesc>- **attention_mask** (`torch.Tensor`) --
   Mask with ones indicating tokens to attend to, zeros for tokens to ignore.
 - **input_shape** (`Tuple[int]`) --
   The shape of the input to the model.
@@ -700,7 +706,7 @@ model.push_to_hub("my-finetuned-bert", repo_url="https://huggingface.co/sgugger/
 
 </div>
 <div class="docstring">
-<docstring><name>compile</name><anchor>transformers.TFPreTrainedModel.compile</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L842</source><parameters>[{"name": "optimizer", "val": " = 'rmsprop'"}, {"name": "loss", "val": " = 'passthrough'"}, {"name": "metrics", "val": " = None"}, {"name": "loss_weights", "val": " = None"}, {"name": "weighted_metrics", "val": " = None"}, {"name": "run_eagerly", "val": " = None"}, {"name": "steps_per_execution", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>compile</name><anchor>transformers.TFPreTrainedModel.compile</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L834</source><parameters>[{"name": "optimizer", "val": " = 'rmsprop'"}, {"name": "loss", "val": " = 'passthrough'"}, {"name": "metrics", "val": " = None"}, {"name": "loss_weights", "val": " = None"}, {"name": "weighted_metrics", "val": " = None"}, {"name": "run_eagerly", "val": " = None"}, {"name": "steps_per_execution", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a thin wrapper that sets the model's loss output head as the loss if the user does not specify a loss
 function themselves.
@@ -708,7 +714,7 @@ function themselves.
 
 </div>
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.TFPreTrainedModel.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1405</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "*model_args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str`, *optional*) --
+<docstring><name>from\_pretrained</name><anchor>transformers.TFPreTrainedModel.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1381</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "*model_args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str`, *optional*) --
   Can be either:
 
   - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
@@ -823,7 +829,7 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>get\_bias</name><anchor>transformers.TFPreTrainedModel.get_bias</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1094</source><parameters>[]</parameters><rettype>`tf.Variable`</rettype><retdesc>The weights representing the bias, None if not an LM model.</retdesc></docstring>
+<docstring><name>get\_bias</name><anchor>transformers.TFPreTrainedModel.get_bias</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1070</source><parameters>[]</parameters><rettype>`tf.Variable`</rettype><retdesc>The weights representing the bias, None if not an LM model.</retdesc></docstring>
 
 Dict of bias attached to an LM head. The key represents the name of the bias attribute.
 
@@ -834,7 +840,7 @@ Dict of bias attached to an LM head. The key represents the name of the bias att
 
 </div>
 <div class="docstring">
-<docstring><name>get\_input\_embeddings</name><anchor>transformers.TFPreTrainedModel.get_input_embeddings</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L761</source><parameters>[]</parameters><rettype>`tf.Variable`</rettype><retdesc>The embeddings layer mapping vocabulary to hidden states.</retdesc></docstring>
+<docstring><name>get\_input\_embeddings</name><anchor>transformers.TFPreTrainedModel.get_input_embeddings</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L753</source><parameters>[]</parameters><rettype>`tf.Variable`</rettype><retdesc>The embeddings layer mapping vocabulary to hidden states.</retdesc></docstring>
 
 Returns the model's input embeddings layer.
 
@@ -845,7 +851,7 @@ Returns the model's input embeddings layer.
 
 </div>
 <div class="docstring">
-<docstring><name>get\_lm\_head</name><anchor>transformers.TFPreTrainedModel.get_lm_head</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1127</source><parameters>[]</parameters><rettype>`tf.keras.layers.Layer`</rettype><retdesc>The LM head layer if the model has one, None if not.</retdesc></docstring>
+<docstring><name>get\_lm\_head</name><anchor>transformers.TFPreTrainedModel.get_lm_head</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1103</source><parameters>[]</parameters><rettype>`tf.keras.layers.Layer`</rettype><retdesc>The LM head layer if the model has one, None if not.</retdesc></docstring>
 
 The LM Head layer. This method must be overwritten by all the models that have a lm head.
 
@@ -856,7 +862,7 @@ The LM Head layer. This method must be overwritten by all the models that have a
 
 </div>
 <div class="docstring">
-<docstring><name>get\_output\_embeddings</name><anchor>transformers.TFPreTrainedModel.get_output_embeddings</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1034</source><parameters>[]</parameters><rettype>`tf.Variable`</rettype><retdesc>The new weights mapping vocabulary to hidden states.</retdesc></docstring>
+<docstring><name>get\_output\_embeddings</name><anchor>transformers.TFPreTrainedModel.get_output_embeddings</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1010</source><parameters>[]</parameters><rettype>`tf.Variable`</rettype><retdesc>The new weights mapping vocabulary to hidden states.</retdesc></docstring>
 
 Returns the model's output embeddings
 
@@ -867,7 +873,7 @@ Returns the model's output embeddings
 
 </div>
 <div class="docstring">
-<docstring><name>get\_output\_layer\_with\_bias</name><anchor>transformers.TFPreTrainedModel.get_output_layer_with_bias</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1071</source><parameters>[]</parameters><rettype>`tf.keras.layers.Layer`</rettype><retdesc>The layer that handles the bias, None if not an LM model.</retdesc></docstring>
+<docstring><name>get\_output\_layer\_with\_bias</name><anchor>transformers.TFPreTrainedModel.get_output_layer_with_bias</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1047</source><parameters>[]</parameters><rettype>`tf.keras.layers.Layer`</rettype><retdesc>The layer that handles the bias, None if not an LM model.</retdesc></docstring>
 
 Get the layer that handles a bias attribute in case the model has an LM head with weights tied to the
 embeddings
@@ -879,7 +885,7 @@ embeddings
 
 </div>
 <div class="docstring">
-<docstring><name>get\_prefix\_bias\_name</name><anchor>transformers.TFPreTrainedModel.get_prefix_bias_name</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1084</source><parameters>[]</parameters><rettype>`str`</rettype><retdesc>The _prefix name of the bias.</retdesc></docstring>
+<docstring><name>get\_prefix\_bias\_name</name><anchor>transformers.TFPreTrainedModel.get_prefix_bias_name</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1060</source><parameters>[]</parameters><rettype>`str`</rettype><retdesc>The _prefix name of the bias.</retdesc></docstring>
 
 Get the concatenated _prefix name of the bias from the model name to the parent layer
 
@@ -890,7 +896,7 @@ Get the concatenated _prefix name of the bias from the model name to the parent 
 
 </div>
 <div class="docstring">
-<docstring><name>load\_repo\_checkpoint</name><anchor>transformers.TFPreTrainedModel.load_repo_checkpoint</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L788</source><parameters>[{"name": "repo_path_or_name", "val": ""}]</parameters><paramsdesc>- **repo_path_or_name** (`str`) --
+<docstring><name>load\_repo\_checkpoint</name><anchor>transformers.TFPreTrainedModel.load_repo_checkpoint</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L780</source><parameters>[{"name": "repo_path_or_name", "val": ""}]</parameters><paramsdesc>- **repo_path_or_name** (`str`) --
   Can either be a repository name for your &amp;lcub;object} in the Hub or a path to a local folder (in which case
   the repository will have the name of that local folder).</paramsdesc><paramgroups>0</paramgroups><rettype>`dict`</rettype><retdesc>A dictionary of extra metadata from the checkpoint, most commonly an "epoch" count.</retdesc></docstring>
 
@@ -906,7 +912,7 @@ the checkpoint was made.
 
 </div>
 <div class="docstring">
-<docstring><name>prune\_heads</name><anchor>transformers.TFPreTrainedModel.prune_heads</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1331</source><parameters>[{"name": "heads_to_prune", "val": ""}]</parameters><paramsdesc>- **heads_to_prune** (`Dict[int, List[int]]`) --
+<docstring><name>prune\_heads</name><anchor>transformers.TFPreTrainedModel.prune_heads</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1307</source><parameters>[{"name": "heads_to_prune", "val": ""}]</parameters><paramsdesc>- **heads_to_prune** (`Dict[int, List[int]]`) --
   Dictionary with keys being selected layer indices (`int`) and associated values being the list of heads
   to prune in said layer (list of `int`). For instance &amp;lcub;1: [0, 2], 2: [2, 3]} will prune heads 0 and 2 on
   layer 1 and heads 2 and 3 on layer 2.</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -918,7 +924,7 @@ Prunes heads of the base model.
 
 </div>
 <div class="docstring">
-<docstring><name>resize\_token\_embeddings</name><anchor>transformers.TFPreTrainedModel.resize_token_embeddings</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1136</source><parameters>[{"name": "new_num_tokens", "val": " = None"}]</parameters><paramsdesc>- **new_num_tokens** (`int`, *optional*) --
+<docstring><name>resize\_token\_embeddings</name><anchor>transformers.TFPreTrainedModel.resize_token_embeddings</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1112</source><parameters>[{"name": "new_num_tokens", "val": " = None"}]</parameters><paramsdesc>- **new_num_tokens** (`int`, *optional*) --
   The number of new tokens in the embedding matrix. Increasing the size will add newly initialized
   vectors at the end. Reducing the size will remove vectors from the end. If not provided or `None`, just
   returns a pointer to the input tokens `tf.Variable` module of the model without doing anything.</paramsdesc><paramgroups>0</paramgroups><rettype>`tf.Variable`</rettype><retdesc>Pointer to the input tokens Embeddings Module of the model.</retdesc></docstring>
@@ -936,7 +942,7 @@ Takes care of tying weights embeddings afterwards if the model class has a `tie_
 
 </div>
 <div class="docstring">
-<docstring><name>save\_pretrained</name><anchor>transformers.TFPreTrainedModel.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1343</source><parameters>[{"name": "save_directory", "val": ""}, {"name": "saved_model", "val": " = False"}, {"name": "version", "val": " = 1"}, {"name": "push_to_hub", "val": " = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str`) --
+<docstring><name>save\_pretrained</name><anchor>transformers.TFPreTrainedModel.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1319</source><parameters>[{"name": "save_directory", "val": ""}, {"name": "saved_model", "val": " = False"}, {"name": "version", "val": " = 1"}, {"name": "push_to_hub", "val": " = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str`) --
   Directory to which to save. Will be created if it doesn't exist.
 - **saved_model** (`bool`, *optional*, defaults to `False`) --
   If the model has to be saved in saved model format as well or not.
@@ -966,7 +972,7 @@ Save a model and its configuration file to a directory, so that it can be re-loa
 
 </div>
 <div class="docstring">
-<docstring><name>serving</name><anchor>transformers.TFPreTrainedModel.serving</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L730</source><parameters>[{"name": "inputs", "val": ""}]</parameters><paramsdesc>- **inputs** (`Dict[str, tf.Tensor]`) --
+<docstring><name>serving</name><anchor>transformers.TFPreTrainedModel.serving</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L722</source><parameters>[{"name": "inputs", "val": ""}]</parameters><paramsdesc>- **inputs** (`Dict[str, tf.Tensor]`) --
   The input of the saved model as a dictionary of tensors.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Method used for serving the model.
@@ -976,7 +982,7 @@ Method used for serving the model.
 
 </div>
 <div class="docstring">
-<docstring><name>serving\_output</name><anchor>transformers.TFPreTrainedModel.serving_output</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L751</source><parameters>[{"name": "output", "val": ""}]</parameters><paramsdesc>- **output** (`TFBaseModelOutput`) --
+<docstring><name>serving\_output</name><anchor>transformers.TFPreTrainedModel.serving_output</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L743</source><parameters>[{"name": "output", "val": ""}]</parameters><paramsdesc>- **output** (`TFBaseModelOutput`) --
   The output returned by the model.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Prepare the output of the saved model. Each model must implement this function.
@@ -986,7 +992,7 @@ Prepare the output of the saved model. Each model must implement this function.
 
 </div>
 <div class="docstring">
-<docstring><name>set\_bias</name><anchor>transformers.TFPreTrainedModel.set_bias</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1111</source><parameters>[{"name": "value", "val": ""}]</parameters><paramsdesc>- **value** (`Dict[tf.Variable]`) --
+<docstring><name>set\_bias</name><anchor>transformers.TFPreTrainedModel.set_bias</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1087</source><parameters>[{"name": "value", "val": ""}]</parameters><paramsdesc>- **value** (`Dict[tf.Variable]`) --
   All the new bias attached to an LM head.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Set all the bias in the LM head.
@@ -996,7 +1002,7 @@ Set all the bias in the LM head.
 
 </div>
 <div class="docstring">
-<docstring><name>set\_input\_embeddings</name><anchor>transformers.TFPreTrainedModel.set_input_embeddings</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1014</source><parameters>[{"name": "value", "val": ""}]</parameters><paramsdesc>- **value** (`tf.Variable`) --
+<docstring><name>set\_input\_embeddings</name><anchor>transformers.TFPreTrainedModel.set_input_embeddings</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L990</source><parameters>[{"name": "value", "val": ""}]</parameters><paramsdesc>- **value** (`tf.Variable`) --
   The new weights mapping hidden states to vocabulary.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Set model's input embeddings
@@ -1006,7 +1012,7 @@ Set model's input embeddings
 
 </div>
 <div class="docstring">
-<docstring><name>set\_output\_embeddings</name><anchor>transformers.TFPreTrainedModel.set_output_embeddings</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1054</source><parameters>[{"name": "value", "val": ""}]</parameters><paramsdesc>- **value** (`tf.Variable`) --
+<docstring><name>set\_output\_embeddings</name><anchor>transformers.TFPreTrainedModel.set_output_embeddings</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L1030</source><parameters>[{"name": "value", "val": ""}]</parameters><paramsdesc>- **value** (`tf.Variable`) --
   The new weights mapping hidden states to vocabulary.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Set model's output embeddings
@@ -1016,14 +1022,14 @@ Set model's output embeddings
 
 </div>
 <div class="docstring">
-<docstring><name>test\_step</name><anchor>transformers.TFPreTrainedModel.test_step</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L948</source><parameters>[{"name": "data", "val": ""}]</parameters></docstring>
+<docstring><name>test\_step</name><anchor>transformers.TFPreTrainedModel.test_step</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L924</source><parameters>[{"name": "data", "val": ""}]</parameters></docstring>
 
 A modification of Keras's default test_step that cleans up the printed metrics when we use a dummy loss.
 
 
 </div>
 <div class="docstring">
-<docstring><name>train\_step</name><anchor>transformers.TFPreTrainedModel.train_step</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L891</source><parameters>[{"name": "data", "val": ""}]</parameters></docstring>
+<docstring><name>train\_step</name><anchor>transformers.TFPreTrainedModel.train_step</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/modeling_tf_utils.py#L883</source><parameters>[{"name": "data", "val": ""}]</parameters></docstring>
 
 A modification of Keras's default train_step that cleans up the printed metrics when we use a dummy loss.
 
@@ -1245,6 +1251,12 @@ Examples:
 Register this class with a given auto class. This should only be used for custom models as the ones in the
 library are already mapped with an auto class.
 
+<Tip warning=&amp;lcub;true}>
+
+This API is experimental and may have some slight breaking changes in the next releases.
+
+</Tip>
+
 
 
 
@@ -1397,7 +1409,7 @@ Implement in subclasses of [PreTrainedModel](/docs/transformers/pr_15612/en/main
 
 </div>
 <div class="docstring">
-<docstring><name>beam\_sample</name><anchor>transformers.generation_utils.GenerationMixin.beam_sample</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L2170</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "beam_scorer", "val": ": BeamScorer"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "logits_warper", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>beam\_sample</name><anchor>transformers.generation_utils.GenerationMixin.beam_sample</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L2165</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "beam_scorer", "val": ": BeamScorer"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "logits_warper", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   The sequence used as a prompt for the generation.
 - **beam_scorer** (`BeamScorer`) --
   A derived instance of [BeamScorer](/docs/transformers/pr_15612/en/internal/generation_utils#transformers.BeamScorer) that defines how beam hypotheses are constructed, stored and
@@ -1507,7 +1519,7 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>beam\_search</name><anchor>transformers.generation_utils.GenerationMixin.beam_search</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L1860</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "beam_scorer", "val": ": BeamScorer"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>beam\_search</name><anchor>transformers.generation_utils.GenerationMixin.beam_search</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L1855</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "beam_scorer", "val": ": BeamScorer"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   The sequence used as a prompt for the generation.
 - **beam_scorer** (`BeamScorer`) --
   An derived instance of [BeamScorer](/docs/transformers/pr_15612/en/internal/generation_utils#transformers.BeamScorer) that defines how beam hypotheses are constructed, stored and
@@ -1604,13 +1616,13 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>compute\_transition\_beam\_scores</name><anchor>transformers.generation_utils.GenerationMixin.compute_transition_beam_scores</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L773</source><parameters>[{"name": "sequences", "val": ": Tensor"}, {"name": "scores", "val": ": typing.Tuple[torch.Tensor]"}, {"name": "beam_indices", "val": ": Tensor"}, {"name": "eos_token_id", "val": ": int = None"}]</parameters></docstring>
+<docstring><name>compute\_transition\_beam\_scores</name><anchor>transformers.generation_utils.GenerationMixin.compute_transition_beam_scores</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L767</source><parameters>[{"name": "sequences", "val": ": Tensor"}, {"name": "scores", "val": ": typing.Tuple[torch.Tensor]"}, {"name": "beam_indices", "val": ": Tensor"}, {"name": "eos_token_id", "val": ": int = None"}]</parameters></docstring>
 compute the transition probabilities of sequences given generation
 scores and beam indices
 
 </div>
 <div class="docstring">
-<docstring><name>constrained\_beam\_search</name><anchor>transformers.generation_utils.GenerationMixin.constrained_beam_search</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L2853</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "constrained_beam_scorer", "val": ": ConstrainedBeamSearchScorer"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = None"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>constrained\_beam\_search</name><anchor>transformers.generation_utils.GenerationMixin.constrained_beam_search</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L2848</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "constrained_beam_scorer", "val": ": ConstrainedBeamSearchScorer"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = None"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   The sequence used as a prompt for the generation.
 - **constrained_beam_scorer** (`ConstrainedBeamSearchScorer`) --
   A derived instance of [BeamScorer](/docs/transformers/pr_15612/en/internal/generation_utils#transformers.BeamScorer) that defines how beam hypotheses are constructed, stored and
@@ -1719,7 +1731,7 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>generate</name><anchor>transformers.generation_utils.GenerationMixin.generate</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L812</source><parameters>[{"name": "inputs", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "min_length", "val": ": typing.Optional[int] = None"}, {"name": "do_sample", "val": ": typing.Optional[bool] = None"}, {"name": "early_stopping", "val": ": typing.Optional[bool] = None"}, {"name": "num_beams", "val": ": typing.Optional[int] = None"}, {"name": "temperature", "val": ": typing.Optional[float] = None"}, {"name": "top_k", "val": ": typing.Optional[int] = None"}, {"name": "top_p", "val": ": typing.Optional[float] = None"}, {"name": "typical_p", "val": ": typing.Optional[float] = None"}, {"name": "repetition_penalty", "val": ": typing.Optional[float] = None"}, {"name": "bad_words_ids", "val": ": typing.Optional[typing.Iterable[int]] = None"}, {"name": "bos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "length_penalty", "val": ": typing.Optional[float] = None"}, {"name": "no_repeat_ngram_size", "val": ": typing.Optional[int] = None"}, {"name": "encoder_no_repeat_ngram_size", "val": ": typing.Optional[int] = None"}, {"name": "num_return_sequences", "val": ": typing.Optional[int] = None"}, {"name": "max_time", "val": ": typing.Optional[float] = None"}, {"name": "max_new_tokens", "val": ": typing.Optional[int] = None"}, {"name": "decoder_start_token_id", "val": ": typing.Optional[int] = None"}, {"name": "use_cache", "val": ": typing.Optional[bool] = None"}, {"name": "num_beam_groups", "val": ": typing.Optional[int] = None"}, {"name": "diversity_penalty", "val": ": typing.Optional[float] = None"}, {"name": "prefix_allowed_tokens_fn", "val": ": typing.Union[typing.Callable[[int, torch.Tensor], typing.List[int]], NoneType] = None"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = []"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = []"}, {"name": "constraints", "val": ": typing.Optional[typing.List[transformers.generation_beam_constraints.Constraint]] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "forced_bos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "forced_eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "remove_invalid_values", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **inputs** (`torch.Tensor` of shape `(batch_size, sequence_length)`, `(batch_size, sequence_length, --
+<docstring><name>generate</name><anchor>transformers.generation_utils.GenerationMixin.generate</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L806</source><parameters>[{"name": "inputs", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "min_length", "val": ": typing.Optional[int] = None"}, {"name": "do_sample", "val": ": typing.Optional[bool] = None"}, {"name": "early_stopping", "val": ": typing.Optional[bool] = None"}, {"name": "num_beams", "val": ": typing.Optional[int] = None"}, {"name": "temperature", "val": ": typing.Optional[float] = None"}, {"name": "top_k", "val": ": typing.Optional[int] = None"}, {"name": "top_p", "val": ": typing.Optional[float] = None"}, {"name": "typical_p", "val": ": typing.Optional[float] = None"}, {"name": "repetition_penalty", "val": ": typing.Optional[float] = None"}, {"name": "bad_words_ids", "val": ": typing.Optional[typing.Iterable[int]] = None"}, {"name": "bos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "length_penalty", "val": ": typing.Optional[float] = None"}, {"name": "no_repeat_ngram_size", "val": ": typing.Optional[int] = None"}, {"name": "encoder_no_repeat_ngram_size", "val": ": typing.Optional[int] = None"}, {"name": "num_return_sequences", "val": ": typing.Optional[int] = None"}, {"name": "max_time", "val": ": typing.Optional[float] = None"}, {"name": "max_new_tokens", "val": ": typing.Optional[int] = None"}, {"name": "decoder_start_token_id", "val": ": typing.Optional[int] = None"}, {"name": "use_cache", "val": ": typing.Optional[bool] = None"}, {"name": "num_beam_groups", "val": ": typing.Optional[int] = None"}, {"name": "diversity_penalty", "val": ": typing.Optional[float] = None"}, {"name": "prefix_allowed_tokens_fn", "val": ": typing.Union[typing.Callable[[int, torch.Tensor], typing.List[int]], NoneType] = None"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = []"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = []"}, {"name": "constraints", "val": ": typing.Optional[typing.List[transformers.generation_beam_constraints.Constraint]] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "forced_bos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "forced_eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "remove_invalid_values", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **inputs** (`torch.Tensor` of shape `(batch_size, sequence_length)`, `(batch_size, sequence_length, --
 - **feature_dim)`** or `(batch_size, num_channels, height, width)`, *optional*) --
   The sequence used as a prompt for the generation or as model inputs to the encoder. If `None` the
   method initializes it with `bos_token_id` and a batch size of 1. For decoder-only models `inputs`
@@ -1922,7 +1934,7 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>greedy\_search</name><anchor>transformers.generation_utils.GenerationMixin.greedy_search</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L1392</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>greedy\_search</name><anchor>transformers.generation_utils.GenerationMixin.greedy_search</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L1387</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   The sequence used as a prompt for the generation.
 - **logits_processor** (`LogitsProcessorList`, *optional*) --
   An instance of [LogitsProcessorList](/docs/transformers/pr_15612/en/internal/generation_utils#transformers.LogitsProcessorList). List of instances of class derived from [LogitsProcessor](/docs/transformers/pr_15612/en/internal/generation_utils#transformers.LogitsProcessor)
@@ -1997,7 +2009,7 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>group\_beam\_search</name><anchor>transformers.generation_utils.GenerationMixin.group_beam_search</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L2490</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "beam_scorer", "val": ": BeamScorer"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>group\_beam\_search</name><anchor>transformers.generation_utils.GenerationMixin.group_beam_search</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L2485</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "beam_scorer", "val": ": BeamScorer"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   The sequence used as a prompt for the generation.
 - **beam_scorer** (`BeamScorer`) --
   An derived instance of [BeamScorer](/docs/transformers/pr_15612/en/internal/generation_utils#transformers.BeamScorer) that defines how beam hypotheses are constructed, stored and
@@ -2108,7 +2120,7 @@ Implement in subclasses of [PreTrainedModel](/docs/transformers/pr_15612/en/main
 
 </div>
 <div class="docstring">
-<docstring><name>sample</name><anchor>transformers.generation_utils.GenerationMixin.sample</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L1617</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "logits_warper", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>sample</name><anchor>transformers.generation_utils.GenerationMixin.sample</anchor><source>https://github.com/huggingface/transformers/blob/pr_15612/src/transformers/generation_utils.py#L1612</source><parameters>[{"name": "input_ids", "val": ": LongTensor"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "stopping_criteria", "val": ": typing.Optional[transformers.generation_stopping_criteria.StoppingCriteriaList] = None"}, {"name": "logits_warper", "val": ": typing.Optional[transformers.generation_logits_process.LogitsProcessorList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "synced_gpus", "val": ": typing.Optional[bool] = False"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   The sequence used as a prompt for the generation.
 - **logits_processor** (`LogitsProcessorList`, *optional*) --
   An instance of [LogitsProcessorList](/docs/transformers/pr_15612/en/internal/generation_utils#transformers.LogitsProcessorList). List of instances of class derived from [LogitsProcessor](/docs/transformers/pr_15612/en/internal/generation_utils#transformers.LogitsProcessor)
