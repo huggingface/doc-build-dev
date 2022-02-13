@@ -21,7 +21,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -190,7 +190,7 @@ Constructs an ImageGPT feature extractor. This feature extractor can be used to 
 resolution (such as 32x32 or 64x64), normalize them and finally color quantize them to obtain sequences of "pixel
 values" (color clusters).
 
-This feature extractor inherits from `FeatureExtractionMixin` which contains most of the main methods. Users
+This feature extractor inherits from [FeatureExtractionMixin](/docs/transformers/pr_15326/en/main_classes/feature_extractor#transformers.FeatureExtractionMixin) which contains most of the main methods. Users
 should refer to this superclass for more information regarding those methods.
 
 
@@ -638,7 +638,7 @@ and behavior.
 - **labels** (`torch.LongTensor` of shape `(batch_size,)`, *optional*) --
   Labels for computing the sequence classification/regression loss. Indices should be in `[0, ...,
   config.num_labels - 1]`. If `config.num_labels == 1` a regression loss is computed (Mean-Square loss), If
-  `config.num_labels > 1` a classification loss is computed (Cross-Entropy).</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.modeling_outputs.SequenceClassifierOutputWithPast` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.modeling_outputs.SequenceClassifierOutputWithPast` or a tuple of
+  `config.num_labels > 1` a classification loss is computed (Cross-Entropy).</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.modeling_outputs.SequenceClassifierOutputWithPast`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.modeling_outputs.SequenceClassifierOutputWithPast`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([ImageGPTConfig](/docs/transformers/pr_15326/en/model_doc/imagegpt#transformers.ImageGPTConfig)) and inputs.
 

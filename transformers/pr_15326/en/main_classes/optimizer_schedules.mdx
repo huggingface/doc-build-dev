@@ -27,7 +27,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -146,8 +146,7 @@ Others reported the following combination to work well:
 Adafactor(model.parameters(), scale_parameter=True, relative_step=True, warmup_init=True, lr=None)
 ```
 
-When using `lr=None` with [Trainer](/docs/transformers/pr_15326/en/main_classes/trainer#transformers.Trainer) you will most likely need to use `AdafactorSchedule`
-scheduler as following:
+When using `lr=None` with [Trainer](/docs/transformers/pr_15326/en/main_classes/trainer#transformers.Trainer) you will most likely need to use `AdafactorSchedule`scheduler as following:
 
 ```python
 from transformers.optimization import Adafactor, AdafactorSchedule
@@ -273,7 +272,7 @@ Creates an optimizer with a learning rate schedule using a warmup phase followed
 
 <div class="docstring">
 
-<docstring><name>class transformers.SchedulerType</name><anchor>transformers.SchedulerType</anchor><source>https://github.com/huggingface/transformers/blob/pr_15326/src/transformers/trainer_utils.py#L281</source><parameters>[{"name": "value", "val": ""}, {"name": "names", "val": " = None"}, {"name": "module", "val": " = None"}, {"name": "qualname", "val": " = None"}, {"name": "type", "val": " = None"}, {"name": "start", "val": " = 1"}]</parameters></docstring>
+<docstring><name>class transformers.SchedulerType</name><anchor>transformers.SchedulerType</anchor><source>https://github.com/huggingface/transformers/blob/pr_15326/src/transformers/trainer_utils.py#L301</source><parameters>[{"name": "value", "val": ""}, {"name": "names", "val": " = None"}, {"name": "module", "val": " = None"}, {"name": "qualname", "val": " = None"}, {"name": "type", "val": " = None"}, {"name": "start", "val": " = 1"}]</parameters></docstring>
 An enumeration.
 
 </div>

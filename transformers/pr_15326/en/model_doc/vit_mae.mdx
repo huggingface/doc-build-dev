@@ -17,7 +17,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -55,6 +55,8 @@ Tips:
 
 - MAE (masked auto encoding) is a method for self-supervised pre-training of Vision Transformers (ViTs). The pre-training objective is relatively simple:
 by masking a large portion (75%) of the image patches, the model must reconstruct raw pixel values. One can use [ViTMAEForPreTraining](/docs/transformers/pr_15326/en/model_doc/vit_mae#transformers.ViTMAEForPreTraining) for this purpose.
+- An example Python script that illustrates how to pre-train [ViTMAEForPreTraining](/docs/transformers/pr_15326/en/model_doc/vit_mae#transformers.ViTMAEForPreTraining) from scratch can be found [here](https://github.com/huggingface/transformers/tree/master/examples/pytorch/image-pretraining).
+One can easily tweak it for their own use case.
 - A notebook that illustrates how to visualize reconstructed pixel values with [ViTMAEForPreTraining](/docs/transformers/pr_15326/en/model_doc/vit_mae#transformers.ViTMAEForPreTraining) can be found [here](https://github.com/NielsRogge/Transformers-Tutorials/blob/master/ViTMAE/ViT_MAE_visualization_demo.ipynb).
 - After pre-training, one "throws away" the decoder used to reconstruct pixels, and one uses the encoder for fine-tuning/linear probing. This means that after
 fine-tuning, one can directly plug in the weights into a [ViTForImageClassification](/docs/transformers/pr_15326/en/model_doc/vit#transformers.ViTForImageClassification).
@@ -162,7 +164,7 @@ behavior.
 <div class="docstring">
 <docstring><name>forward</name><anchor>transformers.ViTMAEModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15326/src/transformers/models/vit_mae/modeling_vit_mae.py#L654</source><parameters>[{"name": "pixel_values", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
   Pixel values. Pixel values can be obtained using [AutoFeatureExtractor](/docs/transformers/pr_15326/en/model_doc/auto#transformers.AutoFeatureExtractor). See
-  `AutoFeatureExtractor.__call__()` for details.
+  `AutoFeatureExtractor.__call__()`for details.
 
 - **head_mask** (`torch.FloatTensor` of shape `(num_heads,)` or `(num_layers, num_heads)`, *optional*) --
   Mask to nullify selected heads of the self-attention modules. Mask values selected in `[0, 1]`:
@@ -177,7 +179,7 @@ behavior.
   Whether or not to return the hidden states of all layers. See `hidden_states` under returned tensors for
   more detail.
 - **return_dict** (`bool`, *optional*) --
-  Whether or not to return a [ModelOutput](/docs/transformers/pr_15326/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.vit_mae.modeling_vit_mae.ViTMAEModelOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.vit_mae.modeling_vit_mae.ViTMAEModelOutput` or a tuple of
+  Whether or not to return a [ModelOutput](/docs/transformers/pr_15326/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.vit_mae.modeling_vit_mae.ViTMAEModelOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.vit_mae.modeling_vit_mae.ViTMAEModelOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([ViTMAEConfig](/docs/transformers/pr_15326/en/model_doc/vit_mae#transformers.ViTMAEConfig)) and inputs.
 
@@ -245,7 +247,7 @@ behavior.
 <div class="docstring">
 <docstring><name>forward</name><anchor>transformers.ViTMAEForPreTraining.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15326/src/transformers/models/vit_mae/modeling_vit_mae.py#L896</source><parameters>[{"name": "pixel_values", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
   Pixel values. Pixel values can be obtained using [AutoFeatureExtractor](/docs/transformers/pr_15326/en/model_doc/auto#transformers.AutoFeatureExtractor). See
-  `AutoFeatureExtractor.__call__()` for details.
+  `AutoFeatureExtractor.__call__()`for details.
 
 - **head_mask** (`torch.FloatTensor` of shape `(num_heads,)` or `(num_layers, num_heads)`, *optional*) --
   Mask to nullify selected heads of the self-attention modules. Mask values selected in `[0, 1]`:
@@ -260,7 +262,7 @@ behavior.
   Whether or not to return the hidden states of all layers. See `hidden_states` under returned tensors for
   more detail.
 - **return_dict** (`bool`, *optional*) --
-  Whether or not to return a [ModelOutput](/docs/transformers/pr_15326/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.vit_mae.modeling_vit_mae.ViTMAEForPreTrainingOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.vit_mae.modeling_vit_mae.ViTMAEForPreTrainingOutput` or a tuple of
+  Whether or not to return a [ModelOutput](/docs/transformers/pr_15326/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.vit_mae.modeling_vit_mae.ViTMAEForPreTrainingOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.vit_mae.modeling_vit_mae.ViTMAEForPreTrainingOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([ViTMAEConfig](/docs/transformers/pr_15326/en/model_doc/vit_mae#transformers.ViTMAEConfig)) and inputs.
 
