@@ -60,7 +60,7 @@ Load the IMDb dataset from the 🤗 Datasets library:
 Then take a look at an example:
 
 ```py
-imdb["test"][0]
+>>> imdb["test"][0]
 &amp;lcub;
     "label": 0,
     "text": "I love sci-fi and am willing to put up with a lot. Sci-fi movies/TV are usually underfunded, under-appreciated and misunderstood. I tried to like this, I really did, but it is to good TV sci-fi as Babylon 5 is to Star Trek (the original). Silly prosthetics, cheap cardboard sets, stilted dialogues, CG that doesn't match the background, and painfully one-dimensional characters cannot be overcome with a 'sci-fi' setting. (I'm sure there are those of you out there who think Babylon 5 is good sci-fi TV. It's not. It's clichéd and uninspiring.) While US viewers might like emotion and character development, sci-fi is a genre that does not take itself seriously (cf. Star Trek). It may treat important issues, yet not as a serious philosophy. It's really difficult to care about the characters here as they are not simply foolish, just missing a spark of life. Their actions and reactions are wooden and predictable, often painful to watch. The makers of Earth KNOW it's rubbish as they have to always say \"Gene Roddenberry's Earth...\" otherwise people would not continue watching. Roddenberry's ashes must be turning in their orbit as this dull, cheap, poorly edited (watching it without advert breaks really brings this home) trudging Trabant of a show lumbers into space. Spoiler. So, kill off a main character. And then bring him back as another actor. Jeeez! Dallas all over again.",
@@ -70,7 +70,7 @@ imdb["test"][0]
 There are two fields in this dataset: 
 
 - `text`: a string containing the text of the movie review.
-- `label`: a value that can either be `0` for a negative review or a `1` for a positive review.
+- `label`: a value that can either be `0` for a negative review or `1` for a positive review.
 
 <h2 id="preprocess">Preprocess</h2>
 
@@ -89,13 +89,13 @@ Create a preprocessing function to tokenize `text` and add a truncation strategy
 ...     return tokenizer(examples["text"], truncation=True)
 ```
 
-Use 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.map) function to apply the preprocessing function to the entire dataset. You can speed up the preprocessing by setting `batched=True` to process multiple elements of the dataset at once:
+Use 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.map) function to apply the preprocessing function to the entire dataset. You can speed up the `map` function by setting `batched=True` to process multiple elements of the dataset at once:
 
 ```py
 tokenized_imdb = imdb.map(preprocess_function, batched=True)
 ```
 
-Use [DataCollatorWithPadding](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorWithPadding) to batch the examples together. It will also pad your text, so they are a uniform length. While it is possible to pad your text in the `tokenizer` function by setting `padding=True`, it is more efficient to only pad the text to the length of the longest element in its batch. This is known as *dynamic padding* and is enabled by [DataCollatorWithPadding](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorWithPadding).
+Use [DataCollatorWithPadding](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorWithPadding) to create a batch of examples. It will also *dynamically pad* your text to the length of the longest element in its batch, so they are a uniform length. While it is possible to pad your text in the `tokenizer` function by setting `padding=True`, dynamic padding is more efficient.
 
 ```py
 >>> from transformers import DataCollatorWithPadding
@@ -125,12 +125,6 @@ At this point, only three steps remain:
 2. Pass the training arguments to [Trainer](/docs/transformers/pr_15564/en/main_classes/trainer#transformers.Trainer) along with the model, dataset, tokenizer, and data collator.
 3. Call [train()](/docs/transformers/pr_15564/en/main_classes/trainer#transformers.Trainer.train) to fine-tune your model.
 
-<Tip>
-
-[Trainer](/docs/transformers/pr_15564/en/main_classes/trainer#transformers.Trainer) will apply dynamic padding by default when you pass `tokenizer` to it. You don't need to specify a data collator explicitly.
-
-</Tip>
-
 ```py
 >>> training_args = TrainingArguments(
 ...     output_dir="./results",
@@ -153,6 +147,12 @@ At this point, only three steps remain:
 >>> trainer.train()
 ```
 
+<Tip>
+
+[Trainer](/docs/transformers/pr_15564/en/main_classes/trainer#transformers.Trainer) will apply dynamic padding by default when you pass `tokenizer` to it. In this case, you don't need to specify a data collator explicitly.
+
+</Tip>
+
 <h2 id="finetune-with-tensorflow">Fine-tune with TensorFlow</h2>
 
 To fine-tune a model in TensorFlow is just as easy, with only a few differences.
@@ -163,7 +163,7 @@ If you aren't familiar with fine-tuning a model with Keras, take a look at the b
 
 </Tip>
 
-Start by batching the processed examples together with dynamic padding using [DataCollatorWithPadding](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorWithPadding). Dynamic padding is more efficient because it only pads text to the longest element in its batch. Make sure you set `return_tensors="tf"` to return `tf.Tensor`'s instead of PyTorch tensors!
+When you create a batch with [DataCollatorWithPadding](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorWithPadding), instruct the data collator to return `tf.Tensor`'s instead of PyTorch tensors:
 
 ```py
 >>> from transformers import DataCollatorWithPadding
@@ -171,7 +171,7 @@ Start by batching the processed examples together with dynamic padding using [Da
 >>> data_collator = DataCollatorWithPadding(tokenizer=tokenizer, return_tensors="tf")
 ```
 
-Convert your datasets to the `tf.data.Dataset` format with [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specify inputs and labels in `columns`:
+Convert your datasets to the `tf.data.Dataset` format with [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specify inputs and labels in `columns`, whether to shuffle the dataset order, batch size, and the data collator:
 
 ```py
 >>> tf_train_dataset = tokenized_imdb["train"].to_tf_dataset(
@@ -218,7 +218,7 @@ Configure the model for training with [`compile`](https://keras.io/api/models/mo
 >>> model.compile(optimizer=optimizer)
 ```
 
-Finally, fine-tune the model by calling [`fit`](https://keras.io/api/models/model_training_apis/#fit-method):
+Call [`fit`](https://keras.io/api/models/model_training_apis/#fit-method) to fine-tune the model:
 
 ```py
 >>> model.fit(x=tf_train_set, validation_data=tf_validation_set, epochs=3)

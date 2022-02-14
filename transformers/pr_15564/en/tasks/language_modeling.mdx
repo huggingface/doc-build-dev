@@ -50,7 +50,7 @@ Language modeling predicts words in a sentence. There are two forms of language 
 - Causal language modeling: predict the next token in a sequence of tokens, and the model can only attend to tokens on the left.
 - Masked language modeling: predict a masked token in a sequence, and the model can attend to tokens bidirectionally.
 
-This guide will show you how to fine-tune a pretrained model on the [r/askscience](https://www.reddit.com/r/askscience/) subset of the [ELI5](https://huggingface.co/datasets/eli5) dataset for both forms of language modeling.
+This guide will show you how to fine-tune [DistilGPT2](https://huggingface.co/distilgpt2) or [DistilRoBERTa](https://huggingface.co/distilroberta-base) on the [r/askscience](https://www.reddit.com/r/askscience/) subset of the [ELI5](https://huggingface.co/datasets/eli5) dataset for causal and masked language modeling respectively.
 
 <Tip>
 
@@ -92,20 +92,24 @@ Then take a look at an example:
  'title_urls': &amp;lcub;'url': []}}
 ```
 
-Notice `text` is a subfield that is nested inside `answers`. When you preprocess the dataset, you will need to extract the `text` subfield into a separate column.
+Notice `text` is a subfield nested inside the `answers` dictionary. When you preprocess the dataset, you will need to extract the `text` subfield into a separate column.
 
 <h2 id="preprocess">Preprocess</h2>
 
 <Youtube id="8PmhEIXhBvI"/>
 
-For causal language modeling, load the DistilGPT2 tokenizer to process the `text` subfield. To preprocess for masked language modeling, load the DistilRoBERTa tokenizer instead:
+For causal language modeling, load the DistilGPT2 tokenizer to process the `text` subfield:
 
 ```py
 >>> from transformers import AutoTokenizer
-# for causal language modeling
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilgpt2")
-# for masked language modeling
+```
+
+For masked language modeling, load the DistilRoBERTa tokenizer instead:
+
+```py
+>>> from transformers import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilroberta-base")
 ```
@@ -129,14 +133,16 @@ Extract the `text` subfield from its nested structure with the [`flatten`](https
  'title_urls.url': []}
 ```
 
-Each subfield is now a separate column as indicated by the `answers` prefix. When you tokenize the text, `answers.text` should be a string instead of a list. Create a preprocessing function to convert the list to a string and add a truncation strategy to truncate sequences to be no longer than DistilGPT2's maximum input length:
+Each subfield is now a separate column as indicated by the `answers` prefix. Notice that `answers.text` is a list. Instead of tokenizing each sentence separately, convert the list to a string to jointly tokenize them.
+
+Here is how you can create a preprocessing function to convert the list to a string and truncate sequences to be no longer than DistilGPT2's maximum input length:
 
 ```py
 >>> def preprocess_function(examples):
 ...     return tokenizer([" ".join(x) for x in examples["answers.text"]], truncation=True)
 ```
 
-Use 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.map) function to apply the preprocessing function over the entire dataset. You can speed up the preprocessing by setting `batched=True` to process multiple elements of the dataset at once, and increasing the number of processes with `num_proc`. Remove the columns you don't need:
+Use 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.map) function to apply the preprocessing function over the entire dataset. You can speed up the `map` function by setting `batched=True` to process multiple elements of the dataset at once and increasing the number of processes with `num_proc`. Remove the columns you don't need:
 
 ```py
 >>> tokenized_eli5 = eli5.map(
@@ -147,20 +153,17 @@ Use 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/package_reference
 ... )
 ```
 
-Now you need a second preprocessing function to preserve text in case a particular example is truncated because it is too long:
+Now you need a second preprocessing function to preserve the information in the text in case a particularly lengthy example is truncated. This preprocessing function should:
 
 - Concatenate all the text.
 - Split the concatenated text into smaller chunks defined by `block_size`.
-- Create a copy of the inputs for the labels because the model shifts the labels to the right.
 
 ```py
 >>> block_size = 128
 
-
 >>> def group_texts(examples):
 ...     concatenated_examples = &amp;lcub;k: sum(examples[k], []) for k in examples.keys()}
 ...     total_length = len(concatenated_examples[list(examples.keys())[0]])
-...     total_length = (total_length // block_size) * block_size
 ...     result = &amp;lcub;
 ...         k: [t[i : i + block_size] for i in range(0, total_length, block_size)]
 ...         for k, t in concatenated_examples.items()
@@ -169,17 +172,37 @@ Now you need a second preprocessing function to preserve text in case a particul
 ...     return result
 ```
 
-Apply the `group_texts` function over the entire dataset, and speed up the operation by batching examples and increasing the number of processes:
+Apply the `group_texts` function over the entire dataset:
 
 ```py
 >>> lm_dataset = tokenized_eli5.map(group_texts, batched=True, num_proc=4)
+```
+
+For causal language modeling, use [DataCollatorForLanguageModeling](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForLanguageModeling) to create a batch of examples. It will also *dynamically pad* your text to the length of the longest element in its batch, so they are a uniform length. While it is possible to pad your text in the `tokenizer` function by setting `padding=True`, dynamic padding is more efficient. 
+
+You can use the end of sequence token as the padding token, and set `mlm=False`. This will use the inputs as labels shifted to the right by one element:
+
+```py
+>>> from transformers import DataCollatorForLanguageModeling
+
+>>> tokenizer.pad_token = tokenizer.eos_token
+>>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
+```
+
+For masked language modeling, use the same [DataCollatorForLanguageModeling](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForLanguageModeling) except you should specify `mlm_probability` to randomly mask tokens each time you iterate over the data.
+
+```py
+>>> from transformers import DataCollatorForLanguageModeling
+
+>>> tokenizer.pad_token = tokenizer.eos_token
+>>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm_probability=0.15)
 ```
 
 <h2 id="causal-language-modeling">Causal language modeling</h2>
 
 <Youtube id="Vpjb1lu0MDk"/>
 
-Causal language modeling is often used for text generation. This section shows you how to fine-tune [DistilGPT2](https://huggingface.co/distilgpt2) to generate new text.
+Causal language modeling is frequently used for text generation. This section shows you how to fine-tune [DistilGPT2](https://huggingface.co/distilgpt2) to generate new text.
 
 <h3 id="finetune-with-trainer">Fine-tune with Trainer</h3>
 
@@ -200,7 +223,7 @@ If you aren't familiar with fine-tuning a model with Trainer, take a look at the
 At this point, only three steps remain:
 
 1. Define your training hyperparameters in [TrainingArguments](/docs/transformers/pr_15564/en/main_classes/trainer#transformers.TrainingArguments).
-2. Pass the training arguments to [Trainer](/docs/transformers/pr_15564/en/main_classes/trainer#transformers.Trainer) along with the model and datasets.
+2. Pass the training arguments to [Trainer](/docs/transformers/pr_15564/en/main_classes/trainer#transformers.Trainer) along with the model, datasets, and data collator.
 3. Call [train()](/docs/transformers/pr_15564/en/main_classes/trainer#transformers.Trainer.train) to fine-tune your model.
 
 ```py
@@ -216,6 +239,7 @@ At this point, only three steps remain:
 ...     args=training_args,
 ...     train_dataset=lm_dataset["train"],
 ...     eval_dataset=lm_dataset["test"],
+...     data_collator=data_collator,
 ... )
 
 >>> trainer.train()
@@ -231,15 +255,15 @@ If you aren't familiar with fine-tuning a model with Keras, take a look at the b
 
 </Tip>
 
-Start by batching the processed examples together with the [DefaultDataCollator](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DefaultDataCollator) function. Make sure you set `return_tensors="tf"` to return `tf.Tensor`'s instead of PyTorch tensors!
+When you create a batch with [DataCollatorForLanguageModeling](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForLanguageModeling), instruct the data collator to return `tf.Tensor`'s instead of PyTorch tensors:
 
 ```py
->>> from transformers import DefaultDataCollator
+>>> from transformers import DataCollatorForLanguageModeling
 
->>> data_collator = DefaultDataCollator(return_tensors="tf")
+>>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False, return_tensors="tf")
 ```
 
-Convert your datasets to the `tf.data.Dataset` format with [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specify inputs and labels in `columns`:
+Convert your datasets to the `tf.data.Dataset` format with [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specify inputs and labels in `columns`, whether to shuffle the dataset order, batch size, and the data collator:
 
 ```py
 >>> tf_train_set = lm_dataset["train"].to_tf_dataset(
@@ -283,7 +307,7 @@ Configure the model for training with [`compile`](https://keras.io/api/models/mo
 >>> model.compile(optimizer=optimizer)
 ```
 
-Finally, fine-tune the model by calling [`fit`](https://keras.io/api/models/model_training_apis/#fit-method):
+Call [`fit`](https://keras.io/api/models/model_training_apis/#fit-method) to fine-tune the model:
 
 ```py
 >>> model.fit(x=tf_train_set, validation_data=tf_test_set, epochs=3)
@@ -293,7 +317,7 @@ Finally, fine-tune the model by calling [`fit`](https://keras.io/api/models/mode
 
 <Youtube id="mqElG5QJWUg"/>
 
-Masked language modeling is also known as a fill-mask task because it predicts a masked token in a sequence. These model types require a good contextual understanding of an entire sequence instead of only the left context. This section shows you how to fine-tune [DistilRoBERTa](https://huggingface.co/distilroberta-base) to predict a masked word.
+Masked language modeling is also known as a fill-mask task because it predicts a masked token in a sequence. Models for masked language modeling require a good contextual understanding of an entire sequence instead of only the left context. This section shows you how to fine-tune [DistilRoBERTa](https://huggingface.co/distilroberta-base) to predict a masked word.
 
 <h3 id="finetune-with-trainer">Fine-tune with Trainer</h3>
 
@@ -303,16 +327,6 @@ Load DistilRoBERTa with `AutoModelForMaskedlM`:
 >>> from transformers import AutoModelForMaskedLM
 
 >>> model = AutoModelForMaskedLM.from_pretrained("distilroberta-base")
-```
-
-Use [DataCollatorForLanguageModeling](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForLanguageModeling) to batch the examples together. You didn't need to specify this data collator explicitly during causal language modeling because you only used its default parameters. But for masked language modeling, you want to randomly mask the tokens with the `mlm_probability` parameter each time you iterate over the data.
-
-[DataCollatorForLanguageModeling](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForLanguageModeling) will also pad your text and labels, so they are a uniform length. While it is possible to pad your text and labels in the `tokenizer` function by setting `padding=True`, it is more efficient to only pad the text and labels to the length of the longest element in its batch. This is known as *dynamic padding* and is enabled by [DataCollatorForLanguageModeling](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForLanguageModeling).
-
-```py
->>> from transformers import DataCollatorForLanguageModeling, TrainingArguments, Trainer
-
->>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm_probability=0.15)
 ```
 
 <Tip>
@@ -357,15 +371,15 @@ If you aren't familiar with fine-tuning a model with Keras, take a look at the b
 
 </Tip>
 
-Start by batching the processed examples together with dynamic padding using [DataCollatorForLanguageModeling](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForLanguageModeling). Dynamic padding is more efficient because it only pads text to the longest element in its batch. For masked language modeling, you also want to randomly mask the tokens with the `mlm_probability` parameter each time you iterate over the data.
+When you create a batch with [DataCollatorForLanguageModeling](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForLanguageModeling), instruct the data collator to return `tf.Tensor`'s instead of PyTorch tensors:
 
 ```py
 >>> from transformers import DataCollatorForLanguageModeling
 
->>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm_probability=0.15)
+>>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False, return_tensors="tf")
 ```
 
-Convert your datasets to the `tf.data.Dataset` format with [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specify inputs and labels in the `columns`:
+Convert your datasets to the `tf.data.Dataset` format with [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specify inputs and labels in `columns`, whether to shuffle the dataset order, batch size, and the data collator:
 
 ```py
 >>> tf_train_set = lm_dataset["train"].to_tf_dataset(
@@ -409,7 +423,7 @@ Configure the model for training with [`compile`](https://keras.io/api/models/mo
 >>> model.compile(optimizer=optimizer)
 ```
 
-Finally, fine-tune the model by calling [`fit`](https://keras.io/api/models/model_training_apis/#fit-method):
+Call [`fit`](https://keras.io/api/models/model_training_apis/#fit-method) to fine-tune the model:
 
 ```py
 >>> model.fit(x=tf_train_set, validation_data=tf_test_set, epochs=3)

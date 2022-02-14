@@ -35,13 +35,13 @@ specific language governing permissions and limitations under the License.
 
 <h1 id="multiple-choice">Multiple choice</h1>
 
-A multiple choice task selects the most correct input given a question and multiple possible inputs. In a sense, a multiple choice task is similar to a question answering task. Both tasks require a model to return the most probable answer. 
+A multiple choice task selects the most correct input given a question and multiple possible inputs. This makes it similar to a question answering task, both tasks require a model to return the most probable answer. 
 
 This guide will show you how to fine-tune [BERT](https://huggingface.co/bert-base-uncased) on the `regular` configuration of the [SWAG](https://huggingface.co/datasets/swag) dataset to select the best answer given multiple options and some context.
 
 <h2 id="load-swag-dataset">Load SWAG dataset</h2>
 
-Load the `regular` configuration from the SWAG dataset with the 🤗 Datasets library:
+Load the SWAG dataset from the 🤗 Datasets library:
 
 ```py
 >>> from datasets import load_dataset
@@ -80,8 +80,8 @@ Load the BERT tokenizer to process the start of each sentence and the four possi
 
 The preprocessing function needs to do:
 
-1. Make four copies of the `sent1` field so you can combine each of them with `sent2` and one of the four possible sentence endings.
-2. Combine `sent2` field with each one of the four possible sentence endings.
+1. Make four copies of the `sent1` field so you can combine each of them with `sent2` to create how a sentence starts.
+2. Combine `sent2` with each one of the four possible sentence endings.
 3. Flatten these two lists so you can tokenize them, and then unflatten them afterwards so each example has a corresponding `input_ids`, `attention_mask`, and `labels` field.
 
 ```py
@@ -102,13 +102,15 @@ The preprocessing function needs to do:
 ...     return &amp;lcub;k: [v[i : i + 4] for i in range(0, len(v), 4)] for k, v in tokenized_examples.items()}
 ```
 
-Use 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.map) function to apply the preprocessing function over the entire dataset. You can also set `batched=True` to process multiple elements of the dataset at once for faster preprocessing:
+Use 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.map) function to apply the preprocessing function over the entire dataset. You can speed up the `map` function by setting `batched=True` to process multiple elements of the dataset at once:
 
 ```py
 tokenized_swag = swag.map(preprocess_function, batched=True)
 ```
 
-🤗 Transformers doesn't have a data collator for multiple choice, so you will need to create one. You can adapt the [DataCollatorWithPadding](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorWithPadding) since you want to dynamically pad your inputs. This data collator will flatten all the model inputs, apply padding, and then unflatten the results:
+🤗 Transformers doesn't have a data collator for multiple choice, so you will need to create one. You can adapt the [DataCollatorWithPadding](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorWithPadding) to create a batch of examples for multiple choice. It will also *dynamically pad* your text and labels to the length of the longest element in its batch, so they are a uniform length. While it is possible to pad your text in the `tokenizer` function by setting `padding=True`, dynamic padding is more efficient.
+
+`DataCollatorForMultipleChoice` will flatten all the model inputs, apply padding, and then unflatten the results:
 
 ```py
 >>> from dataclasses import dataclass
@@ -190,7 +192,7 @@ At this point, only three steps remain:
 ...     train_dataset=tokenized_swag["train"],
 ...     eval_dataset=tokenized_swag["validation"],
 ...     tokenizer=tokenizer,
-...     data_collator=DataCollatorForMultipleChoice(tokenizer),
+...     data_collator=DataCollatorForMultipleChoice(tokenizer=tokenizer),
 ... )
 
 >>> trainer.train()
@@ -206,7 +208,9 @@ If you aren't familiar with fine-tuning a model with Keras, take a look at the b
 
 </Tip>
 
-🤗 Transformers doesn't have a data collator for multiple choice, so you will need to create one. You can adapt the [DataCollatorWithPadding](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorWithPadding) since you want to dynamically pad your inputs. This data collator will flatten all the model inputs, apply padding, and then unflatten the results:
+🤗 Transformers doesn't have a data collator for multiple choice, so you will need to create one. You can adapt the [DataCollatorWithPadding](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorWithPadding) to create a batch of examples for multiple choice. It will also *dynamically pad* your text and labels to the length of the longest element in its batch, so they are a uniform length. While it is possible to pad your text in the `tokenizer` function by setting `padding=True`, dynamic padding is more efficient.
+
+`DataCollatorForMultipleChoice` will flatten all the model inputs, apply padding, and then unflatten the results. When you create this data collator, instruct it to return `tf.Tensor`'s instead of PyTorch tensors:
 
 ```py
 >>> from dataclasses import dataclass
@@ -249,10 +253,10 @@ If you aren't familiar with fine-tuning a model with Keras, take a look at the b
 ...         return batch
 ```
 
-Convert your datasets to the `tf.data.Dataset` format with [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specify inputs in `columns` and labels in `label_cols`:
+Convert your datasets to the `tf.data.Dataset` format with [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specify inputs in `columns`, target in `label_cols`, whether to shuffle the dataset order, batch size, and the data collator:
 
 ```py
->>> data_collator = DataCollatorForMultipleChoice(tokenizer)
+>>> data_collator = DataCollatorForMultipleChoice(tokenizer=tokenizer)
 >>> train_set = tokenized_swag["train"].to_tf_dataset(
 ...     columns=["attention_mask", "input_ids"],
 ...     label_cols=["labels"],
@@ -298,7 +302,7 @@ Configure the model for training with [`compile`](https://keras.io/api/models/mo
 ... )
 ```
 
-Finally, fine-tune the model by calling [`fit`](https://keras.io/api/models/model_training_apis/#fit-method):
+Call [`fit`](https://keras.io/api/models/model_training_apis/#fit-method) to fine-tune the model:
 
 ```py
 >>> model.fit(x=train_set, validation_data=validation_set, epochs=2)

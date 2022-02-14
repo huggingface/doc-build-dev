@@ -37,7 +37,7 @@ specific language governing permissions and limitations under the License.
 
 <Youtube id="yHnr5Dk2zCI"/>
 
-Summarization creates a shorter version of a long document that captures all the important information. Along with translation, it is another example of a sequence-to-sequence task. Summarization can be:
+Summarization creates a shorter version of a long document that captures all the important information. Along with translation, it is another example of a task that can be formulated as a sequence-to-sequence task. Summarization can be:
 
 - Extractive: extract the most relevant information from a document.
 - Abstractive: generate new text that captures the most relevant information. 
@@ -89,8 +89,8 @@ Load the T5 tokenizer to process the `text` and `summary`:
 
 The preprocessing function needs to:
 
-1. Prefix the input with a prompt to tell T5 this is a summarization task. This prefix is specific to T5, and other summarization models like Pegasus do not require prompting.
-2. Parallelize the tokenization with the `as_target_tokenizer()` function with a context manager. This will tokenize the `text` field first, followed by the `summary`.
+1. Prefix the input with a prompt so T5 knows this is a summarization task. Some models capable of multiple NLP tasks require prompting for specific tasks.
+2. Use a context manager to parallelize the tokenization with the `as_target_tokenizer()` function. This will tokenize the `text` field first, followed by the `summary`.
 
 ```py
 >>> prefix = "summarize: "
@@ -107,13 +107,13 @@ The preprocessing function needs to:
 ...     return model_inputs
 ```
 
-Use 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.map) function to apply the preprocessing function over the entire dataset. You can also set `batched=True` to process multiple elements of the dataset at once for faster preprocessing:
+Use 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.map) function to apply the preprocessing function over the entire dataset. You can speed up the `map` function by setting `batched=True` to process multiple elements of the dataset at once:
 
 ```py
 >>> tokenized_billsum = billsum.map(preprocess_function, batched=True)
 ```
 
-Use [DataCollatorForSeq2Seq](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForSeq2Seq) to batch the examples together. It will also pad your text and labels, so they are a uniform length. While it is possible to pad your text and labels in the `tokenizer` function by setting `padding=True`, it is more efficient to only pad the text and labels to the length of the longest element in its batch. This is known as *dynamic padding* and is enabled by [DataCollatorForSeq2Seq](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForSeq2Seq).
+Use [DataCollatorForSeq2Seq](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForSeq2Seq) to create a batch of examples. It will also *dynamically pad* your text and labels to the length of the longest element in its batch, so they are a uniform length. While it is possible to pad your text in the `tokenizer` function by setting `padding=True`, dynamic padding is more efficient.
 
 ```py
 >>> from transformers import DataCollatorForSeq2Seq
@@ -161,8 +161,8 @@ At this point, only three steps remain:
 ...     args=training_args,
 ...     train_dataset=tokenized_billsum["train"],
 ...     eval_dataset=tokenized_billsum["test"],
-...     data_collator=data_collator,
 ...     tokenizer=tokenizer,
+...     data_collator=data_collator,
 ... )
 
 >>> trainer.train()
@@ -178,7 +178,7 @@ If you aren't familiar with fine-tuning a model with Keras, take a look at the b
 
 </Tip>
 
-Start by batching the processed examples together with dynamic padding using [DataCollatorForSeq2Seq](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForSeq2Seq). Dynamic padding is more efficient because it only pads text to the longest element in its batch. Make sure you set `return_tensors="tf"` to return `tf.Tensor`'s instead of PyTorch tensors!
+When you create a batch with [DataCollatorForSeq2Seq](/docs/transformers/pr_15564/en/main_classes/data_collator#transformers.DataCollatorForSeq2Seq), instruct the data collator to return `tf.Tensor`'s instead of PyTorch tensors:
 
 ```py
 >>> from transformers import DataCollatorForSeq2Seq
@@ -186,7 +186,7 @@ Start by batching the processed examples together with dynamic padding using [Da
 >>> data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer, model=model, return_tensors="tf")
 ```
 
-Convert your datasets to the `tf.data.Dataset` format with [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specify inputs and labels in `columns`:
+Convert your datasets to the `tf.data.Dataset` format with [`to_tf_dataset`](https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.to_tf_dataset). Specify inputs and labels in `columns`, whether to shuffle the dataset order, batch size, and the data collator:
 
 ```py
 >>> tf_train_set = tokenized_billsum["train"].to_tf_dataset(
@@ -226,7 +226,7 @@ Configure the model for training with [`compile`](https://keras.io/api/models/mo
 >>> model.compile(optimizer=optimizer)
 ```
 
-Finally, fine-tune the model by calling [`fit`](https://keras.io/api/models/model_training_apis/#fit-method):
+Call [`fit`](https://keras.io/api/models/model_training_apis/#fit-method) to fine-tune the model:
 
 ```py
 >>> model.fit(x=tf_train_set, validation_data=tf_test_set, epochs=3)
