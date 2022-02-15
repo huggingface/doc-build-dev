@@ -67,7 +67,7 @@ Base class for ONNX exportable model describing metadata on how to export the mo
 
 
 <div class="docstring">
-<docstring><name>flatten\_output\_collection\_property</name><anchor>transformers.onnx.OnnxConfig.flatten_output_collection_property</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L304</source><parameters>[{"name": "name", "val": ": str"}, {"name": "field", "val": ": typing.Iterable[typing.Any]"}]</parameters><paramsdesc>name -- The name of the nested structure
+<docstring><name>flatten\_output\_collection\_property</name><anchor>transformers.onnx.OnnxConfig.flatten_output_collection_property</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L305</source><parameters>[{"name": "name", "val": ": str"}, {"name": "field", "val": ": typing.Iterable[typing.Any]"}]</parameters><paramsdesc>name -- The name of the nested structure
 field -- The structure to, potentially, be flattened</paramsdesc><paramgroups>0</paramgroups><rettype>(Dict[str, Any])</rettype><retdesc>Outputs with flattened structure and key mapping this new structure.</retdesc></docstring>
 
 Flatten any potential nested structure expanding the name of the field with the index of the element within the
@@ -135,7 +135,7 @@ Flag indicating if the model requires using external data format
 <div class="docstring">
 
 <div class="docstring">
-<docstring><name>fill\_with\_past\_key\_values\_</name><anchor>transformers.onnx.OnnxConfigWithPast.fill_with_past_key_values_</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L425</source><parameters>[{"name": "inputs_or_outputs", "val": ": typing.Mapping[str, typing.Mapping[int, str]]"}, {"name": "direction", "val": ": str"}]</parameters><paramsdesc>inputs_or_outputs -- The mapping to fill.
+<docstring><name>fill\_with\_past\_key\_values\_</name><anchor>transformers.onnx.OnnxConfigWithPast.fill_with_past_key_values_</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L426</source><parameters>[{"name": "inputs_or_outputs", "val": ": typing.Mapping[str, typing.Mapping[int, str]]"}, {"name": "direction", "val": ": str"}]</parameters><paramsdesc>inputs_or_outputs -- The mapping to fill.
 direction -- either "inputs" or "outputs", it specifies whether input_or_outputs is the input mapping or the
 output mapping, this is important for axes naming.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -146,7 +146,7 @@ Fill the input_or_ouputs mapping with past_key_values dynamic axes considering.
 
 </div>
 <div class="docstring">
-<docstring><name>with\_past</name><anchor>transformers.onnx.OnnxConfigWithPast.with_past</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L334</source><parameters>[{"name": "config", "val": ": PretrainedConfig"}, {"name": "task", "val": ": str = 'default'"}]</parameters><paramsdesc>config -- The underlying model's config to use when exporting to ONNX</paramsdesc><paramgroups>0</paramgroups><retdesc>OnnxConfig with `.use_past = True`</retdesc></docstring>
+<docstring><name>with\_past</name><anchor>transformers.onnx.OnnxConfigWithPast.with_past</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L335</source><parameters>[{"name": "config", "val": ": PretrainedConfig"}, {"name": "task", "val": ": str = 'default'"}]</parameters><paramsdesc>config -- The underlying model's config to use when exporting to ONNX</paramsdesc><paramgroups>0</paramgroups><retdesc>OnnxConfig with `.use_past = True`</retdesc></docstring>
 
 Instantiate a OnnxConfig with `use_past` attribute set to True
 
