@@ -55,7 +55,7 @@ This model was contributed by [francesco](&amp;lt;https://huggingface.co/frances
 
 <div class="docstring">
 
-<docstring><name>class transformers.models.maskformer.modeling\_maskformer.MaskFormerOutput</name><anchor>transformers.models.maskformer.modeling_maskformer.MaskFormerOutput</anchor><source>https://github.com/huggingface/transformers/blob/pr_15315/src/transformers/models/maskformer/modeling_maskformer.py#L114</source><parameters>[{"name": "encoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "pixel_decoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "transformer_decoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "encoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}, {"name": "pixel_decoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}, {"name": "transformer_decoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}]</parameters><paramsdesc>- **encoder_last_hidden_state** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
+<docstring><name>class transformers.models.maskformer.modeling\_maskformer.MaskFormerOutput</name><anchor>transformers.models.maskformer.modeling_maskformer.MaskFormerOutput</anchor><source>https://github.com/huggingface/transformers/blob/pr_15315/src/transformers/models/maskformer/modeling_maskformer.py#L118</source><parameters>[{"name": "encoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "pixel_decoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "transformer_decoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "encoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}, {"name": "pixel_decoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}, {"name": "transformer_decoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}]</parameters><paramsdesc>- **encoder_last_hidden_state** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
   Last hidden states (final feature map) of the last stage of the encoder model (backbone).
 - **pixel_decoder_last_hidden_state** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
   Last hidden states (final feature map) of the last stage of the pixel decoder model (FPN).
@@ -63,16 +63,16 @@ This model was contributed by [francesco](&amp;lt;https://huggingface.co/frances
   Last hidden states (final feature map) of the last stage of the transformer decoder model.
 - **encoder_hidden_states** (`tuple(torch.FloatTensor)`, *optional*, returned when `output_hidden_states=True` is passed or when `config.output_hidden_states=True`) --
   Tuple of `torch.FloatTensor` (one for the output of the embeddings + one for the output of each stage) of
-  shape `(batch_size, num_channels, height, width)`. Hidden-states (also called feature maps) of the encoder model at
-  the output of each stage.
+  shape `(batch_size, num_channels, height, width)`. Hidden-states (also called feature maps) of the encoder
+  model at the output of each stage.
 - **pixel_decoder_hidden_states** (`tuple(torch.FloatTensor)`, *optional*, returned when `output_hidden_states=True` is passed or when `config.output_hidden_states=True`) --
   Tuple of `torch.FloatTensor` (one for the output of the embeddings + one for the output of each stage) of
-  shape `(batch_size, num_channels, height, width)`. Hidden-states (also called feature maps) of the pixel decoder model at
-  the output of each stage.
+  shape `(batch_size, num_channels, height, width)`. Hidden-states (also called feature maps) of the pixel
+  decoder model at the output of each stage.
 - **decoder_hidden_states** (`tuple(torch.FloatTensor)`, *optional*, returned when `output_hidden_states=True` is passed or when `config.output_hidden_states=True`) --
   Tuple of `torch.FloatTensor` (one for the output of the embeddings + one for the output of each stage) of
-  shape `(batch_size, sequence_length, hidden_size)`. Hidden-states (also called feature maps) of the transformer decoder at
-  the output of each stage.</paramsdesc><paramgroups>0</paramgroups></docstring>
+  shape `(batch_size, sequence_length, hidden_size)`. Hidden-states (also called feature maps) of the
+  transformer decoder at the output of each stage.</paramsdesc><paramgroups>0</paramgroups></docstring>
 Base class for outputs of MaskFormer model. This class returns all the needed hidden states to compute the logits.
 
 
@@ -82,8 +82,12 @@ Base class for outputs of MaskFormer model. This class returns all the needed hi
 
 <div class="docstring">
 
-<docstring><name>class transformers.models.maskformer.modeling\_maskformer.MaskFormerForInstanceSegmentationOutput</name><anchor>transformers.models.maskformer.modeling_maskformer.MaskFormerForInstanceSegmentationOutput</anchor><source>https://github.com/huggingface/transformers/blob/pr_15315/src/transformers/models/maskformer/modeling_maskformer.py#L148</source><parameters>[{"name": "class_queries_logits", "val": ": torch.FloatTensor = None"}, {"name": "masks_queries_logits", "val": ": torch.FloatTensor = None"}, {"name": "auxilary_logits", "val": ": torch.FloatTensor = None"}, {"name": "encoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "pixel_decoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "transformer_decoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "encoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}, {"name": "pixel_decoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}, {"name": "transformer_decoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}, {"name": "loss", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "loss_dict", "val": ": Optional[Dict[str, torch.FloatTensor]] = None"}]</parameters><paramsdesc>- **class_queries_logits** (torch.FloatTensor) -- A tensor of shape `(batch_size, num_queries, height, width)` representing the proposed masks for each query.
-- **masks_queries_logits** (torch.FloatTensor) --  A tensor of shape `(batch_size, num_queries, num_classes + 1)` representing the proposed classes for each query. Note the `+ 1` is needed because we incorporate the null class.
+<docstring><name>class transformers.models.maskformer.modeling\_maskformer.MaskFormerForInstanceSegmentationOutput</name><anchor>transformers.models.maskformer.modeling_maskformer.MaskFormerForInstanceSegmentationOutput</anchor><source>https://github.com/huggingface/transformers/blob/pr_15315/src/transformers/models/maskformer/modeling_maskformer.py#L152</source><parameters>[{"name": "class_queries_logits", "val": ": torch.FloatTensor = None"}, {"name": "masks_queries_logits", "val": ": torch.FloatTensor = None"}, {"name": "auxilary_logits", "val": ": torch.FloatTensor = None"}, {"name": "encoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "pixel_decoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "transformer_decoder_last_hidden_state", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "encoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}, {"name": "pixel_decoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}, {"name": "transformer_decoder_hidden_states", "val": ": Optional[Tuple[torch.FloatTensor]] = None"}, {"name": "loss", "val": ": Optional[torch.FloatTensor] = None"}, {"name": "loss_dict", "val": ": Optional[Dict[str, torch.FloatTensor]] = None"}]</parameters><paramsdesc>- **class_queries_logits** (torch.FloatTensor) --
+  A tensor of shape `(batch_size, num_queries, height, width)` representing the proposed masks for each
+  query.
+- **masks_queries_logits** (torch.FloatTensor) --
+  A tensor of shape `(batch_size, num_queries, num_classes + 1)` representing the proposed classes for each
+  query. Note the `+ 1` is needed because we incorporate the null class.
 - **encoder_last_hidden_state** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
   Last hidden states (final feature map) of the last stage of the encoder model (backbone).
 - **pixel_decoder_last_hidden_state** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
@@ -92,20 +96,22 @@ Base class for outputs of MaskFormer model. This class returns all the needed hi
   Last hidden states (final feature map) of the last stage of the transformer decoder model.
 - **encoder_hidden_states** (`tuple(torch.FloatTensor)`, *optional*, returned when `output_hidden_states=True` is passed or when `config.output_hidden_states=True`) --
   Tuple of `torch.FloatTensor` (one for the output of the embeddings + one for the output of each stage) of
-  shape `(batch_size, num_channels, height, width)`. Hidden-states (also called feature maps) of the encoder model at
-  the output of each stage.
+  shape `(batch_size, num_channels, height, width)`. Hidden-states (also called feature maps) of the encoder
+  model at the output of each stage.
 - **pixel_decoder_hidden_states** (`tuple(torch.FloatTensor)`, *optional*, returned when `output_hidden_states=True` is passed or when `config.output_hidden_states=True`) --
   Tuple of `torch.FloatTensor` (one for the output of the embeddings + one for the output of each stage) of
-  shape `(batch_size, num_channels, height, width)`. Hidden-states (also called feature maps) of the pixel decoder model at
-  the output of each stage.
+  shape `(batch_size, num_channels, height, width)`. Hidden-states (also called feature maps) of the pixel
+  decoder model at the output of each stage.
 - **decoder_hidden_states** (`tuple(torch.FloatTensor)`, *optional*, returned when `output_hidden_states=True` is passed or when `config.output_hidden_states=True`) --
   Tuple of `torch.FloatTensor` (one for the output of the embeddings + one for the output of each stage) of
-  shape `(batch_size, sequence_length, hidden_size)`. Hidden-states (also called feature maps) of the transformer decoder at
-  the output of each stage.</paramsdesc><paramgroups>0</paramgroups></docstring>
+  shape `(batch_size, sequence_length, hidden_size)`. Hidden-states (also called feature maps) of the
+  transformer decoder at the output of each stage.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Output type of `MaskFormerForInstanceSegmentation`
 
-This output can be directly passed to `post_process_segmentation()`or  `post_process_panoptic_segmentation()`depending on the task. Please, see [`~MaskFormerFeatureExtractor] for a detail usage.
+This output can be directly passed to `post_process_segmentation()`or
+`post_process_panoptic_segmentation()`depending on the task. Please, see
+[`~MaskFormerFeatureExtractor] for a detail usage.
 
 
 
@@ -116,8 +122,10 @@ This output can be directly passed to `post_process_segmentation()`or  `post_pro
 
 <div class="docstring">
 
-<docstring><name>class transformers.MaskFormerConfig</name><anchor>transformers.MaskFormerConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15315/src/transformers/models/maskformer/configuration_maskformer.py#L32</source><parameters>[{"name": "fpn_feature_size", "val": ": Optional[int] = 256"}, {"name": "mask_feature_size", "val": ": Optional[int] = 256"}, {"name": "no_object_weight", "val": ": Optional[float] = 0.1"}, {"name": "use_auxilary_loss", "val": ": Optional[bool] = False"}, {"name": "backbone_config", "val": ": Optional[Dict] = None"}, {"name": "detr_config", "val": ": Optional[Dict] = None"}, {"name": "init_std", "val": ": float = 0.02"}, {"name": "init_xavier_std", "val": ": float = 1.0"}, {"name": "dice_weight", "val": ": Optional[float] = 1.0"}, {"name": "cross_entropy_weight", "val": ": Optional[float] = 1.0"}, {"name": "mask_weight", "val": ": Optional[float] = 20.0"}, {"name": "num_labels", "val": ": Optional[int] = 150"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **dataset_metadata** (DatasetMetadata, optional) -- [description]. Defaults to None.
-- **mask_feature_size** (Optional[int], optional) -- The masks' features size, this value will also be used to specify the Feature Pyramid Network features size. Defaults to 256.
+<docstring><name>class transformers.MaskFormerConfig</name><anchor>transformers.MaskFormerConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15315/src/transformers/models/maskformer/configuration_maskformer.py#L35</source><parameters>[{"name": "fpn_feature_size", "val": ": Optional[int] = 256"}, {"name": "mask_feature_size", "val": ": Optional[int] = 256"}, {"name": "no_object_weight", "val": ": Optional[float] = 0.1"}, {"name": "use_auxilary_loss", "val": ": Optional[bool] = False"}, {"name": "backbone_config", "val": ": Optional[Dict] = None"}, {"name": "detr_config", "val": ": Optional[Dict] = None"}, {"name": "init_std", "val": ": float = 0.02"}, {"name": "init_xavier_std", "val": ": float = 1.0"}, {"name": "dice_weight", "val": ": Optional[float] = 1.0"}, {"name": "cross_entropy_weight", "val": ": Optional[float] = 1.0"}, {"name": "mask_weight", "val": ": Optional[float] = 20.0"}, {"name": "num_labels", "val": ": Optional[int] = 150"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **dataset_metadata** (DatasetMetadata, optional) -- [description]. Defaults to None.
+- **mask_feature_size** (Optional[int], optional) --
+  The masks' features size, this value will also be used to specify the Feature Pyramid Network features
+  size. Defaults to 256.
 - **no_object_weight** (Optional[float], optional) -- Weight to apply to the null class . Defaults to 0.1.
 - **use_auxilary_loss** (Optional[bool], optional) -- If `true` `MaskFormerOutput` will contain. Defaults to False.
 - **backbone_config** (Optional[Dict], optional) -- [description]. Defaults to None.
@@ -132,7 +140,8 @@ This output can be directly passed to `post_process_segmentation()`or  `post_pro
 
 This is the configuration class to store the configuration of a `MaskFormer`. It is used to instantiate a
 MaskFormer model according to the specified arguments, defining the model architecture. Instantiating a
-configuration with the defaults will yield a similar configuration to that of the "maskformer-swin-base-ade-640" architecture trained on ade20k-150
+configuration with the defaults will yield a similar configuration to that of the "maskformer-swin-base-ade-640"
+architecture trained on ade20k-150
 
 Configuration objects inherit from [PretrainedConfig](/docs/transformers/pr_15315/en/main_classes/configuration#transformers.PretrainedConfig) and can be used to control the model outputs. Read the
 documentation from [PretrainedConfig](/docs/transformers/pr_15315/en/main_classes/configuration#transformers.PretrainedConfig) for more information.
@@ -162,9 +171,10 @@ Examples:
 
 
 <div class="docstring">
-<docstring><name>from\_backbone\_and\_detr\_configs</name><anchor>transformers.MaskFormerConfig.from_backbone_and_detr_configs</anchor><source>https://github.com/huggingface/transformers/blob/pr_15315/src/transformers/models/maskformer/configuration_maskformer.py#L141</source><parameters>[{"name": "backbone_config", "val": ": PretrainedConfig"}, {"name": "detr_config", "val": ": DetrConfig"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **backbone_config** (PretrainedConfig) -- The backbone configuration
+<docstring><name>from\_backbone\_and\_detr\_configs</name><anchor>transformers.MaskFormerConfig.from_backbone_and_detr_configs</anchor><source>https://github.com/huggingface/transformers/blob/pr_15315/src/transformers/models/maskformer/configuration_maskformer.py#L147</source><parameters>[{"name": "backbone_config", "val": ": PretrainedConfig"}, {"name": "detr_config", "val": ": DetrConfig"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **backbone_config** (PretrainedConfig) -- The backbone configuration
 - **detr_config** (DetrConfig) -- The transformer decoder configuration to use</paramsdesc><paramgroups>0</paramgroups><rettype>[MaskFormerConfig](/docs/transformers/pr_15315/en/model_doc/maskformer#transformers.MaskFormerConfig)</rettype><retdesc>An instance of a configuration object</retdesc></docstring>
-Instantiate a [MaskFormerConfig](/docs/transformers/pr_15315/en/model_doc/maskformer#transformers.MaskFormerConfig) (or a derived class) from a pre-trained backbone model configuration and DETR model configuration.
+Instantiate a [MaskFormerConfig](/docs/transformers/pr_15315/en/model_doc/maskformer#transformers.MaskFormerConfig) (or a derived class) from a pre-trained backbone model configuration and DETR model
+configuration.
 
 
 
