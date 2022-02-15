@@ -308,7 +308,7 @@ special tokens using the tokenizer `prepare_for_model` method.
 
 </div>
 <div class="docstring">
-<docstring><name>create\_token\_type\_ids\_from\_sequences</name><anchor>transformers.PreTrainedTokenizerBase.create_token_type_ids_from_sequences</anchor><source>https://github.com/huggingface/transformers/blob/pr_15645/src/transformers/tokenization_utils_base.py#L2866</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) -- The first tokenized sequence.
+<docstring><name>create\_token\_type\_ids\_from\_sequences</name><anchor>transformers.PreTrainedTokenizerBase.create_token_type_ids_from_sequences</anchor><source>https://github.com/huggingface/transformers/blob/pr_15645/src/transformers/tokenization_utils_base.py#L2864</source><parameters>[{"name": "token_ids_0", "val": ": typing.List[int]"}, {"name": "token_ids_1", "val": ": typing.Optional[typing.List[int]] = None"}]</parameters><paramsdesc>- **token_ids_0** (`List[int]`) -- The first tokenized sequence.
 - **token_ids_1** (`List[int]`, *optional*) -- The second tokenized sequence.</paramsdesc><paramgroups>0</paramgroups><rettype>`List[int]`</rettype><retdesc>The token type ids.</retdesc></docstring>
 
 Create the token type IDs corresponding to the sequences passed. [What are token type
@@ -444,7 +444,7 @@ information.
 
 </div>
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.ProcessorMixin.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15645/src/transformers/processing_utils.py#L112</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.ProcessorMixin.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15645/src/transformers/processing_utils.py#L132</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   This can be either:
 
   - a string, the *model id* of a pretrained feature_extractor hosted inside a model repo on
@@ -475,7 +475,7 @@ methods above for more information.
 
 </div>
 <div class="docstring">
-<docstring><name>save\_pretrained</name><anchor>transformers.ProcessorMixin.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15645/src/transformers/processing_utils.py#L86</source><parameters>[{"name": "save_directory", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
+<docstring><name>save\_pretrained</name><anchor>transformers.ProcessorMixin.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15645/src/transformers/processing_utils.py#L91</source><parameters>[{"name": "save_directory", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
   Directory where the feature extractor JSON file and the tokenizer files will be saved (directory will
   be created if it does not exist).</paramsdesc><paramgroups>0</paramgroups></docstring>
 
