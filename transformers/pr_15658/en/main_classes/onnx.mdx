@@ -60,14 +60,14 @@ type of model architecture you wish to export:
 
 <div class="docstring">
 
-<docstring><name>class transformers.onnx.OnnxConfig</name><anchor>transformers.onnx.OnnxConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L66</source><parameters>[{"name": "config", "val": ": PretrainedConfig"}, {"name": "task", "val": ": str = 'default'"}, {"name": "patching_specs", "val": ": typing.List[transformers.onnx.config.PatchingSpec] = None"}]</parameters></docstring>
+<docstring><name>class transformers.onnx.OnnxConfig</name><anchor>transformers.onnx.OnnxConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L67</source><parameters>[{"name": "config", "val": ": PretrainedConfig"}, {"name": "task", "val": ": str = 'default'"}, {"name": "patching_specs", "val": ": typing.List[transformers.onnx.config.PatchingSpec] = None"}]</parameters></docstring>
 
 Base class for ONNX exportable model describing metadata on how to export the model through the ONNX format.
 
 
 
 <div class="docstring">
-<docstring><name>flatten\_output\_collection\_property</name><anchor>transformers.onnx.OnnxConfig.flatten_output_collection_property</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L293</source><parameters>[{"name": "name", "val": ": str"}, {"name": "field", "val": ": typing.Iterable[typing.Any]"}]</parameters><paramsdesc>name -- The name of the nested structure
+<docstring><name>flatten\_output\_collection\_property</name><anchor>transformers.onnx.OnnxConfig.flatten_output_collection_property</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L304</source><parameters>[{"name": "name", "val": ": str"}, {"name": "field", "val": ": typing.Iterable[typing.Any]"}]</parameters><paramsdesc>name -- The name of the nested structure
 field -- The structure to, potentially, be flattened</paramsdesc><paramgroups>0</paramgroups><rettype>(Dict[str, Any])</rettype><retdesc>Outputs with flattened structure and key mapping this new structure.</retdesc></docstring>
 
 Flatten any potential nested structure expanding the name of the field with the index of the element within the
@@ -82,7 +82,7 @@ structure.
 
 </div>
 <div class="docstring">
-<docstring><name>from\_model\_config</name><anchor>transformers.onnx.OnnxConfig.from_model_config</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L107</source><parameters>[{"name": "config", "val": ": PretrainedConfig"}, {"name": "task", "val": ": str = 'default'"}]</parameters><paramsdesc>config -- The model's configuration to use when exporting to ONNX</paramsdesc><paramgroups>0</paramgroups><retdesc>OnnxConfig for this model</retdesc></docstring>
+<docstring><name>from\_model\_config</name><anchor>transformers.onnx.OnnxConfig.from_model_config</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L108</source><parameters>[{"name": "config", "val": ": PretrainedConfig"}, {"name": "task", "val": ": str = 'default'"}]</parameters><paramsdesc>config -- The model's configuration to use when exporting to ONNX</paramsdesc><paramgroups>0</paramgroups><retdesc>OnnxConfig for this model</retdesc></docstring>
 
 Instantiate a OnnxConfig for a specific model
 
@@ -93,18 +93,22 @@ Instantiate a OnnxConfig for a specific model
 
 </div>
 <div class="docstring">
-<docstring><name>generate\_dummy\_inputs</name><anchor>transformers.onnx.OnnxConfig.generate_dummy_inputs</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L222</source><parameters>[{"name": "preprocessor", "val": ": typing.Union[transformers.tokenization_utils.PreTrainedTokenizer, transformers.feature_extraction_utils.FeatureExtractionMixin]"}, {"name": "batch_size", "val": ": int = -1"}, {"name": "seq_length", "val": ": int = -1"}, {"name": "is_pair", "val": ": bool = False"}, {"name": "framework", "val": ": typing.Optional[transformers.file_utils.TensorType] = None"}, {"name": "tokenizer", "val": ": PreTrainedTokenizer = None"}, {"name": "num_channels", "val": ": int = 3"}, {"name": "image_width", "val": ": int = 40"}, {"name": "image_height", "val": ": int = 40"}]</parameters><paramsdesc>preprocessor -- ([PreTrainedTokenizer](/docs/transformers/pr_15658/en/main_classes/tokenizer#transformers.PreTrainedTokenizer) or [FeatureExtractionMixin](/docs/transformers/pr_15658/en/main_classes/feature_extractor#transformers.FeatureExtractionMixin)):
+<docstring><name>generate\_dummy\_inputs</name><anchor>transformers.onnx.OnnxConfig.generate_dummy_inputs</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L223</source><parameters>[{"name": "preprocessor", "val": ": typing.Union[transformers.tokenization_utils.PreTrainedTokenizer, transformers.feature_extraction_utils.FeatureExtractionMixin]"}, {"name": "batch_size", "val": ": int = -1"}, {"name": "seq_length", "val": ": int = -1"}, {"name": "is_pair", "val": ": bool = False"}, {"name": "framework", "val": ": typing.Optional[transformers.file_utils.TensorType] = None"}, {"name": "num_channels", "val": ": int = 3"}, {"name": "image_width", "val": ": int = 40"}, {"name": "image_height", "val": ": int = 40"}, {"name": "tokenizer", "val": ": PreTrainedTokenizer = None"}]</parameters><paramsdesc>preprocessor -- ([PreTrainedTokenizer](/docs/transformers/pr_15658/en/main_classes/tokenizer#transformers.PreTrainedTokenizer) or [FeatureExtractionMixin](/docs/transformers/pr_15658/en/main_classes/feature_extractor#transformers.FeatureExtractionMixin)):
 The preprocessor associated with this model configuration.
-- **batch_size** (`int`) --
-  The batch size (int) to export the model for (-1 means dynamic axis)
-- **seq_length** (`int`) --
-  The sequence length (int) to export the model for (-1 means dynamic axis)
-- **is_pair** (`bool`) --
+- **batch_size** (`int`, *optional*, defaults to -1) --
+  The batch size to export the model for (-1 means dynamic axis).
+- **seq_length** (`int`, *optional*, defaults to -1) --
+  The sequence length to export the model for (-1 means dynamic axis).
+- **is_pair** (`bool`, *optional*, defaults to `False`) --
   Indicate if the input is a pair (sentence 1, sentence 2)
-- **framework** (`TensorType`) --
-  The framework (optional) the tokenizer will generate tensor for
-- **tokenizer** ([PreTrainedTokenizer](/docs/transformers/pr_15658/en/main_classes/tokenizer#transformers.PreTrainedTokenizer)) --
-  The tokenizer associated with this model configuration</paramsdesc><paramgroups>0</paramgroups><retdesc>Mapping[str, Tensor] holding the kwargs to provide to the model's forward function</retdesc></docstring>
+- **framework** (`TensorType`, *optional*, defaults to `None`) --
+  The framework (optional) the tokenizer will generate tensor for.
+- **num_channels** (`int`, *optional*, defaults to 3) --
+  The number of channels of the generated images.
+- **image_width** (`int`, *optional*, defaults to 40) --
+  The width of the generated images.
+- **image_height** (`int`, *optional*, defaults to 40) --
+  The height of the generated images.</paramsdesc><paramgroups>0</paramgroups><retdesc>Mapping[str, Tensor] holding the kwargs to provide to the model's forward function</retdesc></docstring>
 
 Generate inputs to provide to the ONNX exporter for the specific framework
 
@@ -115,7 +119,7 @@ Generate inputs to provide to the ONNX exporter for the specific framework
 
 </div>
 <div class="docstring">
-<docstring><name>use\_external\_data\_format</name><anchor>transformers.onnx.OnnxConfig.use_external_data_format</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L196</source><parameters>[{"name": "num_parameters", "val": ": int"}]</parameters><paramsdesc>num_parameters -- Number of parameter on the model</paramsdesc><paramgroups>0</paramgroups><retdesc>True if model.num_parameters() * size_of(float32) >= 2Gb False otherwise</retdesc></docstring>
+<docstring><name>use\_external\_data\_format</name><anchor>transformers.onnx.OnnxConfig.use_external_data_format</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L197</source><parameters>[{"name": "num_parameters", "val": ": int"}]</parameters><paramsdesc>num_parameters -- Number of parameter on the model</paramsdesc><paramgroups>0</paramgroups><retdesc>True if model.num_parameters() * size_of(float32) >= 2Gb False otherwise</retdesc></docstring>
 
 Flag indicating if the model requires using external data format
 
@@ -131,7 +135,7 @@ Flag indicating if the model requires using external data format
 <div class="docstring">
 
 <div class="docstring">
-<docstring><name>fill\_with\_past\_key\_values\_</name><anchor>transformers.onnx.OnnxConfigWithPast.fill_with_past_key_values_</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L414</source><parameters>[{"name": "inputs_or_outputs", "val": ": typing.Mapping[str, typing.Mapping[int, str]]"}, {"name": "direction", "val": ": str"}]</parameters><paramsdesc>inputs_or_outputs -- The mapping to fill.
+<docstring><name>fill\_with\_past\_key\_values\_</name><anchor>transformers.onnx.OnnxConfigWithPast.fill_with_past_key_values_</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L425</source><parameters>[{"name": "inputs_or_outputs", "val": ": typing.Mapping[str, typing.Mapping[int, str]]"}, {"name": "direction", "val": ": str"}]</parameters><paramsdesc>inputs_or_outputs -- The mapping to fill.
 direction -- either "inputs" or "outputs", it specifies whether input_or_outputs is the input mapping or the
 output mapping, this is important for axes naming.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -142,7 +146,7 @@ Fill the input_or_ouputs mapping with past_key_values dynamic axes considering.
 
 </div>
 <div class="docstring">
-<docstring><name>with\_past</name><anchor>transformers.onnx.OnnxConfigWithPast.with_past</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L323</source><parameters>[{"name": "config", "val": ": PretrainedConfig"}, {"name": "task", "val": ": str = 'default'"}]</parameters><paramsdesc>config -- The underlying model's config to use when exporting to ONNX</paramsdesc><paramgroups>0</paramgroups><retdesc>OnnxConfig with `.use_past = True`</retdesc></docstring>
+<docstring><name>with\_past</name><anchor>transformers.onnx.OnnxConfigWithPast.with_past</anchor><source>https://github.com/huggingface/transformers/blob/pr_15658/src/transformers/onnx/config.py#L334</source><parameters>[{"name": "config", "val": ": PretrainedConfig"}, {"name": "task", "val": ": str = 'default'"}]</parameters><paramsdesc>config -- The underlying model's config to use when exporting to ONNX</paramsdesc><paramgroups>0</paramgroups><retdesc>OnnxConfig with `.use_past = True`</retdesc></docstring>
 
 Instantiate a OnnxConfig with `use_past` attribute set to True
 
