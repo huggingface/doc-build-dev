@@ -775,7 +775,7 @@ inputs.
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFNoBadWordsLogitsProcessor</name><anchor>transformers.TFNoBadWordsLogitsProcessor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15562/src/transformers/generation_tf_logits_process.py#L160</source><parameters>[{"name": "bad_words_ids", "val": ": typing.List[typing.List[int]]"}, {"name": "eos_token_id", "val": ": int"}]</parameters><paramsdesc>- **bad_words_ids** (`List[List[int]]`) --
+<docstring><name>class transformers.TFNoBadWordsLogitsProcessor</name><anchor>transformers.TFNoBadWordsLogitsProcessor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15562/src/transformers/generation_tf_logits_process.py#L157</source><parameters>[{"name": "bad_words_ids", "val": ": typing.List[typing.List[int]]"}, {"name": "eos_token_id", "val": ": int"}]</parameters><paramsdesc>- **bad_words_ids** (`List[List[int]]`) --
   List of list of token ids that are not allowed to be generated. In order to get the tokens of the words
   that should not appear in the generated text, use `tokenizer(bad_word, add_prefix_space=True).input_ids`.
 - **eos_token_id** (`int`) --
@@ -791,7 +791,7 @@ inputs.
 
 <div class="docstring">
 
-<docstring><name>class transformers.TFNoRepeatNGramLogitsProcessor</name><anchor>transformers.TFNoRepeatNGramLogitsProcessor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15562/src/transformers/generation_tf_logits_process.py#L243</source><parameters>[{"name": "ngram_size", "val": ": int"}]</parameters><paramsdesc>- **ngram_size** (`int`) --
+<docstring><name>class transformers.TFNoRepeatNGramLogitsProcessor</name><anchor>transformers.TFNoRepeatNGramLogitsProcessor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15562/src/transformers/generation_tf_logits_process.py#L240</source><parameters>[{"name": "ngram_size", "val": ": int"}]</parameters><paramsdesc>- **ngram_size** (`int`) --
   All ngrams of size `ngram_size` can only occur once.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 [TFLogitsProcessor](/docs/transformers/pr_15562/en/internal/generation_utils#transformers.TFLogitsProcessor) that enforces no repetition of n-grams. See
