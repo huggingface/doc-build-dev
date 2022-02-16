@@ -13,7 +13,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -53,7 +53,7 @@ TRANSFORMERS_VERBOSITY=error ./myprogram.py
 
 Additionally, some `warnings` can be disabled by setting the environment variable
 `TRANSFORMERS_NO_ADVISORY_WARNINGS` to a true value, like *1*. This will disable any warning that is logged using
-`logger.warning_advice`. For example:
+`logger.warning_advice()` For example:
 
 
 ```bash
