@@ -96,7 +96,7 @@ predicted token ids.
 >>> ds = ds.map(map_to_array)
 
 >>> inputs = processor(ds["speech"][0], sampling_rate=16_000, return_tensors="pt")
->>> generated_ids = model.generate(input_ids=inputs["input_values"], attention_mask=inputs["attention_mask"])
+>>> generated_ids = model.generate(inputs=inputs["input_values"], attention_mask=inputs["attention_mask"])
 
 >>> transcription = processor.batch_decode(generated_ids)
 ```
@@ -218,7 +218,7 @@ the superclass for more information regarding such methods.
 
 
 <div class="docstring">
-<docstring><name>batch\_decode</name><anchor>transformers.PreTrainedTokenizerBase.batch_decode</anchor><source>https://github.com/huggingface/transformers/blob/pr_15213/src/transformers/tokenization_utils_base.py#L3252</source><parameters>[{"name": "sequences", "val": ": typing.Union[typing.List[int], typing.List[typing.List[int]], ForwardRef('np.ndarray'), ForwardRef('torch.Tensor'), ForwardRef('tf.Tensor')]"}, {"name": "skip_special_tokens", "val": ": bool = False"}, {"name": "clean_up_tokenization_spaces", "val": ": bool = True"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **sequences** (`Union[List[int], List[List[int]], np.ndarray, torch.Tensor, tf.Tensor]`) --
+<docstring><name>batch\_decode</name><anchor>transformers.PreTrainedTokenizerBase.batch_decode</anchor><source>https://github.com/huggingface/transformers/blob/pr_15213/src/transformers/tokenization_utils_base.py#L3250</source><parameters>[{"name": "sequences", "val": ": typing.Union[typing.List[int], typing.List[typing.List[int]], ForwardRef('np.ndarray'), ForwardRef('torch.Tensor'), ForwardRef('tf.Tensor')]"}, {"name": "skip_special_tokens", "val": ": bool = False"}, {"name": "clean_up_tokenization_spaces", "val": ": bool = True"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **sequences** (`Union[List[int], List[List[int]], np.ndarray, torch.Tensor, tf.Tensor]`) --
   List of tokenized input ids. Can be obtained using the `__call__` method.
 - **skip_special_tokens** (`bool`, *optional*, defaults to `False`) --
   Whether or not to remove special tokens in the decoding.
@@ -238,7 +238,7 @@ Convert a list of lists of token ids into a list of strings by calling decode.
 
 </div>
 <div class="docstring">
-<docstring><name>decode</name><anchor>transformers.PreTrainedTokenizerBase.decode</anchor><source>https://github.com/huggingface/transformers/blob/pr_15213/src/transformers/tokenization_utils_base.py#L3285</source><parameters>[{"name": "token_ids", "val": ": typing.Union[int, typing.List[int], ForwardRef('np.ndarray'), ForwardRef('torch.Tensor'), ForwardRef('tf.Tensor')]"}, {"name": "skip_special_tokens", "val": ": bool = False"}, {"name": "clean_up_tokenization_spaces", "val": ": bool = True"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **token_ids** (`Union[int, List[int], np.ndarray, torch.Tensor, tf.Tensor]`) --
+<docstring><name>decode</name><anchor>transformers.PreTrainedTokenizerBase.decode</anchor><source>https://github.com/huggingface/transformers/blob/pr_15213/src/transformers/tokenization_utils_base.py#L3283</source><parameters>[{"name": "token_ids", "val": ": typing.Union[int, typing.List[int], ForwardRef('np.ndarray'), ForwardRef('torch.Tensor'), ForwardRef('tf.Tensor')]"}, {"name": "skip_special_tokens", "val": ": bool = False"}, {"name": "clean_up_tokenization_spaces", "val": ": bool = True"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **token_ids** (`Union[int, List[int], np.ndarray, torch.Tensor, tf.Tensor]`) --
   List of tokenized input ids. Can be obtained using the `__call__` method.
 - **skip_special_tokens** (`bool`, *optional*, defaults to `False`) --
   Whether or not to remove special tokens in the decoding.
@@ -293,7 +293,7 @@ methods for more information.
 
 </div>
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.ProcessorMixin.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15213/src/transformers/processing_utils.py#L112</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.ProcessorMixin.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15213/src/transformers/processing_utils.py#L157</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   This can be either:
 
   - a string, the *model id* of a pretrained feature_extractor hosted inside a model repo on
@@ -324,9 +324,22 @@ methods above for more information.
 
 </div>
 <div class="docstring">
-<docstring><name>save\_pretrained</name><anchor>transformers.ProcessorMixin.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15213/src/transformers/processing_utils.py#L86</source><parameters>[{"name": "save_directory", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
+<docstring><name>save\_pretrained</name><anchor>transformers.ProcessorMixin.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15213/src/transformers/processing_utils.py#L95</source><parameters>[{"name": "save_directory", "val": ""}, {"name": "push_to_hub", "val": ": bool = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
   Directory where the feature extractor JSON file and the tokenizer files will be saved (directory will
-  be created if it does not exist).</paramsdesc><paramgroups>0</paramgroups></docstring>
+  be created if it does not exist).
+- **push_to_hub** (`bool`, *optional*, defaults to `False`) --
+  Whether or not to push your processor to the Hugging Face model hub after saving it.
+
+  <Tip warning=&amp;lcub;true}>
+
+  Using `push_to_hub=True` will synchronize the repository you are pushing to with `save_directory`,
+  which requires `save_directory` to be a local clone of the repo you are pushing to if it's an existing
+  folder. Pass along `temp_dir=True` to use a temporary directory instead.
+
+  </Tip>
+
+  kwargs --
+  Additional key word arguments passed along to the [push_to_hub()](/docs/transformers/pr_15213/en/main_classes/model#transformers.file_utils.PushToHubMixin.push_to_hub) method.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Saves the attributes of this processor (feature extractor, tokenizer...) in the specified directory so that it
 can be reloaded using the [from_pretrained()](/docs/transformers/pr_15213/en/main_classes/processors#transformers.ProcessorMixin.from_pretrained) method.
