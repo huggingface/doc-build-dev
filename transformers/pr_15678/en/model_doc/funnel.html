@@ -1,8 +1,8 @@
 <meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;funnel-transformer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.FunnelConfig&quot;,&quot;title&quot;:&quot;FunnelConfig&quot;},{&quot;local&quot;:&quot;transformers.FunnelTokenizer&quot;,&quot;title&quot;:&quot;FunnelTokenizer&quot;},{&quot;local&quot;:&quot;transformers.FunnelTokenizerFast&quot;,&quot;title&quot;:&quot;FunnelTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.models.funnel.modeling_funnel.FunnelForPreTrainingOutput&quot;,&quot;title&quot;:&quot;Funnel specific outputs&quot;},{&quot;local&quot;:&quot;transformers.FunnelBaseModel&quot;,&quot;title&quot;:&quot;FunnelBaseModel&quot;},{&quot;local&quot;:&quot;transformers.FunnelModel&quot;,&quot;title&quot;:&quot;FunnelModel&quot;},{&quot;local&quot;:&quot;transformers.FunnelForPreTraining&quot;,&quot;title&quot;:&quot;FunnelModelForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.FunnelForMaskedLM&quot;,&quot;title&quot;:&quot;FunnelForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.FunnelForSequenceClassification&quot;,&quot;title&quot;:&quot;FunnelForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.FunnelForMultipleChoice&quot;,&quot;title&quot;:&quot;FunnelForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.FunnelForTokenClassification&quot;,&quot;title&quot;:&quot;FunnelForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.FunnelForQuestionAnswering&quot;,&quot;title&quot;:&quot;FunnelForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelBaseModel&quot;,&quot;title&quot;:&quot;TFFunnelBaseModel&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelModel&quot;,&quot;title&quot;:&quot;TFFunnelModel&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForPreTraining&quot;,&quot;title&quot;:&quot;TFFunnelModelForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForMaskedLM&quot;,&quot;title&quot;:&quot;TFFunnelForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForSequenceClassification&quot;,&quot;title&quot;:&quot;TFFunnelForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForMultipleChoice&quot;,&quot;title&quot;:&quot;TFFunnelForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForTokenClassification&quot;,&quot;title&quot;:&quot;TFFunnelForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFFunnelForQuestionAnswering&quot;}],&quot;title&quot;:&quot;Funnel Transformer&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/_app/start-a0d99f33.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/_app/start-2db35861.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15678/_app/chunks/vendor-9e2b328e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15678/_app/layout.svelte-5b9dda7d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/_app/pages/en/model_doc/funnel.mdx-fdb25304.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/_app/pages/en/model_doc/funnel.mdx-fce884a1.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15678/_app/chunks/Tip-76f97a76.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15678/_app/chunks/Docstring-50fd6873.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15678/_app/chunks/IconCopyLink-fd0e58fd.js">
@@ -152,8 +152,7 @@ The vocabulary size of the <code>token_type_ids</code> passed when calling <a hr
 							</span></span>
 					</li><li class="text-base !pl-4"><span class="group flex space-x-1.5 items-start"><a id="transformers.FunnelConfig.initializer_range" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.FunnelConfig.initializer_range"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 							<span><!-- HTML_TAG_START --><strong>initializer_range</strong> (<code>float</code>, <em>optional</em>, defaults to 0.1) &#x2014;
-The standard deviation of the <em>uniform initializer</em> for initializing all weight matrices in attention
-layers.<!-- HTML_TAG_END -->
+The upper bound of the <em>uniform initializer</em> for initializing all weight matrices in attention layers.<!-- HTML_TAG_END -->
 							</span></span>
 					</li><li class="text-base !pl-4"><span class="group flex space-x-1.5 items-start"><a id="transformers.FunnelConfig.initializer_std" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.FunnelConfig.initializer_std"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 							<span><!-- HTML_TAG_START --><strong>initializer_std</strong> (<code>float</code>, <em>optional</em>) &#x2014;
@@ -3405,10 +3404,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer = <span class="hljs-string">&quot; &quot;</span>.join(all_tokens[tf.math.argmax(start_logits, <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>] : tf.math.argmax(end_logits, <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>] + <span class="hljs-number">1</span>])<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="iy0eeg">
-		import { start } from "/docs/transformers/pr_15678/_app/start-a0d99f33.js";
+		<script type="module" data-hydrate="fjpaa2">
+		import { start } from "/docs/transformers/pr_15678/_app/start-2db35861.js";
 		start({
-			target: document.querySelector('[data-hydrate="iy0eeg"]').parentNode,
+			target: document.querySelector('[data-hydrate="fjpaa2"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15678","assets":"/docs/transformers/pr_15678"},
 			session: {},
 			route: false,
@@ -3419,7 +3418,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15678/_app/layout.svelte-5b9dda7d.js"),
-						import("/docs/transformers/pr_15678/_app/pages/en/model_doc/funnel.mdx-fdb25304.js")
+						import("/docs/transformers/pr_15678/_app/pages/en/model_doc/funnel.mdx-fce884a1.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15678/en/model_doc/funnel"),
 				params: {}
