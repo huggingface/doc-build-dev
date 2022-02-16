@@ -4305,7 +4305,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   The model class to instantiate is selected based on the configuration class:
 
   - [DetrConfig](/docs/transformers/pr_15315/en/model_doc/detr#transformers.DetrConfig) configuration class: [DetrForSegmentation](/docs/transformers/pr_15315/en/model_doc/detr#transformers.DetrForSegmentation) (DETR model)
-  - [MaskFormerConfig](/docs/transformers/pr_15315/en/model_doc/maskformer#transformers.MaskFormerConfig) configuration class: `MaskFormerForInstanceSegmentation`or [``] (MaskFormer model)</paramsdesc><paramgroups>0</paramgroups></docstring>
+  - [MaskFormerConfig](/docs/transformers/pr_15315/en/model_doc/maskformer#transformers.MaskFormerConfig) configuration class: `MaskFormerForInstanceSegmentation`(MaskFormer model)</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Instantiates one of the model classes of the library (with a image segmentation head) from a configuration.
 
@@ -4406,7 +4406,7 @@ passed as an argument or loaded from `pretrained_model_name_or_path` if possible
 falling back to using pattern matching on `pretrained_model_name_or_path`:
 
 - **detr** -- [DetrForSegmentation](/docs/transformers/pr_15315/en/model_doc/detr#transformers.DetrForSegmentation) (DETR model)
-- **maskformer** -- `MaskFormerForInstanceSegmentation`or [``] (MaskFormer model)
+- **maskformer** -- `MaskFormerForInstanceSegmentation`(MaskFormer model)
 
 The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
 deactivated). To train the model, you should first set it back in training mode with `model.train()`
