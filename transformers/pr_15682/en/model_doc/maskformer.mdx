@@ -208,7 +208,7 @@ Serializes this instance to a Python dictionary. Override the default [to_dict()
 
 <div class="docstring">
 
-<docstring><name>class transformers.MaskFormerModel</name><anchor>transformers.MaskFormerModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/modeling_maskformer.py#L2278</source><parameters>[{"name": "config", "val": ": MaskFormerConfig"}]</parameters><paramsdesc>- **config** ([MaskFormerConfig](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.MaskFormerConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.MaskFormerModel</name><anchor>transformers.MaskFormerModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/modeling_maskformer.py#L2353</source><parameters>[{"name": "config", "val": ": MaskFormerConfig"}]</parameters><paramsdesc>- **config** ([MaskFormerConfig](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.MaskFormerConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15682/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 The bare MaskFormer Model outputting raw hidden-states without any specific head on top.
@@ -221,7 +221,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.MaskFormerModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/modeling_maskformer.py#L2288</source><parameters>[{"name": "pixel_values", "val": ": Tensor"}, {"name": "pixel_mask", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = False"}, {"name": "return_dict", "val": ": typing.Optional[bool] = True"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
+<docstring><name>forward</name><anchor>transformers.MaskFormerModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/modeling_maskformer.py#L2363</source><parameters>[{"name": "pixel_values", "val": ": Tensor"}, {"name": "pixel_mask", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = False"}, {"name": "return_dict", "val": ": typing.Optional[bool] = True"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
   Pixel values. Pixel values can be obtained using [AutoFeatureExtractor](/docs/transformers/pr_15682/en/model_doc/auto#transformers.AutoFeatureExtractor). See
   `AutoFeatureExtractor.__call__()`for details.
 
@@ -301,7 +301,7 @@ Example:
 <div class="docstring">
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.MaskFormerForInstanceSegmentation.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/modeling_maskformer.py#L2403</source><parameters>[{"name": "pixel_values", "val": ": Tensor"}, {"name": "mask_labels", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "class_labels", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "pixel_mask", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = False"}, {"name": "return_dict", "val": ": typing.Optional[bool] = True"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
+<docstring><name>forward</name><anchor>transformers.MaskFormerForInstanceSegmentation.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/modeling_maskformer.py#L2478</source><parameters>[{"name": "pixel_values", "val": ": Tensor"}, {"name": "mask_labels", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "class_labels", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "pixel_mask", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = False"}, {"name": "return_dict", "val": ": typing.Optional[bool] = True"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
   Pixel values. Pixel values can be obtained using [AutoFeatureExtractor](/docs/transformers/pr_15682/en/model_doc/auto#transformers.AutoFeatureExtractor). See
   `AutoFeatureExtractor.__call__()`for details.
 
@@ -366,6 +366,7 @@ Examples:
 >>> from transformers import MaskFormerFeatureExtractor, MaskFormerForInstanceSegmentation
 >>> from PIL import Image
 >>> import requests
+
 >>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
 >>> image = Image.open(requests.get(url, stream=True).raw)
 >>> feature_extractor = MaskFormerFeatureExtractor.from_pretrained("facebook/maskformer-swin-base-ade")
