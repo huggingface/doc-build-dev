@@ -835,7 +835,8 @@ checkpoint and to get the required access rights to be able to upload the model 
 ```python
 brand_new_bert.push_to_hub(
     repo_path_or_name="brand_new_bert",
-    organization="&amp;lt;ORGANIZATION>",
+    # Uncomment the following line to push to an organization
+    # organization="&amp;lt;ORGANIZATION>", 
     commit_message="Add model",
     use_temp_dir=True,
 )
