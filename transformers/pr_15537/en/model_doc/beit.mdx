@@ -31,7 +31,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -171,19 +171,19 @@ Class for outputs of [FlaxBeitModel](/docs/transformers/pr_15537/en/model_doc/be
 - **hidden_act** (`str` or `function`, *optional*, defaults to `"gelu"`) --
   The non-linear activation function (function or string) in the encoder and pooler. If string, `"gelu"`,
   `"relu"`, `"selu"` and `"gelu_new"` are supported.
-- **hidden_dropout_prob** (`float`, *optional*, defaults to 0.1) --
+- **hidden_dropout_prob** (`float`, *optional*, defaults to 0.0) --
   The dropout probability for all fully connected layers in the embeddings, encoder, and pooler.
-- **attention_probs_dropout_prob** (`float`, *optional*, defaults to 0.1) --
+- **attention_probs_dropout_prob** (`float`, *optional*, defaults to 0.0) --
   The dropout ratio for the attention probabilities.
 - **initializer_range** (`float`, *optional*, defaults to 0.02) --
   The standard deviation of the truncated_normal_initializer for initializing all weight matrices.
 - **layer_norm_eps** (`float`, *optional*, defaults to 1e-12) --
   The epsilon used by the layer normalization layers.
-- **image_size** (`int`, *optional*, defaults to `224`) --
+- **image_size** (`int`, *optional*, defaults to 224) --
   The size (resolution) of each image.
-- **patch_size** (`int`, *optional*, defaults to `16`) --
+- **patch_size** (`int`, *optional*, defaults to 16) --
   The size (resolution) of each patch.
-- **num_channels** (`int`, *optional*, defaults to `3`) --
+- **num_channels** (`int`, *optional*, defaults to 3) --
   The number of input channels.
 - **use_mask_token** (`bool`, *optional*, defaults to `False`) --
   Whether to use a mask token for masked image modeling.
@@ -277,7 +277,7 @@ Example:
 
 Constructs a BEiT feature extractor.
 
-This feature extractor inherits from [FeatureExtractionMixin](/docs/transformers/pr_15537/en/main_classes/feature_extractor#transformers.feature_extraction_utils.FeatureExtractionMixin) which contains most of
+This feature extractor inherits from [FeatureExtractionMixin](/docs/transformers/pr_15537/en/main_classes/feature_extractor#transformers.FeatureExtractionMixin) which contains most of
 the main methods. Users should refer to this superclass for more information regarding those methods.
 
 

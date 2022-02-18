@@ -26,7 +26,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -44,12 +44,15 @@ specific language governing permissions and limitations under the License.
 
 <h1 id="summary-of-the-tokenizers">Summary of the tokenizers</h1>
 
-<ColabDropdown hydrate-props={{
+<DocNotebookDropdown hydrate-props={{
   classNames: "absolute z-10 right-0 top-0",
   options:[
     {label: "Mixed", value: "https://colab.research.google.com/github/huggingface/notebooks/blob/master/transformers_doc/tokenizer_summary.ipynb"},
     {label: "PyTorch", value: "https://colab.research.google.com/github/huggingface/notebooks/blob/master/transformers_doc/pytorch/tokenizer_summary.ipynb"},
     {label: "TensorFlow", value: "https://colab.research.google.com/github/huggingface/notebooks/blob/master/transformers_doc/tensorflow/tokenizer_summary.ipynb"},
+    {label: "Mixed", value: "https://studiolab.sagemaker.aws/import/github/huggingface/notebooks/blob/master/transformers_doc/tokenizer_summary.ipynb"},
+    {label: "PyTorch", value: "https://studiolab.sagemaker.aws/import/github/huggingface/notebooks/blob/master/transformers_doc/pytorch/tokenizer_summary.ipynb"},
+    {label: "TensorFlow", value: "https://studiolab.sagemaker.aws/import/github/huggingface/notebooks/blob/master/transformers_doc/tensorflow/tokenizer_summary.ipynb"},
 ]}} />
 
 On this page, we will have a closer look at tokenization.
@@ -257,7 +260,7 @@ equivalent to finding the symbol pair, whose probability divided by the probabil
 its second symbol is the greatest among all symbol pairs. *E.g.* `"u"`, followed by `"g"` would have only been
 merged if the probability of `"ug"` divided by `"u"`, `"g"` would have been greater than for any other symbol
 pair. Intuitively, WordPiece is slightly different to BPE in that it evaluates what it _loses_ by merging two symbols
-to make ensure it's _worth it_.
+to ensure it's _worth it_.
 
 <a id='unigram'></a>
 
