@@ -1008,7 +1008,7 @@ Assign labels to the image(s) passed as inputs.
 
 <div class="docstring">
 
-<docstring><name>class transformers.ImageSegmentationPipeline</name><anchor>transformers.ImageSegmentationPipeline</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/image_segmentation.py#L35</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model** ([PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) or [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel)) --
+<docstring><name>class transformers.ImageSegmentationPipeline</name><anchor>transformers.ImageSegmentationPipeline</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/image_segmentation.py#L33</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model** ([PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) or [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel)) --
   The model that will be used by the pipeline to make predictions. This needs to be a model inheriting from
   [PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) for PyTorch and [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel) for TensorFlow.
 - **tokenizer** ([PreTrainedTokenizer](/docs/transformers/pr_15647/en/main_classes/tokenizer#transformers.PreTrainedTokenizer)) --
@@ -1054,7 +1054,7 @@ See the list of available models on
 
 
 <div class="docstring">
-<docstring><name>\_\_call\_\_</name><anchor>transformers.ImageSegmentationPipeline.__call__</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/image_segmentation.py#L68</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **images** (`str`, `List[str]`, `PIL.Image` or `List[PIL.Image]`) --
+<docstring><name>\_\_call\_\_</name><anchor>transformers.ImageSegmentationPipeline.__call__</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/image_segmentation.py#L64</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **images** (`str`, `List[str]`, `PIL.Image` or `List[PIL.Image]`) --
   The pipeline handles three types of images:
 
   - A string containing an HTTP(S) link pointing to an image
@@ -1063,25 +1063,19 @@ See the list of available models on
 
   The pipeline accepts either a single image or a batch of images. Images in a batch must all be in the
   same format: all as HTTP(S) links, all as local paths, or all as PIL images.
-- **raw_image** (`bool`, *optional*, defaults to False) --
-  If this is set to True, the `mask` description of the objects will be real `PIL.Image` (grey level). If
-  set to False, then, `mask` will be a base64 encoded of a PNG of this image. Which is easier to
-  send/save.
 - **threshold** (`float`, *optional*, defaults to 0.9) --
   The probability necessary to make a prediction.
 - **mask_threshold** (`float`, *optional*, defaults to 0.5) --
-  Threshold to use when turning the predicted masks into binary values.</paramsdesc><paramgroups>0</paramgroups><retdesc>A dictionary or a list of dictionaries containing the result. If the input is a single image, will return a
-dictionary, if the input is a list of several images, will return a list of dictionaries corresponding to
+  Threshold to use when turning the predicted masks into binary values.</paramsdesc><paramgroups>0</paramgroups><retdesc>A dictionary or a list of dictionaries containing the result. If the input is a single image, will return a list of
+dictionaries, if the input is a list of several images, will return a list of list of dictionaries corresponding to
 each image.
 
 The dictionaries contain the following keys:
 
 - **label** (`str`) -- The class label identified by the model.
-- **score** (`float`) -- The score attributed by the model for that label.
-- **mask** (`str` or `PIL.Image`) -- base64 string of a grayscale (single-channel) PNG image that contain
-  masks information. The PNG image has size (heigth, width) of the original image. Pixel values in the
-  image are either 0 or 255 (i.e. mask is absent VS mask is present). if `raw_image` is set to `True`, then
-  the `mask` is the raw boolean `PIL.Image`.</retdesc></docstring>
+- **mask** (`PIL.Image`) -- Pil Image with size (heigth, width) of the original image. Pixel values in the
+  image are in the range 0-255. 0 means the pixel is *not* part of the *label*, 255 means it definitely is.
+- **score** (*optional* `float`) -- Optionnally, when the model is capable of estimating a confidence of the "object" described by the label and the mask.</retdesc></docstring>
 
 Perform segmentation (detect masks & classes) in the image(s) passed as inputs.
 
@@ -1096,7 +1090,7 @@ Perform segmentation (detect masks & classes) in the image(s) passed as inputs.
 
 <div class="docstring">
 
-<docstring><name>class transformers.TokenClassificationPipeline</name><anchor>transformers.TokenClassificationPipeline</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/token_classification.py#L86</source><parameters>[{"name": "args_parser", "val": " = <transformers.pipelines.token_classification.TokenClassificationArgumentHandler object at 0x7f2acfeb9280>"}, {"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model** ([PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) or [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel)) --
+<docstring><name>class transformers.TokenClassificationPipeline</name><anchor>transformers.TokenClassificationPipeline</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/token_classification.py#L86</source><parameters>[{"name": "args_parser", "val": " = <transformers.pipelines.token_classification.TokenClassificationArgumentHandler object at 0x7faa4107deb0>"}, {"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model** ([PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) or [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel)) --
   The model that will be used by the pipeline to make predictions. This needs to be a model inheriting from
   [PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) for PyTorch and [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel) for TensorFlow.
 - **tokenizer** ([PreTrainedTokenizer](/docs/transformers/pr_15647/en/main_classes/tokenizer#transformers.PreTrainedTokenizer)) --
@@ -1520,7 +1514,7 @@ Summarize the text(s) given as inputs.
 
 <div class="docstring">
 
-<docstring><name>class transformers.TableQuestionAnsweringPipeline</name><anchor>transformers.TableQuestionAnsweringPipeline</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/table_question_answering.py#L83</source><parameters>[{"name": "args_parser", "val": " = <transformers.pipelines.table_question_answering.TableQuestionAnsweringArgumentHandler object at 0x7f2acff239d0>"}, {"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model** ([PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) or [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel)) --
+<docstring><name>class transformers.TableQuestionAnsweringPipeline</name><anchor>transformers.TableQuestionAnsweringPipeline</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/table_question_answering.py#L83</source><parameters>[{"name": "args_parser", "val": " = <transformers.pipelines.table_question_answering.TableQuestionAnsweringArgumentHandler object at 0x7faa41073640>"}, {"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model** ([PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) or [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel)) --
   The model that will be used by the pipeline to make predictions. This needs to be a model inheriting from
   [PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) for PyTorch and [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel) for TensorFlow.
 - **tokenizer** ([PreTrainedTokenizer](/docs/transformers/pr_15647/en/main_classes/tokenizer#transformers.PreTrainedTokenizer)) --
@@ -1936,7 +1930,7 @@ Checks whether there might be something wrong with given input with regard to th
 
 <div class="docstring">
 
-<docstring><name>class transformers.TokenClassificationPipeline</name><anchor>transformers.TokenClassificationPipeline</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/token_classification.py#L86</source><parameters>[{"name": "args_parser", "val": " = <transformers.pipelines.token_classification.TokenClassificationArgumentHandler object at 0x7f2acfeb9280>"}, {"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model** ([PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) or [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel)) --
+<docstring><name>class transformers.TokenClassificationPipeline</name><anchor>transformers.TokenClassificationPipeline</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/token_classification.py#L86</source><parameters>[{"name": "args_parser", "val": " = <transformers.pipelines.token_classification.TokenClassificationArgumentHandler object at 0x7faa4107deb0>"}, {"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model** ([PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) or [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel)) --
   The model that will be used by the pipeline to make predictions. This needs to be a model inheriting from
   [PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) for PyTorch and [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel) for TensorFlow.
 - **tokenizer** ([PreTrainedTokenizer](/docs/transformers/pr_15647/en/main_classes/tokenizer#transformers.PreTrainedTokenizer)) --
@@ -2161,7 +2155,7 @@ Translate the text(s) given as inputs.
 
 <div class="docstring">
 
-<docstring><name>class transformers.ZeroShotClassificationPipeline</name><anchor>transformers.ZeroShotClassificationPipeline</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/zero_shot_classification.py#L47</source><parameters>[{"name": "args_parser", "val": " = <transformers.pipelines.zero_shot_classification.ZeroShotClassificationArgumentHandler object at 0x7f2acfeb9c10>"}, {"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model** ([PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) or [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel)) --
+<docstring><name>class transformers.ZeroShotClassificationPipeline</name><anchor>transformers.ZeroShotClassificationPipeline</anchor><source>https://github.com/huggingface/transformers/blob/pr_15647/src/transformers/pipelines/zero_shot_classification.py#L47</source><parameters>[{"name": "args_parser", "val": " = <transformers.pipelines.zero_shot_classification.ZeroShotClassificationArgumentHandler object at 0x7faa41007880>"}, {"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **model** ([PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) or [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel)) --
   The model that will be used by the pipeline to make predictions. This needs to be a model inheriting from
   [PreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.PreTrainedModel) for PyTorch and [TFPreTrainedModel](/docs/transformers/pr_15647/en/main_classes/model#transformers.TFPreTrainedModel) for TensorFlow.
 - **tokenizer** ([PreTrainedTokenizer](/docs/transformers/pr_15647/en/main_classes/tokenizer#transformers.PreTrainedTokenizer)) --
