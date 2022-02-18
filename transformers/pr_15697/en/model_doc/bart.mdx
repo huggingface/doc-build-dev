@@ -500,10 +500,10 @@ and behavior.
   is used, optionally only the last `decoder_input_ids` have to be input (see `past_key_values`).
 
   For translation and summarization training, `decoder_input_ids` should be provided. If no
-  `decoder_input_ids` is provided, the model will automatically create this tensor by shifting:
+  `decoder_input_ids` are provided, the model will automatically create this tensor by shifting:
 
-  - the `labels` to the right for text generation if `labels` is provided,
-  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` is provided.
+  - the `labels` to the right for text generation if `labels` are provided,
+  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` are provided.
 
 - **decoder_attention_mask** (`torch.LongTensor` of shape `(batch_size, target_sequence_length)`, *optional*) --
   Default behavior: generate a tensor that ignores pad tokens in `decoder_input_ids`. Causal mask will also
@@ -689,10 +689,10 @@ and behavior.
   is used, optionally only the last `decoder_input_ids` have to be input (see `past_key_values`).
 
   For translation and summarization training, `decoder_input_ids` should be provided. If no
-  `decoder_input_ids` is provided, the model will automatically create this tensor by shifting:
+  `decoder_input_ids` are provided, the model will automatically create this tensor by shifting:
 
-  - the `labels` to the right for text generation if `labels` is provided,
-  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` is provided.
+  - the `labels` to the right for text generation if `labels` are provided,
+  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` are provided.
 
 - **decoder_attention_mask** (`torch.LongTensor` of shape `(batch_size, target_sequence_length)`, *optional*) --
   Default behavior: generate a tensor that ignores pad tokens in `decoder_input_ids`. Causal mask will also
@@ -904,10 +904,10 @@ and behavior.
   is used, optionally only the last `decoder_input_ids` have to be input (see `past_key_values`).
 
   For translation and summarization training, `decoder_input_ids` should be provided. If no
-  `decoder_input_ids` is provided, the model will automatically create this tensor by shifting:
+  `decoder_input_ids` are provided, the model will automatically create this tensor by shifting:
 
-  - the `labels` to the right for text generation if `labels` is provided,
-  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` is provided.
+  - the `labels` to the right for text generation if `labels` are provided,
+  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` are provided.
 
 - **decoder_attention_mask** (`torch.LongTensor` of shape `(batch_size, target_sequence_length)`, *optional*) --
   Default behavior: generate a tensor that ignores pad tokens in `decoder_input_ids`. Causal mask will also
@@ -1115,10 +1115,10 @@ and behavior.
   is used, optionally only the last `decoder_input_ids` have to be input (see `past_key_values`).
 
   For translation and summarization training, `decoder_input_ids` should be provided. If no
-  `decoder_input_ids` is provided, the model will automatically create this tensor by shifting:
+  `decoder_input_ids` are provided, the model will automatically create this tensor by shifting:
 
-  - the `labels` to the right for text generation if `labels` is provided,
-  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` is provided.
+  - the `labels` to the right for text generation if `labels` are provided,
+  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` are provided.
 
 - **decoder_attention_mask** (`torch.LongTensor` of shape `(batch_size, target_sequence_length)`, *optional*) --
   Default behavior: generate a tensor that ignores pad tokens in `decoder_input_ids`. Causal mask will also
@@ -1452,10 +1452,10 @@ first positional argument :
   is used, optionally only the last `decoder_input_ids` have to be input (see `past_key_values`).
 
   For translation and summarization training, `decoder_input_ids` should be provided. If no
-  `decoder_input_ids` is provided, the model will automatically create this tensor by shifting:
+  `decoder_input_ids` are provided, the model will automatically create this tensor by shifting:
 
-  - the `labels` to the right for text generation if `labels` is provided,
-  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` is provided.
+  - the `labels` to the right for text generation if `labels` are provided,
+  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` are provided.
 
 - **decoder_attention_mask** (`tf.Tensor` of shape `(batch_size, target_sequence_length)`, *optional*) --
   will be made by default and ignore pad tokens. It is not recommended to set this for most use cases.
@@ -1640,10 +1640,10 @@ first positional argument :
   is used, optionally only the last `decoder_input_ids` have to be input (see `past_key_values`).
 
   For translation and summarization training, `decoder_input_ids` should be provided. If no
-  `decoder_input_ids` is provided, the model will automatically create this tensor by shifting:
+  `decoder_input_ids` are provided, the model will automatically create this tensor by shifting:
 
-  - the `labels` to the right for text generation if `labels` is provided,
-  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` is provided.
+  - the `labels` to the right for text generation if `labels` are provided,
+  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` are provided.
 
 - **decoder_attention_mask** (`tf.Tensor` of shape `(batch_size, target_sequence_length)`, *optional*) --
   will be made by default and ignore pad tokens. It is not recommended to set this for most use cases.
@@ -1843,10 +1843,10 @@ Finally, this model supports inherent JAX features such as:
   [What are decoder input IDs?](../glossary#decoder-input-ids)
 
   For translation and summarization training, `decoder_input_ids` should be provided. If no
-  `decoder_input_ids` is provided, the model will automatically create this tensor by shifting:
+  `decoder_input_ids` are provided, the model will automatically create this tensor by shifting:
 
-  - the `labels` to the right for text generation if `labels` is provided,
-  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` is provided.
+  - the `labels` to the right for text generation if `labels` are provided,
+  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` are provided.
 
 - **decoder_attention_mask** (`jnp.ndarray` of shape `(batch_size, target_sequence_length)`, *optional*) --
   Default behavior: generate a tensor that ignores pad tokens in `decoder_input_ids`. Causal mask will also
@@ -2163,10 +2163,10 @@ Finally, this model supports inherent JAX features such as:
   [What are decoder input IDs?](../glossary#decoder-input-ids)
 
   For translation and summarization training, `decoder_input_ids` should be provided. If no
-  `decoder_input_ids` is provided, the model will automatically create this tensor by shifting:
+  `decoder_input_ids` are provided, the model will automatically create this tensor by shifting:
 
-  - the `labels` to the right for text generation if `labels` is provided,
-  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` is provided.
+  - the `labels` to the right for text generation if `labels` are provided,
+  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` are provided.
 
 - **decoder_attention_mask** (`jnp.ndarray` of shape `(batch_size, target_sequence_length)`, *optional*) --
   Default behavior: generate a tensor that ignores pad tokens in `decoder_input_ids`. Causal mask will also
@@ -2500,10 +2500,10 @@ Finally, this model supports inherent JAX features such as:
   [What are decoder input IDs?](../glossary#decoder-input-ids)
 
   For translation and summarization training, `decoder_input_ids` should be provided. If no
-  `decoder_input_ids` is provided, the model will automatically create this tensor by shifting:
+  `decoder_input_ids` are provided, the model will automatically create this tensor by shifting:
 
-  - the `labels` to the right for text generation if `labels` is provided,
-  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` is provided.
+  - the `labels` to the right for text generation if `labels` are provided,
+  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` are provided.
 
 - **decoder_attention_mask** (`jnp.ndarray` of shape `(batch_size, target_sequence_length)`, *optional*) --
   Default behavior: generate a tensor that ignores pad tokens in `decoder_input_ids`. Causal mask will also
@@ -2820,10 +2820,10 @@ Finally, this model supports inherent JAX features such as:
   [What are decoder input IDs?](../glossary#decoder-input-ids)
 
   For translation and summarization training, `decoder_input_ids` should be provided. If no
-  `decoder_input_ids` is provided, the model will automatically create this tensor by shifting:
+  `decoder_input_ids` are provided, the model will automatically create this tensor by shifting:
 
-  - the `labels` to the right for text generation if `labels` is provided,
-  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` is provided.
+  - the `labels` to the right for text generation if `labels` are provided,
+  - the `input_ids` to the right for denoising pre-training following the paper if no `labels` are provided.
 
 - **decoder_attention_mask** (`jnp.ndarray` of shape `(batch_size, target_sequence_length)`, *optional*) --
   Default behavior: generate a tensor that ignores pad tokens in `decoder_input_ids`. Causal mask will also
