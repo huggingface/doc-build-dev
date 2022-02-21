@@ -385,7 +385,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.FlaxSpeechEncoderDecoderModel</name><anchor>transformers.FlaxSpeechEncoderDecoderModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15613/src/transformers/models/speech_encoder_decoder/modeling_flax_speech_encoder_decoder.py#L326</source><parameters>[{"name": "config", "val": ": SpeechEncoderDecoderConfig"}, {"name": "input_shape", "val": ": typing.Optional[typing.Tuple] = None"}, {"name": "seed", "val": ": int = 0"}, {"name": "dtype", "val": ": dtype = <class 'jax._src.numpy.lax_numpy.float32'>"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([SpeechEncoderDecoderConfig](/docs/transformers/pr_15613/en/model_doc/speech-encoder-decoder#transformers.SpeechEncoderDecoderConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.FlaxSpeechEncoderDecoderModel</name><anchor>transformers.FlaxSpeechEncoderDecoderModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15613/src/transformers/models/speech_encoder_decoder/modeling_flax_speech_encoder_decoder.py#L325</source><parameters>[{"name": "config", "val": ": SpeechEncoderDecoderConfig"}, {"name": "input_shape", "val": ": typing.Optional[typing.Tuple] = None"}, {"name": "seed", "val": ": int = 0"}, {"name": "dtype", "val": ": dtype = <class 'jax._src.numpy.lax_numpy.float32'>"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([SpeechEncoderDecoderConfig](/docs/transformers/pr_15613/en/model_doc/speech-encoder-decoder#transformers.SpeechEncoderDecoderConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15613/en/main_classes/model#transformers.FlaxPreTrainedModel.from_pretrained) method to load the model weights.
 - **dtype** (`jax.numpy.dtype`, *optional*, defaults to `jax.numpy.float32`) --
@@ -429,15 +429,15 @@ regular Flax Module and refer to the Flax documentation for all matter related t
 
 
 
-[FlaxSpeechEncoderDecoderModel](/docs/transformers/pr_15613/en/model_doc/speech-encoder-decoder#transformers.FlaxSpeechEncoderDecoderModel) is a generic model class that will be instantiated as a transformer architecture with
-the module (flax.nn.Module) of one of the base model classes of the library as encoder module and another one as
-decoder module when created with the :meth*~transformers.FlaxAutoModel.from_pretrained* class method for the
+[FlaxSpeechEncoderDecoderModel](/docs/transformers/pr_15613/en/model_doc/speech-encoder-decoder#transformers.FlaxSpeechEncoderDecoderModel) is a generic model class that will be instantiated as a transformer architecture
+with the module (flax.nn.Module) of one of the base model classes of the library as encoder module and another one
+as decoder module when created with the :meth*~transformers.FlaxAutoModel.from_pretrained* class method for the
 encoder and :meth*~transformers.FlaxAutoModelForCausalLM.from_pretrained* class method for the decoder.
 
 
 
 <div class="docstring">
-<docstring><name>\_\_call\_\_</name><anchor>transformers.FlaxSpeechEncoderDecoderModel.__call__</anchor><source>https://github.com/huggingface/transformers/blob/pr_15613/src/transformers/models/speech_encoder_decoder/modeling_flax_speech_encoder_decoder.py#L631</source><parameters>[{"name": "inputs", "val": ": ndarray"}, {"name": "attention_mask", "val": ": typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None"}, {"name": "decoder_input_ids", "val": ": typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None"}, {"name": "decoder_attention_mask", "val": ": typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None"}, {"name": "decoder_position_ids", "val": ": typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict", "val": ": typing.Optional[bool] = None"}, {"name": "train", "val": ": bool = False"}, {"name": "params", "val": ": dict = None"}, {"name": "dropout_rng", "val": ": PRNGKey = None"}]</parameters><paramsdesc>- **inputs** (`jnp.ndarray` of shape `(batch_size, sequence_length)` or `(batch_size, sequence_length, feature_dim)`, *optional*) --
+<docstring><name>\_\_call\_\_</name><anchor>transformers.FlaxSpeechEncoderDecoderModel.__call__</anchor><source>https://github.com/huggingface/transformers/blob/pr_15613/src/transformers/models/speech_encoder_decoder/modeling_flax_speech_encoder_decoder.py#L634</source><parameters>[{"name": "inputs", "val": ": ndarray"}, {"name": "attention_mask", "val": ": typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None"}, {"name": "decoder_input_ids", "val": ": typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None"}, {"name": "decoder_attention_mask", "val": ": typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None"}, {"name": "decoder_position_ids", "val": ": typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict", "val": ": typing.Optional[bool] = None"}, {"name": "train", "val": ": bool = False"}, {"name": "params", "val": ": dict = None"}, {"name": "dropout_rng", "val": ": PRNGKey = None"}]</parameters><paramsdesc>- **inputs** (`jnp.ndarray` of shape `(batch_size, sequence_length)` or `(batch_size, sequence_length, feature_dim)`, *optional*) --
   Float values of input raw speech waveform or speech features. Values can be obtained by loading a *.flac*
   or *.wav* audio file into an array of type *List[float]* or a *numpy.ndarray*, *e.g.* via the soundfile
   library (*pip install soundfile*). To prepare the array into *inputs*, either the [Wav2Vec2Processor](/docs/transformers/pr_15613/en/model_doc/wav2vec2#transformers.Wav2Vec2Processor) or
@@ -548,7 +548,7 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>from\_encoder\_decoder\_pretrained</name><anchor>transformers.FlaxSpeechEncoderDecoderModel.from_encoder_decoder_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15613/src/transformers/models/speech_encoder_decoder/modeling_flax_speech_encoder_decoder.py#L746</source><parameters>[{"name": "encoder_pretrained_model_name_or_path", "val": ": typing.Union[str, os.PathLike, NoneType] = None"}, {"name": "decoder_pretrained_model_name_or_path", "val": ": typing.Union[str, os.PathLike, NoneType] = None"}, {"name": "*model_args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **encoder_pretrained_model_name_or_path** (`Union[str, os.PathLike]`, *optional*) --
+<docstring><name>from\_encoder\_decoder\_pretrained</name><anchor>transformers.FlaxSpeechEncoderDecoderModel.from_encoder_decoder_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15613/src/transformers/models/speech_encoder_decoder/modeling_flax_speech_encoder_decoder.py#L749</source><parameters>[{"name": "encoder_pretrained_model_name_or_path", "val": ": typing.Union[str, os.PathLike, NoneType] = None"}, {"name": "decoder_pretrained_model_name_or_path", "val": ": typing.Union[str, os.PathLike, NoneType] = None"}, {"name": "*model_args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **encoder_pretrained_model_name_or_path** (`Union[str, os.PathLike]`, *optional*) --
   Information necessary to initiate the encoder. Can be either:
 
   - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
@@ -590,7 +590,9 @@ Example:
 >>> from transformers import FlaxSpeechEncoderDecoderModel
 
 >>> # initialize a wav2vec2-2-bart from pretrained wav2vec2 and bart models. Note that the cross-attention layers will be randomly initialized
->>> model = FlaxSpeechEncoderDecoderModel.from_encoder_decoder_pretrained("facebook/wav2vec2-large-lv60", "facebook/bart-large")
+>>> model = FlaxSpeechEncoderDecoderModel.from_encoder_decoder_pretrained(
+...     "facebook/wav2vec2-large-lv60", "facebook/bart-large"
+... )
 >>> # saving model after fine-tuning
 >>> model.save_pretrained("./wav2vec2-2-bart-large")
 >>> # load fine-tuned model
