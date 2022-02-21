@@ -412,10 +412,141 @@ sequences.
 
 
 </div>
-<div class="docstring"></div></div>
+<div class="docstring"></div>
+<div class="docstring">
+<docstring><name>decode</name><anchor>transformers.Wav2Vec2CTCTokenizer.decode</anchor><source>https://github.com/huggingface/transformers/blob/pr_15687/src/transformers/models/wav2vec2/tokenization_wav2vec2.py#L480</source><parameters>[{"name": "token_ids", "val": ": typing.Union[int, typing.List[int], ForwardRef('np.ndarray'), ForwardRef('torch.Tensor'), ForwardRef('tf.Tensor')]"}, {"name": "skip_special_tokens", "val": ": bool = False"}, {"name": "clean_up_tokenization_spaces", "val": ": bool = True"}, {"name": "output_char_offsets", "val": ": bool = False"}, {"name": "output_word_offsets", "val": ": bool = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **token_ids** (`Union[int, List[int], np.ndarray, torch.Tensor, tf.Tensor]`) --
+  List of tokenized input ids. Can be obtained using the `__call__` method.
+- **skip_special_tokens** (`bool`, *optional*, defaults to `False`) --
+  Whether or not to remove special tokens in the decoding.
+- **clean_up_tokenization_spaces** (`bool`, *optional*, defaults to `True`) --
+  Whether or not to clean up the tokenization spaces.
+- **output_char_offsets** (`bool`, *optional*, defaults to `False`) --
+  Whether or not to output character offsets. Character offsets can be used in combination with the
+  sampling rate and model downsampling rate to compute the time-stamps of transcribed characters.
 
-		- decode
-		- batch_decode
+  <Tip>
+
+  Please take a look at the Example of `decode` to better
+  understand how to make use of `output_word_offsets`.
+
+  </Tip>
+
+- **output_word_offsets** (`bool`, *optional*, defaults to `False`) --
+  Whether or not to output word offsets. Word offsets can be used in combination with the sampling rate
+  and model downsampling rate to compute the time-stamps of transcribed words.
+
+  <Tip>
+
+  Please take a look at the Example of `decode` to better
+  understand how to make use of `output_word_offsets`.
+
+  </Tip>
+
+- **kwargs** (additional keyword arguments, *optional*) --
+  Will be passed to the underlying model specific decode method.</paramsdesc><paramgroups>0</paramgroups><rettype>`str`</rettype><retdesc>The decoded sentence or `Wav2Vec2CTCTokenizerOutput`if
+`output_char_offsets == True` or `output_word_offsets == True`.</retdesc></docstring>
+
+Converts a sequence of ids in a string, using the tokenizer and vocabulary with options to remove special
+tokens and clean up tokenization spaces.
+
+Similar to doing `self.convert_tokens_to_string(self.convert_ids_to_tokens(token_ids))`.
+
+
+
+
+
+
+
+Example:
+
+```python
+>>> # Let's see how to retrieve time steps for a model
+>>> from transformers import AutoTokenizer, AutoFeatureExtractor, AutoModelForCTC
+>>> from datasets import load_dataset
+>>> import datasets
+>>> import torch
+
+>>> # import model, feature extractor, tokenizer
+>>> model = AutoModelForCTC.from_pretrained("facebook/wav2vec2-base-960h")
+>>> tokenizer = AutoTokenizer.from_pretrained("facebook/wav2vec2-base-960h")
+>>> feature_extractor = AutoFeatureExtractor.from_pretrained("facebook/wav2vec2-base-960h")
+
+>>> # load first sample of English common_voice
+>>> dataset = load_dataset("common_voice", "en", split="train", streaming=True)
+>>> dataset = dataset.cast_column("audio", datasets.Audio(sampling_rate=16_000))
+>>> dataset_iter = iter(dataset)
+>>> sample = next(dataset_iter)
+
+>>> # forward sample through model to get greedily predicted transcription ids
+>>> input_values = feature_extractor(sample["audio"]["array"], return_tensors="pt").input_values
+>>> logits = model(input_values).logits
+>>> pred_ids = torch.argmax(logits, axis=-1)
+
+>>> # retrieve word stamps (analogous commands for `output_char_offsets`)
+>>> outputs = tokenizer.batch_decode(pred_ids, output_word_offsets=True)
+>>> # compute `time_offset` in seconds as product of downsampling ratio and sampling_rate
+>>> time_offset = model.config.inputs_to_logits_ratio / feature_extractor.sampling_rate
+
+>>> word_offsets = [
+...     &amp;lcub;
+...         "word": d["word"],
+...         "start_time": d["start_offset"] * time_offset,
+...         "end_time": d["end_offset"] * time_offset,
+...     }
+...     for d in outputs.word_offsets
+... ]
+>>> # compare word offsets with audio `common_voice_en_100038.mp3` online on the dataset viewer:
+>>> # https://huggingface.co/datasets/common_voice/viewer/en/train
+>>> word_offset
+```
+
+</div>
+<div class="docstring">
+<docstring><name>batch\_decode</name><anchor>transformers.Wav2Vec2CTCTokenizer.batch_decode</anchor><source>https://github.com/huggingface/transformers/blob/pr_15687/src/transformers/models/wav2vec2/tokenization_wav2vec2.py#L410</source><parameters>[{"name": "sequences", "val": ": typing.Union[typing.List[int], typing.List[typing.List[int]], ForwardRef('np.ndarray'), ForwardRef('torch.Tensor'), ForwardRef('tf.Tensor')]"}, {"name": "skip_special_tokens", "val": ": bool = False"}, {"name": "clean_up_tokenization_spaces", "val": ": bool = True"}, {"name": "output_char_offsets", "val": ": bool = False"}, {"name": "output_word_offsets", "val": ": bool = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **sequences** (`Union[List[int], List[List[int]], np.ndarray, torch.Tensor, tf.Tensor]`) --
+  List of tokenized input ids. Can be obtained using the `__call__` method.
+- **skip_special_tokens** (`bool`, *optional*, defaults to `False`) --
+  Whether or not to remove special tokens in the decoding.
+- **clean_up_tokenization_spaces** (`bool`, *optional*, defaults to `True`) --
+  Whether or not to clean up the tokenization spaces.
+- **output_char_offsets** (`bool`, *optional*, defaults to `False`) --
+  Whether or not to output character offsets. Character offsets can be used in combination with the
+  sampling rate and model downsampling rate to compute the time-stamps of transcribed characters.
+
+  <Tip>
+
+  Please take a look at the Example of `decode` to better
+  understand how to make use of `output_word_offsets`.
+  `batch_decode` works analogous with batched output.
+
+  </Tip>
+
+- **output_word_offsets** (`bool`, *optional*, defaults to `False`) --
+  Whether or not to output word offsets. Word offsets can be used in combination with the sampling rate
+  and model downsampling rate to compute the time-stamps of transcribed words.
+
+  <Tip>
+
+  Please take a look at the Example of `decode` to better
+  understand how to make use of `output_word_offsets`.
+  `batch_decode` works analogous with batched output.
+
+  </Tip>
+
+- **kwargs** (additional keyword arguments, *optional*) --
+  Will be passed to the underlying model specific decode method.</paramsdesc><paramgroups>0</paramgroups><rettype>`List[str]`</rettype><retdesc>The list of decoded sentences or
+`Wav2Vec2CTCTokenizerOutput`if `output_char_offsets == True` or
+`output_word_offsets == True`.</retdesc></docstring>
+
+Convert a list of lists of token ids into a list of strings by calling decode.
+
+
+
+
+
+
+
+
+</div></div>
 
 <h2 id="transformers.Wav2Vec2FeatureExtractor">Wav2Vec2FeatureExtractor</h2>
 
