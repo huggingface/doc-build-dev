@@ -43,7 +43,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -110,7 +110,7 @@ usage examples.
 <div class="docstring">
 
 <docstring><name>class transformers.XLMRobertaTokenizer</name><anchor>transformers.XLMRobertaTokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/xlm_roberta/tokenization_xlm_roberta.py#L55</source><parameters>[{"name": "vocab_file", "val": ""}, {"name": "bos_token", "val": " = '<s>'"}, {"name": "eos_token", "val": " = '</s>'"}, {"name": "sep_token", "val": " = '</s>'"}, {"name": "cls_token", "val": " = '<s>'"}, {"name": "unk_token", "val": " = '<unk>'"}, {"name": "pad_token", "val": " = '<pad>'"}, {"name": "mask_token", "val": " = '<mask>'"}, {"name": "sp_model_kwargs", "val": ": typing.Union[typing.Dict[str, typing.Any], NoneType] = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **vocab_file** (`str`) --
-  Path to the vocabulary file.
+Path to the vocabulary file.
 - **bos_token** (`str`, *optional*, defaults to `"<s>"`) --
   The beginning of sequence token that was used during pretraining. Can be used a sequence classifier token.
 
@@ -162,7 +162,9 @@ usage examples.
       using forward-filtering-and-backward-sampling algorithm.
 
   - `alpha`: Smoothing parameter for unigram sampling, and dropout probability of merge operations for
-    BPE-dropout.</paramsdesc><paramgroups>0</paramgroups></docstring>
+    BPE-dropout.
+- **sp_model** (`SentencePieceProcessor`) --
+  The *SentencePiece* processor that is used for every conversion (string, tokens and IDs).</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Adapted from [RobertaTokenizer](/docs/transformers/pr_15293/en/model_doc/roberta#transformers.RobertaTokenizer) and [XLNetTokenizer](/docs/transformers/pr_15293/en/model_doc/xlnet#transformers.XLNetTokenizer). Based on
 [SentencePiece](https://github.com/google/sentencepiece).
@@ -172,9 +174,9 @@ this superclass for more information regarding those methods.
 
 
 
-Attributes:
-sp_model (`SentencePieceProcessor`):
-The *SentencePiece* processor that is used for every conversion (string, tokens and IDs).
+
+
+
 
 
 
@@ -1195,7 +1197,7 @@ alongside usage examples.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.RobertaForQuestionAnswering.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/roberta/modeling_roberta.py#L1483</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "start_positions", "val": " = None"}, {"name": "end_positions", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.RobertaForQuestionAnswering.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/roberta/modeling_roberta.py#L1474</source><parameters>[{"name": "input_ids", "val": " = None"}, {"name": "attention_mask", "val": " = None"}, {"name": "token_type_ids", "val": " = None"}, {"name": "position_ids", "val": " = None"}, {"name": "head_mask", "val": " = None"}, {"name": "inputs_embeds", "val": " = None"}, {"name": "start_positions", "val": " = None"}, {"name": "end_positions", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor` of shape `(batch_size, sequence_length)`) --
   Indices of input sequence tokens in the vocabulary.
 
   Indices can be obtained using [RobertaTokenizer](/docs/transformers/pr_15293/en/model_doc/roberta#transformers.RobertaTokenizer). See [PreTrainedTokenizer.encode()](/docs/transformers/pr_15293/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode) and

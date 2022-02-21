@@ -19,7 +19,7 @@ import Youtube from "./Youtube.svelte";
 import Docstring from "./Docstring.svelte";
 import CodeBlock from "./CodeBlock.svelte";
 import CodeBlockFw from "./CodeBlockFw.svelte";
-import ColabDropdown from "./ColabDropdown.svelte";
+import DocNotebookDropdown from "./DocNotebookDropdown.svelte";
 import IconCopyLink from "./IconCopyLink.svelte";
 export let fw: "pt" | "tf"
 </script>
@@ -128,7 +128,7 @@ Serializes this instance to a Python dictionary. Override the default [to_dict()
 
 <div class="docstring">
 
-<docstring><name>class transformers.VisionTextDualEncoderProcessor</name><anchor>transformers.VisionTextDualEncoderProcessor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/vision_text_dual_encoder/processing_vision_text_dual_encoder.py#L28</source><parameters>[{"name": "feature_extractor", "val": ": FeatureExtractionMixin"}, {"name": "tokenizer", "val": ": typing.Union[transformers.tokenization_utils.PreTrainedTokenizer, transformers.tokenization_utils_fast.PreTrainedTokenizerFast]"}]</parameters><paramsdesc>- **feature_extractor** ([AutoFeatureExtractor](/docs/transformers/pr_15293/en/model_doc/auto#transformers.AutoFeatureExtractor)) --
+<docstring><name>class transformers.VisionTextDualEncoderProcessor</name><anchor>transformers.VisionTextDualEncoderProcessor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/vision_text_dual_encoder/processing_vision_text_dual_encoder.py#L23</source><parameters>[{"name": "feature_extractor", "val": ""}, {"name": "tokenizer", "val": ""}]</parameters><paramsdesc>- **feature_extractor** ([AutoFeatureExtractor](/docs/transformers/pr_15293/en/model_doc/auto#transformers.AutoFeatureExtractor)) --
   The feature extractor is a required input.
 - **tokenizer** ([PreTrainedTokenizer](/docs/transformers/pr_15293/en/main_classes/tokenizer#transformers.PreTrainedTokenizer)) --
   The tokenizer is a required input.</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -137,7 +137,7 @@ Constructs a VisionTextDualEncoder processor which wraps a vision feature extrac
 processor.
 
 [VisionTextDualEncoderProcessor](/docs/transformers/pr_15293/en/model_doc/vision-text-dual-encoder#transformers.VisionTextDualEncoderProcessor) offers all the functionalities of [AutoFeatureExtractor](/docs/transformers/pr_15293/en/model_doc/auto#transformers.AutoFeatureExtractor) and
-[AutoTokenizer](/docs/transformers/pr_15293/en/model_doc/auto#transformers.AutoTokenizer). See the `__call__()` and
+[AutoTokenizer](/docs/transformers/pr_15293/en/model_doc/auto#transformers.AutoTokenizer). See the `__call__()`and
 [decode()](/docs/transformers/pr_15293/en/model_doc/vision-text-dual-encoder#transformers.VisionTextDualEncoderProcessor.decode) for more information.
 
 
@@ -145,7 +145,7 @@ processor.
 
 
 <div class="docstring">
-<docstring><name>batch\_decode</name><anchor>transformers.VisionTextDualEncoderProcessor.batch_decode</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/vision_text_dual_encoder/processing_vision_text_dual_encoder.py#L172</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>batch\_decode</name><anchor>transformers.VisionTextDualEncoderProcessor.batch_decode</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/vision_text_dual_encoder/processing_vision_text_dual_encoder.py#L98</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This method forwards all its arguments to VisionTextDualEncoderTokenizer's
 [batch_decode()](/docs/transformers/pr_15293/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.batch_decode). Please refer to the docstring of this method for more information.
@@ -153,61 +153,10 @@ This method forwards all its arguments to VisionTextDualEncoderTokenizer's
 
 </div>
 <div class="docstring">
-<docstring><name>decode</name><anchor>transformers.VisionTextDualEncoderProcessor.decode</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/vision_text_dual_encoder/processing_vision_text_dual_encoder.py#L179</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>decode</name><anchor>transformers.VisionTextDualEncoderProcessor.decode</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/vision_text_dual_encoder/processing_vision_text_dual_encoder.py#L105</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This method forwards all its arguments to VisionTextDualEncoderTokenizer's [decode()](/docs/transformers/pr_15293/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.decode).
 Please refer to the docstring of this method for more information.
-
-
-</div>
-<div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.VisionTextDualEncoderProcessor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/vision_text_dual_encoder/processing_vision_text_dual_encoder.py#L85</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
-  This can be either:
-
-  - a string, the *model id* of a pretrained feature_extractor hosted inside a model repo on
-    huggingface.co. Valid model ids can be located at the root-level, like `bert-base-uncased`, or
-    namespaced under a user or organization name, like `dbmdz/bert-base-german-cased`.
-  - a path to a *directory* containing a feature extractor file saved using the
-    `save_pretrained` method, e.g., `./my_model_directory/`.
-  - a path or url to a saved feature extractor JSON *file*, e.g.,
-    `./my_model_directory/preprocessor_config.json`.
-
-**kwargs --
-Additional keyword arguments passed along to both `PreTrainedFeatureExtractor` and
-[PreTrainedTokenizer](/docs/transformers/pr_15293/en/main_classes/tokenizer#transformers.PreTrainedTokenizer)</paramsdesc><paramgroups>0</paramgroups></docstring>
-
-Instantiate a [VisionTextDualEncoderProcessor](/docs/transformers/pr_15293/en/model_doc/vision-text-dual-encoder#transformers.VisionTextDualEncoderProcessor) from a pretrained VisionTextDualEncoder processor.
-
-<Tip>
-
-This class method is simply calling AutoFeatureExtractor's `from_pretrained` and
-AutoTokenizer's `from_pretrained`. Please refer to the
-docstrings of the methods above for more information.
-
-</Tip>
-
-
-
-
-</div>
-<div class="docstring">
-<docstring><name>save\_pretrained</name><anchor>transformers.VisionTextDualEncoderProcessor.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15293/src/transformers/models/vision_text_dual_encoder/processing_vision_text_dual_encoder.py#L60</source><parameters>[{"name": "save_directory", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
-  Directory where the feature extractor JSON file and the tokenizer files will be saved (directory will
-  be created if it does not exist).</paramsdesc><paramgroups>0</paramgroups></docstring>
-
-Save a VisionTextDualEncoder feature extractor object and VisionTextDualEncoder tokenizer object to the
-directory `save_directory`, so that it can be re-loaded using the
-[from_pretrained()](/docs/transformers/pr_15293/en/model_doc/vision-text-dual-encoder#transformers.VisionTextDualEncoderProcessor.from_pretrained) class method.
-
-<Tip>
-
-This class method is simply calling `save_pretrained` and
-`save_pretrained`. Please refer to the docstrings of the methods
-above for more information.
-
-</Tip>
-
-
 
 
 </div></div>
@@ -222,7 +171,7 @@ above for more information.
 
 This class can be used to initialize a vision-text dual encoder model with any pretrained vision autoencoding model
 as the vision encoder and any pretrained text model as the text encoder. The vision and text encoders are loaded
-via the `from_pretrained()` method. The projection layers are automatically added to the model and
+via the `from_pretrained()`method. The projection layers are automatically added to the model and
 should be fine-tuned on a downstream task, like contrastive image-text modeling.
 
 In [LiT: Zero-Shot Transfer with Locked-image Text Tuning](https://arxiv.org/abs/2111.07991) it is shown how
@@ -278,7 +227,7 @@ and behavior.
   Whether or not to return the hidden states of all layers. See `hidden_states` under returned tensors for
   more detail.
 - **return_dict** (`bool`, *optional*) --
-  Whether or not to return a [ModelOutput](/docs/transformers/pr_15293/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.clip.modeling_clip.CLIPOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.clip.modeling_clip.CLIPOutput` or a tuple of
+  Whether or not to return a [ModelOutput](/docs/transformers/pr_15293/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.clip.modeling_clip.CLIPOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.clip.modeling_clip.CLIPOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([VisionTextDualEncoderConfig](/docs/transformers/pr_15293/en/model_doc/vision-text-dual-encoder#transformers.VisionTextDualEncoderConfig)) and inputs.
 
@@ -379,7 +328,7 @@ Examples:
 
 This class can be used to initialize a vision-text dual encoder model with any pretrained vision autoencoding model
 as the vision encoder and any pretrained text model as the text encoder. The vision and text encoders are loaded
-via the `from_pretrained()` method. The projection layers are automatically added to the model and
+via the `from_pretrained()`method. The projection layers are automatically added to the model and
 should be fine-tuned on a downstream task, like contrastive image-text modeling.
 
 In [LiT: Zero-Shot Transfer with Locked-image Text Tuning](https://arxiv.org/abs/2111.07991) it is shown how
@@ -440,7 +389,7 @@ Finally, this model supports inherent JAX features such as:
   Whether or not to return the hidden states of all layers. See `hidden_states` under returned tensors for
   more detail.
 - **return_dict** (`bool`, *optional*) --
-  Whether or not to return a [ModelOutput](/docs/transformers/pr_15293/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.clip.modeling_flax_clip.FlaxCLIPOutput` or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.clip.modeling_flax_clip.FlaxCLIPOutput` or a tuple of
+  Whether or not to return a [ModelOutput](/docs/transformers/pr_15293/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.</paramsdesc><paramgroups>0</paramgroups><rettype>`transformers.models.clip.modeling_flax_clip.FlaxCLIPOutput`or `tuple(torch.FloatTensor)`</rettype><retdesc>A `transformers.models.clip.modeling_flax_clip.FlaxCLIPOutput`or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([VisionTextDualEncoderConfig](/docs/transformers/pr_15293/en/model_doc/vision-text-dual-encoder#transformers.VisionTextDualEncoderConfig)) and inputs.
 
@@ -505,9 +454,8 @@ Examples:
 ...     input_ids=inputs.input_ids,
 ...     attention_mask=inputs.attention_mask,
 ...     pixel_values=inputs.pixel_values,
-...     return_loss=True,
 ... )
->>> loss, logits_per_image = outputs.loss, outputs.logits_per_imag  # this is the image-text similarity score
+>>> logits_per_image = outputs.logits_per_image  # this is the image-text similarity score
 
 >>> # save and load from pretrained
 >>> model.save_pretrained("vit-bert")
