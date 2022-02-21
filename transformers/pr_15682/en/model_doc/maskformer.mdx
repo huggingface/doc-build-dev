@@ -383,7 +383,7 @@ supports PyTorch.
   The overlap mask area threshold.
 - **is_thing_map** (`Dict[int, bool]`, *optional*, defaults to `None`) --
   Dictionary mapping class indices to either True or False, depending on whether or not they are a thing.
-  If not set, defaults to the `is_thing_map` of ADE20K-150 panoptic.</paramsdesc><paramgroups>0</paramgroups><rettype>`List[Dict]`</rettype><retdesc>A list of dictionaries, each dictionary containing two keys:
+  If not set, defaults to the `is_thing_map` of ADE20K-150 panoptic.</paramsdesc><paramgroups>0</paramgroups><rettype>`List[Dict]`</rettype><retdesc>A list of dictionaries, one per image, each dictionary containing two keys:
 - **segmentation** -- a tensor of shape `(height, width)` where each pixel represent a `segment_id`.
 - **segments** -- a dictionary with the following keys
   - **id** -- an integer representing the `segment_id`.
