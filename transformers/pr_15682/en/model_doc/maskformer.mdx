@@ -360,7 +360,7 @@ supports PyTorch.
 
 </div>
 <div class="docstring">
-<docstring><name>post\_process\_semantic\_segmentation</name><anchor>transformers.MaskFormerFeatureExtractor.post_process_semantic_segmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/feature_extraction_maskformer.py#L446</source><parameters>[{"name": "outputs", "val": ": MaskFormerForInstanceSegmentationOutput"}, {"name": "target_size", "val": ": typing.Tuple[int, int] = None"}]</parameters><paramsdesc>- **outputs** (`MaskFormerForInstanceSegmentationOutput`) --
+<docstring><name>post\_process\_semantic\_segmentation</name><anchor>transformers.MaskFormerFeatureExtractor.post_process_semantic_segmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/feature_extraction_maskformer.py#L444</source><parameters>[{"name": "outputs", "val": ": MaskFormerForInstanceSegmentationOutput"}, {"name": "target_size", "val": ": typing.Tuple[int, int] = None"}]</parameters><paramsdesc>- **outputs** (`MaskFormerForInstanceSegmentationOutput`) --
   The outputs from [MaskFormerForInstanceSegmentation](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.MaskFormerForInstanceSegmentation)</paramsdesc><paramgroups>0</paramgroups><rettype>`torch.Tensor`</rettype><retdesc>A tensor of shape `batch_size, height, width`</retdesc></docstring>
 
 Converts the output of `MaskFormerForInstanceSegmentationOutput` into semantic segmentation predictions. Only
@@ -375,7 +375,7 @@ supports PyTorch.
 
 </div>
 <div class="docstring">
-<docstring><name>post\_process\_panoptic\_segmentation</name><anchor>transformers.MaskFormerFeatureExtractor.post_process_panoptic_segmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/feature_extraction_maskformer.py#L464</source><parameters>[{"name": "outputs", "val": ": MaskFormerForInstanceSegmentationOutput"}, {"name": "object_mask_threshold", "val": ": typing.Optional[float] = 0.8"}, {"name": "overlap_mask_area_threshold", "val": ": typing.Optional[float] = 0.8"}, {"name": "is_thing_map", "val": ": typing.Dict[int, bool] = None"}]</parameters><paramsdesc>- **outputs** (`MaskFormerForInstanceSegmentationOutput`) --
+<docstring><name>post\_process\_panoptic\_segmentation</name><anchor>transformers.MaskFormerFeatureExtractor.post_process_panoptic_segmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/feature_extraction_maskformer.py#L462</source><parameters>[{"name": "outputs", "val": ": MaskFormerForInstanceSegmentationOutput"}, {"name": "object_mask_threshold", "val": ": float = 0.8"}, {"name": "overlap_mask_area_threshold", "val": ": float = 0.8"}, {"name": "is_thing_map", "val": ": typing.Union[typing.Dict[int, bool], NoneType] = None"}]</parameters><paramsdesc>- **outputs** (`MaskFormerForInstanceSegmentationOutput`) --
   The outputs from [MaskFormerForInstanceSegmentation](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.MaskFormerForInstanceSegmentation)
 - **object_mask_threshold** (`float`, *optional*, defaults to `0.8`) --
   The object mask threshold.
