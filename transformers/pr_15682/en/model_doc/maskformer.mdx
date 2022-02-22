@@ -346,7 +346,7 @@ Pad images up to the largest image in a batch and create a corresponding `pixel_
 </div>
 <div class="docstring">
 <docstring><name>post\_process\_segmentation</name><anchor>transformers.MaskFormerFeatureExtractor.post_process_segmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/feature_extraction_maskformer.py#L376</source><parameters>[{"name": "outputs", "val": ": MaskFormerForInstanceSegmentationOutput"}, {"name": "target_size", "val": ": typing.Tuple[int, int] = None"}]</parameters><paramsdesc>- **outputs** (`MaskFormerForInstanceSegmentationOutput`) --
-  The outputs from [MaskFormerForInstanceSegmentation](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.MaskFormerForInstanceSegmentation)</paramsdesc><paramgroups>0</paramgroups><rettype>`torch.Tensor`</rettype><retdesc>A tensor of shape `batch_size, num_labels, height, width`</retdesc></docstring>
+  The outputs from [MaskFormerForInstanceSegmentation](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.MaskFormerForInstanceSegmentation)</paramsdesc><paramgroups>0</paramgroups><rettype>`torch.Tensor`</rettype><retdesc>A tensor of shape (`batch_size, num_labels, height, width`)</retdesc></docstring>
 
 Converts the output of `MaskFormerForInstanceSegmentationOutput` into image segmentation predictions. Only
 supports PyTorch.
@@ -361,7 +361,7 @@ supports PyTorch.
 </div>
 <div class="docstring">
 <docstring><name>post\_process\_semantic\_segmentation</name><anchor>transformers.MaskFormerFeatureExtractor.post_process_semantic_segmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15682/src/transformers/models/maskformer/feature_extraction_maskformer.py#L444</source><parameters>[{"name": "outputs", "val": ": MaskFormerForInstanceSegmentationOutput"}, {"name": "target_size", "val": ": typing.Tuple[int, int] = None"}]</parameters><paramsdesc>- **outputs** (`MaskFormerForInstanceSegmentationOutput`) --
-  The outputs from [MaskFormerForInstanceSegmentation](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.MaskFormerForInstanceSegmentation)</paramsdesc><paramgroups>0</paramgroups><rettype>`torch.Tensor`</rettype><retdesc>A tensor of shape `batch_size, height, width`</retdesc></docstring>
+  The outputs from [MaskFormerForInstanceSegmentation](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.MaskFormerForInstanceSegmentation).</paramsdesc><paramgroups>0</paramgroups><rettype>`torch.Tensor`</rettype><retdesc>A tensor of shape `batch_size, height, width`.</retdesc></docstring>
 
 Converts the output of `MaskFormerForInstanceSegmentationOutput` into semantic segmentation predictions. Only
 supports PyTorch.
@@ -535,11 +535,10 @@ Example:
 - **return_dict** (`bool`, *optional*) --
   Whether or not to return a `~MaskFormerModelOutput` instead of a plain tuple.
 
-- **labels** (`List[Dict]` of len `(batch_size,)`, *optional*) --
-  Labels for computing the classification and binary mask loss. List of dicts, each dictionary containing at
-  least the following 2 keys: 'class_labels' and 'mask_labels' (the class labels and masks labels of an image
-  in the batch respectively). The class labels themselves should be a `torch.LongTensor` of shape
-  (`num_classes) and the mask_labels a `torch.FloatTensor` of shape `(num_classes, height, width)`.</paramsdesc><paramgroups>0</paramgroups><rettype>[transformers.models.maskformer.modeling_maskformer.MaskFormerForInstanceSegmentationOutput](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.models.maskformer.modeling_maskformer.MaskFormerForInstanceSegmentationOutput) or `tuple(torch.FloatTensor)`</rettype><retdesc>A [transformers.models.maskformer.modeling_maskformer.MaskFormerForInstanceSegmentationOutput](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.models.maskformer.modeling_maskformer.MaskFormerForInstanceSegmentationOutput) or a tuple of
+- **mask_labels** (`torch.FloatTensor`, *optional*, defaults to `None`) --
+  A tensor of shape `(num_classes, height, width)`.
+- **class_labels** (`torch.LongTensor`, *optional*, defaults to `None`) --:
+  A tensor of shape (`num_classes).</paramsdesc><paramgroups>0</paramgroups><rettype>[transformers.models.maskformer.modeling_maskformer.MaskFormerForInstanceSegmentationOutput](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.models.maskformer.modeling_maskformer.MaskFormerForInstanceSegmentationOutput) or `tuple(torch.FloatTensor)`</rettype><retdesc>A [transformers.models.maskformer.modeling_maskformer.MaskFormerForInstanceSegmentationOutput](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.models.maskformer.modeling_maskformer.MaskFormerForInstanceSegmentationOutput) or a tuple of
 `torch.FloatTensor` (if `return_dict=False` is passed or when `config.return_dict=False`) comprising various
 elements depending on the configuration ([MaskFormerConfig](/docs/transformers/pr_15682/en/model_doc/maskformer#transformers.MaskFormerConfig)) and inputs.
 
