@@ -1,14 +1,13 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;xlm&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.XLMConfig&quot;,&quot;title&quot;:&quot;XLMConfig&quot;},{&quot;local&quot;:&quot;transformers.XLMTokenizer&quot;,&quot;title&quot;:&quot;XLMTokenizer&quot;},{&quot;local&quot;:&quot;transformers.models.xlm.modeling_xlm.XLMForQuestionAnsweringOutput&quot;,&quot;title&quot;:&quot;XLM specific outputs&quot;},{&quot;local&quot;:&quot;transformers.XLMModel&quot;,&quot;title&quot;:&quot;XLMModel&quot;},{&quot;local&quot;:&quot;transformers.XLMWithLMHeadModel&quot;,&quot;title&quot;:&quot;XLMWithLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.XLMForSequenceClassification&quot;,&quot;title&quot;:&quot;XLMForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.XLMForMultipleChoice&quot;,&quot;title&quot;:&quot;XLMForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.XLMForTokenClassification&quot;,&quot;title&quot;:&quot;XLMForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.XLMForQuestionAnsweringSimple&quot;,&quot;title&quot;:&quot;XLMForQuestionAnsweringSimple&quot;},{&quot;local&quot;:&quot;transformers.XLMForQuestionAnswering&quot;,&quot;title&quot;:&quot;XLMForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFXLMModel&quot;,&quot;title&quot;:&quot;TFXLMModel&quot;},{&quot;local&quot;:&quot;transformers.TFXLMWithLMHeadModel&quot;,&quot;title&quot;:&quot;TFXLMWithLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForSequenceClassification&quot;,&quot;title&quot;:&quot;TFXLMForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForMultipleChoice&quot;,&quot;title&quot;:&quot;TFXLMForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForTokenClassification&quot;,&quot;title&quot;:&quot;TFXLMForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForQuestionAnsweringSimple&quot;,&quot;title&quot;:&quot;TFXLMForQuestionAnsweringSimple&quot;}],&quot;title&quot;:&quot;XLM&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/start-c12de525.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/vendor-4833417e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/pages/__layout.svelte-c081948d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/pages/model_doc/xlm.mdx-4964ee8a.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/Tip-fffd6df1.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/Docstring-6a25bf3b.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/IconCopyLink-4b81c553.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CodeBlock-90ffda97.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CopyButton-04a16537.js"> 
+<meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;xlm&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.XLMConfig&quot;,&quot;title&quot;:&quot;XLMConfig&quot;},{&quot;local&quot;:&quot;transformers.XLMTokenizer&quot;,&quot;title&quot;:&quot;XLMTokenizer&quot;},{&quot;local&quot;:&quot;transformers.models.xlm.modeling_xlm.XLMForQuestionAnsweringOutput&quot;,&quot;title&quot;:&quot;XLM specific outputs&quot;},{&quot;local&quot;:&quot;transformers.XLMModel&quot;,&quot;title&quot;:&quot;XLMModel&quot;},{&quot;local&quot;:&quot;transformers.XLMWithLMHeadModel&quot;,&quot;title&quot;:&quot;XLMWithLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.XLMForSequenceClassification&quot;,&quot;title&quot;:&quot;XLMForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.XLMForMultipleChoice&quot;,&quot;title&quot;:&quot;XLMForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.XLMForTokenClassification&quot;,&quot;title&quot;:&quot;XLMForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.XLMForQuestionAnsweringSimple&quot;,&quot;title&quot;:&quot;XLMForQuestionAnsweringSimple&quot;},{&quot;local&quot;:&quot;transformers.XLMForQuestionAnswering&quot;,&quot;title&quot;:&quot;XLMForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFXLMModel&quot;,&quot;title&quot;:&quot;TFXLMModel&quot;},{&quot;local&quot;:&quot;transformers.TFXLMWithLMHeadModel&quot;,&quot;title&quot;:&quot;TFXLMWithLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForSequenceClassification&quot;,&quot;title&quot;:&quot;TFXLMForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForMultipleChoice&quot;,&quot;title&quot;:&quot;TFXLMForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForTokenClassification&quot;,&quot;title&quot;:&quot;TFXLMForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForQuestionAnsweringSimple&quot;,&quot;title&quot;:&quot;TFXLMForQuestionAnsweringSimple&quot;}],&quot;title&quot;:&quot;XLM&quot;}" data-svelte="svelte-1phssyn">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/start-2ddac5e4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/vendor-9e2b328e.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/layout.svelte-5b9dda7d.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/pages/model_doc/xlm.mdx-51dfeeb4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/Tip-76f97a76.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/Docstring-50fd6873.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/IconCopyLink-fd0e58fd.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CodeBlock-88e23343.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CopyButton-4ae140ab.js"> 
 
 
 
@@ -3478,7 +3477,7 @@ the latter silently ignores them.</p></div>
 
 
 		<script type="module" data-hydrate="kpnkf9">
-		import { start } from "/docs/transformers/pr_15678/en/_app/start-c12de525.js";
+		import { start } from "/docs/transformers/pr_15678/en/_app/start-2ddac5e4.js";
 		start({
 			target: document.querySelector('[data-hydrate="kpnkf9"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15678/en","assets":"/docs/transformers/pr_15678/en"},
@@ -3490,8 +3489,8 @@ the latter silently ignores them.</p></div>
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_15678/en/_app/pages/__layout.svelte-c081948d.js"),
-						import("/docs/transformers/pr_15678/en/_app/pages/model_doc/xlm.mdx-4964ee8a.js")
+					import("/docs/transformers/pr_15678/en/_app/layout.svelte-5b9dda7d.js"),
+						import("/docs/transformers/pr_15678/en/_app/pages/model_doc/xlm.mdx-51dfeeb4.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15678/en/model_doc/xlm"),
 				params: {}

@@ -1,14 +1,13 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;bart&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;examples&quot;,&quot;title&quot;:&quot;Examples&quot;}],&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;implementation-notes&quot;,&quot;title&quot;:&quot;Implementation Notes&quot;},{&quot;local&quot;:&quot;mask-filling&quot;,&quot;title&quot;:&quot;Mask Filling&quot;},{&quot;local&quot;:&quot;transformers.BartConfig&quot;,&quot;title&quot;:&quot;BartConfig&quot;},{&quot;local&quot;:&quot;transformers.BartTokenizer&quot;,&quot;title&quot;:&quot;BartTokenizer&quot;},{&quot;local&quot;:&quot;transformers.BartTokenizerFast&quot;,&quot;title&quot;:&quot;BartTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.BartModel&quot;,&quot;title&quot;:&quot;BartModel&quot;},{&quot;local&quot;:&quot;transformers.BartForConditionalGeneration&quot;,&quot;title&quot;:&quot;BartForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.BartForSequenceClassification&quot;,&quot;title&quot;:&quot;BartForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.BartForQuestionAnswering&quot;,&quot;title&quot;:&quot;BartForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.BartForCausalLM&quot;,&quot;title&quot;:&quot;BartForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.TFBartModel&quot;,&quot;title&quot;:&quot;TFBartModel&quot;},{&quot;local&quot;:&quot;transformers.TFBartForConditionalGeneration&quot;,&quot;title&quot;:&quot;TFBartForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.FlaxBartModel&quot;,&quot;title&quot;:&quot;FlaxBartModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxBartForConditionalGeneration&quot;,&quot;title&quot;:&quot;FlaxBartForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.FlaxBartForSequenceClassification&quot;,&quot;title&quot;:&quot;FlaxBartForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.FlaxBartForQuestionAnswering&quot;,&quot;title&quot;:&quot;FlaxBartForQuestionAnswering&quot;}],&quot;title&quot;:&quot;BART&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/start-c12de525.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/vendor-4833417e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/pages/__layout.svelte-c081948d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/pages/model_doc/bart.mdx-7cd04274.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/Tip-fffd6df1.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/Docstring-6a25bf3b.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/IconCopyLink-4b81c553.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CodeBlock-90ffda97.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CopyButton-04a16537.js"> 
+<meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;bart&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;examples&quot;,&quot;title&quot;:&quot;Examples&quot;}],&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;implementation-notes&quot;,&quot;title&quot;:&quot;Implementation Notes&quot;},{&quot;local&quot;:&quot;mask-filling&quot;,&quot;title&quot;:&quot;Mask Filling&quot;},{&quot;local&quot;:&quot;transformers.BartConfig&quot;,&quot;title&quot;:&quot;BartConfig&quot;},{&quot;local&quot;:&quot;transformers.BartTokenizer&quot;,&quot;title&quot;:&quot;BartTokenizer&quot;},{&quot;local&quot;:&quot;transformers.BartTokenizerFast&quot;,&quot;title&quot;:&quot;BartTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.BartModel&quot;,&quot;title&quot;:&quot;BartModel&quot;},{&quot;local&quot;:&quot;transformers.BartForConditionalGeneration&quot;,&quot;title&quot;:&quot;BartForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.BartForSequenceClassification&quot;,&quot;title&quot;:&quot;BartForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.BartForQuestionAnswering&quot;,&quot;title&quot;:&quot;BartForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.BartForCausalLM&quot;,&quot;title&quot;:&quot;BartForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.TFBartModel&quot;,&quot;title&quot;:&quot;TFBartModel&quot;},{&quot;local&quot;:&quot;transformers.TFBartForConditionalGeneration&quot;,&quot;title&quot;:&quot;TFBartForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.FlaxBartModel&quot;,&quot;title&quot;:&quot;FlaxBartModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxBartForConditionalGeneration&quot;,&quot;title&quot;:&quot;FlaxBartForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.FlaxBartForSequenceClassification&quot;,&quot;title&quot;:&quot;FlaxBartForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.FlaxBartForQuestionAnswering&quot;,&quot;title&quot;:&quot;FlaxBartForQuestionAnswering&quot;}],&quot;title&quot;:&quot;BART&quot;}" data-svelte="svelte-1phssyn">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/start-2ddac5e4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/vendor-9e2b328e.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/layout.svelte-5b9dda7d.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/pages/model_doc/bart.mdx-144113bc.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/Tip-76f97a76.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/Docstring-50fd6873.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/IconCopyLink-fd0e58fd.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CodeBlock-88e23343.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CopyButton-4ae140ab.js"> 
 
 
 
@@ -4367,7 +4366,7 @@ weighted average in the cross-attention heads.</p>
 
 
 		<script type="module" data-hydrate="dkxyk0">
-		import { start } from "/docs/transformers/pr_15678/en/_app/start-c12de525.js";
+		import { start } from "/docs/transformers/pr_15678/en/_app/start-2ddac5e4.js";
 		start({
 			target: document.querySelector('[data-hydrate="dkxyk0"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15678/en","assets":"/docs/transformers/pr_15678/en"},
@@ -4379,8 +4378,8 @@ weighted average in the cross-attention heads.</p>
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_15678/en/_app/pages/__layout.svelte-c081948d.js"),
-						import("/docs/transformers/pr_15678/en/_app/pages/model_doc/bart.mdx-7cd04274.js")
+					import("/docs/transformers/pr_15678/en/_app/layout.svelte-5b9dda7d.js"),
+						import("/docs/transformers/pr_15678/en/_app/pages/model_doc/bart.mdx-144113bc.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15678/en/model_doc/bart"),
 				params: {}
