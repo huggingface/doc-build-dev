@@ -1080,8 +1080,8 @@ Example:
 >>> from transformers import RobertaTokenizer, Data2VecTextModel
 >>> import torch
 
->>> tokenizer = RobertaTokenizer.from_pretrained("data2vec")
->>> model = Data2VecTextModel.from_pretrained("data2vec")
+>>> tokenizer = RobertaTokenizer.from_pretrained("facebook/data2vec-text-base")
+>>> model = Data2VecTextModel.from_pretrained("facebook/data2vec-text-base")
 
 >>> inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 >>> outputs = model(**inputs)
@@ -1353,8 +1353,8 @@ Example:
 >>> from transformers import RobertaTokenizer, Data2VecTextForMaskedLM
 >>> import torch
 
->>> tokenizer = RobertaTokenizer.from_pretrained("data2vec")
->>> model = Data2VecTextForMaskedLM.from_pretrained("data2vec")
+>>> tokenizer = RobertaTokenizer.from_pretrained("facebook/data2vec-text-base")
+>>> model = Data2VecTextForMaskedLM.from_pretrained("facebook/data2vec-text-base")
 
 >>> inputs = tokenizer("The capital of France is &amp;lt;mask>.", return_tensors="pt")
 >>> labels = tokenizer("The capital of France is Paris.", return_tensors="pt")["input_ids"]
@@ -1478,8 +1478,8 @@ Example of single-label classification:
 >>> from transformers import RobertaTokenizer, Data2VecTextForSequenceClassification
 >>> import torch
 
->>> tokenizer = RobertaTokenizer.from_pretrained("data2vec")
->>> model = Data2VecTextForSequenceClassification.from_pretrained("data2vec")
+>>> tokenizer = RobertaTokenizer.from_pretrained("facebook/data2vec-text-base")
+>>> model = Data2VecTextForSequenceClassification.from_pretrained("facebook/data2vec-text-base")
 
 >>> inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 >>> labels = torch.tensor([1]).unsqueeze(0)  # Batch size 1
@@ -1494,8 +1494,8 @@ Example of multi-label classification:
 >>> from transformers import RobertaTokenizer, Data2VecTextForSequenceClassification
 >>> import torch
 
->>> tokenizer = RobertaTokenizer.from_pretrained("data2vec")
->>> model = Data2VecTextForSequenceClassification.from_pretrained("data2vec", problem_type="multi_label_classification")
+>>> tokenizer = RobertaTokenizer.from_pretrained("facebook/data2vec-text-base")
+>>> model = Data2VecTextForSequenceClassification.from_pretrained("facebook/data2vec-text-base", problem_type="multi_label_classification")
 
 >>> inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 >>> labels = torch.tensor([[1, 1]], dtype=torch.float)  # need dtype=float for BCEWithLogitsLoss
@@ -1620,8 +1620,8 @@ Example:
 >>> from transformers import RobertaTokenizer, Data2VecTextForMultipleChoice
 >>> import torch
 
->>> tokenizer = RobertaTokenizer.from_pretrained("data2vec")
->>> model = Data2VecTextForMultipleChoice.from_pretrained("data2vec")
+>>> tokenizer = RobertaTokenizer.from_pretrained("facebook/data2vec-text-base")
+>>> model = Data2VecTextForMultipleChoice.from_pretrained("facebook/data2vec-text-base")
 
 >>> prompt = "In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced."
 >>> choice0 = "It is eaten with a fork and a knife."
@@ -1748,8 +1748,8 @@ Example:
 >>> from transformers import RobertaTokenizer, Data2VecTextForTokenClassification
 >>> import torch
 
->>> tokenizer = RobertaTokenizer.from_pretrained("data2vec")
->>> model = Data2VecTextForTokenClassification.from_pretrained("data2vec")
+>>> tokenizer = RobertaTokenizer.from_pretrained("facebook/data2vec-text-base")
+>>> model = Data2VecTextForTokenClassification.from_pretrained("facebook/data2vec-text-base")
 
 >>> inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 >>> labels = torch.tensor([1] * inputs["input_ids"].size(1)).unsqueeze(0)  # Batch size 1
@@ -1878,8 +1878,8 @@ Example:
 >>> from transformers import RobertaTokenizer, Data2VecTextForQuestionAnswering
 >>> import torch
 
->>> tokenizer = RobertaTokenizer.from_pretrained("data2vec")
->>> model = Data2VecTextForQuestionAnswering.from_pretrained("data2vec")
+>>> tokenizer = RobertaTokenizer.from_pretrained("facebook/data2vec-text-base")
+>>> model = Data2VecTextForQuestionAnswering.from_pretrained("facebook/data2vec-text-base")
 
 >>> question, text = "Who was Jim Henson?", "Jim Henson was a nice puppet"
 >>> inputs = tokenizer(question, text, return_tensors="pt")
