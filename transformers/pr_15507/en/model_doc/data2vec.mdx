@@ -90,8 +90,8 @@ The original code can be found [here](https://github.com/pytorch/fairseq/tree/ma
 <div class="docstring">
 
 <docstring><name>class transformers.Data2VecTextConfig</name><anchor>transformers.Data2VecTextConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/configuration_data2vec_text.py#L31</source><parameters>[{"name": "vocab_size", "val": " = 30522"}, {"name": "hidden_size", "val": " = 768"}, {"name": "num_hidden_layers", "val": " = 12"}, {"name": "num_attention_heads", "val": " = 12"}, {"name": "intermediate_size", "val": " = 3072"}, {"name": "hidden_act", "val": " = 'gelu'"}, {"name": "hidden_dropout_prob", "val": " = 0.1"}, {"name": "attention_probs_dropout_prob", "val": " = 0.1"}, {"name": "max_position_embeddings", "val": " = 512"}, {"name": "type_vocab_size", "val": " = 2"}, {"name": "initializer_range", "val": " = 0.02"}, {"name": "layer_norm_eps", "val": " = 1e-12"}, {"name": "pad_token_id", "val": " = 1"}, {"name": "bos_token_id", "val": " = 0"}, {"name": "eos_token_id", "val": " = 2"}, {"name": "position_embedding_type", "val": " = 'absolute'"}, {"name": "use_cache", "val": " = True"}, {"name": "classifier_dropout", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **vocab_size** (`int`, *optional*, defaults to 30522) --
-  Vocabulary size of the BERT model. Defines the number of different tokens that can be represented by the
-  `inputs_ids` passed when calling [BertModel](/docs/transformers/pr_15507/en/model_doc/bert#transformers.BertModel) or [TFBertModel](/docs/transformers/pr_15507/en/model_doc/bert#transformers.TFBertModel).
+  Vocabulary size of the DATA2VEC model. Defines the number of different tokens that can be represented by
+  the `inputs_ids` passed when calling `Data2VecModel`.
 - **hidden_size** (`int`, *optional*, defaults to 768) --
   Dimensionality of the encoder layers and the pooler layer.
 - **num_hidden_layers** (`int`, *optional*, defaults to 12) --
@@ -111,7 +111,7 @@ The original code can be found [here](https://github.com/pytorch/fairseq/tree/ma
   The maximum sequence length that this model might ever be used with. Typically set this to something large
   just in case (e.g., 512 or 1024 or 2048).
 - **type_vocab_size** (`int`, *optional*, defaults to 2) --
-  The vocabulary size of the `token_type_ids` passed when calling [BertModel](/docs/transformers/pr_15507/en/model_doc/bert#transformers.BertModel) or [TFBertModel](/docs/transformers/pr_15507/en/model_doc/bert#transformers.TFBertModel).
+  The vocabulary size of the `token_type_ids` passed when calling `Data2VecModel`.
 - **initializer_range** (`float`, *optional*, defaults to 0.02) --
   The standard deviation of the truncated_normal_initializer for initializing all weight matrices.
 - **layer_norm_eps** (`float`, *optional*, defaults to 1e-12) --
@@ -160,7 +160,7 @@ Examples:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecAudioConfig</name><anchor>transformers.Data2VecAudioConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/configuration_data2vec_audio.py#L31</source><parameters>[{"name": "vocab_size", "val": " = 32"}, {"name": "hidden_size", "val": " = 768"}, {"name": "num_hidden_layers", "val": " = 12"}, {"name": "num_attention_heads", "val": " = 12"}, {"name": "intermediate_size", "val": " = 3072"}, {"name": "hidden_act", "val": " = 'gelu'"}, {"name": "hidden_dropout", "val": " = 0.1"}, {"name": "activation_dropout", "val": " = 0.1"}, {"name": "attention_dropout", "val": " = 0.1"}, {"name": "feat_proj_dropout", "val": " = 0.0"}, {"name": "feat_quantizer_dropout", "val": " = 0.0"}, {"name": "final_dropout", "val": " = 0.1"}, {"name": "layerdrop", "val": " = 0.1"}, {"name": "initializer_range", "val": " = 0.02"}, {"name": "layer_norm_eps", "val": " = 1e-05"}, {"name": "feat_extract_activation", "val": " = 'gelu'"}, {"name": "conv_dim", "val": " = (512, 512, 512, 512, 512, 512, 512)"}, {"name": "conv_stride", "val": " = (5, 2, 2, 2, 2, 2, 2)"}, {"name": "conv_kernel", "val": " = (10, 3, 3, 3, 3, 2, 2)"}, {"name": "conv_bias", "val": " = False"}, {"name": "num_conv_pos_embedding_groups", "val": " = 16"}, {"name": "conv_pos_kernel_size", "val": " = 19"}, {"name": "num_conv_pos_embeddings", "val": " = 5"}, {"name": "mask_time_prob", "val": " = 0.05"}, {"name": "mask_time_length", "val": " = 10"}, {"name": "mask_time_min_masks", "val": " = 2"}, {"name": "mask_feature_prob", "val": " = 0.0"}, {"name": "mask_feature_length", "val": " = 10"}, {"name": "mask_feature_min_masks", "val": " = 0"}, {"name": "num_codevectors_per_group", "val": " = 320"}, {"name": "num_codevector_groups", "val": " = 2"}, {"name": "contrastive_logits_temperature", "val": " = 0.1"}, {"name": "num_negatives", "val": " = 100"}, {"name": "codevector_dim", "val": " = 256"}, {"name": "proj_codevector_dim", "val": " = 256"}, {"name": "diversity_loss_weight", "val": " = 0.1"}, {"name": "ctc_loss_reduction", "val": " = 'sum'"}, {"name": "ctc_zero_infinity", "val": " = False"}, {"name": "use_weighted_layer_sum", "val": " = False"}, {"name": "classifier_proj_size", "val": " = 256"}, {"name": "tdnn_dim", "val": " = (512, 512, 512, 512, 1500)"}, {"name": "tdnn_kernel", "val": " = (5, 3, 3, 1, 1)"}, {"name": "tdnn_dilation", "val": " = (1, 2, 3, 1, 1)"}, {"name": "xvector_output_dim", "val": " = 512"}, {"name": "pad_token_id", "val": " = 0"}, {"name": "bos_token_id", "val": " = 1"}, {"name": "eos_token_id", "val": " = 2"}, {"name": "add_adapter", "val": " = False"}, {"name": "adapter_kernel_size", "val": " = 3"}, {"name": "adapter_stride", "val": " = 2"}, {"name": "num_adapter_layers", "val": " = 3"}, {"name": "output_hidden_size", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **vocab_size** (`int`, *optional*, defaults to 32) --
+<docstring><name>class transformers.Data2VecAudioConfig</name><anchor>transformers.Data2VecAudioConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/configuration_data2vec_audio.py#L31</source><parameters>[{"name": "vocab_size", "val": " = 32"}, {"name": "hidden_size", "val": " = 768"}, {"name": "num_hidden_layers", "val": " = 12"}, {"name": "num_attention_heads", "val": " = 12"}, {"name": "intermediate_size", "val": " = 3072"}, {"name": "hidden_act", "val": " = 'gelu'"}, {"name": "hidden_dropout", "val": " = 0.1"}, {"name": "activation_dropout", "val": " = 0.1"}, {"name": "attention_dropout", "val": " = 0.1"}, {"name": "feat_proj_dropout", "val": " = 0.0"}, {"name": "final_dropout", "val": " = 0.1"}, {"name": "layerdrop", "val": " = 0.1"}, {"name": "initializer_range", "val": " = 0.02"}, {"name": "layer_norm_eps", "val": " = 1e-05"}, {"name": "feat_extract_activation", "val": " = 'gelu'"}, {"name": "conv_dim", "val": " = (512, 512, 512, 512, 512, 512, 512)"}, {"name": "conv_stride", "val": " = (5, 2, 2, 2, 2, 2, 2)"}, {"name": "conv_kernel", "val": " = (10, 3, 3, 3, 3, 2, 2)"}, {"name": "conv_bias", "val": " = False"}, {"name": "num_conv_pos_embedding_groups", "val": " = 16"}, {"name": "conv_pos_kernel_size", "val": " = 19"}, {"name": "num_conv_pos_embeddings", "val": " = 5"}, {"name": "mask_time_prob", "val": " = 0.05"}, {"name": "mask_time_length", "val": " = 10"}, {"name": "mask_time_min_masks", "val": " = 2"}, {"name": "mask_feature_prob", "val": " = 0.0"}, {"name": "mask_feature_length", "val": " = 10"}, {"name": "mask_feature_min_masks", "val": " = 0"}, {"name": "ctc_loss_reduction", "val": " = 'sum'"}, {"name": "ctc_zero_infinity", "val": " = False"}, {"name": "use_weighted_layer_sum", "val": " = False"}, {"name": "classifier_proj_size", "val": " = 256"}, {"name": "tdnn_dim", "val": " = (512, 512, 512, 512, 1500)"}, {"name": "tdnn_kernel", "val": " = (5, 3, 3, 1, 1)"}, {"name": "tdnn_dilation", "val": " = (1, 2, 3, 1, 1)"}, {"name": "xvector_output_dim", "val": " = 512"}, {"name": "pad_token_id", "val": " = 0"}, {"name": "bos_token_id", "val": " = 1"}, {"name": "eos_token_id", "val": " = 2"}, {"name": "add_adapter", "val": " = False"}, {"name": "adapter_kernel_size", "val": " = 3"}, {"name": "adapter_stride", "val": " = 2"}, {"name": "num_adapter_layers", "val": " = 3"}, {"name": "output_hidden_size", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **vocab_size** (`int`, *optional*, defaults to 32) --
   Vocabulary size of the Data2VecAudio model. Defines the number of different tokens that can be represented
   by the `inputs_ids` passed when calling [Data2VecAudioModel](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioModel) or `TFData2VecAudioModel`. Vocabulary size
   of the model. Defines the different tokens that can be represented by the *inputs_ids* passed to the
@@ -191,8 +191,6 @@ Examples:
 - **feat_extract_activation** (`str, `optional`, defaults to `"gelu"`) --
   The non-linear activation function (function or string) in the 1D convolutional layers of the feature
   extractor. If string, `"gelu"`, `"relu"`, `"selu"` and `"gelu_new"` are supported.
-- **feat_quantizer_dropout** (`float`, *optional*, defaults to 0.0) --
-  The dropout probabilitiy for quantized feature encoder states.
 - **conv_dim** (`Tuple[int]`, *optional*, defaults to `(512, 512, 512, 512, 512, 512, 512)`) --
   A tuple of integers defining the number of input and output channels of each 1D convolutional layer in the
   feature encoder. The length of *conv_dim* defines the number of 1D convolutional layers.
@@ -234,22 +232,6 @@ Examples:
   The minimum number of masks of length `mask_feature_length` generated along the feature axis, each time
   step, irrespectively of `mask_feature_prob`. Only relevant if
   ''mask_feature_prob*len(feature_axis)/mask_feature_length &amp;lt; mask_feature_min_masks''
-- **num_codevectors_per_group** (`int`, *optional*, defaults to 320) --
-  Number of entries in each quantization codebook (group).
-- **num_codevector_groups** (`int`, *optional*, defaults to 2) --
-  Number of codevector groups for product codevector quantization.
-- **contrastive_logits_temperature** (`float`, *optional*, defaults to 0.1) --
-  The temperature *kappa* in the contrastive loss.
-- **feat_quantizer_dropout** (`float`, *optional*, defaults to 0.0) --
-  The dropout probabilitiy for the output of the feature encoder that's used by the quantizer.
-- **num_negatives** (`int`, *optional*, defaults to 100) --
-  Number of negative samples for the contrastive loss.
-- **codevector_dim** (`int`, *optional*, defaults to 256) --
-  Dimensionality of the quantized feature vectors.
-- **proj_codevector_dim** (`int`, *optional*, defaults to 256) --
-  Dimensionality of the final projection of both the quantized and the transformer features.
-- **diversity_loss_weight** (`int`, *optional*, defaults to 0.1) --
-  The weight of the codebook diversity loss component.
 - **ctc_loss_reduction** (`str`, *optional*, defaults to `"sum"`) --
   Specifies the reduction to apply to the output of `torch.nn.CTCLoss`. Only relevant when training an
   instance of [Data2VecAudioForCTC](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioForCTC).
@@ -290,7 +272,7 @@ Examples:
 This is the configuration class to store the configuration of a [Data2VecAudioModel](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioModel). It is used to instantiate
 an Data2VecAudio model according to the specified arguments, defining the model architecture. Instantiating a
 configuration with the defaults will yield a similar configuration to that of the Data2VecAudio
-[facebook/wav2vec2-base-960h](https://huggingface.co/facebook/wav2vec2-base-960h) architecture.
+[facebook/data2vec-audio-base-960h](https://huggingface.co/facebook/data2vec-audio-base-960h) architecture.
 
 Configuration objects inherit from [PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig) and can be used to control the model outputs. Read the
 documentation from [PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig) for more information.
@@ -303,10 +285,10 @@ Example:
 ```python
 >>> from transformers import Data2VecAudioModel, Data2VecAudioConfig
 
->>> # Initializing a Data2VecAudio facebook/wav2vec2-base-960h style configuration
+>>> # Initializing a Data2VecAudio facebook/data2vec-audio-base-960h style configuration
 >>> configuration = Data2VecAudioConfig()
 
->>> # Initializing a model from the facebook/wav2vec2-base-960h style configuration
+>>> # Initializing a model from the facebook/data2vec-audio-base-960h style configuration
 >>> model = Data2VecAudioModel(configuration)
 
 >>> # Accessing the model configuration
@@ -319,7 +301,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecAudioModel</name><anchor>transformers.Data2VecAudioModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L951</source><parameters>[{"name": "config", "val": ": Data2VecAudioConfig"}]</parameters><paramsdesc>- **config** ([Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.Data2VecAudioModel</name><anchor>transformers.Data2VecAudioModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L883</source><parameters>[{"name": "config", "val": ": Data2VecAudioConfig"}]</parameters><paramsdesc>- **config** ([Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 The bare Data2VecAudio Model transformer outputting raw hidden-states without any specific head on top.
@@ -339,7 +321,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecAudioModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1022</source><parameters>[{"name": "input_values", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "mask_time_indices", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_values** (`torch.FloatTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecAudioModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L954</source><parameters>[{"name": "input_values", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "mask_time_indices", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_values** (`torch.FloatTensor` of shape `(batch_size, sequence_length)`) --
   Float values of input raw speech waveform. Values can be obtained by loading a *.flac* or *.wav* audio file
   into an array of type *List[float]* or a *numpy.ndarray*, *e.g.* via the soundfile library (*pip install
   soundfile*). To prepare the array into *input_values*, the [Wav2Vec2Processor](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2Processor) should be used for padding
@@ -433,7 +415,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecAudioForAudioFrameClassification</name><anchor>transformers.Data2VecAudioForAudioFrameClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1310</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.Data2VecAudioForAudioFrameClassification</name><anchor>transformers.Data2VecAudioForAudioFrameClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1242</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -455,7 +437,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecAudioForAudioFrameClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1337</source><parameters>[{"name": "input_values", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_values** (`torch.FloatTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecAudioForAudioFrameClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1269</source><parameters>[{"name": "input_values", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **input_values** (`torch.FloatTensor` of shape `(batch_size, sequence_length)`) --
   Float values of input raw speech waveform. Values can be obtained by loading a *.flac* or *.wav* audio file
   into an array of type *List[float]* or a *numpy.ndarray*, *e.g.* via the soundfile library (*pip install
   soundfile*). To prepare the array into *input_values*, the [Wav2Vec2Processor](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2Processor) should be used for padding
@@ -556,7 +538,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecAudioForCTC</name><anchor>transformers.Data2VecAudioForCTC</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1088</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.Data2VecAudioForCTC</name><anchor>transformers.Data2VecAudioForCTC</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1020</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 Data2VecAudio Model with a `language modeling` head on top for Connectionist Temporal Classification (CTC).
@@ -576,7 +558,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecAudioForCTC.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1114</source><parameters>[{"name": "input_values", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}, {"name": "labels", "val": " = None"}]</parameters><paramsdesc>- **input_values** (`torch.FloatTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecAudioForCTC.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1046</source><parameters>[{"name": "input_values", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}, {"name": "labels", "val": " = None"}]</parameters><paramsdesc>- **input_values** (`torch.FloatTensor` of shape `(batch_size, sequence_length)`) --
   Float values of input raw speech waveform. Values can be obtained by loading a *.flac* or *.wav* audio file
   into an array of type *List[float]* or a *numpy.ndarray*, *e.g.* via the soundfile library (*pip install
   soundfile*). To prepare the array into *input_values*, the [Wav2Vec2Processor](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2Processor) should be used for padding
@@ -688,7 +670,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecAudioForSequenceClassification</name><anchor>transformers.Data2VecAudioForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1203</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.Data2VecAudioForSequenceClassification</name><anchor>transformers.Data2VecAudioForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1135</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -711,7 +693,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecAudioForSequenceClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1232</source><parameters>[{"name": "input_values", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}, {"name": "labels", "val": " = None"}]</parameters><paramsdesc>- **input_values** (`torch.FloatTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecAudioForSequenceClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1164</source><parameters>[{"name": "input_values", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}, {"name": "labels", "val": " = None"}]</parameters><paramsdesc>- **input_values** (`torch.FloatTensor` of shape `(batch_size, sequence_length)`) --
   Float values of input raw speech waveform. Values can be obtained by loading a *.flac* or *.wav* audio file
   into an array of type *List[float]* or a *numpy.ndarray*, *e.g.* via the soundfile library (*pip install
   soundfile*). To prepare the array into *input_values*, the [Wav2Vec2Processor](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2Processor) should be used for padding
@@ -821,7 +803,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.Data2VecAudioForXVector</name><anchor>transformers.Data2VecAudioForXVector</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1449</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.Data2VecAudioForXVector</name><anchor>transformers.Data2VecAudioForXVector</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1381</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -843,7 +825,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.Data2VecAudioForXVector.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1499</source><parameters>[{"name": "input_values", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}, {"name": "labels", "val": " = None"}]</parameters><paramsdesc>- **input_values** (`torch.FloatTensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>forward</name><anchor>transformers.Data2VecAudioForXVector.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/data2vec/modeling_data2vec_audio.py#L1431</source><parameters>[{"name": "input_values", "val": ""}, {"name": "attention_mask", "val": " = None"}, {"name": "output_attentions", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}, {"name": "labels", "val": " = None"}]</parameters><paramsdesc>- **input_values** (`torch.FloatTensor` of shape `(batch_size, sequence_length)`) --
   Float values of input raw speech waveform. Values can be obtained by loading a *.flac* or *.wav* audio file
   into an array of type *List[float]* or a *numpy.ndarray*, *e.g.* via the soundfile library (*pip install
   soundfile*). To prepare the array into *input_values*, the [Wav2Vec2Processor](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2Processor) should be used for padding
