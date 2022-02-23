@@ -412,7 +412,7 @@ Takes care of tying weights embeddings afterwards if the model class has a `tie_
 
 </div>
 <div class="docstring">
-<docstring><name>save\_pretrained</name><anchor>transformers.PreTrainedModel.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15793/src/transformers/modeling_utils.py#L999</source><parameters>[{"name": "save_directory", "val": ": typing.Union[str, os.PathLike]"}, {"name": "save_config", "val": ": bool = True"}, {"name": "state_dict", "val": ": typing.Optional[dict] = None"}, {"name": "save_function", "val": ": typing.Callable = <function save at 0x7f0389a65d30>"}, {"name": "push_to_hub", "val": ": bool = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
+<docstring><name>save\_pretrained</name><anchor>transformers.PreTrainedModel.save_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15793/src/transformers/modeling_utils.py#L999</source><parameters>[{"name": "save_directory", "val": ": typing.Union[str, os.PathLike]"}, {"name": "save_config", "val": ": bool = True"}, {"name": "state_dict", "val": ": typing.Optional[dict] = None"}, {"name": "save_function", "val": ": typing.Callable = <function save at 0x7fd914171d30>"}, {"name": "push_to_hub", "val": ": bool = False"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **save_directory** (`str` or `os.PathLike`) --
   Directory to which to save. Will be created if it doesn't exist.
 - **save_config** (`bool`, *optional*, defaults to `True`) --
   Whether or not to save the config of the model. Useful when in distributed training like TPUs and need
@@ -554,7 +554,7 @@ re-use e.g. Albert or Universal Transformers, or if doing long-range modeling wi
 
 </div>
 <div class="docstring">
-<docstring><name>get\_extended\_attention\_mask</name><anchor>transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask</anchor><source>https://github.com/huggingface/transformers/blob/pr_15793/src/transformers/modeling_utils.py#L271</source><parameters>[{"name": "attention_mask", "val": ": Tensor"}, {"name": "input_shape", "val": ": typing.Tuple[int]"}, {"name": "device", "val": ": <property object at 0x7f03216a2220>"}]</parameters><paramsdesc>- **attention_mask** (`torch.Tensor`) --
+<docstring><name>get\_extended\_attention\_mask</name><anchor>transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask</anchor><source>https://github.com/huggingface/transformers/blob/pr_15793/src/transformers/modeling_utils.py#L271</source><parameters>[{"name": "attention_mask", "val": ": Tensor"}, {"name": "input_shape", "val": ": typing.Tuple[int]"}, {"name": "device", "val": ": <property object at 0x7fd8abdb20e0>"}]</parameters><paramsdesc>- **attention_mask** (`torch.Tensor`) --
   Mask with ones indicating tokens to attend to, zeros for tokens to ignore.
 - **input_shape** (`Tuple[int]`) --
   The shape of the input to the model.
@@ -2404,7 +2404,7 @@ outputs = model.generate(
 
 </div>
 <div class="docstring">
-<docstring><name>greedy\_search</name><anchor>transformers.generation_tf_utils.TFGenerationMixin.greedy_search</anchor><source>https://github.com/huggingface/transformers/blob/pr_15793/src/transformers/generation_tf_utils.py#L1807</source><parameters>[{"name": "input_ids", "val": ": Tensor"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_tf_logits_process.TFLogitsProcessorList] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`tf.Tensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>greedy\_search</name><anchor>transformers.generation_tf_utils.TFGenerationMixin.greedy_search</anchor><source>https://github.com/huggingface/transformers/blob/pr_15793/src/transformers/generation_tf_utils.py#L1810</source><parameters>[{"name": "input_ids", "val": ": Tensor"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_tf_logits_process.TFLogitsProcessorList] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`tf.Tensor` of shape `(batch_size, sequence_length)`) --
   The sequence used as a prompt for the generation.
 - **logits_processor** (`TFLogitsProcessorList`, *optional*) --
   An instance of [TFLogitsProcessorList](/docs/transformers/pr_15793/en/internal/generation_utils#transformers.TFLogitsProcessorList). List of instances of class derived from [TFLogitsProcessor](/docs/transformers/pr_15793/en/internal/generation_utils#transformers.TFLogitsProcessor)
@@ -2426,8 +2426,8 @@ outputs = model.generate(
 - **return_dict_in_generate** (`bool`, *optional*, defaults to `False`) --
   Whether or not to return a [ModelOutput](/docs/transformers/pr_15793/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.
   model_kwargs --
-  Additional model specific keyword arguments will be forwarded to the `call` function of the model.
-  If model is an encoder-decoder model the kwargs should include `encoder_outputs`.</paramsdesc><paramgroups>0</paramgroups><retdesc>`TFGreedySearchDecoderOnlyOutput`
+  Additional model specific keyword arguments will be forwarded to the `call` function of the model. If
+  model is an encoder-decoder model the kwargs should include `encoder_outputs`.</paramsdesc><paramgroups>0</paramgroups><retdesc>`TFGreedySearchDecoderOnlyOutput`
 `TFGreedySearchEncoderDecoderOutput`or `tf.Tensor`: A `tf.Tensor` containing the
 generated tokens (default behaviour) or a `TFGreedySearchDecoderOnlyOutput`if
 `model.config.is_encoder_decoder=False` and `return_dict_in_generate=True` or a
@@ -2479,13 +2479,13 @@ Implement in subclasses of [TFPreTrainedModel](/docs/transformers/pr_15793/en/ma
 
 </div>
 <div class="docstring">
-<docstring><name>sample</name><anchor>transformers.generation_tf_utils.TFGenerationMixin.sample</anchor><source>https://github.com/huggingface/transformers/blob/pr_15793/src/transformers/generation_tf_utils.py#L2013</source><parameters>[{"name": "input_ids", "val": ": Tensor"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_tf_logits_process.TFLogitsProcessorList] = None"}, {"name": "logits_warper", "val": ": typing.Optional[transformers.generation_tf_logits_process.TFLogitsProcessorList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`tf.Tensor` of shape `(batch_size, sequence_length)`) --
+<docstring><name>sample</name><anchor>transformers.generation_tf_utils.TFGenerationMixin.sample</anchor><source>https://github.com/huggingface/transformers/blob/pr_15793/src/transformers/generation_tf_utils.py#L2016</source><parameters>[{"name": "input_ids", "val": ": Tensor"}, {"name": "logits_processor", "val": ": typing.Optional[transformers.generation_tf_logits_process.TFLogitsProcessorList] = None"}, {"name": "logits_warper", "val": ": typing.Optional[transformers.generation_tf_logits_process.TFLogitsProcessorList] = None"}, {"name": "max_length", "val": ": typing.Optional[int] = None"}, {"name": "pad_token_id", "val": ": typing.Optional[int] = None"}, {"name": "eos_token_id", "val": ": typing.Optional[int] = None"}, {"name": "output_attentions", "val": ": typing.Optional[bool] = None"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "output_scores", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict_in_generate", "val": ": typing.Optional[bool] = None"}, {"name": "**model_kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`tf.Tensor` of shape `(batch_size, sequence_length)`) --
   The sequence used as a prompt for the generation.
 - **logits_processor** (`TFLogitsProcessorList`, *optional*) --
   An instance of [LogitsProcessorList](/docs/transformers/pr_15793/en/internal/generation_utils#transformers.LogitsProcessorList). List of instances of class derived from [TFLogitsProcessor](/docs/transformers/pr_15793/en/internal/generation_utils#transformers.TFLogitsProcessor)
   used to modify the prediction scores of the language modeling head applied at each generation step.
 - **logits_warper** (`TFLogitsProcessorList`, *optional*) --
-  An instance of [TFLogitsProcessorList](/docs/transformers/pr_15793/en/internal/generation_utils#transformers.TFLogitsProcessorList). List of instances of class derived from `TFLogitsWarper`
+  An instance of [TFLogitsProcessorList](/docs/transformers/pr_15793/en/internal/generation_utils#transformers.TFLogitsProcessorList). List of instances of class derived from [TFLogitsWarper](/docs/transformers/pr_15793/en/internal/generation_utils#transformers.TFLogitsWarper)
   used to warp the prediction score distribution of the language modeling head applied before multinomial
   sampling at each generation step.
 - **max_length** (`int`, *optional*, defaults to 20) --
@@ -2505,8 +2505,8 @@ Implement in subclasses of [TFPreTrainedModel](/docs/transformers/pr_15793/en/ma
 - **return_dict_in_generate** (`bool`, *optional*, defaults to `False`) --
   Whether or not to return a [ModelOutput](/docs/transformers/pr_15793/en/main_classes/output#transformers.file_utils.ModelOutput) instead of a plain tuple.
   model_kwargs --
-  Additional model specific kwargs will be forwarded to the `call` function of the model. If model is
-  an encoder-decoder model the kwargs should include `encoder_outputs`.</paramsdesc><paramgroups>0</paramgroups><retdesc>`TFSampleDecoderOnlyOutput` `TFSampleEncoderDecoderOutput`or `tf.Tensor`: A `tf.Tensor` containing the generated tokens (default behaviour) or a
+  Additional model specific kwargs will be forwarded to the `call` function of the model. If model is an
+  encoder-decoder model the kwargs should include `encoder_outputs`.</paramsdesc><paramgroups>0</paramgroups><retdesc>`TFSampleDecoderOnlyOutput` `TFSampleEncoderDecoderOutput`or `tf.Tensor`: A `tf.Tensor` containing the generated tokens (default behaviour) or a
 `TFSampleDecoderOnlyOutput`if `model.config.is_encoder_decoder=False` and
 `return_dict_in_generate=True` or a `TFSampleEncoderDecoderOutput`if
 `model.config.is_encoder_decoder=True`.</retdesc></docstring>
