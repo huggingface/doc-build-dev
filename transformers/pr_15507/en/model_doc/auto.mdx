@@ -177,7 +177,7 @@ Likewise, if your `NewModel` is a subclass of [PreTrainedModel](/docs/transforme
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoConfig</name><anchor>transformers.AutoConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L524</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoConfig</name><anchor>transformers.AutoConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L523</source><parameters>[]</parameters></docstring>
 
 This is a generic configuration class that will be instantiated as one of the configuration classes of the library
 when created with the [from_pretrained()](/docs/transformers/pr_15507/en/model_doc/auto#transformers.AutoConfig.from_pretrained) class method.
@@ -187,7 +187,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoConfig.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L547</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoConfig.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L546</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   Can be either:
 
   - A string, the *model id* of a pretrained model configuration hosted inside a model repo on
@@ -249,7 +249,6 @@ is loaded, or when it's missing, by falling back to using pattern matching on `p
 - **convbert** -- [ConvBertConfig](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertConfig) (ConvBERT model)
 - **convnext** -- [ConvNextConfig](/docs/transformers/pr_15507/en/model_doc/convnext#transformers.ConvNextConfig) (ConvNext model)
 - **ctrl** -- [CTRLConfig](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLConfig) (CTRL model)
-- **data2vec** -- [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) (Data2Vec model)
 - **data2vec-audio** -- [Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig) (Data2VecAudio model)
 - **data2vec-text** -- [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) (Data2VecText model)
 - **deberta** -- [DebertaConfig](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaConfig) (DeBERTa model)
@@ -365,7 +364,7 @@ True
 
 </div>
 <div class="docstring">
-<docstring><name>register</name><anchor>transformers.AutoConfig.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L669</source><parameters>[{"name": "model_type", "val": ""}, {"name": "config", "val": ""}]</parameters><paramsdesc>- **model_type** (`str`) -- The model type like "bert" or "gpt".
+<docstring><name>register</name><anchor>transformers.AutoConfig.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L668</source><parameters>[{"name": "model_type", "val": ""}, {"name": "config", "val": ""}]</parameters><paramsdesc>- **model_type** (`str`) -- The model type like "bert" or "gpt".
 - **config** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) -- The config to register.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Register a new configuration for this class.
@@ -461,7 +460,6 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **convbert** -- [ConvBertTokenizer](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertTokenizer) or [ConvBertTokenizerFast](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertTokenizerFast) (ConvBERT model)
 - **cpm** -- [CpmTokenizer](/docs/transformers/pr_15507/en/model_doc/cpm#transformers.CpmTokenizer) or `CpmTokenizerFast` (CPM model)
 - **ctrl** -- [CTRLTokenizer](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLTokenizer) (CTRL model)
-- **data2vec** -- [RobertaTokenizer](/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaTokenizer) or [RobertaTokenizerFast](/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaTokenizerFast) (Data2Vec model)
 - **deberta** -- [DebertaTokenizer](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaTokenizer) or [DebertaTokenizerFast](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaTokenizerFast) (DeBERTa model)
 - **deberta-v2** -- [DebertaV2Tokenizer](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2Tokenizer) (DeBERTa-v2 model)
 - **distilbert** -- [DistilBertTokenizer](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertTokenizer) or [DistilBertTokenizerFast](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertTokenizerFast) (DistilBERT model)
