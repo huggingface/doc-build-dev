@@ -47,6 +47,8 @@ sections:
   title: AutoModelForSpeechSeq2Seq
 - local: transformers.AutoModelForAudioXVector
   title: AutoModelForAudioXVector
+- local: transformers.AutoModelForMaskedImageModeling
+  title: AutoModelForMaskedImageModeling
 - local: transformers.AutoModelForObjectDetection
   title: AutoModelForObjectDetection
 - local: transformers.AutoModelForImageSegmentation
@@ -175,7 +177,7 @@ Likewise, if your `NewModel` is a subclass of [PreTrainedModel](/docs/transforme
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoConfig</name><anchor>transformers.AutoConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L512</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoConfig</name><anchor>transformers.AutoConfig</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L524</source><parameters>[]</parameters></docstring>
 
 This is a generic configuration class that will be instantiated as one of the configuration classes of the library
 when created with the [from_pretrained()](/docs/transformers/pr_15507/en/model_doc/auto#transformers.AutoConfig.from_pretrained) class method.
@@ -185,7 +187,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoConfig.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L535</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoConfig.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L547</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   Can be either:
 
   - A string, the *model id* of a pretrained model configuration hosted inside a model repo on
@@ -247,7 +249,9 @@ is loaded, or when it's missing, by falling back to using pattern matching on `p
 - **convbert** -- [ConvBertConfig](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertConfig) (ConvBERT model)
 - **convnext** -- [ConvNextConfig](/docs/transformers/pr_15507/en/model_doc/convnext#transformers.ConvNextConfig) (ConvNext model)
 - **ctrl** -- [CTRLConfig](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLConfig) (CTRL model)
-- **data2vec** -- [Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig) (Data2Vec model)
+- **data2vec** -- [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) (Data2Vec model)
+- **data2vec-audio** -- [Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig) (Data2VecAudio model)
+- **data2vec-text** -- [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) (Data2VecText model)
 - **deberta** -- [DebertaConfig](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaConfig) (DeBERTa model)
 - **deberta-v2** -- [DebertaV2Config](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2Config) (DeBERTa-v2 model)
 - **deit** -- [DeiTConfig](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTConfig) (DeiT model)
@@ -283,6 +287,8 @@ is loaded, or when it's missing, by falling back to using pattern matching on `p
 - **openai-gpt** -- [OpenAIGPTConfig](/docs/transformers/pr_15507/en/model_doc/openai-gpt#transformers.OpenAIGPTConfig) (OpenAI GPT model)
 - **pegasus** -- [PegasusConfig](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusConfig) (Pegasus model)
 - **perceiver** -- [PerceiverConfig](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverConfig) (Perceiver model)
+- **plbart** -- [PLBartConfig](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartConfig) (PLBart model)
+- **poolformer** -- [PoolFormerConfig](/docs/transformers/pr_15507/en/model_doc/poolformer#transformers.PoolFormerConfig) (PoolFormer model)
 - **prophetnet** -- [ProphetNetConfig](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetConfig) (ProphetNet model)
 - **qdqbert** -- [QDQBertConfig](/docs/transformers/pr_15507/en/model_doc/qdqbert#transformers.QDQBertConfig) (QDQBert model)
 - **rag** -- [RagConfig](/docs/transformers/pr_15507/en/model_doc/rag#transformers.RagConfig) (RAG model)
@@ -359,7 +365,7 @@ True
 
 </div>
 <div class="docstring">
-<docstring><name>register</name><anchor>transformers.AutoConfig.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L657</source><parameters>[{"name": "model_type", "val": ""}, {"name": "config", "val": ""}]</parameters><paramsdesc>- **model_type** (`str`) -- The model type like "bert" or "gpt".
+<docstring><name>register</name><anchor>transformers.AutoConfig.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/configuration_auto.py#L669</source><parameters>[{"name": "model_type", "val": ""}, {"name": "config", "val": ""}]</parameters><paramsdesc>- **model_type** (`str`) -- The model type like "bert" or "gpt".
 - **config** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) -- The config to register.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 Register a new configuration for this class.
@@ -373,7 +379,7 @@ Register a new configuration for this class.
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoTokenizer</name><anchor>transformers.AutoTokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/tokenization_auto.py#L351</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoTokenizer</name><anchor>transformers.AutoTokenizer</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/tokenization_auto.py#L352</source><parameters>[]</parameters></docstring>
 
 This is a generic tokenizer class that will be instantiated as one of the tokenizer classes of the library when
 created with the [AutoTokenizer.from_pretrained()](/docs/transformers/pr_15507/en/model_doc/auto#transformers.AutoTokenizer.from_pretrained) class method.
@@ -383,7 +389,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoTokenizer.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/tokenization_auto.py#L365</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "*inputs", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoTokenizer.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/tokenization_auto.py#L366</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "*inputs", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   Can be either:
 
   - A string, the *model id* of a predefined tokenizer hosted inside a model repo on huggingface.co.
@@ -489,6 +495,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **pegasus** -- [PegasusTokenizer](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusTokenizer) or [PegasusTokenizerFast](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusTokenizerFast) (Pegasus model)
 - **perceiver** -- [PerceiverTokenizer](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverTokenizer) (Perceiver model)
 - **phobert** -- [PhobertTokenizer](/docs/transformers/pr_15507/en/model_doc/phobert#transformers.PhobertTokenizer) (PhoBERT model)
+- **plbart** -- [PLBartTokenizer](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartTokenizer) (PLBart model)
 - **prophetnet** -- [ProphetNetTokenizer](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetTokenizer) (ProphetNet model)
 - **qdqbert** -- [BertTokenizer](/docs/transformers/pr_15507/en/model_doc/bert#transformers.BertTokenizer) or [BertTokenizerFast](/docs/transformers/pr_15507/en/model_doc/bert#transformers.BertTokenizerFast) (QDQBert model)
 - **rag** -- [RagTokenizer](/docs/transformers/pr_15507/en/model_doc/rag#transformers.RagTokenizer) (RAG model)
@@ -531,7 +538,7 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>register</name><anchor>transformers.AutoTokenizer.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/tokenization_auto.py#L561</source><parameters>[{"name": "config_class", "val": ""}, {"name": "slow_tokenizer_class", "val": " = None"}, {"name": "fast_tokenizer_class", "val": " = None"}]</parameters><paramsdesc>- **config_class** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) --
+<docstring><name>register</name><anchor>transformers.AutoTokenizer.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/tokenization_auto.py#L562</source><parameters>[{"name": "config_class", "val": ""}, {"name": "slow_tokenizer_class", "val": " = None"}, {"name": "fast_tokenizer_class", "val": " = None"}]</parameters><paramsdesc>- **config_class** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) --
   The configuration corresponding to the model to register.
 - **slow_tokenizer_class** (`PretrainedTokenizer`, *optional*) --
   The slow tokenizer to register.
@@ -550,7 +557,7 @@ Register a new tokenizer in this mapping.
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoFeatureExtractor</name><anchor>transformers.AutoFeatureExtractor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/feature_extraction_auto.py#L168</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoFeatureExtractor</name><anchor>transformers.AutoFeatureExtractor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/feature_extraction_auto.py#L169</source><parameters>[]</parameters></docstring>
 
 This is a generic feature extractor class that will be instantiated as one of the feature extractor classes of the
 library when created with the [AutoFeatureExtractor.from_pretrained()](/docs/transformers/pr_15507/en/model_doc/auto#transformers.AutoFeatureExtractor.from_pretrained) class method.
@@ -560,7 +567,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoFeatureExtractor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/feature_extraction_auto.py#L182</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoFeatureExtractor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/feature_extraction_auto.py#L183</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   This can be either:
 
   - a string, the *model id* of a pretrained feature_extractor hosted inside a model repo on
@@ -618,6 +625,7 @@ missing, by falling back to using pattern matching on `pretrained_model_name_or_
 - **hubert** -- [Wav2Vec2FeatureExtractor](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2FeatureExtractor) (Hubert model)
 - **layoutlmv2** -- [LayoutLMv2FeatureExtractor](/docs/transformers/pr_15507/en/model_doc/layoutlmv2#transformers.LayoutLMv2FeatureExtractor) (LayoutLMv2 model)
 - **perceiver** -- [PerceiverFeatureExtractor](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverFeatureExtractor) (Perceiver model)
+- **poolformer** -- [PoolFormerFeatureExtractor](/docs/transformers/pr_15507/en/model_doc/poolformer#transformers.PoolFormerFeatureExtractor) (PoolFormer model)
 - **segformer** -- [SegformerFeatureExtractor](/docs/transformers/pr_15507/en/model_doc/segformer#transformers.SegformerFeatureExtractor) (SegFormer model)
 - **speech_to_text** -- [Speech2TextFeatureExtractor](/docs/transformers/pr_15507/en/model_doc/speech_to_text#transformers.Speech2TextFeatureExtractor) (Speech2Text model)
 - **swin** -- [ViTFeatureExtractor](/docs/transformers/pr_15507/en/model_doc/vit#transformers.ViTFeatureExtractor) (Swin model)
@@ -647,7 +655,7 @@ Examples:
 
 </div>
 <div class="docstring">
-<docstring><name>register</name><anchor>transformers.AutoFeatureExtractor.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/feature_extraction_auto.py#L309</source><parameters>[{"name": "config_class", "val": ""}, {"name": "feature_extractor_class", "val": ""}]</parameters><paramsdesc>- **config_class** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) --
+<docstring><name>register</name><anchor>transformers.AutoFeatureExtractor.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/feature_extraction_auto.py#L310</source><parameters>[{"name": "config_class", "val": ""}, {"name": "feature_extractor_class", "val": ""}]</parameters><paramsdesc>- **config_class** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) --
   The configuration corresponding to the model to register.
 - **feature_extractor_class** (`FeatureExtractorMixin`) -- The feature extractor to register.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -662,7 +670,7 @@ Register a new feature extractor for this class.
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoProcessor</name><anchor>transformers.AutoProcessor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/processing_auto.py#L68</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.AutoProcessor</name><anchor>transformers.AutoProcessor</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/processing_auto.py#L71</source><parameters>[]</parameters></docstring>
 
 This is a generic processor class that will be instantiated as one of the processor classes of the library when
 created with the [AutoProcessor.from_pretrained()](/docs/transformers/pr_15507/en/model_doc/auto#transformers.AutoProcessor.from_pretrained) class method.
@@ -672,7 +680,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 
 
 <div class="docstring">
-<docstring><name>from\_pretrained</name><anchor>transformers.AutoProcessor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/processing_auto.py#L82</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+<docstring><name>from\_pretrained</name><anchor>transformers.AutoProcessor.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/processing_auto.py#L85</source><parameters>[{"name": "pretrained_model_name_or_path", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
   This can be either:
 
   - a string, the *model id* of a pretrained feature_extractor hosted inside a model repo on
@@ -747,13 +755,24 @@ Examples:
 >>> processor = AutoProcessor.from_pretrained("./test/saved_model/")
 ```
 
+</div>
+<div class="docstring">
+<docstring><name>register</name><anchor>transformers.AutoProcessor.register</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/processing_auto.py#L238</source><parameters>[{"name": "config_class", "val": ""}, {"name": "processor_class", "val": ""}]</parameters><paramsdesc>- **config_class** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) --
+  The configuration corresponding to the model to register.
+- **processor_class** (`FeatureExtractorMixin`) -- The processor to register.</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Register a new processor for this class.
+
+
+
+
 </div></div>
 
 <h2 id="transformers.AutoModel">AutoModel</h2>
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModel</name><anchor>transformers.AutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L662</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModel</name><anchor>transformers.AutoModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L686</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the base model classes of the library when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -783,7 +802,8 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [ConvBertConfig](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertConfig) configuration class: [ConvBertModel](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertModel) (ConvBERT model)
   - [ConvNextConfig](/docs/transformers/pr_15507/en/model_doc/convnext#transformers.ConvNextConfig) configuration class: [ConvNextModel](/docs/transformers/pr_15507/en/model_doc/convnext#transformers.ConvNextModel) (ConvNext model)
   - [DPRConfig](/docs/transformers/pr_15507/en/model_doc/dpr#transformers.DPRConfig) configuration class: [DPRQuestionEncoder](/docs/transformers/pr_15507/en/model_doc/dpr#transformers.DPRQuestionEncoder) (DPR model)
-  - [Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig) configuration class: [Data2VecForTextModel](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForTextModel) (Data2Vec model)
+  - [Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig) configuration class: [Data2VecAudioModel](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioModel) (Data2VecAudio model)
+  - [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) configuration class: [Data2VecTextModel](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextModel) (Data2VecText model)
   - [DebertaConfig](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaConfig) configuration class: [DebertaModel](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaModel) (DeBERTa model)
   - [DebertaV2Config](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2Config) configuration class: [DebertaV2Model](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2Model) (DeBERTa-v2 model)
   - [DeiTConfig](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTConfig) configuration class: [DeiTModel](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTModel) (DeiT model)
@@ -815,8 +835,10 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [MobileBertConfig](/docs/transformers/pr_15507/en/model_doc/mobilebert#transformers.MobileBertConfig) configuration class: [MobileBertModel](/docs/transformers/pr_15507/en/model_doc/mobilebert#transformers.MobileBertModel) (MobileBERT model)
   - [NystromformerConfig](/docs/transformers/pr_15507/en/model_doc/nystromformer#transformers.NystromformerConfig) configuration class: [NystromformerModel](/docs/transformers/pr_15507/en/model_doc/nystromformer#transformers.NystromformerModel) (Nystromformer model)
   - [OpenAIGPTConfig](/docs/transformers/pr_15507/en/model_doc/openai-gpt#transformers.OpenAIGPTConfig) configuration class: [OpenAIGPTModel](/docs/transformers/pr_15507/en/model_doc/openai-gpt#transformers.OpenAIGPTModel) (OpenAI GPT model)
+  - [PLBartConfig](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartConfig) configuration class: [PLBartModel](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartModel) (PLBart model)
   - [PegasusConfig](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusConfig) configuration class: [PegasusModel](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusModel) (Pegasus model)
   - [PerceiverConfig](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverConfig) configuration class: [PerceiverModel](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverModel) (Perceiver model)
+  - [PoolFormerConfig](/docs/transformers/pr_15507/en/model_doc/poolformer#transformers.PoolFormerConfig) configuration class: [PoolFormerModel](/docs/transformers/pr_15507/en/model_doc/poolformer#transformers.PoolFormerModel) (PoolFormer model)
   - [ProphetNetConfig](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetConfig) configuration class: [ProphetNetModel](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetModel) (ProphetNet model)
   - [QDQBertConfig](/docs/transformers/pr_15507/en/model_doc/qdqbert#transformers.QDQBertConfig) configuration class: [QDQBertModel](/docs/transformers/pr_15507/en/model_doc/qdqbert#transformers.QDQBertModel) (QDQBert model)
   - [ReformerConfig](/docs/transformers/pr_15507/en/model_doc/reformer#transformers.ReformerConfig) configuration class: [ReformerModel](/docs/transformers/pr_15507/en/model_doc/reformer#transformers.ReformerModel) (Reformer model)
@@ -964,7 +986,8 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **convbert** -- [ConvBertModel](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertModel) (ConvBERT model)
 - **convnext** -- [ConvNextModel](/docs/transformers/pr_15507/en/model_doc/convnext#transformers.ConvNextModel) (ConvNext model)
 - **ctrl** -- [CTRLModel](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLModel) (CTRL model)
-- **data2vec** -- [Data2VecForTextModel](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForTextModel) (Data2Vec model)
+- **data2vec-audio** -- [Data2VecAudioModel](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioModel) (Data2VecAudio model)
+- **data2vec-text** -- [Data2VecTextModel](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextModel) (Data2VecText model)
 - **deberta** -- [DebertaModel](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaModel) (DeBERTa model)
 - **deberta-v2** -- [DebertaV2Model](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2Model) (DeBERTa-v2 model)
 - **deit** -- [DeiTModel](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTModel) (DeiT model)
@@ -999,6 +1022,8 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **openai-gpt** -- [OpenAIGPTModel](/docs/transformers/pr_15507/en/model_doc/openai-gpt#transformers.OpenAIGPTModel) (OpenAI GPT model)
 - **pegasus** -- [PegasusModel](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusModel) (Pegasus model)
 - **perceiver** -- [PerceiverModel](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverModel) (Perceiver model)
+- **plbart** -- [PLBartModel](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartModel) (PLBart model)
+- **poolformer** -- [PoolFormerModel](/docs/transformers/pr_15507/en/model_doc/poolformer#transformers.PoolFormerModel) (PoolFormer model)
 - **prophetnet** -- [ProphetNetModel](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetModel) (ProphetNet model)
 - **qdqbert** -- [QDQBertModel](/docs/transformers/pr_15507/en/model_doc/qdqbert#transformers.QDQBertModel) (QDQBert model)
 - **reformer** -- [ReformerModel](/docs/transformers/pr_15507/en/model_doc/reformer#transformers.ReformerModel) (Reformer model)
@@ -1065,7 +1090,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForPreTraining</name><anchor>transformers.AutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L669</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForPreTraining</name><anchor>transformers.AutoModelForPreTraining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L693</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a pretraining head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -1085,7 +1110,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [BigBirdConfig](/docs/transformers/pr_15507/en/model_doc/big_bird#transformers.BigBirdConfig) configuration class: [BigBirdForPreTraining](/docs/transformers/pr_15507/en/model_doc/big_bird#transformers.BigBirdForPreTraining) (BigBird model)
   - [CTRLConfig](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLConfig) configuration class: [CTRLLMHeadModel](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLLMHeadModel) (CTRL model)
   - [CamembertConfig](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertConfig) configuration class: [CamembertForMaskedLM](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForMaskedLM) (CamemBERT model)
-  - [Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig) configuration class: [Data2VecForMaskedLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForMaskedLM) (Data2Vec model)
+  - [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) configuration class: [Data2VecTextForMaskedLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForMaskedLM) (Data2VecText model)
   - [DebertaConfig](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaConfig) configuration class: [DebertaForMaskedLM](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaForMaskedLM) (DeBERTa model)
   - [DebertaV2Config](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2Config) configuration class: [DebertaV2ForMaskedLM](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2ForMaskedLM) (DeBERTa-v2 model)
   - [DistilBertConfig](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertConfig) configuration class: [DistilBertForMaskedLM](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForMaskedLM) (DistilBERT model)
@@ -1223,7 +1248,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **big_bird** -- [BigBirdForPreTraining](/docs/transformers/pr_15507/en/model_doc/big_bird#transformers.BigBirdForPreTraining) (BigBird model)
 - **camembert** -- [CamembertForMaskedLM](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForMaskedLM) (CamemBERT model)
 - **ctrl** -- [CTRLLMHeadModel](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLLMHeadModel) (CTRL model)
-- **data2vec** -- [Data2VecForMaskedLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForMaskedLM) (Data2Vec model)
+- **data2vec-text** -- [Data2VecTextForMaskedLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForMaskedLM) (Data2VecText model)
 - **deberta** -- [DebertaForMaskedLM](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaForMaskedLM) (DeBERTa model)
 - **deberta-v2** -- [DebertaV2ForMaskedLM](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2ForMaskedLM) (DeBERTa-v2 model)
 - **distilbert** -- [DistilBertForMaskedLM](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForMaskedLM) (DistilBERT model)
@@ -1289,7 +1314,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForCausalLM</name><anchor>transformers.AutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L684</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForCausalLM</name><anchor>transformers.AutoModelForCausalLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L708</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a causal language modeling head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -1312,7 +1337,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [BlenderbotSmallConfig](/docs/transformers/pr_15507/en/model_doc/blenderbot-small#transformers.BlenderbotSmallConfig) configuration class: [BlenderbotSmallForCausalLM](/docs/transformers/pr_15507/en/model_doc/blenderbot-small#transformers.BlenderbotSmallForCausalLM) (BlenderbotSmall model)
   - [CTRLConfig](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLConfig) configuration class: [CTRLLMHeadModel](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLLMHeadModel) (CTRL model)
   - [CamembertConfig](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertConfig) configuration class: [CamembertForCausalLM](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForCausalLM) (CamemBERT model)
-  - [Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig) configuration class: [Data2VecForCausalLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForCausalLM) (Data2Vec model)
+  - [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) configuration class: [Data2VecTextForCausalLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForCausalLM) (Data2VecText model)
   - [ElectraConfig](/docs/transformers/pr_15507/en/model_doc/electra#transformers.ElectraConfig) configuration class: [ElectraForCausalLM](/docs/transformers/pr_15507/en/model_doc/electra#transformers.ElectraForCausalLM) (ELECTRA model)
   - [GPT2Config](/docs/transformers/pr_15507/en/model_doc/gpt2#transformers.GPT2Config) configuration class: [GPT2LMHeadModel](/docs/transformers/pr_15507/en/model_doc/gpt2#transformers.GPT2LMHeadModel) (OpenAI GPT-2 model)
   - [GPTJConfig](/docs/transformers/pr_15507/en/model_doc/gptj#transformers.GPTJConfig) configuration class: [GPTJForCausalLM](/docs/transformers/pr_15507/en/model_doc/gptj#transformers.GPTJForCausalLM) (GPT-J model)
@@ -1321,6 +1346,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [MarianConfig](/docs/transformers/pr_15507/en/model_doc/marian#transformers.MarianConfig) configuration class: [MarianForCausalLM](/docs/transformers/pr_15507/en/model_doc/marian#transformers.MarianForCausalLM) (Marian model)
   - [MegatronBertConfig](/docs/transformers/pr_15507/en/model_doc/megatron-bert#transformers.MegatronBertConfig) configuration class: [MegatronBertForCausalLM](/docs/transformers/pr_15507/en/model_doc/megatron-bert#transformers.MegatronBertForCausalLM) (MegatronBert model)
   - [OpenAIGPTConfig](/docs/transformers/pr_15507/en/model_doc/openai-gpt#transformers.OpenAIGPTConfig) configuration class: [OpenAIGPTLMHeadModel](/docs/transformers/pr_15507/en/model_doc/openai-gpt#transformers.OpenAIGPTLMHeadModel) (OpenAI GPT model)
+  - [PLBartConfig](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartConfig) configuration class: [PLBartForCausalLM](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartForCausalLM) (PLBart model)
   - [PegasusConfig](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusConfig) configuration class: [PegasusForCausalLM](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusForCausalLM) (Pegasus model)
   - [ProphetNetConfig](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetConfig) configuration class: [ProphetNetForCausalLM](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetForCausalLM) (ProphetNet model)
   - [QDQBertConfig](/docs/transformers/pr_15507/en/model_doc/qdqbert#transformers.QDQBertConfig) configuration class: [QDQBertLMHeadModel](/docs/transformers/pr_15507/en/model_doc/qdqbert#transformers.QDQBertLMHeadModel) (QDQBert model)
@@ -1445,7 +1471,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **blenderbot-small** -- [BlenderbotSmallForCausalLM](/docs/transformers/pr_15507/en/model_doc/blenderbot-small#transformers.BlenderbotSmallForCausalLM) (BlenderbotSmall model)
 - **camembert** -- [CamembertForCausalLM](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForCausalLM) (CamemBERT model)
 - **ctrl** -- [CTRLLMHeadModel](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLLMHeadModel) (CTRL model)
-- **data2vec** -- [Data2VecForCausalLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForCausalLM) (Data2Vec model)
+- **data2vec-text** -- [Data2VecTextForCausalLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForCausalLM) (Data2VecText model)
 - **electra** -- [ElectraForCausalLM](/docs/transformers/pr_15507/en/model_doc/electra#transformers.ElectraForCausalLM) (ELECTRA model)
 - **gpt2** -- [GPT2LMHeadModel](/docs/transformers/pr_15507/en/model_doc/gpt2#transformers.GPT2LMHeadModel) (OpenAI GPT-2 model)
 - **gpt_neo** -- [GPTNeoForCausalLM](/docs/transformers/pr_15507/en/model_doc/gpt_neo#transformers.GPTNeoForCausalLM) (GPT Neo model)
@@ -1455,6 +1481,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **megatron-bert** -- [MegatronBertForCausalLM](/docs/transformers/pr_15507/en/model_doc/megatron-bert#transformers.MegatronBertForCausalLM) (MegatronBert model)
 - **openai-gpt** -- [OpenAIGPTLMHeadModel](/docs/transformers/pr_15507/en/model_doc/openai-gpt#transformers.OpenAIGPTLMHeadModel) (OpenAI GPT model)
 - **pegasus** -- [PegasusForCausalLM](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusForCausalLM) (Pegasus model)
+- **plbart** -- [PLBartForCausalLM](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartForCausalLM) (PLBart model)
 - **prophetnet** -- [ProphetNetForCausalLM](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetForCausalLM) (ProphetNet model)
 - **qdqbert** -- [QDQBertLMHeadModel](/docs/transformers/pr_15507/en/model_doc/qdqbert#transformers.QDQBertLMHeadModel) (QDQBert model)
 - **reformer** -- [ReformerModelWithLMHead](/docs/transformers/pr_15507/en/model_doc/reformer#transformers.ReformerModelWithLMHead) (Reformer model)
@@ -1503,7 +1530,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForMaskedLM</name><anchor>transformers.AutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L691</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForMaskedLM</name><anchor>transformers.AutoModelForMaskedLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L715</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a masked language modeling head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -1523,7 +1550,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [BigBirdConfig](/docs/transformers/pr_15507/en/model_doc/big_bird#transformers.BigBirdConfig) configuration class: [BigBirdForMaskedLM](/docs/transformers/pr_15507/en/model_doc/big_bird#transformers.BigBirdForMaskedLM) (BigBird model)
   - [CamembertConfig](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertConfig) configuration class: [CamembertForMaskedLM](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForMaskedLM) (CamemBERT model)
   - [ConvBertConfig](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertConfig) configuration class: [ConvBertForMaskedLM](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertForMaskedLM) (ConvBERT model)
-  - [Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig) configuration class: [Data2VecForMaskedLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForMaskedLM) (Data2Vec model)
+  - [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) configuration class: [Data2VecTextForMaskedLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForMaskedLM) (Data2VecText model)
   - [DebertaConfig](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaConfig) configuration class: [DebertaForMaskedLM](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaForMaskedLM) (DeBERTa model)
   - [DebertaV2Config](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2Config) configuration class: [DebertaV2ForMaskedLM](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2ForMaskedLM) (DeBERTa-v2 model)
   - [DistilBertConfig](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertConfig) configuration class: [DistilBertForMaskedLM](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForMaskedLM) (DistilBERT model)
@@ -1657,7 +1684,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **big_bird** -- [BigBirdForMaskedLM](/docs/transformers/pr_15507/en/model_doc/big_bird#transformers.BigBirdForMaskedLM) (BigBird model)
 - **camembert** -- [CamembertForMaskedLM](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForMaskedLM) (CamemBERT model)
 - **convbert** -- [ConvBertForMaskedLM](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertForMaskedLM) (ConvBERT model)
-- **data2vec** -- [Data2VecForMaskedLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForMaskedLM) (Data2Vec model)
+- **data2vec-text** -- [Data2VecTextForMaskedLM](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForMaskedLM) (Data2VecText model)
 - **deberta** -- [DebertaForMaskedLM](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaForMaskedLM) (DeBERTa model)
 - **deberta-v2** -- [DebertaV2ForMaskedLM](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2ForMaskedLM) (DeBERTa-v2 model)
 - **distilbert** -- [DistilBertForMaskedLM](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForMaskedLM) (DistilBERT model)
@@ -1719,7 +1746,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForSeq2SeqLM</name><anchor>transformers.AutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L698</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForSeq2SeqLM</name><anchor>transformers.AutoModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L722</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence-to-sequence language modeling head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -1744,6 +1771,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [MBartConfig](/docs/transformers/pr_15507/en/model_doc/mbart#transformers.MBartConfig) configuration class: [MBartForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/mbart#transformers.MBartForConditionalGeneration) (mBART model)
   - [MT5Config](/docs/transformers/pr_15507/en/model_doc/mt5#transformers.MT5Config) configuration class: [MT5ForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/mt5#transformers.MT5ForConditionalGeneration) (mT5 model)
   - [MarianConfig](/docs/transformers/pr_15507/en/model_doc/marian#transformers.MarianConfig) configuration class: [MarianMTModel](/docs/transformers/pr_15507/en/model_doc/marian#transformers.MarianMTModel) (Marian model)
+  - [PLBartConfig](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartConfig) configuration class: [PLBartForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartForConditionalGeneration) (PLBart model)
   - [PegasusConfig](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusConfig) configuration class: [PegasusForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusForConditionalGeneration) (Pegasus model)
   - [ProphetNetConfig](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetConfig) configuration class: [ProphetNetForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetForConditionalGeneration) (ProphetNet model)
   - [T5Config](/docs/transformers/pr_15507/en/model_doc/t5#transformers.T5Config) configuration class: [T5ForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/t5#transformers.T5ForConditionalGeneration) (T5 model)
@@ -1859,6 +1887,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **mbart** -- [MBartForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/mbart#transformers.MBartForConditionalGeneration) (mBART model)
 - **mt5** -- [MT5ForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/mt5#transformers.MT5ForConditionalGeneration) (mT5 model)
 - **pegasus** -- [PegasusForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/pegasus#transformers.PegasusForConditionalGeneration) (Pegasus model)
+- **plbart** -- [PLBartForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartForConditionalGeneration) (PLBart model)
 - **prophetnet** -- [ProphetNetForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/prophetnet#transformers.ProphetNetForConditionalGeneration) (ProphetNet model)
 - **t5** -- [T5ForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/t5#transformers.T5ForConditionalGeneration) (T5 model)
 - **xlm-prophetnet** -- [XLMProphetNetForConditionalGeneration](/docs/transformers/pr_15507/en/model_doc/xlm-prophetnet#transformers.XLMProphetNetForConditionalGeneration) (XLMProphetNet model)
@@ -1895,7 +1924,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForSequenceClassification</name><anchor>transformers.AutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L707</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForSequenceClassification</name><anchor>transformers.AutoModelForSequenceClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L731</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence classification head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -1918,7 +1947,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [CamembertConfig](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertConfig) configuration class: [CamembertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForSequenceClassification) (CamemBERT model)
   - [CanineConfig](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineConfig) configuration class: [CanineForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineForSequenceClassification) (Canine model)
   - [ConvBertConfig](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertConfig) configuration class: [ConvBertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertForSequenceClassification) (ConvBERT model)
-  - [Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig) configuration class: [Data2VecForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForSequenceClassification) (Data2Vec model)
+  - [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) configuration class: [Data2VecTextForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForSequenceClassification) (Data2VecText model)
   - [DebertaConfig](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaConfig) configuration class: [DebertaForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaForSequenceClassification) (DeBERTa model)
   - [DebertaV2Config](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2Config) configuration class: [DebertaV2ForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2ForSequenceClassification) (DeBERTa-v2 model)
   - [DistilBertConfig](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertConfig) configuration class: [DistilBertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForSequenceClassification) (DistilBERT model)
@@ -1940,6 +1969,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [MobileBertConfig](/docs/transformers/pr_15507/en/model_doc/mobilebert#transformers.MobileBertConfig) configuration class: [MobileBertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/mobilebert#transformers.MobileBertForSequenceClassification) (MobileBERT model)
   - [NystromformerConfig](/docs/transformers/pr_15507/en/model_doc/nystromformer#transformers.NystromformerConfig) configuration class: [NystromformerForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/nystromformer#transformers.NystromformerForSequenceClassification) (Nystromformer model)
   - [OpenAIGPTConfig](/docs/transformers/pr_15507/en/model_doc/openai-gpt#transformers.OpenAIGPTConfig) configuration class: [OpenAIGPTForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/openai-gpt#transformers.OpenAIGPTForSequenceClassification) (OpenAI GPT model)
+  - [PLBartConfig](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartConfig) configuration class: [PLBartForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartForSequenceClassification) (PLBart model)
   - [PerceiverConfig](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverConfig) configuration class: [PerceiverForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverForSequenceClassification) (Perceiver model)
   - [QDQBertConfig](/docs/transformers/pr_15507/en/model_doc/qdqbert#transformers.QDQBertConfig) configuration class: [QDQBertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/qdqbert#transformers.QDQBertForSequenceClassification) (QDQBert model)
   - [ReformerConfig](/docs/transformers/pr_15507/en/model_doc/reformer#transformers.ReformerConfig) configuration class: [ReformerForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/reformer#transformers.ReformerForSequenceClassification) (Reformer model)
@@ -2062,7 +2092,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **canine** -- [CanineForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineForSequenceClassification) (Canine model)
 - **convbert** -- [ConvBertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertForSequenceClassification) (ConvBERT model)
 - **ctrl** -- [CTRLForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/ctrl#transformers.CTRLForSequenceClassification) (CTRL model)
-- **data2vec** -- [Data2VecForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForSequenceClassification) (Data2Vec model)
+- **data2vec-text** -- [Data2VecTextForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForSequenceClassification) (Data2VecText model)
 - **deberta** -- [DebertaForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaForSequenceClassification) (DeBERTa model)
 - **deberta-v2** -- [DebertaV2ForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2ForSequenceClassification) (DeBERTa-v2 model)
 - **distilbert** -- [DistilBertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForSequenceClassification) (DistilBERT model)
@@ -2085,6 +2115,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **nystromformer** -- [NystromformerForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/nystromformer#transformers.NystromformerForSequenceClassification) (Nystromformer model)
 - **openai-gpt** -- [OpenAIGPTForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/openai-gpt#transformers.OpenAIGPTForSequenceClassification) (OpenAI GPT model)
 - **perceiver** -- [PerceiverForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverForSequenceClassification) (Perceiver model)
+- **plbart** -- [PLBartForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/plbart#transformers.PLBartForSequenceClassification) (PLBart model)
 - **qdqbert** -- [QDQBertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/qdqbert#transformers.QDQBertForSequenceClassification) (QDQBert model)
 - **reformer** -- [ReformerForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/reformer#transformers.ReformerForSequenceClassification) (Reformer model)
 - **rembert** -- [RemBertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/rembert#transformers.RemBertForSequenceClassification) (RemBERT model)
@@ -2131,7 +2162,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForMultipleChoice</name><anchor>transformers.AutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L741</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForMultipleChoice</name><anchor>transformers.AutoModelForMultipleChoice</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L765</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a multiple choice head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -2151,7 +2182,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [CamembertConfig](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertConfig) configuration class: [CamembertForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForMultipleChoice) (CamemBERT model)
   - [CanineConfig](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineConfig) configuration class: [CanineForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineForMultipleChoice) (Canine model)
   - [ConvBertConfig](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertConfig) configuration class: [ConvBertForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertForMultipleChoice) (ConvBERT model)
-  - [Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig) configuration class: [Data2VecForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForMultipleChoice) (Data2Vec model)
+  - [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) configuration class: [Data2VecTextForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForMultipleChoice) (Data2VecText model)
   - [DistilBertConfig](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertConfig) configuration class: [DistilBertForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForMultipleChoice) (DistilBERT model)
   - [ElectraConfig](/docs/transformers/pr_15507/en/model_doc/electra#transformers.ElectraConfig) configuration class: [ElectraForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/electra#transformers.ElectraForMultipleChoice) (ELECTRA model)
   - [FNetConfig](/docs/transformers/pr_15507/en/model_doc/fnet#transformers.FNetConfig) configuration class: [FNetForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/fnet#transformers.FNetForMultipleChoice) (FNet model)
@@ -2278,7 +2309,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **camembert** -- [CamembertForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForMultipleChoice) (CamemBERT model)
 - **canine** -- [CanineForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineForMultipleChoice) (Canine model)
 - **convbert** -- [ConvBertForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertForMultipleChoice) (ConvBERT model)
-- **data2vec** -- [Data2VecForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForMultipleChoice) (Data2Vec model)
+- **data2vec-text** -- [Data2VecTextForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForMultipleChoice) (Data2VecText model)
 - **distilbert** -- [DistilBertForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForMultipleChoice) (DistilBERT model)
 - **electra** -- [ElectraForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/electra#transformers.ElectraForMultipleChoice) (ELECTRA model)
 - **flaubert** -- [FlaubertForMultipleChoice](/docs/transformers/pr_15507/en/model_doc/flaubert#transformers.FlaubertForMultipleChoice) (FlauBERT model)
@@ -2333,7 +2364,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForNextSentencePrediction</name><anchor>transformers.AutoModelForNextSentencePrediction</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L748</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForNextSentencePrediction</name><anchor>transformers.AutoModelForNextSentencePrediction</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L772</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a next sentence prediction head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -2489,7 +2520,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForTokenClassification</name><anchor>transformers.AutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L734</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForTokenClassification</name><anchor>transformers.AutoModelForTokenClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L758</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a token classification head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -2509,7 +2540,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [CamembertConfig](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertConfig) configuration class: [CamembertForTokenClassification](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForTokenClassification) (CamemBERT model)
   - [CanineConfig](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineConfig) configuration class: [CanineForTokenClassification](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineForTokenClassification) (Canine model)
   - [ConvBertConfig](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertConfig) configuration class: [ConvBertForTokenClassification](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertForTokenClassification) (ConvBERT model)
-  - [Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig) configuration class: [Data2VecForTokenClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForTokenClassification) (Data2Vec model)
+  - [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) configuration class: [Data2VecTextForTokenClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForTokenClassification) (Data2VecText model)
   - [DebertaConfig](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaConfig) configuration class: [DebertaForTokenClassification](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaForTokenClassification) (DeBERTa model)
   - [DebertaV2Config](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2Config) configuration class: [DebertaV2ForTokenClassification](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2ForTokenClassification) (DeBERTa-v2 model)
   - [DistilBertConfig](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertConfig) configuration class: [DistilBertForTokenClassification](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForTokenClassification) (DistilBERT model)
@@ -2641,7 +2672,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **camembert** -- [CamembertForTokenClassification](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForTokenClassification) (CamemBERT model)
 - **canine** -- [CanineForTokenClassification](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineForTokenClassification) (Canine model)
 - **convbert** -- [ConvBertForTokenClassification](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertForTokenClassification) (ConvBERT model)
-- **data2vec** -- [Data2VecForTokenClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForTokenClassification) (Data2Vec model)
+- **data2vec-text** -- [Data2VecTextForTokenClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForTokenClassification) (Data2VecText model)
 - **deberta** -- [DebertaForTokenClassification](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaForTokenClassification) (DeBERTa model)
 - **deberta-v2** -- [DebertaV2ForTokenClassification](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2ForTokenClassification) (DeBERTa-v2 model)
 - **distilbert** -- [DistilBertForTokenClassification](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForTokenClassification) (DistilBERT model)
@@ -2701,7 +2732,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForQuestionAnswering</name><anchor>transformers.AutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L716</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForQuestionAnswering</name><anchor>transformers.AutoModelForQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L740</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a question answering head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -2723,7 +2754,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [CamembertConfig](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertConfig) configuration class: [CamembertForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForQuestionAnswering) (CamemBERT model)
   - [CanineConfig](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineConfig) configuration class: [CanineForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineForQuestionAnswering) (Canine model)
   - [ConvBertConfig](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertConfig) configuration class: [ConvBertForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertForQuestionAnswering) (ConvBERT model)
-  - [Data2VecConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecConfig) configuration class: [Data2VecForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForQuestionAnswering) (Data2Vec model)
+  - [Data2VecTextConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextConfig) configuration class: [Data2VecTextForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForQuestionAnswering) (Data2VecText model)
   - [DebertaConfig](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaConfig) configuration class: [DebertaForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaForQuestionAnswering) (DeBERTa model)
   - [DebertaV2Config](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2Config) configuration class: [DebertaV2ForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2ForQuestionAnswering) (DeBERTa-v2 model)
   - [DistilBertConfig](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertConfig) configuration class: [DistilBertForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForQuestionAnswering) (DistilBERT model)
@@ -2861,7 +2892,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **camembert** -- [CamembertForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/camembert#transformers.CamembertForQuestionAnswering) (CamemBERT model)
 - **canine** -- [CanineForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/canine#transformers.CanineForQuestionAnswering) (Canine model)
 - **convbert** -- [ConvBertForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/convbert#transformers.ConvBertForQuestionAnswering) (ConvBERT model)
-- **data2vec** -- [Data2VecForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecForQuestionAnswering) (Data2Vec model)
+- **data2vec-text** -- [Data2VecTextForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextForQuestionAnswering) (Data2VecText model)
 - **deberta** -- [DebertaForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/deberta#transformers.DebertaForQuestionAnswering) (DeBERTa model)
 - **deberta-v2** -- [DebertaV2ForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/deberta-v2#transformers.DebertaV2ForQuestionAnswering) (DeBERTa-v2 model)
 - **distilbert** -- [DistilBertForQuestionAnswering](/docs/transformers/pr_15507/en/model_doc/distilbert#transformers.DistilBertForQuestionAnswering) (DistilBERT model)
@@ -2925,7 +2956,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForTableQuestionAnswering</name><anchor>transformers.AutoModelForTableQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L723</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForTableQuestionAnswering</name><anchor>transformers.AutoModelForTableQuestionAnswering</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L747</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a table question answering head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -3073,7 +3104,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForImageClassification</name><anchor>transformers.AutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L757</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForImageClassification</name><anchor>transformers.AutoModelForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L781</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a image classification head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -3092,6 +3123,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
   - [DeiTConfig](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTConfig) configuration class: [DeiTForImageClassification](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTForImageClassification) or [DeiTForImageClassificationWithTeacher](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTForImageClassificationWithTeacher) (DeiT model)
   - [ImageGPTConfig](/docs/transformers/pr_15507/en/model_doc/imagegpt#transformers.ImageGPTConfig) configuration class: [ImageGPTForImageClassification](/docs/transformers/pr_15507/en/model_doc/imagegpt#transformers.ImageGPTForImageClassification) (ImageGPT model)
   - [PerceiverConfig](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverConfig) configuration class: [PerceiverForImageClassificationLearned](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverForImageClassificationLearned) or [PerceiverForImageClassificationFourier](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverForImageClassificationFourier) or [PerceiverForImageClassificationConvProcessing](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverForImageClassificationConvProcessing) (Perceiver model)
+  - [PoolFormerConfig](/docs/transformers/pr_15507/en/model_doc/poolformer#transformers.PoolFormerConfig) configuration class: [PoolFormerForImageClassification](/docs/transformers/pr_15507/en/model_doc/poolformer#transformers.PoolFormerForImageClassification) (PoolFormer model)
   - [SegformerConfig](/docs/transformers/pr_15507/en/model_doc/segformer#transformers.SegformerConfig) configuration class: [SegformerForImageClassification](/docs/transformers/pr_15507/en/model_doc/segformer#transformers.SegformerForImageClassification) (SegFormer model)
   - [SwinConfig](/docs/transformers/pr_15507/en/model_doc/swin#transformers.SwinConfig) configuration class: [SwinForImageClassification](/docs/transformers/pr_15507/en/model_doc/swin#transformers.SwinForImageClassification) (Swin model)
   - [ViTConfig](/docs/transformers/pr_15507/en/model_doc/vit#transformers.ViTConfig) configuration class: [ViTForImageClassification](/docs/transformers/pr_15507/en/model_doc/vit#transformers.ViTForImageClassification) (ViT model)</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -3199,6 +3231,7 @@ falling back to using pattern matching on `pretrained_model_name_or_path`:
 - **deit** -- [DeiTForImageClassification](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTForImageClassification) or [DeiTForImageClassificationWithTeacher](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTForImageClassificationWithTeacher) (DeiT model)
 - **imagegpt** -- [ImageGPTForImageClassification](/docs/transformers/pr_15507/en/model_doc/imagegpt#transformers.ImageGPTForImageClassification) (ImageGPT model)
 - **perceiver** -- [PerceiverForImageClassificationLearned](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverForImageClassificationLearned) or [PerceiverForImageClassificationFourier](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverForImageClassificationFourier) or [PerceiverForImageClassificationConvProcessing](/docs/transformers/pr_15507/en/model_doc/perceiver#transformers.PerceiverForImageClassificationConvProcessing) (Perceiver model)
+- **poolformer** -- [PoolFormerForImageClassification](/docs/transformers/pr_15507/en/model_doc/poolformer#transformers.PoolFormerForImageClassification) (PoolFormer model)
 - **segformer** -- [SegformerForImageClassification](/docs/transformers/pr_15507/en/model_doc/segformer#transformers.SegformerForImageClassification) (SegFormer model)
 - **swin** -- [SwinForImageClassification](/docs/transformers/pr_15507/en/model_doc/swin#transformers.SwinForImageClassification) (Swin model)
 - **vit** -- [ViTForImageClassification](/docs/transformers/pr_15507/en/model_doc/vit#transformers.ViTForImageClassification) (ViT model)
@@ -3235,7 +3268,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForVision2Seq</name><anchor>transformers.AutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L787</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForVision2Seq</name><anchor>transformers.AutoModelForVision2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L811</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a vision-to-text modeling head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -3383,7 +3416,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForAudioClassification</name><anchor>transformers.AutoModelForAudioClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L794</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForAudioClassification</name><anchor>transformers.AutoModelForAudioClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L818</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a audio classification head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -3397,6 +3430,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 <docstring><name>from\_config</name><anchor>transformers.models.auto.auto_factory._BaseAutoModelClass.from_config</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/auto_factory.py#L390</source><parameters>[{"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) --
   The model class to instantiate is selected based on the configuration class:
 
+  - [Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig) configuration class: [Data2VecAudioForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioForSequenceClassification) (Data2VecAudio model)
   - [HubertConfig](/docs/transformers/pr_15507/en/model_doc/hubert#transformers.HubertConfig) configuration class: [HubertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/hubert#transformers.HubertForSequenceClassification) (Hubert model)
   - [SEWConfig](/docs/transformers/pr_15507/en/model_doc/sew#transformers.SEWConfig) configuration class: [SEWForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/sew#transformers.SEWForSequenceClassification) (SEW model)
   - [SEWDConfig](/docs/transformers/pr_15507/en/model_doc/sew-d#transformers.SEWDConfig) configuration class: [SEWDForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/sew-d#transformers.SEWDForSequenceClassification) (SEW-D model)
@@ -3503,6 +3537,7 @@ The model class to instantiate is selected based on the `model_type` property of
 passed as an argument or loaded from `pretrained_model_name_or_path` if possible), or when it's missing, by
 falling back to using pattern matching on `pretrained_model_name_or_path`:
 
+- **data2vec-audio** -- [Data2VecAudioForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioForSequenceClassification) (Data2VecAudio model)
 - **hubert** -- [HubertForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/hubert#transformers.HubertForSequenceClassification) (Hubert model)
 - **sew** -- [SEWForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/sew#transformers.SEWForSequenceClassification) (SEW model)
 - **sew-d** -- [SEWDForSequenceClassification](/docs/transformers/pr_15507/en/model_doc/sew-d#transformers.SEWDForSequenceClassification) (SEW-D model)
@@ -3543,7 +3578,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForAudioFrameClassification</name><anchor>transformers.AutoModelForAudioFrameClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L817</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForAudioFrameClassification</name><anchor>transformers.AutoModelForAudioFrameClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L841</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a audio frame (token) classification head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -3557,6 +3592,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 <docstring><name>from\_config</name><anchor>transformers.models.auto.auto_factory._BaseAutoModelClass.from_config</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/auto_factory.py#L390</source><parameters>[{"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) --
   The model class to instantiate is selected based on the configuration class:
 
+  - [Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig) configuration class: [Data2VecAudioForAudioFrameClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioForAudioFrameClassification) (Data2VecAudio model)
   - [UniSpeechSatConfig](/docs/transformers/pr_15507/en/model_doc/unispeech-sat#transformers.UniSpeechSatConfig) configuration class: [UniSpeechSatForAudioFrameClassification](/docs/transformers/pr_15507/en/model_doc/unispeech-sat#transformers.UniSpeechSatForAudioFrameClassification) (UniSpeechSat model)
   - [Wav2Vec2Config](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2Config) configuration class: [Wav2Vec2ForAudioFrameClassification](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2ForAudioFrameClassification) (Wav2Vec2 model)
   - [WavLMConfig](/docs/transformers/pr_15507/en/model_doc/wavlm#transformers.WavLMConfig) configuration class: [WavLMForAudioFrameClassification](/docs/transformers/pr_15507/en/model_doc/wavlm#transformers.WavLMForAudioFrameClassification) (WavLM model)</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -3659,6 +3695,7 @@ The model class to instantiate is selected based on the `model_type` property of
 passed as an argument or loaded from `pretrained_model_name_or_path` if possible), or when it's missing, by
 falling back to using pattern matching on `pretrained_model_name_or_path`:
 
+- **data2vec-audio** -- [Data2VecAudioForAudioFrameClassification](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioForAudioFrameClassification) (Data2VecAudio model)
 - **unispeech-sat** -- [UniSpeechSatForAudioFrameClassification](/docs/transformers/pr_15507/en/model_doc/unispeech-sat#transformers.UniSpeechSatForAudioFrameClassification) (UniSpeechSat model)
 - **wav2vec2** -- [Wav2Vec2ForAudioFrameClassification](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2ForAudioFrameClassification) (Wav2Vec2 model)
 - **wavlm** -- [WavLMForAudioFrameClassification](/docs/transformers/pr_15507/en/model_doc/wavlm#transformers.WavLMForAudioFrameClassification) (WavLM model)
@@ -3695,7 +3732,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForCTC</name><anchor>transformers.AutoModelForCTC</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L801</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForCTC</name><anchor>transformers.AutoModelForCTC</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L825</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a connectionist temporal classification head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -3709,6 +3746,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 <docstring><name>from\_config</name><anchor>transformers.models.auto.auto_factory._BaseAutoModelClass.from_config</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/auto_factory.py#L390</source><parameters>[{"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) --
   The model class to instantiate is selected based on the configuration class:
 
+  - [Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig) configuration class: [Data2VecAudioForCTC](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioForCTC) (Data2VecAudio model)
   - [HubertConfig](/docs/transformers/pr_15507/en/model_doc/hubert#transformers.HubertConfig) configuration class: [HubertForCTC](/docs/transformers/pr_15507/en/model_doc/hubert#transformers.HubertForCTC) (Hubert model)
   - [SEWConfig](/docs/transformers/pr_15507/en/model_doc/sew#transformers.SEWConfig) configuration class: [SEWForCTC](/docs/transformers/pr_15507/en/model_doc/sew#transformers.SEWForCTC) (SEW model)
   - [SEWDConfig](/docs/transformers/pr_15507/en/model_doc/sew-d#transformers.SEWDConfig) configuration class: [SEWDForCTC](/docs/transformers/pr_15507/en/model_doc/sew-d#transformers.SEWDForCTC) (SEW-D model)
@@ -3815,6 +3853,7 @@ The model class to instantiate is selected based on the `model_type` property of
 passed as an argument or loaded from `pretrained_model_name_or_path` if possible), or when it's missing, by
 falling back to using pattern matching on `pretrained_model_name_or_path`:
 
+- **data2vec-audio** -- [Data2VecAudioForCTC](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioForCTC) (Data2VecAudio model)
 - **hubert** -- [HubertForCTC](/docs/transformers/pr_15507/en/model_doc/hubert#transformers.HubertForCTC) (Hubert model)
 - **sew** -- [SEWForCTC](/docs/transformers/pr_15507/en/model_doc/sew#transformers.SEWForCTC) (SEW model)
 - **sew-d** -- [SEWDForCTC](/docs/transformers/pr_15507/en/model_doc/sew-d#transformers.SEWDForCTC) (SEW-D model)
@@ -3855,7 +3894,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForSpeechSeq2Seq</name><anchor>transformers.AutoModelForSpeechSeq2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L808</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForSpeechSeq2Seq</name><anchor>transformers.AutoModelForSpeechSeq2Seq</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L832</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a sequence-to-sequence speech-to-text modeling head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -4005,7 +4044,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForAudioXVector</name><anchor>transformers.AutoModelForAudioXVector</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L826</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForAudioXVector</name><anchor>transformers.AutoModelForAudioXVector</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L850</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a audio retrieval via x-vector head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -4019,6 +4058,7 @@ This class cannot be instantiated directly using `__init__()` (throws an error).
 <docstring><name>from\_config</name><anchor>transformers.models.auto.auto_factory._BaseAutoModelClass.from_config</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/auto_factory.py#L390</source><parameters>[{"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) --
   The model class to instantiate is selected based on the configuration class:
 
+  - [Data2VecAudioConfig](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioConfig) configuration class: [Data2VecAudioForXVector](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioForXVector) (Data2VecAudio model)
   - [UniSpeechSatConfig](/docs/transformers/pr_15507/en/model_doc/unispeech-sat#transformers.UniSpeechSatConfig) configuration class: [UniSpeechSatForXVector](/docs/transformers/pr_15507/en/model_doc/unispeech-sat#transformers.UniSpeechSatForXVector) (UniSpeechSat model)
   - [Wav2Vec2Config](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2Config) configuration class: [Wav2Vec2ForXVector](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2ForXVector) (Wav2Vec2 model)
   - [WavLMConfig](/docs/transformers/pr_15507/en/model_doc/wavlm#transformers.WavLMConfig) configuration class: [WavLMForXVector](/docs/transformers/pr_15507/en/model_doc/wavlm#transformers.WavLMForXVector) (WavLM model)</paramsdesc><paramgroups>0</paramgroups></docstring>
@@ -4121,6 +4161,7 @@ The model class to instantiate is selected based on the `model_type` property of
 passed as an argument or loaded from `pretrained_model_name_or_path` if possible), or when it's missing, by
 falling back to using pattern matching on `pretrained_model_name_or_path`:
 
+- **data2vec-audio** -- [Data2VecAudioForXVector](/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecAudioForXVector) (Data2VecAudio model)
 - **unispeech-sat** -- [UniSpeechSatForXVector](/docs/transformers/pr_15507/en/model_doc/unispeech-sat#transformers.UniSpeechSatForXVector) (UniSpeechSat model)
 - **wav2vec2** -- [Wav2Vec2ForXVector](/docs/transformers/pr_15507/en/model_doc/wav2vec2#transformers.Wav2Vec2ForXVector) (Wav2Vec2 model)
 - **wavlm** -- [WavLMForXVector](/docs/transformers/pr_15507/en/model_doc/wavlm#transformers.WavLMForXVector) (WavLM model)
@@ -4153,11 +4194,163 @@ True
 
 </div></div>
 
+<h2 id="transformers.AutoModelForMaskedImageModeling">AutoModelForMaskedImageModeling</h2>
+
+<div class="docstring">
+
+<docstring><name>class transformers.AutoModelForMaskedImageModeling</name><anchor>transformers.AutoModelForMaskedImageModeling</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L857</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+
+This is a generic model class that will be instantiated as one of the model classes of the library (with a masked image modeling head) when created
+with the `from_pretrained()`class method or the `from_config()`class
+method.
+
+This class cannot be instantiated directly using `__init__()` (throws an error).
+
+
+
+<div class="docstring">
+<docstring><name>from\_config</name><anchor>transformers.models.auto.auto_factory._BaseAutoModelClass.from_config</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/auto_factory.py#L390</source><parameters>[{"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig)) --
+  The model class to instantiate is selected based on the configuration class:
+
+  - [DeiTConfig](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTConfig) configuration class: [DeiTForMaskedImageModeling](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTForMaskedImageModeling) (DeiT model)
+  - [SwinConfig](/docs/transformers/pr_15507/en/model_doc/swin#transformers.SwinConfig) configuration class: [SwinForMaskedImageModeling](/docs/transformers/pr_15507/en/model_doc/swin#transformers.SwinForMaskedImageModeling) (Swin model)
+  - [ViTConfig](/docs/transformers/pr_15507/en/model_doc/vit#transformers.ViTConfig) configuration class: [ViTForMaskedImageModeling](/docs/transformers/pr_15507/en/model_doc/vit#transformers.ViTForMaskedImageModeling) (ViT model)</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Instantiates one of the model classes of the library (with a masked image modeling head) from a configuration.
+
+Note:
+Loading a model from its configuration file does **not** load the model weights. It only affects the
+model's configuration. Use `from_pretrained()`to load the model weights.
+
+
+
+Examples:
+
+```python
+>>> from transformers import AutoConfig, AutoModelForMaskedImageModeling
+
+>>> # Download configuration from huggingface.co and cache.
+>>> config = AutoConfig.from_pretrained("bert-base-cased")
+>>> model = AutoModelForMaskedImageModeling.from_config(config)
+```
+
+
+</div>
+<div class="docstring">
+<docstring><name>from\_pretrained</name><anchor>transformers.models.auto.auto_factory._BaseAutoModelClass.from_pretrained</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/auto_factory.py#L418</source><parameters>[{"name": "*model_args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pretrained_model_name_or_path** (`str` or `os.PathLike`) --
+  Can be either:
+
+  - A string, the *model id* of a pretrained model hosted inside a model repo on huggingface.co.
+    Valid model ids can be located at the root-level, like `bert-base-uncased`, or namespaced under a
+    user or organization name, like `dbmdz/bert-base-german-cased`.
+  - A path to a *directory* containing model weights saved using
+    [save_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.save_pretrained), e.g., `./my_model_directory/`.
+  - A path or url to a *tensorflow index checkpoint file* (e.g, `./tf_model/model.ckpt.index`). In
+    this case, `from_tf` should be set to `True` and a configuration object should be provided as
+    `config` argument. This loading path is slower than converting the TensorFlow checkpoint in a
+    PyTorch model using the provided conversion scripts and loading the PyTorch model afterwards.
+- **model_args** (additional positional arguments, *optional*) --
+  Will be passed along to the underlying model `__init__()` method.
+- **config** ([PretrainedConfig](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig), *optional*) --
+  Configuration for the model to use instead of an automatically loaded configuration. Configuration can
+  be automatically loaded when:
+
+  - The model is a model provided by the library (loaded with the *model id* string of a pretrained
+    model).
+  - The model was saved using [save_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.save_pretrained) and is reloaded by supplying the
+    save directory.
+  - The model is loaded by supplying a local directory as `pretrained_model_name_or_path` and a
+    configuration JSON file named *config.json* is found in the directory.
+- **state_dict** (*Dict[str, torch.Tensor]*, *optional*) --
+  A state dictionary to use instead of a state dictionary loaded from saved weights file.
+
+  This option can be used if you want to create a model from a pretrained configuration but load your own
+  weights. In this case though, you should check if using [save_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.save_pretrained) and
+  [from_pretrained()](/docs/transformers/pr_15507/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) is not a simpler option.
+- **cache_dir** (`str` or `os.PathLike`, *optional*) --
+  Path to a directory in which a downloaded pretrained model configuration should be cached if the
+  standard cache should not be used.
+- **from_tf** (`bool`, *optional*, defaults to `False`) --
+  Load the model weights from a TensorFlow checkpoint save file (see docstring of
+  `pretrained_model_name_or_path` argument).
+- **force_download** (`bool`, *optional*, defaults to `False`) --
+  Whether or not to force the (re-)download of the model weights and configuration files, overriding the
+  cached versions if they exist.
+- **resume_download** (`bool`, *optional*, defaults to `False`) --
+  Whether or not to delete incompletely received files. Will attempt to resume the download if such a
+  file exists.
+- **proxies** (`Dict[str, str]`, *optional*) --
+  A dictionary of proxy servers to use by protocol or endpoint, e.g., `&amp;lcub;'http': 'foo.bar:3128',
+  'http://hostname': 'foo.bar:4012'}`. The proxies are used on each request.
+- **output_loading_info(`bool`,** *optional*, defaults to `False`) --
+  Whether ot not to also return a dictionary containing missing keys, unexpected keys and error messages.
+- **local_files_only(`bool`,** *optional*, defaults to `False`) --
+  Whether or not to only look at local files (e.g., not try downloading the model).
+- **revision(`str`,** *optional*, defaults to `"main"`) --
+  The specific model version to use. It can be a branch name, a tag name, or a commit id, since we use a
+  git-based system for storing models and other artifacts on huggingface.co, so `revision` can be any
+  identifier allowed by git.
+- **trust_remote_code** (`bool`, *optional*, defaults to `False`) --
+  Whether or not to allow for custom models defined on the Hub in their own modeling files. This option
+  should only be set to `True` for repositories you trust and in which you have read the code, as it will
+  execute code present on the Hub on your local machine.
+- **kwargs** (additional keyword arguments, *optional*) --
+  Can be used to update the configuration object (after it being loaded) and initiate the model (e.g.,
+  `output_attentions=True`). Behaves differently depending on whether a `config` is provided or
+  automatically loaded:
+
+  - If a configuration is provided with `config`, `**kwargs` will be directly passed to the
+    underlying model's `__init__` method (we assume all relevant updates to the configuration have
+    already been done)
+  - If a configuration is not provided, `kwargs` will be first passed to the configuration class
+    initialization function ([from_pretrained()](/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig.from_pretrained)). Each key of `kwargs` that
+    corresponds to a configuration attribute will be used to override said attribute with the
+    supplied `kwargs` value. Remaining keys that do not correspond to any configuration attribute
+    will be passed to the underlying model's `__init__` function.</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Instantiate one of the model classes of the library (with a masked image modeling head) from a pretrained model.
+
+The model class to instantiate is selected based on the `model_type` property of the config object (either
+passed as an argument or loaded from `pretrained_model_name_or_path` if possible), or when it's missing, by
+falling back to using pattern matching on `pretrained_model_name_or_path`:
+
+- **deit** -- [DeiTForMaskedImageModeling](/docs/transformers/pr_15507/en/model_doc/deit#transformers.DeiTForMaskedImageModeling) (DeiT model)
+- **swin** -- [SwinForMaskedImageModeling](/docs/transformers/pr_15507/en/model_doc/swin#transformers.SwinForMaskedImageModeling) (Swin model)
+- **vit** -- [ViTForMaskedImageModeling](/docs/transformers/pr_15507/en/model_doc/vit#transformers.ViTForMaskedImageModeling) (ViT model)
+
+The model is set in evaluation mode by default using `model.eval()` (so for instance, dropout modules are
+deactivated). To train the model, you should first set it back in training mode with `model.train()`
+
+
+
+Examples:
+
+```python
+>>> from transformers import AutoConfig, AutoModelForMaskedImageModeling
+
+>>> # Download model and configuration from huggingface.co and cache.
+>>> model = AutoModelForMaskedImageModeling.from_pretrained("bert-base-cased")
+
+>>> # Update configuration during loading
+>>> model = AutoModelForMaskedImageModeling.from_pretrained("bert-base-cased", output_attentions=True)
+>>> model.config.output_attentions
+True
+
+>>> # Loading from a TF checkpoint file instead of a PyTorch model (slower)
+>>> config = AutoConfig.from_pretrained("./tf_model/bert_tf_model_config.json")
+>>> model = AutoModelForMaskedImageModeling.from_pretrained(
+...     "./tf_model/bert_tf_checkpoint.ckpt.index", from_tf=True, config=config
+... )
+```
+
+
+</div></div>
+
 <h2 id="transformers.AutoModelForObjectDetection">AutoModelForObjectDetection</h2>
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForObjectDetection</name><anchor>transformers.AutoModelForObjectDetection</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L780</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForObjectDetection</name><anchor>transformers.AutoModelForObjectDetection</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L804</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a object detection head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -4305,7 +4498,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForImageSegmentation</name><anchor>transformers.AutoModelForImageSegmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L764</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForImageSegmentation</name><anchor>transformers.AutoModelForImageSegmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L788</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a image segmentation head) when created
 with the `from_pretrained()`class method or the `from_config()`class
@@ -4453,7 +4646,7 @@ True
 
 <div class="docstring">
 
-<docstring><name>class transformers.AutoModelForSemanticSegmentation</name><anchor>transformers.AutoModelForSemanticSegmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L771</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+<docstring><name>class transformers.AutoModelForSemanticSegmentation</name><anchor>transformers.AutoModelForSemanticSegmentation</anchor><source>https://github.com/huggingface/transformers/blob/pr_15507/src/transformers/models/auto/modeling_auto.py#L795</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
 
 This is a generic model class that will be instantiated as one of the model classes of the library (with a semantic segmentation head) when created
 with the `from_pretrained()`class method or the `from_config()`class
