@@ -1130,7 +1130,7 @@ A [Constraint](/docs/transformers/pr_15761/en/internal/generation_utils#transfor
 
 <div class="docstring">
 
-<docstring><name>class transformers.Constraint</name><anchor>transformers.Constraint</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L13</source><parameters>[]</parameters></docstring>
+<docstring><name>class transformers.Constraint</name><anchor>transformers.Constraint</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L5</source><parameters>[]</parameters></docstring>
 Abstract base class for all constraints that can be applied during generation.
 It must define how the constraint can be satisfied.
 
@@ -1147,7 +1147,7 @@ will always terminate (halt).
 
 
 <div class="docstring">
-<docstring><name>advance</name><anchor>transformers.Constraint.advance</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L56</source><parameters>[]</parameters><rettype>token_ids(`torch.tensor`)</rettype><retdesc>Must be a tensor of a list of indexable tokens, not some integer.</retdesc></docstring>
+<docstring><name>advance</name><anchor>transformers.Constraint.advance</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L48</source><parameters>[]</parameters><rettype>token_ids(`torch.tensor`)</rettype><retdesc>Must be a tensor of a list of indexable tokens, not some integer.</retdesc></docstring>
 
 When called, returns the token that would take this constraint one step closer to being fulfilled.
 
@@ -1158,7 +1158,7 @@ When called, returns the token that would take this constraint one step closer t
 
 </div>
 <div class="docstring">
-<docstring><name>copy</name><anchor>transformers.Constraint.copy</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L121</source><parameters>[{"name": "stateful", "val": " = False"}]</parameters><paramsdesc>stateful(`bool`) -- Whether to not only copy the constraint for new instance, but also its state.</paramsdesc><paramgroups>0</paramgroups><rettype>constraint(`Constraint`)</rettype><retdesc>The same constraint as the one being called from.</retdesc></docstring>
+<docstring><name>copy</name><anchor>transformers.Constraint.copy</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L113</source><parameters>[{"name": "stateful", "val": " = False"}]</parameters><paramsdesc>stateful(`bool`) -- Whether to not only copy the constraint for new instance, but also its state.</paramsdesc><paramgroups>0</paramgroups><rettype>constraint(`Constraint`)</rettype><retdesc>The same constraint as the one being called from.</retdesc></docstring>
 
 Creates a new instance of this constraint.
 
@@ -1171,21 +1171,21 @@ Creates a new instance of this constraint.
 
 </div>
 <div class="docstring">
-<docstring><name>does\_advance</name><anchor>transformers.Constraint.does_advance</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L68</source><parameters>[{"name": "token_id", "val": ": int"}]</parameters></docstring>
+<docstring><name>does\_advance</name><anchor>transformers.Constraint.does_advance</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L60</source><parameters>[{"name": "token_id", "val": ": int"}]</parameters></docstring>
 
 Reads in a token and returns whether it creates progress.
 
 
 </div>
 <div class="docstring">
-<docstring><name>remaining</name><anchor>transformers.Constraint.remaining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L112</source><parameters>[]</parameters></docstring>
+<docstring><name>remaining</name><anchor>transformers.Constraint.remaining</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L104</source><parameters>[]</parameters></docstring>
 
 Returns the number of remaining steps of `advance()` in order to complete this constraint.
 
 
 </div>
 <div class="docstring">
-<docstring><name>reset</name><anchor>transformers.Constraint.reset</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L102</source><parameters>[]</parameters></docstring>
+<docstring><name>reset</name><anchor>transformers.Constraint.reset</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L94</source><parameters>[]</parameters></docstring>
 
 Resets the state of this constraint to its initialization. We would call this in cases where the fulfillment of
 a constraint is abrupted by an unwanted token.
@@ -1193,14 +1193,14 @@ a constraint is abrupted by an unwanted token.
 
 </div>
 <div class="docstring">
-<docstring><name>test</name><anchor>transformers.Constraint.test</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L32</source><parameters>[]</parameters></docstring>
+<docstring><name>test</name><anchor>transformers.Constraint.test</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L24</source><parameters>[]</parameters></docstring>
 
 Tests whether this constraint has been properly defined.
 
 
 </div>
 <div class="docstring">
-<docstring><name>update</name><anchor>transformers.Constraint.update</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L77</source><parameters>[{"name": "token_id", "val": ": int"}]</parameters><paramsdesc>token_id(`int`) --
+<docstring><name>update</name><anchor>transformers.Constraint.update</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L69</source><parameters>[{"name": "token_id", "val": ": int"}]</parameters><paramsdesc>token_id(`int`) --
 The id of a newly generated token in the beam search.</paramsdesc><paramgroups>0</paramgroups><rettype>stepped(`bool`)</rettype><retdesc>Whether this constraint has become one step closer to being fulfuilled.
 completed(`bool`):
 Whether this constraint has been completely fulfilled by this token being generated.
@@ -1225,7 +1225,7 @@ PhrasalConstraint)
 
 <div class="docstring">
 
-<docstring><name>class transformers.PhrasalConstraint</name><anchor>transformers.PhrasalConstraint</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L137</source><parameters>[{"name": "token_ids", "val": ": typing.Union[typing.List[int], torch.LongTensor]"}]</parameters><paramsdesc>- **token_ids** (`List[int]`) --
+<docstring><name>class transformers.PhrasalConstraint</name><anchor>transformers.PhrasalConstraint</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L129</source><parameters>[{"name": "token_ids", "val": ": typing.List[int]"}]</parameters><paramsdesc>- **token_ids** (`List[int]`) --
   The id of the token that must be generated by the output.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 [Constraint](/docs/transformers/pr_15761/en/internal/generation_utils#transformers.Constraint) enforcing that an ordered sequence of tokens is included in the output.
@@ -1237,9 +1237,8 @@ PhrasalConstraint)
 
 <div class="docstring">
 
-<docstring><name>class transformers.DisjunctiveConstraint</name><anchor>transformers.DisjunctiveConstraint</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L260</source><parameters>[{"name": "nested_token_ids", "val": ": typing.List[transformers.generation_beam_constraints.Constraint]"}]</parameters><paramsdesc>- **constraints** (`List[Constraint]`) --
-  The list of [Constraint](/docs/transformers/pr_15761/en/internal/generation_utils#transformers.Constraint) objects, fulfillment of just one of which fulfills this
-  [DisjunctiveConstraint](/docs/transformers/pr_15761/en/internal/generation_utils#transformers.DisjunctiveConstraint).</paramsdesc><paramgroups>0</paramgroups></docstring>
+<docstring><name>class transformers.DisjunctiveConstraint</name><anchor>transformers.DisjunctiveConstraint</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L253</source><parameters>[{"name": "nested_token_ids", "val": ": typing.List[typing.List[int]]"}]</parameters><paramsdesc>- **nested_token_ids** (`List[List[int]]`) -- a list of words, where each word is a list of ids. This constraint
+- **is** fulfilled by generating just one from the list of words. --</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 A special [Constraint](/docs/transformers/pr_15761/en/internal/generation_utils#transformers.Constraint) that is fulfilled by fulfilling just one of several constraints.
 
@@ -1250,7 +1249,7 @@ A special [Constraint](/docs/transformers/pr_15761/en/internal/generation_utils#
 
 <div class="docstring">
 
-<docstring><name>class transformers.ConstraintListState</name><anchor>transformers.ConstraintListState</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L378</source><parameters>[{"name": "constraints", "val": ": typing.List[transformers.generation_beam_constraints.Constraint]"}]</parameters><paramsdesc>- **constraints** (`List[Constraint]`) --
+<docstring><name>class transformers.ConstraintListState</name><anchor>transformers.ConstraintListState</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L343</source><parameters>[{"name": "constraints", "val": ": typing.List[transformers.generation_beam_constraints.Constraint]"}]</parameters><paramsdesc>- **constraints** (`List[Constraint]`) --
   A list of [Constraint](/docs/transformers/pr_15761/en/internal/generation_utils#transformers.Constraint) objects that must be fulfilled by the beam scorer.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
 A class for beam scorers to track its progress through a list of constraints.
@@ -1260,7 +1259,7 @@ A class for beam scorers to track its progress through a list of constraints.
 
 
 <div class="docstring">
-<docstring><name>advance</name><anchor>transformers.ConstraintListState.advance</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L410</source><parameters>[]</parameters></docstring>
+<docstring><name>advance</name><anchor>transformers.ConstraintListState.advance</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L375</source><parameters>[]</parameters></docstring>
 The list of tokens to generate such that we can make progress.
 By "list" we don't mean the list of token that will fully fulfill a constraint.
 
@@ -1278,7 +1277,7 @@ that's the only one we'll return.
 
 </div>
 <div class="docstring">
-<docstring><name>reset</name><anchor>transformers.ConstraintListState.reset</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L445</source><parameters>[{"name": "token_ids", "val": ": typing.Optional[torch.LongTensor]"}]</parameters></docstring>
+<docstring><name>reset</name><anchor>transformers.ConstraintListState.reset</anchor><source>https://github.com/huggingface/transformers/blob/pr_15761/src/transformers/generation_beam_constraints.py#L410</source><parameters>[{"name": "token_ids", "val": ": typing.List[int]"}]</parameters></docstring>
 
 token_ids: the tokens generated thus far to reset the state of the progress through constraints.
 
