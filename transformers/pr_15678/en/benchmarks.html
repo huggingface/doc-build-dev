@@ -1,13 +1,14 @@
-<meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;benchmarks&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;how-to-benchmark-transformers-models&quot;,&quot;title&quot;:&quot;How to benchmark 🤗 Transformers models&quot;},{&quot;local&quot;:&quot;benchmark-best-practices&quot;,&quot;title&quot;:&quot;Benchmark best practices&quot;},{&quot;local&quot;:&quot;sharing-your-benchmark&quot;,&quot;title&quot;:&quot;Sharing your benchmark&quot;}],&quot;title&quot;:&quot;Benchmarks&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/start-50888a5c.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/vendor-9e2b328e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/layout.svelte-5b9dda7d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/pages/benchmarks.mdx-d0bff9cc.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/Tip-76f97a76.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/IconCopyLink-fd0e58fd.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CodeBlockFw-0c398fb3.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CopyButton-4b97cbf7.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/DocNotebookDropdown-112a30e3.js"> 
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;benchmarks&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;how-to-benchmark-transformers-models&quot;,&quot;title&quot;:&quot;How to benchmark 🤗 Transformers models&quot;},{&quot;local&quot;:&quot;benchmark-best-practices&quot;,&quot;title&quot;:&quot;Benchmark best practices&quot;},{&quot;local&quot;:&quot;sharing-your-benchmark&quot;,&quot;title&quot;:&quot;Sharing your benchmark&quot;}],&quot;title&quot;:&quot;Benchmarks&quot;}" data-svelte="svelte-1phssyn">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/start-c12de525.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/vendor-4833417e.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/paths-4b3c6e7e.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/pages/__layout.svelte-c081948d.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/pages/benchmarks.mdx-44451ed1.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/Tip-fffd6df1.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/IconCopyLink-4b81c553.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CodeBlockFw-03f30a28.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/CopyButton-04a16537.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15678/en/_app/chunks/DocNotebookDropdown-ecff2a90.js"> 
 
 
 
@@ -52,7 +53,7 @@ backward pass.</p></div>
 <p>The benchmark classes <code>PyTorchBenchmark</code>and <code>TensorFlowBenchmark</code>expect an object of type <code>PyTorchBenchmarkArguments</code>and
 <code>TensorFlowBenchmarkArguments</code> respectively, for instantiation. <code>PyTorchBenchmarkArguments</code>and <code>TensorFlowBenchmarkArguments</code>are data classes and contain all relevant configurations for their corresponding benchmark class. In the following example, it is shown how a BERT model of type <em>bert-base-cased</em> can be benchmarked.</p>
 
-	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5 text-gray-600 " title="Copy code excerpt to clipboard" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="Copy code excerpt to clipboard" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -74,7 +75,7 @@ and <code>src/transformers/benchmark/benchmark_args_tf.py</code> (for Tensorflow
 commands from root will print out a descriptive list of all configurable parameters for PyTorch and Tensorflow
 respectively.</p>
 
-	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5 text-gray-600 " title="Copy code excerpt to clipboard" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="Copy code excerpt to clipboard" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -85,7 +86,7 @@ respectively.</p>
 		</button></div><!-- HTML_TAG_START -->python examples/pytorch/benchmarking/run_benchmark.py --<span class="hljs-built_in">help</span><!-- HTML_TAG_END --></pre></div>
 <p>An instantiated benchmark object can then simply be run by calling <code>benchmark.run()</code>.</p>
 
-	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5 text-gray-600 " title="Copy code excerpt to clipboard" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="Copy code excerpt to clipboard" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -149,7 +150,7 @@ when adding the argument <code>save_to_csv=True</code> to <code>PyTorchBenchmark
 alternatively benchmark an arbitrary configuration of any available model class. In this case, a <code>list</code> of
 configurations must be inserted with the benchmark args as follows.</p>
 
-	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5 text-gray-600 " title="Copy code excerpt to clipboard" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="Copy code excerpt to clipboard" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -258,10 +259,10 @@ available <a href="https://docs.google.com/spreadsheets/d/1sryqufw2D0XlUH4sq3e9W
 <li><a href="https://github.com/huggingface/transformers/tree/master/examples/tensorflow/benchmarking/README.md" rel="nofollow">TensorFlow Benchmarking Results</a>.</li></ul>
 
 
-		<script type="module" data-hydrate="eyyh5c">
-		import { start } from "/docs/transformers/pr_15678/en/_app/start-50888a5c.js";
+		<script type="module" data-hydrate="2f4j80">
+		import { start } from "/docs/transformers/pr_15678/en/_app/start-c12de525.js";
 		start({
-			target: document.querySelector('[data-hydrate="eyyh5c"]').parentNode,
+			target: document.querySelector('[data-hydrate="2f4j80"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15678/en","assets":"/docs/transformers/pr_15678/en"},
 			session: {},
 			route: false,
@@ -271,8 +272,8 @@ available <a href="https://docs.google.com/spreadsheets/d/1sryqufw2D0XlUH4sq3e9W
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_15678/en/_app/layout.svelte-5b9dda7d.js"),
-						import("/docs/transformers/pr_15678/en/_app/pages/benchmarks.mdx-d0bff9cc.js")
+					import("/docs/transformers/pr_15678/en/_app/pages/__layout.svelte-c081948d.js"),
+						import("/docs/transformers/pr_15678/en/_app/pages/benchmarks.mdx-44451ed1.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15678/en/benchmarks"),
 				params: {}
