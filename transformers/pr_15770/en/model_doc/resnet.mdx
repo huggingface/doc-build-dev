@@ -68,8 +68,8 @@ The original code can be found [here](https://github.com/KaimingHe/deep-residual
   Depth (number of blocks) for each stage.
 - **embeddings_type** (`str`, *optional*, defaults to `"classic"`) --
   The embedding layer to use, either `"classic"` or `"3x3"`. If `"classic"`, the original resnet embedding, a
-  single agressive convolution, is applied. If `"3x3"`, three `3x3` are applied instead.
-- **layer_type="basic"** (`str`, *optional*, defaults to `"bottleneck"`) --
+  single agressive `7x7` convolution, is applied. If `"3x3"`, three `3x3` are applied instead.
+- **layer_type** (`str`, *optional*, defaults to `"bottleneck"`) --
   The layer to use, it can be either `"basic"` (`ResNetBasicLayer`) or `"bottleneck"`
   (`ResNetBottleNeckLayer`).
 - **hidden_act** (`str` or `function`, *optional*, defaults to `"relu"`) --
@@ -105,7 +105,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.ResNetModel</name><anchor>transformers.ResNetModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15770/src/transformers/models/resnet/modeling_resnet.py#L399</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([ResNetConfig](/docs/transformers/pr_15770/en/model_doc/resnet#transformers.ResNetConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.ResNetModel</name><anchor>transformers.ResNetModel</anchor><source>https://github.com/huggingface/transformers/blob/pr_15770/src/transformers/models/resnet/modeling_resnet.py#L400</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([ResNetConfig](/docs/transformers/pr_15770/en/model_doc/resnet#transformers.ResNetConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15770/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 The bare ResNet model outputting raw features without any specific head on top.
@@ -118,7 +118,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.ResNetModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15770/src/transformers/models/resnet/modeling_resnet.py#L410</source><parameters>[{"name": "pixel_values", "val": ": Tensor"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict", "val": ": typing.Optional[bool] = None"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
+<docstring><name>forward</name><anchor>transformers.ResNetModel.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15770/src/transformers/models/resnet/modeling_resnet.py#L411</source><parameters>[{"name": "pixel_values", "val": ": Tensor"}, {"name": "output_hidden_states", "val": ": typing.Optional[bool] = None"}, {"name": "return_dict", "val": ": typing.Optional[bool] = None"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
   Pixel values. Pixel values can be obtained using [AutoFeatureExtractor](/docs/transformers/pr_15770/en/model_doc/auto#transformers.AutoFeatureExtractor). See
   `AutoFeatureExtractor.__call__()`for details.
 
@@ -171,7 +171,7 @@ Example:
 
 >>> last_hidden_states = outputs.last_hidden_state
 >>> list(last_hidden_states.shape)
-[1, 2048, 14, 14]
+[1, 2048, 7, 7]
 ```
 
 
@@ -181,7 +181,7 @@ Example:
 
 <div class="docstring">
 
-<docstring><name>class transformers.ResNetForImageClassification</name><anchor>transformers.ResNetForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15770/src/transformers/models/resnet/modeling_resnet.py#L456</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([ResNetConfig](/docs/transformers/pr_15770/en/model_doc/resnet#transformers.ResNetConfig)) -- Model configuration class with all the parameters of the model.
+<docstring><name>class transformers.ResNetForImageClassification</name><anchor>transformers.ResNetForImageClassification</anchor><source>https://github.com/huggingface/transformers/blob/pr_15770/src/transformers/models/resnet/modeling_resnet.py#L457</source><parameters>[{"name": "config", "val": ""}]</parameters><paramsdesc>- **config** ([ResNetConfig](/docs/transformers/pr_15770/en/model_doc/resnet#transformers.ResNetConfig)) -- Model configuration class with all the parameters of the model.
   Initializing with a config file does not load the weights associated with the model, only the
   configuration. Check out the [from_pretrained()](/docs/transformers/pr_15770/en/main_classes/model#transformers.PreTrainedModel.from_pretrained) method to load the model weights.</paramsdesc><paramgroups>0</paramgroups></docstring>
 
@@ -197,7 +197,7 @@ behavior.
 
 
 <div class="docstring">
-<docstring><name>forward</name><anchor>transformers.ResNetForImageClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15770/src/transformers/models/resnet/modeling_resnet.py#L469</source><parameters>[{"name": "pixel_values", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
+<docstring><name>forward</name><anchor>transformers.ResNetForImageClassification.forward</anchor><source>https://github.com/huggingface/transformers/blob/pr_15770/src/transformers/models/resnet/modeling_resnet.py#L470</source><parameters>[{"name": "pixel_values", "val": " = None"}, {"name": "labels", "val": " = None"}, {"name": "output_hidden_states", "val": " = None"}, {"name": "return_dict", "val": " = None"}]</parameters><paramsdesc>- **pixel_values** (`torch.FloatTensor` of shape `(batch_size, num_channels, height, width)`) --
   Pixel values. Pixel values can be obtained using [AutoFeatureExtractor](/docs/transformers/pr_15770/en/model_doc/auto#transformers.AutoFeatureExtractor). See
   `AutoFeatureExtractor.__call__()`for details.
 
