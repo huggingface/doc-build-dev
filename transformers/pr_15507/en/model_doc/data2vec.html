@@ -1,8 +1,8 @@
 <meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;data2vec&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextConfig&quot;,&quot;title&quot;:&quot;Data2VecTextConfig&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioConfig&quot;,&quot;title&quot;:&quot;Data2VecAudioConfig&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioModel&quot;,&quot;title&quot;:&quot;Data2VecAudioModel&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForAudioFrameClassification&quot;,&quot;title&quot;:&quot;Data2VecAudioForAudioFrameClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForCTC&quot;,&quot;title&quot;:&quot;Data2VecAudioForCTC&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForSequenceClassification&quot;,&quot;title&quot;:&quot;Data2VecAudioForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForXVector&quot;,&quot;title&quot;:&quot;Data2VecAudioForXVector&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextModel&quot;,&quot;title&quot;:&quot;Data2VecTextModel&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForCausalLM&quot;,&quot;title&quot;:&quot;Data2VecTextForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForMaskedLM&quot;,&quot;title&quot;:&quot;Data2VecTextForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForSequenceClassification&quot;,&quot;title&quot;:&quot;Data2VecTextForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForMultipleChoice&quot;,&quot;title&quot;:&quot;Data2VecTextForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForTokenClassification&quot;,&quot;title&quot;:&quot;Data2VecTextForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForQuestionAnswering&quot;,&quot;title&quot;:&quot;Data2VecTextForQuestionAnswering&quot;}],&quot;title&quot;:&quot;Data2Vec&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/start-45d1b21d.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/start-52db5a42.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/vendor-9e2b328e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/layout.svelte-5b9dda7d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-11589fce.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-f2b1e639.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/Tip-76f97a76.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/Docstring-50fd6873.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/IconCopyLink-fd0e58fd.js">
@@ -151,7 +151,7 @@ The dropout ratio for the classification head.<!-- HTML_TAG_END -->
 <p>This is the configuration class to store the configuration of a <a href="/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextModel">Data2VecTextModel</a> and <a href="/docs/transformers/pr_15507/en/model_doc/data2vec#transformers.Data2VecTextModel">Data2VecTextModel</a>. It
 is used to instantiate a Data2VecText model according to the specified arguments, defining the model architecture.
 Instantiating a configuration with the defaults will yield a similar configuration to that of the Data2VecText
-<a href="https://huggingface.co/edugp/data2vec-nlp-base" rel="nofollow">edugp/data2vec-nlp-base</a> architecture.</p>
+<a href="https://huggingface.co/facebook/data2vec-text-base" rel="nofollow">facebook/data2vec-text-base</a> architecture.</p>
 <p>Configuration objects inherit from <a href="/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig">PretrainedConfig</a> and can be used to control the model outputs. Read the
 documentation from <a href="/docs/transformers/pr_15507/en/main_classes/configuration#transformers.PretrainedConfig">PretrainedConfig</a> for more information.</p>
 <p>Examples:</p>
@@ -162,10 +162,10 @@ documentation from <a href="/docs/transformers/pr_15507/en/main_classes/configur
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> Data2VecTextModel, Data2VecTextConfig
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a Data2VecText edugp/data2vec-nlp-base style configuration</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a Data2VecText facebook/data2vec-text-base style configuration</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>configuration = Data2VecTextConfig()
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a model from the edugp/data2vec-nlp-base style configuration</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a model from the facebook/data2vec-text-base style configuration</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = Data2VecTextModel(configuration)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Accessing the model configuration</span>
@@ -2713,10 +2713,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>end_scores = outputs.end_logits<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="2d774k">
-		import { start } from "/docs/transformers/pr_15507/en/_app/start-45d1b21d.js";
+		<script type="module" data-hydrate="1gz8tas">
+		import { start } from "/docs/transformers/pr_15507/en/_app/start-52db5a42.js";
 		start({
-			target: document.querySelector('[data-hydrate="2d774k"]').parentNode,
+			target: document.querySelector('[data-hydrate="1gz8tas"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15507/en","assets":"/docs/transformers/pr_15507/en"},
 			session: {},
 			route: false,
@@ -2727,7 +2727,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15507/en/_app/layout.svelte-5b9dda7d.js"),
-						import("/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-11589fce.js")
+						import("/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-f2b1e639.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15507/en/model_doc/data2vec"),
 				params: {}
