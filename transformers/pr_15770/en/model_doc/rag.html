@@ -1,8 +1,8 @@
 <meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;rag&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.RagConfig&quot;,&quot;title&quot;:&quot;RagConfig&quot;},{&quot;local&quot;:&quot;transformers.RagTokenizer&quot;,&quot;title&quot;:&quot;RagTokenizer&quot;},{&quot;local&quot;:&quot;transformers.models.rag.modeling_rag.RetrievAugLMMarginOutput&quot;,&quot;title&quot;:&quot;Rag specific outputs&quot;},{&quot;local&quot;:&quot;transformers.RagRetriever&quot;,&quot;title&quot;:&quot;RagRetriever&quot;},{&quot;local&quot;:&quot;transformers.RagModel&quot;,&quot;title&quot;:&quot;RagModel&quot;},{&quot;local&quot;:&quot;transformers.RagSequenceForGeneration&quot;,&quot;title&quot;:&quot;RagSequenceForGeneration&quot;},{&quot;local&quot;:&quot;transformers.RagTokenForGeneration&quot;,&quot;title&quot;:&quot;RagTokenForGeneration&quot;},{&quot;local&quot;:&quot;transformers.TFRagModel&quot;,&quot;title&quot;:&quot;TFRagModel&quot;},{&quot;local&quot;:&quot;transformers.TFRagSequenceForGeneration&quot;,&quot;title&quot;:&quot;TFRagSequenceForGeneration&quot;},{&quot;local&quot;:&quot;transformers.TFRagTokenForGeneration&quot;,&quot;title&quot;:&quot;TFRagTokenForGeneration&quot;}],&quot;title&quot;:&quot;RAG&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/start-d45eb0c4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/start-dc37de0e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/vendor-9e2b328e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/layout.svelte-5b9dda7d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/pages/model_doc/rag.mdx-20316420.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/pages/model_doc/rag.mdx-343bfcd7.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/Tip-76f97a76.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/Docstring-50fd6873.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/IconCopyLink-fd0e58fd.js">
@@ -630,8 +630,7 @@ contents, and it formats them to be used with a RagModel.</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60"> = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>tuple(tensors)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -651,9 +650,7 @@ Prefix added at the beginning of each input, typically used with T5-based models
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.RagRetriever.postprocess_docs.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><code>tuple(tensors)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>a tuple consisting of two elements: contextualized <code>input_ids</code> and a compatible
@@ -671,7 +668,11 @@ Prefix added at the beginning of each input, typically used with T5-based models
 			</span>
 		<span>)</span>
 		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>Tuple[np.ndarray, np.ndarray, List[dict]]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START -->
+<ul>
+<li><strong>doc_dicts</strong> (<code>List[dict]</code>)</li>
+</ul>
+<!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -688,7 +689,9 @@ The number of docs retrieved per query.<!-- HTML_TAG_END -->
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.RagRetriever.retrieve.returns"><p class="text-base">Returns</p>
 				<!-- HTML_TAG_START -->
-<p><code>Tuple[np.ndarray, np.ndarray, List[dict]]</code></p>
+<ul>
+<li><strong>doc_dicts</strong> (<code>List[dict]</code>)</li>
+</ul>
 <!-- HTML_TAG_END -->
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
@@ -696,8 +699,8 @@ The number of docs retrieved per query.<!-- HTML_TAG_END -->
 <ul>
 <li><strong>retrieved_doc_embeds</strong> (<code>np.ndarray</code> of shape <code>(batch_size, n_docs, dim)</code>) — The retrieval embeddings
 of the retrieved docs per query.</li>
-<li><strong>doc_ids</strong> (<code>np.ndarray</code> of shape <code>(batch_size, n_docs)</code>) — The ids of the documents in the index</li>
-<li><strong>doc_dicts</strong> (<code>List[dict]</code>): The <code>retrieved_doc_embeds</code> examples per query.</li>
+<li><strong>doc_ids</strong> (<code>np.ndarray</code> of shape <code>(batch_size, n_docs)</code>) — The ids of the documents in the index
+The <code>retrieved_doc_embeds</code> examples per query.</li>
 </ul>
 <!-- HTML_TAG_END --></p></div></div>
 <p>Retrieves documents for specified <code>question_hidden_states</code>.</p></div></div>
@@ -788,10 +791,7 @@ and behavior.</p>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">n_docs<span class="opacity-60"> = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/model_doc/rag#transformers.models.rag.modeling_rag.RetrievAugLMOutput"
->transformers.models.rag.modeling_rag.RetrievAugLMOutput</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -881,11 +881,7 @@ Number of documents to retrieve and/or number of documents for which to generate
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.RagModel.forward.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/model_doc/rag#transformers.models.rag.modeling_rag.RetrievAugLMOutput"
->transformers.models.rag.modeling_rag.RetrievAugLMOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -1083,10 +1079,7 @@ and behavior.</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/model_doc/rag#transformers.models.rag.modeling_rag.RetrievAugLMMarginOutput"
->transformers.models.rag.modeling_rag.RetrievAugLMMarginOutput</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1190,11 +1183,7 @@ Legacy dictionary, which is required so that model can use <em>generate()</em> f
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.RagSequenceForGeneration.forward.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/model_doc/rag#transformers.models.rag.modeling_rag.RetrievAugLMMarginOutput"
->transformers.models.rag.modeling_rag.RetrievAugLMMarginOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -1342,8 +1331,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**model_kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>torch.LongTensor</code> of shape <code>(batch_size * num_return_sequences, sequence_length)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1406,9 +1394,7 @@ Additional kwargs will be passed to <a href="/docs/transformers/pr_15770/en/main
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.RagSequenceForGeneration.generate.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><code>torch.LongTensor</code> of shape <code>(batch_size * num_return_sequences, sequence_length)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>The generated
@@ -1509,10 +1495,7 @@ and behavior.</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/model_doc/rag#transformers.models.rag.modeling_rag.RetrievAugLMMarginOutput"
->transformers.models.rag.modeling_rag.RetrievAugLMMarginOutput</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1616,11 +1599,7 @@ Legacy dictionary, which is required so that model can use <em>generate()</em> f
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.RagTokenForGeneration.forward.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/model_doc/rag#transformers.models.rag.modeling_rag.RetrievAugLMMarginOutput"
->transformers.models.rag.modeling_rag.RetrievAugLMMarginOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -1796,8 +1775,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**model_kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>torch.LongTensor</code> of shape <code>(batch_size * num_return_sequences, sequence_length)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1947,9 +1925,7 @@ crash. Note that using <code>remove_invalid_values</code> can slow down generati
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.RagTokenForGeneration.generate.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><code>torch.LongTensor</code> of shape <code>(batch_size * num_return_sequences, sequence_length)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>The generated
@@ -2047,8 +2023,7 @@ SavedModel format.</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.rag.modeling_tf_rag.TFRetrievAugLMOutput</code>or <code>tuple(tf.Tensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2141,9 +2116,7 @@ Number of documents to retrieve and/or number of documents for which to generate
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFRagModel.call.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><code>transformers.models.rag.modeling_tf_rag.TFRetrievAugLMOutput</code>or <code>tuple(tf.Tensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <code>transformers.models.rag.modeling_tf_rag.TFRetrievAugLMOutput</code>or a tuple of <code>tf.Tensor</code> (if
@@ -2339,8 +2312,7 @@ SavedModel format.</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.rag.modeling_tf_rag.TFRetrievAugLMMarginOutput</code>or <code>tuple(tf.Tensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2453,9 +2425,7 @@ Legacy dictionary, which is required so that model can use <em>generate()</em> f
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFRagSequenceForGeneration.call.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><code>transformers.models.rag.modeling_tf_rag.TFRetrievAugLMMarginOutput</code>or <code>tuple(tf.Tensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <code>transformers.models.rag.modeling_tf_rag.TFRetrievAugLMMarginOutput</code>or a tuple of <code>tf.Tensor</code> (if
@@ -2607,8 +2577,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**model_kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>tf.Tensor</code> of shape <code>(batch_size * num_return_sequences, sequence_length)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2667,9 +2636,7 @@ Additional kwargs will be passed to <a href="/docs/transformers/pr_15770/en/main
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFRagSequenceForGeneration.generate.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><code>tf.Tensor</code> of shape <code>(batch_size * num_return_sequences, sequence_length)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>The generated sequences. The
@@ -2772,8 +2739,7 @@ SavedModel format.</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.rag.modeling_tf_rag.TFRetrievAugLMMarginOutput</code>or <code>tuple(tf.Tensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2886,9 +2852,7 @@ Legacy dictionary, which is required so that model can use <em>generate()</em> f
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFRagTokenForGeneration.call.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><code>transformers.models.rag.modeling_tf_rag.TFRetrievAugLMMarginOutput</code>or <code>tuple(tf.Tensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <code>transformers.models.rag.modeling_tf_rag.TFRetrievAugLMMarginOutput</code>or a tuple of <code>tf.Tensor</code> (if
@@ -3053,8 +3017,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**model_kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>tf.Tensor</code> of shape <code>(batch_size * num_return_sequences, sequence_length)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -3174,9 +3137,7 @@ Additional model specific kwargs will be forwarded to the <code>forward</code> f
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFRagTokenForGeneration.generate.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><code>tf.Tensor</code> of shape <code>(batch_size * num_return_sequences, sequence_length)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>The generated sequences. The
@@ -3186,10 +3147,10 @@ due to the <code>eos_token_id</code>.</p>
 <p>Implements TFRAG token decoding.</p></div></div>
 
 
-		<script type="module" data-hydrate="ru6bm7">
-		import { start } from "/docs/transformers/pr_15770/en/_app/start-d45eb0c4.js";
+		<script type="module" data-hydrate="xk3m9a">
+		import { start } from "/docs/transformers/pr_15770/en/_app/start-dc37de0e.js";
 		start({
-			target: document.querySelector('[data-hydrate="ru6bm7"]').parentNode,
+			target: document.querySelector('[data-hydrate="xk3m9a"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15770/en","assets":"/docs/transformers/pr_15770/en"},
 			session: {},
 			route: false,
@@ -3200,7 +3161,7 @@ due to the <code>eos_token_id</code>.</p>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15770/en/_app/layout.svelte-5b9dda7d.js"),
-						import("/docs/transformers/pr_15770/en/_app/pages/model_doc/rag.mdx-20316420.js")
+						import("/docs/transformers/pr_15770/en/_app/pages/model_doc/rag.mdx-343bfcd7.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15770/en/model_doc/rag"),
 				params: {}

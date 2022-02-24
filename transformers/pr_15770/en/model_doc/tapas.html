@@ -1,8 +1,8 @@
 <meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;tapas&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;usage-finetuning&quot;,&quot;title&quot;:&quot;Usage: fine-tuning&quot;},{&quot;local&quot;:&quot;usage-inference&quot;,&quot;title&quot;:&quot;Usage: inference&quot;},{&quot;local&quot;:&quot;transformers.models.tapas.modeling_tapas.TableQuestionAnsweringOutput&quot;,&quot;title&quot;:&quot;TAPAS specific outputs&quot;},{&quot;local&quot;:&quot;transformers.TapasConfig&quot;,&quot;title&quot;:&quot;TapasConfig&quot;},{&quot;local&quot;:&quot;transformers.TapasTokenizer&quot;,&quot;title&quot;:&quot;TapasTokenizer&quot;},{&quot;local&quot;:&quot;transformers.TapasModel&quot;,&quot;title&quot;:&quot;TapasModel&quot;},{&quot;local&quot;:&quot;transformers.TapasForMaskedLM&quot;,&quot;title&quot;:&quot;TapasForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TapasForSequenceClassification&quot;,&quot;title&quot;:&quot;TapasForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TapasForQuestionAnswering&quot;,&quot;title&quot;:&quot;TapasForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFTapasModel&quot;,&quot;title&quot;:&quot;TFTapasModel&quot;},{&quot;local&quot;:&quot;transformers.TFTapasForMaskedLM&quot;,&quot;title&quot;:&quot;TFTapasForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFTapasForSequenceClassification&quot;,&quot;title&quot;:&quot;TFTapasForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFTapasForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFTapasForQuestionAnswering&quot;}],&quot;title&quot;:&quot;TAPAS&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/start-d45eb0c4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/start-dc37de0e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/vendor-9e2b328e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/layout.svelte-5b9dda7d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/pages/model_doc/tapas.mdx-60e1cc6f.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/pages/model_doc/tapas.mdx-5828862f.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/Tip-76f97a76.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/Docstring-50fd6873.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/IconCopyLink-fd0e58fd.js">
@@ -902,8 +902,7 @@ If set, will return tensors instead of list of python integers. Acceptable value
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">cell_classification_threshold<span class="opacity-60"> = 0.5</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>tuple</code> comprising various elements depending on the inputs</span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -928,15 +927,13 @@ this threshold will be selected.<!-- HTML_TAG_END -->
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TapasTokenizer.convert_logits_to_predictions.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><code>tuple</code> comprising various elements depending on the inputs</p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
-<ul>
-<li>predicted_answer_coordinates (<code>List[List[[tuple]]</code> of length <code>batch_size</code>): Predicted answer coordinates
+<p>Predicted answer coordinates
 as a list of lists of tuples. Each element in the list contains the predicted answer coordinates of a
-single example in the batch, as a list of tuples. Each tuple is a cell, i.e. (row index, column index).</li>
+single example in the batch, as a list of tuples. Each tuple is a cell, i.e. (row index, column index).</p>
+<ul>
 <li>predicted_aggregation_indices (<code>List[int]</code>of length <code>batch_size</code>, <em>optional</em>, returned when
 <code>logits_aggregation</code> is provided): Predicted aggregation operator indices of the aggregation head.</li>
 </ul>
@@ -1020,10 +1017,7 @@ Llion Jones, Aidan N. Gomez, Lukasz Kaiser and Illia Polosukhin.</p>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60"> = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling"
->transformers.modeling_outputs.BaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1084,11 +1078,7 @@ Whether or not to return a <a href="/docs/transformers/pr_15770/en/main_classes/
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TapasModel.forward.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling"
->transformers.modeling_outputs.BaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -1204,10 +1194,7 @@ and behavior.</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_outputs.MaskedLMOutput"
->transformers.modeling_outputs.MaskedLMOutput</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1273,11 +1260,7 @@ loss is only computed for the tokens with labels in <code>[0, ..., config.vocab_
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TapasForMaskedLM.forward.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_outputs.MaskedLMOutput"
->transformers.modeling_outputs.MaskedLMOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -1392,10 +1375,7 @@ and behavior.</p>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60"> = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput"
->transformers.modeling_outputs.SequenceClassifierOutput</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1462,11 +1442,7 @@ Labels for computing the sequence classification/regression loss. Indices should
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TapasForSequenceClassification.forward.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput"
->transformers.modeling_outputs.SequenceClassifierOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -1589,10 +1565,7 @@ and behavior.</p>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60"> = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/model_doc/tapas#transformers.models.tapas.modeling_tapas.TableQuestionAnsweringOutput"
->transformers.models.tapas.modeling_tapas.TableQuestionAnsweringOutput</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1689,11 +1662,7 @@ of weak supervision for aggregation (WTQ) to calculate the regression loss.<!-- 
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TapasForQuestionAnswering.forward.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/model_doc/tapas#transformers.models.tapas.modeling_tapas.TableQuestionAnsweringOutput"
->transformers.models.tapas.modeling_tapas.TableQuestionAnsweringOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -1813,10 +1782,7 @@ first positional argument :</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling"
->transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling</a> or <code>tuple(tf.Tensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1889,11 +1855,7 @@ behaviors between training and evaluation).<!-- HTML_TAG_END -->
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFTapasModel.call.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling"
->transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling</a> or <code>tuple(tf.Tensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -2024,10 +1986,7 @@ first positional argument :</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_tf_outputs.TFMaskedLMOutput"
->transformers.modeling_tf_outputs.TFMaskedLMOutput</a> or <code>tuple(tf.Tensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2105,11 +2064,7 @@ loss is only computed for the tokens with labels in <code>[0, ..., config.vocab_
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFTapasForMaskedLM.call.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_tf_outputs.TFMaskedLMOutput"
->transformers.modeling_tf_outputs.TFMaskedLMOutput</a> or <code>tuple(tf.Tensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -2241,10 +2196,7 @@ first positional argument :</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_tf_outputs.TFSequenceClassifierOutput"
->transformers.modeling_tf_outputs.TFSequenceClassifierOutput</a> or <code>tuple(tf.Tensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2323,11 +2275,7 @@ Labels for computing the sequence classification/regression loss. Indices should
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFTapasForSequenceClassification.call.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_tf_outputs.TFSequenceClassifierOutput"
->transformers.modeling_tf_outputs.TFSequenceClassifierOutput</a> or <code>tuple(tf.Tensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -2467,8 +2415,7 @@ first positional argument :</p>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.tapas.modeling_tf_tapas.TFTableQuestionAnsweringOutput</code>or <code>tuple(tf.Tensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2577,9 +2524,7 @@ of weak supervision for aggregation (WTQ) to calculate the regression loss.<!-- 
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFTapasForQuestionAnswering.call.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><code>transformers.models.tapas.modeling_tf_tapas.TFTableQuestionAnsweringOutput</code>or <code>tuple(tf.Tensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <code>transformers.models.tapas.modeling_tf_tapas.TFTableQuestionAnsweringOutput</code>or a tuple of <code>tf.Tensor</code> (if
@@ -2632,10 +2577,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits_aggregation = outputs.logits_aggregation<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="bgl0eu">
-		import { start } from "/docs/transformers/pr_15770/en/_app/start-d45eb0c4.js";
+		<script type="module" data-hydrate="5c5ji1">
+		import { start } from "/docs/transformers/pr_15770/en/_app/start-dc37de0e.js";
 		start({
-			target: document.querySelector('[data-hydrate="bgl0eu"]').parentNode,
+			target: document.querySelector('[data-hydrate="5c5ji1"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15770/en","assets":"/docs/transformers/pr_15770/en"},
 			session: {},
 			route: false,
@@ -2646,7 +2591,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15770/en/_app/layout.svelte-5b9dda7d.js"),
-						import("/docs/transformers/pr_15770/en/_app/pages/model_doc/tapas.mdx-60e1cc6f.js")
+						import("/docs/transformers/pr_15770/en/_app/pages/model_doc/tapas.mdx-5828862f.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15770/en/model_doc/tapas"),
 				params: {}

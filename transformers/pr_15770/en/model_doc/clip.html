@@ -1,8 +1,8 @@
 <meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;clip&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;usage&quot;,&quot;title&quot;:&quot;Usage&quot;},{&quot;local&quot;:&quot;transformers.CLIPConfig&quot;,&quot;title&quot;:&quot;CLIPConfig&quot;},{&quot;local&quot;:&quot;transformers.CLIPTextConfig&quot;,&quot;title&quot;:&quot;CLIPTextConfig&quot;},{&quot;local&quot;:&quot;transformers.CLIPVisionConfig&quot;,&quot;title&quot;:&quot;CLIPVisionConfig&quot;},{&quot;local&quot;:&quot;transformers.CLIPTokenizer&quot;,&quot;title&quot;:&quot;CLIPTokenizer&quot;},{&quot;local&quot;:&quot;transformers.CLIPTokenizerFast&quot;,&quot;title&quot;:&quot;CLIPTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.CLIPFeatureExtractor&quot;,&quot;title&quot;:&quot;CLIPFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.CLIPProcessor&quot;,&quot;title&quot;:&quot;CLIPProcessor&quot;},{&quot;local&quot;:&quot;transformers.CLIPModel&quot;,&quot;title&quot;:&quot;CLIPModel&quot;},{&quot;local&quot;:&quot;transformers.CLIPTextModel&quot;,&quot;title&quot;:&quot;CLIPTextModel&quot;},{&quot;local&quot;:&quot;transformers.CLIPVisionModel&quot;,&quot;title&quot;:&quot;CLIPVisionModel&quot;},{&quot;local&quot;:&quot;transformers.TFCLIPModel&quot;,&quot;title&quot;:&quot;TFCLIPModel&quot;},{&quot;local&quot;:&quot;transformers.TFCLIPTextModel&quot;,&quot;title&quot;:&quot;TFCLIPTextModel&quot;},{&quot;local&quot;:&quot;transformers.TFCLIPVisionModel&quot;,&quot;title&quot;:&quot;TFCLIPVisionModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxCLIPModel&quot;,&quot;title&quot;:&quot;FlaxCLIPModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxCLIPTextModel&quot;,&quot;title&quot;:&quot;FlaxCLIPTextModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxCLIPVisionModel&quot;,&quot;title&quot;:&quot;FlaxCLIPVisionModel&quot;}],&quot;title&quot;:&quot;CLIP&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/start-d45eb0c4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/start-dc37de0e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/vendor-9e2b328e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/layout.svelte-5b9dda7d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/pages/model_doc/clip.mdx-c3f17f2c.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/pages/model_doc/clip.mdx-5fddcc1f.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/Tip-76f97a76.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/Docstring-50fd6873.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15770/en/_app/chunks/IconCopyLink-fd0e58fd.js">
@@ -929,7 +929,11 @@ behavior.</p>
 			</span>
 		<span>)</span>
 		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.clip.modeling_clip.CLIPOutput</code>or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START -->
+<ul>
+<li>**vision_model_output(<code>BaseModelOutputWithPooling</code>)</li>
+</ul>
+<!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -983,7 +987,9 @@ Whether or not to return a <a href="/docs/transformers/pr_15770/en/main_classes/
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.CLIPModel.forward.returns"><p class="text-base">Returns</p>
 				<!-- HTML_TAG_START -->
-<p><code>transformers.models.clip.modeling_clip.CLIPOutput</code>or <code>tuple(torch.FloatTensor)</code></p>
+<ul>
+<li>**vision_model_output(<code>BaseModelOutputWithPooling</code>)</li>
+</ul>
 <!-- HTML_TAG_END -->
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
@@ -991,22 +997,22 @@ Whether or not to return a <a href="/docs/transformers/pr_15770/en/main_classes/
 <code>torch.FloatTensor</code> (if <code>return_dict=False</code> is passed or when <code>config.return_dict=False</code>) comprising various
 elements depending on the configuration (<code>&lt;class 'transformers.models.clip.configuration_clip.CLIPConfig'&gt;</code>) and inputs.</p>
 <ul>
-<li><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>(1,)</code>, <em>optional</em>, returned when <code>return_loss</code> is <code>True</code>) — Contrastive loss for image-text similarity.</li>
-<li><strong>logits_per_image:(<code>torch.FloatTensor</code></strong> of shape <code>(image_batch_size, text_batch_size)</code>) — The scaled dot product scores between <code>image_embeds</code> and <code>text_embeds</code>. This represents the image-text
-similarity scores.</li>
-<li><strong>logits_per_text:(<code>torch.FloatTensor</code></strong> of shape <code>(text_batch_size, image_batch_size)</code>) — The scaled dot product scores between <code>text_embeds</code> and <code>image_embeds</code>. This represents the text-image
+<li><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>(1,)</code>, <em>optional</em>, returned when <code>return_loss</code> is <code>True</code>) — Contrastive loss for image-text similarity.
+(<code>torch.FloatTensor</code><strong> of shape <code>(image_batch_size, text_batch_size)</code>) — The scaled dot product scores between <code>image_embeds</code> and <code>text_embeds</code>. This represents the image-text
+similarity scores.
+(<code>torch.FloatTensor</code></strong> of shape <code>(text_batch_size, image_batch_size)</code>) — The scaled dot product scores between <code>text_embeds</code> and <code>image_embeds</code>. This represents the text-image
 similarity scores.</li>
 <li><strong>text_embeds(<code>torch.FloatTensor</code></strong> of shape <code>(batch_size, output_dim</code>) — The text embeddings obtained by applying the projection layer to the pooled output of <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.CLIPTextModel"
 >CLIPTextModel</a>.</li>
 <li><strong>image_embeds(<code>torch.FloatTensor</code></strong> of shape <code>(batch_size, output_dim</code>) — The image embeddings obtained by applying the projection layer to the pooled output of <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.CLIPVisionModel"
->CLIPVisionModel</a>.</li>
-<li><strong>text_model_output(<code>BaseModelOutputWithPooling</code>):</strong>
+>CLIPVisionModel</a>.
+<strong>
 The output of the <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.CLIPTextModel"
->CLIPTextModel</a>.</li>
-<li><strong>vision_model_output(<code>BaseModelOutputWithPooling</code>):</strong>
+>CLIPTextModel</a>.
+</strong>
 The output of the <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.CLIPVisionModel"
 >CLIPVisionModel</a>.</li>
@@ -1055,8 +1061,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60"> = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span>text_features (<code>torch.FloatTensor</code> of shape <code>(batch_size, output_dim</code>)</span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1100,9 +1105,7 @@ Whether or not to return a <a href="/docs/transformers/pr_15770/en/main_classes/
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.CLIPModel.get_text_features.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p>text_features (<code>torch.FloatTensor</code> of shape <code>(batch_size, output_dim</code>)</p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>The text embeddings obtained by
@@ -1141,8 +1144,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60"> = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span>image_features (<code>torch.FloatTensor</code> of shape <code>(batch_size, output_dim</code>)</span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1169,9 +1171,7 @@ Whether or not to return a <a href="/docs/transformers/pr_15770/en/main_classes/
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.CLIPModel.get_image_features.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p>image_features (<code>torch.FloatTensor</code> of shape <code>(batch_size, output_dim</code>)</p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>The image embeddings obtained by
@@ -1238,10 +1238,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60"> = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling"
->transformers.modeling_outputs.BaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1285,11 +1282,7 @@ Whether or not to return a <a href="/docs/transformers/pr_15770/en/main_classes/
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.CLIPTextModel.forward.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling"
->transformers.modeling_outputs.BaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -1373,10 +1366,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60"> = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling"
->transformers.modeling_outputs.BaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1403,11 +1393,7 @@ Whether or not to return a <a href="/docs/transformers/pr_15770/en/main_classes/
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.CLIPVisionModel.forward.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling"
->transformers.modeling_outputs.BaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -1530,7 +1516,11 @@ first positional argument :</p>
 			</span>
 		<span>)</span>
 		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.clip.modeling_tf_clip.TFCLIPOutput</code>or <code>tuple(tf.Tensor)</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START -->
+<ul>
+<li>**vision_model_output(<code>TFBaseModelOutputWithPooling</code>)</li>
+</ul>
+<!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1591,7 +1581,9 @@ behaviors between training and evaluation).<!-- HTML_TAG_END -->
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFCLIPModel.call.returns"><p class="text-base">Returns</p>
 				<!-- HTML_TAG_START -->
-<p><code>transformers.models.clip.modeling_tf_clip.TFCLIPOutput</code>or <code>tuple(tf.Tensor)</code></p>
+<ul>
+<li>**vision_model_output(<code>TFBaseModelOutputWithPooling</code>)</li>
+</ul>
 <!-- HTML_TAG_END -->
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
@@ -1599,10 +1591,10 @@ behaviors between training and evaluation).<!-- HTML_TAG_END -->
 <code>return_dict=False</code> is passed or when <code>config.return_dict=False</code>) comprising various elements depending on the
 configuration (<code>&lt;class 'transformers.models.clip.configuration_clip.CLIPConfig'&gt;</code>) and inputs.</p>
 <ul>
-<li><strong>loss</strong> (<code>tf.Tensor</code> of shape <code>(1,)</code>, <em>optional</em>, returned when <code>return_loss</code> is <code>True</code>) — Contrastive loss for image-text similarity.</li>
-<li><strong>logits_per_image:(<code>tf.Tensor</code></strong> of shape <code>(image_batch_size, text_batch_size)</code>) — The scaled dot product scores between <code>image_embeds</code> and <code>text_embeds</code>. This represents the image-text
-similarity scores.</li>
-<li><strong>logits_per_text:(<code>tf.Tensor</code></strong> of shape <code>(text_batch_size, image_batch_size)</code>) — The scaled dot product scores between <code>text_embeds</code> and <code>image_embeds</code>. This represents the text-image
+<li><strong>loss</strong> (<code>tf.Tensor</code> of shape <code>(1,)</code>, <em>optional</em>, returned when <code>return_loss</code> is <code>True</code>) — Contrastive loss for image-text similarity.
+(<code>tf.Tensor</code><strong> of shape <code>(image_batch_size, text_batch_size)</code>) — The scaled dot product scores between <code>image_embeds</code> and <code>text_embeds</code>. This represents the image-text
+similarity scores.
+(<code>tf.Tensor</code></strong> of shape <code>(text_batch_size, image_batch_size)</code>) — The scaled dot product scores between <code>text_embeds</code> and <code>image_embeds</code>. This represents the text-image
 similarity scores.</li>
 <li><strong>text_embeds(<code>tf.Tensor</code></strong> of shape <code>(batch_size, output_dim</code>) — The text embeddings obtained by applying the projection layer to the pooled output of <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.TFCLIPTextModel"
@@ -1610,12 +1602,12 @@ similarity scores.</li>
 <li><strong>image_embeds(<code>tf.Tensor</code></strong> of shape <code>(batch_size, output_dim</code>) — The image embeddings obtained by applying the projection layer to the pooled output of
 <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.TFCLIPVisionModel"
->TFCLIPVisionModel</a>.</li>
-<li><strong>text_model_output(<code>TFBaseModelOutputWithPooling</code>):</strong>
+>TFCLIPVisionModel</a>.
+<strong>
 The output of the <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.TFCLIPTextModel"
->TFCLIPTextModel</a>.</li>
-<li><strong>vision_model_output(<code>TFBaseModelOutputWithPooling</code>):</strong>
+>TFCLIPTextModel</a>.
+</strong>
 The output of the <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.TFCLIPVisionModel"
 >TFCLIPVisionModel</a>.</li>
@@ -1667,8 +1659,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span>text_features (<code>tf.Tensor</code> of shape <code>(batch_size, output_dim</code>)</span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1719,9 +1710,7 @@ behaviors between training and evaluation).<!-- HTML_TAG_END -->
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFCLIPModel.get_text_features.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p>text_features (<code>tf.Tensor</code> of shape <code>(batch_size, output_dim</code>)</p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>The text embeddings obtained by applying
@@ -1762,8 +1751,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span>image_features (<code>tf.Tensor</code> of shape <code>(batch_size, output_dim</code>)</span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1795,9 +1783,7 @@ behaviors between training and evaluation).<!-- HTML_TAG_END -->
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFCLIPModel.get_image_features.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p>image_features (<code>tf.Tensor</code> of shape <code>(batch_size, output_dim</code>)</p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>The image embeddings obtained by applying
@@ -1867,10 +1853,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling"
->transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling</a> or <code>tuple(tf.Tensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1921,11 +1904,7 @@ behaviors between training and evaluation).<!-- HTML_TAG_END -->
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFCLIPTextModel.call.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling"
->transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling</a> or <code>tuple(tf.Tensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -2013,10 +1992,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling"
->transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling</a> or <code>tuple(tf.Tensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2048,11 +2024,7 @@ behaviors between training and evaluation).<!-- HTML_TAG_END -->
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.TFCLIPVisionModel.call.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling"
->transformers.modeling_tf_outputs.TFBaseModelOutputWithPooling</a> or <code>tuple(tf.Tensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -2180,7 +2152,11 @@ general usage and behavior.</p>
 			</span>
 		<span>)</span>
 		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.clip.modeling_flax_clip.FlaxCLIPOutput</code>or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START -->
+<ul>
+<li>**vision_model_output(<code>FlaxBaseModelOutputWithPooling</code>)</li>
+</ul>
+<!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2230,18 +2206,20 @@ Whether or not to return a <a href="/docs/transformers/pr_15770/en/main_classes/
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.FlaxCLIPPreTrainedModel.__call__.returns"><p class="text-base">Returns</p>
 				<!-- HTML_TAG_START -->
-<p><code>transformers.models.clip.modeling_flax_clip.FlaxCLIPOutput</code>or <code>tuple(torch.FloatTensor)</code></p>
+<ul>
+<li>**vision_model_output(<code>FlaxBaseModelOutputWithPooling</code>)</li>
+</ul>
 <!-- HTML_TAG_END -->
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <code>transformers.models.clip.modeling_flax_clip.FlaxCLIPOutput</code>or a tuple of
 <code>torch.FloatTensor</code> (if <code>return_dict=False</code> is passed or when <code>config.return_dict=False</code>) comprising various
 elements depending on the configuration (<code>&lt;class 'transformers.models.clip.configuration_clip.CLIPConfig'&gt;</code>) and inputs.</p>
+<p>(<code>jnp.ndarray</code><strong> of shape <code>(image_batch_size, text_batch_size)</code>) — The scaled dot product scores between <code>image_embeds</code> and <code>text_embeds</code>. This represents the image-text
+similarity scores.
+(<code>jnp.ndarray</code></strong> of shape <code>(text_batch_size, image_batch_size)</code>) — The scaled dot product scores between <code>text_embeds</code> and <code>image_embeds</code>. This represents the text-image
+similarity scores.</p>
 <ul>
-<li><strong>logits_per_image:(<code>jnp.ndarray</code></strong> of shape <code>(image_batch_size, text_batch_size)</code>) — The scaled dot product scores between <code>image_embeds</code> and <code>text_embeds</code>. This represents the image-text
-similarity scores.</li>
-<li><strong>logits_per_text:(<code>jnp.ndarray</code></strong> of shape <code>(text_batch_size, image_batch_size)</code>) — The scaled dot product scores between <code>text_embeds</code> and <code>image_embeds</code>. This represents the text-image
-similarity scores.</li>
 <li><strong>text_embeds(<code>jnp.ndarray</code></strong> of shape <code>(batch_size, output_dim</code>) — The text embeddings obtained by applying the projection layer to the pooled output of
 <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.FlaxCLIPTextModel"
@@ -2249,12 +2227,12 @@ similarity scores.</li>
 <li><strong>image_embeds(<code>jnp.ndarray</code></strong> of shape <code>(batch_size, output_dim</code>) — The image embeddings obtained by applying the projection layer to the pooled output of
 <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.FlaxCLIPVisionModel"
->FlaxCLIPVisionModel</a>.</li>
-<li><strong>text_model_output(<code>FlaxBaseModelOutputWithPooling</code>):</strong>
+>FlaxCLIPVisionModel</a>.
+<strong>
 The output of the <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.FlaxCLIPTextModel"
->FlaxCLIPTextModel</a>.</li>
-<li><strong>vision_model_output(<code>FlaxBaseModelOutputWithPooling</code>):</strong>
+>FlaxCLIPTextModel</a>.
+</strong>
 The output of the <a
   href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.FlaxCLIPVisionModel"
 >FlaxCLIPVisionModel</a>.</li>
@@ -2304,8 +2282,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">train<span class="opacity-60"> = False</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span>text_features (<code>jnp.ndarray</code> of shape <code>(batch_size, output_dim</code>)</span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2321,9 +2298,7 @@ provide it.</p>
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.FlaxCLIPPreTrainedModel.get_text_features.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p>text_features (<code>jnp.ndarray</code> of shape <code>(batch_size, output_dim</code>)</p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>The text embeddings obtained by applying
@@ -2356,8 +2331,7 @@ the projection layer to the pooled output of <a
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">train<span class="opacity-60"> = False</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span>image_features (<code>jnp.ndarray</code> of shape <code>(batch_size, output_dim</code>)</span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2370,9 +2344,7 @@ using <a href="/docs/transformers/pr_15770/en/model_doc/clip#transformers.CLIPFe
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.FlaxCLIPPreTrainedModel.get_image_features.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p>image_features (<code>jnp.ndarray</code> of shape <code>(batch_size, output_dim</code>)</p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>The image embeddings obtained by
@@ -2440,10 +2412,7 @@ applying the projection layer to the pooled output of <a
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling"
->transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2487,11 +2456,7 @@ Whether or not to return a <a href="/docs/transformers/pr_15770/en/main_classes/
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.FlaxCLIPTextPreTrainedModel.__call__.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling"
->transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -2581,10 +2546,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span>
 		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling"
->transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+		</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2611,11 +2573,7 @@ Whether or not to return a <a href="/docs/transformers/pr_15770/en/main_classes/
 					</li></ul>
 		
 		<div class="flex items-center font-semibold space-x-3 text-base !mt-0 !mb-0 text-gray-800" id="transformers.FlaxCLIPVisionPreTrainedModel.__call__.returns"><p class="text-base">Returns</p>
-				<!-- HTML_TAG_START -->
-<p><a
-  href="/docs/transformers/pr_15770/en/main_classes/output#transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling"
->transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></p>
-<!-- HTML_TAG_END -->
+				
 				<span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700"></span></div>
 			<p class="text-base"><!-- HTML_TAG_START -->
 <p>A <a
@@ -2673,10 +2631,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>pooler_output = outputs.pooler_output  <span class="hljs-comment"># pooled CLS states</span><!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="su5wl">
-		import { start } from "/docs/transformers/pr_15770/en/_app/start-d45eb0c4.js";
+		<script type="module" data-hydrate="1rhxdzd">
+		import { start } from "/docs/transformers/pr_15770/en/_app/start-dc37de0e.js";
 		start({
-			target: document.querySelector('[data-hydrate="su5wl"]').parentNode,
+			target: document.querySelector('[data-hydrate="1rhxdzd"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15770/en","assets":"/docs/transformers/pr_15770/en"},
 			session: {},
 			route: false,
@@ -2687,7 +2645,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15770/en/_app/layout.svelte-5b9dda7d.js"),
-						import("/docs/transformers/pr_15770/en/_app/pages/model_doc/clip.mdx-c3f17f2c.js")
+						import("/docs/transformers/pr_15770/en/_app/pages/model_doc/clip.mdx-5fddcc1f.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15770/en/model_doc/clip"),
 				params: {}
