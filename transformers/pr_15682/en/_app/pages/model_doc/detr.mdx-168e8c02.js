@@ -210,7 +210,7 @@ Raw outputs of the model.`,name:"outputs"},{anchor:"transformers.DetrFeatureExtr
 Torch Tensor (or list) containing the size (h, w) of each image of the batch, i.e. the size after data
 augmentation but before batching.`,name:"processed_sizes"},{anchor:"transformers.DetrFeatureExtractor.post_process_panoptic.target_sizes",description:`<strong>target_sizes</strong> (<code>torch.Tensor</code> of shape <code>(batch_size, 2)</code> or <code>List[Tuple]</code> of length <code>batch_size</code>, <em>optional</em>) &#x2014;
 Torch Tensor (or list) corresponding to the requested final size (h, w) of each prediction. If left to
-None, it will default to the <code>processed_sizes</code>.`,name:"target_sizes"},{anchor:"transformers.DetrFeatureExtractor.post_process_panoptic.is_thing_map",description:`<strong>is_thing_map</strong> (<code>Dict[int, bool]</code>, <em>optional</em>) &#x2014;
+None, it will default to the <code>processed_sizes</code>.`,name:"target_sizes"},{anchor:"transformers.DetrFeatureExtractor.post_process_panoptic.is_thing_map",description:`<strong>is_thing_map</strong> (<code>torch.Tensor</code> of shape <code>(batch_size, 2)</code>, <em>optional</em>) &#x2014;
 Dictionary mapping class indices to either True or False, depending on whether or not they are a thing.
 If not set, defaults to the <code>is_thing_map</code> of COCO panoptic.`,name:"is_thing_map"},{anchor:"transformers.DetrFeatureExtractor.post_process_panoptic.threshold",description:`<strong>threshold</strong> (<code>float</code>, <em>optional</em>, defaults to 0.85) &#x2014;
 Threshold to use to filter out queries.`,name:"threshold"}],returnDescription:`
