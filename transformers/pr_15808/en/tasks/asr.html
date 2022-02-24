@@ -1,8 +1,8 @@
 <meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;finetune-with-trainer&quot;,&quot;title&quot;:&quot;Fine-tune with Trainer&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/start-2ab4bb15.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/start-5f92fd20.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/vendor-9e2b328e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/layout.svelte-5b9dda7d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/pages/tasks/asr.mdx-15eb0955.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/pages/tasks/asr.mdx-4db887ed.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/Tip-76f97a76.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/Youtube-cb4469d8.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/IconCopyLink-fd0e58fd.js">
@@ -103,7 +103,7 @@ DatasetDict({
 <span class="hljs-meta">... </span>    audio = batch[<span class="hljs-string">&quot;audio&quot;</span>]
     
 <span class="hljs-meta">... </span>    batch[<span class="hljs-string">&quot;input_values&quot;</span>] = processor(audio[<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=<span class="hljs-number">16000</span>).input_values[<span class="hljs-number">0</span>]
-<span class="hljs-meta">... </span>    batch[<span class="hljs-string">&quot;input_length&quot;</span>] = <span class="hljs-built_in">len</span>(batch[<span class="hljs-string">&quot;input_values&quot;</span>]
+<span class="hljs-meta">... </span>    batch[<span class="hljs-string">&quot;input_length&quot;</span>] = <span class="hljs-built_in">len</span>(batch[<span class="hljs-string">&quot;input_values&quot;</span>])
 
 <span class="hljs-meta">... </span>    <span class="hljs-keyword">with</span> processor.as_target_processor():
 <span class="hljs-meta">... </span>         batch[<span class="hljs-string">&quot;labels&quot;</span>] = processor(batch[<span class="hljs-string">&quot;text&quot;</span>]).input_ids
@@ -224,16 +224,16 @@ DatasetDict({
 <span class="hljs-meta">... </span>    data_collator=data_collator,
 <span class="hljs-meta">... </span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>rainer.train()<!-- HTML_TAG_END --></pre></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>trainer.train()<!-- HTML_TAG_END --></pre></div>
 
 
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>For a more in-depth example of how to fine-tune a model for automatic speech recognition, take a look at the corresponding <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/master/examples/speech_recognition.ipynb" rel="nofollow">PyTorch notebook</a>.</p></div>
 
 
-		<script type="module" data-hydrate="4qeukn">
-		import { start } from "/docs/transformers/pr_15808/en/_app/start-2ab4bb15.js";
+		<script type="module" data-hydrate="154km3e">
+		import { start } from "/docs/transformers/pr_15808/en/_app/start-5f92fd20.js";
 		start({
-			target: document.querySelector('[data-hydrate="4qeukn"]').parentNode,
+			target: document.querySelector('[data-hydrate="154km3e"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15808/en","assets":"/docs/transformers/pr_15808/en"},
 			session: {},
 			route: false,
@@ -244,7 +244,7 @@ DatasetDict({
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15808/en/_app/layout.svelte-5b9dda7d.js"),
-						import("/docs/transformers/pr_15808/en/_app/pages/tasks/asr.mdx-15eb0955.js")
+						import("/docs/transformers/pr_15808/en/_app/pages/tasks/asr.mdx-4db887ed.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15808/en/tasks/asr"),
 				params: {}
