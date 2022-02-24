@@ -1,8 +1,8 @@
 <meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;data2vec&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextConfig&quot;,&quot;title&quot;:&quot;Data2VecTextConfig&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioConfig&quot;,&quot;title&quot;:&quot;Data2VecAudioConfig&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioModel&quot;,&quot;title&quot;:&quot;Data2VecAudioModel&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForAudioFrameClassification&quot;,&quot;title&quot;:&quot;Data2VecAudioForAudioFrameClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForCTC&quot;,&quot;title&quot;:&quot;Data2VecAudioForCTC&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForSequenceClassification&quot;,&quot;title&quot;:&quot;Data2VecAudioForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForXVector&quot;,&quot;title&quot;:&quot;Data2VecAudioForXVector&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextModel&quot;,&quot;title&quot;:&quot;Data2VecTextModel&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForCausalLM&quot;,&quot;title&quot;:&quot;Data2VecTextForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForMaskedLM&quot;,&quot;title&quot;:&quot;Data2VecTextForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForSequenceClassification&quot;,&quot;title&quot;:&quot;Data2VecTextForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForMultipleChoice&quot;,&quot;title&quot;:&quot;Data2VecTextForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForTokenClassification&quot;,&quot;title&quot;:&quot;Data2VecTextForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForQuestionAnswering&quot;,&quot;title&quot;:&quot;Data2VecTextForQuestionAnswering&quot;}],&quot;title&quot;:&quot;Data2Vec&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/start-a1203ea1.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/start-45d1b21d.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/vendor-9e2b328e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/layout.svelte-5b9dda7d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-e9cc25c2.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-11589fce.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/Tip-76f97a76.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/Docstring-50fd6873.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/IconCopyLink-fd0e58fd.js">
@@ -37,8 +37,8 @@ the entire input. Experiments on the major benchmarks of speech recognition, ima
 natural language understanding demonstrate a new state of the art or competitive performance to predominant approaches.
 Models and code are available at <a href="http://www.github.com/pytorch/fairseq/tree/master/examples/data2vec" rel="nofollow">www.github.com/pytorch/fairseq/tree/master/examples/data2vec</a>.</em></p>
 <p>Tips:</p>
-<ul><li>This implementation has a shared encoder for all different modalities and different pre-processors for each modality.
-For example, in the case of text, preprocessing is identical to <a href="/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaModel">RobertaModel</a>, including tokenization.</li></ul>
+<ul><li>Both Data2VecAudio and Data2VecText have been trained using the same self-supervised learning method.
+In the case of Data2VecAudio, preprocessing is identical to <a href="/docs/transformers/pr_15507/en/model_doc/roberta#transformers.RobertaModel">RobertaModel</a>, including tokenization.</li></ul>
 <p>This model was contributed by <a href="https://huggingface.co/edugp" rel="nofollow">edugp</a>.
 The original code can be found <a href="https://github.com/pytorch/fairseq/tree/main/examples/data2vec" rel="nofollow">here</a>.</p>
 <h2 class="relative group"><a id="transformers.Data2VecTextConfig" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.Data2VecTextConfig"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
@@ -2713,10 +2713,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>end_scores = outputs.end_logits<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1a4bv7d">
-		import { start } from "/docs/transformers/pr_15507/en/_app/start-a1203ea1.js";
+		<script type="module" data-hydrate="2d774k">
+		import { start } from "/docs/transformers/pr_15507/en/_app/start-45d1b21d.js";
 		start({
-			target: document.querySelector('[data-hydrate="1a4bv7d"]').parentNode,
+			target: document.querySelector('[data-hydrate="2d774k"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15507/en","assets":"/docs/transformers/pr_15507/en"},
 			session: {},
 			route: false,
@@ -2727,7 +2727,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15507/en/_app/layout.svelte-5b9dda7d.js"),
-						import("/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-e9cc25c2.js")
+						import("/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-11589fce.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15507/en/model_doc/data2vec"),
 				params: {}
