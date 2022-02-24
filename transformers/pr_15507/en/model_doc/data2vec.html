@@ -1,8 +1,8 @@
 <meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;data2vec&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextConfig&quot;,&quot;title&quot;:&quot;Data2VecTextConfig&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioConfig&quot;,&quot;title&quot;:&quot;Data2VecAudioConfig&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioModel&quot;,&quot;title&quot;:&quot;Data2VecAudioModel&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForAudioFrameClassification&quot;,&quot;title&quot;:&quot;Data2VecAudioForAudioFrameClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForCTC&quot;,&quot;title&quot;:&quot;Data2VecAudioForCTC&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForSequenceClassification&quot;,&quot;title&quot;:&quot;Data2VecAudioForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForXVector&quot;,&quot;title&quot;:&quot;Data2VecAudioForXVector&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextModel&quot;,&quot;title&quot;:&quot;Data2VecTextModel&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForCausalLM&quot;,&quot;title&quot;:&quot;Data2VecTextForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForMaskedLM&quot;,&quot;title&quot;:&quot;Data2VecTextForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForSequenceClassification&quot;,&quot;title&quot;:&quot;Data2VecTextForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForMultipleChoice&quot;,&quot;title&quot;:&quot;Data2VecTextForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForTokenClassification&quot;,&quot;title&quot;:&quot;Data2VecTextForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForQuestionAnswering&quot;,&quot;title&quot;:&quot;Data2VecTextForQuestionAnswering&quot;}],&quot;title&quot;:&quot;Data2Vec&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/start-4e5a47fb.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/start-153d7a88.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/vendor-9e2b328e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/layout.svelte-5b9dda7d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-a92eddb2.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-15c1aa8a.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/Tip-76f97a76.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/Docstring-50fd6873.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15507/en/_app/chunks/IconCopyLink-fd0e58fd.js">
@@ -1747,7 +1747,7 @@ the latter silently ignores them.</p></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> Data2VecTextTokenizer, Data2VecTextForCausalLM, Data2VecTextConfig
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = Data2VecTextTokenizer.from_pretrained(<span class="hljs-string">&quot;data2vec-base&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = Data2VecTextTokenizer.from_pretrained(<span class="hljs-string">&quot;facebook/data2vec-text-base&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>config = Data2VecTextConfig.from_pretrained(<span class="hljs-string">&quot;data2vec-base&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>config.is_decoder = <span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = Data2VecTextForCausalLM.from_pretrained(<span class="hljs-string">&quot;data2vec-base&quot;</span>, config=config)
@@ -2713,10 +2713,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>end_scores = outputs.end_logits<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="bsn7ju">
-		import { start } from "/docs/transformers/pr_15507/en/_app/start-4e5a47fb.js";
+		<script type="module" data-hydrate="2iu6ml">
+		import { start } from "/docs/transformers/pr_15507/en/_app/start-153d7a88.js";
 		start({
-			target: document.querySelector('[data-hydrate="bsn7ju"]').parentNode,
+			target: document.querySelector('[data-hydrate="2iu6ml"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15507/en","assets":"/docs/transformers/pr_15507/en"},
 			session: {},
 			route: false,
@@ -2727,7 +2727,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15507/en/_app/layout.svelte-5b9dda7d.js"),
-						import("/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-a92eddb2.js")
+						import("/docs/transformers/pr_15507/en/_app/pages/model_doc/data2vec.mdx-15c1aa8a.js")
 				],
 				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15507/en/model_doc/data2vec"),
 				params: {}

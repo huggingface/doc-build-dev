@@ -886,7 +886,7 @@ setting. Only relevant if <code>config.is_decoder = True</code>.</p>
 `}}),Ft=new he({props:{$$slots:{default:[c2]},$$scope:{ctx:V}}}),ha=new E({props:{code:`from transformers import Data2VecTextTokenizer, Data2VecTextForCausalLM, Data2VecTextConfig
 import torch
 
-tokenizer = Data2VecTextTokenizer.from_pretrained("data2vec-base")
+tokenizer = Data2VecTextTokenizer.from_pretrained("facebook/data2vec-text-base")
 config = Data2VecTextConfig.from_pretrained("data2vec-base")
 config.is_decoder = True
 model = Data2VecTextForCausalLM.from_pretrained("data2vec-base", config=config)
@@ -897,7 +897,7 @@ outputs = model(**inputs)
 prediction_logits = outputs.logits,`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> Data2VecTextTokenizer, Data2VecTextForCausalLM, Data2VecTextConfig
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = Data2VecTextTokenizer.from_pretrained(<span class="hljs-string">&quot;data2vec-base&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = Data2VecTextTokenizer.from_pretrained(<span class="hljs-string">&quot;facebook/data2vec-text-base&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>config = Data2VecTextConfig.from_pretrained(<span class="hljs-string">&quot;data2vec-base&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>config.is_decoder = <span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = Data2VecTextForCausalLM.from_pretrained(<span class="hljs-string">&quot;data2vec-base&quot;</span>, config=config)
