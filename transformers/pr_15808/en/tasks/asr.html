@@ -1,13 +1,15 @@
-<meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;finetune-with-trainer&quot;,&quot;title&quot;:&quot;Fine-tune with Trainer&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/start-5f92fd20.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/vendor-9e2b328e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/layout.svelte-5b9dda7d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/pages/tasks/asr.mdx-4db887ed.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/Tip-76f97a76.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/Youtube-cb4469d8.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/IconCopyLink-fd0e58fd.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/CodeBlock-88e23343.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/CopyButton-4ae140ab.js"> 
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;automatic-speech-recognition&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;load-timit-dataset&quot;,&quot;title&quot;:&quot;Load TIMIT dataset&quot;},{&quot;local&quot;:&quot;preprocess&quot;,&quot;title&quot;:&quot;Preprocess&quot;},{&quot;local&quot;:&quot;finetune-with-trainer&quot;,&quot;title&quot;:&quot;Fine-tune with Trainer&quot;}],&quot;title&quot;:&quot;Automatic speech recognition&quot;}" data-svelte="svelte-1phssyn">
+	<link rel="stylesheet" href="/docs/transformers/pr_15808/en/_app/assets/pages/__layout.svelte-78ae1bb8.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/start-c444d36c.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/vendor-4833417e.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/paths-4b3c6e7e.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/pages/__layout.svelte-52826f4d.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/pages/tasks/asr.mdx-2d27aebe.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/Tip-fffd6df1.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/Youtube-27813aed.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/IconCopyLink-4b81c553.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/CodeBlock-90ffda97.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15808/en/_app/chunks/CopyButton-04a16537.js"> 
 
 
 
@@ -101,14 +103,14 @@ DatasetDict({
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">def</span> <span class="hljs-title function_">prepare_dataset</span>(<span class="hljs-params">batch</span>):
 <span class="hljs-meta">... </span>    audio = batch[<span class="hljs-string">&quot;audio&quot;</span>]
-    
-<span class="hljs-meta">... </span>    batch[<span class="hljs-string">&quot;input_values&quot;</span>] = processor(audio[<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=<span class="hljs-number">16000</span>).input_values[<span class="hljs-number">0</span>]
+
+<span class="hljs-meta">... </span>    batch[<span class="hljs-string">&quot;input_values&quot;</span>] = processor(audio[<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=audio[<span class="hljs-string">&quot;sampling_rate&quot;</span>]).input_values[<span class="hljs-number">0</span>]
 <span class="hljs-meta">... </span>    batch[<span class="hljs-string">&quot;input_length&quot;</span>] = <span class="hljs-built_in">len</span>(batch[<span class="hljs-string">&quot;input_values&quot;</span>])
 
 <span class="hljs-meta">... </span>    <span class="hljs-keyword">with</span> processor.as_target_processor():
-<span class="hljs-meta">... </span>         batch[<span class="hljs-string">&quot;labels&quot;</span>] = processor(batch[<span class="hljs-string">&quot;text&quot;</span>]).input_ids
+<span class="hljs-meta">... </span>        batch[<span class="hljs-string">&quot;labels&quot;</span>] = processor(batch[<span class="hljs-string">&quot;text&quot;</span>]).input_ids
 <span class="hljs-meta">... </span>    <span class="hljs-keyword">return</span> batch<!-- HTML_TAG_END --></pre></div>
-<p>Use 🤗 Datasets <a href="https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.map" rel="nofollow"><code>map</code></a> function to apply the preprocessing function over the entire dataset. You can speed up the map function by setting <code>batched=True</code> to process multiple elements of the dataset at once and increasing the number of processes with <code>num_proc</code>. Remove the columns you don’t need:</p>
+<p>Use 🤗 Datasets <a href="https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.map" rel="nofollow"><code>map</code></a> function to apply the preprocessing function over the entire dataset. You can speed up the map function by increasing the number of processes with <code>num_proc</code>. Remove the columns you don’t need:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<span class="ml-1.5 underline">code excerpt</span>
@@ -116,7 +118,7 @@ DatasetDict({
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>timit = timit.<span class="hljs-built_in">map</span>(prepare_dataset, remove_columns=timit.column_names[<span class="hljs-string">&quot;train&quot;</span>], num_proc=<span class="hljs-number">4</span>)<!-- HTML_TAG_END --></pre></div>
 <p>🤗 Transformers doesn’t have a data collator for automatic speech recognition, so you will need to create one. You can adapt the <a href="/docs/transformers/pr_15808/en/main_classes/data_collator#transformers.DataCollatorWithPadding">DataCollatorWithPadding</a> to create a batch of examples for automatic speech recognition. It will also dynamically pad your text and labels to the length of the longest element in its batch, so they are a uniform length. While it is possible to pad your text in the <code>tokenizer</code> function by setting <code>padding=True</code>, dynamic padding is more efficient.</p>
-<p>Unlike other data collators, <code>DataCollatorWithPadding</code> needs to apply a different padding method to <code>input_values</code> and <code>labels</code>. You can apply a different padding method with a context manager:</p>
+<p>Unlike other data collators, this specific data collator needs to apply a different padding method to <code>input_values</code> and <code>labels</code>. You can apply a different padding method with a context manager:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<span class="ml-1.5 underline">code excerpt</span>
@@ -133,10 +135,6 @@ DatasetDict({
 
 <span class="hljs-meta">... </span>    processor: AutoProcessor
 <span class="hljs-meta">... </span>    padding: <span class="hljs-type">Union</span>[<span class="hljs-built_in">bool</span>, <span class="hljs-built_in">str</span>] = <span class="hljs-literal">True</span>
-<span class="hljs-meta">... </span>    max_length: <span class="hljs-type">Optional</span>[<span class="hljs-built_in">int</span>] = <span class="hljs-literal">None</span>
-<span class="hljs-meta">... </span>    max_length_labels: <span class="hljs-type">Optional</span>[<span class="hljs-built_in">int</span>] = <span class="hljs-literal">None</span>
-<span class="hljs-meta">... </span>    pad_to_multiple_of: <span class="hljs-type">Optional</span>[<span class="hljs-built_in">int</span>] = <span class="hljs-literal">None</span>
-<span class="hljs-meta">... </span>    pad_to_multiple_of_labels: <span class="hljs-type">Optional</span>[<span class="hljs-built_in">int</span>] = <span class="hljs-literal">None</span>
 
 <span class="hljs-meta">... </span>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__call__</span>(<span class="hljs-params">self, features: <span class="hljs-type">List</span>[<span class="hljs-type">Dict</span>[<span class="hljs-built_in">str</span>, <span class="hljs-type">Union</span>[<span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>], torch.Tensor]]]</span>) -&gt; <span class="hljs-type">Dict</span>[<span class="hljs-built_in">str</span>, torch.Tensor]:
 <span class="hljs-meta">... </span>        <span class="hljs-comment"># split inputs and labels since they have to be of different lengths and need</span>
@@ -147,16 +145,12 @@ DatasetDict({
 <span class="hljs-meta">... </span>        batch = self.processor.pad(
 <span class="hljs-meta">... </span>            input_features,
 <span class="hljs-meta">... </span>            padding=self.padding,
-<span class="hljs-meta">... </span>            max_length=self.max_length,
-<span class="hljs-meta">... </span>            pad_to_multiple_of=self.pad_to_multiple_of,
 <span class="hljs-meta">... </span>            return_tensors=<span class="hljs-string">&quot;pt&quot;</span>,
 <span class="hljs-meta">... </span>        )
 <span class="hljs-meta">... </span>        <span class="hljs-keyword">with</span> self.processor.as_target_processor():
 <span class="hljs-meta">... </span>            labels_batch = self.processor.pad(
 <span class="hljs-meta">... </span>                label_features,
 <span class="hljs-meta">... </span>                padding=self.padding,
-<span class="hljs-meta">... </span>                max_length=self.max_length_labels,
-<span class="hljs-meta">... </span>                pad_to_multiple_of=self.pad_to_multiple_of_labels,
 <span class="hljs-meta">... </span>                return_tensors=<span class="hljs-string">&quot;pt&quot;</span>,
 <span class="hljs-meta">... </span>            )
 
@@ -173,11 +167,11 @@ DatasetDict({
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>data_collator = DataCollatorCTCWithPadding(processor=processor, padding=<span class="hljs-literal">True</span>)<!-- HTML_TAG_END --></pre></div>
-<h1 class="relative group"><a id="finetune-with-trainer" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#finetune-with-trainer"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+<h2 class="relative group"><a id="finetune-with-trainer" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#finetune-with-trainer"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Fine-tune with Trainer
-	</span></h1>
+	</span></h2>
 
-<p>Load Wav2Vec2 with <a href="/docs/transformers/pr_15808/en/model_doc/auto#transformers.AutoModelForCTC">AutoModelForCTC</a>. Save GPU memory by calculating the mean of the loss reduction instead of the sum, and specify the padding token:</p>
+<p>Load Wav2Vec2 with <a href="/docs/transformers/pr_15808/en/model_doc/auto#transformers.AutoModelForCTC">AutoModelForCTC</a>. For <code>ctc_loss_reduction</code>, it is often better to use the average instead of the default summation:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<span class="ml-1.5 underline">code excerpt</span>
@@ -227,13 +221,13 @@ DatasetDict({
 <span class="hljs-meta">&gt;&gt;&gt; </span>trainer.train()<!-- HTML_TAG_END --></pre></div>
 
 
-<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>For a more in-depth example of how to fine-tune a model for automatic speech recognition, take a look at the corresponding <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/master/examples/speech_recognition.ipynb" rel="nofollow">PyTorch notebook</a>.</p></div>
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>For a more in-depth example of how to fine-tune a model for automatic speech recognition, take a look at this blog <a href="https://huggingface.co/blog/fine-tune-wav2vec2-english" rel="nofollow">post</a> for English ASR and this <a href="https://huggingface.co/blog/fine-tune-xlsr-wav2vec2" rel="nofollow">post</a> for multilingual ASR.</p></div>
 
 
-		<script type="module" data-hydrate="154km3e">
-		import { start } from "/docs/transformers/pr_15808/en/_app/start-5f92fd20.js";
+		<script type="module" data-hydrate="3clnu0">
+		import { start } from "/docs/transformers/pr_15808/en/_app/start-c444d36c.js";
 		start({
-			target: document.querySelector('[data-hydrate="154km3e"]').parentNode,
+			target: document.querySelector('[data-hydrate="3clnu0"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15808/en","assets":"/docs/transformers/pr_15808/en"},
 			session: {},
 			route: false,
@@ -243,10 +237,9 @@ DatasetDict({
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_15808/en/_app/layout.svelte-5b9dda7d.js"),
-						import("/docs/transformers/pr_15808/en/_app/pages/tasks/asr.mdx-4db887ed.js")
+					import("/docs/transformers/pr_15808/en/_app/pages/__layout.svelte-52826f4d.js"),
+						import("/docs/transformers/pr_15808/en/_app/pages/tasks/asr.mdx-2d27aebe.js")
 				],
-				url: new URL("http://sveltekit-prerender/docs/transformers/pr_15808/en/tasks/asr"),
 				params: {}
 			}
 		});
