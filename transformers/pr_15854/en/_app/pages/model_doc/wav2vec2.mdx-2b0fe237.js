@@ -516,8 +516,8 @@ Whether or not to output word offsets. Word offsets can be used in combination w
 and model downsampling rate to compute the time-stamps of transcribed words.</p>
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400">
 						
-<p>Please take a look at the Example of <code>decode</code> to better
-understand how to make use of <code>output_word_offsets</code>.
+<p>Please take a look at the Example of <code>decode</code> to
+better understand how to make use of <code>output_word_offsets</code>.
 <code>batch_decode</code> works the same way with batched
 output.</p>
 
