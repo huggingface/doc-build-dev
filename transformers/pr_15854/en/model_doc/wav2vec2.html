@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;wav2vec2&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2Config&quot;,&quot;title&quot;:&quot;Wav2Vec2Config&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2CTCTokenizer&quot;,&quot;title&quot;:&quot;Wav2Vec2CTCTokenizer&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2FeatureExtractor&quot;,&quot;title&quot;:&quot;Wav2Vec2FeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2Processor&quot;,&quot;title&quot;:&quot;Wav2Vec2Processor&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ProcessorWithLM&quot;,&quot;title&quot;:&quot;Wav2Vec2ProcessorWithLM&quot;},{&quot;local&quot;:&quot;transformers.models.wav2vec2_with_lm.processing_wav2vec2_with_lm.Wav2Vec2DecoderWithLMOutput&quot;,&quot;title&quot;:&quot;Wav2Vec2 specific outputs&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2Model&quot;,&quot;title&quot;:&quot;Wav2Vec2Model&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ForCTC&quot;,&quot;title&quot;:&quot;Wav2Vec2ForCTC&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ForSequenceClassification&quot;,&quot;title&quot;:&quot;Wav2Vec2ForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ForAudioFrameClassification&quot;,&quot;title&quot;:&quot;Wav2Vec2ForAudioFrameClassification&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ForXVector&quot;,&quot;title&quot;:&quot;Wav2Vec2ForXVector&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ForPreTraining&quot;,&quot;title&quot;:&quot;Wav2Vec2ForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.TFWav2Vec2Model&quot;,&quot;title&quot;:&quot;TFWav2Vec2Model&quot;},{&quot;local&quot;:&quot;transformers.TFWav2Vec2ForCTC&quot;,&quot;title&quot;:&quot;TFWav2Vec2ForCTC&quot;},{&quot;local&quot;:&quot;transformers.FlaxWav2Vec2Model&quot;,&quot;title&quot;:&quot;FlaxWav2Vec2Model&quot;},{&quot;local&quot;:&quot;transformers.FlaxWav2Vec2ForCTC&quot;,&quot;title&quot;:&quot;FlaxWav2Vec2ForCTC&quot;},{&quot;local&quot;:&quot;transformers.FlaxWav2Vec2ForPreTraining&quot;,&quot;title&quot;:&quot;FlaxWav2Vec2ForPreTraining&quot;}],&quot;title&quot;:&quot;Wav2Vec2&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_15854/en/_app/assets/pages/__layout.svelte-78ae1bb8.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_15854/en/_app/start-6267b910.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15854/en/_app/start-7f961376.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15854/en/_app/chunks/vendor-4833417e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15854/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15854/en/_app/pages/__layout.svelte-52826f4d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15854/en/_app/pages/model_doc/wav2vec2.mdx-fd8aa213.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15854/en/_app/pages/model_doc/wav2vec2.mdx-f3fc7a79.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15854/en/_app/chunks/Tip-fffd6df1.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15854/en/_app/chunks/Docstring-44c5af16.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15854/en/_app/chunks/IconCopyLink-4b81c553.js">
@@ -1523,7 +1523,7 @@ better understand how to make use of <code>output_word_offsets</code>.</p>
 <span class="hljs-meta">... </span>    logits = model(input_values).logits[<span class="hljs-number">0</span>].cpu().numpy()
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># retrieve word stamps (analogous commands for `output_char_offsets`)</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>outputs = tokenizer.decode(pred_ids, output_word_offsets=<span class="hljs-literal">True</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>outputs = tokenizer.decode(logits, output_word_offsets=<span class="hljs-literal">True</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># compute `time_offset` in seconds as product of downsampling ratio and sampling_rate</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>time_offset = model.config.inputs_to_logits_ratio / feature_extractor.sampling_rate
 
@@ -3863,10 +3863,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">assert</span> np.asarray(cosine_sim)[mask_time_indices].mean() &gt; <span class="hljs-number">0.5</span><!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1872jd0">
-		import { start } from "/docs/transformers/pr_15854/en/_app/start-6267b910.js";
+		<script type="module" data-hydrate="1t1jk24">
+		import { start } from "/docs/transformers/pr_15854/en/_app/start-7f961376.js";
 		start({
-			target: document.querySelector('[data-hydrate="1872jd0"]').parentNode,
+			target: document.querySelector('[data-hydrate="1t1jk24"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15854/en","assets":"/docs/transformers/pr_15854/en"},
 			session: {},
 			route: false,
@@ -3877,7 +3877,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15854/en/_app/pages/__layout.svelte-52826f4d.js"),
-						import("/docs/transformers/pr_15854/en/_app/pages/model_doc/wav2vec2.mdx-fd8aa213.js")
+						import("/docs/transformers/pr_15854/en/_app/pages/model_doc/wav2vec2.mdx-f3fc7a79.js")
 				],
 				params: {}
 			}

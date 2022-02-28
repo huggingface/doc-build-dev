@@ -567,7 +567,7 @@ with torch.no_grad():
     logits = model(input_values).logits[0].cpu().numpy()
 
 # retrieve word stamps (analogous commands for \`output_char_offsets\`)
-outputs = tokenizer.decode(pred_ids, output_word_offsets=True)
+outputs = tokenizer.decode(logits, output_word_offsets=True)
 # compute \`time_offset\` in seconds as product of downsampling ratio and sampling_rate
 time_offset = model.config.inputs_to_logits_ratio / feature_extractor.sampling_rate
 
@@ -606,7 +606,7 @@ word_offset
 <span class="hljs-meta">... </span>    logits = model(input_values).logits[<span class="hljs-number">0</span>].cpu().numpy()
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># retrieve word stamps (analogous commands for \`output_char_offsets\`)</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>outputs = tokenizer.decode(pred_ids, output_word_offsets=<span class="hljs-literal">True</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>outputs = tokenizer.decode(logits, output_word_offsets=<span class="hljs-literal">True</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># compute \`time_offset\` in seconds as product of downsampling ratio and sampling_rate</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>time_offset = model.config.inputs_to_logits_ratio / feature_extractor.sampling_rate
 
