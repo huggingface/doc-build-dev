@@ -1,15 +1,15 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;vilt&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.ViltConfig&quot;,&quot;title&quot;:&quot;ViltConfig&quot;},{&quot;local&quot;:&quot;transformers.ViltFeatureExtractor&quot;,&quot;title&quot;:&quot;ViltFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.ViltProcessor&quot;,&quot;title&quot;:&quot;ViltProcessor&quot;},{&quot;local&quot;:&quot;transformers.ViltModel&quot;,&quot;title&quot;:&quot;ViltModel&quot;},{&quot;local&quot;:&quot;transformers.ViltForMaskedLM&quot;,&quot;title&quot;:&quot;ViltForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.ViltForQuestionAnswering&quot;,&quot;title&quot;:&quot;ViltForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.ViltForImagesAndTextClassification&quot;,&quot;title&quot;:&quot;ViltForImagesAndTextClassification&quot;},{&quot;local&quot;:&quot;transformers.ViltForImageAndTextRetrieval&quot;,&quot;title&quot;:&quot;ViltForImageAndTextRetrieval&quot;}],&quot;title&quot;:&quot;ViLT&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/transformers/pr_15836/en/_app/assets/pages/__layout.svelte-78ae1bb8.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/start-34cac8aa.js">
+	<link rel="stylesheet" href="/docs/transformers/pr_15836/en/_app/assets/pages/__layout.svelte-3f5b292a.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/start-e00e2918.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/chunks/vendor-4833417e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/pages/__layout.svelte-52826f4d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/pages/model_doc/vilt.mdx-abe6f9e2.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/pages/model_doc/vilt.mdx-08195bfd.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/chunks/Tip-fffd6df1.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/chunks/Docstring-44c5af16.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/chunks/IconCopyLink-4b81c553.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/chunks/CodeBlock-90ffda97.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/chunks/CopyButton-04a16537.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/chunks/CodeBlock-6a3d1b46.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15836/en/_app/chunks/CopyButton-dacfbfaf.js"> 
 
 
 
@@ -38,7 +38,9 @@ Vision-and-Language Transformer (ViLT), monolithic in the sense that the process
 simplified to just the same convolution-free manner that we process textual inputs. We show that ViLT is up to tens of
 times faster than previous VLP models, yet with competitive or better downstream task performance.</em></p>
 <p>Tips:</p>
-<ul><li>ViLT is a model that takes both <code>pixel_values</code> and <code>input_ids</code> as input. One can use <a href="/docs/transformers/pr_15836/en/model_doc/vilt#transformers.ViltProcessor">ViltProcessor</a> to prepare data for the model.
+<ul><li>The quickest way to get started with ViLT is by checking the <a href="https://github.com/NielsRogge/Transformers-Tutorials/tree/master/ViLT" rel="nofollow">example notebooks</a>
+(which showcase both inference and fine-tuning on custom data).</li>
+<li>ViLT is a model that takes both <code>pixel_values</code> and <code>input_ids</code> as input. One can use <a href="/docs/transformers/pr_15836/en/model_doc/vilt#transformers.ViltProcessor">ViltProcessor</a> to prepare data for the model.
 This processor wraps a feature extractor (for the image modality) and a tokenizer (for the language modality) into one.</li>
 <li>ViLT is trained with images of various sizes: the authors resize the shorter edge of input images to 384 and limit the longer edge to
 under 640 while preserving the aspect ratio. To make batching of images possible, the authors use a <code>pixel_mask</code> that indicates
@@ -182,7 +184,6 @@ documentation from <a href="/docs/transformers/pr_15836/en/main_classes/configur
 <p>Example:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
-	<span class="ml-1.5 underline">code excerpt</span>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> ViLTModel, ViLTConfig
@@ -560,7 +561,6 @@ the latter silently ignores them.</p></div>
 <p>Examples:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
-	<span class="ml-1.5 underline">code excerpt</span>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> ViltProcessor, ViltModel
@@ -751,7 +751,6 @@ the latter silently ignores them.</p></div>
 <p>Examples:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
-	<span class="ml-1.5 underline">code excerpt</span>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> ViltProcessor, ViltForMaskedLM
@@ -970,7 +969,6 @@ the latter silently ignores them.</p></div>
 <p>Examples:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
-	<span class="ml-1.5 underline">code excerpt</span>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> ViltProcessor, ViltForQuestionAnswering
@@ -1217,7 +1215,6 @@ the latter silently ignores them.</p></div>
 <p>Examples:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
-	<span class="ml-1.5 underline">code excerpt</span>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> ViltProcessor, ViltForImagesAndTextClassification
@@ -1412,7 +1409,6 @@ the latter silently ignores them.</p></div>
 <p>Examples:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
-	<span class="ml-1.5 underline">code excerpt</span>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> ViltProcessor, ViltForImageAndTextRetrieval
@@ -1437,10 +1433,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">... </span>    scores[text] = outputs.logits[<span class="hljs-number">0</span>, :].item()<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1we0pf">
-		import { start } from "/docs/transformers/pr_15836/en/_app/start-34cac8aa.js";
+		<script type="module" data-hydrate="14s1g43">
+		import { start } from "/docs/transformers/pr_15836/en/_app/start-e00e2918.js";
 		start({
-			target: document.querySelector('[data-hydrate="1we0pf"]').parentNode,
+			target: document.querySelector('[data-hydrate="14s1g43"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15836/en","assets":"/docs/transformers/pr_15836/en"},
 			session: {},
 			route: false,
@@ -1451,7 +1447,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15836/en/_app/pages/__layout.svelte-52826f4d.js"),
-						import("/docs/transformers/pr_15836/en/_app/pages/model_doc/vilt.mdx-abe6f9e2.js")
+						import("/docs/transformers/pr_15836/en/_app/pages/model_doc/vilt.mdx-08195bfd.js")
 				],
 				params: {}
 			}
