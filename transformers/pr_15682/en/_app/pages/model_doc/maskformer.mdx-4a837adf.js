@@ -51,7 +51,7 @@ weighted average in the self-attention heads.`,name:"attentions"}]}}),Ne=new _t(
 The masks&#x2019; features size, this value will also be used to specify the Feature Pyramid Network features&#x2019;
 size.`,name:"mask_feature_size"},{anchor:"transformers.MaskFormerConfig.no_object_weight",description:`<strong>no_object_weight</strong> (<code>float</code>, <em>optional</em>, defaults to 0.1) &#x2014;
 Weight to apply to the null (no object) class.`,name:"no_object_weight"},{anchor:"transformers.MaskFormerConfig.use_auxilary_loss",description:`<strong>use_auxilary_loss</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
-If <code>true</code> <code>MaskFormerForInstanceSegmentationOutput</code> will contain the axusilary losses computed using the
+If <code>true</code> <code>MaskFormerForInstanceSegmentationOutput</code> will contain the auxilary losses computed using the
 logits from each decoder&#x2019;s stage.`,name:"use_auxilary_loss"},{anchor:"transformers.MaskFormerConfig.backbone_config",description:`<strong>backbone_config</strong> (<code>Dict</code>, <em>optional</em>) &#x2014;
 The configuration passed to the backbone, if unset, the configuration corresponding to
 <code>swin-base-patch4-window12-384</code> will be used.`,name:"backbone_config"},{anchor:"transformers.MaskFormerConfig.detr_config",description:`<strong>detr_config</strong> (<code>Dict</code>, <em>optional</em>) &#x2014;
