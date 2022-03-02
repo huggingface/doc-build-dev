@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;wav2vec2&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2Config&quot;,&quot;title&quot;:&quot;Wav2Vec2Config&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2CTCTokenizer&quot;,&quot;title&quot;:&quot;Wav2Vec2CTCTokenizer&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2FeatureExtractor&quot;,&quot;title&quot;:&quot;Wav2Vec2FeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2Processor&quot;,&quot;title&quot;:&quot;Wav2Vec2Processor&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ProcessorWithLM&quot;,&quot;title&quot;:&quot;Wav2Vec2ProcessorWithLM&quot;},{&quot;local&quot;:&quot;transformers.models.wav2vec2_with_lm.processing_wav2vec2_with_lm.Wav2Vec2DecoderWithLMOutput&quot;,&quot;title&quot;:&quot;Wav2Vec2 specific outputs&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2Model&quot;,&quot;title&quot;:&quot;Wav2Vec2Model&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ForCTC&quot;,&quot;title&quot;:&quot;Wav2Vec2ForCTC&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ForSequenceClassification&quot;,&quot;title&quot;:&quot;Wav2Vec2ForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ForAudioFrameClassification&quot;,&quot;title&quot;:&quot;Wav2Vec2ForAudioFrameClassification&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ForXVector&quot;,&quot;title&quot;:&quot;Wav2Vec2ForXVector&quot;},{&quot;local&quot;:&quot;transformers.Wav2Vec2ForPreTraining&quot;,&quot;title&quot;:&quot;Wav2Vec2ForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.TFWav2Vec2Model&quot;,&quot;title&quot;:&quot;TFWav2Vec2Model&quot;},{&quot;local&quot;:&quot;transformers.TFWav2Vec2ForCTC&quot;,&quot;title&quot;:&quot;TFWav2Vec2ForCTC&quot;},{&quot;local&quot;:&quot;transformers.FlaxWav2Vec2Model&quot;,&quot;title&quot;:&quot;FlaxWav2Vec2Model&quot;},{&quot;local&quot;:&quot;transformers.FlaxWav2Vec2ForCTC&quot;,&quot;title&quot;:&quot;FlaxWav2Vec2ForCTC&quot;},{&quot;local&quot;:&quot;transformers.FlaxWav2Vec2ForPreTraining&quot;,&quot;title&quot;:&quot;FlaxWav2Vec2ForPreTraining&quot;}],&quot;title&quot;:&quot;Wav2Vec2&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_15839/en/_app/assets/pages/__layout.svelte-3f5b292a.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_15839/en/_app/start-97bb575f.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15839/en/_app/start-7f123a83.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15839/en/_app/chunks/vendor-4833417e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15839/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15839/en/_app/pages/__layout.svelte-52826f4d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15839/en/_app/pages/model_doc/wav2vec2.mdx-ca448f25.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15839/en/_app/pages/model_doc/wav2vec2.mdx-e800c558.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15839/en/_app/chunks/Tip-fffd6df1.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15839/en/_app/chunks/Docstring-44c5af16.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15839/en/_app/chunks/IconCopyLink-4b81c553.js">
@@ -1568,7 +1568,7 @@ Wav2Vec2.</p></div></div>
 		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: typing.Union[typing.List[str], str]</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">logit_score<span class="opacity-60">: typing.Union[typing.List[float], float] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">lm_score<span class="opacity-60">: typing.Union[typing.List[float], float] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">word_offsets<span class="opacity-60">: typing.Union[typing.List[typing.List[typing.Dict[str, typing.Union[str, int]]]], typing.List[typing.Dict[str, typing.Union[str, int]]]] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">word_offsets<span class="opacity-60">: typing.Union[typing.List[typing.List[typing.Dict[str, typing.Union[int, str]]]], typing.List[typing.Dict[str, typing.Union[int, str]]]] = None</span></span>
 			</span>
 		<span>)</span>
 		</p>
@@ -3847,10 +3847,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">assert</span> np.asarray(cosine_sim)[mask_time_indices].mean() &gt; <span class="hljs-number">0.5</span><!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="j5cppn">
-		import { start } from "/docs/transformers/pr_15839/en/_app/start-97bb575f.js";
+		<script type="module" data-hydrate="omyaz">
+		import { start } from "/docs/transformers/pr_15839/en/_app/start-7f123a83.js";
 		start({
-			target: document.querySelector('[data-hydrate="j5cppn"]').parentNode,
+			target: document.querySelector('[data-hydrate="omyaz"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15839/en","assets":"/docs/transformers/pr_15839/en"},
 			session: {},
 			route: false,
@@ -3861,7 +3861,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15839/en/_app/pages/__layout.svelte-52826f4d.js"),
-						import("/docs/transformers/pr_15839/en/_app/pages/model_doc/wav2vec2.mdx-ca448f25.js")
+						import("/docs/transformers/pr_15839/en/_app/pages/model_doc/wav2vec2.mdx-e800c558.js")
 				],
 				params: {}
 			}
