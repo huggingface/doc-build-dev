@@ -205,7 +205,7 @@ The auto class to register this new model with.`,name:"auto_class"}]}}),Ie=new o
 Typically a <code>TF.MainLayer</code> class in this project, in general must accept a <code>config</code> argument to its
 initializer.`,name:"cls"}],returnDescription:`
 <p>The same class object, with modifications for Keras deserialization.</p>
-`}}),Ct=new T({props:{name:"transformers.shape_list",anchor:"transformers.shape_list",parameters:[{name:"tensor",val:": typing.Union[tensorflow.python.framework.ops.Tensor, numpy.ndarray]"}],source:"https://github.com/huggingface/transformers/blob/pr_15786/src/transformers/tf_utils.py#L33",parametersDescription:[{anchor:"transformers.shape_list.tensor",description:"<strong>tensor</strong> (<code>tf.Tensor</code> or <code>np.ndarray</code>) &#x2014; The tensor we want the shape of.",name:"tensor"}],returnDescription:`
+`}}),Ct=new T({props:{name:"transformers.shape_list",anchor:"transformers.shape_list",parameters:[{name:"tensor",val:": typing.Union[tensorflow.python.framework.ops.Tensor, numpy.ndarray]"}],source:"https://github.com/huggingface/transformers/blob/pr_15786/src/transformers/tf_utils.py#L32",parametersDescription:[{anchor:"transformers.shape_list.tensor",description:"<strong>tensor</strong> (<code>tf.Tensor</code> or <code>np.ndarray</code>) &#x2014; The tensor we want the shape of.",name:"tensor"}],returnDescription:`
 <p>The shape of the tensor as a list.</p>
 `,returnType:`
 <p><code>List[int]</code></p>
