@@ -87,7 +87,7 @@ data_collator = DataCollatorWithPadding(tokenizer, return_tensors=<span class="h
     collate_fn=data_collator,
 )
 
-tf_validation_set = tokenized_imdb["train"].to_tf_dataset(
+tf_validation_set = tokenized_imdb["test"].to_tf_dataset(
     columns=["attention_mask", "input_ids", "label"],
     shuffle=False,
     batch_size=16,
@@ -99,7 +99,7 @@ tf_validation_set = tokenized_imdb["train"].to_tf_dataset(
     collate_fn=data_collator,
 )
 
-tf_validation_set = tokenized_imdb[<span class="hljs-string">&quot;train&quot;</span>].to_tf_dataset(
+tf_validation_set = tokenized_imdb[<span class="hljs-string">&quot;test&quot;</span>].to_tf_dataset(
     columns=[<span class="hljs-string">&quot;attention_mask&quot;</span>, <span class="hljs-string">&quot;input_ids&quot;</span>, <span class="hljs-string">&quot;label&quot;</span>],
     shuffle=<span class="hljs-literal">False</span>,
     batch_size=<span class="hljs-number">16</span>,
