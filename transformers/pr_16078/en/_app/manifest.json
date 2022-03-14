@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-e61c56c1.js",
+    "file": "start-1942549c.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -183,12 +183,15 @@
       "src/routes/training.mdx",
       "src/routes/testing.mdx",
       "src/routes/tasks/sequence_classification.mdx",
+      "src/routes/tasks/audio_classification.mdx",
+      "src/routes/tasks/image_classification.mdx",
       "src/routes/tasks/token_classification.mdx",
       "src/routes/tasks/question_answering.mdx",
       "src/routes/tasks/language_modeling.mdx",
       "src/routes/tasks/multiple_choice.mdx",
       "src/routes/tasks/summarization.mdx",
-      "src/routes/tasks/translation.mdx"
+      "src/routes/tasks/translation.mdx",
+      "src/routes/tasks/asr.mdx"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -316,12 +319,14 @@
     ]
   },
   "src/routes/troubleshooting.mdx": {
-    "file": "pages/troubleshooting.mdx-6eea2c6b.js",
+    "file": "pages/troubleshooting.mdx-2d534f02.js",
     "src": "src/routes/troubleshooting.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-4833417e.js",
+      "_Tip-fffd6df1.js",
+      "_Youtube-27813aed.js",
       "_IconCopyLink-4b81c553.js",
       "_CodeBlock-6a3d1b46.js",
       "_CopyButton-dacfbfaf.js"
@@ -476,7 +481,7 @@
     ]
   },
   "src/routes/main_classes/keras_callbacks.mdx": {
-    "file": "pages/main_classes/keras_callbacks.mdx-aac96a39.js",
+    "file": "pages/main_classes/keras_callbacks.mdx-ea5ad40d.js",
     "src": "src/routes/main_classes/keras_callbacks.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -489,7 +494,7 @@
     ]
   },
   "src/routes/main_classes/text_generation.mdx": {
-    "file": "pages/main_classes/text_generation.mdx-85205f40.js",
+    "file": "pages/main_classes/text_generation.mdx-01a60c6d.js",
     "src": "src/routes/main_classes/text_generation.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -503,7 +508,7 @@
     ]
   },
   "src/routes/main_classes/configuration.mdx": {
-    "file": "pages/main_classes/configuration.mdx-ac79f150.js",
+    "file": "pages/main_classes/configuration.mdx-7269dd07.js",
     "src": "src/routes/main_classes/configuration.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -543,7 +548,7 @@
     ]
   },
   "src/routes/main_classes/deepspeed.mdx": {
-    "file": "pages/main_classes/deepspeed.mdx-1ee6d4d8.js",
+    "file": "pages/main_classes/deepspeed.mdx-e159d5ec.js",
     "src": "src/routes/main_classes/deepspeed.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -557,7 +562,7 @@
     ]
   },
   "src/routes/main_classes/pipelines.mdx": {
-    "file": "pages/main_classes/pipelines.mdx-fd100dd6.js",
+    "file": "pages/main_classes/pipelines.mdx-78edee06.js",
     "src": "src/routes/main_classes/pipelines.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -641,7 +646,7 @@
     ]
   },
   "src/routes/main_classes/model.mdx": {
-    "file": "pages/main_classes/model.mdx-4976ff4f.js",
+    "file": "pages/main_classes/model.mdx-54b06ae7.js",
     "src": "src/routes/main_classes/model.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -655,7 +660,7 @@
     ]
   },
   "src/routes/main_classes/onnx.mdx": {
-    "file": "pages/main_classes/onnx.mdx-f8b0d710.js",
+    "file": "pages/main_classes/onnx.mdx-31ce30c3.js",
     "src": "src/routes/main_classes/onnx.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -883,7 +888,7 @@
     ]
   },
   "src/routes/model_doc/speech_to_text_2.mdx": {
-    "file": "pages/model_doc/speech_to_text_2.mdx-9b691abc.js",
+    "file": "pages/model_doc/speech_to_text_2.mdx-523cddad.js",
     "src": "src/routes/model_doc/speech_to_text_2.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1096,7 +1101,7 @@
     ]
   },
   "src/routes/model_doc/xlm-roberta.mdx": {
-    "file": "pages/model_doc/xlm-roberta.mdx-088f4058.js",
+    "file": "pages/model_doc/xlm-roberta.mdx-953315f6.js",
     "src": "src/routes/model_doc/xlm-roberta.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1124,7 +1129,7 @@
     ]
   },
   "src/routes/model_doc/deberta-v2.mdx": {
-    "file": "pages/model_doc/deberta-v2.mdx-e60bbfc6.js",
+    "file": "pages/model_doc/deberta-v2.mdx-9e6bf148.js",
     "src": "src/routes/model_doc/deberta-v2.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1138,7 +1143,7 @@
     ]
   },
   "src/routes/model_doc/distilbert.mdx": {
-    "file": "pages/model_doc/distilbert.mdx-a7374cde.js",
+    "file": "pages/model_doc/distilbert.mdx-9d53d381.js",
     "src": "src/routes/model_doc/distilbert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1152,7 +1157,7 @@
     ]
   },
   "src/routes/model_doc/layoutlmv2.mdx": {
-    "file": "pages/model_doc/layoutlmv2.mdx-e48335f1.js",
+    "file": "pages/model_doc/layoutlmv2.mdx-b4dcd3cf.js",
     "src": "src/routes/model_doc/layoutlmv2.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1194,7 +1199,7 @@
     ]
   },
   "src/routes/model_doc/mobilebert.mdx": {
-    "file": "pages/model_doc/mobilebert.mdx-b3f59b57.js",
+    "file": "pages/model_doc/mobilebert.mdx-d9493f28.js",
     "src": "src/routes/model_doc/mobilebert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1208,7 +1213,7 @@
     ]
   },
   "src/routes/model_doc/openai-gpt.mdx": {
-    "file": "pages/model_doc/openai-gpt.mdx-d4c65785.js",
+    "file": "pages/model_doc/openai-gpt.mdx-ac4e319e.js",
     "src": "src/routes/model_doc/openai-gpt.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1236,7 +1241,7 @@
     ]
   },
   "src/routes/model_doc/prophetnet.mdx": {
-    "file": "pages/model_doc/prophetnet.mdx-24e19e17.js",
+    "file": "pages/model_doc/prophetnet.mdx-4651fec2.js",
     "src": "src/routes/model_doc/prophetnet.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1264,7 +1269,7 @@
     ]
   },
   "src/routes/model_doc/camembert.mdx": {
-    "file": "pages/model_doc/camembert.mdx-c07ec247.js",
+    "file": "pages/model_doc/camembert.mdx-fd1ba07d.js",
     "src": "src/routes/model_doc/camembert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1314,7 +1319,7 @@
     ]
   },
   "src/routes/model_doc/segformer.mdx": {
-    "file": "pages/model_doc/segformer.mdx-69c270b3.js",
+    "file": "pages/model_doc/segformer.mdx-38740297.js",
     "src": "src/routes/model_doc/segformer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1421,7 +1426,7 @@
     ]
   },
   "src/routes/model_doc/flaubert.mdx": {
-    "file": "pages/model_doc/flaubert.mdx-87c3e7cb.js",
+    "file": "pages/model_doc/flaubert.mdx-90f65534.js",
     "src": "src/routes/model_doc/flaubert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1435,7 +1440,7 @@
     ]
   },
   "src/routes/model_doc/imagegpt.mdx": {
-    "file": "pages/model_doc/imagegpt.mdx-06a7a68e.js",
+    "file": "pages/model_doc/imagegpt.mdx-fc663f08.js",
     "src": "src/routes/model_doc/imagegpt.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1449,7 +1454,7 @@
     ]
   },
   "src/routes/model_doc/layoutlm.mdx": {
-    "file": "pages/model_doc/layoutlm.mdx-099d493b.js",
+    "file": "pages/model_doc/layoutlm.mdx-a7220de5.js",
     "src": "src/routes/model_doc/layoutlm.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1543,7 +1548,7 @@
     ]
   },
   "src/routes/model_doc/deberta.mdx": {
-    "file": "pages/model_doc/deberta.mdx-948fa037.js",
+    "file": "pages/model_doc/deberta.mdx-10f46230.js",
     "src": "src/routes/model_doc/deberta.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1557,7 +1562,7 @@
     ]
   },
   "src/routes/model_doc/electra.mdx": {
-    "file": "pages/model_doc/electra.mdx-ccc60308.js",
+    "file": "pages/model_doc/electra.mdx-0abc9c9e.js",
     "src": "src/routes/model_doc/electra.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1667,7 +1672,7 @@
     ]
   },
   "src/routes/model_doc/roberta.mdx": {
-    "file": "pages/model_doc/roberta.mdx-225a2772.js",
+    "file": "pages/model_doc/roberta.mdx-d6bc9391.js",
     "src": "src/routes/model_doc/roberta.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1819,7 +1824,7 @@
     ]
   },
   "src/routes/model_doc/mbart.mdx": {
-    "file": "pages/model_doc/mbart.mdx-913608de.js",
+    "file": "pages/model_doc/mbart.mdx-8123d857.js",
     "src": "src/routes/model_doc/mbart.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1955,7 +1960,7 @@
     ]
   },
   "src/routes/model_doc/auto.mdx": {
-    "file": "pages/model_doc/auto.mdx-e199154d.js",
+    "file": "pages/model_doc/auto.mdx-1d01d1ce.js",
     "src": "src/routes/model_doc/auto.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -1969,7 +1974,7 @@
     ]
   },
   "src/routes/model_doc/bart.mdx": {
-    "file": "pages/model_doc/bart.mdx-1db0add1.js",
+    "file": "pages/model_doc/bart.mdx-ca2a1d68.js",
     "src": "src/routes/model_doc/bart.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -2034,7 +2039,7 @@
     ]
   },
   "src/routes/model_doc/clip.mdx": {
-    "file": "pages/model_doc/clip.mdx-fb0719cd.js",
+    "file": "pages/model_doc/clip.mdx-bf629bf3.js",
     "src": "src/routes/model_doc/clip.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -2104,7 +2109,7 @@
     ]
   },
   "src/routes/model_doc/fsmt.mdx": {
-    "file": "pages/model_doc/fsmt.mdx-c6cbc4bb.js",
+    "file": "pages/model_doc/fsmt.mdx-b4e38eee.js",
     "src": "src/routes/model_doc/fsmt.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -2146,7 +2151,7 @@
     ]
   },
   "src/routes/model_doc/luke.mdx": {
-    "file": "pages/model_doc/luke.mdx-402ba7e0.js",
+    "file": "pages/model_doc/luke.mdx-fae4fe69.js",
     "src": "src/routes/model_doc/luke.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -2280,7 +2285,7 @@
     ]
   },
   "src/routes/model_doc/rag.mdx": {
-    "file": "pages/model_doc/rag.mdx-089baf38.js",
+    "file": "pages/model_doc/rag.mdx-53df3840.js",
     "src": "src/routes/model_doc/rag.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -2308,7 +2313,7 @@
     ]
   },
   "src/routes/model_doc/vit.mdx": {
-    "file": "pages/model_doc/vit.mdx-a2a2704b.js",
+    "file": "pages/model_doc/vit.mdx-96f20412.js",
     "src": "src/routes/model_doc/vit.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -2322,7 +2327,7 @@
     ]
   },
   "src/routes/model_doc/xlm.mdx": {
-    "file": "pages/model_doc/xlm.mdx-63dfaffe.js",
+    "file": "pages/model_doc/xlm.mdx-dd5425a6.js",
     "src": "src/routes/model_doc/xlm.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -2425,7 +2430,7 @@
     ]
   },
   "src/routes/internal/generation_utils.mdx": {
-    "file": "pages/internal/generation_utils.mdx-c012a3a5.js",
+    "file": "pages/internal/generation_utils.mdx-da4bef2a.js",
     "src": "src/routes/internal/generation_utils.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -2449,7 +2454,7 @@
     ]
   },
   "src/routes/internal/modeling_utils.mdx": {
-    "file": "pages/internal/modeling_utils.mdx-aeb00fc7.js",
+    "file": "pages/internal/modeling_utils.mdx-c96d075d.js",
     "src": "src/routes/internal/modeling_utils.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -2526,6 +2531,34 @@
       "_IconCopyLink-4b81c553.js",
       "_CodeBlock-6a3d1b46.js",
       "_CodeBlockFw-27a176a0.js",
+      "_CopyButton-dacfbfaf.js"
+    ]
+  },
+  "src/routes/tasks/audio_classification.mdx": {
+    "file": "pages/tasks/audio_classification.mdx-8a11a67d.js",
+    "src": "src/routes/tasks/audio_classification.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-4833417e.js",
+      "_Tip-fffd6df1.js",
+      "_Youtube-27813aed.js",
+      "_IconCopyLink-4b81c553.js",
+      "_CodeBlock-6a3d1b46.js",
+      "_CopyButton-dacfbfaf.js"
+    ]
+  },
+  "src/routes/tasks/image_classification.mdx": {
+    "file": "pages/tasks/image_classification.mdx-696c94a2.js",
+    "src": "src/routes/tasks/image_classification.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-4833417e.js",
+      "_Tip-fffd6df1.js",
+      "_Youtube-27813aed.js",
+      "_IconCopyLink-4b81c553.js",
+      "_CodeBlock-6a3d1b46.js",
       "_CopyButton-dacfbfaf.js"
     ]
   },
@@ -2615,6 +2648,20 @@
       "_IconCopyLink-4b81c553.js",
       "_CodeBlock-6a3d1b46.js",
       "_CodeBlockFw-27a176a0.js",
+      "_CopyButton-dacfbfaf.js"
+    ]
+  },
+  "src/routes/tasks/asr.mdx": {
+    "file": "pages/tasks/asr.mdx-10d9df33.js",
+    "src": "src/routes/tasks/asr.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-4833417e.js",
+      "_Tip-fffd6df1.js",
+      "_Youtube-27813aed.js",
+      "_IconCopyLink-4b81c553.js",
+      "_CodeBlock-6a3d1b46.js",
       "_CopyButton-dacfbfaf.js"
     ]
   },
