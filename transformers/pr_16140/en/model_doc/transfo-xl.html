@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;transformer-xl&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.TransfoXLConfig&quot;,&quot;title&quot;:&quot;TransfoXLConfig&quot;},{&quot;local&quot;:&quot;transformers.TransfoXLTokenizer&quot;,&quot;title&quot;:&quot;TransfoXLTokenizer&quot;},{&quot;local&quot;:&quot;transformers.models.transfo_xl.modeling_transfo_xl.TransfoXLModelOutput&quot;,&quot;title&quot;:&quot;TransfoXL specific outputs&quot;},{&quot;local&quot;:&quot;transformers.TransfoXLModel&quot;,&quot;title&quot;:&quot;TransfoXLModel&quot;},{&quot;local&quot;:&quot;transformers.TransfoXLLMHeadModel&quot;,&quot;title&quot;:&quot;TransfoXLLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.TransfoXLForSequenceClassification&quot;,&quot;title&quot;:&quot;TransfoXLForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFTransfoXLModel&quot;,&quot;title&quot;:&quot;TFTransfoXLModel&quot;},{&quot;local&quot;:&quot;transformers.TFTransfoXLLMHeadModel&quot;,&quot;title&quot;:&quot;TFTransfoXLLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.TFTransfoXLForSequenceClassification&quot;,&quot;title&quot;:&quot;TFTransfoXLForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.AdaptiveEmbedding&quot;,&quot;title&quot;:&quot;Internal Layers&quot;}],&quot;title&quot;:&quot;Transformer XL&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16140/en/_app/assets/pages/__layout.svelte-a5c8879b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16140/en/_app/start-bdd73a8b.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16140/en/_app/start-7935f800.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16140/en/_app/chunks/vendor-4833417e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16140/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16140/en/_app/pages/__layout.svelte-52826f4d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16140/en/_app/pages/model_doc/transfo-xl.mdx-5cb086f7.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16140/en/_app/pages/model_doc/transfo-xl.mdx-06a06287.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16140/en/_app/chunks/Tip-fffd6df1.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16140/en/_app/chunks/Docstring-4f315ed9.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16140/en/_app/chunks/IconCopyLink-4b81c553.js">
@@ -416,7 +416,7 @@ Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(bat
 heads.<!-- HTML_TAG_END -->
 							</span></span>
 					</li><li class="text-base !pl-4 my-3"><span class="group flex space-x-1.5 items-start"><a id="transformers.models.transfo_xl.modeling_transfo_xl.TransfoXLLMHeadModelOutput.loss" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.models.transfo_xl.modeling_transfo_xl.TransfoXLLMHeadModelOutput.loss"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-							<span><!-- HTML_TAG_START --><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <em>()</em>, <em>optional</em>, returned when <code>labels</code> is provided) &#x2014;
+							<span><!-- HTML_TAG_START --><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>()</code>, <em>optional</em>, returned when <code>labels</code> is provided) &#x2014;
 Reduced language modeling loss.<!-- HTML_TAG_END -->
 							</span></span>
 					</li></ul>
@@ -814,7 +814,7 @@ shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 heads.</p>
 </li>
 <li>
-<p><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <em>()</em>, <em>optional</em>, returned when <code>labels</code> is provided)
+<p><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>()</code>, <em>optional</em>, returned when <code>labels</code> is provided)
 Reduced language modeling loss.</p>
 </li>
 </ul>
@@ -1630,10 +1630,10 @@ the latter silently ignores them.</p></div>
 		</div></div></div>
 
 
-		<script type="module" data-hydrate="xle2e4">
-		import { start } from "/docs/transformers/pr_16140/en/_app/start-bdd73a8b.js";
+		<script type="module" data-hydrate="txm3ks">
+		import { start } from "/docs/transformers/pr_16140/en/_app/start-7935f800.js";
 		start({
-			target: document.querySelector('[data-hydrate="xle2e4"]').parentNode,
+			target: document.querySelector('[data-hydrate="txm3ks"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16140/en","assets":"/docs/transformers/pr_16140/en"},
 			session: {},
 			route: false,
@@ -1644,7 +1644,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16140/en/_app/pages/__layout.svelte-52826f4d.js"),
-						import("/docs/transformers/pr_16140/en/_app/pages/model_doc/transfo-xl.mdx-5cb086f7.js")
+						import("/docs/transformers/pr_16140/en/_app/pages/model_doc/transfo-xl.mdx-06a06287.js")
 				],
 				params: {}
 			}

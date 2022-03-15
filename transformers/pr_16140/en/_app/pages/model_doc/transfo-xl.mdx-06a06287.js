@@ -127,7 +127,7 @@ shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.`,name:"hidden_states"},{anchor:"transformers.models.transfo_xl.modeling_transfo_xl.TransfoXLLMHeadModelOutput.attentions",description:`<strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) &#x2014;
 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
 <p>Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
-heads.`,name:"attentions"},{anchor:"transformers.models.transfo_xl.modeling_transfo_xl.TransfoXLLMHeadModelOutput.loss",description:`<strong>loss</strong> (<code>torch.FloatTensor</code> of shape <em>()</em>, <em>optional</em>, returned when <code>labels</code> is provided) &#x2014;
+heads.`,name:"attentions"},{anchor:"transformers.models.transfo_xl.modeling_transfo_xl.TransfoXLLMHeadModelOutput.loss",description:`<strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>()</code>, <em>optional</em>, returned when <code>labels</code> is provided) &#x2014;
 Reduced language modeling loss.`,name:"loss"}]}}),ro=new ee({props:{name:"class transformers.models.transfo_xl.modeling_tf_transfo_xl.TFTransfoXLModelOutput",anchor:"transformers.models.transfo_xl.modeling_tf_transfo_xl.TFTransfoXLModelOutput",parameters:[{name:"last_hidden_state",val:": Tensor = None"},{name:"mems",val:": typing.List[tensorflow.python.framework.ops.Tensor] = None"},{name:"hidden_states",val:": typing.Optional[typing.Tuple[tensorflow.python.framework.ops.Tensor]] = None"},{name:"attentions",val:": typing.Optional[typing.Tuple[tensorflow.python.framework.ops.Tensor]] = None"}],source:"https://github.com/huggingface/transformers/blob/pr_16140/src/transformers/models/transfo_xl/modeling_tf_transfo_xl.py#L711",parametersDescription:[{anchor:"transformers.models.transfo_xl.modeling_tf_transfo_xl.TFTransfoXLModelOutput.last_hidden_state",description:`<strong>last_hidden_state</strong> (<code>tf.Tensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>) &#x2014;
 Sequence of hidden-states at the output of the last layer of the model.`,name:"last_hidden_state"},{anchor:"transformers.models.transfo_xl.modeling_tf_transfo_xl.TFTransfoXLModelOutput.mems",description:`<strong>mems</strong> (<code>List[tf.Tensor]</code> of length <code>config.n_layers</code>) &#x2014;
 Contains pre-computed hidden-states (key and values in the attention blocks). Can be used (see <code>mems</code>
@@ -277,7 +277,7 @@ shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 heads.</p>
 </li>
 <li>
-<p><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <em>()</em>, <em>optional</em>, returned when <code>labels</code> is provided)
+<p><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>()</code>, <em>optional</em>, returned when <code>labels</code> is provided)
 Reduced language modeling loss.</p>
 </li>
 </ul>
