@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;generation&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers.generation_utils.GenerationMixin&quot;,&quot;title&quot;:&quot;GenerationMixin&quot;},{&quot;local&quot;:&quot;transformers.generation_tf_utils.TFGenerationMixin&quot;,&quot;title&quot;:&quot;TFGenerationMixin&quot;},{&quot;local&quot;:&quot;transformers.generation_flax_utils.FlaxGenerationMixin&quot;,&quot;title&quot;:&quot;FlaxGenerationMixin&quot;}],&quot;title&quot;:&quot;Generation&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16133/en/_app/assets/pages/__layout.svelte-a5c8879b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16133/en/_app/start-8935c1af.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16133/en/_app/start-ccae4061.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16133/en/_app/chunks/vendor-4833417e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16133/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16133/en/_app/pages/__layout.svelte-52826f4d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16133/en/_app/pages/main_classes/text_generation.mdx-528dea6e.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16133/en/_app/pages/main_classes/text_generation.mdx-959f2e98.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16133/en/_app/chunks/Tip-fffd6df1.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16133/en/_app/chunks/Docstring-4f315ed9.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16133/en/_app/chunks/IconCopyLink-4b81c553.js">
@@ -20,10 +20,10 @@
 	<span>Generation
 	</span></h1>
 
-<p>Each framework has a generate method for auto-regressive text generation implemented in their respective GenerationMixin class:</p>
-<ul><li>PyTorch [~generation_utils.GenerationMixin.generate] is implemented in [~generation_utils.GenerationMixin].</li>
-<li>TensorFlow [~generation_tf_utils.TFGenerationMixin.generate] is implemented in [~generation_tf_utils.TFGenerationMixin].</li>
-<li>Flax/JAX [~generation_flax_utils.FlaxGenerationMixin.generate] is implemented in [~generation_flax_utils.FlaxGenerationMixin].</li></ul>
+<p>Each framework has a generate method for auto-regressive text generation implemented in their respective <code>GenerationMixin</code> class:</p>
+<ul><li>PyTorch <a href="/docs/transformers/pr_16133/en/main_classes/text_generation#transformers.generation_utils.GenerationMixin.generate">generate()</a> is implemented in <a href="/docs/transformers/pr_16133/en/main_classes/text_generation#transformers.generation_utils.GenerationMixin">GenerationMixin</a>.</li>
+<li>TensorFlow <a href="/docs/transformers/pr_16133/en/main_classes/text_generation#transformers.generation_tf_utils.TFGenerationMixin.generate">generate()</a> is implemented in <a href="/docs/transformers/pr_16133/en/main_classes/text_generation#transformers.generation_tf_utils.TFGenerationMixin">TFGenerationMixin</a>.</li>
+<li>Flax/JAX <a href="/docs/transformers/pr_16133/en/main_classes/text_generation#transformers.generation_flax_utils.FlaxGenerationMixin.generate">generate()</a> is implemented in <a href="/docs/transformers/pr_16133/en/main_classes/text_generation#transformers.generation_flax_utils.FlaxGenerationMixin">FlaxGenerationMixin</a>.</li></ul>
 <h2 class="relative group"><a id="transformers.generation_utils.GenerationMixin" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.generation_utils.GenerationMixin"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>GenerationMixin
 	</span></h2>
@@ -1706,10 +1706,10 @@ post</a>.</p>
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.batch_decode(outputs, skip_special_tokens=<span class="hljs-literal">True</span>)<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="yepltz">
-		import { start } from "/docs/transformers/pr_16133/en/_app/start-8935c1af.js";
+		<script type="module" data-hydrate="1gzfncu">
+		import { start } from "/docs/transformers/pr_16133/en/_app/start-ccae4061.js";
 		start({
-			target: document.querySelector('[data-hydrate="yepltz"]').parentNode,
+			target: document.querySelector('[data-hydrate="1gzfncu"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16133/en","assets":"/docs/transformers/pr_16133/en"},
 			session: {},
 			route: false,
@@ -1720,7 +1720,7 @@ post</a>.</p>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16133/en/_app/pages/__layout.svelte-52826f4d.js"),
-						import("/docs/transformers/pr_16133/en/_app/pages/main_classes/text_generation.mdx-528dea6e.js")
+						import("/docs/transformers/pr_16133/en/_app/pages/main_classes/text_generation.mdx-959f2e98.js")
 				],
 				params: {}
 			}
