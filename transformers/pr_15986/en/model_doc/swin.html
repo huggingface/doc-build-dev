@@ -1,15 +1,14 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;swin-transformer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.SwinConfig&quot;,&quot;title&quot;:&quot;SwinConfig&quot;},{&quot;local&quot;:&quot;transformers.SwinModel&quot;,&quot;title&quot;:&quot;SwinModel&quot;},{&quot;local&quot;:&quot;transformers.SwinForMaskedImageModeling&quot;,&quot;title&quot;:&quot;SwinForMaskedImageModeling&quot;},{&quot;local&quot;:&quot;transformers.SwinForImageClassification&quot;,&quot;title&quot;:&quot;SwinForImageClassification&quot;}],&quot;title&quot;:&quot;Swin Transformer&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_15986/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/start-6b951a48.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/vendor-4833417e.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/start-67c02795.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/pages/__layout.svelte-52826f4d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/pages/model_doc/swin.mdx-3d2e35db.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/Tip-fffd6df1.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/Docstring-4f315ed9.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/IconCopyLink-4b81c553.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/CodeBlock-6a3d1b46.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/CopyButton-dacfbfaf.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/pages/__layout.svelte-3f22c1e5.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/pages/model_doc/swin.mdx-f4bab804.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/Tip-39098574.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/Docstring-abef54e3.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/IconCopyLink-7a11ce68.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15986/en/_app/chunks/CodeBlock-3a8b25a8.js"> 
 
 
 
@@ -422,10 +421,10 @@ elements depending on the configuration (<a
 >SwinConfig</a>) and inputs.</p>
 <ul>
 <li>
-<p><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>(1,)</code>, <em>optional</em>, returned when <code>labels</code> is provided) — Masked image modeling (MLM) loss.</p>
+<p><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>(1,)</code>, <em>optional</em>, returned when <code>bool_masked_pos</code> is provided) — Masked image modeling (MLM) loss.</p>
 </li>
 <li>
-<p><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, config.vocab_size)</code>) — Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax).</p>
+<p><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, num_channels, height, width)</code>) — Reconstructed pixel values.</p>
 </li>
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each layer) of
@@ -629,10 +628,10 @@ the latter silently ignores them.</p></div>
 tabby, tabby cat<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1eutjzp">
-		import { start } from "/docs/transformers/pr_15986/en/_app/start-6b951a48.js";
+		<script type="module" data-hydrate="oagq90">
+		import { start } from "/docs/transformers/pr_15986/en/_app/start-67c02795.js";
 		start({
-			target: document.querySelector('[data-hydrate="1eutjzp"]').parentNode,
+			target: document.querySelector('[data-hydrate="oagq90"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15986/en","assets":"/docs/transformers/pr_15986/en"},
 			session: {},
 			route: false,
@@ -642,8 +641,8 @@ tabby, tabby cat<!-- HTML_TAG_END --></pre></div></div></div>
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_15986/en/_app/pages/__layout.svelte-52826f4d.js"),
-						import("/docs/transformers/pr_15986/en/_app/pages/model_doc/swin.mdx-3d2e35db.js")
+					import("/docs/transformers/pr_15986/en/_app/pages/__layout.svelte-3f22c1e5.js"),
+						import("/docs/transformers/pr_15986/en/_app/pages/model_doc/swin.mdx-f4bab804.js")
 				],
 				params: {}
 			}
