@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;gptj&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;generation&quot;,&quot;title&quot;:&quot;Generation&quot;}],&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.GPTJConfig&quot;,&quot;title&quot;:&quot;GPTJConfig&quot;},{&quot;local&quot;:&quot;transformers.GPTJModel&quot;,&quot;title&quot;:&quot;GPTJModel&quot;},{&quot;local&quot;:&quot;transformers.GPTJForCausalLM&quot;,&quot;title&quot;:&quot;GPTJForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.GPTJForSequenceClassification&quot;,&quot;title&quot;:&quot;GPTJForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.GPTJForQuestionAnswering&quot;,&quot;title&quot;:&quot;GPTJForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.FlaxGPTJModel&quot;,&quot;title&quot;:&quot;FlaxGPTJModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxGPTJForCausalLM&quot;,&quot;title&quot;:&quot;FlaxGPTJForCausalLM&quot;}],&quot;title&quot;:&quot;GPT-J&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16148/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/start-80b4ab26.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/start-7029cbc7.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/pages/model_doc/gptj.mdx-1753263a.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/pages/model_doc/gptj.mdx-0c4c2609.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -1019,7 +1019,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_shape<span class="opacity-60">: typing.Tuple = (1, 1)</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">seed<span class="opacity-60">: int = 0</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">dtype<span class="opacity-60">: dtype = &lt;class &#39;jax._src.numpy.lax_numpy.float32&#39;&gt;</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_init<span class="opacity-60">: bool = True</span></span>
+			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">_do_init<span class="opacity-60">: bool = True</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
@@ -1191,7 +1191,7 @@ the latter silently ignores them.</p></div>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_shape<span class="opacity-60">: typing.Tuple = (1, 1)</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">seed<span class="opacity-60">: int = 0</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">dtype<span class="opacity-60">: dtype = &lt;class &#39;jax._src.numpy.lax_numpy.float32&#39;&gt;</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_init<span class="opacity-60">: bool = True</span></span>
+			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">_do_init<span class="opacity-60">: bool = True</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
@@ -1352,10 +1352,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>next_token_logits = outputs.logits[:, -<span class="hljs-number">1</span>]<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="8vupkf">
-		import { start } from "/docs/transformers/pr_16148/en/_app/start-80b4ab26.js";
+		<script type="module" data-hydrate="ms50rz">
+		import { start } from "/docs/transformers/pr_16148/en/_app/start-7029cbc7.js";
 		start({
-			target: document.querySelector('[data-hydrate="8vupkf"]').parentNode,
+			target: document.querySelector('[data-hydrate="ms50rz"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16148/en","assets":"/docs/transformers/pr_16148/en"},
 			session: {},
 			route: false,
@@ -1366,7 +1366,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16148/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16148/en/_app/pages/model_doc/gptj.mdx-1753263a.js")
+						import("/docs/transformers/pr_16148/en/_app/pages/model_doc/gptj.mdx-0c4c2609.js")
 				],
 				params: {}
 			}
