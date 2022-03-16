@@ -77,7 +77,7 @@ elements depending on the configuration (<a
 </li>
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each(one for the output of the embeddings + one for the output of
-each stage) stage) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
+each stage) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
 <li>
@@ -87,7 +87,7 @@ heads.</p>
 </li>
 <li>
 <p><strong>reshaped_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each(one for the output of the embeddings + one for the output of
-each stage) stage) of shape <code>(batch_size, hidden_size, height, width)</code>.</p>
+each stage) of shape <code>(batch_size, hidden_size, height, width)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs reshaped to
 include the spatial dimensions.</p>
 </li>
@@ -157,7 +157,7 @@ elements depending on the configuration (<a
 </li>
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each(one for the output of the embeddings + one for the output of
-each stage) stage) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
+each stage) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
 <li>
@@ -167,7 +167,7 @@ heads.</p>
 </li>
 <li>
 <p><strong>reshaped_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each(one for the output of the embeddings + one for the output of
-each stage) stage) of shape <code>(batch_size, hidden_size, height, width)</code>.</p>
+each stage) of shape <code>(batch_size, hidden_size, height, width)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs reshaped to
 include the spatial dimensions.</p>
 </li>
@@ -242,7 +242,7 @@ elements depending on the configuration (<a
 </li>
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each(one for the output of the embeddings + one for the output of
-each stage) stage) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
+each stage) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
 <li>
@@ -252,7 +252,7 @@ heads.</p>
 </li>
 <li>
 <p><strong>reshaped_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each(one for the output of the embeddings + one for the output of
-each stage) stage) of shape <code>(batch_size, hidden_size, height, width)</code>.</p>
+each stage) of shape <code>(batch_size, hidden_size, height, width)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs reshaped to
 include the spatial dimensions.</p>
 </li>
