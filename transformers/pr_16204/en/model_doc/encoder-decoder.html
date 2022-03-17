@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;encoder-decoder-models&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers.EncoderDecoderConfig&quot;,&quot;title&quot;:&quot;EncoderDecoderConfig&quot;},{&quot;local&quot;:&quot;transformers.EncoderDecoderModel&quot;,&quot;title&quot;:&quot;EncoderDecoderModel&quot;},{&quot;local&quot;:&quot;transformers.TFEncoderDecoderModel&quot;,&quot;title&quot;:&quot;TFEncoderDecoderModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxEncoderDecoderModel&quot;,&quot;title&quot;:&quot;FlaxEncoderDecoderModel&quot;}],&quot;title&quot;:&quot;Encoder Decoder Models&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16204/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16204/en/_app/start-be417e4d.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16204/en/_app/start-f519f26a.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16204/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16204/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16204/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16204/en/_app/pages/model_doc/encoder-decoder.mdx-d8525a86.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16204/en/_app/pages/model_doc/encoder-decoder.mdx-4d747d2c.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16204/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16204/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16204/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -917,11 +917,11 @@ encoder and :meth<em>~transformers.FlaxAutoModelForCausalLM.from_pretrained</em>
 			<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
 		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: ndarray</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">decoder_input_ids<span class="opacity-60">: typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">decoder_attention_mask<span class="opacity-60">: typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">decoder_position_ids<span class="opacity-60">: typing.Optional[jax._src.numpy.lax_numpy.ndarray] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[jax._src.numpy.ndarray.ndarray] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">decoder_input_ids<span class="opacity-60">: typing.Optional[jax._src.numpy.ndarray.ndarray] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">decoder_attention_mask<span class="opacity-60">: typing.Optional[jax._src.numpy.ndarray.ndarray] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[jax._src.numpy.ndarray.ndarray] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">decoder_position_ids<span class="opacity-60">: typing.Optional[jax._src.numpy.ndarray.ndarray] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
@@ -1159,10 +1159,10 @@ checkpoints.</p>
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = FlaxEncoderDecoderModel.from_pretrained(<span class="hljs-string">&quot;./bert2gpt2&quot;</span>)<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="11dsveq">
-		import { start } from "/docs/transformers/pr_16204/en/_app/start-be417e4d.js";
+		<script type="module" data-hydrate="14q2odg">
+		import { start } from "/docs/transformers/pr_16204/en/_app/start-f519f26a.js";
 		start({
-			target: document.querySelector('[data-hydrate="11dsveq"]').parentNode,
+			target: document.querySelector('[data-hydrate="14q2odg"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16204/en","assets":"/docs/transformers/pr_16204/en"},
 			session: {},
 			route: false,
@@ -1173,7 +1173,7 @@ checkpoints.</p>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16204/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16204/en/_app/pages/model_doc/encoder-decoder.mdx-d8525a86.js")
+						import("/docs/transformers/pr_16204/en/_app/pages/model_doc/encoder-decoder.mdx-4d747d2c.js")
 				],
 				params: {}
 			}
