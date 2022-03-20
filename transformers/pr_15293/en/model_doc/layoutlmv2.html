@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;layoutlmv2&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;usage-layoutlmv2processor&quot;,&quot;title&quot;:&quot;Usage: LayoutLMv2Processor&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2Config&quot;,&quot;title&quot;:&quot;LayoutLMv2Config&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2FeatureExtractor&quot;,&quot;title&quot;:&quot;LayoutLMv2FeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2Tokenizer&quot;,&quot;title&quot;:&quot;LayoutLMv2Tokenizer&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2TokenizerFast&quot;,&quot;title&quot;:&quot;LayoutLMv2TokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2Processor&quot;,&quot;title&quot;:&quot;LayoutLMv2Processor&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2Model&quot;,&quot;title&quot;:&quot;LayoutLMv2Model&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2ForSequenceClassification&quot;,&quot;title&quot;:&quot;LayoutLMv2ForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2ForTokenClassification&quot;,&quot;title&quot;:&quot;LayoutLMv2ForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2ForQuestionAnswering&quot;,&quot;title&quot;:&quot;LayoutLMv2ForQuestionAnswering&quot;}],&quot;title&quot;:&quot;LayoutLMV2&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_15293/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_15293/en/_app/start-20dab528.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15293/en/_app/start-57b629e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15293/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15293/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15293/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15293/en/_app/pages/model_doc/layoutlmv2.mdx-2d1799f7.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15293/en/_app/pages/model_doc/layoutlmv2.mdx-07c594bd.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15293/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15293/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15293/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -160,7 +160,7 @@ the words and normalized bounding boxes.</p>
 processor = LayoutLMv2Processor.from_pretrained(<span class="hljs-string">&quot;microsoft/layoutlmv2-base-uncased&quot;</span>)
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)
+  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)\
   .convert(<span class="hljs-string">&quot;RGB&quot;</span>)
 encoding = processor(
     image, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>
@@ -181,7 +181,7 @@ the processor.</p>
 processor = LayoutLMv2Processor.from_pretrained(<span class="hljs-string">&quot;microsoft/layoutlmv2-base-uncased&quot;</span>, revision=<span class="hljs-string">&quot;no_ocr&quot;</span>)
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)
+  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)\
   .convert(<span class="hljs-string">&quot;RGB&quot;</span>)
 words = [<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-string">&quot;world&quot;</span>]
 boxes = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]]  <span class="hljs-comment"># make sure to normalize your bounding boxes</span>
@@ -204,7 +204,7 @@ initialize the tokenizer with <code>only_label_first_subword</code> set to <code
 processor = LayoutLMv2Processor.from_pretrained(<span class="hljs-string">&quot;microsoft/layoutlmv2-base-uncased&quot;</span>, revision=<span class="hljs-string">&quot;no_ocr&quot;</span>)
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)
+  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)\
   .convert(<span class="hljs-string">&quot;RGB&quot;</span>)
 words = [<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-string">&quot;world&quot;</span>]
 boxes = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]]  <span class="hljs-comment"># make sure to normalize your bounding boxes</span>
@@ -225,7 +225,7 @@ processor will apply OCR on the image, and create [CLS] question tokens [SEP] wo
 processor = LayoutLMv2Processor.from_pretrained(<span class="hljs-string">&quot;microsoft/layoutlmv2-base-uncased&quot;</span>)
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)
+  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)\
   .convert(<span class="hljs-string">&quot;RGB&quot;</span>)
 question = <span class="hljs-string">&quot;What&#x27;s his name?&quot;</span>
 encoding = processor(image, question, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -244,7 +244,7 @@ perform OCR yourself, you can provide your own words and (normalized) bounding b
 processor = LayoutLMv2Processor.from_pretrained(<span class="hljs-string">&quot;microsoft/layoutlmv2-base-uncased&quot;</span>, revision=<span class="hljs-string">&quot;no_ocr&quot;</span>)
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)
+  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)\
   .convert(<span class="hljs-string">&quot;RGB&quot;</span>)
 question = <span class="hljs-string">&quot;What&#x27;s his name?&quot;</span>
 words = [<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-string">&quot;world&quot;</span>]
@@ -1970,10 +1970,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>end_scores = outputs.end_logits<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="7vz0hj">
-		import { start } from "/docs/transformers/pr_15293/en/_app/start-20dab528.js";
+		<script type="module" data-hydrate="lu6pmz">
+		import { start } from "/docs/transformers/pr_15293/en/_app/start-57b629e3.js";
 		start({
-			target: document.querySelector('[data-hydrate="7vz0hj"]').parentNode,
+			target: document.querySelector('[data-hydrate="lu6pmz"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15293/en","assets":"/docs/transformers/pr_15293/en"},
 			session: {},
 			route: false,
@@ -1984,7 +1984,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15293/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_15293/en/_app/pages/model_doc/layoutlmv2.mdx-2d1799f7.js")
+						import("/docs/transformers/pr_15293/en/_app/pages/model_doc/layoutlmv2.mdx-07c594bd.js")
 				],
 				params: {}
 			}
