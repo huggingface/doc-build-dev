@@ -1,15 +1,14 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;audio-classification&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;load-superb-dataset&quot;,&quot;title&quot;:&quot;Load SUPERB dataset&quot;},{&quot;local&quot;:&quot;preprocess&quot;,&quot;title&quot;:&quot;Preprocess&quot;},{&quot;local&quot;:&quot;finetune-with-trainer&quot;,&quot;title&quot;:&quot;Fine-tune with Trainer&quot;}],&quot;title&quot;:&quot;Audio classification&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/transformers/pr_16115/en/_app/assets/pages/__layout.svelte-a5c8879b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/start-9ac8d841.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/vendor-4833417e.js">
+	<link rel="stylesheet" href="/docs/transformers/pr_16115/en/_app/assets/pages/__layout.svelte-02e8282d.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/start-58834580.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/pages/__layout.svelte-52826f4d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/pages/tasks/audio_classification.mdx-2652e80e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/Tip-fffd6df1.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/Youtube-27813aed.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/IconCopyLink-4b81c553.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/CodeBlock-6a3d1b46.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/CopyButton-dacfbfaf.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/pages/__layout.svelte-3f22c1e5.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/pages/tasks/audio_classification.mdx-fcefbdc4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/Tip-39098574.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/Youtube-5c6e11e6.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/IconCopyLink-7a11ce68.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16115/en/_app/chunks/CodeBlock-3a8b25a8.js"> 
 
 
 
@@ -112,7 +111,7 @@
 <span class="hljs-meta">... </span>)<!-- HTML_TAG_END --></pre></div>
 
 
-<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>If you aren’t familiar with fine-tuning a model with the <a href="/docs/transformers/pr_16115/en/main_classes/trainer#transformers.Trainer">Trainer</a>, take a look at the basic tutorial <a href="training#finetune-with-trainer">here</a>!</p></div>
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>If you aren’t familiar with fine-tuning a model with the <a href="/docs/transformers/pr_16115/en/main_classes/trainer#transformers.Trainer">Trainer</a>, take a look at the basic tutorial <a href="../training#finetune-with-trainer">here</a>!</p></div>
 <p>At this point, only three steps remain:</p>
 <ol><li>Define your training hyperparameters in <a href="/docs/transformers/pr_16115/en/main_classes/trainer#transformers.TrainingArguments">TrainingArguments</a>.</li>
 <li>Pass the training arguments to <a href="/docs/transformers/pr_16115/en/main_classes/trainer#transformers.Trainer">Trainer</a> along with the model, datasets, and feature extractor.</li>
@@ -143,10 +142,10 @@
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>For a more in-depth example of how to fine-tune a model for audio classification, take a look at the corresponding <a href="https://colab.research.google.com/github/huggingface/notebooks/blob/master/examples/audio_classification.ipynb" rel="nofollow">PyTorch notebook</a>.</p></div>
 
 
-		<script type="module" data-hydrate="1ne2hrf">
-		import { start } from "/docs/transformers/pr_16115/en/_app/start-9ac8d841.js";
+		<script type="module" data-hydrate="1u6104k">
+		import { start } from "/docs/transformers/pr_16115/en/_app/start-58834580.js";
 		start({
-			target: document.querySelector('[data-hydrate="1ne2hrf"]').parentNode,
+			target: document.querySelector('[data-hydrate="1u6104k"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16115/en","assets":"/docs/transformers/pr_16115/en"},
 			session: {},
 			route: false,
@@ -156,8 +155,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_16115/en/_app/pages/__layout.svelte-52826f4d.js"),
-						import("/docs/transformers/pr_16115/en/_app/pages/tasks/audio_classification.mdx-2652e80e.js")
+					import("/docs/transformers/pr_16115/en/_app/pages/__layout.svelte-3f22c1e5.js"),
+						import("/docs/transformers/pr_16115/en/_app/pages/tasks/audio_classification.mdx-fcefbdc4.js")
 				],
 				params: {}
 			}
