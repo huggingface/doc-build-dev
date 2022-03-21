@@ -29,12 +29,14 @@ the latter silently ignores them.`),w.forEach(t)},m(L,w){u(L,y,w),e(y,q),e(y,b),
     ]`}}),No=new Y({props:{code:`from PIL import Image
 
 image = Image.open(
-  "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).")
+    "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images)."
+)
 
 width, height = image.size`,highlighted:`<span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)
+    <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>
+)
 
 width, height = image.size`}}),Uo=new ie({}),Bo=new Y({props:{code:`from transformers import LayoutLMv2FeatureExtractor, LayoutLMv2TokenizerFast, LayoutLMv2Processor
 
@@ -50,8 +52,8 @@ from PIL import Image
 processor = LayoutLMv2Processor.from_pretrained("microsoft/layoutlmv2-base-uncased")
 
 image = Image.open(
-  "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).")\\
-  .convert("RGB")
+    "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images)."
+).convert("RGB")
 encoding = processor(
     image, return_tensors="pt"
 )  # you can also add all tokenizer parameters here such as padding, truncation
@@ -62,8 +64,8 @@ print(encoding.keys())
 processor = LayoutLMv2Processor.from_pretrained(<span class="hljs-string">&quot;microsoft/layoutlmv2-base-uncased&quot;</span>)
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)\\
-  .convert(<span class="hljs-string">&quot;RGB&quot;</span>)
+    <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>
+).convert(<span class="hljs-string">&quot;RGB&quot;</span>)
 encoding = processor(
     image, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>
 )  <span class="hljs-comment"># you can also add all tokenizer parameters here such as padding, truncation</span>
@@ -74,8 +76,8 @@ from PIL import Image
 processor = LayoutLMv2Processor.from_pretrained("microsoft/layoutlmv2-base-uncased", revision="no_ocr")
 
 image = Image.open(
-  "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).")\\
-  .convert("RGB")
+    "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images)."
+).convert("RGB")
 words = ["hello", "world"]
 boxes = [[1, 2, 3, 4], [5, 6, 7, 8]]  # make sure to normalize your bounding boxes
 encoding = processor(image, words, boxes=boxes, return_tensors="pt")
@@ -86,8 +88,8 @@ print(encoding.keys())
 processor = LayoutLMv2Processor.from_pretrained(<span class="hljs-string">&quot;microsoft/layoutlmv2-base-uncased&quot;</span>, revision=<span class="hljs-string">&quot;no_ocr&quot;</span>)
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)\\
-  .convert(<span class="hljs-string">&quot;RGB&quot;</span>)
+    <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>
+).convert(<span class="hljs-string">&quot;RGB&quot;</span>)
 words = [<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-string">&quot;world&quot;</span>]
 boxes = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]]  <span class="hljs-comment"># make sure to normalize your bounding boxes</span>
 encoding = processor(image, words, boxes=boxes, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -98,8 +100,8 @@ from PIL import Image
 processor = LayoutLMv2Processor.from_pretrained("microsoft/layoutlmv2-base-uncased", revision="no_ocr")
 
 image = Image.open(
-  "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).")\\
-  .convert("RGB")
+    "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images)."
+).convert("RGB")
 words = ["hello", "world"]
 boxes = [[1, 2, 3, 4], [5, 6, 7, 8]]  # make sure to normalize your bounding boxes
 word_labels = [1, 2]
@@ -111,8 +113,8 @@ print(encoding.keys())
 processor = LayoutLMv2Processor.from_pretrained(<span class="hljs-string">&quot;microsoft/layoutlmv2-base-uncased&quot;</span>, revision=<span class="hljs-string">&quot;no_ocr&quot;</span>)
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)\\
-  .convert(<span class="hljs-string">&quot;RGB&quot;</span>)
+    <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>
+).convert(<span class="hljs-string">&quot;RGB&quot;</span>)
 words = [<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-string">&quot;world&quot;</span>]
 boxes = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]]  <span class="hljs-comment"># make sure to normalize your bounding boxes</span>
 word_labels = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
@@ -124,8 +126,8 @@ from PIL import Image
 processor = LayoutLMv2Processor.from_pretrained("microsoft/layoutlmv2-base-uncased")
 
 image = Image.open(
-  "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).")\\
-  .convert("RGB")
+    "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images)."
+).convert("RGB")
 question = "What's his name?"
 encoding = processor(image, question, return_tensors="pt")
 print(encoding.keys())
@@ -135,8 +137,8 @@ print(encoding.keys())
 processor = LayoutLMv2Processor.from_pretrained(<span class="hljs-string">&quot;microsoft/layoutlmv2-base-uncased&quot;</span>)
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)\\
-  .convert(<span class="hljs-string">&quot;RGB&quot;</span>)
+    <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>
+).convert(<span class="hljs-string">&quot;RGB&quot;</span>)
 question = <span class="hljs-string">&quot;What&#x27;s his name?&quot;</span>
 encoding = processor(image, question, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 <span class="hljs-built_in">print</span>(encoding.keys())
@@ -146,8 +148,8 @@ from PIL import Image
 processor = LayoutLMv2Processor.from_pretrained("microsoft/layoutlmv2-base-uncased", revision="no_ocr")
 
 image = Image.open(
-  "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).")\\
-  .convert("RGB")
+    "name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images)."
+).convert("RGB")
 question = "What's his name?"
 words = ["hello", "world"]
 boxes = [[1, 2, 3, 4], [5, 6, 7, 8]]  # make sure to normalize your bounding boxes
@@ -159,8 +161,8 @@ print(encoding.keys())
 processor = LayoutLMv2Processor.from_pretrained(<span class="hljs-string">&quot;microsoft/layoutlmv2-base-uncased&quot;</span>, revision=<span class="hljs-string">&quot;no_ocr&quot;</span>)
 
 image = Image.<span class="hljs-built_in">open</span>(
-  <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>)\\
-  .convert(<span class="hljs-string">&quot;RGB&quot;</span>)
+    <span class="hljs-string">&quot;name_of_your_document - can be a png, jpg, etc. of your documents (PDFs must be converted to images).&quot;</span>
+).convert(<span class="hljs-string">&quot;RGB&quot;</span>)
 question = <span class="hljs-string">&quot;What&#x27;s his name?&quot;</span>
 words = [<span class="hljs-string">&quot;hello&quot;</span>, <span class="hljs-string">&quot;world&quot;</span>]
 boxes = [[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]]  <span class="hljs-comment"># make sure to normalize your bounding boxes</span>
