@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;quick-tour&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;pipeline&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;pipeline-usage&quot;,&quot;title&quot;:&quot;Pipeline usage&quot;},{&quot;local&quot;:&quot;use-another-model-and-tokenizer-in-the-pipeline&quot;,&quot;title&quot;:&quot;Use another model and tokenizer in the pipeline&quot;}],&quot;title&quot;:&quot;Pipeline&quot;},{&quot;local&quot;:&quot;autoclass&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;autotokenizer&quot;,&quot;title&quot;:&quot;AutoTokenizer&quot;},{&quot;local&quot;:&quot;automodel&quot;,&quot;title&quot;:&quot;AutoModel&quot;},{&quot;local&quot;:&quot;save-a-model&quot;,&quot;title&quot;:&quot;Save a model&quot;}],&quot;title&quot;:&quot;AutoClass&quot;}],&quot;title&quot;:&quot;Quick tour&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16253/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16253/en/_app/start-31ee3173.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16253/en/_app/start-6f95a6b4.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16253/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16253/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16253/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16253/en/_app/pages/quicktour.mdx-667aa643.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16253/en/_app/pages/quicktour.mdx-1fd34906.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16253/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16253/en/_app/chunks/Youtube-5c6e11e6.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16253/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -361,11 +361,7 @@ tensor([[<span class="hljs-number">0.0021</span>, <span class="hljs-number">0.00
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>tf_predictions = tf.nn.softmax(tf_outputs.logits, axis=-<span class="hljs-number">1</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>tf_predictions
-&lt;tf.Tensor: shape=(<span class="hljs-number">2</span>, <span class="hljs-number">5</span>), dtype=float32, numpy=
-array([[<span class="hljs-number">0.00205667</span>, <span class="hljs-number">0.00176607</span>, <span class="hljs-number">0.01154934</span>, <span class="hljs-number">0.21209256</span>, <span class="hljs-number">0.7725354</span> ],
-	   [<span class="hljs-number">0.20841935</span>, <span class="hljs-number">0.1826222</span> , <span class="hljs-number">0.19692972</span>, <span class="hljs-number">0.17550416</span>, <span class="hljs-number">0.2365246</span> ]],
-	  dtype=float32)&gt;<!-- HTML_TAG_END --></pre></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>tf_predictions<!-- HTML_TAG_END --></pre></div>
 					</div></div>
 	</div>
 
@@ -458,10 +454,10 @@ The model outputs also behave like a tuple or a dictionary (e.g., you can index 
 	</div>
 
 
-		<script type="module" data-hydrate="1e9oowd">
-		import { start } from "/docs/transformers/pr_16253/en/_app/start-31ee3173.js";
+		<script type="module" data-hydrate="1mmytie">
+		import { start } from "/docs/transformers/pr_16253/en/_app/start-6f95a6b4.js";
 		start({
-			target: document.querySelector('[data-hydrate="1e9oowd"]').parentNode,
+			target: document.querySelector('[data-hydrate="1mmytie"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16253/en","assets":"/docs/transformers/pr_16253/en"},
 			session: {},
 			route: false,
@@ -472,7 +468,7 @@ The model outputs also behave like a tuple or a dictionary (e.g., you can index 
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16253/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16253/en/_app/pages/quicktour.mdx-667aa643.js")
+						import("/docs/transformers/pr_16253/en/_app/pages/quicktour.mdx-1fd34906.js")
 				],
 				params: {}
 			}
