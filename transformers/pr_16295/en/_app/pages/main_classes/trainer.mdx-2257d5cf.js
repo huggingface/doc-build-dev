@@ -688,10 +688,10 @@ folder (so you will get one checkpoint folder per folder in your final repositor
 The token to use to push the model to the Hub. Will default to the token in the cache folder obtained with
 <code>huggingface-cli login</code>.`,name:"hub_token"},{anchor:"transformers.Seq2SeqTrainingArguments.gradient_checkpointing",description:`<strong>gradient_checkpointing</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 If True, use gradient checkpointing to save memory at the expense of slower backward pass.`,name:"gradient_checkpointing"},{anchor:"transformers.Seq2SeqTrainingArguments.sortish_sampler",description:`<strong>sortish_sampler</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
-Whether to use a <em>sortish sampler</em> or not. Only possible if the underlying datasets are <em>Seq2SeqDataset</em> for
-now but will become generally available in the near future.</p>
-<p>It sorts the inputs according to lengths in order to minimize the padding size, with a bit of randomness for
-the training set.`,name:"sortish_sampler"},{anchor:"transformers.Seq2SeqTrainingArguments.predict_with_generate",description:`<strong>predict_with_generate</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
+Whether to use a <em>sortish sampler</em> or not. Only possible if the underlying datasets are <em>Seq2SeqDataset</em>
+for now but will become generally available in the near future.</p>
+<p>It sorts the inputs according to lengths in order to minimize the padding size, with a bit of randomness
+for the training set.`,name:"sortish_sampler"},{anchor:"transformers.Seq2SeqTrainingArguments.predict_with_generate",description:`<strong>predict_with_generate</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to use generate to calculate generative metrics (ROUGE, BLEU).`,name:"predict_with_generate"},{anchor:"transformers.Seq2SeqTrainingArguments.generation_max_length",description:`<strong>generation_max_length</strong> (<code>int</code>, <em>optional</em>) &#x2014;
 The <code>max_length</code> to use on each evaluation loop when <code>predict_with_generate=True</code>. Will default to the
 <code>max_length</code> value of the model configuration.`,name:"generation_max_length"},{anchor:"transformers.Seq2SeqTrainingArguments.generation_num_beams",description:`<strong>generation_num_beams</strong> (<code>int</code>, <em>optional</em>) &#x2014;
