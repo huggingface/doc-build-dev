@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;vitmae&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.ViTMAEConfig&quot;,&quot;title&quot;:&quot;ViTMAEConfig&quot;},{&quot;local&quot;:&quot;transformers.ViTMAEModel&quot;,&quot;title&quot;:&quot;ViTMAEModel&quot;},{&quot;local&quot;:&quot;transformers.ViTMAEForPreTraining&quot;,&quot;title&quot;:&quot;ViTMAEForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.TFViTMAEModel&quot;,&quot;title&quot;:&quot;TFViTMAEModel&quot;},{&quot;local&quot;:&quot;transformers.TFViTMAEForPreTraining&quot;,&quot;title&quot;:&quot;TFViTMAEForPreTraining&quot;}],&quot;title&quot;:&quot;ViTMAE&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16255/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16255/en/_app/start-89f94cfb.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16255/en/_app/start-f718dac6.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16255/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16255/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16255/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16255/en/_app/pages/model_doc/vit_mae.mdx-91ea6536.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16255/en/_app/pages/model_doc/vit_mae.mdx-aae8c434.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16255/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16255/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16255/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -45,12 +45,12 @@ fine-tuning, one can directly plug in the weights into a <a href="/docs/transfor
 <li>One can use <a href="/docs/transformers/pr_16255/en/model_doc/vit#transformers.ViTFeatureExtractor">ViTFeatureExtractor</a> to prepare images for the model. See the code examples for more info. </li>
 <li>Note that the encoder of MAE is only used to encode the visual patches. The encoded patches are then concatenated with mask tokens, which the decoder (which also
 consists of Transformer blocks) takes as input. Each mask token is a shared, learned vector that indicates the presence of a missing patch to be predicted. Fixed
-sin/cos position embeddings are added both to the input of the encoder and the decoder.</li></ul>
+sin/cos position embeddings are added both to the input of the encoder and the decoder.</li>
+<li>For a visual understanding of how MAEs work you can check out this <a href="https://keras.io/examples/vision/masked_image_modeling/" rel="nofollow">post</a>.</li></ul>
 <img src="https://user-images.githubusercontent.com/11435359/146857310-f258c86c-fde6-48e8-9cee-badd2b21bd2c.png" alt="drawing" width="600">
 <small>MAE architecture. Taken from the <a href="https://arxiv.org/abs/2111.06377">original paper.</a></small>
 <p>This model was contributed by <a href="https://huggingface.co/nielsr" rel="nofollow">nielsr</a>. TensorFlow version of the model was contributed by <a href="https://github.com/sayakpaul" rel="nofollow">sayakpaul</a> and
 <a href="https://github.com/ariG23498" rel="nofollow">ariG23498</a> (equal contribution). The original code can be found <a href="https://github.com/facebookresearch/mae" rel="nofollow">here</a>. </p>
-<p>For a visual understanding of how MAEs work you can check out this <a href="https://keras.io/examples/vision/masked_image_modeling/" rel="nofollow">Keras post</a>.</p>
 <h2 class="relative group"><a id="transformers.ViTMAEConfig" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.ViTMAEConfig"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>ViTMAEConfig
 	</span></h2>
@@ -741,10 +741,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>ids_restore = outputs.ids_restore<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1abpfzn">
-		import { start } from "/docs/transformers/pr_16255/en/_app/start-89f94cfb.js";
+		<script type="module" data-hydrate="1r58v0d">
+		import { start } from "/docs/transformers/pr_16255/en/_app/start-f718dac6.js";
 		start({
-			target: document.querySelector('[data-hydrate="1abpfzn"]').parentNode,
+			target: document.querySelector('[data-hydrate="1r58v0d"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16255/en","assets":"/docs/transformers/pr_16255/en"},
 			session: {},
 			route: false,
@@ -755,7 +755,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16255/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16255/en/_app/pages/model_doc/vit_mae.mdx-91ea6536.js")
+						import("/docs/transformers/pr_16255/en/_app/pages/model_doc/vit_mae.mdx-aae8c434.js")
 				],
 				params: {}
 			}
