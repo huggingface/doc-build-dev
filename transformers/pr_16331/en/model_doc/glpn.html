@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;glpn&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.GLPNConfig&quot;,&quot;title&quot;:&quot;GLPNConfig&quot;},{&quot;local&quot;:&quot;transformers.GLPNFeatureExtractor&quot;,&quot;title&quot;:&quot;GLPNFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.GLPNModel&quot;,&quot;title&quot;:&quot;GLPNModel&quot;},{&quot;local&quot;:&quot;transformers.GLPNForDepthEstimation&quot;,&quot;title&quot;:&quot;GLPNForDepthEstimation&quot;}],&quot;title&quot;:&quot;GLPN&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16331/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16331/en/_app/start-18d0455a.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16331/en/_app/start-c830c6cf.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16331/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16331/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16331/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16331/en/_app/pages/model_doc/glpn.mdx-84d8cb88.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16331/en/_app/pages/model_doc/glpn.mdx-2c880902.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16331/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16331/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16331/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -33,7 +33,7 @@ less computational complexity.</p>
 <p>The abstract from the paper is the following:</p>
 <p><em>Depth estimation from a single image is an important task that can be applied to various fields in computer vision, and has grown rapidly with the development of convolutional neural networks. In this paper, we propose a novel structure and training strategy for monocular depth estimation to further improve the prediction accuracy of the network. We deploy a hierarchical transformer encoder to capture and convey the global context, and design a lightweight yet powerful decoder to generate an estimated depth map while considering local connectivity. By constructing connected paths between multi-scale local features and the global decoding stream with our proposed selective feature fusion module, the network can integrate both representations and recover fine details. In addition, the proposed decoder shows better performance than the previously proposed decoders, with considerably less computational complexity. Furthermore, we improve the depth-specific augmentation method by utilizing an important observation in depth estimation to enhance the model. Our network achieves state-of-the-art performance over the challenging depth dataset NYU Depth V2. Extensive experiments have been conducted to validate and show the effectiveness of the proposed approach. Finally, our model shows better generalisation ability and robustness than other comparative models.</em></p>
 <p>Tips:</p>
-<ul><li>A notebook illustrating inference with [‘GLPNForDepthEstimation`] can be found <a href="https://github.com/NielsRogge/Transformers-Tutorials/blob/master/GLPN/GLPN_inference_(depth_estimation).ipynb" rel="nofollow">here</a>.</li>
+<ul><li>A notebook illustrating inference with <a href="/docs/transformers/pr_16331/en/model_doc/glpn#transformers.GLPNForDepthEstimation">GLPNForDepthEstimation</a> can be found <a href="https://github.com/NielsRogge/Transformers-Tutorials/blob/master/GLPN/GLPN_inference_(depth_estimation).ipynb" rel="nofollow">here</a>.</li>
 <li>One can use <a href="/docs/transformers/pr_16331/en/model_doc/glpn#transformers.GLPNFeatureExtractor">GLPNFeatureExtractor</a> to prepare images for the model.</li></ul>
 <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/glpn_architecture.jpg" alt="drawing" width="600">
 <small>Summary of the approach. Taken from the <a href="https://arxiv.org/abs/2201.07436" target="_blank">original paper</a>. </small>
@@ -538,10 +538,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_depth = outputs.predicted_depth  <span class="hljs-comment"># shape (batch_size, height, width)</span><!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="gevkkn">
-		import { start } from "/docs/transformers/pr_16331/en/_app/start-18d0455a.js";
+		<script type="module" data-hydrate="17m2ak1">
+		import { start } from "/docs/transformers/pr_16331/en/_app/start-c830c6cf.js";
 		start({
-			target: document.querySelector('[data-hydrate="gevkkn"]').parentNode,
+			target: document.querySelector('[data-hydrate="17m2ak1"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16331/en","assets":"/docs/transformers/pr_16331/en"},
 			session: {},
 			route: false,
@@ -552,7 +552,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16331/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16331/en/_app/pages/model_doc/glpn.mdx-84d8cb88.js")
+						import("/docs/transformers/pr_16331/en/_app/pages/model_doc/glpn.mdx-2c880902.js")
 				],
 				params: {}
 			}
