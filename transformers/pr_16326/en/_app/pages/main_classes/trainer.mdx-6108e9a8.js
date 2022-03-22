@@ -230,14 +230,14 @@ The output directory where the model predictions and checkpoints will be written
 If <code>True</code>, overwrite the content of the output directory. Use this to continue training if <code>output_dir</code>
 points to a checkpoint directory.`,name:"overwrite_output_dir"},{anchor:"transformers.TrainingArguments.do_train",description:`<strong>do_train</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to run training or not. This argument is not directly used by <a href="/docs/transformers/pr_16326/en/main_classes/trainer#transformers.Trainer">Trainer</a>, it&#x2019;s intended to be used
-by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/master/examples" rel="nofollow">example
+by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/main/examples" rel="nofollow">example
 scripts</a> for more details.`,name:"do_train"},{anchor:"transformers.TrainingArguments.do_eval",description:`<strong>do_eval</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
 Whether to run evaluation on the validation set or not. Will be set to <code>True</code> if <code>evaluation_strategy</code> is
 different from <code>&quot;no&quot;</code>. This argument is not directly used by <a href="/docs/transformers/pr_16326/en/main_classes/trainer#transformers.Trainer">Trainer</a>, it&#x2019;s intended to be used by your
-training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/master/examples" rel="nofollow">example
+training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/main/examples" rel="nofollow">example
 scripts</a> for more details.`,name:"do_eval"},{anchor:"transformers.TrainingArguments.do_predict",description:`<strong>do_predict</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to run predictions on the test set or not. This argument is not directly used by <a href="/docs/transformers/pr_16326/en/main_classes/trainer#transformers.Trainer">Trainer</a>, it&#x2019;s
-intended to be used by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/master/examples" rel="nofollow">example
+intended to be used by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/main/examples" rel="nofollow">example
 scripts</a> for more details.`,name:"do_predict"},{anchor:"transformers.TrainingArguments.evaluation_strategy",description:`<strong>evaluation_strategy</strong> (<code>str</code> or <a href="/docs/transformers/pr_16326/en/internal/trainer_utils#transformers.IntervalStrategy">IntervalStrategy</a>, <em>optional</em>, defaults to <code>&quot;no&quot;</code>) &#x2014;
 The evaluation strategy to adopt during training. Possible values are:</p>
 <ul>
@@ -429,7 +429,7 @@ pushed.</p>
 
 					</div>`,name:"push_to_hub"},{anchor:"transformers.TrainingArguments.resume_from_checkpoint",description:`<strong>resume_from_checkpoint</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 The path to a folder with a valid checkpoint for your model. This argument is not directly used by
-<a href="/docs/transformers/pr_16326/en/main_classes/trainer#transformers.Trainer">Trainer</a>, it&#x2019;s intended to be used by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/master/examples" rel="nofollow">example
+<a href="/docs/transformers/pr_16326/en/main_classes/trainer#transformers.Trainer">Trainer</a>, it&#x2019;s intended to be used by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/main/examples" rel="nofollow">example
 scripts</a> for more details.`,name:"resume_from_checkpoint"},{anchor:"transformers.TrainingArguments.hub_model_id",description:`<strong>hub_model_id</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 The name of the repository to keep in sync with the local <em>output_dir</em>. It can be a simple model ID in
 which case the model will be pushed in your namespace. Otherwise it should be the whole repository name,
@@ -464,14 +464,14 @@ The output directory where the model predictions and checkpoints will be written
 If <code>True</code>, overwrite the content of the output directory. Use this to continue training if <code>output_dir</code>
 points to a checkpoint directory.`,name:"overwrite_output_dir"},{anchor:"transformers.Seq2SeqTrainingArguments.do_train",description:`<strong>do_train</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to run training or not. This argument is not directly used by <a href="/docs/transformers/pr_16326/en/main_classes/trainer#transformers.Trainer">Trainer</a>, it&#x2019;s intended to be used
-by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/master/examples" rel="nofollow">example
+by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/main/examples" rel="nofollow">example
 scripts</a> for more details.`,name:"do_train"},{anchor:"transformers.Seq2SeqTrainingArguments.do_eval",description:`<strong>do_eval</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
 Whether to run evaluation on the validation set or not. Will be set to <code>True</code> if <code>evaluation_strategy</code> is
 different from <code>&quot;no&quot;</code>. This argument is not directly used by <a href="/docs/transformers/pr_16326/en/main_classes/trainer#transformers.Trainer">Trainer</a>, it&#x2019;s intended to be used by your
-training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/master/examples" rel="nofollow">example
+training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/main/examples" rel="nofollow">example
 scripts</a> for more details.`,name:"do_eval"},{anchor:"transformers.Seq2SeqTrainingArguments.do_predict",description:`<strong>do_predict</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to run predictions on the test set or not. This argument is not directly used by <a href="/docs/transformers/pr_16326/en/main_classes/trainer#transformers.Trainer">Trainer</a>, it&#x2019;s
-intended to be used by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/master/examples" rel="nofollow">example
+intended to be used by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/main/examples" rel="nofollow">example
 scripts</a> for more details.`,name:"do_predict"},{anchor:"transformers.Seq2SeqTrainingArguments.evaluation_strategy",description:`<strong>evaluation_strategy</strong> (<code>str</code> or <a href="/docs/transformers/pr_16326/en/internal/trainer_utils#transformers.IntervalStrategy">IntervalStrategy</a>, <em>optional</em>, defaults to <code>&quot;no&quot;</code>) &#x2014;
 The evaluation strategy to adopt during training. Possible values are:</p>
 <ul>
@@ -663,7 +663,7 @@ pushed.</p>
 
 					</div>`,name:"push_to_hub"},{anchor:"transformers.Seq2SeqTrainingArguments.resume_from_checkpoint",description:`<strong>resume_from_checkpoint</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 The path to a folder with a valid checkpoint for your model. This argument is not directly used by
-<a href="/docs/transformers/pr_16326/en/main_classes/trainer#transformers.Trainer">Trainer</a>, it&#x2019;s intended to be used by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/master/examples" rel="nofollow">example
+<a href="/docs/transformers/pr_16326/en/main_classes/trainer#transformers.Trainer">Trainer</a>, it&#x2019;s intended to be used by your training/evaluation scripts instead. See the <a href="https://github.com/huggingface/transformers/tree/main/examples" rel="nofollow">example
 scripts</a> for more details.`,name:"resume_from_checkpoint"},{anchor:"transformers.Seq2SeqTrainingArguments.hub_model_id",description:`<strong>hub_model_id</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 The name of the repository to keep in sync with the local <em>output_dir</em>. It can be a simple model ID in
 which case the model will be pushed in your namespace. Otherwise it should be the whole repository name,
