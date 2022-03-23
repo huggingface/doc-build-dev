@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;checkpointing&quot;,&quot;title&quot;:&quot;Checkpointing&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/accelerate/pr_290/en/_app/assets/pages/__layout.svelte-731420cf.css">
-	<link rel="modulepreload" href="/docs/accelerate/pr_290/en/_app/start-a8413bab.js">
+	<link rel="modulepreload" href="/docs/accelerate/pr_290/en/_app/start-bb45add8.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_290/en/_app/chunks/vendor-19e06bd2.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_290/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_290/en/_app/pages/__layout.svelte-00a862c5.js">
-	<link rel="modulepreload" href="/docs/accelerate/pr_290/en/_app/pages/checkpoint.mdx-c512c5b6.js">
+	<link rel="modulepreload" href="/docs/accelerate/pr_290/en/_app/pages/checkpoint.mdx-f5b0e457.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_290/en/_app/chunks/IconCopyLink-3c713d38.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_290/en/_app/chunks/CodeBlock-9dd1fdfb.js"> 
 
@@ -35,15 +35,13 @@ so long as the object has a <code>state_dict</code> <strong>and</strong> a <code
 accelerator = Accelerator()
 
 my_scheduler = torch.optim.lr_scheduler.StepLR(my_optimizer, step_size=<span class="hljs-number">1</span>, gamma=<span class="hljs-number">0.99</span>)
-my_model, my_optimizer, my_training_dataloader = accelerate.prepare(
-    my_model, my_optimizer, my_training_dataloader
-)
+my_model, my_optimizer, my_training_dataloader = accelerate.prepare(my_model, my_optimizer, my_training_dataloader)
 
 <span class="hljs-comment"># Register the LR scheduler</span>
 accelerate.register_for_checkpointing(my_scheduler)
 
 <span class="hljs-comment"># Save the starting state</span>
-accelerate.save_state(<span class="hljs-string">&#x27;my/save/path&#x27;</span>)
+accelerate.save_state(<span class="hljs-string">&quot;my/save/path&quot;</span>)
 
 device = accelerator.device
 my_model.to(device)
@@ -60,15 +58,15 @@ my_model.to(device)
         accelerator.backward(loss)
         my_optimizer.step()
     my_scheduler.step()
-    
+
 <span class="hljs-comment"># Restore previous state</span>
-accelerate.load_state(<span class="hljs-string">&#x27;my/save/path&#x27;</span>)<!-- HTML_TAG_END --></pre></div>
+accelerate.load_state(<span class="hljs-string">&quot;my/save/path&quot;</span>)<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="rlfl6">
-		import { start } from "/docs/accelerate/pr_290/en/_app/start-a8413bab.js";
+		<script type="module" data-hydrate="1st6gqy">
+		import { start } from "/docs/accelerate/pr_290/en/_app/start-bb45add8.js";
 		start({
-			target: document.querySelector('[data-hydrate="rlfl6"]').parentNode,
+			target: document.querySelector('[data-hydrate="1st6gqy"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_290/en","assets":"/docs/accelerate/pr_290/en"},
 			session: {},
 			route: false,
@@ -79,7 +77,7 @@ accelerate.load_state(<span class="hljs-string">&#x27;my/save/path&#x27;</span>)
 				error: null,
 				nodes: [
 					import("/docs/accelerate/pr_290/en/_app/pages/__layout.svelte-00a862c5.js"),
-						import("/docs/accelerate/pr_290/en/_app/pages/checkpoint.mdx-c512c5b6.js")
+						import("/docs/accelerate/pr_290/en/_app/pages/checkpoint.mdx-f5b0e457.js")
 				],
 				params: {}
 			}
