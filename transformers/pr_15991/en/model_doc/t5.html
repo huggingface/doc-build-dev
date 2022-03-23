@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;t5&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;training&quot;,&quot;title&quot;:&quot;Training&quot;},{&quot;local&quot;:&quot;inference&quot;,&quot;title&quot;:&quot;Inference&quot;},{&quot;local&quot;:&quot;performance&quot;,&quot;title&quot;:&quot;Performance&quot;},{&quot;local&quot;:&quot;example-scripts&quot;,&quot;title&quot;:&quot;Example scripts&quot;},{&quot;local&quot;:&quot;transformers.T5Config&quot;,&quot;title&quot;:&quot;T5Config&quot;},{&quot;local&quot;:&quot;transformers.T5Tokenizer&quot;,&quot;title&quot;:&quot;T5Tokenizer&quot;},{&quot;local&quot;:&quot;transformers.T5TokenizerFast&quot;,&quot;title&quot;:&quot;T5TokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.T5Model&quot;,&quot;title&quot;:&quot;T5Model&quot;},{&quot;local&quot;:&quot;transformers.T5ForConditionalGeneration&quot;,&quot;title&quot;:&quot;T5ForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.T5EncoderModel&quot;,&quot;title&quot;:&quot;T5EncoderModel&quot;},{&quot;local&quot;:&quot;transformers.TFT5Model&quot;,&quot;title&quot;:&quot;TFT5Model&quot;},{&quot;local&quot;:&quot;transformers.TFT5ForConditionalGeneration&quot;,&quot;title&quot;:&quot;TFT5ForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.TFT5EncoderModel&quot;,&quot;title&quot;:&quot;TFT5EncoderModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxT5Model&quot;,&quot;title&quot;:&quot;FlaxT5Model&quot;},{&quot;local&quot;:&quot;transformers.FlaxT5ForConditionalGeneration&quot;,&quot;title&quot;:&quot;FlaxT5ForConditionalGeneration&quot;}],&quot;title&quot;:&quot;T5&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_15991/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_15991/en/_app/start-f59d19f4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15991/en/_app/start-a3ec2c7f.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15991/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15991/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15991/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15991/en/_app/pages/model_doc/t5.mdx-826b6da8.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15991/en/_app/pages/model_doc/t5.mdx-f9258175.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15991/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15991/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15991/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -91,7 +91,7 @@ input_ids = tokenizer(<span class="hljs-string">&quot;The &lt;extra_id_0&gt; wal
 labels = tokenizer(<span class="hljs-string">&quot;&lt;extra_id_0&gt; cute dog &lt;extra_id_1&gt; the &lt;extra_id_2&gt;&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>).input_ids
 <span class="hljs-comment"># the forward function automatically creates the correct decoder_input_ids</span>
 loss = model(input_ids=input_ids, labels=labels).loss<!-- HTML_TAG_END --></pre></div>
-<p>If you’re interested in pre-training T5 on a new corpus, check out the <a href="https://github.com/huggingface/transformers/tree/master/examples/flax/language-modeling" rel="nofollow">run_t5_mlm_flax.py</a> script in the Examples
+<p>If you’re interested in pre-training T5 on a new corpus, check out the <a href="https://github.com/huggingface/transformers/tree/main/examples/flax/language-modeling" rel="nofollow">run_t5_mlm_flax.py</a> script in the Examples
 directory.</p></li>
 <li><p>Supervised training</p>
 <p>In this setup, the input sequence and output sequence are a standard sequence-to-sequence input-output mapping.
@@ -126,7 +126,7 @@ the task.</p>
 <p>In addition, we must make sure that padding token id’s of the <code>labels</code> are not taken into account by the loss
 function. In PyTorch and Tensorflow, this can be done by replacing them with -100, which is the <code>ignore_index</code>
 of the <code>CrossEntropyLoss</code>. In Flax, one can use the <code>decoder_attention_mask</code> to ignore padded tokens from
-the loss (see the <a href="https://github.com/huggingface/transformers/tree/master/examples/flax/summarization" rel="nofollow">Flax summarization script</a> for details). We also pass
+the loss (see the <a href="https://github.com/huggingface/transformers/tree/main/examples/flax/summarization" rel="nofollow">Flax summarization script</a> for details). We also pass
 <code>attention_mask</code> as additional input to the model, which makes sure that padding tokens of the inputs are
 ignored. The code example below illustrates all of this.</p>
 
@@ -251,12 +251,12 @@ output_sequences = model.generate(
 	</span></h2>
 
 <p>T5 is supported by several example scripts, both for pre-training and fine-tuning.</p>
-<ul><li><p>pre-training: the <a href="https://github.com/huggingface/transformers/blob/master/examples/flax/language-modeling/run_t5_mlm_flax.py" rel="nofollow">run_t5_mlm_flax.py</a>
-script allows you to further pre-train T5 or pre-train T5 from scratch on your own data. The <a href="https://github.com/huggingface/transformers/blob/master/examples/flax/language-modeling/t5_tokenizer_model.py" rel="nofollow">t5_tokenizer_model.py</a>
+<ul><li><p>pre-training: the <a href="https://github.com/huggingface/transformers/blob/main/examples/flax/language-modeling/run_t5_mlm_flax.py" rel="nofollow">run_t5_mlm_flax.py</a>
+script allows you to further pre-train T5 or pre-train T5 from scratch on your own data. The <a href="https://github.com/huggingface/transformers/blob/main/examples/flax/language-modeling/t5_tokenizer_model.py" rel="nofollow">t5_tokenizer_model.py</a>
 script allows you to further train a T5 tokenizer or train a T5 Tokenizer from scratch on your own data. Note that
 Flax (a neural network library on top of JAX) is particularly useful to train on TPU hardware.</p></li>
-<li><p>fine-tuning: T5 is supported by the official summarization scripts (<a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/summarization" rel="nofollow">PyTorch</a>, <a href="https://github.com/huggingface/transformers/tree/master/examples/tensorflow/summarization" rel="nofollow">Tensorflow</a>, and <a href="https://github.com/huggingface/transformers/tree/master/examples/flax/summarization" rel="nofollow">Flax</a>) and translation scripts
-(<a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/translation" rel="nofollow">PyTorch</a> and <a href="https://github.com/huggingface/transformers/tree/master/examples/tensorflow/translation" rel="nofollow">Tensorflow</a>). These scripts allow
+<li><p>fine-tuning: T5 is supported by the official summarization scripts (<a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization" rel="nofollow">PyTorch</a>, <a href="https://github.com/huggingface/transformers/tree/main/examples/tensorflow/summarization" rel="nofollow">Tensorflow</a>, and <a href="https://github.com/huggingface/transformers/tree/main/examples/flax/summarization" rel="nofollow">Flax</a>) and translation scripts
+(<a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/translation" rel="nofollow">PyTorch</a> and <a href="https://github.com/huggingface/transformers/tree/main/examples/tensorflow/translation" rel="nofollow">Tensorflow</a>). These scripts allow
 you to easily fine-tune T5 on custom data for summarization/translation.</p></li></ul>
 <h2 class="relative group"><a id="transformers.T5Config" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.T5Config"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>T5Config
@@ -3206,10 +3206,10 @@ Only relevant if <code>config.is_decoder = True</code>.</p>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="49w42h">
-		import { start } from "/docs/transformers/pr_15991/en/_app/start-f59d19f4.js";
+		<script type="module" data-hydrate="12g3b8u">
+		import { start } from "/docs/transformers/pr_15991/en/_app/start-a3ec2c7f.js";
 		start({
-			target: document.querySelector('[data-hydrate="49w42h"]').parentNode,
+			target: document.querySelector('[data-hydrate="12g3b8u"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15991/en","assets":"/docs/transformers/pr_15991/en"},
 			session: {},
 			route: false,
@@ -3220,7 +3220,7 @@ Only relevant if <code>config.is_decoder = True</code>.</p>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15991/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_15991/en/_app/pages/model_doc/t5.mdx-826b6da8.js")
+						import("/docs/transformers/pr_15991/en/_app/pages/model_doc/t5.mdx-f9258175.js")
 				],
 				params: {}
 			}
