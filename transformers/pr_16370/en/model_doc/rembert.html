@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;rembert&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.RemBertConfig&quot;,&quot;title&quot;:&quot;RemBertConfig&quot;},{&quot;local&quot;:&quot;transformers.RemBertTokenizer&quot;,&quot;title&quot;:&quot;RemBertTokenizer&quot;},{&quot;local&quot;:&quot;transformers.RemBertTokenizerFast&quot;,&quot;title&quot;:&quot;RemBertTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.RemBertModel&quot;,&quot;title&quot;:&quot;RemBertModel&quot;},{&quot;local&quot;:&quot;transformers.RemBertForCausalLM&quot;,&quot;title&quot;:&quot;RemBertForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.RemBertForMaskedLM&quot;,&quot;title&quot;:&quot;RemBertForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.RemBertForSequenceClassification&quot;,&quot;title&quot;:&quot;RemBertForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.RemBertForMultipleChoice&quot;,&quot;title&quot;:&quot;RemBertForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.RemBertForTokenClassification&quot;,&quot;title&quot;:&quot;RemBertForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.RemBertForQuestionAnswering&quot;,&quot;title&quot;:&quot;RemBertForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFRemBertModel&quot;,&quot;title&quot;:&quot;TFRemBertModel&quot;},{&quot;local&quot;:&quot;transformers.TFRemBertForMaskedLM&quot;,&quot;title&quot;:&quot;TFRemBertForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFRemBertForCausalLM&quot;,&quot;title&quot;:&quot;TFRemBertForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.TFRemBertForSequenceClassification&quot;,&quot;title&quot;:&quot;TFRemBertForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFRemBertForMultipleChoice&quot;,&quot;title&quot;:&quot;TFRemBertForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFRemBertForTokenClassification&quot;,&quot;title&quot;:&quot;TFRemBertForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFRemBertForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFRemBertForQuestionAnswering&quot;}],&quot;title&quot;:&quot;RemBERT&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16370/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-e676bde9.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-0216862e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/rembert.mdx-686d02b8.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/rembert.mdx-cf8a8f9d.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -3262,7 +3262,9 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = RemBertTokenizer.from_pretrained(<span class="hljs-string">&quot;rembert&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFRemBertForTokenClassification.from_pretrained(<span class="hljs-string">&quot;rembert&quot;</span>, from_pt=<span class="hljs-literal">True</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>
+<span class="hljs-meta">... </span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = model(**inputs).logits
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_token_class_ids = tf.math.argmax(logits, axis=-<span class="hljs-number">1</span>)
@@ -3501,7 +3503,7 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer_start_index = <span class="hljs-built_in">int</span>(tf.math.argmax(outputs.start_logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer_end_index = <span class="hljs-built_in">int</span>(tf.math.argmax(outputs.end_logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>predict_answer_tokens = inputs.input_ids[<span class="hljs-number">0</span>, answer_start_index: answer_end_index + <span class="hljs-number">1</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>predict_answer_tokens = inputs.input_ids[<span class="hljs-number">0</span>, answer_start_index : answer_end_index + <span class="hljs-number">1</span>]
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.decode(predict_answer_tokens)
 <!-- HTML_TAG_END --></pre></div>
 
@@ -3517,10 +3519,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="12intqi">
-		import { start } from "/docs/transformers/pr_16370/en/_app/start-e676bde9.js";
+		<script type="module" data-hydrate="5mp64q">
+		import { start } from "/docs/transformers/pr_16370/en/_app/start-0216862e.js";
 		start({
-			target: document.querySelector('[data-hydrate="12intqi"]').parentNode,
+			target: document.querySelector('[data-hydrate="5mp64q"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16370/en","assets":"/docs/transformers/pr_16370/en"},
 			session: {},
 			route: false,
@@ -3531,7 +3533,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/rembert.mdx-686d02b8.js")
+						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/rembert.mdx-cf8a8f9d.js")
 				],
 				params: {}
 			}

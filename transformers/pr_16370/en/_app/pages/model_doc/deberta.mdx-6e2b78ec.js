@@ -947,7 +947,9 @@ import tensorflow as tf
 tokenizer = DebertaTokenizer.from_pretrained("kamalkraj/deberta-base")
 model = TFDebertaForTokenClassification.from_pretrained("kamalkraj/deberta-base", from_pt=True)
 
-inputs = tokenizer("HuggingFace is a company based in Paris and New York", add_special_tokens=False, return_tensors="tf")
+inputs = tokenizer(
+    "HuggingFace is a company based in Paris and New York", add_special_tokens=False, return_tensors="tf"
+)
 
 logits = model(**inputs).logits
 predicted_token_class_ids = tf.math.argmax(logits, axis=-1)
@@ -963,7 +965,9 @@ predicted_tokens_classes
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = DebertaTokenizer.from_pretrained(<span class="hljs-string">&quot;kamalkraj/deberta-base&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFDebertaForTokenClassification.from_pretrained(<span class="hljs-string">&quot;kamalkraj/deberta-base&quot;</span>, from_pt=<span class="hljs-literal">True</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>
+<span class="hljs-meta">... </span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = model(**inputs).logits
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_token_class_ids = tf.math.argmax(logits, axis=-<span class="hljs-number">1</span>)
@@ -1059,7 +1063,7 @@ outputs = model(**inputs)
 answer_start_index = int(tf.math.argmax(outputs.start_logits, axis=-1)[0])
 answer_end_index = int(tf.math.argmax(outputs.end_logits, axis=-1)[0])
 
-predict_answer_tokens = inputs.input_ids[0, answer_start_index: answer_end_index + 1]
+predict_answer_tokens = inputs.input_ids[0, answer_start_index : answer_end_index + 1]
 tokenizer.decode(predict_answer_tokens)
 `,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> DebertaTokenizer, TFDebertaForQuestionAnswering
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf
@@ -1075,7 +1079,7 @@ tokenizer.decode(predict_answer_tokens)
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer_start_index = <span class="hljs-built_in">int</span>(tf.math.argmax(outputs.start_logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer_end_index = <span class="hljs-built_in">int</span>(tf.math.argmax(outputs.end_logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>predict_answer_tokens = inputs.input_ids[<span class="hljs-number">0</span>, answer_start_index: answer_end_index + <span class="hljs-number">1</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>predict_answer_tokens = inputs.input_ids[<span class="hljs-number">0</span>, answer_start_index : answer_end_index + <span class="hljs-number">1</span>]
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.decode(predict_answer_tokens)
 `}}),Ss=new xe({props:{code:`# target is "nice puppet"
 target_start_index, target_end_index = tf.constant([14]), tf.constant([15])

@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;debertav2&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.DebertaV2Config&quot;,&quot;title&quot;:&quot;DebertaV2Config&quot;},{&quot;local&quot;:&quot;transformers.DebertaV2Tokenizer&quot;,&quot;title&quot;:&quot;DebertaV2Tokenizer&quot;},{&quot;local&quot;:&quot;transformers.DebertaV2Model&quot;,&quot;title&quot;:&quot;DebertaV2Model&quot;},{&quot;local&quot;:&quot;transformers.DebertaV2PreTrainedModel&quot;,&quot;title&quot;:&quot;DebertaV2PreTrainedModel&quot;},{&quot;local&quot;:&quot;transformers.DebertaV2ForMaskedLM&quot;,&quot;title&quot;:&quot;DebertaV2ForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.DebertaV2ForSequenceClassification&quot;,&quot;title&quot;:&quot;DebertaV2ForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.DebertaV2ForTokenClassification&quot;,&quot;title&quot;:&quot;DebertaV2ForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.DebertaV2ForQuestionAnswering&quot;,&quot;title&quot;:&quot;DebertaV2ForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaV2Model&quot;,&quot;title&quot;:&quot;TFDebertaV2Model&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaV2PreTrainedModel&quot;,&quot;title&quot;:&quot;TFDebertaV2PreTrainedModel&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaV2ForMaskedLM&quot;,&quot;title&quot;:&quot;TFDebertaV2ForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaV2ForSequenceClassification&quot;,&quot;title&quot;:&quot;TFDebertaV2ForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaV2ForTokenClassification&quot;,&quot;title&quot;:&quot;TFDebertaV2ForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaV2ForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFDebertaV2ForQuestionAnswering&quot;}],&quot;title&quot;:&quot;DeBERTa-v2&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16370/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-e676bde9.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-0216862e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/deberta-v2.mdx-c6ce71fb.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/deberta-v2.mdx-d09aac70.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -2186,7 +2186,9 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = DebertaV2Tokenizer.from_pretrained(<span class="hljs-string">&quot;kamalkraj/deberta-v2-xlarge&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFDebertaV2ForTokenClassification.from_pretrained(<span class="hljs-string">&quot;kamalkraj/deberta-v2-xlarge&quot;</span>, from_pt=<span class="hljs-literal">True</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>
+<span class="hljs-meta">... </span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = model(**inputs).logits
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_token_class_ids = tf.math.argmax(logits, axis=-<span class="hljs-number">1</span>)
@@ -2409,7 +2411,7 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer_start_index = <span class="hljs-built_in">int</span>(tf.math.argmax(outputs.start_logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer_end_index = <span class="hljs-built_in">int</span>(tf.math.argmax(outputs.end_logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>predict_answer_tokens = inputs.input_ids[<span class="hljs-number">0</span>, answer_start_index: answer_end_index + <span class="hljs-number">1</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>predict_answer_tokens = inputs.input_ids[<span class="hljs-number">0</span>, answer_start_index : answer_end_index + <span class="hljs-number">1</span>]
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.decode(predict_answer_tokens)
 <!-- HTML_TAG_END --></pre></div>
 
@@ -2425,10 +2427,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="vyvtii">
-		import { start } from "/docs/transformers/pr_16370/en/_app/start-e676bde9.js";
+		<script type="module" data-hydrate="1t0kd9m">
+		import { start } from "/docs/transformers/pr_16370/en/_app/start-0216862e.js";
 		start({
-			target: document.querySelector('[data-hydrate="vyvtii"]').parentNode,
+			target: document.querySelector('[data-hydrate="1t0kd9m"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16370/en","assets":"/docs/transformers/pr_16370/en"},
 			session: {},
 			route: false,
@@ -2439,7 +2441,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/deberta-v2.mdx-c6ce71fb.js")
+						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/deberta-v2.mdx-d09aac70.js")
 				],
 				params: {}
 			}

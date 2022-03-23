@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;mpnet&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.MPNetConfig&quot;,&quot;title&quot;:&quot;MPNetConfig&quot;},{&quot;local&quot;:&quot;transformers.MPNetTokenizer&quot;,&quot;title&quot;:&quot;MPNetTokenizer&quot;},{&quot;local&quot;:&quot;transformers.MPNetTokenizerFast&quot;,&quot;title&quot;:&quot;MPNetTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.MPNetModel&quot;,&quot;title&quot;:&quot;MPNetModel&quot;},{&quot;local&quot;:&quot;transformers.MPNetForMaskedLM&quot;,&quot;title&quot;:&quot;MPNetForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.MPNetForSequenceClassification&quot;,&quot;title&quot;:&quot;MPNetForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.MPNetForMultipleChoice&quot;,&quot;title&quot;:&quot;MPNetForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.MPNetForTokenClassification&quot;,&quot;title&quot;:&quot;MPNetForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.MPNetForQuestionAnswering&quot;,&quot;title&quot;:&quot;MPNetForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetModel&quot;,&quot;title&quot;:&quot;TFMPNetModel&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetForMaskedLM&quot;,&quot;title&quot;:&quot;TFMPNetForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetForSequenceClassification&quot;,&quot;title&quot;:&quot;TFMPNetForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetForMultipleChoice&quot;,&quot;title&quot;:&quot;TFMPNetForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetForTokenClassification&quot;,&quot;title&quot;:&quot;TFMPNetForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFMPNetForQuestionAnswering&quot;}],&quot;title&quot;:&quot;MPNet&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16370/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-e676bde9.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-0216862e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/mpnet.mdx-bdcf2997.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/mpnet.mdx-cb21cb4b.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -2577,7 +2577,9 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = MPNetTokenizer.from_pretrained(<span class="hljs-string">&quot;microsoft/mpnet-base&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFMPNetForTokenClassification.from_pretrained(<span class="hljs-string">&quot;microsoft/mpnet-base&quot;</span>, from_pt=<span class="hljs-literal">True</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>
+<span class="hljs-meta">... </span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = model(**inputs).logits
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_token_class_ids = tf.math.argmax(logits, axis=-<span class="hljs-number">1</span>)
@@ -2806,7 +2808,7 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer_start_index = <span class="hljs-built_in">int</span>(tf.math.argmax(outputs.start_logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer_end_index = <span class="hljs-built_in">int</span>(tf.math.argmax(outputs.end_logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>predict_answer_tokens = inputs.input_ids[<span class="hljs-number">0</span>, answer_start_index: answer_end_index + <span class="hljs-number">1</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>predict_answer_tokens = inputs.input_ids[<span class="hljs-number">0</span>, answer_start_index : answer_end_index + <span class="hljs-number">1</span>]
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.decode(predict_answer_tokens)
 <!-- HTML_TAG_END --></pre></div>
 
@@ -2822,10 +2824,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1vd9i1r">
-		import { start } from "/docs/transformers/pr_16370/en/_app/start-e676bde9.js";
+		<script type="module" data-hydrate="1wlwk4f">
+		import { start } from "/docs/transformers/pr_16370/en/_app/start-0216862e.js";
 		start({
-			target: document.querySelector('[data-hydrate="1vd9i1r"]').parentNode,
+			target: document.querySelector('[data-hydrate="1wlwk4f"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16370/en","assets":"/docs/transformers/pr_16370/en"},
 			session: {},
 			route: false,
@@ -2836,7 +2838,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/mpnet.mdx-bdcf2997.js")
+						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/mpnet.mdx-cb21cb4b.js")
 				],
 				params: {}
 			}

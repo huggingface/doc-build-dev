@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;xlmroberta&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.XLMRobertaConfig&quot;,&quot;title&quot;:&quot;XLMRobertaConfig&quot;},{&quot;local&quot;:&quot;transformers.XLMRobertaTokenizer&quot;,&quot;title&quot;:&quot;XLMRobertaTokenizer&quot;},{&quot;local&quot;:&quot;transformers.XLMRobertaTokenizerFast&quot;,&quot;title&quot;:&quot;XLMRobertaTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.XLMRobertaModel&quot;,&quot;title&quot;:&quot;XLMRobertaModel&quot;},{&quot;local&quot;:&quot;transformers.XLMRobertaForCausalLM&quot;,&quot;title&quot;:&quot;XLMRobertaForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.XLMRobertaForMaskedLM&quot;,&quot;title&quot;:&quot;XLMRobertaForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.XLMRobertaForSequenceClassification&quot;,&quot;title&quot;:&quot;XLMRobertaForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.XLMRobertaForMultipleChoice&quot;,&quot;title&quot;:&quot;XLMRobertaForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.XLMRobertaForTokenClassification&quot;,&quot;title&quot;:&quot;XLMRobertaForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.XLMRobertaForQuestionAnswering&quot;,&quot;title&quot;:&quot;XLMRobertaForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFXLMRobertaModel&quot;,&quot;title&quot;:&quot;TFXLMRobertaModel&quot;},{&quot;local&quot;:&quot;transformers.TFXLMRobertaForMaskedLM&quot;,&quot;title&quot;:&quot;TFXLMRobertaForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFXLMRobertaForSequenceClassification&quot;,&quot;title&quot;:&quot;TFXLMRobertaForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFXLMRobertaForMultipleChoice&quot;,&quot;title&quot;:&quot;TFXLMRobertaForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFXLMRobertaForTokenClassification&quot;,&quot;title&quot;:&quot;TFXLMRobertaForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFXLMRobertaForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFXLMRobertaForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.FlaxXLMRobertaModel&quot;,&quot;title&quot;:&quot;FlaxXLMRobertaModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxXLMRobertaForMaskedLM&quot;,&quot;title&quot;:&quot;FlaxXLMRobertaForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.FlaxXLMRobertaForSequenceClassification&quot;,&quot;title&quot;:&quot;FlaxXLMRobertaForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.FlaxXLMRobertaForMultipleChoice&quot;,&quot;title&quot;:&quot;FlaxXLMRobertaForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.FlaxXLMRobertaForTokenClassification&quot;,&quot;title&quot;:&quot;FlaxXLMRobertaForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.FlaxXLMRobertaForQuestionAnswering&quot;,&quot;title&quot;:&quot;FlaxXLMRobertaForQuestionAnswering&quot;}],&quot;title&quot;:&quot;XLM-RoBERTa&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16370/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-e676bde9.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-0216862e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/xlm-roberta.mdx-ae7acae4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/xlm-roberta.mdx-49d1f435.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -3001,7 +3001,9 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = RobertaTokenizer.from_pretrained(<span class="hljs-string">&quot;Jean-Baptiste/roberta-large-ner-english&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFRobertaForTokenClassification.from_pretrained(<span class="hljs-string">&quot;Jean-Baptiste/roberta-large-ner-english&quot;</span>, from_pt=<span class="hljs-literal">True</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>
+<span class="hljs-meta">... </span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = model(**inputs).logits
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_token_class_ids = tf.math.argmax(logits, axis=-<span class="hljs-number">1</span>)
@@ -3242,7 +3244,7 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer_start_index = <span class="hljs-built_in">int</span>(tf.math.argmax(outputs.start_logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 <span class="hljs-meta">&gt;&gt;&gt; </span>answer_end_index = <span class="hljs-built_in">int</span>(tf.math.argmax(outputs.end_logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>predict_answer_tokens = inputs.input_ids[<span class="hljs-number">0</span>, answer_start_index: answer_end_index + <span class="hljs-number">1</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span>predict_answer_tokens = inputs.input_ids[<span class="hljs-number">0</span>, answer_start_index : answer_end_index + <span class="hljs-number">1</span>]
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.decode(predict_answer_tokens)
 <span class="hljs-string">&#x27; puppet&#x27;</span><!-- HTML_TAG_END --></pre></div>
 
@@ -4260,10 +4262,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>end_scores = outputs.end_logits<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="10fdpu1">
-		import { start } from "/docs/transformers/pr_16370/en/_app/start-e676bde9.js";
+		<script type="module" data-hydrate="wwlqnd">
+		import { start } from "/docs/transformers/pr_16370/en/_app/start-0216862e.js";
 		start({
-			target: document.querySelector('[data-hydrate="10fdpu1"]').parentNode,
+			target: document.querySelector('[data-hydrate="wwlqnd"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16370/en","assets":"/docs/transformers/pr_16370/en"},
 			session: {},
 			route: false,
@@ -4274,7 +4276,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/xlm-roberta.mdx-ae7acae4.js")
+						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/xlm-roberta.mdx-49d1f435.js")
 				],
 				params: {}
 			}
