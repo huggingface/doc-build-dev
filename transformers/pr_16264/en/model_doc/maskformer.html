@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;maskformer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.models.maskformer.modeling_maskformer.MaskFormerModelOutput&quot;,&quot;title&quot;:&quot;MaskFormer specific outputs&quot;},{&quot;local&quot;:&quot;transformers.MaskFormerConfig&quot;,&quot;title&quot;:&quot;MaskFormerConfig&quot;},{&quot;local&quot;:&quot;transformers.MaskFormerFeatureExtractor&quot;,&quot;title&quot;:&quot;MaskFormerFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.MaskFormerModel&quot;,&quot;title&quot;:&quot;MaskFormerModel&quot;},{&quot;local&quot;:&quot;transformers.MaskFormerForInstanceSegmentation&quot;,&quot;title&quot;:&quot;MaskFormerForInstanceSegmentation&quot;}],&quot;title&quot;:&quot;MaskFormer&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/transformers/pr_16264/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16264/en/_app/start-bb349986.js">
+	<link rel="stylesheet" href="/docs/transformers/pr_16264/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_16264/en/_app/start-4ac19613.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16264/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16264/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16264/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16264/en/_app/pages/model_doc/maskformer.mdx-676c16cd.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16264/en/_app/pages/model_doc/maskformer.mdx-193759a1.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16264/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16264/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16264/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -443,7 +443,7 @@ should refer to this superclass for more information regarding those methods.</p
 		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">images<span class="opacity-60">: typing.Union[PIL.Image.Image, numpy.ndarray, ForwardRef(&#39;torch.Tensor&#39;), typing.List[PIL.Image.Image], typing.List[numpy.ndarray], typing.List[ForwardRef(&#39;torch.Tensor&#39;)]]</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">annotations<span class="opacity-60">: typing.Union[typing.List[typing.Dict], typing.List[typing.List[typing.Dict]]] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pad_and_return_pixel_mask<span class="opacity-60">: typing.Optional[bool] = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.generic_utils.TensorType, NoneType] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
@@ -520,7 +520,7 @@ PIL images.</p></div></div>
 		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values_list<span class="opacity-60">: typing.List[ForwardRef(&#39;torch.Tensor&#39;)]</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">annotations<span class="opacity-60">: typing.Optional[typing.List[typing.Dict]] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pad_and_return_pixel_mask<span class="opacity-60">: typing.Optional[bool] = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.generic_utils.TensorType, NoneType] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
 			</span>
 		<span>)</span>
 		<span class="font-bold">→</span>
@@ -999,10 +999,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>output = feature_extractor.post_process_panoptic_segmentation(outputs)<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="wyh598">
-		import { start } from "/docs/transformers/pr_16264/en/_app/start-bb349986.js";
+		<script type="module" data-hydrate="1ijlkkc">
+		import { start } from "/docs/transformers/pr_16264/en/_app/start-4ac19613.js";
 		start({
-			target: document.querySelector('[data-hydrate="wyh598"]').parentNode,
+			target: document.querySelector('[data-hydrate="1ijlkkc"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16264/en","assets":"/docs/transformers/pr_16264/en"},
 			session: {},
 			route: false,
@@ -1013,7 +1013,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16264/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16264/en/_app/pages/model_doc/maskformer.mdx-676c16cd.js")
+						import("/docs/transformers/pr_16264/en/_app/pages/model_doc/maskformer.mdx-193759a1.js")
 				],
 				params: {}
 			}
