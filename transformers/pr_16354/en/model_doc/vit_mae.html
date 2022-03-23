@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;vitmae&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.ViTMAEConfig&quot;,&quot;title&quot;:&quot;ViTMAEConfig&quot;},{&quot;local&quot;:&quot;transformers.ViTMAEModel&quot;,&quot;title&quot;:&quot;ViTMAEModel&quot;},{&quot;local&quot;:&quot;transformers.ViTMAEForPreTraining&quot;,&quot;title&quot;:&quot;ViTMAEForPreTraining&quot;}],&quot;title&quot;:&quot;ViTMAE&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16354/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16354/en/_app/start-ac701372.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16354/en/_app/start-706ec961.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16354/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16354/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16354/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16354/en/_app/pages/model_doc/vit_mae.mdx-ddd7ac8e.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16354/en/_app/pages/model_doc/vit_mae.mdx-90510968.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16354/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16354/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16354/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -37,7 +37,7 @@ tasks outperforms supervised pre-training and shows promising scaling behavior.<
 <p>Tips:</p>
 <ul><li>MAE (masked auto encoding) is a method for self-supervised pre-training of Vision Transformers (ViTs). The pre-training objective is relatively simple:
 by masking a large portion (75%) of the image patches, the model must reconstruct raw pixel values. One can use <a href="/docs/transformers/pr_16354/en/model_doc/vit_mae#transformers.ViTMAEForPreTraining">ViTMAEForPreTraining</a> for this purpose.</li>
-<li>An example Python script that illustrates how to pre-train <a href="/docs/transformers/pr_16354/en/model_doc/vit_mae#transformers.ViTMAEForPreTraining">ViTMAEForPreTraining</a> from scratch can be found <a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/image-pretraining" rel="nofollow">here</a>.
+<li>An example Python script that illustrates how to pre-train <a href="/docs/transformers/pr_16354/en/model_doc/vit_mae#transformers.ViTMAEForPreTraining">ViTMAEForPreTraining</a> from scratch can be found <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/image-pretraining" rel="nofollow">here</a>.
 One can easily tweak it for their own use case.</li>
 <li>A notebook that illustrates how to visualize reconstructed pixel values with <a href="/docs/transformers/pr_16354/en/model_doc/vit_mae#transformers.ViTMAEForPreTraining">ViTMAEForPreTraining</a> can be found <a href="https://github.com/NielsRogge/Transformers-Tutorials/blob/master/ViTMAE/ViT_MAE_visualization_demo.ipynb" rel="nofollow">here</a>.</li>
 <li>After pre-training, one “throws away” the decoder used to reconstruct pixels, and one uses the encoder for fine-tuning/linear probing. This means that after
@@ -442,10 +442,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>ids_restore = outputs.ids_restore<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1rd1isl">
-		import { start } from "/docs/transformers/pr_16354/en/_app/start-ac701372.js";
+		<script type="module" data-hydrate="1acccnm">
+		import { start } from "/docs/transformers/pr_16354/en/_app/start-706ec961.js";
 		start({
-			target: document.querySelector('[data-hydrate="1rd1isl"]').parentNode,
+			target: document.querySelector('[data-hydrate="1acccnm"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16354/en","assets":"/docs/transformers/pr_16354/en"},
 			session: {},
 			route: false,
@@ -456,7 +456,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16354/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16354/en/_app/pages/model_doc/vit_mae.mdx-ddd7ac8e.js")
+						import("/docs/transformers/pr_16354/en/_app/pages/model_doc/vit_mae.mdx-90510968.js")
 				],
 				params: {}
 			}
