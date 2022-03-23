@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;distilbert&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.DistilBertConfig&quot;,&quot;title&quot;:&quot;DistilBertConfig&quot;},{&quot;local&quot;:&quot;transformers.DistilBertTokenizer&quot;,&quot;title&quot;:&quot;DistilBertTokenizer&quot;},{&quot;local&quot;:&quot;transformers.DistilBertTokenizerFast&quot;,&quot;title&quot;:&quot;DistilBertTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.DistilBertModel&quot;,&quot;title&quot;:&quot;DistilBertModel&quot;},{&quot;local&quot;:&quot;transformers.DistilBertForMaskedLM&quot;,&quot;title&quot;:&quot;DistilBertForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.DistilBertForSequenceClassification&quot;,&quot;title&quot;:&quot;DistilBertForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.DistilBertForMultipleChoice&quot;,&quot;title&quot;:&quot;DistilBertForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.DistilBertForTokenClassification&quot;,&quot;title&quot;:&quot;DistilBertForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.DistilBertForQuestionAnswering&quot;,&quot;title&quot;:&quot;DistilBertForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertModel&quot;,&quot;title&quot;:&quot;TFDistilBertModel&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertForMaskedLM&quot;,&quot;title&quot;:&quot;TFDistilBertForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertForSequenceClassification&quot;,&quot;title&quot;:&quot;TFDistilBertForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertForMultipleChoice&quot;,&quot;title&quot;:&quot;TFDistilBertForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertForTokenClassification&quot;,&quot;title&quot;:&quot;TFDistilBertForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFDistilBertForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertModel&quot;,&quot;title&quot;:&quot;FlaxDistilBertModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertForMaskedLM&quot;,&quot;title&quot;:&quot;FlaxDistilBertForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertForSequenceClassification&quot;,&quot;title&quot;:&quot;FlaxDistilBertForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertForMultipleChoice&quot;,&quot;title&quot;:&quot;FlaxDistilBertForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertForTokenClassification&quot;,&quot;title&quot;:&quot;FlaxDistilBertForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertForQuestionAnswering&quot;,&quot;title&quot;:&quot;FlaxDistilBertForQuestionAnswering&quot;}],&quot;title&quot;:&quot;DistilBERT&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16370/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-ea90d2a7.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-e676bde9.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/distilbert.mdx-84b74f58.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/distilbert.mdx-53e9530f.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -2230,7 +2230,7 @@ the latter silently ignores them.</p></div>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Note that tokens are classified rather then input words which means that</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># there might be more predicted token classes than words.</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Multiple token classes might account for the same word    </span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Multiple token classes might account for the same word</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_tokens_classes = [model.config.id2label[t] <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> predicted_token_class_ids[<span class="hljs-number">0</span>].numpy().tolist()]
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_tokens_classes
 <!-- HTML_TAG_END --></pre></div>
@@ -3337,10 +3337,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>end_scores = outputs.end_logits<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="2wovkb">
-		import { start } from "/docs/transformers/pr_16370/en/_app/start-ea90d2a7.js";
+		<script type="module" data-hydrate="1t69z9n">
+		import { start } from "/docs/transformers/pr_16370/en/_app/start-e676bde9.js";
 		start({
-			target: document.querySelector('[data-hydrate="2wovkb"]').parentNode,
+			target: document.querySelector('[data-hydrate="1t69z9n"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16370/en","assets":"/docs/transformers/pr_16370/en"},
 			session: {},
 			route: false,
@@ -3351,7 +3351,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/distilbert.mdx-84b74f58.js")
+						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/distilbert.mdx-53e9530f.js")
 				],
 				params: {}
 			}

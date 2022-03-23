@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;mpnet&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.MPNetConfig&quot;,&quot;title&quot;:&quot;MPNetConfig&quot;},{&quot;local&quot;:&quot;transformers.MPNetTokenizer&quot;,&quot;title&quot;:&quot;MPNetTokenizer&quot;},{&quot;local&quot;:&quot;transformers.MPNetTokenizerFast&quot;,&quot;title&quot;:&quot;MPNetTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.MPNetModel&quot;,&quot;title&quot;:&quot;MPNetModel&quot;},{&quot;local&quot;:&quot;transformers.MPNetForMaskedLM&quot;,&quot;title&quot;:&quot;MPNetForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.MPNetForSequenceClassification&quot;,&quot;title&quot;:&quot;MPNetForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.MPNetForMultipleChoice&quot;,&quot;title&quot;:&quot;MPNetForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.MPNetForTokenClassification&quot;,&quot;title&quot;:&quot;MPNetForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.MPNetForQuestionAnswering&quot;,&quot;title&quot;:&quot;MPNetForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetModel&quot;,&quot;title&quot;:&quot;TFMPNetModel&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetForMaskedLM&quot;,&quot;title&quot;:&quot;TFMPNetForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetForSequenceClassification&quot;,&quot;title&quot;:&quot;TFMPNetForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetForMultipleChoice&quot;,&quot;title&quot;:&quot;TFMPNetForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetForTokenClassification&quot;,&quot;title&quot;:&quot;TFMPNetForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFMPNetForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFMPNetForQuestionAnswering&quot;}],&quot;title&quot;:&quot;MPNet&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16370/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-ea90d2a7.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-e676bde9.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/mpnet.mdx-84bb2230.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/mpnet.mdx-bdcf2997.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -2584,7 +2584,7 @@ the latter silently ignores them.</p></div>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Note that tokens are classified rather then input words which means that</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># there might be more predicted token classes than words.</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Multiple token classes might account for the same word    </span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Multiple token classes might account for the same word</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_tokens_classes = [model.config.id2label[t] <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> predicted_token_class_ids[<span class="hljs-number">0</span>].numpy().tolist()]
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_tokens_classes
 <!-- HTML_TAG_END --></pre></div>
@@ -2822,10 +2822,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1elmg0v">
-		import { start } from "/docs/transformers/pr_16370/en/_app/start-ea90d2a7.js";
+		<script type="module" data-hydrate="1vd9i1r">
+		import { start } from "/docs/transformers/pr_16370/en/_app/start-e676bde9.js";
 		start({
-			target: document.querySelector('[data-hydrate="1elmg0v"]').parentNode,
+			target: document.querySelector('[data-hydrate="1vd9i1r"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16370/en","assets":"/docs/transformers/pr_16370/en"},
 			session: {},
 			route: false,
@@ -2836,7 +2836,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/mpnet.mdx-84bb2230.js")
+						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/mpnet.mdx-bdcf2997.js")
 				],
 				params: {}
 			}

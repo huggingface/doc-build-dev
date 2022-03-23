@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;funnel-transformer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.FunnelConfig&quot;,&quot;title&quot;:&quot;FunnelConfig&quot;},{&quot;local&quot;:&quot;transformers.FunnelTokenizer&quot;,&quot;title&quot;:&quot;FunnelTokenizer&quot;},{&quot;local&quot;:&quot;transformers.FunnelTokenizerFast&quot;,&quot;title&quot;:&quot;FunnelTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.models.funnel.modeling_funnel.FunnelForPreTrainingOutput&quot;,&quot;title&quot;:&quot;Funnel specific outputs&quot;},{&quot;local&quot;:&quot;transformers.FunnelBaseModel&quot;,&quot;title&quot;:&quot;FunnelBaseModel&quot;},{&quot;local&quot;:&quot;transformers.FunnelModel&quot;,&quot;title&quot;:&quot;FunnelModel&quot;},{&quot;local&quot;:&quot;transformers.FunnelForPreTraining&quot;,&quot;title&quot;:&quot;FunnelModelForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.FunnelForMaskedLM&quot;,&quot;title&quot;:&quot;FunnelForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.FunnelForSequenceClassification&quot;,&quot;title&quot;:&quot;FunnelForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.FunnelForMultipleChoice&quot;,&quot;title&quot;:&quot;FunnelForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.FunnelForTokenClassification&quot;,&quot;title&quot;:&quot;FunnelForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.FunnelForQuestionAnswering&quot;,&quot;title&quot;:&quot;FunnelForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelBaseModel&quot;,&quot;title&quot;:&quot;TFFunnelBaseModel&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelModel&quot;,&quot;title&quot;:&quot;TFFunnelModel&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForPreTraining&quot;,&quot;title&quot;:&quot;TFFunnelModelForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForMaskedLM&quot;,&quot;title&quot;:&quot;TFFunnelForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForSequenceClassification&quot;,&quot;title&quot;:&quot;TFFunnelForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForMultipleChoice&quot;,&quot;title&quot;:&quot;TFFunnelForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForTokenClassification&quot;,&quot;title&quot;:&quot;TFFunnelForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFFunnelForQuestionAnswering&quot;}],&quot;title&quot;:&quot;Funnel Transformer&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16370/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-ea90d2a7.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-e676bde9.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/funnel.mdx-58e81b34.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/funnel.mdx-693a1754.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -3244,7 +3244,7 @@ the latter silently ignores them.</p></div>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Note that tokens are classified rather then input words which means that</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># there might be more predicted token classes than words.</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Multiple token classes might account for the same word    </span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Multiple token classes might account for the same word</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_tokens_classes = [model.config.id2label[t] <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> predicted_token_class_ids[<span class="hljs-number">0</span>].numpy().tolist()]
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_tokens_classes
 <!-- HTML_TAG_END --></pre></div>
@@ -3479,10 +3479,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="5hk84r">
-		import { start } from "/docs/transformers/pr_16370/en/_app/start-ea90d2a7.js";
+		<script type="module" data-hydrate="10g1r8r">
+		import { start } from "/docs/transformers/pr_16370/en/_app/start-e676bde9.js";
 		start({
-			target: document.querySelector('[data-hydrate="5hk84r"]').parentNode,
+			target: document.querySelector('[data-hydrate="10g1r8r"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16370/en","assets":"/docs/transformers/pr_16370/en"},
 			session: {},
 			route: false,
@@ -3493,7 +3493,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/funnel.mdx-58e81b34.js")
+						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/funnel.mdx-693a1754.js")
 				],
 				params: {}
 			}

@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;xlnet&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.XLNetConfig&quot;,&quot;title&quot;:&quot;XLNetConfig&quot;},{&quot;local&quot;:&quot;transformers.XLNetTokenizer&quot;,&quot;title&quot;:&quot;XLNetTokenizer&quot;},{&quot;local&quot;:&quot;transformers.XLNetTokenizerFast&quot;,&quot;title&quot;:&quot;XLNetTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.models.xlnet.modeling_xlnet.XLNetModelOutput&quot;,&quot;title&quot;:&quot;XLNet specific outputs&quot;},{&quot;local&quot;:&quot;transformers.XLNetModel&quot;,&quot;title&quot;:&quot;XLNetModel&quot;},{&quot;local&quot;:&quot;transformers.XLNetLMHeadModel&quot;,&quot;title&quot;:&quot;XLNetLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.XLNetForSequenceClassification&quot;,&quot;title&quot;:&quot;XLNetForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.XLNetForMultipleChoice&quot;,&quot;title&quot;:&quot;XLNetForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.XLNetForTokenClassification&quot;,&quot;title&quot;:&quot;XLNetForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.XLNetForQuestionAnsweringSimple&quot;,&quot;title&quot;:&quot;XLNetForQuestionAnsweringSimple&quot;},{&quot;local&quot;:&quot;transformers.XLNetForQuestionAnswering&quot;,&quot;title&quot;:&quot;XLNetForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFXLNetModel&quot;,&quot;title&quot;:&quot;TFXLNetModel&quot;},{&quot;local&quot;:&quot;transformers.TFXLNetLMHeadModel&quot;,&quot;title&quot;:&quot;TFXLNetLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.TFXLNetForSequenceClassification&quot;,&quot;title&quot;:&quot;TFXLNetForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFXLNetForMultipleChoice&quot;,&quot;title&quot;:&quot;TFLNetForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFXLNetForTokenClassification&quot;,&quot;title&quot;:&quot;TFXLNetForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFXLNetForQuestionAnsweringSimple&quot;,&quot;title&quot;:&quot;TFXLNetForQuestionAnsweringSimple&quot;}],&quot;title&quot;:&quot;XLNet&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16370/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-ea90d2a7.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-e676bde9.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/xlnet.mdx-9cebf0b7.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/xlnet.mdx-1ce4198a.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -4241,7 +4241,7 @@ the latter silently ignores them.</p></div>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Note that tokens are classified rather then input words which means that</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># there might be more predicted token classes than words.</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Multiple token classes might account for the same word    </span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Multiple token classes might account for the same word</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_tokens_classes = [model.config.id2label[t] <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> predicted_token_class_ids[<span class="hljs-number">0</span>].numpy().tolist()]
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_tokens_classes
 <!-- HTML_TAG_END --></pre></div>
@@ -4519,10 +4519,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="19m315j">
-		import { start } from "/docs/transformers/pr_16370/en/_app/start-ea90d2a7.js";
+		<script type="module" data-hydrate="1ckzbmf">
+		import { start } from "/docs/transformers/pr_16370/en/_app/start-e676bde9.js";
 		start({
-			target: document.querySelector('[data-hydrate="19m315j"]').parentNode,
+			target: document.querySelector('[data-hydrate="1ckzbmf"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16370/en","assets":"/docs/transformers/pr_16370/en"},
 			session: {},
 			route: false,
@@ -4533,7 +4533,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/xlnet.mdx-9cebf0b7.js")
+						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/xlnet.mdx-1ce4198a.js")
 				],
 				params: {}
 			}
