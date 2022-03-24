@@ -680,10 +680,18 @@ model.config.id2label[predicted_class_id]
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_class_id = <span class="hljs-built_in">int</span>(tf.math.argmax(logits, axis=-<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>])
 <span class="hljs-meta">&gt;&gt;&gt; </span>model.config.id2label[predicted_class_id]
-`}}),en=new Qe({props:{code:`labels = tf.constant(1)
+`}}),en=new Qe({props:{code:`# To train a model on \`num_labels\` classes, you can pass \`num_labels=num_labels\` to \`.from_pretrained(...)\`
+num_labels = len(model.config.id2label)
+model = TFTransfoXLForSequenceClassification.from_pretrained("transfo-xl-wt103", num_labels=num_labels)    
+
+labels = tf.constant(1)
 loss = model(**inputs, labels=labels).loss
 round(float(loss), 2)
-`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span>labels = tf.constant(<span class="hljs-number">1</span>)
+`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># To train a model on \`num_labels\` classes, you can pass \`num_labels=num_labels\` to \`.from_pretrained(...)\`</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>num_labels = <span class="hljs-built_in">len</span>(model.config.id2label)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFTransfoXLForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;transfo-xl-wt103&quot;</span>, num_labels=num_labels)    
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>labels = tf.constant(<span class="hljs-number">1</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(**inputs, labels=labels).loss
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">round</span>(<span class="hljs-built_in">float</span>(loss), <span class="hljs-number">2</span>)
 `}}),tn=new Ge({}),nn=new te({props:{name:"class transformers.AdaptiveEmbedding",anchor:"transformers.AdaptiveEmbedding",parameters:[{name:"n_token",val:""},{name:"d_embed",val:""},{name:"d_proj",val:""},{name:"cutoffs",val:""},{name:"div_val",val:" = 1"},{name:"sample_softmax",val:" = False"}],source:"https://github.com/huggingface/transformers/blob/pr_16370/src/transformers/models/transfo_xl/modeling_transfo_xl.py#L405"}}),an=new te({props:{name:"class transformers.TFAdaptiveEmbedding",anchor:"transformers.TFAdaptiveEmbedding",parameters:[{name:"*args",val:""},{name:"**kwargs",val:""}],source:"https://github.com/huggingface/transformers/blob/pr_16370/src/transformers/models/transfo_xl/modeling_tf_transfo_xl.py#L343"}}),{c(){p=n("meta"),M=l(),u=n("h1"),g=n("a"),$=n("span"),v(_.$$.fragment),T=l(),X=n("span"),I=r("Transformer XL"),W=l(),x=n("h2"),C=n("a"),O=n("span"),v(K.$$.fragment),ae=l(),B=n("span"),$e=r("Overview"),ge=l(),U=n("p"),N=r("The Transformer-XL model was proposed in "),ne=n("a"),re=r("Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context"),F=r(` by Zihang Dai, Zhilin Yang, Yiming Yang, Jaime Carbonell, Quoc V. Le, Ruslan
