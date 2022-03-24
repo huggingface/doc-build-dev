@@ -1,14 +1,14 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;summary-of-the-tasks&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;sequence-classification&quot;,&quot;title&quot;:&quot;Sequence Classification&quot;},{&quot;local&quot;:&quot;extractive-question-answering&quot;,&quot;title&quot;:&quot;Extractive Question Answering&quot;},{&quot;local&quot;:&quot;language-modeling&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;masked-language-modeling&quot;,&quot;title&quot;:&quot;Masked Language Modeling&quot;},{&quot;local&quot;:&quot;causal-language-modeling&quot;,&quot;title&quot;:&quot;Causal Language Modeling&quot;},{&quot;local&quot;:&quot;text-generation&quot;,&quot;title&quot;:&quot;Text Generation&quot;}],&quot;title&quot;:&quot;Language Modeling&quot;},{&quot;local&quot;:&quot;named-entity-recognition&quot;,&quot;title&quot;:&quot;Named Entity Recognition&quot;},{&quot;local&quot;:&quot;summarization&quot;,&quot;title&quot;:&quot;Summarization&quot;},{&quot;local&quot;:&quot;translation&quot;,&quot;title&quot;:&quot;Translation&quot;}],&quot;title&quot;:&quot;Summary of the tasks&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/transformers/pr_16148/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/start-d99ecfc2.js">
+	<link rel="stylesheet" href="/docs/transformers/pr_16148/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/start-c6c557a2.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/pages/task_summary.mdx-a529c7b4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/pages/task_summary.mdx-5a8ef617.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/IconCopyLink-7a11ce68.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/CodeBlock-3a8b25a8.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/DocNotebookDropdown-b2654249.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/DocNotebookDropdown-f2b55cd8.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16148/en/_app/chunks/Markdown-4489c441.js"> 
 
 
@@ -25,8 +25,8 @@
 <div class="flex space-x-1 absolute z-10 right-0 top-0"><div class="relative colab-dropdown ">
 	<button class="  " type="button">
 		
-			<img alt="Open In Colab" class="!m-0" src="https://colab.research.google.com/assets/colab-badge.svg">
-		</button>
+				<img alt="Open In Colab" class="!m-0" src="https://colab.research.google.com/assets/colab-badge.svg">
+			</button>
 	
 	
 	
@@ -34,8 +34,8 @@
 	<div class="relative colab-dropdown ">
 	<button class="  " type="button">
 		
-			<img alt="Open In Studio Lab" class="!m-0" src="https://studiolab.sagemaker.aws/studiolab.svg">
-		</button>
+				<img alt="Open In Studio Lab" class="!m-0" src="https://studiolab.sagemaker.aws/studiolab.svg">
+			</button>
 	
 	
 	
@@ -50,9 +50,9 @@ for more information. Feel free to modify the code to be more specific and adapt
 checkpoints are usually pre-trained on a large corpus of data and fine-tuned on a specific task. This means the
 following:</p>
 <ul><li>Not all models were fine-tuned on all tasks. If you want to fine-tune a model on a specific task, you can leverage
-one of the <em>run_$TASK.py</em> scripts in the <a href="https://github.com/huggingface/transformers/tree/master/examples" rel="nofollow">examples</a> directory.</li>
+one of the <em>run_$TASK.py</em> scripts in the <a href="https://github.com/huggingface/transformers/tree/main/examples" rel="nofollow">examples</a> directory.</li>
 <li>Fine-tuned models were fine-tuned on a specific dataset. This dataset may or may not overlap with your use-case and
-domain. As mentioned previously, you may leverage the <a href="https://github.com/huggingface/transformers/tree/master/examples" rel="nofollow">examples</a> scripts to fine-tune your model, or you may
+domain. As mentioned previously, you may leverage the <a href="https://github.com/huggingface/transformers/tree/main/examples" rel="nofollow">examples</a> scripts to fine-tune your model, or you may
 create your own training script.</li></ul>
 <p>In order to do an inference on a task, several mechanisms are made available by the library:</p>
 <ul><li>Pipelines: very easy-to-use abstractions, which require as little as two lines of code.</li>
@@ -71,7 +71,7 @@ additional head that is used for the task, initializing the weights of that head
 
 <p>Sequence classification is the task of classifying sequences according to a given number of classes. An example of
 sequence classification is the GLUE dataset, which is entirely based on that task. If you would like to fine-tune a
-model on a GLUE sequence classification task, you may leverage the <a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/text-classification/run_glue.py" rel="nofollow">run_glue.py</a>, <a href="https://github.com/huggingface/transformers/tree/master/examples/tensorflow/text-classification/run_tf_glue.py" rel="nofollow">run_tf_glue.py</a>, <a href="https://github.com/huggingface/transformers/tree/master/examples/tensorflow/text-classification/run_tf_text_classification.py" rel="nofollow">run_tf_text_classification.py</a> or <a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/text-classification/run_xnli.py" rel="nofollow">run_xnli.py</a> scripts.</p>
+model on a GLUE sequence classification task, you may leverage the <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-classification/run_glue.py" rel="nofollow">run_glue.py</a>, <a href="https://github.com/huggingface/transformers/tree/main/examples/tensorflow/text-classification/run_tf_glue.py" rel="nofollow">run_tf_glue.py</a>, <a href="https://github.com/huggingface/transformers/tree/main/examples/tensorflow/text-classification/run_tf_text_classification.py" rel="nofollow">run_tf_text_classification.py</a> or <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-classification/run_xnli.py" rel="nofollow">run_xnli.py</a> scripts.</p>
 <p>Here is an example of using pipelines to do sentiment analysis: identifying if a sequence is positive or negative. It
 leverages a fine-tuned model on sst2, which is a GLUE task.</p>
 <p>This returns a label (“POSITIVE” or “NEGATIVE”) alongside a score, as follows:</p>
@@ -196,8 +196,8 @@ paraphrase) and 1 (is a paraphrase).</li>
 
 <p>Extractive Question Answering is the task of extracting an answer from a text given a question. An example of a
 question answering dataset is the SQuAD dataset, which is entirely based on that task. If you would like to fine-tune a
-model on a SQuAD task, you may leverage the <a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/question-answering/run_qa.py" rel="nofollow">run_qa.py</a> and
-<a href="https://github.com/huggingface/transformers/tree/master/examples/tensorflow/question-answering/run_tf_squad.py" rel="nofollow">run_tf_squad.py</a>
+model on a SQuAD task, you may leverage the <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering/run_qa.py" rel="nofollow">run_qa.py</a> and
+<a href="https://github.com/huggingface/transformers/tree/main/examples/tensorflow/question-answering/run_tf_squad.py" rel="nofollow">run_tf_squad.py</a>
 scripts.</p>
 <p>Here is an example of using pipelines to do question answering: extracting an answer from a text given a question. It
 leverages a fine-tuned model on SQuAD.</p>
@@ -370,7 +370,7 @@ on scientific papers e.g. <a href="https://huggingface.co/lysandre/arxiv-nlp" re
 fill that mask with an appropriate token. This allows the model to attend to both the right context (tokens on the
 right of the mask) and the left context (tokens on the left of the mask). Such a training creates a strong basis for
 downstream tasks requiring bi-directional context, such as SQuAD (question answering, see <a href="https://arxiv.org/abs/1910.13461" rel="nofollow">Lewis, Lui, Goyal et al.</a>, part 4.2). If you would like to fine-tune a model on a masked language modeling
-task, you may leverage the <a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/language-modeling/run_mlm.py" rel="nofollow">run_mlm.py</a> script.</p>
+task, you may leverage the <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling/run_mlm.py" rel="nofollow">run_mlm.py</a> script.</p>
 <p>Here is an example of using pipelines to replace a mask from a sequence:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -508,7 +508,7 @@ Distilled models are smaller than the models they mimic. Using them instead of t
 <p>Causal language modeling is the task of predicting the token following a sequence of tokens. In this situation, the
 model only attends to the left context (tokens on the left of the mask). Such a training is particularly interesting
 for generation tasks. If you would like to fine-tune a model on a causal language modeling task, you may leverage the
-<a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/language-modeling/run_clm.py" rel="nofollow">run_clm.py</a> script.</p>
+<a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling/run_clm.py" rel="nofollow">run_clm.py</a> script.</p>
 <p>Usually, the next token is predicted by sampling from the logits of the last hidden state the model produces from the
 input sequence.</p>
 <div class="space-y-10 py-6 2xl:py-8 2xl:-mx-4">
@@ -707,7 +707,7 @@ generation blog post <a href="https://huggingface.co/blog/how-to-generate" rel="
 <p>Named Entity Recognition (NER) is the task of classifying tokens according to a class, for example, identifying a token
 as a person, an organisation or a location. An example of a named entity recognition dataset is the CoNLL-2003 dataset,
 which is entirely based on that task. If you would like to fine-tune a model on an NER task, you may leverage the
-<a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/token-classification/run_ner.py" rel="nofollow">run_ner.py</a> script.</p>
+<a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/token-classification/run_ner.py" rel="nofollow">run_ner.py</a> script.</p>
 <p>Here is an example of using pipelines to do named entity recognition, specifically, trying to identify tokens as
 belonging to one of 9 classes:</p>
 <ul><li>O, Outside of a named entity</li>
@@ -866,11 +866,11 @@ illustrated below:</p>
 	</span></h2>
 
 <p>Summarization is the task of summarizing a document or an article into a shorter text. If you would like to fine-tune a
-model on a summarization task, you may leverage the <a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/summarization/run_summarization.py" rel="nofollow">run_summarization.py</a>
+model on a summarization task, you may leverage the <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization/run_summarization.py" rel="nofollow">run_summarization.py</a>
 script.</p>
 <p>An example of a summarization dataset is the CNN / Daily Mail dataset, which consists of long news articles and was
 created for the task of summarization. If you would like to fine-tune a model on a summarization task, various
-approaches are described in this <a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/summarization/README.md" rel="nofollow">document</a>.</p>
+approaches are described in this <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization/README.md" rel="nofollow">document</a>.</p>
 <p>Here is an example of using the pipelines to do summarization. It leverages a Bart model that was fine-tuned on the CNN
 / Daily Mail data set.</p>
 
@@ -975,10 +975,10 @@ between <span class="hljs-number">1999</span> <span class="hljs-keyword">and</sp
 	</span></h2>
 
 <p>Translation is the task of translating a text from one language to another. If you would like to fine-tune a model on a
-translation task, you may leverage the <a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/translation/run_translation.py" rel="nofollow">run_translation.py</a> script.</p>
+translation task, you may leverage the <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/translation/run_translation.py" rel="nofollow">run_translation.py</a> script.</p>
 <p>An example of a translation dataset is the WMT English to German dataset, which has sentences in English as the input
 data and the corresponding sentences in German as the target data. If you would like to fine-tune a model on a
-translation task, various approaches are described in this <a href="https://github.com/huggingface/transformers/tree/master/examples/pytorch/translation/README.md" rel="nofollow">document</a>.</p>
+translation task, various approaches are described in this <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/translation/README.md" rel="nofollow">document</a>.</p>
 <p>Here is an example of using the pipelines to do translation. It leverages a T5 model that was only pre-trained on a
 multi-task mixture dataset (including WMT), yet, yielding impressive translation results.</p>
 
@@ -1049,10 +1049,10 @@ model, such as <code>Bart</code> or <code>T5</code>.</li>
 <p>We get the same translation as with the pipeline example.</p>
 
 
-		<script type="module" data-hydrate="x4bwkx">
-		import { start } from "/docs/transformers/pr_16148/en/_app/start-d99ecfc2.js";
+		<script type="module" data-hydrate="yrv2h2">
+		import { start } from "/docs/transformers/pr_16148/en/_app/start-c6c557a2.js";
 		start({
-			target: document.querySelector('[data-hydrate="x4bwkx"]').parentNode,
+			target: document.querySelector('[data-hydrate="yrv2h2"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16148/en","assets":"/docs/transformers/pr_16148/en"},
 			session: {},
 			route: false,
@@ -1063,7 +1063,7 @@ model, such as <code>Bart</code> or <code>T5</code>.</li>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16148/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16148/en/_app/pages/task_summary.mdx-a529c7b4.js")
+						import("/docs/transformers/pr_16148/en/_app/pages/task_summary.mdx-5a8ef617.js")
 				],
 				params: {}
 			}
