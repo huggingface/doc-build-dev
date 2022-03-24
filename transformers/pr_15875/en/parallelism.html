@@ -1,13 +1,12 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;model-parallelism&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;parallelism-overview&quot;,&quot;title&quot;:&quot;Parallelism overview&quot;},{&quot;local&quot;:&quot;concepts&quot;,&quot;title&quot;:&quot;Concepts&quot;},{&quot;local&quot;:&quot;data-parallelism&quot;,&quot;title&quot;:&quot;Data Parallelism&quot;},{&quot;local&quot;:&quot;zero-data-parallelism&quot;,&quot;title&quot;:&quot;ZeRO Data Parallelism&quot;},{&quot;local&quot;:&quot;naive-model-parallelism-vertical-and-pipeline-parallelism&quot;,&quot;title&quot;:&quot;Naive Model Parallelism (Vertical) and Pipeline Parallelism&quot;},{&quot;local&quot;:&quot;tensor-parallelism&quot;,&quot;title&quot;:&quot;Tensor Parallelism&quot;},{&quot;local&quot;:&quot;dppp&quot;,&quot;title&quot;:&quot;DP+PP&quot;},{&quot;local&quot;:&quot;dppptp&quot;,&quot;title&quot;:&quot;DP+PP+TP&quot;},{&quot;local&quot;:&quot;zero-dppptp&quot;,&quot;title&quot;:&quot;ZeRO DP+PP+TP&quot;},{&quot;local&quot;:&quot;flexflow&quot;,&quot;title&quot;:&quot;FlexFlow&quot;},{&quot;local&quot;:&quot;which-strategy-to-use-when&quot;,&quot;title&quot;:&quot;Which Strategy To Use When&quot;}],&quot;title&quot;:&quot;Model Parallelism&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/transformers/pr_15875/en/_app/assets/pages/__layout.svelte-3f5b292a.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/start-d68057ee.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/chunks/vendor-4833417e.js">
+	<link rel="stylesheet" href="/docs/transformers/pr_15875/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/start-6d160613.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/pages/__layout.svelte-52826f4d.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/pages/parallelism.mdx-bae2efff.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/chunks/IconCopyLink-4b81c553.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/chunks/CodeBlock-6a3d1b46.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/chunks/CopyButton-dacfbfaf.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/pages/__layout.svelte-3f22c1e5.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/pages/parallelism.mdx-5b5bd539.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/chunks/IconCopyLink-7a11ce68.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15875/en/_app/chunks/CodeBlock-3a8b25a8.js"> 
 
 
 
@@ -271,7 +270,7 @@ by <a href="https://github.com/anton-l" rel="nofollow">@anton-l</a>.</p>
 <p>The significance of this framework is that it takes resources like (1) GPU/TPU/CPU vs. (2) RAM/DRAM vs. (3) fast-intra-connect/slow-inter-connect and it automatically optimizes all these  algorithmically deciding which parallelisation to use where.</p>
 <p>One very important aspect is that FlexFlow is designed for optimizing DNN parallelizations for models with static and fixed workloads, since models with dynamic behavior may prefer different parallelization strategies across iterations.</p>
 <p>So the promise is very attractive - it runs a 30min simulation on the cluster of choice and it comes up with the best strategy to utilise this specific environment. If you add/remove/replace any parts it’ll run and re-optimize the plan for that. And then you can train. A different setup will have its own custom optimization.</p>
-<p>🤗 Transformers status: not yet integrated. We already have our models FX-trace-able via <a href="https://github.com/huggingface/transformers/blob/master/src/transformers/utils/fx.py" rel="nofollow">transformers.utils.fx</a>, which is a prerequisite for FlexFlow, so someone needs to figure out what needs to be done to make FlexFlow work with our models.</p>
+<p>🤗 Transformers status: not yet integrated. We already have our models FX-trace-able via <a href="https://github.com/huggingface/transformers/blob/main/src/transformers/utils/fx.py" rel="nofollow">transformers.utils.fx</a>, which is a prerequisite for FlexFlow, so someone needs to figure out what needs to be done to make FlexFlow work with our models.</p>
 <h2 class="relative group"><a id="which-strategy-to-use-when" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#which-strategy-to-use-when"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Which Strategy To Use When
 	</span></h2>
@@ -306,10 +305,10 @@ by <a href="https://github.com/anton-l" rel="nofollow">@anton-l</a>.</p>
 <ol><li>DP+PP+TP+ZeRO-1</li></ol></li></ul>
 
 
-		<script type="module" data-hydrate="13wnk8l">
-		import { start } from "/docs/transformers/pr_15875/en/_app/start-d68057ee.js";
+		<script type="module" data-hydrate="18eaeea">
+		import { start } from "/docs/transformers/pr_15875/en/_app/start-6d160613.js";
 		start({
-			target: document.querySelector('[data-hydrate="13wnk8l"]').parentNode,
+			target: document.querySelector('[data-hydrate="18eaeea"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15875/en","assets":"/docs/transformers/pr_15875/en"},
 			session: {},
 			route: false,
@@ -319,8 +318,8 @@ by <a href="https://github.com/anton-l" rel="nofollow">@anton-l</a>.</p>
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_15875/en/_app/pages/__layout.svelte-52826f4d.js"),
-						import("/docs/transformers/pr_15875/en/_app/pages/parallelism.mdx-bae2efff.js")
+					import("/docs/transformers/pr_15875/en/_app/pages/__layout.svelte-3f22c1e5.js"),
+						import("/docs/transformers/pr_15875/en/_app/pages/parallelism.mdx-5b5bd539.js")
 				],
 				params: {}
 			}
