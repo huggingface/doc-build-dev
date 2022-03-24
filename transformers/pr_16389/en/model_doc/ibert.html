@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;ibert&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.IBertConfig&quot;,&quot;title&quot;:&quot;IBertConfig&quot;},{&quot;local&quot;:&quot;transformers.IBertModel&quot;,&quot;title&quot;:&quot;IBertModel&quot;},{&quot;local&quot;:&quot;transformers.IBertForMaskedLM&quot;,&quot;title&quot;:&quot;IBertForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.IBertForSequenceClassification&quot;,&quot;title&quot;:&quot;IBertForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.IBertForMultipleChoice&quot;,&quot;title&quot;:&quot;IBertForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.IBertForTokenClassification&quot;,&quot;title&quot;:&quot;IBertForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.IBertForQuestionAnswering&quot;,&quot;title&quot;:&quot;IBertForQuestionAnswering&quot;}],&quot;title&quot;:&quot;I-BERT&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16389/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16389/en/_app/start-5e23e68c.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16389/en/_app/start-57e8a08d.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16389/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16389/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16389/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16389/en/_app/pages/model_doc/ibert.mdx-11b28c5d.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16389/en/_app/pages/model_doc/ibert.mdx-4c6d74b4.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16389/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16389/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16389/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -394,11 +394,11 @@ and behavior.</p>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">inputs_embeds<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">labels<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">labels<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60">: typing.Union[typing.Dict[str, typing.Any], NoneType]</span></span>
+			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
 		<span class="font-bold">→</span>
@@ -597,10 +597,10 @@ and behavior.</p>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">inputs_embeds<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">labels<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">labels<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span>
 		<span>)</span>
 		<span class="font-bold">→</span>
@@ -821,15 +821,15 @@ and behavior.</p>
 			<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
 		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">labels<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">inputs_embeds<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">labels<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span>
 		<span>)</span>
 		<span class="font-bold">→</span>
@@ -1014,10 +1014,10 @@ and behavior.</p>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">inputs_embeds<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">labels<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">labels<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span>
 		<span>)</span>
 		<span class="font-bold">→</span>
@@ -1212,11 +1212,11 @@ and behavior.</p>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">inputs_embeds<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">start_positions<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">end_positions<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">start_positions<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">end_positions<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span>
 		<span>)</span>
 		<span class="font-bold">→</span>
@@ -1378,10 +1378,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="bzzh2e">
-		import { start } from "/docs/transformers/pr_16389/en/_app/start-5e23e68c.js";
+		<script type="module" data-hydrate="1lb8zzr">
+		import { start } from "/docs/transformers/pr_16389/en/_app/start-57e8a08d.js";
 		start({
-			target: document.querySelector('[data-hydrate="bzzh2e"]').parentNode,
+			target: document.querySelector('[data-hydrate="1lb8zzr"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16389/en","assets":"/docs/transformers/pr_16389/en"},
 			session: {},
 			route: false,
@@ -1392,7 +1392,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16389/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16389/en/_app/pages/model_doc/ibert.mdx-11b28c5d.js")
+						import("/docs/transformers/pr_16389/en/_app/pages/model_doc/ibert.mdx-4c6d74b4.js")
 				],
 				params: {}
 			}
