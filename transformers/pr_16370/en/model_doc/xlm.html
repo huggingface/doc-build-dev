@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;xlm&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.XLMConfig&quot;,&quot;title&quot;:&quot;XLMConfig&quot;},{&quot;local&quot;:&quot;transformers.XLMTokenizer&quot;,&quot;title&quot;:&quot;XLMTokenizer&quot;},{&quot;local&quot;:&quot;transformers.models.xlm.modeling_xlm.XLMForQuestionAnsweringOutput&quot;,&quot;title&quot;:&quot;XLM specific outputs&quot;},{&quot;local&quot;:&quot;transformers.XLMModel&quot;,&quot;title&quot;:&quot;XLMModel&quot;},{&quot;local&quot;:&quot;transformers.XLMWithLMHeadModel&quot;,&quot;title&quot;:&quot;XLMWithLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.XLMForSequenceClassification&quot;,&quot;title&quot;:&quot;XLMForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.XLMForMultipleChoice&quot;,&quot;title&quot;:&quot;XLMForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.XLMForTokenClassification&quot;,&quot;title&quot;:&quot;XLMForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.XLMForQuestionAnsweringSimple&quot;,&quot;title&quot;:&quot;XLMForQuestionAnsweringSimple&quot;},{&quot;local&quot;:&quot;transformers.XLMForQuestionAnswering&quot;,&quot;title&quot;:&quot;XLMForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFXLMModel&quot;,&quot;title&quot;:&quot;TFXLMModel&quot;},{&quot;local&quot;:&quot;transformers.TFXLMWithLMHeadModel&quot;,&quot;title&quot;:&quot;TFXLMWithLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForSequenceClassification&quot;,&quot;title&quot;:&quot;TFXLMForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForMultipleChoice&quot;,&quot;title&quot;:&quot;TFXLMForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForTokenClassification&quot;,&quot;title&quot;:&quot;TFXLMForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFXLMForQuestionAnsweringSimple&quot;,&quot;title&quot;:&quot;TFXLMForQuestionAnsweringSimple&quot;}],&quot;title&quot;:&quot;XLM&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16370/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-b23b6130.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/start-ae102b9a.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/xlm.mdx-ddfc1bfe.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/pages/model_doc/xlm.mdx-a8b5cccf.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16370/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -2847,7 +2847,7 @@ the latter silently ignores them.</p></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># To train a model on `num_labels` classes, you can pass `num_labels=num_labels` to `.from_pretrained(...)`</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>num_labels = <span class="hljs-built_in">len</span>(model.config.id2label)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFXLMForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;xlm-mlm-en-2048&quot;</span>, num_labels=num_labels)    
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFXLMForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;xlm-mlm-en-2048&quot;</span>, num_labels=num_labels)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>labels = tf.constant(<span class="hljs-number">1</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(**inputs, labels=labels).loss
@@ -3595,10 +3595,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="lz39ro">
-		import { start } from "/docs/transformers/pr_16370/en/_app/start-b23b6130.js";
+		<script type="module" data-hydrate="l8iw50">
+		import { start } from "/docs/transformers/pr_16370/en/_app/start-ae102b9a.js";
 		start({
-			target: document.querySelector('[data-hydrate="lz39ro"]').parentNode,
+			target: document.querySelector('[data-hydrate="l8iw50"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16370/en","assets":"/docs/transformers/pr_16370/en"},
 			session: {},
 			route: false,
@@ -3609,7 +3609,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16370/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/xlm.mdx-ddfc1bfe.js")
+						import("/docs/transformers/pr_16370/en/_app/pages/model_doc/xlm.mdx-a8b5cccf.js")
 				],
 				params: {}
 			}
