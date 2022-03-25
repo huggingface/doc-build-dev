@@ -234,8 +234,7 @@ loss = outputs.loss
 # inference
 generated_ids = model.generate(pixel_values)
 generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
-generated_text
-`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> (
+generated_text`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> (
 <span class="hljs-meta">... </span>    TrOCRProcessor,
 <span class="hljs-meta">... </span>    VisionEncoderDecoderModel,
 <span class="hljs-meta">... </span>    TrOCRForCausalLM,
@@ -274,8 +273,7 @@ generated_text
 <span class="hljs-meta">&gt;&gt;&gt; </span>generated_ids = model.generate(pixel_values)
 <span class="hljs-meta">&gt;&gt;&gt; </span>generated_text = processor.batch_decode(generated_ids, skip_special_tokens=<span class="hljs-literal">True</span>)[<span class="hljs-number">0</span>]
 <span class="hljs-meta">&gt;&gt;&gt; </span>generated_text
-<span class="hljs-string">&#x27;industry, &quot; Mr. Brown commented icily. &quot; Let us have a&#x27;</span>
-`}}),{c(){f=s("meta"),q=d(),u=s("h1"),$=s("a"),L=s("span"),v(E.$$.fragment),A=d(),F=s("span"),x=o("TrOCR"),_=d(),P=s("h2"),z=s("a"),Lt=s("span"),v(Ce.$$.fragment),ro=d(),Ft=s("span"),oo=o("Overview"),gr=d(),S=s("p"),ao=o("The TrOCR model was proposed in "),we=s("a"),so=o(`TrOCR: Transformer-based Optical Character Recognition with Pre-trained
+<span class="hljs-string">&#x27;industry, &quot; Mr. Brown commented icily. &quot; Let us have a&#x27;</span>`}}),{c(){f=s("meta"),q=d(),u=s("h1"),$=s("a"),L=s("span"),v(E.$$.fragment),A=d(),F=s("span"),x=o("TrOCR"),_=d(),P=s("h2"),z=s("a"),Lt=s("span"),v(Ce.$$.fragment),ro=d(),Ft=s("span"),oo=o("Overview"),gr=d(),S=s("p"),ao=o("The TrOCR model was proposed in "),we=s("a"),so=o(`TrOCR: Transformer-based Optical Character Recognition with Pre-trained
 Models`),no=o(` by Minghao Li, Tengchao Lv, Lei Cui, Yijuan Lu, Dinei Florencio, Cha Zhang,
 Zhoujun Li, Furu Wei. TrOCR consists of an image Transformer encoder and an autoregressive text Transformer decoder to
 perform `),ke=s("a"),io=o("optical character recognition (OCR)"),lo=o("."),_r=d(),st=s("p"),co=o("The abstract from the paper is the following:"),vr=d(),nt=s("p"),Dt=s("em"),ho=o(`Text recognition is a long-standing research problem for document digitalization. Existing approaches for text recognition
