@@ -1,0 +1,851 @@
+import{S as Kd,i as Qd,s as Yd,e as n,k as l,w as m,t as r,M as Zd,c as s,d as o,m as c,a,x as f,h as i,b as d,F as e,g as h,y as g,q as _,o as b,B as k,v as el}from"../../chunks/vendor-6b77c823.js";import{T as ki}from"../../chunks/Tip-39098574.js";import{D as I}from"../../chunks/Docstring-abef54e3.js";import{C as X}from"../../chunks/CodeBlock-3a8b25a8.js";import{I as ue}from"../../chunks/IconCopyLink-7a11ce68.js";function tl(me){let u,B,v,L,q;return{c(){u=n("p"),B=r("Although the recipe for forward pass needs to be defined within this function, one should call the "),v=n("code"),L=r("Module"),q=r(`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.`)},l(T){u=s(T,"P",{});var y=a(u);B=i(y,"Although the recipe for forward pass needs to be defined within this function, one should call the "),v=s(y,"CODE",{});var j=a(v);L=i(j,"Module"),j.forEach(o),q=i(y,`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.`),y.forEach(o)},m(T,y){h(T,u,y),e(u,B),e(u,v),e(v,L),e(u,q)},d(T){T&&o(u)}}}function ol(me){let u,B,v,L,q;return{c(){u=n("p"),B=r("Although the recipe for forward pass needs to be defined within this function, one should call the "),v=n("code"),L=r("Module"),q=r(`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.`)},l(T){u=s(T,"P",{});var y=a(u);B=i(y,"Although the recipe for forward pass needs to be defined within this function, one should call the "),v=s(y,"CODE",{});var j=a(v);L=i(j,"Module"),j.forEach(o),q=i(y,`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.`),y.forEach(o)},m(T,y){h(T,u,y),e(u,B),e(u,v),e(v,L),e(u,q)},d(T){T&&o(u)}}}function nl(me){let u,B,v,L,q;return{c(){u=n("p"),B=r("Although the recipe for forward pass needs to be defined within this function, one should call the "),v=n("code"),L=r("Module"),q=r(`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.`)},l(T){u=s(T,"P",{});var y=a(u);B=i(y,"Although the recipe for forward pass needs to be defined within this function, one should call the "),v=s(y,"CODE",{});var j=a(v);L=i(j,"Module"),j.forEach(o),q=i(y,`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.`),y.forEach(o)},m(T,y){h(T,u,y),e(u,B),e(u,v),e(v,L),e(u,q)},d(T){T&&o(u)}}}function sl(me){let u,B,v,L,q,T,y,j,ts,sn,O,io,os,ns,je,ss,as,Fe,rs,is,an,Y,fe,lo,Ee,ds,co,ls,rn,G,cs,Me,ps,hs,po,us,ms,dn,Mt,fs,ln,St,ho,gs,cn,R,_s,Se,bs,ks,Ae,vs,Ts,pn,Z,ge,uo,Ne,ys,mo,ws,hn,F,Ps,fo,Ls,zs,go,qs,Bs,_o,$s,xs,bo,Cs,js,un,_e,Fs,Ie,Es,Ms,mn,W,Ss,Oe,ko,As,Ns,Is,At,Os,Ds,fn,Nt,vo,Xs,gn,De,_n,It,Xe,To,Gs,Rs,ee,Ws,yo,Hs,Us,wo,Vs,Js,bn,Ge,kn,te,be,Po,Re,Ks,Lo,Qs,vn,x,We,Ys,oe,Zs,Ot,ea,ta,He,oa,na,sa,ne,aa,Dt,ra,ia,Xt,da,la,ca,zo,pa,ha,Ue,Tn,se,ke,qo,Ve,ua,Bo,ma,yn,P,Je,fa,$o,ga,_a,D,ba,Gt,ka,va,Rt,Ta,ya,Ke,wa,Pa,La,Qe,za,xo,qa,Ba,$a,Co,xa,Ca,Ye,ja,ve,Ze,Fa,jo,Ea,Ma,N,et,Sa,tt,Aa,Fo,Na,Ia,Oa,ot,nt,Eo,Da,Xa,Mo,Ga,Ra,st,So,Wa,Ha,Ao,Ua,Va,No,Ja,wn,ae,Te,Io,at,Ka,Oo,Qa,Pn,S,rt,Ya,it,Za,Wt,er,tr,or,dt,nr,lt,sr,ar,rr,E,ct,ir,re,dr,Ht,lr,cr,Do,pr,hr,ur,ye,mr,Xo,fr,gr,pt,Ln,ie,we,Go,ht,_r,Ro,br,zn,A,ut,kr,mt,vr,Ut,Tr,yr,wr,ft,Pr,gt,Lr,zr,qr,M,_t,Br,de,$r,Vt,xr,Cr,Wo,jr,Fr,Er,Pe,Mr,Ho,Sr,Ar,bt,qn,le,Le,Uo,kt,Nr,Vo,Ir,Bn,C,vt,Or,Jo,Dr,Xr,Tt,Gr,Jt,Rr,Wr,Hr,yt,Ur,wt,Vr,Jr,Kr,w,Pt,Qr,ce,Yr,Kt,Zr,ei,Ko,ti,oi,ni,ze,si,Qo,ai,ri,Lt,ii,zt,di,Yo,li,ci,qt,pi,Bt,$n,pe,qe,Zo,$t,hi,en,ui,xn,he,xt,mi,H,Ct,fi,tn,gi,_i,jt,Cn;return T=new ue({}),Ee=new ue({}),Ne=new ue({}),De=new X({props:{code:`from transformers import PLBartForConditionalGeneration, PLBartTokenizer
+
+tokenizer = PLBartTokenizer.from_pretrained("uclanlp/plbart-base", src_lang="en_XX", tgt_lang="python")
+example_python_phrase = "def maximum(a,b,c):NEW_LINE_INDENTreturn max([a,b,c])"
+expected_translation_english = "Returns the maximum value of a b c."
+inputs = tokenizer(example_python_phrase, return_tensors="pt")
+with tokenizer.as_target_tokenizer():
+    labels = tokenizer(expected_translation_english, return_tensors="pt")
+inputs["labels"] = labels["input_ids"]
+# forward pass
+model(**inputs)`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PLBartForConditionalGeneration, PLBartTokenizer
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = PLBartTokenizer.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>, src_lang=<span class="hljs-string">&quot;en_XX&quot;</span>, tgt_lang=<span class="hljs-string">&quot;python&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>example_python_phrase = <span class="hljs-string">&quot;def maximum(a,b,c):NEW_LINE_INDENTreturn max([a,b,c])&quot;</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>expected_translation_english = <span class="hljs-string">&quot;Returns the maximum value of a b c.&quot;</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(example_python_phrase, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">with</span> tokenizer.as_target_tokenizer():
+<span class="hljs-meta">... </span>    labels = tokenizer(expected_translation_english, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs[<span class="hljs-string">&quot;labels&quot;</span>] = labels[<span class="hljs-string">&quot;input_ids&quot;</span>]
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># forward pass</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>model(**inputs)`}}),Ge=new X({props:{code:`from transformers import PLBartForConditionalGeneration, PLBartTokenizer
+
+tokenizer = PLBartTokenizer.from_pretrained("uclanlp/plbart-python-en_XX", src_lang="python", tgt_lang="en_XX")
+example_python_phrase = "def maximum(a,b,c):NEW_LINE_INDENTreturn max([a,b,c])"
+inputs = tokenizer(example_python_phrase, return_tensors="pt")
+model = PLBartForConditionalGeneration.from_pretrained("uclanlp/plbart-python-en_XX")
+translated_tokens = model.generate(**inputs, decoder_start_token_id=tokenizer.lang_code_to_id["en_XX"])
+tokenizer.batch_decode(translated_tokens, skip_special_tokens=True)[0]`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PLBartForConditionalGeneration, PLBartTokenizer
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = PLBartTokenizer.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-python-en_XX&quot;</span>, src_lang=<span class="hljs-string">&quot;python&quot;</span>, tgt_lang=<span class="hljs-string">&quot;en_XX&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>example_python_phrase = <span class="hljs-string">&quot;def maximum(a,b,c):NEW_LINE_INDENTreturn max([a,b,c])&quot;</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(example_python_phrase, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = PLBartForConditionalGeneration.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-python-en_XX&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>translated_tokens = model.generate(**inputs, decoder_start_token_id=tokenizer.lang_code_to_id[<span class="hljs-string">&quot;en_XX&quot;</span>])
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.batch_decode(translated_tokens, skip_special_tokens=<span class="hljs-literal">True</span>)[<span class="hljs-number">0</span>]
+<span class="hljs-string">&quot;Returns the maximum value of a b c.&quot;</span>`}}),Re=new ue({}),We=new I({props:{name:"class transformers.PLBartConfig",anchor:"transformers.PLBartConfig",parameters:[{name:"vocab_size",val:" = 50005"},{name:"max_position_embeddings",val:" = 1024"},{name:"encoder_layers",val:" = 6"},{name:"encoder_ffn_dim",val:" = 3072"},{name:"encoder_attention_heads",val:" = 12"},{name:"decoder_layers",val:" = 6"},{name:"decoder_ffn_dim",val:" = 3072"},{name:"decoder_attention_heads",val:" = 12"},{name:"encoder_layerdrop",val:" = 0.0"},{name:"decoder_layerdrop",val:" = 0.0"},{name:"use_cache",val:" = True"},{name:"is_encoder_decoder",val:" = True"},{name:"activation_function",val:" = 'gelu'"},{name:"d_model",val:" = 768"},{name:"dropout",val:" = 0.1"},{name:"attention_dropout",val:" = 0.1"},{name:"activation_dropout",val:" = 0.0"},{name:"init_std",val:" = 0.02"},{name:"classifier_dropout",val:" = 0.0"},{name:"scale_embedding",val:" = True"},{name:"pad_token_id",val:" = 1"},{name:"bos_token_id",val:" = 0"},{name:"eos_token_id",val:" = 2"},{name:"forced_eos_token_id",val:" = 2"},{name:"**kwargs",val:""}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/configuration_plbart.py#L32",parametersDescription:[{anchor:"transformers.PLBartConfig.vocab_size",description:`<strong>vocab_size</strong> (<code>int</code>, <em>optional</em>, defaults to 50005) &#x2014;
+Vocabulary size of the PLBART model. Defines the number of different tokens that can be represented by the
+<code>inputs_ids</code> passed when calling <a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartModel">PLBartModel</a>.`,name:"vocab_size"},{anchor:"transformers.PLBartConfig.d_model",description:`<strong>d_model</strong> (<code>int</code>, <em>optional</em>, defaults to 768) &#x2014;
+Dimensionality of the layers and the pooler layer.`,name:"d_model"},{anchor:"transformers.PLBartConfig.encoder_layers",description:`<strong>encoder_layers</strong> (<code>int</code>, <em>optional</em>, defaults to 6) &#x2014;
+Number of encoder layers.`,name:"encoder_layers"},{anchor:"transformers.PLBartConfig.decoder_layers",description:`<strong>decoder_layers</strong> (<code>int</code>, <em>optional</em>, defaults to 6) &#x2014;
+Number of decoder layers.`,name:"decoder_layers"},{anchor:"transformers.PLBartConfig.encoder_attention_heads",description:`<strong>encoder_attention_heads</strong> (<code>int</code>, <em>optional</em>, defaults to 12) &#x2014;
+Number of attention heads for each attention layer in the Transformer encoder.`,name:"encoder_attention_heads"},{anchor:"transformers.PLBartConfig.decoder_attention_heads",description:`<strong>decoder_attention_heads</strong> (<code>int</code>, <em>optional</em>, defaults to 12) &#x2014;
+Number of attention heads for each attention layer in the Transformer decoder.`,name:"decoder_attention_heads"},{anchor:"transformers.PLBartConfig.decoder_ffn_dim",description:`<strong>decoder_ffn_dim</strong> (<code>int</code>, <em>optional</em>, defaults to 3072) &#x2014;
+Dimensionality of the &#x201C;intermediate&#x201D; (often named feed-forward) layer in decoder.`,name:"decoder_ffn_dim"},{anchor:"transformers.PLBartConfig.encoder_ffn_dim",description:`<strong>encoder_ffn_dim</strong> (<code>int</code>, <em>optional</em>, defaults to 3072) &#x2014;
+Dimensionality of the &#x201C;intermediate&#x201D; (often named feed-forward) layer in decoder.`,name:"encoder_ffn_dim"},{anchor:"transformers.PLBartConfig.activation_function",description:`<strong>activation_function</strong> (<code>str</code> or <code>function</code>, <em>optional</em>, defaults to <code>&quot;gelu&quot;</code>) &#x2014;
+The non-linear activation function (function or string) in the encoder and pooler. If string, <code>&quot;gelu&quot;</code>,
+<code>&quot;relu&quot;</code>, <code>&quot;silu&quot;</code> and <code>&quot;gelu_new&quot;</code> are supported.`,name:"activation_function"},{anchor:"transformers.PLBartConfig.dropout",description:`<strong>dropout</strong> (<code>float</code>, <em>optional</em>, defaults to 0.1) &#x2014;
+The dropout probability for all fully connected layers in the embeddings, encoder, and pooler.`,name:"dropout"},{anchor:"transformers.PLBartConfig.attention_dropout",description:`<strong>attention_dropout</strong> (<code>float</code>, <em>optional</em>, defaults to 0.1) &#x2014;
+The dropout ratio for the attention probabilities.`,name:"attention_dropout"},{anchor:"transformers.PLBartConfig.activation_dropout",description:`<strong>activation_dropout</strong> (<code>float</code>, <em>optional</em>, defaults to 0.0) &#x2014;
+The dropout ratio for activations inside the fully connected layer.`,name:"activation_dropout"},{anchor:"transformers.PLBartConfig.classifier_dropout",description:`<strong>classifier_dropout</strong> (<code>float</code>, <em>optional</em>, defaults to 0.0) &#x2014;
+The dropout ratio for classifier.`,name:"classifier_dropout"},{anchor:"transformers.PLBartConfig.max_position_embeddings",description:`<strong>max_position_embeddings</strong> (<code>int</code>, <em>optional</em>, defaults to 1024) &#x2014;
+The maximum sequence length that this model might ever be used with. Typically set this to something large
+just in case (e.g., 512 or 1024 or 2048).`,name:"max_position_embeddings"},{anchor:"transformers.PLBartConfig.init_std",description:`<strong>init_std</strong> (<code>float</code>, <em>optional</em>, defaults to 0.02) &#x2014;
+The standard deviation of the truncated_normal_initializer for initializing all weight matrices.
+encoder_layerdrop &#x2014; (<code>float</code>, <em>optional</em>, defaults to 0.0):
+The LayerDrop probability for the encoder. See the [LayerDrop paper](see <a href="https://arxiv.org/abs/1909.11556" rel="nofollow">https://arxiv.org/abs/1909.11556</a>)
+for more details.
+decoder_layerdrop &#x2014; (<code>float</code>, <em>optional</em>, defaults to 0.0):
+The LayerDrop probability for the decoder. See the [LayerDrop paper](see <a href="https://arxiv.org/abs/1909.11556" rel="nofollow">https://arxiv.org/abs/1909.11556</a>)
+for more details.`,name:"init_std"},{anchor:"transformers.PLBartConfig.scale_embedding",description:`<strong>scale_embedding</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
+Scale embeddings by diving by sqrt(d_model).`,name:"scale_embedding"},{anchor:"transformers.PLBartConfig.use_cache",description:`<strong>use_cache</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
+Whether or not the model should return the last key/values attentions (not used by all models)`,name:"use_cache"},{anchor:"transformers.PLBartConfig.forced_eos_token_id",description:`<strong>forced_eos_token_id</strong> (<code>int</code>, <em>optional</em>, defaults to 2) &#x2014;
+The id of the token to force as the last generated token when <code>max_length</code> is reached. Usually set to
+<code>eos_token_id</code>.`,name:"forced_eos_token_id"}]}}),Ue=new X({props:{code:`from transformers import PLBartModel, PLBartConfig
+
+# Initializing a PLBART uclanlp/plbart-base style configuration
+configuration = PLBartConfig()
+# Initializing a model from the uclanlp/plbart-base style configuration
+model = PLBartModel(configuration)
+# Accessing the model configuration
+configuration = model.config`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PLBartModel, PLBartConfig
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a PLBART uclanlp/plbart-base style configuration</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>configuration = PLBartConfig()
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a model from the uclanlp/plbart-base style configuration</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = PLBartModel(configuration)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Accessing the model configuration</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>configuration = model.config`}}),Ve=new ue({}),Je=new I({props:{name:"class transformers.PLBartTokenizer",anchor:"transformers.PLBartTokenizer",parameters:[{name:"vocab_file",val:""},{name:"bos_token",val:" = '<s>'"},{name:"eos_token",val:" = '</s>'"},{name:"sep_token",val:" = '</s>'"},{name:"cls_token",val:" = '<s>'"},{name:"unk_token",val:" = '<unk>'"},{name:"pad_token",val:" = '<pad>'"},{name:"mask_token",val:" = '<mask>'"},{name:"language_codes",val:" = 'base'"},{name:"tokenizer_file",val:" = None"},{name:"src_lang",val:" = None"},{name:"tgt_lang",val:" = None"},{name:"sp_model_kwargs",val:": typing.Union[typing.Dict[str, typing.Any], NoneType] = None"},{name:"additional_special_tokens",val:" = None"},{name:"**kwargs",val:""}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/tokenization_plbart.py#L75",parametersDescription:[{anchor:"transformers.PLBartTokenizer.vocab_file",description:`<strong>vocab_file</strong> (<code>str</code>) &#x2014;
+Path to the vocabulary file.`,name:"vocab_file"},{anchor:"transformers.PLBartTokenizer.src_lang",description:`<strong>src_lang</strong> (<code>str</code>, <em>optional</em>) &#x2014;
+A string representing the source language.`,name:"src_lang"},{anchor:"transformers.PLBartTokenizer.tgt_lang",description:`<strong>tgt_lang</strong> (<code>str</code>, <em>optional</em>) &#x2014;
+A string representing the target language.`,name:"tgt_lang"},{anchor:"transformers.PLBartTokenizer.bos_token",description:`<strong>bos_token</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;&lt;s&gt;&quot;</code>) &#x2014;
+The start of sequence token.`,name:"bos_token"},{anchor:"transformers.PLBartTokenizer.eos_token",description:`<strong>eos_token</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;&lt;/s&gt;&quot;</code>) &#x2014;
+The end of sequence token.`,name:"eos_token"},{anchor:"transformers.PLBartTokenizer.sep_token",description:`<strong>sep_token</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;&lt;/s&gt;&quot;</code>) &#x2014;
+The separator token, which is used when building a sequence from multiple sequences, e.g. two sequences for
+sequence classification or for a text and a question for question answering. It is also used as the last
+token of a sequence built with special tokens.`,name:"sep_token"},{anchor:"transformers.PLBartTokenizer.cls_token",description:`<strong>cls_token</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;&lt;s&gt;&quot;</code>) &#x2014;
+The cls token, which is a special token used as the first token for all tasks.`,name:"cls_token"},{anchor:"transformers.PLBartTokenizer.unk_token",description:`<strong>unk_token</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;&lt;unk&gt;&quot;</code>) &#x2014;
+The unknown token. A token that is not in the vocabulary cannot be converted to an ID and is set to be this
+token instead.`,name:"unk_token"},{anchor:"transformers.PLBartTokenizer.pad_token",description:`<strong>pad_token</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;&lt;pad&gt;&quot;</code>) &#x2014;
+The token used for padding, for example when batching sequences of different lengths.`,name:"pad_token"},{anchor:"transformers.PLBartTokenizer.mask_token(str,",description:`<strong>mask_token(<code>str</code>,</strong> <em>optional</em>, defaults to <code>&quot;&lt;mask&gt;&quot;</code>) &#x2014;
+The token used for masking values. This is the token used when training this model with masking tasks. This
+is only used in the <code>&quot;base&quot;</code> tokenizer type. For <code>&quot;multi&quot;</code> tokenizer, masking is never done for the
+downstream tasks.`,name:"mask_token(str,"},{anchor:"transformers.PLBartTokenizer.language_codes",description:`<strong>language_codes</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;base&quot;</code>) &#x2014;
+What language codes to use. Should be one of <code>&quot;base&quot;</code> or <code>&quot;multi&quot;</code>.`,name:"language_codes"},{anchor:"transformers.PLBartTokenizer.sp_model_kwargs",description:`<strong>sp_model_kwargs</strong> (<code>dict</code>, <em>optional</em>) &#x2014;
+Will be passed to the <code>SentencePieceProcessor.__init__()</code> method. The <a href="https://github.com/google/sentencepiece/tree/master/python" rel="nofollow">Python wrapper for
+SentencePiece</a> can be used, among other things,
+to set:<ul>
+<li><code>enable_sampling</code>: Enable subword regularization.</li>
+<li><code>nbest_size</code>: Sampling parameters for unigram. Invalid for BPE-Dropout.<ul>
+<li><code>nbest_size = {0,1}</code>: No sampling is performed.</li>
+<li><code>nbest_size &gt; 1</code>: samples from the nbest_size results.</li>
+<li><code>nbest_size &lt; 0</code>: assuming that nbest_size is infinite and samples from the all hypothesis (lattice)
+using forward-filtering-and-backward-sampling algorithm.</li>
+</ul></li>
+<li><code>alpha</code>: Smoothing parameter for unigram sampling, and dropout probability of merge operations for
+BPE-dropout.</li>
+</ul>`,name:"sp_model_kwargs"}]}}),Ye=new X({props:{code:`from transformers import PLBartTokenizer
+
+tokenizer = PLBartTokenizer.from_pretrained("uclanlp/plbart-python-en_XX", src_lang="python", tgt_lang="en_XX")
+example_python_phrase = "def maximum(a,b,c):NEW_LINE_INDENTreturn max([a,b,c])"
+expected_translation_english = "Returns the maximum value of a b c."
+inputs = tokenizer(example_python_phrase, return_tensors="pt")
+with tokenizer.as_target_tokenizer():
+    labels = tokenizer(expected_translation_english, return_tensors="pt")
+inputs["labels"] = labels["input_ids"]`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PLBartTokenizer
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = PLBartTokenizer.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-python-en_XX&quot;</span>, src_lang=<span class="hljs-string">&quot;python&quot;</span>, tgt_lang=<span class="hljs-string">&quot;en_XX&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>example_python_phrase = <span class="hljs-string">&quot;def maximum(a,b,c):NEW_LINE_INDENTreturn max([a,b,c])&quot;</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>expected_translation_english = <span class="hljs-string">&quot;Returns the maximum value of a b c.&quot;</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(example_python_phrase, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">with</span> tokenizer.as_target_tokenizer():
+<span class="hljs-meta">... </span>    labels = tokenizer(expected_translation_english, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs[<span class="hljs-string">&quot;labels&quot;</span>] = labels[<span class="hljs-string">&quot;input_ids&quot;</span>]`}}),Ze=new I({props:{name:"as_target_tokenizer",anchor:"transformers.PLBartTokenizer.as_target_tokenizer",parameters:[],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/tokenization_plbart.py#L422"}}),et=new I({props:{name:"build_inputs_with_special_tokens",anchor:"transformers.PLBartTokenizer.build_inputs_with_special_tokens",parameters:[{name:"token_ids_0",val:": typing.List[int]"},{name:"token_ids_1",val:": typing.Optional[typing.List[int]] = None"}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/tokenization_plbart.py#L302",parametersDescription:[{anchor:"transformers.PLBartTokenizer.build_inputs_with_special_tokens.token_ids_0",description:`<strong>token_ids_0</strong> (<code>List[int]</code>) &#x2014;
+List of IDs to which the special tokens will be added.`,name:"token_ids_0"},{anchor:"transformers.PLBartTokenizer.build_inputs_with_special_tokens.token_ids_1",description:`<strong>token_ids_1</strong> (<code>List[int]</code>, <em>optional</em>) &#x2014;
+Optional second list of IDs for sequence pairs.`,name:"token_ids_1"}],returnDescription:`
+<p>List of <a href="../glossary#input-ids">input IDs</a> with the appropriate special tokens.</p>
+`,returnType:`
+<p><code>List[int]</code></p>
+`}}),at=new ue({}),rt=new I({props:{name:"class transformers.PLBartModel",anchor:"transformers.PLBartModel",parameters:[{name:"config",val:": PLBartConfig"}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/modeling_plbart.py#L1110",parametersDescription:[{anchor:"transformers.PLBartModel.config",description:`<strong>config</strong> (<a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartConfig">PLBartConfig</a>) &#x2014;
+Model configuration class with all the parameters of the model. Initializing with a config file does not
+load the weights associated with the model, only the configuration. Check out the
+<a href="/docs/transformers/pr_16354/en/main_classes/model#transformers.PreTrainedModel.from_pretrained">from_pretrained()</a> method to load the model weights.`,name:"config"}]}}),ct=new I({props:{name:"forward",anchor:"transformers.PLBartModel.forward",parameters:[{name:"input_ids",val:" = None"},{name:"attention_mask",val:" = None"},{name:"decoder_input_ids",val:" = None"},{name:"decoder_attention_mask",val:" = None"},{name:"head_mask",val:" = None"},{name:"decoder_head_mask",val:" = None"},{name:"cross_attn_head_mask",val:" = None"},{name:"encoder_outputs",val:" = None"},{name:"past_key_values",val:" = None"},{name:"inputs_embeds",val:" = None"},{name:"decoder_inputs_embeds",val:" = None"},{name:"use_cache",val:" = None"},{name:"output_attentions",val:" = None"},{name:"output_hidden_states",val:" = None"},{name:"return_dict",val:" = None"}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/modeling_plbart.py#L1136",parametersDescription:[{anchor:"transformers.PLBartModel.forward.input_ids",description:`<strong>input_ids</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, sequence_length)</code>) &#x2014;
+Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provide
+it.</p>
+<p>Indices can be obtained using <a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartTokenizer">PLBartTokenizer</a> or <code>PLBartMultiTokenizer</code> depending on the checkpoint.
+See <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.PLBartModel.forward.attention_mask",description:`<strong>attention_mask</strong> (<code>torch.Tensor</code> of shape <code>(batch_size, sequence_length)</code>, <em>optional</em>) &#x2014;
+Mask to avoid performing attention on padding token indices. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 for tokens that are <strong>not masked</strong>,</li>
+<li>0 for tokens that are <strong>masked</strong>.</li>
+</ul>
+<p><a href="../glossary#attention-mask">What are attention masks?</a>`,name:"attention_mask"},{anchor:"transformers.PLBartModel.forward.decoder_input_ids",description:`<strong>decoder_input_ids</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, target_sequence_length)</code>, <em>optional</em>) &#x2014;
+Indices of decoder input sequence tokens in the vocabulary.</p>
+<p>Indices can be obtained using <a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartTokenizer">PLBartTokenizer</a> or <code>PLBartMultiTokenizer</code> depending on the checkpoint.
+See <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p><a href="../glossary#decoder-input-ids">What are decoder input IDs?</a></p>
+<p>PLBart uses a specific language id token as the starting token for <code>decoder_input_ids</code> generation that
+varies according to source and target language, <em>e.g.</em> 50003 for <em>en_XX</em>, and 50001 for <em>java</em>. If
+<code>past_key_values</code> is used, optionally only the last <code>decoder_input_ids</code> have to be input (see
+<code>past_key_values</code>).</p>
+<p>For translation and summarization training, <code>decoder_input_ids</code> should be provided. If no
+<code>decoder_input_ids</code> is provided, the model will create this tensor by shifting the <code>input_ids</code> to the right
+for denoising pre-training following the paper.`,name:"decoder_input_ids"},{anchor:"transformers.PLBartModel.forward.decoder_attention_mask",description:`<strong>decoder_attention_mask</strong> ( &#x2014;
+obj:<em>torch.LongTensor</em> of shape <code>(batch_size, target_sequence_length)</code>, <em>optional</em>): Default behavior:
+generate a tensor that ignores pad tokens in <code>decoder_input_ids</code>. Causal mask will also be used by default.`,name:"decoder_attention_mask"},{anchor:"transformers.PLBartModel.forward.head_mask",description:`<strong>head_mask</strong> (<code>torch.Tensor</code> of shape <code>(encoder_layers, encoder_attention_heads)</code>, <em>optional</em>) &#x2014;
+Mask to nullify selected heads of the attention modules in the encoder. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"head_mask"},{anchor:"transformers.PLBartModel.forward.decoder_head_mask",description:`<strong>decoder_head_mask</strong> (<code>torch.Tensor</code> of shape <code>(decoder_layers, decoder_attention_heads)</code>, <em>optional</em>) &#x2014;
+Mask to nullify selected heads of the attention modules in the decoder. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"decoder_head_mask"},{anchor:"transformers.PLBartModel.forward.cross_attn_head_mask",description:`<strong>cross_attn_head_mask</strong> ( &#x2014;
+obj:<em>torch.Tensor</em> of shape <code>(decoder_layers, decoder_attention_heads)</code>, <em>optional</em>): Mask to nullify
+selected heads of the cross-attention modules in the decoder. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"cross_attn_head_mask"},{anchor:"transformers.PLBartModel.forward.encoder_outputs",description:`<strong>encoder_outputs</strong> (<code>tuple(tuple(torch.FloatTensor)</code>, <em>optional</em>) &#x2014;
+Tuple consists of (<code>last_hidden_state</code>, <em>optional</em>: <code>hidden_states</code>, <em>optional</em>: <code>attentions</code>)
+<code>last_hidden_state</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>) is a sequence of
+hidden-states at the output of the last layer of the encoder. Used in the cross-attention of the decoder.`,name:"encoder_outputs"},{anchor:"transformers.PLBartModel.forward.past_key_values",description:`<strong>past_key_values</strong> ( &#x2014;
+obj:<em>tuple(tuple(torch.FloatTensor))</em>, <em>optional</em>, returned when <code>use_cache=True</code> is passed or when
+<code>config.use_cache=True</code>): Tuple of <code>tuple(torch.FloatTensor)</code> of length <code>config.n_layers</code>, with each tuple
+having 2 tensors of shape <code>(batch_size, num_heads, sequence_length, embed_size_per_head)</code>) and 2 additional
+tensors of shape <code>(batch_size, num_heads, encoder_sequence_length, embed_size_per_head)</code>.</p>
+<p>Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attention
+blocks) that can be used (see <code>past_key_values</code> input) to speed up sequential decoding.</p>
+<p>If <code>past_key_values</code> are used, the user can optionally input only the last <code>decoder_input_ids</code> (those that
+don&#x2019;t have their past key value states given to this model) of shape <code>(batch_size, 1)</code> instead of all
+<code>decoder_input_ids</code> of shape <code>(batch_size, sequence_length)</code>.`,name:"past_key_values"},{anchor:"transformers.PLBartModel.forward.inputs_embeds",description:`<strong>inputs_embeds</strong> ( &#x2014;
+obj:<em>torch.FloatTensor</em> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>): Optionally,
+instead of passing <code>input_ids</code> you can choose to directly pass an embedded representation. This is useful
+if you want more control over how to convert <code>input_ids</code> indices into associated vectors than the model&#x2019;s
+internal embedding lookup matrix.`,name:"inputs_embeds"},{anchor:"transformers.PLBartModel.forward.decoder_inputs_embeds",description:`<strong>decoder_inputs_embeds</strong> ( &#x2014;
+obj:<em>torch.FloatTensor</em> of shape <code>(batch_size, target_sequence_length, hidden_size)</code>, <em>optional</em>):
+Optionally, instead of passing <code>decoder_input_ids</code> you can choose to directly pass an embedded
+representation. If <code>past_key_values</code> is used, optionally only the last <code>decoder_inputs_embeds</code> have to be
+input (see <code>past_key_values</code>). This is useful if you want more control over how to convert
+<code>decoder_input_ids</code> indices into associated vectors than the model&#x2019;s internal embedding lookup matrix.</p>
+<p>If <code>decoder_input_ids</code> and <code>decoder_inputs_embeds</code> are both unset, <code>decoder_inputs_embeds</code> takes the value
+of <code>inputs_embeds</code>.`,name:"decoder_inputs_embeds"},{anchor:"transformers.PLBartModel.forward.use_cache",description:`<strong>use_cache</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+If set to <code>True</code>, <code>past_key_values</code> key value states are returned and can be used to speed up decoding (see
+<code>past_key_values</code>).`,name:"use_cache"},{anchor:"transformers.PLBartModel.forward.output_attentions",description:`<strong>output_attentions</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return the attentions tensors of all attention layers. See <code>attentions</code> under returned
+tensors for more detail.`,name:"output_attentions"},{anchor:"transformers.PLBartModel.forward.output_hidden_states",description:`<strong>output_hidden_states</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return the hidden states of all layers. See <code>hidden_states</code> under returned tensors for
+more detail.`,name:"output_hidden_states"},{anchor:"transformers.PLBartModel.forward.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return a <a href="/docs/transformers/pr_16354/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],returnDescription:`
+<p>A <a
+  href="/docs/transformers/pr_16354/en/main_classes/output#transformers.modeling_outputs.Seq2SeqModelOutput"
+>transformers.modeling_outputs.Seq2SeqModelOutput</a> or a tuple of
+<code>torch.FloatTensor</code> (if <code>return_dict=False</code> is passed or when <code>config.return_dict=False</code>) comprising various
+elements depending on the configuration (<a
+  href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartConfig"
+>PLBartConfig</a>) and inputs.</p>
+<ul>
+<li>
+<p><strong>last_hidden_state</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>) \u2014 Sequence of hidden-states at the output of the last layer of the decoder of the model.</p>
+<p>If <code>past_key_values</code> is used only the last hidden-state of the sequences of shape <code>(batch_size, 1, hidden_size)</code> is output.</p>
+</li>
+<li>
+<p><strong>past_key_values</strong> (<code>tuple(tuple(torch.FloatTensor))</code>, <em>optional</em>, returned when <code>use_cache=True</code> is passed or when <code>config.use_cache=True</code>) \u2014 Tuple of <code>tuple(torch.FloatTensor)</code> of length <code>config.n_layers</code>, with each tuple having 2 tensors of shape
+<code>(batch_size, num_heads, sequence_length, embed_size_per_head)</code>) and 2 additional tensors of shape
+<code>(batch_size, num_heads, encoder_sequence_length, embed_size_per_head)</code>.</p>
+<p>Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attention
+blocks) that can be used (see <code>past_key_values</code> input) to speed up sequential decoding.</p>
+</li>
+<li>
+<p><strong>decoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each layer) of
+shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
+<p>Hidden-states of the decoder at the output of each layer plus the initial embedding outputs.</p>
+</li>
+<li>
+<p><strong>decoder_attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Attentions weights of the decoder, after the attention softmax, used to compute the weighted average in the
+self-attention heads.</p>
+</li>
+<li>
+<p><strong>cross_attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Attentions weights of the decoder\u2019s cross-attention layer, after the attention softmax, used to compute the
+weighted average in the cross-attention heads.</p>
+</li>
+<li>
+<p><strong>encoder_last_hidden_state</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>) \u2014 Sequence of hidden-states at the output of the last layer of the encoder of the model.</p>
+</li>
+<li>
+<p><strong>encoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each layer) of
+shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
+<p>Hidden-states of the encoder at the output of each layer plus the initial embedding outputs.</p>
+</li>
+<li>
+<p><strong>encoder_attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Attentions weights of the encoder, after the attention softmax, used to compute the weighted average in the
+self-attention heads.</p>
+</li>
+</ul>
+`,returnType:`
+<p><a
+  href="/docs/transformers/pr_16354/en/main_classes/output#transformers.modeling_outputs.Seq2SeqModelOutput"
+>transformers.modeling_outputs.Seq2SeqModelOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
+`}}),ye=new ki({props:{$$slots:{default:[tl]},$$scope:{ctx:me}}}),pt=new X({props:{code:`from transformers import PLBartTokenizer, PLBartModel
+import torch
+
+tokenizer = PLBartTokenizer.from_pretrained("uclanlp/plbart-base")
+model = PLBartModel.from_pretrained("uclanlp/plbart-base")
+
+inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
+outputs = model(**inputs)
+
+last_hidden_states = outputs.last_hidden_state`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PLBartTokenizer, PLBartModel
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = PLBartTokenizer.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = PLBartModel.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>last_hidden_states = outputs.last_hidden_state`}}),ht=new ue({}),ut=new I({props:{name:"class transformers.PLBartForConditionalGeneration",anchor:"transformers.PLBartForConditionalGeneration",parameters:[{name:"config",val:": PLBartConfig"}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/modeling_plbart.py#L1226",parametersDescription:[{anchor:"transformers.PLBartForConditionalGeneration.config",description:`<strong>config</strong> (<a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartConfig">PLBartConfig</a>) &#x2014;
+Model configuration class with all the parameters of the model. Initializing with a config file does not
+load the weights associated with the model, only the configuration. Check out the
+<a href="/docs/transformers/pr_16354/en/main_classes/model#transformers.PreTrainedModel.from_pretrained">from_pretrained()</a> method to load the model weights.`,name:"config"}]}}),_t=new I({props:{name:"forward",anchor:"transformers.PLBartForConditionalGeneration.forward",parameters:[{name:"input_ids",val:" = None"},{name:"attention_mask",val:" = None"},{name:"decoder_input_ids",val:" = None"},{name:"decoder_attention_mask",val:" = None"},{name:"head_mask",val:" = None"},{name:"decoder_head_mask",val:" = None"},{name:"cross_attn_head_mask",val:" = None"},{name:"encoder_outputs",val:" = None"},{name:"past_key_values",val:" = None"},{name:"inputs_embeds",val:" = None"},{name:"decoder_inputs_embeds",val:" = None"},{name:"labels",val:" = None"},{name:"use_cache",val:" = None"},{name:"output_attentions",val:" = None"},{name:"output_hidden_states",val:" = None"},{name:"return_dict",val:" = None"}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/modeling_plbart.py#L1269",parametersDescription:[{anchor:"transformers.PLBartForConditionalGeneration.forward.input_ids",description:`<strong>input_ids</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, sequence_length)</code>) &#x2014;
+Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provide
+it.</p>
+<p>Indices can be obtained using <a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartTokenizer">PLBartTokenizer</a> or <code>PLBartMultiTokenizer</code> depending on the checkpoint.
+See <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.PLBartForConditionalGeneration.forward.attention_mask",description:`<strong>attention_mask</strong> (<code>torch.Tensor</code> of shape <code>(batch_size, sequence_length)</code>, <em>optional</em>) &#x2014;
+Mask to avoid performing attention on padding token indices. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 for tokens that are <strong>not masked</strong>,</li>
+<li>0 for tokens that are <strong>masked</strong>.</li>
+</ul>
+<p><a href="../glossary#attention-mask">What are attention masks?</a>`,name:"attention_mask"},{anchor:"transformers.PLBartForConditionalGeneration.forward.decoder_input_ids",description:`<strong>decoder_input_ids</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, target_sequence_length)</code>, <em>optional</em>) &#x2014;
+Indices of decoder input sequence tokens in the vocabulary.</p>
+<p>Indices can be obtained using <a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartTokenizer">PLBartTokenizer</a> or <code>PLBartMultiTokenizer</code> depending on the checkpoint.
+See <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p><a href="../glossary#decoder-input-ids">What are decoder input IDs?</a></p>
+<p>PLBart uses a specific language id token as the starting token for <code>decoder_input_ids</code> generation that
+varies according to source and target language, <em>e.g.</em> 50003 for <em>en_XX</em>, and 50001 for <em>java</em>. If
+<code>past_key_values</code> is used, optionally only the last <code>decoder_input_ids</code> have to be input (see
+<code>past_key_values</code>).</p>
+<p>For translation and summarization training, <code>decoder_input_ids</code> should be provided. If no
+<code>decoder_input_ids</code> is provided, the model will create this tensor by shifting the <code>input_ids</code> to the right
+for denoising pre-training following the paper.`,name:"decoder_input_ids"},{anchor:"transformers.PLBartForConditionalGeneration.forward.decoder_attention_mask",description:`<strong>decoder_attention_mask</strong> ( &#x2014;
+obj:<em>torch.LongTensor</em> of shape <code>(batch_size, target_sequence_length)</code>, <em>optional</em>): Default behavior:
+generate a tensor that ignores pad tokens in <code>decoder_input_ids</code>. Causal mask will also be used by default.`,name:"decoder_attention_mask"},{anchor:"transformers.PLBartForConditionalGeneration.forward.head_mask",description:`<strong>head_mask</strong> (<code>torch.Tensor</code> of shape <code>(encoder_layers, encoder_attention_heads)</code>, <em>optional</em>) &#x2014;
+Mask to nullify selected heads of the attention modules in the encoder. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"head_mask"},{anchor:"transformers.PLBartForConditionalGeneration.forward.decoder_head_mask",description:`<strong>decoder_head_mask</strong> (<code>torch.Tensor</code> of shape <code>(decoder_layers, decoder_attention_heads)</code>, <em>optional</em>) &#x2014;
+Mask to nullify selected heads of the attention modules in the decoder. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"decoder_head_mask"},{anchor:"transformers.PLBartForConditionalGeneration.forward.cross_attn_head_mask",description:`<strong>cross_attn_head_mask</strong> ( &#x2014;
+obj:<em>torch.Tensor</em> of shape <code>(decoder_layers, decoder_attention_heads)</code>, <em>optional</em>): Mask to nullify
+selected heads of the cross-attention modules in the decoder. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"cross_attn_head_mask"},{anchor:"transformers.PLBartForConditionalGeneration.forward.encoder_outputs",description:`<strong>encoder_outputs</strong> (<code>tuple(tuple(torch.FloatTensor)</code>, <em>optional</em>) &#x2014;
+Tuple consists of (<code>last_hidden_state</code>, <em>optional</em>: <code>hidden_states</code>, <em>optional</em>: <code>attentions</code>)
+<code>last_hidden_state</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>) is a sequence of
+hidden-states at the output of the last layer of the encoder. Used in the cross-attention of the decoder.`,name:"encoder_outputs"},{anchor:"transformers.PLBartForConditionalGeneration.forward.past_key_values",description:`<strong>past_key_values</strong> ( &#x2014;
+obj:<em>tuple(tuple(torch.FloatTensor))</em>, <em>optional</em>, returned when <code>use_cache=True</code> is passed or when
+<code>config.use_cache=True</code>): Tuple of <code>tuple(torch.FloatTensor)</code> of length <code>config.n_layers</code>, with each tuple
+having 2 tensors of shape <code>(batch_size, num_heads, sequence_length, embed_size_per_head)</code>) and 2 additional
+tensors of shape <code>(batch_size, num_heads, encoder_sequence_length, embed_size_per_head)</code>.</p>
+<p>Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attention
+blocks) that can be used (see <code>past_key_values</code> input) to speed up sequential decoding.</p>
+<p>If <code>past_key_values</code> are used, the user can optionally input only the last <code>decoder_input_ids</code> (those that
+don&#x2019;t have their past key value states given to this model) of shape <code>(batch_size, 1)</code> instead of all
+<code>decoder_input_ids</code> of shape <code>(batch_size, sequence_length)</code>.`,name:"past_key_values"},{anchor:"transformers.PLBartForConditionalGeneration.forward.inputs_embeds",description:`<strong>inputs_embeds</strong> ( &#x2014;
+obj:<em>torch.FloatTensor</em> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>): Optionally,
+instead of passing <code>input_ids</code> you can choose to directly pass an embedded representation. This is useful
+if you want more control over how to convert <code>input_ids</code> indices into associated vectors than the model&#x2019;s
+internal embedding lookup matrix.`,name:"inputs_embeds"},{anchor:"transformers.PLBartForConditionalGeneration.forward.decoder_inputs_embeds",description:`<strong>decoder_inputs_embeds</strong> ( &#x2014;
+obj:<em>torch.FloatTensor</em> of shape <code>(batch_size, target_sequence_length, hidden_size)</code>, <em>optional</em>):
+Optionally, instead of passing <code>decoder_input_ids</code> you can choose to directly pass an embedded
+representation. If <code>past_key_values</code> is used, optionally only the last <code>decoder_inputs_embeds</code> have to be
+input (see <code>past_key_values</code>). This is useful if you want more control over how to convert
+<code>decoder_input_ids</code> indices into associated vectors than the model&#x2019;s internal embedding lookup matrix.</p>
+<p>If <code>decoder_input_ids</code> and <code>decoder_inputs_embeds</code> are both unset, <code>decoder_inputs_embeds</code> takes the value
+of <code>inputs_embeds</code>.`,name:"decoder_inputs_embeds"},{anchor:"transformers.PLBartForConditionalGeneration.forward.use_cache",description:`<strong>use_cache</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+If set to <code>True</code>, <code>past_key_values</code> key value states are returned and can be used to speed up decoding (see
+<code>past_key_values</code>).`,name:"use_cache"},{anchor:"transformers.PLBartForConditionalGeneration.forward.output_attentions",description:`<strong>output_attentions</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return the attentions tensors of all attention layers. See <code>attentions</code> under returned
+tensors for more detail.`,name:"output_attentions"},{anchor:"transformers.PLBartForConditionalGeneration.forward.output_hidden_states",description:`<strong>output_hidden_states</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return the hidden states of all layers. See <code>hidden_states</code> under returned tensors for
+more detail.`,name:"output_hidden_states"},{anchor:"transformers.PLBartForConditionalGeneration.forward.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return a <a href="/docs/transformers/pr_16354/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"},{anchor:"transformers.PLBartForConditionalGeneration.forward.labels",description:`<strong>labels</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, sequence_length)</code>, <em>optional</em>) &#x2014;
+Labels for computing the masked language modeling loss. Indices should either be in <code>[0, ..., config.vocab_size]</code> or -100 (see <code>input_ids</code> docstring). Tokens with indices set to <code>-100</code> are ignored
+(masked), the loss is only computed for the tokens with labels in <code>[0, ..., config.vocab_size]</code>.`,name:"labels"}],returnDescription:`
+<p>A <a
+  href="/docs/transformers/pr_16354/en/main_classes/output#transformers.modeling_outputs.Seq2SeqLMOutput"
+>transformers.modeling_outputs.Seq2SeqLMOutput</a> or a tuple of
+<code>torch.FloatTensor</code> (if <code>return_dict=False</code> is passed or when <code>config.return_dict=False</code>) comprising various
+elements depending on the configuration (<a
+  href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartConfig"
+>PLBartConfig</a>) and inputs.</p>
+<ul>
+<li>
+<p><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>(1,)</code>, <em>optional</em>, returned when <code>labels</code> is provided) \u2014 Language modeling loss.</p>
+</li>
+<li>
+<p><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, config.vocab_size)</code>) \u2014 Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax).</p>
+</li>
+<li>
+<p><strong>past_key_values</strong> (<code>tuple(tuple(torch.FloatTensor))</code>, <em>optional</em>, returned when <code>use_cache=True</code> is passed or when <code>config.use_cache=True</code>) \u2014 Tuple of <code>tuple(torch.FloatTensor)</code> of length <code>config.n_layers</code>, with each tuple having 2 tensors of shape
+<code>(batch_size, num_heads, sequence_length, embed_size_per_head)</code>) and 2 additional tensors of shape
+<code>(batch_size, num_heads, encoder_sequence_length, embed_size_per_head)</code>.</p>
+<p>Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attention
+blocks) that can be used (see <code>past_key_values</code> input) to speed up sequential decoding.</p>
+</li>
+<li>
+<p><strong>decoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each layer) of
+shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
+<p>Hidden-states of the decoder at the output of each layer plus the initial embedding outputs.</p>
+</li>
+<li>
+<p><strong>decoder_attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Attentions weights of the decoder, after the attention softmax, used to compute the weighted average in the
+self-attention heads.</p>
+</li>
+<li>
+<p><strong>cross_attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Attentions weights of the decoder\u2019s cross-attention layer, after the attention softmax, used to compute the
+weighted average in the cross-attention heads.</p>
+</li>
+<li>
+<p><strong>encoder_last_hidden_state</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>) \u2014 Sequence of hidden-states at the output of the last layer of the encoder of the model.</p>
+</li>
+<li>
+<p><strong>encoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each layer) of
+shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
+<p>Hidden-states of the encoder at the output of each layer plus the initial embedding outputs.</p>
+</li>
+<li>
+<p><strong>encoder_attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Attentions weights of the encoder, after the attention softmax, used to compute the weighted average in the
+self-attention heads.</p>
+</li>
+</ul>
+`,returnType:`
+<p><a
+  href="/docs/transformers/pr_16354/en/main_classes/output#transformers.modeling_outputs.Seq2SeqLMOutput"
+>transformers.modeling_outputs.Seq2SeqLMOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
+`}}),Pe=new ki({props:{$$slots:{default:[ol]},$$scope:{ctx:me}}}),bt=new X({props:{code:`from transformers import PLBartTokenizer, PLBartForConditionalGeneration
+
+model = PLBartForConditionalGeneration.from_pretrained("uclanlp/plbart-base")
+tokenizer = PLBartTokenizer.from_pretrained("uclanlp/plbart-base")
+
+# en_XX is the language symbol id <LID> for English
+TXT = "<s> Is 0 the <mask> Fibonacci number ? </s> en_XX"
+input_ids = tokenizer([TXT], add_special_tokens=False, return_tensors="pt").input_ids
+
+logits = model(input_ids).logits
+masked_index = (input_ids[0] == tokenizer.mask_token_id).nonzero().item()
+probs = logits[0, masked_index].softmax(dim=0)
+values, predictions = probs.topk(5)
+
+tokenizer.decode(predictions).split()`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PLBartTokenizer, PLBartForConditionalGeneration
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = PLBartForConditionalGeneration.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = PLBartTokenizer.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># en_XX is the language symbol id &lt;LID&gt; for English</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>TXT = <span class="hljs-string">&quot;&lt;s&gt; Is 0 the &lt;mask&gt; Fibonacci number ? &lt;/s&gt; en_XX&quot;</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>input_ids = tokenizer([TXT], add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>).input_ids
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>logits = model(input_ids).logits
+<span class="hljs-meta">&gt;&gt;&gt; </span>masked_index = (input_ids[<span class="hljs-number">0</span>] == tokenizer.mask_token_id).nonzero().item()
+<span class="hljs-meta">&gt;&gt;&gt; </span>probs = logits[<span class="hljs-number">0</span>, masked_index].softmax(dim=<span class="hljs-number">0</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>values, predictions = probs.topk(<span class="hljs-number">5</span>)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.decode(predictions).split()
+[<span class="hljs-string">&#x27;same&#x27;</span>, <span class="hljs-string">&#x27;first&#x27;</span>, <span class="hljs-string">&#x27;highest&#x27;</span>, <span class="hljs-string">&#x27;result&#x27;</span>, <span class="hljs-string">&#x27;Fib&#x27;</span>]`}}),kt=new ue({}),vt=new I({props:{name:"class transformers.PLBartForSequenceClassification",anchor:"transformers.PLBartForSequenceClassification",parameters:[{name:"config",val:": PLBartConfig"},{name:"**kwargs",val:""}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/modeling_plbart.py#L1395",parametersDescription:[{anchor:"transformers.PLBartForSequenceClassification.config",description:`<strong>config</strong> (<a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartConfig">PLBartConfig</a>) &#x2014;
+Model configuration class with all the parameters of the model. Initializing with a config file does not
+load the weights associated with the model, only the configuration. Check out the
+<a href="/docs/transformers/pr_16354/en/main_classes/model#transformers.PreTrainedModel.from_pretrained">from_pretrained()</a> method to load the model weights.`,name:"config"}]}}),Pt=new I({props:{name:"forward",anchor:"transformers.PLBartForSequenceClassification.forward",parameters:[{name:"input_ids",val:": LongTensor = None"},{name:"attention_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"decoder_input_ids",val:": typing.Optional[torch.LongTensor] = None"},{name:"decoder_attention_mask",val:": typing.Optional[torch.LongTensor] = None"},{name:"head_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"decoder_head_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"cross_attn_head_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"encoder_outputs",val:": typing.Optional[typing.List[torch.FloatTensor]] = None"},{name:"inputs_embeds",val:": typing.Optional[torch.FloatTensor] = None"},{name:"decoder_inputs_embeds",val:": typing.Optional[torch.FloatTensor] = None"},{name:"labels",val:": typing.Optional[torch.LongTensor] = None"},{name:"use_cache",val:": typing.Optional[bool] = None"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/modeling_plbart.py#L1408",parametersDescription:[{anchor:"transformers.PLBartForSequenceClassification.forward.input_ids",description:`<strong>input_ids</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, sequence_length)</code>) &#x2014;
+Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you provide
+it.</p>
+<p>Indices can be obtained using <a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartTokenizer">PLBartTokenizer</a> or <code>PLBartMultiTokenizer</code> depending on the checkpoint.
+See <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.PLBartForSequenceClassification.forward.attention_mask",description:`<strong>attention_mask</strong> (<code>torch.Tensor</code> of shape <code>(batch_size, sequence_length)</code>, <em>optional</em>) &#x2014;
+Mask to avoid performing attention on padding token indices. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 for tokens that are <strong>not masked</strong>,</li>
+<li>0 for tokens that are <strong>masked</strong>.</li>
+</ul>
+<p><a href="../glossary#attention-mask">What are attention masks?</a>`,name:"attention_mask"},{anchor:"transformers.PLBartForSequenceClassification.forward.decoder_input_ids",description:`<strong>decoder_input_ids</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, target_sequence_length)</code>, <em>optional</em>) &#x2014;
+Indices of decoder input sequence tokens in the vocabulary.</p>
+<p>Indices can be obtained using <a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartTokenizer">PLBartTokenizer</a> or <code>PLBartMultiTokenizer</code> depending on the checkpoint.
+See <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p><a href="../glossary#decoder-input-ids">What are decoder input IDs?</a></p>
+<p>PLBart uses a specific language id token as the starting token for <code>decoder_input_ids</code> generation that
+varies according to source and target language, <em>e.g.</em> 50003 for <em>en_XX</em>, and 50001 for <em>java</em>. If
+<code>past_key_values</code> is used, optionally only the last <code>decoder_input_ids</code> have to be input (see
+<code>past_key_values</code>).</p>
+<p>For translation and summarization training, <code>decoder_input_ids</code> should be provided. If no
+<code>decoder_input_ids</code> is provided, the model will create this tensor by shifting the <code>input_ids</code> to the right
+for denoising pre-training following the paper.`,name:"decoder_input_ids"},{anchor:"transformers.PLBartForSequenceClassification.forward.decoder_attention_mask",description:`<strong>decoder_attention_mask</strong> ( &#x2014;
+obj:<em>torch.LongTensor</em> of shape <code>(batch_size, target_sequence_length)</code>, <em>optional</em>): Default behavior:
+generate a tensor that ignores pad tokens in <code>decoder_input_ids</code>. Causal mask will also be used by default.`,name:"decoder_attention_mask"},{anchor:"transformers.PLBartForSequenceClassification.forward.head_mask",description:`<strong>head_mask</strong> (<code>torch.Tensor</code> of shape <code>(encoder_layers, encoder_attention_heads)</code>, <em>optional</em>) &#x2014;
+Mask to nullify selected heads of the attention modules in the encoder. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"head_mask"},{anchor:"transformers.PLBartForSequenceClassification.forward.decoder_head_mask",description:`<strong>decoder_head_mask</strong> (<code>torch.Tensor</code> of shape <code>(decoder_layers, decoder_attention_heads)</code>, <em>optional</em>) &#x2014;
+Mask to nullify selected heads of the attention modules in the decoder. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"decoder_head_mask"},{anchor:"transformers.PLBartForSequenceClassification.forward.cross_attn_head_mask",description:`<strong>cross_attn_head_mask</strong> ( &#x2014;
+obj:<em>torch.Tensor</em> of shape <code>(decoder_layers, decoder_attention_heads)</code>, <em>optional</em>): Mask to nullify
+selected heads of the cross-attention modules in the decoder. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"cross_attn_head_mask"},{anchor:"transformers.PLBartForSequenceClassification.forward.encoder_outputs",description:`<strong>encoder_outputs</strong> (<code>tuple(tuple(torch.FloatTensor)</code>, <em>optional</em>) &#x2014;
+Tuple consists of (<code>last_hidden_state</code>, <em>optional</em>: <code>hidden_states</code>, <em>optional</em>: <code>attentions</code>)
+<code>last_hidden_state</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>) is a sequence of
+hidden-states at the output of the last layer of the encoder. Used in the cross-attention of the decoder.`,name:"encoder_outputs"},{anchor:"transformers.PLBartForSequenceClassification.forward.past_key_values",description:`<strong>past_key_values</strong> ( &#x2014;
+obj:<em>tuple(tuple(torch.FloatTensor))</em>, <em>optional</em>, returned when <code>use_cache=True</code> is passed or when
+<code>config.use_cache=True</code>): Tuple of <code>tuple(torch.FloatTensor)</code> of length <code>config.n_layers</code>, with each tuple
+having 2 tensors of shape <code>(batch_size, num_heads, sequence_length, embed_size_per_head)</code>) and 2 additional
+tensors of shape <code>(batch_size, num_heads, encoder_sequence_length, embed_size_per_head)</code>.</p>
+<p>Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attention
+blocks) that can be used (see <code>past_key_values</code> input) to speed up sequential decoding.</p>
+<p>If <code>past_key_values</code> are used, the user can optionally input only the last <code>decoder_input_ids</code> (those that
+don&#x2019;t have their past key value states given to this model) of shape <code>(batch_size, 1)</code> instead of all
+<code>decoder_input_ids</code> of shape <code>(batch_size, sequence_length)</code>.`,name:"past_key_values"},{anchor:"transformers.PLBartForSequenceClassification.forward.inputs_embeds",description:`<strong>inputs_embeds</strong> ( &#x2014;
+obj:<em>torch.FloatTensor</em> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>): Optionally,
+instead of passing <code>input_ids</code> you can choose to directly pass an embedded representation. This is useful
+if you want more control over how to convert <code>input_ids</code> indices into associated vectors than the model&#x2019;s
+internal embedding lookup matrix.`,name:"inputs_embeds"},{anchor:"transformers.PLBartForSequenceClassification.forward.decoder_inputs_embeds",description:`<strong>decoder_inputs_embeds</strong> ( &#x2014;
+obj:<em>torch.FloatTensor</em> of shape <code>(batch_size, target_sequence_length, hidden_size)</code>, <em>optional</em>):
+Optionally, instead of passing <code>decoder_input_ids</code> you can choose to directly pass an embedded
+representation. If <code>past_key_values</code> is used, optionally only the last <code>decoder_inputs_embeds</code> have to be
+input (see <code>past_key_values</code>). This is useful if you want more control over how to convert
+<code>decoder_input_ids</code> indices into associated vectors than the model&#x2019;s internal embedding lookup matrix.</p>
+<p>If <code>decoder_input_ids</code> and <code>decoder_inputs_embeds</code> are both unset, <code>decoder_inputs_embeds</code> takes the value
+of <code>inputs_embeds</code>.`,name:"decoder_inputs_embeds"},{anchor:"transformers.PLBartForSequenceClassification.forward.use_cache",description:`<strong>use_cache</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+If set to <code>True</code>, <code>past_key_values</code> key value states are returned and can be used to speed up decoding (see
+<code>past_key_values</code>).`,name:"use_cache"},{anchor:"transformers.PLBartForSequenceClassification.forward.output_attentions",description:`<strong>output_attentions</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return the attentions tensors of all attention layers. See <code>attentions</code> under returned
+tensors for more detail.`,name:"output_attentions"},{anchor:"transformers.PLBartForSequenceClassification.forward.output_hidden_states",description:`<strong>output_hidden_states</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return the hidden states of all layers. See <code>hidden_states</code> under returned tensors for
+more detail.`,name:"output_hidden_states"},{anchor:"transformers.PLBartForSequenceClassification.forward.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return a <a href="/docs/transformers/pr_16354/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"},{anchor:"transformers.PLBartForSequenceClassification.forward.labels",description:`<strong>labels</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size,)</code>, <em>optional</em>) &#x2014;
+Labels for computing the sequence classification/regression loss. Indices should be in <code>[0, ..., config.num_labels - 1]</code>. If <code>config.num_labels &gt; 1</code> a classification loss is computed (Cross-Entropy).`,name:"labels"}],returnDescription:`
+<p>A <a
+  href="/docs/transformers/pr_16354/en/main_classes/output#transformers.modeling_outputs.Seq2SeqSequenceClassifierOutput"
+>transformers.modeling_outputs.Seq2SeqSequenceClassifierOutput</a> or a tuple of
+<code>torch.FloatTensor</code> (if <code>return_dict=False</code> is passed or when <code>config.return_dict=False</code>) comprising various
+elements depending on the configuration (<a
+  href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartConfig"
+>PLBartConfig</a>) and inputs.</p>
+<ul>
+<li>
+<p><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>(1,)</code>, <em>optional</em>, returned when <code>label</code> is provided) \u2014 Classification (or regression if config.num_labels==1) loss.</p>
+</li>
+<li>
+<p><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, config.num_labels)</code>) \u2014 Classification (or regression if config.num_labels==1) scores (before SoftMax).</p>
+</li>
+<li>
+<p><strong>past_key_values</strong> (<code>tuple(tuple(torch.FloatTensor))</code>, <em>optional</em>, returned when <code>use_cache=True</code> is passed or when <code>config.use_cache=True</code>) \u2014 Tuple of <code>tuple(torch.FloatTensor)</code> of length <code>config.n_layers</code>, with each tuple having 2 tensors of shape
+<code>(batch_size, num_heads, sequence_length, embed_size_per_head)</code>) and 2 additional tensors of shape
+<code>(batch_size, num_heads, encoder_sequence_length, embed_size_per_head)</code>.</p>
+<p>Contains pre-computed hidden-states (key and values in the self-attention blocks and in the cross-attention
+blocks) that can be used (see <code>past_key_values</code> input) to speed up sequential decoding.</p>
+</li>
+<li>
+<p><strong>decoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each layer) of
+shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
+<p>Hidden-states of the decoder at the output of each layer plus the initial embedding outputs.</p>
+</li>
+<li>
+<p><strong>decoder_attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Attentions weights of the decoder, after the attention softmax, used to compute the weighted average in the
+self-attention heads.</p>
+</li>
+<li>
+<p><strong>cross_attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Attentions weights of the decoder\u2019s cross-attention layer, after the attention softmax, used to compute the
+weighted average in the cross-attention heads.</p>
+</li>
+<li>
+<p><strong>encoder_last_hidden_state</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>) \u2014 Sequence of hidden-states at the output of the last layer of the encoder of the model.</p>
+</li>
+<li>
+<p><strong>encoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each layer) of
+shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
+<p>Hidden-states of the encoder at the output of each layer plus the initial embedding outputs.</p>
+</li>
+<li>
+<p><strong>encoder_attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Attentions weights of the encoder, after the attention softmax, used to compute the weighted average in the
+self-attention heads.</p>
+</li>
+</ul>
+`,returnType:`
+<p><a
+  href="/docs/transformers/pr_16354/en/main_classes/output#transformers.modeling_outputs.Seq2SeqSequenceClassifierOutput"
+>transformers.modeling_outputs.Seq2SeqSequenceClassifierOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
+`}}),ze=new ki({props:{$$slots:{default:[nl]},$$scope:{ctx:me}}}),Lt=new X({props:{code:`import torch
+from transformers import PLBartTokenizer, PLBartForSequenceClassification
+
+tokenizer = PLBartTokenizer.from_pretrained("uclanlp/plbart-base")
+model = PLBartForSequenceClassification.from_pretrained("uclanlp/plbart-base")
+
+inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
+
+with torch.no_grad():
+    logits = model(**inputs).logits
+
+predicted_class_id = logits.argmax().item()
+model.config.id2label[predicted_class_id]`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PLBartTokenizer, PLBartForSequenceClassification
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = PLBartTokenizer.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = PLBartForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">with</span> torch.no_grad():
+<span class="hljs-meta">... </span>    logits = model(**inputs).logits
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>predicted_class_id = logits.argmax().item()
+<span class="hljs-meta">&gt;&gt;&gt; </span>model.config.id2label[predicted_class_id]
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]`}}),zt=new X({props:{code:`# to train a model on \`num_labels\` classes, you can pass \`num_labels=num_labels\` to \`.from_pretrained(...)\`
+num_labels = len(model.config.id2label)
+model = PLBartForSequenceClassification.from_pretrained("uclanlp/plbart-base", num_labels=num_labels)
+
+# in case of single-label classification, labels should be of shape (batch_size,)
+labels = torch.tensor(1)
+loss = model(**inputs, labels=labels).loss
+round(loss.item(), 2)
+`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># to train a model on \`num_labels\` classes, you can pass \`num_labels=num_labels\` to \`.from_pretrained(...)\`</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>num_labels = <span class="hljs-built_in">len</span>(model.config.id2label)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = PLBartForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>, num_labels=num_labels)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># in case of single-label classification, labels should be of shape (batch_size,)</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>labels = torch.tensor(<span class="hljs-number">1</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(**inputs, labels=labels).loss
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">round</span>(loss.item(), <span class="hljs-number">2</span>)
+`}}),qt=new X({props:{code:`import torch
+from transformers import PLBartTokenizer, PLBartForSequenceClassification
+
+tokenizer = PLBartTokenizer.from_pretrained("uclanlp/plbart-base")
+model = PLBartForSequenceClassification.from_pretrained("uclanlp/plbart-base", problem_type="multi_label_classification")
+
+inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
+
+with torch.no_grad():
+    logits = model(**inputs).logits
+
+predicted_class_id = logits.argmax().item()
+model.config.id2label[predicted_class_id]`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PLBartTokenizer, PLBartForSequenceClassification
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = PLBartTokenizer.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = PLBartForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>, problem_type=<span class="hljs-string">&quot;multi_label_classification&quot;</span>)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">with</span> torch.no_grad():
+<span class="hljs-meta">... </span>    logits = model(**inputs).logits
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>predicted_class_id = logits.argmax().item()
+<span class="hljs-meta">&gt;&gt;&gt; </span>model.config.id2label[predicted_class_id]
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]`}}),Bt=new X({props:{code:`# to train a model on \`num_labels\` classes, you can pass \`num_labels=num_labels\` to \`.from_pretrained(...)\`
+num_labels = len(model.config.id2label)
+model = PLBartForSequenceClassification.from_pretrained(
+    "uclanlp/plbart-base", problem_type="multi_label_classification", num_labels=num_labels
+)
+
+# in case of multi-label classification, labels should be of shape (batch_size, num_labels)
+labels = torch.nn.functional.one_hot(torch.tensor([predicted_class_id]), num_classes=num_labels).to(
+    torch.float
+)
+loss = model(**inputs, labels=labels).loss
+loss.backward()`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># to train a model on \`num_labels\` classes, you can pass \`num_labels=num_labels\` to \`.from_pretrained(...)\`</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>num_labels = <span class="hljs-built_in">len</span>(model.config.id2label)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = PLBartForSequenceClassification.from_pretrained(
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>, problem_type=<span class="hljs-string">&quot;multi_label_classification&quot;</span>, num_labels=num_labels
+<span class="hljs-meta">... </span>)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># in case of multi-label classification, labels should be of shape (batch_size, num_labels)</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>labels = torch.nn.functional.one_hot(torch.tensor([predicted_class_id]), num_classes=num_labels).to(
+<span class="hljs-meta">... </span>    torch.<span class="hljs-built_in">float</span>
+<span class="hljs-meta">... </span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(**inputs, labels=labels).loss
+<span class="hljs-meta">&gt;&gt;&gt; </span>loss.backward()`}}),$t=new ue({}),xt=new I({props:{name:"class transformers.PLBartForCausalLM",anchor:"transformers.PLBartForCausalLM",parameters:[{name:"config",val:""}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/modeling_plbart.py#L1531"}}),Ct=new I({props:{name:"forward",anchor:"transformers.PLBartForCausalLM.forward",parameters:[{name:"input_ids",val:": LongTensor = None"},{name:"attention_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"encoder_hidden_states",val:": typing.Optional[torch.FloatTensor] = None"},{name:"encoder_attention_mask",val:": typing.Optional[torch.FloatTensor] = None"},{name:"head_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"cross_attn_head_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"past_key_values",val:": typing.Optional[typing.List[torch.FloatTensor]] = None"},{name:"inputs_embeds",val:": typing.Optional[torch.FloatTensor] = None"},{name:"labels",val:": typing.Optional[torch.LongTensor] = None"},{name:"use_cache",val:": typing.Optional[bool] = None"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"}],source:"https://github.com/huggingface/transformers/blob/pr_16354/src/transformers/models/plbart/modeling_plbart.py#L1562",parametersDescription:[{anchor:"transformers.PLBartForCausalLM.forward.input_ids",description:`<strong>input_ids</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, sequence_length)</code>) &#x2014;
+Indices of input sequence tokens in the vocabulary. Padding will be ignored by default should you
+provide it.</p>
+<p>Indices can be obtained using <a href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartTokenizer">PLBartTokenizer</a>. See <a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.PLBartForCausalLM.forward.attention_mask",description:`<strong>attention_mask</strong> (<code>torch.Tensor</code> of shape <code>(batch_size, sequence_length)</code>, <em>optional</em>) &#x2014;
+Mask to avoid performing attention on padding token indices. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 for tokens that are <strong>not masked</strong>,</li>
+<li>0 for tokens that are <strong>masked</strong>.</li>
+</ul>
+<p><a href="../glossary#attention-mask">What are attention masks?</a>`,name:"attention_mask"},{anchor:"transformers.PLBartForCausalLM.forward.encoder_hidden_states",description:`<strong>encoder_hidden_states</strong>  (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>) &#x2014;
+Sequence of hidden-states at the output of the last layer of the encoder. Used in the cross-attention
+if the model is configured as a decoder.`,name:"encoder_hidden_states"},{anchor:"transformers.PLBartForCausalLM.forward.encoder_attention_mask",description:`<strong>encoder_attention_mask</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length)</code>, <em>optional</em>) &#x2014;
+Mask to avoid performing attention on the padding token indices of the encoder input. This mask is used
+in the cross-attention if the model is configured as a decoder. Mask values selected in <code>[0, 1]</code>:`,name:"encoder_attention_mask"},{anchor:"transformers.PLBartForCausalLM.forward.head_mask",description:`<strong>head_mask</strong> (<code>torch.Tensor</code> of shape <code>(decoder_layers, decoder_attention_heads)</code>, <em>optional</em>) &#x2014;
+Mask to nullify selected heads of the attention modules. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"head_mask"},{anchor:"transformers.PLBartForCausalLM.forward.cross_attn_head_mask",description:`<strong>cross_attn_head_mask</strong> (<code>torch.Tensor</code> of shape <code>(decoder_layers, decoder_attention_heads)</code>, <em>optional</em>) &#x2014;
+Mask to nullify selected heads of the cross-attention modules. Mask values selected in <code>[0, 1]</code>:</p>
+<ul>
+<li>1 indicates the head is <strong>not masked</strong>,</li>
+<li>0 indicates the head is <strong>masked</strong>.</li>
+</ul>`,name:"cross_attn_head_mask"},{anchor:"transformers.PLBartForCausalLM.forward.past_key_values",description:`<strong>past_key_values</strong> (<code>tuple(tuple(torch.FloatTensor))</code>, <em>optional</em>, returned when <code>use_cache=True</code> is passed or when <code>config.use_cache=True</code>) &#x2014;
+Tuple of <code>tuple(torch.FloatTensor)</code> of length <code>config.n_layers</code>, with each tuple having 2 tensors of
+shape <code>(batch_size, num_heads, sequence_length, embed_size_per_head)</code>) and 2 additional tensors of
+shape <code>(batch_size, num_heads, encoder_sequence_length, embed_size_per_head)</code>. The two additional
+tensors are only required when the model is used as a decoder in a Sequence to Sequence model.</p>
+<p>Contains pre-computed hidden-states (key and values in the self-attention blocks and in the
+cross-attention blocks) that can be used (see <code>past_key_values</code> input) to speed up sequential decoding.</p>
+<p>If <code>past_key_values</code> are used, the user can optionally input only the last <code>decoder_input_ids</code> (those
+that don&#x2019;t have their past key value states given to this model) of shape <code>(batch_size, 1)</code> instead of
+all <code>decoder_input_ids</code> of shape <code>(batch_size, sequence_length)</code>.`,name:"past_key_values"},{anchor:"transformers.PLBartForCausalLM.forward.labels",description:`<strong>labels</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, sequence_length)</code>, <em>optional</em>) &#x2014;
+Labels for computing the masked language modeling loss. Indices should either be in <code>[0, ..., config.vocab_size]</code> or -100 (see <code>input_ids</code> docstring). Tokens with indices set to <code>-100</code> are ignored
+(masked), the loss is only computed for the tokens with labels in <code>[0, ..., config.vocab_size]</code>.`,name:"labels"},{anchor:"transformers.PLBartForCausalLM.forward.use_cache",description:`<strong>use_cache</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+If set to <code>True</code>, <code>past_key_values</code> key value states are returned and can be used to speed up decoding
+(see <code>past_key_values</code>).</p>
+<ul>
+<li>1 for tokens that are <strong>not masked</strong>,</li>
+<li>0 for tokens that are <strong>masked</strong>.</li>
+</ul>`,name:"use_cache"},{anchor:"transformers.PLBartForCausalLM.forward.output_attentions",description:`<strong>output_attentions</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return the attentions tensors of all attention layers. See <code>attentions</code> under
+returned tensors for more detail.`,name:"output_attentions"},{anchor:"transformers.PLBartForCausalLM.forward.output_hidden_states",description:`<strong>output_hidden_states</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return the hidden states of all layers. See <code>hidden_states</code> under returned tensors
+for more detail.`,name:"output_hidden_states"},{anchor:"transformers.PLBartForCausalLM.forward.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+Whether or not to return a <a href="/docs/transformers/pr_16354/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],returnDescription:`
+<p>A <a
+  href="/docs/transformers/pr_16354/en/main_classes/output#transformers.modeling_outputs.CausalLMOutputWithCrossAttentions"
+>transformers.modeling_outputs.CausalLMOutputWithCrossAttentions</a> or a tuple of
+<code>torch.FloatTensor</code> (if <code>return_dict=False</code> is passed or when <code>config.return_dict=False</code>) comprising various
+elements depending on the configuration (<a
+  href="/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartConfig"
+>PLBartConfig</a>) and inputs.</p>
+<ul>
+<li>
+<p><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>(1,)</code>, <em>optional</em>, returned when <code>labels</code> is provided) \u2014 Language modeling loss (for next-token prediction).</p>
+</li>
+<li>
+<p><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, config.vocab_size)</code>) \u2014 Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax).</p>
+</li>
+<li>
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each layer) of
+shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
+<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+</li>
+<li>
+<p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Attentions weights after the attention softmax, used to compute the weighted average in the self-attention
+heads.</p>
+</li>
+<li>
+<p><strong>cross_attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
+<p>Cross attentions weights after the attention softmax, used to compute the weighted average in the
+cross-attention heads.</p>
+</li>
+<li>
+<p><strong>past_key_values</strong> (<code>tuple(tuple(torch.FloatTensor))</code>, <em>optional</em>, returned when <code>use_cache=True</code> is passed or when <code>config.use_cache=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> tuples of length <code>config.n_layers</code>, with each tuple containing the cached key,
+value states of the self-attention and the cross-attention layers if model is used in encoder-decoder
+setting. Only relevant if <code>config.is_decoder = True</code>.</p>
+<p>Contains pre-computed hidden-states (key and values in the attention blocks) that can be used (see
+<code>past_key_values</code> input) to speed up sequential decoding.</p>
+</li>
+</ul>
+`,returnType:`
+<p><a
+  href="/docs/transformers/pr_16354/en/main_classes/output#transformers.modeling_outputs.CausalLMOutputWithCrossAttentions"
+>transformers.modeling_outputs.CausalLMOutputWithCrossAttentions</a> or <code>tuple(torch.FloatTensor)</code></p>
+`}}),jt=new X({props:{code:`from transformers import PLBartTokenizer, PLBartForCausalLM
+
+tokenizer = PLBartTokenizer.from_pretrained("uclanlp/plbart-base")
+model = PLBartForCausalLM.from_pretrained("uclanlp/plbart-base", add_cross_attention=False)
+assert model.config.is_decoder, f"{model.__class__} has to be configured as a decoder."
+inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
+outputs = model(**inputs)
+
+logits = outputs.logits
+expected_shape = [1, inputs.input_ids.shape[-1], model.config.vocab_size]
+list(logits.shape) == expected_shape`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PLBartTokenizer, PLBartForCausalLM
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = PLBartTokenizer.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = PLBartForCausalLM.from_pretrained(<span class="hljs-string">&quot;uclanlp/plbart-base&quot;</span>, add_cross_attention=<span class="hljs-literal">False</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">assert</span> model.config.is_decoder, <span class="hljs-string">f&quot;<span class="hljs-subst">{model.__class__}</span> has to be configured as a decoder.&quot;</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs)
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits
+<span class="hljs-meta">&gt;&gt;&gt; </span>expected_shape = [<span class="hljs-number">1</span>, inputs.input_ids.shape[-<span class="hljs-number">1</span>], model.config.vocab_size]
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">list</span>(logits.shape) == expected_shape
+<span class="hljs-literal">True</span>`}}),{c(){u=n("meta"),B=l(),v=n("h1"),L=n("a"),q=n("span"),m(T.$$.fragment),y=l(),j=n("span"),ts=r("PLBart"),sn=l(),O=n("p"),io=n("strong"),os=r("DISCLAIMER:"),ns=r(" If you see something strange, file a "),je=n("a"),ss=r("Github Issue"),as=r(` and assign
+`),Fe=n("a"),rs=r("@gchhablani"),is=r("."),an=l(),Y=n("h2"),fe=n("a"),lo=n("span"),m(Ee.$$.fragment),ds=l(),co=n("span"),ls=r("Overview of PLBart"),rn=l(),G=n("p"),cs=r("The PLBART model was proposed in "),Me=n("a"),ps=r("Unified Pre-training for Program Understanding and Generation"),hs=r(` by Wasi Uddin Ahmad, Saikat Chakraborty, Baishakhi Ray, Kai-Wei Chang.
+This is a BART-like model which can be used to perform code-summarization, code-generation, and code-translation tasks. The pre-trained model `),po=n("code"),us=r("plbart-base"),ms=r(` has been trained using multilingual denoising task
+on Java, Python and English.`),dn=l(),Mt=n("p"),fs=r("According to the abstract"),ln=l(),St=n("p"),ho=n("em"),gs=r(`Code summarization and generation empower conversion between programming language (PL) and natural language (NL),
+while code translation avails the migration of legacy code from one PL to another. This paper introduces PLBART,
+a sequence-to-sequence model capable of performing a broad spectrum of program and language understanding and generation tasks.
+PLBART is pre-trained on an extensive collection of Java and Python functions and associated NL text via denoising autoencoding.
+Experiments on code summarization in the English language, code generation, and code translation in seven programming languages
+show that PLBART outperforms or rivals state-of-the-art models. Moreover, experiments on discriminative tasks, e.g., program
+repair, clone detection, and vulnerable code detection, demonstrate PLBART\u2019s effectiveness in program understanding.
+Furthermore, analysis reveals that PLBART learns program syntax, style (e.g., identifier naming convention), logical flow
+(e.g., if block inside an else block is equivalent to else if block) that are crucial to program semantics and thus excels
+even with limited annotations.`),cn=l(),R=n("p"),_s=r("This model was contributed by "),Se=n("a"),bs=r("gchhablani"),ks=r(". The Authors\u2019 code can be found "),Ae=n("a"),vs=r("here"),Ts=r("."),pn=l(),Z=n("h3"),ge=n("a"),uo=n("span"),m(Ne.$$.fragment),ys=l(),mo=n("span"),ws=r("Training of PLBart"),hn=l(),F=n("p"),Ps=r(`PLBart is a multilingual encoder-decoder (sequence-to-sequence) model primarily intended for code-to-text, text-to-code, code-to-code tasks. As the
+model is multilingual it expects the sequences in a different format. A special language id token is added in both the
+source and target text. The source text format is `),fo=n("code"),Ls=r("X [eos, src_lang_code]"),zs=r(" where "),go=n("code"),qs=r("X"),Bs=r(` is the source text. The
+target text format is `),_o=n("code"),$s=r("[tgt_lang_code] X [eos]"),xs=r(". "),bo=n("code"),Cs=r("bos"),js=r(" is never used."),un=l(),_e=n("p"),Fs=r("However, for fine-tuning, in some cases no language token is provided in cases where a single language is used. Please refer to "),Ie=n("a"),Es=r("the paper"),Ms=r(" to learn more about this."),mn=l(),W=n("p"),Ss=r("In cases where the language code is needed, The regular "),Oe=n("a"),ko=n("strong"),As=r("call"),Ns=r("()"),Is=r(` will encode source text format, and it should be wrapped
+inside the context manager `),At=n("a"),Os=r("as_target_tokenizer()"),Ds=r(" to encode target text format."),fn=l(),Nt=n("ul"),vo=n("li"),Xs=r("Supervised training"),gn=l(),m(De.$$.fragment),_n=l(),It=n("ul"),Xe=n("li"),To=n("p"),Gs=r("Generation"),Rs=l(),ee=n("p"),Ws=r("While generating the target text set the "),yo=n("code"),Hs=r("decoder_start_token_id"),Us=r(` to the target language id. The following
+example shows how to translate Python to English using the `),wo=n("code"),Vs=r("uclanlp/plbart-python-en_XX"),Js=r(" model."),bn=l(),m(Ge.$$.fragment),kn=l(),te=n("h2"),be=n("a"),Po=n("span"),m(Re.$$.fragment),Ks=l(),Lo=n("span"),Qs=r("PLBartConfig"),vn=l(),x=n("div"),m(We.$$.fragment),Ys=l(),oe=n("p"),Zs=r("This is the configuration class to store the configuration of a "),Ot=n("a"),ea=r("PLBartModel"),ta=r(`. It is used to instantiate an
+PLBART model according to the specified arguments, defining the model architecture. Instantiating a configuration
+with the defaults will yield a similar configuration to that of the PLBART
+`),He=n("a"),oa=r("uclanlp/plbart-base"),na=r(" architecture."),sa=l(),ne=n("p"),aa=r("Configuration objects inherit from "),Dt=n("a"),ra=r("PretrainedConfig"),ia=r(` and can be used to control the model outputs. Read the
+documentation from `),Xt=n("a"),da=r("PretrainedConfig"),la=r(" for more information."),ca=l(),zo=n("p"),pa=r("Example:"),ha=l(),m(Ue.$$.fragment),Tn=l(),se=n("h2"),ke=n("a"),qo=n("span"),m(Ve.$$.fragment),ua=l(),Bo=n("span"),ma=r("PLBartTokenizer"),yn=l(),P=n("div"),m(Je.$$.fragment),fa=l(),$o=n("p"),ga=r("Construct an PLBART tokenizer."),_a=l(),D=n("p"),ba=r("Adapted from "),Gt=n("a"),ka=r("RobertaTokenizer"),va=r(" and "),Rt=n("a"),Ta=r("XLNetTokenizer"),ya=r(`. Based on
+`),Ke=n("a"),wa=r("SentencePiece"),Pa=r("."),La=l(),Qe=n("p"),za=r("The tokenization method is "),xo=n("code"),qa=r("<tokens> <eos> <language code>"),Ba=r(" for source language documents, and \u201C<language code>\n<tokens> <eos>``` for target language documents."),$a=l(),Co=n("p"),xa=r("Examples:"),Ca=l(),m(Ye.$$.fragment),ja=l(),ve=n("div"),m(Ze.$$.fragment),Fa=l(),jo=n("p"),Ea=r(`Temporarily sets the tokenizer for encoding the targets. Useful for tokenizer associated to
+sequence-to-sequence models that need a slightly different processing for the labels.`),Ma=l(),N=n("div"),m(et.$$.fragment),Sa=l(),tt=n("p"),Aa=r(`Build model inputs from a sequence or a pair of sequence for sequence classification tasks by concatenating and
+adding special tokens. An PLBART sequence has the following format, where `),Fo=n("code"),Na=r("X"),Ia=r(" represents the sequence:"),Oa=l(),ot=n("ul"),nt=n("li"),Eo=n("code"),Da=r("input_ids"),Xa=r(" (for encoder) "),Mo=n("code"),Ga=r("X [eos, src_lang_code]"),Ra=l(),st=n("li"),So=n("code"),Wa=r("decoder_input_ids"),Ha=r(": (for decoder) "),Ao=n("code"),Ua=r("X [eos, tgt_lang_code]"),Va=l(),No=n("p"),Ja=r(`BOS is never used. Pairs of sequences are not the expected use case, but they will be handled without a
+separator.`),wn=l(),ae=n("h2"),Te=n("a"),Io=n("span"),m(at.$$.fragment),Ka=l(),Oo=n("span"),Qa=r("PLBartModel"),Pn=l(),S=n("div"),m(rt.$$.fragment),Ya=l(),it=n("p"),Za=r(`The bare PLBART Model outputting raw hidden-states without any specific head on top.
+This model inherits from `),Wt=n("a"),er=r("PreTrainedModel"),tr=r(`. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving, resizing the input embeddings, pruning heads
+etc.)`),or=l(),dt=n("p"),nr=r("This model is also a PyTorch "),lt=n("a"),sr=r("torch.nn.Module"),ar=r(` subclass.
+Use it as a regular PyTorch Module and refer to the PyTorch documentation for all matter related to general usage
+and behavior.`),rr=l(),E=n("div"),m(ct.$$.fragment),ir=l(),re=n("p"),dr=r("The "),Ht=n("a"),lr=r("PLBartModel"),cr=r(" forward method, overrides the "),Do=n("code"),pr=r("__call__"),hr=r(" special method."),ur=l(),m(ye.$$.fragment),mr=l(),Xo=n("p"),fr=r("Example:"),gr=l(),m(pt.$$.fragment),Ln=l(),ie=n("h2"),we=n("a"),Go=n("span"),m(ht.$$.fragment),_r=l(),Ro=n("span"),br=r("PLBartForConditionalGeneration"),zn=l(),A=n("div"),m(ut.$$.fragment),kr=l(),mt=n("p"),vr=r(`The PLBART Model with a language modeling head. Can be used for code-to-text, text-to-code and code-to-code.
+This model inherits from `),Ut=n("a"),Tr=r("PreTrainedModel"),yr=r(`. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving, resizing the input embeddings, pruning heads
+etc.)`),wr=l(),ft=n("p"),Pr=r("This model is also a PyTorch "),gt=n("a"),Lr=r("torch.nn.Module"),zr=r(` subclass.
+Use it as a regular PyTorch Module and refer to the PyTorch documentation for all matter related to general usage
+and behavior.`),qr=l(),M=n("div"),m(_t.$$.fragment),Br=l(),de=n("p"),$r=r("The "),Vt=n("a"),xr=r("PLBartForConditionalGeneration"),Cr=r(" forward method, overrides the "),Wo=n("code"),jr=r("__call__"),Fr=r(" special method."),Er=l(),m(Pe.$$.fragment),Mr=l(),Ho=n("p"),Sr=r("Mask-filling example:"),Ar=l(),m(bt.$$.fragment),qn=l(),le=n("h2"),Le=n("a"),Uo=n("span"),m(kt.$$.fragment),Nr=l(),Vo=n("span"),Ir=r("PLBartForSequenceClassification"),Bn=l(),C=n("div"),m(vt.$$.fragment),Or=l(),Jo=n("p"),Dr=r(`PLBart model with a sequence classification/head on top (a linear layer on top of the pooled output) e.g. for code
+classification.`),Xr=l(),Tt=n("p"),Gr=r("This model inherits from "),Jt=n("a"),Rr=r("PreTrainedModel"),Wr=r(`. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving, resizing the input embeddings, pruning heads
+etc.)`),Hr=l(),yt=n("p"),Ur=r("This model is also a PyTorch "),wt=n("a"),Vr=r("torch.nn.Module"),Jr=r(` subclass.
+Use it as a regular PyTorch Module and refer to the PyTorch documentation for all matter related to general usage
+and behavior.`),Kr=l(),w=n("div"),m(Pt.$$.fragment),Qr=l(),ce=n("p"),Yr=r("The "),Kt=n("a"),Zr=r("PLBartForSequenceClassification"),ei=r(" forward method, overrides the "),Ko=n("code"),ti=r("__call__"),oi=r(" special method."),ni=l(),m(ze.$$.fragment),si=l(),Qo=n("p"),ai=r("Example of single-label classification:"),ri=l(),m(Lt.$$.fragment),ii=l(),m(zt.$$.fragment),di=l(),Yo=n("p"),li=r("Example of multi-label classification:"),ci=l(),m(qt.$$.fragment),pi=l(),m(Bt.$$.fragment),$n=l(),pe=n("h2"),qe=n("a"),Zo=n("span"),m($t.$$.fragment),hi=l(),en=n("span"),ui=r("PLBartForCausalLM"),xn=l(),he=n("div"),m(xt.$$.fragment),mi=l(),H=n("div"),m(Ct.$$.fragment),fi=l(),tn=n("p"),gi=r("Example:"),_i=l(),m(jt.$$.fragment),this.h()},l(t){const p=Zd('[data-svelte="svelte-1phssyn"]',document.head);u=s(p,"META",{name:!0,content:!0}),p.forEach(o),B=c(t),v=s(t,"H1",{class:!0});var Ft=a(v);L=s(Ft,"A",{id:!0,class:!0,href:!0});var on=a(L);q=s(on,"SPAN",{});var nn=a(q);f(T.$$.fragment,nn),nn.forEach(o),on.forEach(o),y=c(Ft),j=s(Ft,"SPAN",{});var vi=a(j);ts=i(vi,"PLBart"),vi.forEach(o),Ft.forEach(o),sn=c(t),O=s(t,"P",{});var Et=a(O);io=s(Et,"STRONG",{});var Ti=a(io);os=i(Ti,"DISCLAIMER:"),Ti.forEach(o),ns=i(Et," If you see something strange, file a "),je=s(Et,"A",{href:!0,rel:!0});var yi=a(je);ss=i(yi,"Github Issue"),yi.forEach(o),as=i(Et,` and assign
+`),Fe=s(Et,"A",{href:!0,rel:!0});var wi=a(Fe);rs=i(wi,"@gchhablani"),wi.forEach(o),is=i(Et,"."),Et.forEach(o),an=c(t),Y=s(t,"H2",{class:!0});var jn=a(Y);fe=s(jn,"A",{id:!0,class:!0,href:!0});var Pi=a(fe);lo=s(Pi,"SPAN",{});var Li=a(lo);f(Ee.$$.fragment,Li),Li.forEach(o),Pi.forEach(o),ds=c(jn),co=s(jn,"SPAN",{});var zi=a(co);ls=i(zi,"Overview of PLBart"),zi.forEach(o),jn.forEach(o),rn=c(t),G=s(t,"P",{});var Qt=a(G);cs=i(Qt,"The PLBART model was proposed in "),Me=s(Qt,"A",{href:!0,rel:!0});var qi=a(Me);ps=i(qi,"Unified Pre-training for Program Understanding and Generation"),qi.forEach(o),hs=i(Qt,` by Wasi Uddin Ahmad, Saikat Chakraborty, Baishakhi Ray, Kai-Wei Chang.
+This is a BART-like model which can be used to perform code-summarization, code-generation, and code-translation tasks. The pre-trained model `),po=s(Qt,"CODE",{});var Bi=a(po);us=i(Bi,"plbart-base"),Bi.forEach(o),ms=i(Qt,` has been trained using multilingual denoising task
+on Java, Python and English.`),Qt.forEach(o),dn=c(t),Mt=s(t,"P",{});var $i=a(Mt);fs=i($i,"According to the abstract"),$i.forEach(o),ln=c(t),St=s(t,"P",{});var xi=a(St);ho=s(xi,"EM",{});var Ci=a(ho);gs=i(Ci,`Code summarization and generation empower conversion between programming language (PL) and natural language (NL),
+while code translation avails the migration of legacy code from one PL to another. This paper introduces PLBART,
+a sequence-to-sequence model capable of performing a broad spectrum of program and language understanding and generation tasks.
+PLBART is pre-trained on an extensive collection of Java and Python functions and associated NL text via denoising autoencoding.
+Experiments on code summarization in the English language, code generation, and code translation in seven programming languages
+show that PLBART outperforms or rivals state-of-the-art models. Moreover, experiments on discriminative tasks, e.g., program
+repair, clone detection, and vulnerable code detection, demonstrate PLBART\u2019s effectiveness in program understanding.
+Furthermore, analysis reveals that PLBART learns program syntax, style (e.g., identifier naming convention), logical flow
+(e.g., if block inside an else block is equivalent to else if block) that are crucial to program semantics and thus excels
+even with limited annotations.`),Ci.forEach(o),xi.forEach(o),cn=c(t),R=s(t,"P",{});var Yt=a(R);_s=i(Yt,"This model was contributed by "),Se=s(Yt,"A",{href:!0,rel:!0});var ji=a(Se);bs=i(ji,"gchhablani"),ji.forEach(o),ks=i(Yt,". The Authors\u2019 code can be found "),Ae=s(Yt,"A",{href:!0,rel:!0});var Fi=a(Ae);vs=i(Fi,"here"),Fi.forEach(o),Ts=i(Yt,"."),Yt.forEach(o),pn=c(t),Z=s(t,"H3",{class:!0});var Fn=a(Z);ge=s(Fn,"A",{id:!0,class:!0,href:!0});var Ei=a(ge);uo=s(Ei,"SPAN",{});var Mi=a(uo);f(Ne.$$.fragment,Mi),Mi.forEach(o),Ei.forEach(o),ys=c(Fn),mo=s(Fn,"SPAN",{});var Si=a(mo);ws=i(Si,"Training of PLBart"),Si.forEach(o),Fn.forEach(o),hn=c(t),F=s(t,"P",{});var U=a(F);Ps=i(U,`PLBart is a multilingual encoder-decoder (sequence-to-sequence) model primarily intended for code-to-text, text-to-code, code-to-code tasks. As the
+model is multilingual it expects the sequences in a different format. A special language id token is added in both the
+source and target text. The source text format is `),fo=s(U,"CODE",{});var Ai=a(fo);Ls=i(Ai,"X [eos, src_lang_code]"),Ai.forEach(o),zs=i(U," where "),go=s(U,"CODE",{});var Ni=a(go);qs=i(Ni,"X"),Ni.forEach(o),Bs=i(U,` is the source text. The
+target text format is `),_o=s(U,"CODE",{});var Ii=a(_o);$s=i(Ii,"[tgt_lang_code] X [eos]"),Ii.forEach(o),xs=i(U,". "),bo=s(U,"CODE",{});var Oi=a(bo);Cs=i(Oi,"bos"),Oi.forEach(o),js=i(U," is never used."),U.forEach(o),un=c(t),_e=s(t,"P",{});var En=a(_e);Fs=i(En,"However, for fine-tuning, in some cases no language token is provided in cases where a single language is used. Please refer to "),Ie=s(En,"A",{href:!0,rel:!0});var Di=a(Ie);Es=i(Di,"the paper"),Di.forEach(o),Ms=i(En," to learn more about this."),En.forEach(o),mn=c(t),W=s(t,"P",{});var Zt=a(W);Ss=i(Zt,"In cases where the language code is needed, The regular "),Oe=s(Zt,"A",{href:!0});var bi=a(Oe);ko=s(bi,"STRONG",{});var Xi=a(ko);As=i(Xi,"call"),Xi.forEach(o),Ns=i(bi,"()"),bi.forEach(o),Is=i(Zt,` will encode source text format, and it should be wrapped
+inside the context manager `),At=s(Zt,"A",{href:!0});var Gi=a(At);Os=i(Gi,"as_target_tokenizer()"),Gi.forEach(o),Ds=i(Zt," to encode target text format."),Zt.forEach(o),fn=c(t),Nt=s(t,"UL",{});var Ri=a(Nt);vo=s(Ri,"LI",{});var Wi=a(vo);Xs=i(Wi,"Supervised training"),Wi.forEach(o),Ri.forEach(o),gn=c(t),f(De.$$.fragment,t),_n=c(t),It=s(t,"UL",{});var Hi=a(It);Xe=s(Hi,"LI",{});var Mn=a(Xe);To=s(Mn,"P",{});var Ui=a(To);Gs=i(Ui,"Generation"),Ui.forEach(o),Rs=c(Mn),ee=s(Mn,"P",{});var eo=a(ee);Ws=i(eo,"While generating the target text set the "),yo=s(eo,"CODE",{});var Vi=a(yo);Hs=i(Vi,"decoder_start_token_id"),Vi.forEach(o),Us=i(eo,` to the target language id. The following
+example shows how to translate Python to English using the `),wo=s(eo,"CODE",{});var Ji=a(wo);Vs=i(Ji,"uclanlp/plbart-python-en_XX"),Ji.forEach(o),Js=i(eo," model."),eo.forEach(o),Mn.forEach(o),Hi.forEach(o),bn=c(t),f(Ge.$$.fragment,t),kn=c(t),te=s(t,"H2",{class:!0});var Sn=a(te);be=s(Sn,"A",{id:!0,class:!0,href:!0});var Ki=a(be);Po=s(Ki,"SPAN",{});var Qi=a(Po);f(Re.$$.fragment,Qi),Qi.forEach(o),Ki.forEach(o),Ks=c(Sn),Lo=s(Sn,"SPAN",{});var Yi=a(Lo);Qs=i(Yi,"PLBartConfig"),Yi.forEach(o),Sn.forEach(o),vn=c(t),x=s(t,"DIV",{class:!0});var V=a(x);f(We.$$.fragment,V),Ys=c(V),oe=s(V,"P",{});var to=a(oe);Zs=i(to,"This is the configuration class to store the configuration of a "),Ot=s(to,"A",{href:!0});var Zi=a(Ot);ea=i(Zi,"PLBartModel"),Zi.forEach(o),ta=i(to,`. It is used to instantiate an
+PLBART model according to the specified arguments, defining the model architecture. Instantiating a configuration
+with the defaults will yield a similar configuration to that of the PLBART
+`),He=s(to,"A",{href:!0,rel:!0});var ed=a(He);oa=i(ed,"uclanlp/plbart-base"),ed.forEach(o),na=i(to," architecture."),to.forEach(o),sa=c(V),ne=s(V,"P",{});var oo=a(ne);aa=i(oo,"Configuration objects inherit from "),Dt=s(oo,"A",{href:!0});var td=a(Dt);ra=i(td,"PretrainedConfig"),td.forEach(o),ia=i(oo,` and can be used to control the model outputs. Read the
+documentation from `),Xt=s(oo,"A",{href:!0});var od=a(Xt);da=i(od,"PretrainedConfig"),od.forEach(o),la=i(oo," for more information."),oo.forEach(o),ca=c(V),zo=s(V,"P",{});var nd=a(zo);pa=i(nd,"Example:"),nd.forEach(o),ha=c(V),f(Ue.$$.fragment,V),V.forEach(o),Tn=c(t),se=s(t,"H2",{class:!0});var An=a(se);ke=s(An,"A",{id:!0,class:!0,href:!0});var sd=a(ke);qo=s(sd,"SPAN",{});var ad=a(qo);f(Ve.$$.fragment,ad),ad.forEach(o),sd.forEach(o),ua=c(An),Bo=s(An,"SPAN",{});var rd=a(Bo);ma=i(rd,"PLBartTokenizer"),rd.forEach(o),An.forEach(o),yn=c(t),P=s(t,"DIV",{class:!0});var $=a(P);f(Je.$$.fragment,$),fa=c($),$o=s($,"P",{});var id=a($o);ga=i(id,"Construct an PLBART tokenizer."),id.forEach(o),_a=c($),D=s($,"P",{});var Be=a(D);ba=i(Be,"Adapted from "),Gt=s(Be,"A",{href:!0});var dd=a(Gt);ka=i(dd,"RobertaTokenizer"),dd.forEach(o),va=i(Be," and "),Rt=s(Be,"A",{href:!0});var ld=a(Rt);Ta=i(ld,"XLNetTokenizer"),ld.forEach(o),ya=i(Be,`. Based on
+`),Ke=s(Be,"A",{href:!0,rel:!0});var cd=a(Ke);wa=i(cd,"SentencePiece"),cd.forEach(o),Pa=i(Be,"."),Be.forEach(o),La=c($),Qe=s($,"P",{});var Nn=a(Qe);za=i(Nn,"The tokenization method is "),xo=s(Nn,"CODE",{});var pd=a(xo);qa=i(pd,"<tokens> <eos> <language code>"),pd.forEach(o),Ba=i(Nn," for source language documents, and \u201C<language code>\n<tokens> <eos>``` for target language documents."),Nn.forEach(o),$a=c($),Co=s($,"P",{});var hd=a(Co);xa=i(hd,"Examples:"),hd.forEach(o),Ca=c($),f(Ye.$$.fragment,$),ja=c($),ve=s($,"DIV",{class:!0});var In=a(ve);f(Ze.$$.fragment,In),Fa=c(In),jo=s(In,"P",{});var ud=a(jo);Ea=i(ud,`Temporarily sets the tokenizer for encoding the targets. Useful for tokenizer associated to
+sequence-to-sequence models that need a slightly different processing for the labels.`),ud.forEach(o),In.forEach(o),Ma=c($),N=s($,"DIV",{class:!0});var $e=a(N);f(et.$$.fragment,$e),Sa=c($e),tt=s($e,"P",{});var On=a(tt);Aa=i(On,`Build model inputs from a sequence or a pair of sequence for sequence classification tasks by concatenating and
+adding special tokens. An PLBART sequence has the following format, where `),Fo=s(On,"CODE",{});var md=a(Fo);Na=i(md,"X"),md.forEach(o),Ia=i(On," represents the sequence:"),On.forEach(o),Oa=c($e),ot=s($e,"UL",{});var Dn=a(ot);nt=s(Dn,"LI",{});var Xn=a(nt);Eo=s(Xn,"CODE",{});var fd=a(Eo);Da=i(fd,"input_ids"),fd.forEach(o),Xa=i(Xn," (for encoder) "),Mo=s(Xn,"CODE",{});var gd=a(Mo);Ga=i(gd,"X [eos, src_lang_code]"),gd.forEach(o),Xn.forEach(o),Ra=c(Dn),st=s(Dn,"LI",{});var Gn=a(st);So=s(Gn,"CODE",{});var _d=a(So);Wa=i(_d,"decoder_input_ids"),_d.forEach(o),Ha=i(Gn,": (for decoder) "),Ao=s(Gn,"CODE",{});var bd=a(Ao);Ua=i(bd,"X [eos, tgt_lang_code]"),bd.forEach(o),Gn.forEach(o),Dn.forEach(o),Va=c($e),No=s($e,"P",{});var kd=a(No);Ja=i(kd,`BOS is never used. Pairs of sequences are not the expected use case, but they will be handled without a
+separator.`),kd.forEach(o),$e.forEach(o),$.forEach(o),wn=c(t),ae=s(t,"H2",{class:!0});var Rn=a(ae);Te=s(Rn,"A",{id:!0,class:!0,href:!0});var vd=a(Te);Io=s(vd,"SPAN",{});var Td=a(Io);f(at.$$.fragment,Td),Td.forEach(o),vd.forEach(o),Ka=c(Rn),Oo=s(Rn,"SPAN",{});var yd=a(Oo);Qa=i(yd,"PLBartModel"),yd.forEach(o),Rn.forEach(o),Pn=c(t),S=s(t,"DIV",{class:!0});var xe=a(S);f(rt.$$.fragment,xe),Ya=c(xe),it=s(xe,"P",{});var Wn=a(it);Za=i(Wn,`The bare PLBART Model outputting raw hidden-states without any specific head on top.
+This model inherits from `),Wt=s(Wn,"A",{href:!0});var wd=a(Wt);er=i(wd,"PreTrainedModel"),wd.forEach(o),tr=i(Wn,`. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving, resizing the input embeddings, pruning heads
+etc.)`),Wn.forEach(o),or=c(xe),dt=s(xe,"P",{});var Hn=a(dt);nr=i(Hn,"This model is also a PyTorch "),lt=s(Hn,"A",{href:!0,rel:!0});var Pd=a(lt);sr=i(Pd,"torch.nn.Module"),Pd.forEach(o),ar=i(Hn,` subclass.
+Use it as a regular PyTorch Module and refer to the PyTorch documentation for all matter related to general usage
+and behavior.`),Hn.forEach(o),rr=c(xe),E=s(xe,"DIV",{class:!0});var J=a(E);f(ct.$$.fragment,J),ir=c(J),re=s(J,"P",{});var no=a(re);dr=i(no,"The "),Ht=s(no,"A",{href:!0});var Ld=a(Ht);lr=i(Ld,"PLBartModel"),Ld.forEach(o),cr=i(no," forward method, overrides the "),Do=s(no,"CODE",{});var zd=a(Do);pr=i(zd,"__call__"),zd.forEach(o),hr=i(no," special method."),no.forEach(o),ur=c(J),f(ye.$$.fragment,J),mr=c(J),Xo=s(J,"P",{});var qd=a(Xo);fr=i(qd,"Example:"),qd.forEach(o),gr=c(J),f(pt.$$.fragment,J),J.forEach(o),xe.forEach(o),Ln=c(t),ie=s(t,"H2",{class:!0});var Un=a(ie);we=s(Un,"A",{id:!0,class:!0,href:!0});var Bd=a(we);Go=s(Bd,"SPAN",{});var $d=a(Go);f(ht.$$.fragment,$d),$d.forEach(o),Bd.forEach(o),_r=c(Un),Ro=s(Un,"SPAN",{});var xd=a(Ro);br=i(xd,"PLBartForConditionalGeneration"),xd.forEach(o),Un.forEach(o),zn=c(t),A=s(t,"DIV",{class:!0});var Ce=a(A);f(ut.$$.fragment,Ce),kr=c(Ce),mt=s(Ce,"P",{});var Vn=a(mt);vr=i(Vn,`The PLBART Model with a language modeling head. Can be used for code-to-text, text-to-code and code-to-code.
+This model inherits from `),Ut=s(Vn,"A",{href:!0});var Cd=a(Ut);Tr=i(Cd,"PreTrainedModel"),Cd.forEach(o),yr=i(Vn,`. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving, resizing the input embeddings, pruning heads
+etc.)`),Vn.forEach(o),wr=c(Ce),ft=s(Ce,"P",{});var Jn=a(ft);Pr=i(Jn,"This model is also a PyTorch "),gt=s(Jn,"A",{href:!0,rel:!0});var jd=a(gt);Lr=i(jd,"torch.nn.Module"),jd.forEach(o),zr=i(Jn,` subclass.
+Use it as a regular PyTorch Module and refer to the PyTorch documentation for all matter related to general usage
+and behavior.`),Jn.forEach(o),qr=c(Ce),M=s(Ce,"DIV",{class:!0});var K=a(M);f(_t.$$.fragment,K),Br=c(K),de=s(K,"P",{});var so=a(de);$r=i(so,"The "),Vt=s(so,"A",{href:!0});var Fd=a(Vt);xr=i(Fd,"PLBartForConditionalGeneration"),Fd.forEach(o),Cr=i(so," forward method, overrides the "),Wo=s(so,"CODE",{});var Ed=a(Wo);jr=i(Ed,"__call__"),Ed.forEach(o),Fr=i(so," special method."),so.forEach(o),Er=c(K),f(Pe.$$.fragment,K),Mr=c(K),Ho=s(K,"P",{});var Md=a(Ho);Sr=i(Md,"Mask-filling example:"),Md.forEach(o),Ar=c(K),f(bt.$$.fragment,K),K.forEach(o),Ce.forEach(o),qn=c(t),le=s(t,"H2",{class:!0});var Kn=a(le);Le=s(Kn,"A",{id:!0,class:!0,href:!0});var Sd=a(Le);Uo=s(Sd,"SPAN",{});var Ad=a(Uo);f(kt.$$.fragment,Ad),Ad.forEach(o),Sd.forEach(o),Nr=c(Kn),Vo=s(Kn,"SPAN",{});var Nd=a(Vo);Ir=i(Nd,"PLBartForSequenceClassification"),Nd.forEach(o),Kn.forEach(o),Bn=c(t),C=s(t,"DIV",{class:!0});var Q=a(C);f(vt.$$.fragment,Q),Or=c(Q),Jo=s(Q,"P",{});var Id=a(Jo);Dr=i(Id,`PLBart model with a sequence classification/head on top (a linear layer on top of the pooled output) e.g. for code
+classification.`),Id.forEach(o),Xr=c(Q),Tt=s(Q,"P",{});var Qn=a(Tt);Gr=i(Qn,"This model inherits from "),Jt=s(Qn,"A",{href:!0});var Od=a(Jt);Rr=i(Od,"PreTrainedModel"),Od.forEach(o),Wr=i(Qn,`. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving, resizing the input embeddings, pruning heads
+etc.)`),Qn.forEach(o),Hr=c(Q),yt=s(Q,"P",{});var Yn=a(yt);Ur=i(Yn,"This model is also a PyTorch "),wt=s(Yn,"A",{href:!0,rel:!0});var Dd=a(wt);Vr=i(Dd,"torch.nn.Module"),Dd.forEach(o),Jr=i(Yn,` subclass.
+Use it as a regular PyTorch Module and refer to the PyTorch documentation for all matter related to general usage
+and behavior.`),Yn.forEach(o),Kr=c(Q),w=s(Q,"DIV",{class:!0});var z=a(w);f(Pt.$$.fragment,z),Qr=c(z),ce=s(z,"P",{});var ao=a(ce);Yr=i(ao,"The "),Kt=s(ao,"A",{href:!0});var Xd=a(Kt);Zr=i(Xd,"PLBartForSequenceClassification"),Xd.forEach(o),ei=i(ao," forward method, overrides the "),Ko=s(ao,"CODE",{});var Gd=a(Ko);ti=i(Gd,"__call__"),Gd.forEach(o),oi=i(ao," special method."),ao.forEach(o),ni=c(z),f(ze.$$.fragment,z),si=c(z),Qo=s(z,"P",{});var Rd=a(Qo);ai=i(Rd,"Example of single-label classification:"),Rd.forEach(o),ri=c(z),f(Lt.$$.fragment,z),ii=c(z),f(zt.$$.fragment,z),di=c(z),Yo=s(z,"P",{});var Wd=a(Yo);li=i(Wd,"Example of multi-label classification:"),Wd.forEach(o),ci=c(z),f(qt.$$.fragment,z),pi=c(z),f(Bt.$$.fragment,z),z.forEach(o),Q.forEach(o),$n=c(t),pe=s(t,"H2",{class:!0});var Zn=a(pe);qe=s(Zn,"A",{id:!0,class:!0,href:!0});var Hd=a(qe);Zo=s(Hd,"SPAN",{});var Ud=a(Zo);f($t.$$.fragment,Ud),Ud.forEach(o),Hd.forEach(o),hi=c(Zn),en=s(Zn,"SPAN",{});var Vd=a(en);ui=i(Vd,"PLBartForCausalLM"),Vd.forEach(o),Zn.forEach(o),xn=c(t),he=s(t,"DIV",{class:!0});var es=a(he);f(xt.$$.fragment,es),mi=c(es),H=s(es,"DIV",{class:!0});var ro=a(H);f(Ct.$$.fragment,ro),fi=c(ro),tn=s(ro,"P",{});var Jd=a(tn);gi=i(Jd,"Example:"),Jd.forEach(o),_i=c(ro),f(jt.$$.fragment,ro),ro.forEach(o),es.forEach(o),this.h()},h(){d(u,"name","hf:doc:metadata"),d(u,"content",JSON.stringify(al)),d(L,"id","plbart"),d(L,"class","header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full"),d(L,"href","#plbart"),d(v,"class","relative group"),d(je,"href","https://github.com/huggingface/transformers/issues/new?assignees=&labels=&template=bug-report.md&title"),d(je,"rel","nofollow"),d(Fe,"href","https://www.github.com/gchhablani"),d(Fe,"rel","nofollow"),d(fe,"id","overview-of-plbart"),d(fe,"class","header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full"),d(fe,"href","#overview-of-plbart"),d(Y,"class","relative group"),d(Me,"href","https://arxiv.org/abs/2103.06333"),d(Me,"rel","nofollow"),d(Se,"href","https://huggingface.co/gchhablani"),d(Se,"rel","nofollow"),d(Ae,"href","https://github.com/wasiahmad/PLBART"),d(Ae,"rel","nofollow"),d(ge,"id","training-of-plbart"),d(ge,"class","header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full"),d(ge,"href","#training-of-plbart"),d(Z,"class","relative group"),d(Ie,"href","https://arxiv.org/abs/2103.06333"),d(Ie,"rel","nofollow"),d(Oe,"href","/docs/transformers/pr_16354/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__"),d(At,"href","/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartTokenizer.as_target_tokenizer"),d(be,"id","transformers.PLBartConfig"),d(be,"class","header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full"),d(be,"href","#transformers.PLBartConfig"),d(te,"class","relative group"),d(Ot,"href","/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartModel"),d(He,"href","https://huggingface.co/uclanlp/plbart-base"),d(He,"rel","nofollow"),d(Dt,"href","/docs/transformers/pr_16354/en/main_classes/configuration#transformers.PretrainedConfig"),d(Xt,"href","/docs/transformers/pr_16354/en/main_classes/configuration#transformers.PretrainedConfig"),d(x,"class","docstring"),d(ke,"id","transformers.PLBartTokenizer"),d(ke,"class","header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full"),d(ke,"href","#transformers.PLBartTokenizer"),d(se,"class","relative group"),d(Gt,"href","/docs/transformers/pr_16354/en/model_doc/roberta#transformers.RobertaTokenizer"),d(Rt,"href","/docs/transformers/pr_16354/en/model_doc/xlnet#transformers.XLNetTokenizer"),d(Ke,"href","https://github.com/google/sentencepiece"),d(Ke,"rel","nofollow"),d(ve,"class","docstring"),d(N,"class","docstring"),d(P,"class","docstring"),d(Te,"id","transformers.PLBartModel"),d(Te,"class","header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full"),d(Te,"href","#transformers.PLBartModel"),d(ae,"class","relative group"),d(Wt,"href","/docs/transformers/pr_16354/en/main_classes/model#transformers.PreTrainedModel"),d(lt,"href","https://pytorch.org/docs/stable/nn.html#torch.nn.Module"),d(lt,"rel","nofollow"),d(Ht,"href","/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartModel"),d(E,"class","docstring"),d(S,"class","docstring"),d(we,"id","transformers.PLBartForConditionalGeneration"),d(we,"class","header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full"),d(we,"href","#transformers.PLBartForConditionalGeneration"),d(ie,"class","relative group"),d(Ut,"href","/docs/transformers/pr_16354/en/main_classes/model#transformers.PreTrainedModel"),d(gt,"href","https://pytorch.org/docs/stable/nn.html#torch.nn.Module"),d(gt,"rel","nofollow"),d(Vt,"href","/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartForConditionalGeneration"),d(M,"class","docstring"),d(A,"class","docstring"),d(Le,"id","transformers.PLBartForSequenceClassification"),d(Le,"class","header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full"),d(Le,"href","#transformers.PLBartForSequenceClassification"),d(le,"class","relative group"),d(Jt,"href","/docs/transformers/pr_16354/en/main_classes/model#transformers.PreTrainedModel"),d(wt,"href","https://pytorch.org/docs/stable/nn.html#torch.nn.Module"),d(wt,"rel","nofollow"),d(Kt,"href","/docs/transformers/pr_16354/en/model_doc/plbart#transformers.PLBartForSequenceClassification"),d(w,"class","docstring"),d(C,"class","docstring"),d(qe,"id","transformers.PLBartForCausalLM"),d(qe,"class","header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full"),d(qe,"href","#transformers.PLBartForCausalLM"),d(pe,"class","relative group"),d(H,"class","docstring"),d(he,"class","docstring")},m(t,p){e(document.head,u),h(t,B,p),h(t,v,p),e(v,L),e(L,q),g(T,q,null),e(v,y),e(v,j),e(j,ts),h(t,sn,p),h(t,O,p),e(O,io),e(io,os),e(O,ns),e(O,je),e(je,ss),e(O,as),e(O,Fe),e(Fe,rs),e(O,is),h(t,an,p),h(t,Y,p),e(Y,fe),e(fe,lo),g(Ee,lo,null),e(Y,ds),e(Y,co),e(co,ls),h(t,rn,p),h(t,G,p),e(G,cs),e(G,Me),e(Me,ps),e(G,hs),e(G,po),e(po,us),e(G,ms),h(t,dn,p),h(t,Mt,p),e(Mt,fs),h(t,ln,p),h(t,St,p),e(St,ho),e(ho,gs),h(t,cn,p),h(t,R,p),e(R,_s),e(R,Se),e(Se,bs),e(R,ks),e(R,Ae),e(Ae,vs),e(R,Ts),h(t,pn,p),h(t,Z,p),e(Z,ge),e(ge,uo),g(Ne,uo,null),e(Z,ys),e(Z,mo),e(mo,ws),h(t,hn,p),h(t,F,p),e(F,Ps),e(F,fo),e(fo,Ls),e(F,zs),e(F,go),e(go,qs),e(F,Bs),e(F,_o),e(_o,$s),e(F,xs),e(F,bo),e(bo,Cs),e(F,js),h(t,un,p),h(t,_e,p),e(_e,Fs),e(_e,Ie),e(Ie,Es),e(_e,Ms),h(t,mn,p),h(t,W,p),e(W,Ss),e(W,Oe),e(Oe,ko),e(ko,As),e(Oe,Ns),e(W,Is),e(W,At),e(At,Os),e(W,Ds),h(t,fn,p),h(t,Nt,p),e(Nt,vo),e(vo,Xs),h(t,gn,p),g(De,t,p),h(t,_n,p),h(t,It,p),e(It,Xe),e(Xe,To),e(To,Gs),e(Xe,Rs),e(Xe,ee),e(ee,Ws),e(ee,yo),e(yo,Hs),e(ee,Us),e(ee,wo),e(wo,Vs),e(ee,Js),h(t,bn,p),g(Ge,t,p),h(t,kn,p),h(t,te,p),e(te,be),e(be,Po),g(Re,Po,null),e(te,Ks),e(te,Lo),e(Lo,Qs),h(t,vn,p),h(t,x,p),g(We,x,null),e(x,Ys),e(x,oe),e(oe,Zs),e(oe,Ot),e(Ot,ea),e(oe,ta),e(oe,He),e(He,oa),e(oe,na),e(x,sa),e(x,ne),e(ne,aa),e(ne,Dt),e(Dt,ra),e(ne,ia),e(ne,Xt),e(Xt,da),e(ne,la),e(x,ca),e(x,zo),e(zo,pa),e(x,ha),g(Ue,x,null),h(t,Tn,p),h(t,se,p),e(se,ke),e(ke,qo),g(Ve,qo,null),e(se,ua),e(se,Bo),e(Bo,ma),h(t,yn,p),h(t,P,p),g(Je,P,null),e(P,fa),e(P,$o),e($o,ga),e(P,_a),e(P,D),e(D,ba),e(D,Gt),e(Gt,ka),e(D,va),e(D,Rt),e(Rt,Ta),e(D,ya),e(D,Ke),e(Ke,wa),e(D,Pa),e(P,La),e(P,Qe),e(Qe,za),e(Qe,xo),e(xo,qa),e(Qe,Ba),e(P,$a),e(P,Co),e(Co,xa),e(P,Ca),g(Ye,P,null),e(P,ja),e(P,ve),g(Ze,ve,null),e(ve,Fa),e(ve,jo),e(jo,Ea),e(P,Ma),e(P,N),g(et,N,null),e(N,Sa),e(N,tt),e(tt,Aa),e(tt,Fo),e(Fo,Na),e(tt,Ia),e(N,Oa),e(N,ot),e(ot,nt),e(nt,Eo),e(Eo,Da),e(nt,Xa),e(nt,Mo),e(Mo,Ga),e(ot,Ra),e(ot,st),e(st,So),e(So,Wa),e(st,Ha),e(st,Ao),e(Ao,Ua),e(N,Va),e(N,No),e(No,Ja),h(t,wn,p),h(t,ae,p),e(ae,Te),e(Te,Io),g(at,Io,null),e(ae,Ka),e(ae,Oo),e(Oo,Qa),h(t,Pn,p),h(t,S,p),g(rt,S,null),e(S,Ya),e(S,it),e(it,Za),e(it,Wt),e(Wt,er),e(it,tr),e(S,or),e(S,dt),e(dt,nr),e(dt,lt),e(lt,sr),e(dt,ar),e(S,rr),e(S,E),g(ct,E,null),e(E,ir),e(E,re),e(re,dr),e(re,Ht),e(Ht,lr),e(re,cr),e(re,Do),e(Do,pr),e(re,hr),e(E,ur),g(ye,E,null),e(E,mr),e(E,Xo),e(Xo,fr),e(E,gr),g(pt,E,null),h(t,Ln,p),h(t,ie,p),e(ie,we),e(we,Go),g(ht,Go,null),e(ie,_r),e(ie,Ro),e(Ro,br),h(t,zn,p),h(t,A,p),g(ut,A,null),e(A,kr),e(A,mt),e(mt,vr),e(mt,Ut),e(Ut,Tr),e(mt,yr),e(A,wr),e(A,ft),e(ft,Pr),e(ft,gt),e(gt,Lr),e(ft,zr),e(A,qr),e(A,M),g(_t,M,null),e(M,Br),e(M,de),e(de,$r),e(de,Vt),e(Vt,xr),e(de,Cr),e(de,Wo),e(Wo,jr),e(de,Fr),e(M,Er),g(Pe,M,null),e(M,Mr),e(M,Ho),e(Ho,Sr),e(M,Ar),g(bt,M,null),h(t,qn,p),h(t,le,p),e(le,Le),e(Le,Uo),g(kt,Uo,null),e(le,Nr),e(le,Vo),e(Vo,Ir),h(t,Bn,p),h(t,C,p),g(vt,C,null),e(C,Or),e(C,Jo),e(Jo,Dr),e(C,Xr),e(C,Tt),e(Tt,Gr),e(Tt,Jt),e(Jt,Rr),e(Tt,Wr),e(C,Hr),e(C,yt),e(yt,Ur),e(yt,wt),e(wt,Vr),e(yt,Jr),e(C,Kr),e(C,w),g(Pt,w,null),e(w,Qr),e(w,ce),e(ce,Yr),e(ce,Kt),e(Kt,Zr),e(ce,ei),e(ce,Ko),e(Ko,ti),e(ce,oi),e(w,ni),g(ze,w,null),e(w,si),e(w,Qo),e(Qo,ai),e(w,ri),g(Lt,w,null),e(w,ii),g(zt,w,null),e(w,di),e(w,Yo),e(Yo,li),e(w,ci),g(qt,w,null),e(w,pi),g(Bt,w,null),h(t,$n,p),h(t,pe,p),e(pe,qe),e(qe,Zo),g($t,Zo,null),e(pe,hi),e(pe,en),e(en,ui),h(t,xn,p),h(t,he,p),g(xt,he,null),e(he,mi),e(he,H),g(Ct,H,null),e(H,fi),e(H,tn),e(tn,gi),e(H,_i),g(jt,H,null),Cn=!0},p(t,[p]){const Ft={};p&2&&(Ft.$$scope={dirty:p,ctx:t}),ye.$set(Ft);const on={};p&2&&(on.$$scope={dirty:p,ctx:t}),Pe.$set(on);const nn={};p&2&&(nn.$$scope={dirty:p,ctx:t}),ze.$set(nn)},i(t){Cn||(_(T.$$.fragment,t),_(Ee.$$.fragment,t),_(Ne.$$.fragment,t),_(De.$$.fragment,t),_(Ge.$$.fragment,t),_(Re.$$.fragment,t),_(We.$$.fragment,t),_(Ue.$$.fragment,t),_(Ve.$$.fragment,t),_(Je.$$.fragment,t),_(Ye.$$.fragment,t),_(Ze.$$.fragment,t),_(et.$$.fragment,t),_(at.$$.fragment,t),_(rt.$$.fragment,t),_(ct.$$.fragment,t),_(ye.$$.fragment,t),_(pt.$$.fragment,t),_(ht.$$.fragment,t),_(ut.$$.fragment,t),_(_t.$$.fragment,t),_(Pe.$$.fragment,t),_(bt.$$.fragment,t),_(kt.$$.fragment,t),_(vt.$$.fragment,t),_(Pt.$$.fragment,t),_(ze.$$.fragment,t),_(Lt.$$.fragment,t),_(zt.$$.fragment,t),_(qt.$$.fragment,t),_(Bt.$$.fragment,t),_($t.$$.fragment,t),_(xt.$$.fragment,t),_(Ct.$$.fragment,t),_(jt.$$.fragment,t),Cn=!0)},o(t){b(T.$$.fragment,t),b(Ee.$$.fragment,t),b(Ne.$$.fragment,t),b(De.$$.fragment,t),b(Ge.$$.fragment,t),b(Re.$$.fragment,t),b(We.$$.fragment,t),b(Ue.$$.fragment,t),b(Ve.$$.fragment,t),b(Je.$$.fragment,t),b(Ye.$$.fragment,t),b(Ze.$$.fragment,t),b(et.$$.fragment,t),b(at.$$.fragment,t),b(rt.$$.fragment,t),b(ct.$$.fragment,t),b(ye.$$.fragment,t),b(pt.$$.fragment,t),b(ht.$$.fragment,t),b(ut.$$.fragment,t),b(_t.$$.fragment,t),b(Pe.$$.fragment,t),b(bt.$$.fragment,t),b(kt.$$.fragment,t),b(vt.$$.fragment,t),b(Pt.$$.fragment,t),b(ze.$$.fragment,t),b(Lt.$$.fragment,t),b(zt.$$.fragment,t),b(qt.$$.fragment,t),b(Bt.$$.fragment,t),b($t.$$.fragment,t),b(xt.$$.fragment,t),b(Ct.$$.fragment,t),b(jt.$$.fragment,t),Cn=!1},d(t){o(u),t&&o(B),t&&o(v),k(T),t&&o(sn),t&&o(O),t&&o(an),t&&o(Y),k(Ee),t&&o(rn),t&&o(G),t&&o(dn),t&&o(Mt),t&&o(ln),t&&o(St),t&&o(cn),t&&o(R),t&&o(pn),t&&o(Z),k(Ne),t&&o(hn),t&&o(F),t&&o(un),t&&o(_e),t&&o(mn),t&&o(W),t&&o(fn),t&&o(Nt),t&&o(gn),k(De,t),t&&o(_n),t&&o(It),t&&o(bn),k(Ge,t),t&&o(kn),t&&o(te),k(Re),t&&o(vn),t&&o(x),k(We),k(Ue),t&&o(Tn),t&&o(se),k(Ve),t&&o(yn),t&&o(P),k(Je),k(Ye),k(Ze),k(et),t&&o(wn),t&&o(ae),k(at),t&&o(Pn),t&&o(S),k(rt),k(ct),k(ye),k(pt),t&&o(Ln),t&&o(ie),k(ht),t&&o(zn),t&&o(A),k(ut),k(_t),k(Pe),k(bt),t&&o(qn),t&&o(le),k(kt),t&&o(Bn),t&&o(C),k(vt),k(Pt),k(ze),k(Lt),k(zt),k(qt),k(Bt),t&&o($n),t&&o(pe),k($t),t&&o(xn),t&&o(he),k(xt),k(Ct),k(jt)}}}const al={local:"plbart",sections:[{local:"overview-of-plbart",sections:[{local:"training-of-plbart",title:"Training of PLBart"}],title:"Overview of PLBart"},{local:"transformers.PLBartConfig",title:"PLBartConfig"},{local:"transformers.PLBartTokenizer",title:"PLBartTokenizer"},{local:"transformers.PLBartModel",title:"PLBartModel"},{local:"transformers.PLBartForConditionalGeneration",title:"PLBartForConditionalGeneration"},{local:"transformers.PLBartForSequenceClassification",title:"PLBartForSequenceClassification"},{local:"transformers.PLBartForCausalLM",title:"PLBartForCausalLM"}],title:"PLBart"};function rl(me){return el(()=>{new URLSearchParams(window.location.search).get("fw")}),[]}class hl extends Kd{constructor(u){super();Qd(this,u,rl,sl,Yd,{})}}export{hl as default,al as metadata};
