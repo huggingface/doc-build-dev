@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;deit&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.DeiTConfig&quot;,&quot;title&quot;:&quot;DeiTConfig&quot;},{&quot;local&quot;:&quot;transformers.DeiTFeatureExtractor&quot;,&quot;title&quot;:&quot;DeiTFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.DeiTModel&quot;,&quot;title&quot;:&quot;DeiTModel&quot;},{&quot;local&quot;:&quot;transformers.DeiTForMaskedImageModeling&quot;,&quot;title&quot;:&quot;DeiTForMaskedImageModeling&quot;},{&quot;local&quot;:&quot;transformers.DeiTForImageClassification&quot;,&quot;title&quot;:&quot;DeiTForImageClassification&quot;},{&quot;local&quot;:&quot;transformers.DeiTForImageClassificationWithTeacher&quot;,&quot;title&quot;:&quot;DeiTForImageClassificationWithTeacher&quot;}],&quot;title&quot;:&quot;DeiT&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16439/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/start-acbcf161.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/start-a3cd3214.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/pages/model_doc/deit.mdx-162c48f1.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/pages/model_doc/deit.mdx-1ea2ee91.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -461,8 +461,7 @@ the latter silently ignores them.</p></div>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>last_hidden_states = outputs.last_hidden_state
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">list</span>(last_hidden_states.shape)
-[<span class="hljs-number">1</span>, <span class="hljs-number">198</span>, <span class="hljs-number">768</span>]
-<!-- HTML_TAG_END --></pre></div></div></div>
+[<span class="hljs-number">1</span>, <span class="hljs-number">198</span>, <span class="hljs-number">768</span>]<!-- HTML_TAG_END --></pre></div></div></div>
 <h2 class="relative group"><a id="transformers.DeiTForMaskedImageModeling" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.DeiTForMaskedImageModeling"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>DeiTForMaskedImageModeling
 	</span></h2>
@@ -901,14 +900,13 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># model predicts one of the 1000 ImageNet classes</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_label = logits.argmax(-<span class="hljs-number">1</span>).item()
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(model.config.id2label[predicted_label])
-tabby, tabby cat
-<!-- HTML_TAG_END --></pre></div></div></div>
+tabby, tabby cat<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="pslzx0">
-		import { start } from "/docs/transformers/pr_16439/en/_app/start-acbcf161.js";
+		<script type="module" data-hydrate="12ht3dg">
+		import { start } from "/docs/transformers/pr_16439/en/_app/start-a3cd3214.js";
 		start({
-			target: document.querySelector('[data-hydrate="pslzx0"]').parentNode,
+			target: document.querySelector('[data-hydrate="12ht3dg"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16439/en","assets":"/docs/transformers/pr_16439/en"},
 			session: {},
 			route: false,
@@ -919,7 +917,7 @@ tabby, tabby cat
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16439/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16439/en/_app/pages/model_doc/deit.mdx-162c48f1.js")
+						import("/docs/transformers/pr_16439/en/_app/pages/model_doc/deit.mdx-1ea2ee91.js")
 				],
 				params: {}
 			}

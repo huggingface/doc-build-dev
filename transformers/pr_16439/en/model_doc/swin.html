@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;swin-transformer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.SwinConfig&quot;,&quot;title&quot;:&quot;SwinConfig&quot;},{&quot;local&quot;:&quot;transformers.SwinModel&quot;,&quot;title&quot;:&quot;SwinModel&quot;},{&quot;local&quot;:&quot;transformers.SwinForMaskedImageModeling&quot;,&quot;title&quot;:&quot;SwinForMaskedImageModeling&quot;},{&quot;local&quot;:&quot;transformers.SwinForImageClassification&quot;,&quot;title&quot;:&quot;SwinForImageClassification&quot;}],&quot;title&quot;:&quot;Swin Transformer&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16439/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/start-acbcf161.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/start-a3cd3214.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/pages/model_doc/swin.mdx-334543ec.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/pages/model_doc/swin.mdx-85e6f899.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -324,8 +324,7 @@ the latter silently ignores them.</p></div>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>last_hidden_states = outputs.last_hidden_state
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">list</span>(last_hidden_states.shape)
-[<span class="hljs-number">1</span>, <span class="hljs-number">49</span>, <span class="hljs-number">768</span>]
-<!-- HTML_TAG_END --></pre></div></div></div>
+[<span class="hljs-number">1</span>, <span class="hljs-number">49</span>, <span class="hljs-number">768</span>]<!-- HTML_TAG_END --></pre></div></div></div>
 <h2 class="relative group"><a id="transformers.SwinForMaskedImageModeling" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.SwinForMaskedImageModeling"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>SwinForMaskedImageModeling
 	</span></h2>
@@ -626,14 +625,13 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># model predicts one of the 1000 ImageNet classes</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_label = logits.argmax(-<span class="hljs-number">1</span>).item()
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(model.config.id2label[predicted_label])
-tabby, tabby cat
-<!-- HTML_TAG_END --></pre></div></div></div>
+tabby, tabby cat<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="n7alhi">
-		import { start } from "/docs/transformers/pr_16439/en/_app/start-acbcf161.js";
+		<script type="module" data-hydrate="k6b4g6">
+		import { start } from "/docs/transformers/pr_16439/en/_app/start-a3cd3214.js";
 		start({
-			target: document.querySelector('[data-hydrate="n7alhi"]').parentNode,
+			target: document.querySelector('[data-hydrate="k6b4g6"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16439/en","assets":"/docs/transformers/pr_16439/en"},
 			session: {},
 			route: false,
@@ -644,7 +642,7 @@ tabby, tabby cat
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16439/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16439/en/_app/pages/model_doc/swin.mdx-334543ec.js")
+						import("/docs/transformers/pr_16439/en/_app/pages/model_doc/swin.mdx-85e6f899.js")
 				],
 				params: {}
 			}
