@@ -282,8 +282,8 @@ weighted average in the cross-attention heads.</p>
 `}}),zo=new He({props:{$$slots:{default:[Nb]},$$scope:{ctx:q}}}),Hn=new se({props:{code:`from transformers import GPT2Tokenizer, GPT2Model
 import torch
 
-tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
-model = GPT2Model.from_pretrained("gpt2")
+tokenizer = GPT2Tokenizer.from_pretrained("distilgpt2")
+model = GPT2Model.from_pretrained("distilgpt2")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 outputs = model(**inputs)
@@ -292,8 +292,8 @@ last_hidden_states = outputs.last_hidden_state
 `,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> GPT2Tokenizer, GPT2Model
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = GPT2Tokenizer.from_pretrained(<span class="hljs-string">&quot;gpt2&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = GPT2Model.from_pretrained(<span class="hljs-string">&quot;gpt2&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = GPT2Tokenizer.from_pretrained(<span class="hljs-string">&quot;distilgpt2&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = GPT2Model.from_pretrained(<span class="hljs-string">&quot;distilgpt2&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs)
@@ -443,8 +443,8 @@ setting. Only relevant if <code>config.is_decoder = True</code>.</p>
 `}}),Eo=new He({props:{$$slots:{default:[Hb]},$$scope:{ctx:q}}}),Jn=new se({props:{code:`import torch
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 
-tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
-model = GPT2LMHeadModel.from_pretrained("gpt2")
+tokenizer = GPT2Tokenizer.from_pretrained("distilgpt2")
+model = GPT2LMHeadModel.from_pretrained("distilgpt2")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 outputs = model(**inputs, labels=inputs["input_ids"])
@@ -453,8 +453,8 @@ logits = outputs.logits
 `,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> GPT2Tokenizer, GPT2LMHeadModel
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = GPT2Tokenizer.from_pretrained(<span class="hljs-string">&quot;gpt2&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = GPT2LMHeadModel.from_pretrained(<span class="hljs-string">&quot;gpt2&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = GPT2Tokenizer.from_pretrained(<span class="hljs-string">&quot;distilgpt2&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = GPT2LMHeadModel.from_pretrained(<span class="hljs-string">&quot;distilgpt2&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs, labels=inputs[<span class="hljs-string">&quot;input_ids&quot;</span>])

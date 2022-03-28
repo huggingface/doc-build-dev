@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;openai-gpt2&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.GPT2Config&quot;,&quot;title&quot;:&quot;GPT2Config&quot;},{&quot;local&quot;:&quot;transformers.GPT2Tokenizer&quot;,&quot;title&quot;:&quot;GPT2Tokenizer&quot;},{&quot;local&quot;:&quot;transformers.GPT2TokenizerFast&quot;,&quot;title&quot;:&quot;GPT2TokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.models.gpt2.modeling_gpt2.GPT2DoubleHeadsModelOutput&quot;,&quot;title&quot;:&quot;GPT2 specific outputs&quot;},{&quot;local&quot;:&quot;transformers.GPT2Model&quot;,&quot;title&quot;:&quot;GPT2Model&quot;},{&quot;local&quot;:&quot;transformers.GPT2LMHeadModel&quot;,&quot;title&quot;:&quot;GPT2LMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.GPT2DoubleHeadsModel&quot;,&quot;title&quot;:&quot;GPT2DoubleHeadsModel&quot;},{&quot;local&quot;:&quot;transformers.GPT2ForSequenceClassification&quot;,&quot;title&quot;:&quot;GPT2ForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.GPT2ForTokenClassification&quot;,&quot;title&quot;:&quot;GPT2ForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFGPT2Model&quot;,&quot;title&quot;:&quot;TFGPT2Model&quot;},{&quot;local&quot;:&quot;transformers.TFGPT2LMHeadModel&quot;,&quot;title&quot;:&quot;TFGPT2LMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.TFGPT2DoubleHeadsModel&quot;,&quot;title&quot;:&quot;TFGPT2DoubleHeadsModel&quot;},{&quot;local&quot;:&quot;transformers.TFGPT2ForSequenceClassification&quot;,&quot;title&quot;:&quot;TFGPT2ForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.modeling_tf_outputs.TFSequenceClassifierOutputWithPast&quot;,&quot;title&quot;:&quot;TFSequenceClassifierOutputWithPast&quot;},{&quot;local&quot;:&quot;transformers.FlaxGPT2Model&quot;,&quot;title&quot;:&quot;FlaxGPT2Model&quot;},{&quot;local&quot;:&quot;transformers.FlaxGPT2LMHeadModel&quot;,&quot;title&quot;:&quot;FlaxGPT2LMHeadModel&quot;}],&quot;title&quot;:&quot;OpenAI GPT2&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16439/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/start-02ba9dba.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/start-acbcf161.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/pages/model_doc/gpt2.mdx-a62be095.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/pages/model_doc/gpt2.mdx-faab1f82.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16439/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -706,8 +706,8 @@ the latter silently ignores them.</p></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> GPT2Tokenizer, GPT2Model
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = GPT2Tokenizer.from_pretrained(<span class="hljs-string">&quot;gpt2&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = GPT2Model.from_pretrained(<span class="hljs-string">&quot;gpt2&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = GPT2Tokenizer.from_pretrained(<span class="hljs-string">&quot;distilgpt2&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = GPT2Model.from_pretrained(<span class="hljs-string">&quot;distilgpt2&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs)
@@ -1003,8 +1003,8 @@ the latter silently ignores them.</p></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> GPT2Tokenizer, GPT2LMHeadModel
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = GPT2Tokenizer.from_pretrained(<span class="hljs-string">&quot;gpt2&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = GPT2LMHeadModel.from_pretrained(<span class="hljs-string">&quot;gpt2&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = GPT2Tokenizer.from_pretrained(<span class="hljs-string">&quot;distilgpt2&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = GPT2LMHeadModel.from_pretrained(<span class="hljs-string">&quot;distilgpt2&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs, labels=inputs[<span class="hljs-string">&quot;input_ids&quot;</span>])
@@ -3210,10 +3210,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1fk3d6u">
-		import { start } from "/docs/transformers/pr_16439/en/_app/start-02ba9dba.js";
+		<script type="module" data-hydrate="3awg5i">
+		import { start } from "/docs/transformers/pr_16439/en/_app/start-acbcf161.js";
 		start({
-			target: document.querySelector('[data-hydrate="1fk3d6u"]').parentNode,
+			target: document.querySelector('[data-hydrate="3awg5i"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16439/en","assets":"/docs/transformers/pr_16439/en"},
 			session: {},
 			route: false,
@@ -3224,7 +3224,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16439/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16439/en/_app/pages/model_doc/gpt2.mdx-a62be095.js")
+						import("/docs/transformers/pr_16439/en/_app/pages/model_doc/gpt2.mdx-faab1f82.js")
 				],
 				params: {}
 			}
