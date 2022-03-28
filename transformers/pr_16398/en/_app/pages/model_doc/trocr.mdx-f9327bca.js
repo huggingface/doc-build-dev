@@ -227,6 +227,7 @@ pixel_values = processor(image, return_tensors="pt").pixel_values
 model.config.decoder_start_token_id = processor.tokenizer.cls_token_id
 model.config.pad_token_id = processor.tokenizer.pad_token_id
 model.config.vocab_size = model.config.decoder.vocab_size
+
 labels = processor.tokenizer(text, return_tensors="pt").input_ids
 outputs = model(pixel_values, labels=labels)
 loss = outputs.loss
@@ -265,6 +266,7 @@ generated_text`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span c
 <span class="hljs-meta">&gt;&gt;&gt; </span>model.config.decoder_start_token_id = processor.tokenizer.cls_token_id
 <span class="hljs-meta">&gt;&gt;&gt; </span>model.config.pad_token_id = processor.tokenizer.pad_token_id
 <span class="hljs-meta">&gt;&gt;&gt; </span>model.config.vocab_size = model.config.decoder.vocab_size
+
 <span class="hljs-meta">&gt;&gt;&gt; </span>labels = processor.tokenizer(text, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>).input_ids
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(pixel_values, labels=labels)
 <span class="hljs-meta">&gt;&gt;&gt; </span>loss = outputs.loss
