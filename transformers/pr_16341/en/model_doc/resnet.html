@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;resnet&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.ResNetConfig&quot;,&quot;title&quot;:&quot;ResNetConfig&quot;},{&quot;local&quot;:&quot;transformers.ResNetModel&quot;,&quot;title&quot;:&quot;ResNetModel&quot;},{&quot;local&quot;:&quot;transformers.ResNetForImageClassification&quot;,&quot;title&quot;:&quot;ResNetForImageClassification&quot;}],&quot;title&quot;:&quot;ResNet&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16341/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-24b8037f.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-5631530a.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/resnet.mdx-1d621311.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/resnet.mdx-9561fadb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -192,8 +192,8 @@ elements depending on the configuration (<a
 <p><strong>pooler_output</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, hidden_size)</code>) — Last layer hidden-state after a pooling operation on the spatial dimensions.</p>
 </li>
 <li>
-<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each layer) of
-shape <code>(batch_size, num_channels, height, width)</code>.</p>
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+one for the output of each layer) of shape <code>(batch_size, num_channels, height, width)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
 </ul>
@@ -310,9 +310,9 @@ elements depending on the configuration (<a
 <ul>
 <li><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>(1,)</code>, <em>optional</em>, returned when <code>labels</code> is provided) — Classification (or regression if config.num_labels==1) loss.</li>
 <li><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, config.num_labels)</code>) — Classification (or regression if config.num_labels==1) scores (before SoftMax).</li>
-<li><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each stage) of
-shape <code>(batch_size, num_channels, height, width)</code>. Hidden-states (also called feature maps) of the model at
-the output of each stage.</li>
+<li><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+one for the output of each stage) of shape <code>(batch_size, num_channels, height, width)</code>. Hidden-states (also
+called feature maps) of the model at the output of each stage.</li>
 </ul>
 <!-- HTML_TAG_END --></p></div></div>
 <p>The <a href="/docs/transformers/pr_16341/en/model_doc/resnet#transformers.ResNetForImageClassification">ResNetForImageClassification</a> forward method, overrides the <code>__call__</code> special method.</p>
@@ -347,10 +347,10 @@ the latter silently ignores them.</p></div>
 tiger cat<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="q61vbe">
-		import { start } from "/docs/transformers/pr_16341/en/_app/start-24b8037f.js";
+		<script type="module" data-hydrate="rtqp3e">
+		import { start } from "/docs/transformers/pr_16341/en/_app/start-5631530a.js";
 		start({
-			target: document.querySelector('[data-hydrate="q61vbe"]').parentNode,
+			target: document.querySelector('[data-hydrate="rtqp3e"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16341/en","assets":"/docs/transformers/pr_16341/en"},
 			session: {},
 			route: false,
@@ -361,7 +361,7 @@ tiger cat<!-- HTML_TAG_END --></pre></div></div></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/resnet.mdx-1d621311.js")
+						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/resnet.mdx-9561fadb.js")
 				],
 				params: {}
 			}
