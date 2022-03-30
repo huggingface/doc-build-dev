@@ -98,10 +98,8 @@ elements depending on the configuration (<a
 <p><strong>last_hidden_state</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>) \u2014 Sequence of hidden-states at the output of the last layer of the model.</p>
 </li>
 <li>
-<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer,,</p>
-<ul>
-<li>one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</li>
-</ul>
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
 <li>

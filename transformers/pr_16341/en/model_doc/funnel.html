@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;funnel-transformer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.FunnelConfig&quot;,&quot;title&quot;:&quot;FunnelConfig&quot;},{&quot;local&quot;:&quot;transformers.FunnelTokenizer&quot;,&quot;title&quot;:&quot;FunnelTokenizer&quot;},{&quot;local&quot;:&quot;transformers.FunnelTokenizerFast&quot;,&quot;title&quot;:&quot;FunnelTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.models.funnel.modeling_funnel.FunnelForPreTrainingOutput&quot;,&quot;title&quot;:&quot;Funnel specific outputs&quot;},{&quot;local&quot;:&quot;transformers.FunnelBaseModel&quot;,&quot;title&quot;:&quot;FunnelBaseModel&quot;},{&quot;local&quot;:&quot;transformers.FunnelModel&quot;,&quot;title&quot;:&quot;FunnelModel&quot;},{&quot;local&quot;:&quot;transformers.FunnelForPreTraining&quot;,&quot;title&quot;:&quot;FunnelModelForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.FunnelForMaskedLM&quot;,&quot;title&quot;:&quot;FunnelForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.FunnelForSequenceClassification&quot;,&quot;title&quot;:&quot;FunnelForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.FunnelForMultipleChoice&quot;,&quot;title&quot;:&quot;FunnelForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.FunnelForTokenClassification&quot;,&quot;title&quot;:&quot;FunnelForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.FunnelForQuestionAnswering&quot;,&quot;title&quot;:&quot;FunnelForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelBaseModel&quot;,&quot;title&quot;:&quot;TFFunnelBaseModel&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelModel&quot;,&quot;title&quot;:&quot;TFFunnelModel&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForPreTraining&quot;,&quot;title&quot;:&quot;TFFunnelModelForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForMaskedLM&quot;,&quot;title&quot;:&quot;TFFunnelForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForSequenceClassification&quot;,&quot;title&quot;:&quot;TFFunnelForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForMultipleChoice&quot;,&quot;title&quot;:&quot;TFFunnelForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForTokenClassification&quot;,&quot;title&quot;:&quot;TFFunnelForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFFunnelForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFFunnelForQuestionAnswering&quot;}],&quot;title&quot;:&quot;Funnel Transformer&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16341/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-5631530a.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-20320b64.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/funnel.mdx-f30b9633.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/funnel.mdx-2700ac53.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -662,10 +662,8 @@ elements depending on the configuration (<a
 <p><strong>last_hidden_state</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>) — Sequence of hidden-states at the output of the last layer of the model.</p>
 </li>
 <li>
-<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer,,</p>
-<ul>
-<li>one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</li>
-</ul>
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
 <li>
@@ -821,10 +819,8 @@ elements depending on the configuration (<a
 <p><strong>last_hidden_state</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>) — Sequence of hidden-states at the output of the last layer of the model.</p>
 </li>
 <li>
-<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer,,</p>
-<ul>
-<li>one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</li>
-</ul>
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
 <li>
@@ -3554,10 +3550,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="4mpa8n">
-		import { start } from "/docs/transformers/pr_16341/en/_app/start-5631530a.js";
+		<script type="module" data-hydrate="r21lg7">
+		import { start } from "/docs/transformers/pr_16341/en/_app/start-20320b64.js";
 		start({
-			target: document.querySelector('[data-hydrate="4mpa8n"]').parentNode,
+			target: document.querySelector('[data-hydrate="r21lg7"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16341/en","assets":"/docs/transformers/pr_16341/en"},
 			session: {},
 			route: false,
@@ -3568,7 +3564,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/funnel.mdx-f30b9633.js")
+						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/funnel.mdx-2700ac53.js")
 				],
 				params: {}
 			}
