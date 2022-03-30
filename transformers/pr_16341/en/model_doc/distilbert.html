@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;distilbert&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.DistilBertConfig&quot;,&quot;title&quot;:&quot;DistilBertConfig&quot;},{&quot;local&quot;:&quot;transformers.DistilBertTokenizer&quot;,&quot;title&quot;:&quot;DistilBertTokenizer&quot;},{&quot;local&quot;:&quot;transformers.DistilBertTokenizerFast&quot;,&quot;title&quot;:&quot;DistilBertTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.DistilBertModel&quot;,&quot;title&quot;:&quot;DistilBertModel&quot;},{&quot;local&quot;:&quot;transformers.DistilBertForMaskedLM&quot;,&quot;title&quot;:&quot;DistilBertForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.DistilBertForSequenceClassification&quot;,&quot;title&quot;:&quot;DistilBertForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.DistilBertForMultipleChoice&quot;,&quot;title&quot;:&quot;DistilBertForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.DistilBertForTokenClassification&quot;,&quot;title&quot;:&quot;DistilBertForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.DistilBertForQuestionAnswering&quot;,&quot;title&quot;:&quot;DistilBertForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertModel&quot;,&quot;title&quot;:&quot;TFDistilBertModel&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertForMaskedLM&quot;,&quot;title&quot;:&quot;TFDistilBertForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertForSequenceClassification&quot;,&quot;title&quot;:&quot;TFDistilBertForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertForMultipleChoice&quot;,&quot;title&quot;:&quot;TFDistilBertForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertForTokenClassification&quot;,&quot;title&quot;:&quot;TFDistilBertForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFDistilBertForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFDistilBertForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertModel&quot;,&quot;title&quot;:&quot;FlaxDistilBertModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertForMaskedLM&quot;,&quot;title&quot;:&quot;FlaxDistilBertForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertForSequenceClassification&quot;,&quot;title&quot;:&quot;FlaxDistilBertForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertForMultipleChoice&quot;,&quot;title&quot;:&quot;FlaxDistilBertForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertForTokenClassification&quot;,&quot;title&quot;:&quot;FlaxDistilBertForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.FlaxDistilBertForQuestionAnswering&quot;,&quot;title&quot;:&quot;FlaxDistilBertForQuestionAnswering&quot;}],&quot;title&quot;:&quot;DistilBERT&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16341/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-730da01c.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-ed612d98.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/distilbert.mdx-2e38fd92.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/distilbert.mdx-01613774.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -516,7 +516,7 @@ elements depending on the configuration (<a
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
-<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+<p>Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.</p>
 </li>
 <li>
 <p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
@@ -698,7 +698,7 @@ elements depending on the configuration (<a
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
-<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+<p>Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.</p>
 </li>
 <li>
 <p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
@@ -912,7 +912,7 @@ elements depending on the configuration (<a
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
-<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+<p>Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.</p>
 </li>
 <li>
 <p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
@@ -1082,7 +1082,7 @@ elements depending on the configuration (<a
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
-<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+<p>Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.</p>
 </li>
 <li>
 <p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
@@ -1276,7 +1276,7 @@ elements depending on the configuration (<a
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
-<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+<p>Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.</p>
 </li>
 <li>
 <p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
@@ -3408,10 +3408,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>end_scores = outputs.end_logits<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="b7pkdm">
-		import { start } from "/docs/transformers/pr_16341/en/_app/start-730da01c.js";
+		<script type="module" data-hydrate="160sbqc">
+		import { start } from "/docs/transformers/pr_16341/en/_app/start-ed612d98.js";
 		start({
-			target: document.querySelector('[data-hydrate="b7pkdm"]').parentNode,
+			target: document.querySelector('[data-hydrate="160sbqc"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16341/en","assets":"/docs/transformers/pr_16341/en"},
 			session: {},
 			route: false,
@@ -3422,7 +3422,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/distilbert.mdx-2e38fd92.js")
+						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/distilbert.mdx-01613774.js")
 				],
 				params: {}
 			}

@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;deberta&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.DebertaConfig&quot;,&quot;title&quot;:&quot;DebertaConfig&quot;},{&quot;local&quot;:&quot;transformers.DebertaTokenizer&quot;,&quot;title&quot;:&quot;DebertaTokenizer&quot;},{&quot;local&quot;:&quot;transformers.DebertaTokenizerFast&quot;,&quot;title&quot;:&quot;DebertaTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.DebertaModel&quot;,&quot;title&quot;:&quot;DebertaModel&quot;},{&quot;local&quot;:&quot;transformers.DebertaPreTrainedModel&quot;,&quot;title&quot;:&quot;DebertaPreTrainedModel&quot;},{&quot;local&quot;:&quot;transformers.DebertaForMaskedLM&quot;,&quot;title&quot;:&quot;DebertaForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.DebertaForSequenceClassification&quot;,&quot;title&quot;:&quot;DebertaForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.DebertaForTokenClassification&quot;,&quot;title&quot;:&quot;DebertaForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.DebertaForQuestionAnswering&quot;,&quot;title&quot;:&quot;DebertaForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaModel&quot;,&quot;title&quot;:&quot;TFDebertaModel&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaPreTrainedModel&quot;,&quot;title&quot;:&quot;TFDebertaPreTrainedModel&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaForMaskedLM&quot;,&quot;title&quot;:&quot;TFDebertaForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaForSequenceClassification&quot;,&quot;title&quot;:&quot;TFDebertaForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaForTokenClassification&quot;,&quot;title&quot;:&quot;TFDebertaForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFDebertaForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFDebertaForQuestionAnswering&quot;}],&quot;title&quot;:&quot;DeBERTa&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16341/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-730da01c.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-ed612d98.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/deberta.mdx-d16a0f95.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/deberta.mdx-50feaae0.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -846,7 +846,7 @@ elements depending on the configuration (<a
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
-<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+<p>Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.</p>
 </li>
 <li>
 <p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
@@ -1036,7 +1036,7 @@ elements depending on the configuration (<a
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
-<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+<p>Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.</p>
 </li>
 <li>
 <p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
@@ -1256,7 +1256,7 @@ elements depending on the configuration (<a
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
-<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+<p>Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.</p>
 </li>
 <li>
 <p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
@@ -1458,7 +1458,7 @@ elements depending on the configuration (<a
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
-<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+<p>Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.</p>
 </li>
 <li>
 <p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
@@ -2568,10 +2568,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1ly3ue2">
-		import { start } from "/docs/transformers/pr_16341/en/_app/start-730da01c.js";
+		<script type="module" data-hydrate="1jd2lve">
+		import { start } from "/docs/transformers/pr_16341/en/_app/start-ed612d98.js";
 		start({
-			target: document.querySelector('[data-hydrate="1ly3ue2"]').parentNode,
+			target: document.querySelector('[data-hydrate="1jd2lve"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16341/en","assets":"/docs/transformers/pr_16341/en"},
 			session: {},
 			route: false,
@@ -2582,7 +2582,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/deberta.mdx-d16a0f95.js")
+						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/deberta.mdx-50feaae0.js")
 				],
 				params: {}
 			}
