@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;load&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;hugging-face-hub&quot;,&quot;title&quot;:&quot;Hugging Face Hub&quot;},{&quot;local&quot;:&quot;local-and-remote-files&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;csv&quot;,&quot;title&quot;:&quot;CSV&quot;},{&quot;local&quot;:&quot;json&quot;,&quot;title&quot;:&quot;JSON&quot;},{&quot;local&quot;:&quot;text-files&quot;,&quot;title&quot;:&quot;Text files&quot;},{&quot;local&quot;:&quot;parquet&quot;,&quot;title&quot;:&quot;Parquet&quot;}],&quot;title&quot;:&quot;Local and remote files&quot;},{&quot;local&quot;:&quot;inmemory-data&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;python-dictionary&quot;,&quot;title&quot;:&quot;Python dictionary&quot;},{&quot;local&quot;:&quot;pandas-dataframe&quot;,&quot;title&quot;:&quot;Pandas DataFrame&quot;}],&quot;title&quot;:&quot;In-memory data&quot;},{&quot;local&quot;:&quot;offline&quot;,&quot;title&quot;:&quot;Offline&quot;},{&quot;local&quot;:&quot;slice-splits&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;percent-slicing-and-rounding&quot;,&quot;title&quot;:&quot;Percent slicing and rounding&quot;}],&quot;title&quot;:&quot;Slice splits&quot;},{&quot;local&quot;:&quot;troubleshooting&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;manual-download&quot;,&quot;title&quot;:&quot;Manual download&quot;},{&quot;local&quot;:&quot;specify-features&quot;,&quot;title&quot;:&quot;Specify features&quot;}],&quot;title&quot;:&quot;Troubleshooting&quot;},{&quot;local&quot;:&quot;metrics&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;load-configurations&quot;,&quot;title&quot;:&quot;Load configurations&quot;},{&quot;local&quot;:&quot;distributed-setup&quot;,&quot;title&quot;:&quot;Distributed setup&quot;}],&quot;title&quot;:&quot;Metrics&quot;}],&quot;title&quot;:&quot;Load&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/datasets/pr_3963/en/_app/assets/pages/__layout.svelte-3105cf57.css">
-	<link rel="modulepreload" href="/docs/datasets/pr_3963/en/_app/start-a3a72ec2.js">
+	<link rel="modulepreload" href="/docs/datasets/pr_3963/en/_app/start-d1b9fb52.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3963/en/_app/chunks/vendor-aa873a46.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3963/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3963/en/_app/pages/__layout.svelte-42d087a1.js">
-	<link rel="modulepreload" href="/docs/datasets/pr_3963/en/_app/pages/loading.mdx-c6981180.js">
+	<link rel="modulepreload" href="/docs/datasets/pr_3963/en/_app/pages/loading.mdx-4b51832b.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3963/en/_app/chunks/Tip-f7f252ab.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3963/en/_app/chunks/IconCopyLink-d0ca3106.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3963/en/_app/chunks/CodeBlock-1f14baf3.js">
@@ -83,7 +83,7 @@
 <p>🤗 Datasets can be loaded from local files stored on your computer, and also from remote files. The datasets are most likely stored as a <code>csv</code>, <code>json</code>, <code>txt</code> or <code>parquet</code> file. The <a href="/docs/datasets/pr_3963/en/package_reference/loading_methods#datasets.load_dataset">load_dataset()</a> method is able to load each of these file types.</p>
 
 
-<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>Curious about how to load datasets for vision or audio? Check out the <a href="./image_process">image</a> and <a href="./audio_process">audio</a> loading guide!</p></div>
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>Curious about how to load datasets for vision or audio? Check out the <a href="./image_process">image</a> and <a href="./audio_process">audio</a> loading guides!</p></div>
 <h3 class="relative group"><a id="csv" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#csv"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>CSV
 	</span></h3>
@@ -434,10 +434,10 @@ Manual data can be loaded <span class="hljs-keyword">with</span> `datasets.load_
 <span class="hljs-meta">&gt;&gt;&gt; </span>metric = load_metric(<span class="hljs-string">&#x27;glue&#x27;</span>, <span class="hljs-string">&#x27;mrpc&#x27;</span>, num_process=num_process, process_id=process_id, experiment_id=<span class="hljs-string">&quot;My_experiment_10&quot;</span>)<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="11yg34t">
-		import { start } from "/docs/datasets/pr_3963/en/_app/start-a3a72ec2.js";
+		<script type="module" data-hydrate="1tawqtq">
+		import { start } from "/docs/datasets/pr_3963/en/_app/start-d1b9fb52.js";
 		start({
-			target: document.querySelector('[data-hydrate="11yg34t"]').parentNode,
+			target: document.querySelector('[data-hydrate="1tawqtq"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_3963/en","assets":"/docs/datasets/pr_3963/en"},
 			session: {},
 			route: false,
@@ -448,7 +448,7 @@ Manual data can be loaded <span class="hljs-keyword">with</span> `datasets.load_
 				error: null,
 				nodes: [
 					import("/docs/datasets/pr_3963/en/_app/pages/__layout.svelte-42d087a1.js"),
-						import("/docs/datasets/pr_3963/en/_app/pages/loading.mdx-c6981180.js")
+						import("/docs/datasets/pr_3963/en/_app/pages/loading.mdx-4b51832b.js")
 				],
 				params: {}
 			}
