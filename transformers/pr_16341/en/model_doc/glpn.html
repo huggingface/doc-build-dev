@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;glpn&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.GLPNConfig&quot;,&quot;title&quot;:&quot;GLPNConfig&quot;},{&quot;local&quot;:&quot;transformers.GLPNFeatureExtractor&quot;,&quot;title&quot;:&quot;GLPNFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.GLPNModel&quot;,&quot;title&quot;:&quot;GLPNModel&quot;},{&quot;local&quot;:&quot;transformers.GLPNForDepthEstimation&quot;,&quot;title&quot;:&quot;GLPNForDepthEstimation&quot;}],&quot;title&quot;:&quot;GLPN&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16341/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-20320b64.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-55b67e58.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/glpn.mdx-201359cf.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/glpn.mdx-4a20a453.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -368,7 +368,7 @@ elements depending on the configuration (<a
 <p><strong>last_hidden_state</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>) — Sequence of hidden-states at the output of the last layer of the model.</p>
 </li>
 <li>
-<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
@@ -501,7 +501,7 @@ elements depending on the configuration (<a
 <p><strong>predicted_depth</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, height, width)</code>) — Predicted depth for each pixel.</p>
 </li>
 <li>
-<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, num_channels, height, width)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
@@ -538,10 +538,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_depth = outputs.predicted_depth  <span class="hljs-comment"># shape (batch_size, height, width)</span><!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1qhjwgn">
-		import { start } from "/docs/transformers/pr_16341/en/_app/start-20320b64.js";
+		<script type="module" data-hydrate="amxh5j">
+		import { start } from "/docs/transformers/pr_16341/en/_app/start-55b67e58.js";
 		start({
-			target: document.querySelector('[data-hydrate="1qhjwgn"]').parentNode,
+			target: document.querySelector('[data-hydrate="amxh5j"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16341/en","assets":"/docs/transformers/pr_16341/en"},
 			session: {},
 			route: false,
@@ -552,7 +552,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/glpn.mdx-201359cf.js")
+						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/glpn.mdx-4a20a453.js")
 				],
 				params: {}
 			}

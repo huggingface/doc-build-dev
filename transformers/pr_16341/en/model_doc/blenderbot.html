@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;blenderbot&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;implementation-notes&quot;,&quot;title&quot;:&quot;Implementation Notes&quot;},{&quot;local&quot;:&quot;usage&quot;,&quot;title&quot;:&quot;Usage&quot;},{&quot;local&quot;:&quot;transformers.BlenderbotConfig&quot;,&quot;title&quot;:&quot;BlenderbotConfig&quot;},{&quot;local&quot;:&quot;transformers.BlenderbotTokenizer&quot;,&quot;title&quot;:&quot;BlenderbotTokenizer&quot;},{&quot;local&quot;:&quot;transformers.BlenderbotTokenizerFast&quot;,&quot;title&quot;:&quot;BlenderbotTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.BlenderbotModel&quot;,&quot;title&quot;:&quot;BlenderbotModel&quot;},{&quot;local&quot;:&quot;transformers.BlenderbotForConditionalGeneration&quot;,&quot;title&quot;:&quot;BlenderbotForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.BlenderbotForCausalLM&quot;,&quot;title&quot;:&quot;BlenderbotForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.TFBlenderbotModel&quot;,&quot;title&quot;:&quot;TFBlenderbotModel&quot;},{&quot;local&quot;:&quot;transformers.TFBlenderbotForConditionalGeneration&quot;,&quot;title&quot;:&quot;TFBlenderbotForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.FlaxBlenderbotModel&quot;,&quot;title&quot;:&quot;FlaxBlenderbotModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxBlenderbotForConditionalGeneration&quot;,&quot;title&quot;:&quot;FlaxBlenderbotForConditionalGeneration&quot;}],&quot;title&quot;:&quot;Blenderbot&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16341/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-20320b64.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-55b67e58.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/blenderbot.mdx-dd698450.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/blenderbot.mdx-b23e7a7b.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -562,7 +562,7 @@ elements depending on the configuration (<a
 blocks) that can be used (see <code>past_key_values</code> input) to speed up sequential decoding.</p>
 </li>
 <li>
-<p><strong>decoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+<p><strong>decoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the decoder at the output of each layer plus the initial embedding outputs.</p>
 </li>
@@ -580,7 +580,7 @@ weighted average in the cross-attention heads.</p>
 <p><strong>encoder_last_hidden_state</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>) — Sequence of hidden-states at the output of the last layer of the encoder of the model.</p>
 </li>
 <li>
-<p><strong>encoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+<p><strong>encoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the encoder at the output of each layer plus the initial embedding outputs.</p>
 </li>
@@ -822,7 +822,7 @@ elements depending on the configuration (<a
 blocks) that can be used (see <code>past_key_values</code> input) to speed up sequential decoding.</p>
 </li>
 <li>
-<p><strong>decoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+<p><strong>decoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the decoder at the output of each layer plus the initial embedding outputs.</p>
 </li>
@@ -840,7 +840,7 @@ weighted average in the cross-attention heads.</p>
 <p><strong>encoder_last_hidden_state</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, hidden_size)</code>, <em>optional</em>) — Sequence of hidden-states at the output of the last layer of the encoder of the model.</p>
 </li>
 <li>
-<p><strong>encoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+<p><strong>encoder_hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the encoder at the output of each layer plus the initial embedding outputs.</p>
 </li>
@@ -1046,7 +1046,7 @@ elements depending on the configuration (<a
 <p><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, config.vocab_size)</code>) — Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax).</p>
 </li>
 <li>
-<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
@@ -2512,10 +2512,10 @@ Only relevant if <code>config.is_decoder = True</code>.</p>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1czsrzq">
-		import { start } from "/docs/transformers/pr_16341/en/_app/start-20320b64.js";
+		<script type="module" data-hydrate="xe2551">
+		import { start } from "/docs/transformers/pr_16341/en/_app/start-55b67e58.js";
 		start({
-			target: document.querySelector('[data-hydrate="1czsrzq"]').parentNode,
+			target: document.querySelector('[data-hydrate="xe2551"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16341/en","assets":"/docs/transformers/pr_16341/en"},
 			session: {},
 			route: false,
@@ -2526,7 +2526,7 @@ Only relevant if <code>config.is_decoder = True</code>.</p>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/blenderbot.mdx-dd698450.js")
+						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/blenderbot.mdx-b23e7a7b.js")
 				],
 				params: {}
 			}

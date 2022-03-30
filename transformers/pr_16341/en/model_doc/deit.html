@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;deit&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.DeiTConfig&quot;,&quot;title&quot;:&quot;DeiTConfig&quot;},{&quot;local&quot;:&quot;transformers.DeiTFeatureExtractor&quot;,&quot;title&quot;:&quot;DeiTFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.DeiTModel&quot;,&quot;title&quot;:&quot;DeiTModel&quot;},{&quot;local&quot;:&quot;transformers.DeiTForMaskedImageModeling&quot;,&quot;title&quot;:&quot;DeiTForMaskedImageModeling&quot;},{&quot;local&quot;:&quot;transformers.DeiTForImageClassification&quot;,&quot;title&quot;:&quot;DeiTForImageClassification&quot;},{&quot;local&quot;:&quot;transformers.DeiTForImageClassificationWithTeacher&quot;,&quot;title&quot;:&quot;DeiTForImageClassificationWithTeacher&quot;}],&quot;title&quot;:&quot;DeiT&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16341/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-20320b64.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-55b67e58.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/deit.mdx-6f40477d.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/deit.mdx-2327f5f6.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -422,7 +422,7 @@ the classification token after processing through a linear layer and a tanh acti
 layer weights are trained from the next sentence prediction (classification) objective during pretraining.</p>
 </li>
 <li>
-<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
@@ -570,7 +570,7 @@ elements depending on the configuration (<a
 <p><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, config.vocab_size)</code>) — Prediction scores of the language modeling head (scores for each vocabulary token before SoftMax).</p>
 </li>
 <li>
-<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
 <p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
 </li>
@@ -716,7 +716,7 @@ elements depending on the configuration (<a
 <p><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, config.num_labels)</code>) — Classification (or regression if config.num_labels==1) scores (before SoftMax).</p>
 </li>
 <li>
-<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the models has an embedding layer, +
+<p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each stage) of shape <code>(batch_size, sequence_length, hidden_size)</code>. Hidden-states
 (also called feature maps) of the model at the output of each stage.</p>
 </li>
@@ -897,10 +897,10 @@ the latter silently ignores them.</p></div>
 tabby, tabby cat<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="8v8771">
-		import { start } from "/docs/transformers/pr_16341/en/_app/start-20320b64.js";
+		<script type="module" data-hydrate="1pogwji">
+		import { start } from "/docs/transformers/pr_16341/en/_app/start-55b67e58.js";
 		start({
-			target: document.querySelector('[data-hydrate="8v8771"]').parentNode,
+			target: document.querySelector('[data-hydrate="1pogwji"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16341/en","assets":"/docs/transformers/pr_16341/en"},
 			session: {},
 			route: false,
@@ -911,7 +911,7 @@ tabby, tabby cat<!-- HTML_TAG_END --></pre></div></div></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/deit.mdx-6f40477d.js")
+						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/deit.mdx-2327f5f6.js")
 				],
 				params: {}
 			}
