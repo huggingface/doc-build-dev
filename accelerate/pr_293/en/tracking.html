@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;tracking&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;accelerate.tracking.TensorBoardTracker&quot;,&quot;title&quot;:&quot;Integrated Trackers&quot;},{&quot;local&quot;:&quot;implementing-custom-trackers&quot;,&quot;title&quot;:&quot;Implementing Custom Trackers&quot;},{&quot;local&quot;:&quot;when-a-wrapper-cannot-work&quot;,&quot;title&quot;:&quot;When a wrapper cannot work&quot;}],&quot;title&quot;:&quot;Tracking&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/accelerate/pr_293/en/_app/assets/pages/__layout.svelte-731420cf.css">
-	<link rel="modulepreload" href="/docs/accelerate/pr_293/en/_app/start-8d848715.js">
+	<link rel="modulepreload" href="/docs/accelerate/pr_293/en/_app/start-698e3bbb.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_293/en/_app/chunks/vendor-19e06bd2.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_293/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_293/en/_app/pages/__layout.svelte-00a862c5.js">
-	<link rel="modulepreload" href="/docs/accelerate/pr_293/en/_app/pages/tracking.mdx-f977fadc.js">
+	<link rel="modulepreload" href="/docs/accelerate/pr_293/en/_app/pages/tracking.mdx-7885c35f.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_293/en/_app/chunks/Docstring-395e5a9c.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_293/en/_app/chunks/IconCopyLink-3c713d38.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_293/en/_app/chunks/CodeBlock-9dd1fdfb.js"> 
@@ -348,13 +348,10 @@ accelerator.end_training()<!-- HTML_TAG_END --></pre></div>
 
 <p>To implement a new tracker to be used in <code>Accelerator</code>, a new one can be made through implementing the <code>~GeneralTracker</code> class.
 Every tracker must implement three functions:</p>
-<ul><li><code>__init__</code>:
-Should store a <code>run_name</code> and initialize the tracker API of the integrated library.
-If a tracker stores their data locally (such as TensorBoard), a <code>logging_dir</code> parameter can be added.</li>
-<li><code>store_init_configuration</code>:
-Should take in a <code>values</code> dictionary and store them as a one-time experiment configuration</li>
-<li><code>log</code>:
-Should take in a <code>values</code> dictionary and a <code>step</code>, and should log them to the run</li></ul>
+<ul><li><code>__init__</code>: <ul><li>Should store a <code>run_name</code> and initialize the tracker API of the integrated library. </li>
+<li>If a tracker stores their data locally (such as TensorBoard), a <code>logging_dir</code> parameter can be added.</li></ul></li>
+<li><code>store_init_configuration</code>: <ul><li>Should take in a <code>values</code> dictionary and store them as a one-time experiment configuration</li></ul></li>
+<li><code>log</code>: <ul><li>Should take in a <code>values</code> dictionary and a <code>step</code>, and should log them to the run</li></ul></li></ul>
 <p>A brief example can be seen below with an integration with Weights and Biases, containing only the relevent information:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -410,10 +407,10 @@ for iteration in config[&quot;num_iterations&quot;]:
 <span class="hljs-addition">+           run[&quot;logs/training/batch/loss&quot;].log(loss)</span><!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="3auqz7">
-		import { start } from "/docs/accelerate/pr_293/en/_app/start-8d848715.js";
+		<script type="module" data-hydrate="1xv1dp2">
+		import { start } from "/docs/accelerate/pr_293/en/_app/start-698e3bbb.js";
 		start({
-			target: document.querySelector('[data-hydrate="3auqz7"]').parentNode,
+			target: document.querySelector('[data-hydrate="1xv1dp2"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_293/en","assets":"/docs/accelerate/pr_293/en"},
 			session: {},
 			route: false,
@@ -424,7 +421,7 @@ for iteration in config[&quot;num_iterations&quot;]:
 				error: null,
 				nodes: [
 					import("/docs/accelerate/pr_293/en/_app/pages/__layout.svelte-00a862c5.js"),
-						import("/docs/accelerate/pr_293/en/_app/pages/tracking.mdx-f977fadc.js")
+						import("/docs/accelerate/pr_293/en/_app/pages/tracking.mdx-7885c35f.js")
 				],
 				params: {}
 			}
