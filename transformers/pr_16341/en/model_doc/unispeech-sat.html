@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;unispeechsat&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatConfig&quot;,&quot;title&quot;:&quot;UniSpeechSatConfig&quot;},{&quot;local&quot;:&quot;transformers.models.unispeech_sat.modeling_unispeech_sat.UniSpeechSatBaseModelOutput&quot;,&quot;title&quot;:&quot;UniSpeechSat specific outputs&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatModel&quot;,&quot;title&quot;:&quot;UniSpeechSatModel&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatForCTC&quot;,&quot;title&quot;:&quot;UniSpeechSatForCTC&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatForSequenceClassification&quot;,&quot;title&quot;:&quot;UniSpeechSatForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatForAudioFrameClassification&quot;,&quot;title&quot;:&quot;UniSpeechSatForAudioFrameClassification&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatForXVector&quot;,&quot;title&quot;:&quot;UniSpeechSatForXVector&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatForPreTraining&quot;,&quot;title&quot;:&quot;UniSpeechSatForPreTraining&quot;}],&quot;title&quot;:&quot;UniSpeech-SAT&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16341/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-697e555b.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/start-730da01c.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/unispeech-sat.mdx-4ed5ae5c.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/pages/model_doc/unispeech-sat.mdx-4463aee8.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16341/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -738,7 +738,7 @@ elements depending on the configuration (<a
 <li>
 <p><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings, if the model has an embedding layer, +
 one for the output of each layer) of shape <code>(batch_size, sequence_length, hidden_size)</code>.</p>
-<p>Hidden-states of the model at the output of each layer plus the initial embedding outputs.</p>
+<p>Hidden-states of the model at the output of each layer plus the optional initial embedding outputs.</p>
 </li>
 <li>
 <p><strong>attentions</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_attentions=True</code> is passed or when <code>config.output_attentions=True</code>) — Tuple of <code>torch.FloatTensor</code> (one for each layer) of shape <code>(batch_size, num_heads, sequence_length, sequence_length)</code>.</p>
@@ -1475,10 +1475,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># <span class="hljs-doctag">TODO:</span> Add full pretraining example</span><!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="4n5xke">
-		import { start } from "/docs/transformers/pr_16341/en/_app/start-697e555b.js";
+		<script type="module" data-hydrate="auui4g">
+		import { start } from "/docs/transformers/pr_16341/en/_app/start-730da01c.js";
 		start({
-			target: document.querySelector('[data-hydrate="4n5xke"]').parentNode,
+			target: document.querySelector('[data-hydrate="auui4g"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16341/en","assets":"/docs/transformers/pr_16341/en"},
 			session: {},
 			route: false,
@@ -1489,7 +1489,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16341/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/unispeech-sat.mdx-4ed5ae5c.js")
+						import("/docs/transformers/pr_16341/en/_app/pages/model_doc/unispeech-sat.mdx-4463aee8.js")
 				],
 				params: {}
 			}
