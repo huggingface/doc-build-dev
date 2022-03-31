@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;datasets-arrow&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;what-is-arrow&quot;,&quot;title&quot;:&quot;What is Arrow?&quot;},{&quot;local&quot;:&quot;memorymapping&quot;,&quot;title&quot;:&quot;Memory-mapping&quot;},{&quot;local&quot;:&quot;performance&quot;,&quot;title&quot;:&quot;Performance&quot;}],&quot;title&quot;:&quot;Datasets 🤝 Arrow&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/datasets/pr_3989/en/_app/assets/pages/__layout.svelte-f1bf02cc.css">
-	<link rel="modulepreload" href="/docs/datasets/pr_3989/en/_app/start-53dd795e.js">
+	<link rel="stylesheet" href="/docs/datasets/pr_3989/en/_app/assets/pages/__layout.svelte-3105cf57.css">
+	<link rel="modulepreload" href="/docs/datasets/pr_3989/en/_app/start-62d1dd72.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3989/en/_app/chunks/vendor-aa873a46.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3989/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3989/en/_app/pages/__layout.svelte-42d087a1.js">
-	<link rel="modulepreload" href="/docs/datasets/pr_3989/en/_app/pages/about_arrow.mdx-7b8e2b9c.js">
+	<link rel="modulepreload" href="/docs/datasets/pr_3989/en/_app/pages/about_arrow.mdx-ec403f73.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3989/en/_app/chunks/IconCopyLink-d0ca3106.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_3989/en/_app/chunks/CodeBlock-1f14baf3.js"> 
 
@@ -41,9 +41,9 @@ This architecture allows for large datasets to be used on machines with relative
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
 
 <span class="hljs-comment"># Process.memory_info is expressed in bytes, so convert to megabytes </span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>mem_before = psutil.Process(os.getpid()).memory_info().rss &gt;&gt; <span class="hljs-number">20</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>mem_before = psutil.Process(os.getpid()).memory_info().rss / (<span class="hljs-number">1024</span> * <span class="hljs-number">1024</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>wiki = load_dataset(<span class="hljs-string">&quot;wikipedia&quot;</span>, <span class="hljs-string">&quot;20220301.en&quot;</span>, split=<span class="hljs-string">&quot;train&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>mem_after = psutil.Process(os.getpid()).memory_info().rss &gt;&gt; <span class="hljs-number">20</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>mem_after = psutil.Process(os.getpid()).memory_info().rss / (<span class="hljs-number">1024</span> * <span class="hljs-number">1024</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;RAM memory used: <span class="hljs-subst">{(mem_after - mem_before)}</span> MB&quot;</span>)
 RAM memory used: <span class="hljs-number">50</span> MB<!-- HTML_TAG_END --></pre></div>
@@ -70,10 +70,10 @@ Time to iterate over the <span class="hljs-number">18</span> GB dataset: <span c
 <p>You can obtain the best performance by accessing slices of data (or “batches”), in order to reduce the amount of lookups on disk.</p>
 
 
-		<script type="module" data-hydrate="r47j15">
-		import { start } from "/docs/datasets/pr_3989/en/_app/start-53dd795e.js";
+		<script type="module" data-hydrate="au0j95">
+		import { start } from "/docs/datasets/pr_3989/en/_app/start-62d1dd72.js";
 		start({
-			target: document.querySelector('[data-hydrate="r47j15"]').parentNode,
+			target: document.querySelector('[data-hydrate="au0j95"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_3989/en","assets":"/docs/datasets/pr_3989/en"},
 			session: {},
 			route: false,
@@ -84,7 +84,7 @@ Time to iterate over the <span class="hljs-number">18</span> GB dataset: <span c
 				error: null,
 				nodes: [
 					import("/docs/datasets/pr_3989/en/_app/pages/__layout.svelte-42d087a1.js"),
-						import("/docs/datasets/pr_3989/en/_app/pages/about_arrow.mdx-7b8e2b9c.js")
+						import("/docs/datasets/pr_3989/en/_app/pages/about_arrow.mdx-ec403f73.js")
 				],
 				params: {}
 			}
