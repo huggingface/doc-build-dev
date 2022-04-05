@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;ctrl&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.CTRLConfig&quot;,&quot;title&quot;:&quot;CTRLConfig&quot;},{&quot;local&quot;:&quot;transformers.CTRLTokenizer&quot;,&quot;title&quot;:&quot;CTRLTokenizer&quot;},{&quot;local&quot;:&quot;transformers.CTRLModel&quot;,&quot;title&quot;:&quot;CTRLModel&quot;},{&quot;local&quot;:&quot;transformers.CTRLLMHeadModel&quot;,&quot;title&quot;:&quot;CTRLLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.CTRLForSequenceClassification&quot;,&quot;title&quot;:&quot;CTRLForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFCTRLModel&quot;,&quot;title&quot;:&quot;TFCTRLModel&quot;},{&quot;local&quot;:&quot;transformers.TFCTRLLMHeadModel&quot;,&quot;title&quot;:&quot;TFCTRLLMHeadModel&quot;},{&quot;local&quot;:&quot;transformers.TFCTRLForSequenceClassification&quot;,&quot;title&quot;:&quot;TFCTRLForSequenceClassification&quot;}],&quot;title&quot;:&quot;CTRL&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16593/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16593/en/_app/start-70177d90.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16593/en/_app/start-418821b3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16593/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16593/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16593/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16593/en/_app/pages/model_doc/ctrl.mdx-652af20f.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16593/en/_app/pages/model_doc/ctrl.mdx-11668c36.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16593/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16593/en/_app/chunks/Docstring-abef54e3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16593/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -254,8 +254,8 @@ and behavior.</p>
 			<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 			<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: LongTensor = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">past_key_values<span class="opacity-60">: typing.Tuple[typing.Tuple[torch.FloatTensor]] = None</span></span>
+		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">past_key_values<span class="opacity-60">: typing.Optional[typing.Tuple[typing.Tuple[torch.FloatTensor]]] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
@@ -450,8 +450,8 @@ and behavior.</p>
 			<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 			<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: LongTensor = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">past_key_values<span class="opacity-60">: typing.Tuple[typing.Tuple[torch.FloatTensor]] = None</span></span>
+		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">past_key_values<span class="opacity-60">: typing.Optional[typing.Tuple[typing.Tuple[torch.FloatTensor]]] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: LongTensor = None</span></span>
@@ -658,8 +658,8 @@ and behavior.</p>
 			<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 			<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: LongTensor = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">past_key_values<span class="opacity-60">: typing.Tuple[typing.Tuple[torch.FloatTensor]] = None</span></span>
+		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">past_key_values<span class="opacity-60">: typing.Optional[typing.Tuple[typing.Tuple[torch.FloatTensor]]] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
@@ -1541,10 +1541,10 @@ the latter silently ignores them.</p></div>
 <!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1dfshpe">
-		import { start } from "/docs/transformers/pr_16593/en/_app/start-70177d90.js";
+		<script type="module" data-hydrate="wuux5a">
+		import { start } from "/docs/transformers/pr_16593/en/_app/start-418821b3.js";
 		start({
-			target: document.querySelector('[data-hydrate="1dfshpe"]').parentNode,
+			target: document.querySelector('[data-hydrate="wuux5a"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16593/en","assets":"/docs/transformers/pr_16593/en"},
 			session: {},
 			route: false,
@@ -1555,7 +1555,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16593/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16593/en/_app/pages/model_doc/ctrl.mdx-652af20f.js")
+						import("/docs/transformers/pr_16593/en/_app/pages/model_doc/ctrl.mdx-11668c36.js")
 				],
 				params: {}
 			}
