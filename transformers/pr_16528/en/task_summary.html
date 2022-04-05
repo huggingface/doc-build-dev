@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;summary-of-the-tasks&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;sequence-classification&quot;,&quot;title&quot;:&quot;Sequence Classification&quot;},{&quot;local&quot;:&quot;extractive-question-answering&quot;,&quot;title&quot;:&quot;Extractive Question Answering&quot;},{&quot;local&quot;:&quot;language-modeling&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;masked-language-modeling&quot;,&quot;title&quot;:&quot;Masked Language Modeling&quot;},{&quot;local&quot;:&quot;causal-language-modeling&quot;,&quot;title&quot;:&quot;Causal Language Modeling&quot;},{&quot;local&quot;:&quot;text-generation&quot;,&quot;title&quot;:&quot;Text Generation&quot;}],&quot;title&quot;:&quot;Language Modeling&quot;},{&quot;local&quot;:&quot;named-entity-recognition&quot;,&quot;title&quot;:&quot;Named Entity Recognition&quot;},{&quot;local&quot;:&quot;summarization&quot;,&quot;title&quot;:&quot;Summarization&quot;},{&quot;local&quot;:&quot;translation&quot;,&quot;title&quot;:&quot;Translation&quot;},{&quot;local&quot;:&quot;audio-classification&quot;,&quot;title&quot;:&quot;Audio classification&quot;},{&quot;local&quot;:&quot;automatic-speech-recognition&quot;,&quot;title&quot;:&quot;Automatic speech recognition&quot;},{&quot;local&quot;:&quot;image-classification&quot;,&quot;title&quot;:&quot;Image classification&quot;}],&quot;title&quot;:&quot;Summary of the tasks&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16528/en/_app/assets/pages/__layout.svelte-a6ed50f6.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16528/en/_app/start-63460c91.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16528/en/_app/start-e952e600.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16528/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16528/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16528/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16528/en/_app/pages/task_summary.mdx-8d69835e.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16528/en/_app/pages/task_summary.mdx-d7c8943b.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16528/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16528/en/_app/chunks/IconCopyLink-7a11ce68.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16528/en/_app/chunks/CodeBlock-3a8b25a8.js">
@@ -1051,7 +1051,7 @@ model, such as <code>Bart</code> or <code>T5</code>.</li>
 	<span>Audio classification
 	</span></h2>
 
-<p>Audio classification assigns a class to an audio signal. The Keyword Spotting dataset from the <a href="https://huggingface.co/datasets/superb" rel="nofollow">SUPERB</a> benchmark is an example dataset that can be used for audio classification fine-tuning. This dataset contains ten classes of keywords for classification. If you’d like to fine-tune a model for audio classification, take a look at the <a href="https://github.com/huggingface/transformers/blob/main/examples/pytorch/audio-classification/run_audio_classification.py" rel="nofollow">run_audio_classification.py</a> script or the how-to guide <a href="./tasks/audio_classification">here</a>.</p>
+<p>Audio classification assigns a class to an audio signal. The Keyword Spotting dataset from the <a href="https://huggingface.co/datasets/superb" rel="nofollow">SUPERB</a> benchmark is an example dataset that can be used for audio classification fine-tuning. This dataset contains ten classes of keywords for classification. If you’d like to fine-tune a model for audio classification, take a look at the <a href="https://github.com/huggingface/transformers/blob/main/examples/pytorch/audio-classification/run_audio_classification.py" rel="nofollow">run_audio_classification.py</a> script or this <a href="./tasks/audio_classification">how-to guide</a>.</p>
 <p>The following examples demonstrate how to use a <a href="/docs/transformers/pr_16528/en/main_classes/pipelines#transformers.pipeline">pipeline()</a> and a model and tokenizer for audio classification inference:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -1068,8 +1068,8 @@ model, such as <code>Bart</code> or <code>T5</code>.</li>
  {<span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;happy&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.12635163962841034</span>},
  {<span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;angry&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.12439591437578201</span>},
  {<span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;fearful&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.12404385954141617</span>}]<!-- HTML_TAG_END --></pre></div>
-<p>The general process for using a model and tokenizer for audio classification is:</p>
-<ol><li>Instantiate a tokenizer and a model from the checkpoint name.</li>
+<p>The general process for using a model and feature extractor for audio classification is:</p>
+<ol><li>Instantiate a feature extractor and a model from the checkpoint name.</li>
 <li>Process the audio signal to be classified with a feature extractor.</li>
 <li>Pass the input through the model and take the <code>argmax</code> to retrieve the most likely class.</li>
 <li>Convert the class id to a class name with <code>id2label</code> to return an interpretable result.</li></ol>
@@ -1114,7 +1114,7 @@ model, such as <code>Bart</code> or <code>T5</code>.</li>
 	<span>Automatic speech recognition
 	</span></h2>
 
-<p>Automatic speech recognition transcribes an audio signal to text. The <a href="https://huggingface.co/datasets/common_voice" rel="nofollow">Common Voice</a> dataset is an example dataset that can be used for automatic speech recognition fine-tuning. It contains an audio file of a speaker and the corresponding sentence. If you’d like to fine-tune a model for automatic speech recognition, take a look at the <a href="https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-recognition/run_speech_recognition_ctc.py" rel="nofollow">run_speech_recognition_ctc.py</a> or <a href="https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-recognition/run_speech_recognition_seq2seq.py" rel="nofollow">run_speech_recognition_seq2seq.py</a> scripts or the how-to guide <a href="./tasks/asr">here</a>.</p>
+<p>Automatic speech recognition transcribes an audio signal to text. The <a href="https://huggingface.co/datasets/common_voice" rel="nofollow">Common Voice</a> dataset is an example dataset that can be used for automatic speech recognition fine-tuning. It contains an audio file of a speaker and the corresponding sentence. If you’d like to fine-tune a model for automatic speech recognition, take a look at the <a href="https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-recognition/run_speech_recognition_ctc.py" rel="nofollow">run_speech_recognition_ctc.py</a> or <a href="https://github.com/huggingface/transformers/blob/main/examples/pytorch/speech-recognition/run_speech_recognition_seq2seq.py" rel="nofollow">run_speech_recognition_seq2seq.py</a> scripts or this <a href="./tasks/asr">how-to guide</a>.</p>
 <p>The following examples demonstrate how to use a <a href="/docs/transformers/pr_16528/en/main_classes/pipelines#transformers.pipeline">pipeline()</a> and a model and tokenizer for automatic speech recognition inference:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -1127,8 +1127,8 @@ model, such as <code>Bart</code> or <code>T5</code>.</li>
 <span class="hljs-meta">... </span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>speech_recognizer(<span class="hljs-string">&quot;jfk_moon_speech.wav&quot;</span>)
 {<span class="hljs-string">&#x27;text&#x27;</span>: <span class="hljs-string">&quot;PRESENTETE MISTER VICE PRESIDENT GOVERNOR CONGRESSMEN THOMAS SAN O TE WILAN CONGRESSMAN MILLA MISTER WEBB MSTBELL SCIENIS DISTINGUISHED GUESS AT LADIES AND GENTLEMAN I APPRECIATE TO YOUR PRESIDENT HAVING MADE ME AN HONORARY VISITING PROFESSOR AND I WILL ASSURE YOU THAT MY FIRST LECTURE WILL BE A VERY BRIEF I AM DELIGHTED TO BE HERE AND I&#x27;M PARTICULARLY DELIGHTED TO BE HERE ON THIS OCCASION WE MEED AT A COLLEGE NOTED FOR KNOWLEGE IN A CITY NOTED FOR PROGRESS IN A STATE NOTED FOR STRAINTH AN WE STAND IN NEED OF ALL THREE&quot;</span>}<!-- HTML_TAG_END --></pre></div>
-<p>The general process for using a model and tokenizer for automatic speech recognition is:</p>
-<ol><li>Instantiate a tokenizer and a model from the checkpoint name.</li>
+<p>The general process for using a model and processor for automatic speech recognition is:</p>
+<ol><li>Instantiate a processor (which regroups a feature extractor for input processing and a tokenizer for decoding) and a model from the checkpoint name.</li>
 <li>Process the audio signal and text with a processor.</li>
 <li>Pass the input through the model and take the <code>argmax</code> to retrieve the predicted text.</li>
 <li>Decode the text with a tokenizer to obtain the transcription.</li></ol>
@@ -1172,7 +1172,7 @@ model, such as <code>Bart</code> or <code>T5</code>.</li>
 	<span>Image classification
 	</span></h2>
 
-<p>Like text and audio classification, image classification assigns a class to an image. The <a href="https://huggingface.co/datasets/cifar100" rel="nofollow">CIFAR-100</a> dataset is an example dataset that can be used for image classification fine-tuning. It contains an image and the corresponding class. If you’d like to fine-tune a model for image classification, take a look at the <a href="https://github.com/huggingface/transformers/blob/main/examples/pytorch/image-classification/run_image_classification.py" rel="nofollow">run_image_classification.py</a> script or the how-to guide <a href="./tasks/image_classification">here</a>.</p>
+<p>Like text and audio classification, image classification assigns a class to an image. The <a href="https://huggingface.co/datasets/cifar100" rel="nofollow">CIFAR-100</a> dataset is an example dataset that can be used for image classification fine-tuning. It contains an image and the corresponding class. If you’d like to fine-tune a model for image classification, take a look at the <a href="https://github.com/huggingface/transformers/blob/main/examples/pytorch/image-classification/run_image_classification.py" rel="nofollow">run_image_classification.py</a> script or this <a href="./tasks/image_classification">how-to guide</a>.</p>
 <p>The following examples demonstrate how to use a <a href="/docs/transformers/pr_16528/en/main_classes/pipelines#transformers.pipeline">pipeline()</a> and a model and tokenizer for image classification inference:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -1191,8 +1191,8 @@ model, such as <code>Bart</code> or <code>T5</code>.</li>
   <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.032148055732250214</span>},
  {<span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;Egyptian cat&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.02353910356760025</span>},
  {<span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;tiger cat&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.023034192621707916</span>}]<!-- HTML_TAG_END --></pre></div>
-<p>The general process for using a model and tokenizer for image classification is:</p>
-<ol><li>Instantiate a tokenizer and a model from the checkpoint name.</li>
+<p>The general process for using a model and feature extractor for image classification is:</p>
+<ol><li>Instantiate a feature extractor and a model from the checkpoint name.</li>
 <li>Process the image to be classified with a feature extractor.</li>
 <li>Pass the input through the model and take the <code>argmax</code> to retrieve the predicted class.</li>
 <li>Convert the class id to a class name with <code>id2label</code> to return an interpretable result.</li></ol>
@@ -1234,10 +1234,10 @@ Egyptian cat<!-- HTML_TAG_END --></pre></div></div></div>
 	</div>
 
 
-		<script type="module" data-hydrate="1gcuc59">
-		import { start } from "/docs/transformers/pr_16528/en/_app/start-63460c91.js";
+		<script type="module" data-hydrate="dlql5n">
+		import { start } from "/docs/transformers/pr_16528/en/_app/start-e952e600.js";
 		start({
-			target: document.querySelector('[data-hydrate="1gcuc59"]').parentNode,
+			target: document.querySelector('[data-hydrate="dlql5n"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16528/en","assets":"/docs/transformers/pr_16528/en"},
 			session: {},
 			route: false,
@@ -1248,7 +1248,7 @@ Egyptian cat<!-- HTML_TAG_END --></pre></div></div></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16528/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16528/en/_app/pages/task_summary.mdx-8d69835e.js")
+						import("/docs/transformers/pr_16528/en/_app/pages/task_summary.mdx-d7c8943b.js")
 				],
 				params: {}
 			}
