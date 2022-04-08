@@ -1060,7 +1060,9 @@ print(translator("Hugging Face is a technology company based in New York and Par
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(translator(<span class="hljs-string">&quot;Hugging Face is a technology company based in New York and Paris&quot;</span>, max_length=<span class="hljs-number">40</span>))
 [{<span class="hljs-string">&#x27;translation_text&#x27;</span>: <span class="hljs-string">&#x27;Hugging Face ist ein Technologieunternehmen mit Sitz in New York und Paris.&#x27;</span>}]`}}),Te=new ms({props:{pytorch:!0,tensorflow:!0,jax:!1,$$slots:{tensorflow:[Aj],pytorch:[Ej]},$$scope:{ctx:$}}}),St=new J({}),Ot=new q({props:{code:`from transformers import pipeline
 from datasets import load_dataset
+import torch
 
+torch.manual_seed(42)
 dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
 dataset = dataset.sort("id")
 audio_file = dataset[0]["audio"]["path"]
@@ -1072,7 +1074,9 @@ predictions = audio_classifier(audio_file)
 predictions = [{"score": round(pred["score"], 4), "label": pred["label"]} for pred in predictions]
 predictions`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> pipeline
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
+<span class="hljs-meta">&gt;&gt;&gt; </span>torch.manual_seed(<span class="hljs-number">42</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = load_dataset(<span class="hljs-string">&quot;hf-internal-testing/librispeech_asr_demo&quot;</span>, <span class="hljs-string">&quot;clean&quot;</span>, split=<span class="hljs-string">&quot;validation&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = dataset.sort(<span class="hljs-string">&quot;id&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>audio_file = dataset[<span class="hljs-number">0</span>][<span class="hljs-string">&quot;audio&quot;</span>][<span class="hljs-string">&quot;path&quot;</span>]
@@ -1083,7 +1087,7 @@ predictions`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span clas
 <span class="hljs-meta">&gt;&gt;&gt; </span>predictions = audio_classifier(audio_file)
 <span class="hljs-meta">&gt;&gt;&gt; </span>predictions = [{<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-built_in">round</span>(pred[<span class="hljs-string">&quot;score&quot;</span>], <span class="hljs-number">4</span>), <span class="hljs-string">&quot;label&quot;</span>: pred[<span class="hljs-string">&quot;label&quot;</span>]} <span class="hljs-keyword">for</span> pred <span class="hljs-keyword">in</span> predictions]
 <span class="hljs-meta">&gt;&gt;&gt; </span>predictions
-[{<span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.1323</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;surprised&#x27;</span>}, {<span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.128</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;calm&#x27;</span>}, {<span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.1262</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;fearful&#x27;</span>}, {<span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.1252</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;angry&#x27;</span>}, {<span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.1246</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;sad&#x27;</span>}]`}}),Ie=new ms({props:{pytorch:!0,tensorflow:!0,jax:!1,$$slots:{pytorch:[Ij]},$$scope:{ctx:$}}}),Ht=new J({}),Wt=new q({props:{code:`from transformers import pipeline
+[{<span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.1315</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;calm&#x27;</span>}, {<span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.1307</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;neutral&#x27;</span>}, {<span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.1274</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;sad&#x27;</span>}, {<span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.1261</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;fearful&#x27;</span>}, {<span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.1242</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;happy&#x27;</span>}]`}}),Ie=new ms({props:{pytorch:!0,tensorflow:!0,jax:!1,$$slots:{pytorch:[Ij]},$$scope:{ctx:$}}}),Ht=new J({}),Wt=new q({props:{code:`from transformers import pipeline
 from datasets import load_dataset
 
 dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation")
