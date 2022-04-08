@@ -334,7 +334,7 @@ metric values. This is an experimental API and it may change.`,name:"bf16_full_e
 Whether to use full float16 evaluation instead of 32-bit. This will be faster and save memory but can harm
 metric values.`,name:"fp16_full_eval"},{anchor:"transformers.TrainingArguments.tf32",description:`<strong>tf32</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
 Whether to enable the TF32 mode, available in Ampere and newer GPU architectures. The default value depends
-on pytorch&#x2019;s version default of <code>torch.backends.cuda.matmul.allow_tf32</code>. For more details please refer to
+on PyTorch&#x2019;s version default of <code>torch.backends.cuda.matmul.allow_tf32</code>. For more details please refer to
 the <a href="https://huggingface.co/docs/transformers/performance#tf32" rel="nofollow">TF32</a> documentation. This is an
 experimental API and it may change.`,name:"tf32"},{anchor:"transformers.TrainingArguments.local_rank",description:`<strong>local_rank</strong> (<code>int</code>, <em>optional</em>, defaults to -1) &#x2014;
 Rank of the process during distributed training.`,name:"local_rank"},{anchor:"transformers.TrainingArguments.xpu_backend",description:`<strong>xpu_backend</strong> (<code>str</code>, <em>optional</em>) &#x2014;
@@ -574,7 +574,7 @@ metric values. This is an experimental API and it may change.`,name:"bf16_full_e
 Whether to use full float16 evaluation instead of 32-bit. This will be faster and save memory but can harm
 metric values.`,name:"fp16_full_eval"},{anchor:"transformers.Seq2SeqTrainingArguments.tf32",description:`<strong>tf32</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
 Whether to enable the TF32 mode, available in Ampere and newer GPU architectures. The default value depends
-on pytorch&#x2019;s version default of <code>torch.backends.cuda.matmul.allow_tf32</code>. For more details please refer to
+on PyTorch&#x2019;s version default of <code>torch.backends.cuda.matmul.allow_tf32</code>. For more details please refer to
 the <a href="https://huggingface.co/docs/transformers/performance#tf32" rel="nofollow">TF32</a> documentation. This is an
 experimental API and it may change.`,name:"tf32"},{anchor:"transformers.Seq2SeqTrainingArguments.local_rank",description:`<strong>local_rank</strong> (<code>int</code>, <em>optional</em>, defaults to -1) &#x2014;
 Rank of the process during distributed training.`,name:"local_rank"},{anchor:"transformers.Seq2SeqTrainingArguments.xpu_backend",description:`<strong>xpu_backend</strong> (<code>str</code>, <em>optional</em>) &#x2014;
