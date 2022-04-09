@@ -1393,8 +1393,8 @@ weighted average in the cross-attention heads.</p>
 `}}),Ls=new ve({props:{$$slots:{default:[fO]},$$scope:{ctx:j}}}),Ni=new se({props:{code:`from transformers import BertTokenizer, TFBertModel
 import tensorflow as tf
 
-tokenizer = BertTokenizer.from_pretrained("bert-base-cased")
-model = TFBertModel.from_pretrained("bert-base-cased")
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+model = TFBertModel.from_pretrained("bert-base-uncased")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="tf")
 outputs = model(inputs)
@@ -1402,8 +1402,8 @@ outputs = model(inputs)
 last_hidden_states = outputs.last_hidden_state`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> BertTokenizer, TFBertModel
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BertTokenizer.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFBertModel.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BertTokenizer.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFBertModel.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(inputs)
@@ -1547,16 +1547,16 @@ weighted average in the cross-attention heads.</p>
 `}}),Ji=new se({props:{code:`from transformers import BertTokenizer, TFBertLMHeadModel
 import tensorflow as tf
 
-tokenizer = BertTokenizer.from_pretrained("bert-base-cased")
-model = TFBertLMHeadModel.from_pretrained("bert-base-cased")
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+model = TFBertLMHeadModel.from_pretrained("bert-base-uncased")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="tf")
 outputs = model(inputs)
 logits = outputs.logits`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> BertTokenizer, TFBertLMHeadModel
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BertTokenizer.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFBertLMHeadModel.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BertTokenizer.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFBertLMHeadModel.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(inputs)
@@ -1633,8 +1633,8 @@ heads.</p>
 `}}),Vs=new ve({props:{$$slots:{default:[kO]},$$scope:{ctx:j}}}),nl=new se({props:{code:`from transformers import BertTokenizer, TFBertForMaskedLM
 import tensorflow as tf
 
-tokenizer = BertTokenizer.from_pretrained("bert-base-cased")
-model = TFBertForMaskedLM.from_pretrained("bert-base-cased")
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+model = TFBertForMaskedLM.from_pretrained("bert-base-uncased")
 
 inputs = tokenizer("The capital of France is [MASK].", return_tensors="tf")
 logits = model(**inputs).logits
@@ -1646,8 +1646,8 @@ predicted_token_id = tf.math.argmax(logits[0, mask_token_index], axis=-1)
 tokenizer.decode(predicted_token_id)`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> BertTokenizer, TFBertForMaskedLM
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BertTokenizer.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFBertForMaskedLM.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BertTokenizer.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFBertForMaskedLM.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;The capital of France is [MASK].&quot;</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = model(**inputs).logits
@@ -1657,7 +1657,7 @@ tokenizer.decode(predicted_token_id)`,highlighted:`<span class="hljs-meta">&gt;&
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_token_id = tf.math.argmax(logits[<span class="hljs-number">0</span>, mask_token_index], axis=-<span class="hljs-number">1</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.decode(predicted_token_id)
-<span class="hljs-string">&#x27;P a r i s&#x27;</span>`}}),sl=new se({props:{code:`labels = tokenizer("The capital of France is Paris.", return_tensors="tf")["input_ids"]
+<span class="hljs-string">&#x27;p a r i s&#x27;</span>`}}),sl=new se({props:{code:`labels = tokenizer("The capital of France is Paris.", return_tensors="tf")["input_ids"]
 # mask labels of non-[MASK] tokens
 labels = tf.where(inputs.input_ids == tokenizer.mask_token_id, labels, -100)
 
@@ -1668,7 +1668,7 @@ round(float(outputs.loss), 2)`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt;
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs, labels=labels)
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">round</span>(<span class="hljs-built_in">float</span>(outputs.loss), <span class="hljs-number">2</span>)
-<span class="hljs-number">0.81</span>`}}),rl=new Fe({}),al=new C({props:{name:"class transformers.TFBertForNextSentencePrediction",anchor:"transformers.TFBertForNextSentencePrediction",parameters:[{name:"*args",val:""},{name:"**kwargs",val:""}],source:"https://github.com/huggingface/transformers/blob/pr_16523/src/transformers/models/bert/modeling_tf_bert.py#L1514",parametersDescription:[{anchor:"transformers.TFBertForNextSentencePrediction.config",description:`<strong>config</strong> (<a href="/docs/transformers/pr_16523/en/model_doc/bert#transformers.BertConfig">BertConfig</a>) &#x2014; Model configuration class with all the parameters of the model.
+<span class="hljs-number">0.88</span>`}}),rl=new Fe({}),al=new C({props:{name:"class transformers.TFBertForNextSentencePrediction",anchor:"transformers.TFBertForNextSentencePrediction",parameters:[{name:"*args",val:""},{name:"**kwargs",val:""}],source:"https://github.com/huggingface/transformers/blob/pr_16523/src/transformers/models/bert/modeling_tf_bert.py#L1514",parametersDescription:[{anchor:"transformers.TFBertForNextSentencePrediction.config",description:`<strong>config</strong> (<a href="/docs/transformers/pr_16523/en/model_doc/bert#transformers.BertConfig">BertConfig</a>) &#x2014; Model configuration class with all the parameters of the model.
 Initializing with a config file does not load the weights associated with the model, only the
 configuration. Check out the <a href="/docs/transformers/pr_16523/en/main_classes/model#transformers.TFPreTrainedModel.from_pretrained">from_pretrained()</a> method to load the model weights.`,name:"config"}]}}),Ks=new ve({props:{$$slots:{default:[yO]},$$scope:{ctx:j}}}),pl=new C({props:{name:"call",anchor:"transformers.TFBertForNextSentencePrediction.call",parameters:[{name:"input_ids",val:": typing.Union[typing.List[tensorflow.python.framework.ops.Tensor], typing.List[numpy.ndarray], typing.List[tensorflow.python.keras.engine.keras_tensor.KerasTensor], typing.Dict[str, tensorflow.python.framework.ops.Tensor], typing.Dict[str, numpy.ndarray], typing.Dict[str, tensorflow.python.keras.engine.keras_tensor.KerasTensor], tensorflow.python.framework.ops.Tensor, numpy.ndarray, tensorflow.python.keras.engine.keras_tensor.KerasTensor, NoneType] = None"},{name:"attention_mask",val:": typing.Union[numpy.ndarray, tensorflow.python.framework.ops.Tensor, NoneType] = None"},{name:"token_type_ids",val:": typing.Union[numpy.ndarray, tensorflow.python.framework.ops.Tensor, NoneType] = None"},{name:"position_ids",val:": typing.Union[numpy.ndarray, tensorflow.python.framework.ops.Tensor, NoneType] = None"},{name:"head_mask",val:": typing.Union[numpy.ndarray, tensorflow.python.framework.ops.Tensor, NoneType] = None"},{name:"inputs_embeds",val:": typing.Union[numpy.ndarray, tensorflow.python.framework.ops.Tensor, NoneType] = None"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"},{name:"next_sentence_label",val:": typing.Union[numpy.ndarray, tensorflow.python.framework.ops.Tensor, NoneType] = None"},{name:"training",val:": typing.Optional[bool] = False"}],source:"https://github.com/huggingface/transformers/blob/pr_16523/src/transformers/models/bert/modeling_tf_bert.py#L1524",parametersDescription:[{anchor:"transformers.TFBertForNextSentencePrediction.call.input_ids",description:`<strong>input_ids</strong> (<code>np.ndarray</code>, <code>tf.Tensor</code>, <code>List[tf.Tensor]</code> \`<code>Dict[str, tf.Tensor]</code> or <code>Dict[str, np.ndarray]</code> and each example must have the shape <code>(batch_size, sequence_length)</code>) &#x2014;
 Indices of input sequence tokens in the vocabulary.</p>
@@ -1933,8 +1933,8 @@ heads.</p>
 `}}),tr=new ve({props:{$$slots:{default:[FO]},$$scope:{ctx:j}}}),Bl=new se({props:{code:`from transformers import BertTokenizer, TFBertForMultipleChoice
 import tensorflow as tf
 
-tokenizer = BertTokenizer.from_pretrained("bert-base-cased")
-model = TFBertForMultipleChoice.from_pretrained("bert-base-cased")
+tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+model = TFBertForMultipleChoice.from_pretrained("bert-base-uncased")
 
 prompt = "In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced."
 choice0 = "It is eaten with a fork and a knife."
@@ -1948,8 +1948,8 @@ outputs = model(inputs)  # batch size is 1
 logits = outputs.logits`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> BertTokenizer, TFBertForMultipleChoice
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BertTokenizer.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFBertForMultipleChoice.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BertTokenizer.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFBertForMultipleChoice.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>prompt = <span class="hljs-string">&quot;In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced.&quot;</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>choice0 = <span class="hljs-string">&quot;It is eaten with a fork and a knife.&quot;</span>
@@ -2064,7 +2064,7 @@ predicted_tokens_classes`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </sp
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Multiple token classes might account for the same word</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_tokens_classes = [model.config.id2label[t] <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> predicted_token_class_ids[<span class="hljs-number">0</span>].numpy().tolist()]
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_tokens_classes
-[<span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;I-ORG&#x27;</span>, <span class="hljs-string">&#x27;I-ORG&#x27;</span>, <span class="hljs-string">&#x27;I-ORG&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;I-LOC&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;I-LOC&#x27;</span>, <span class="hljs-string">&#x27;I-LOC&#x27;</span>]`}}),Nl=new se({props:{code:`labels = predicted_token_class_ids
+[<span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;I-ORG&#x27;</span>, <span class="hljs-string">&#x27;I-ORG&#x27;</span>, <span class="hljs-string">&#x27;I-ORG&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;I-LOC&#x27;</span>, <span class="hljs-string">&#x27;O&#x27;</span>, <span class="hljs-string">&#x27;I-LOC&#x27;</span>, <span class="hljs-string">&#x27;I-LOC&#x27;</span>] `}}),Nl=new se({props:{code:`labels = predicted_token_class_ids
 loss = tf.math.reduce_mean(model(**inputs, labels=labels).loss)
 round(float(loss), 2)`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span>labels = predicted_token_class_ids
 <span class="hljs-meta">&gt;&gt;&gt; </span>loss = tf.math.reduce_mean(model(**inputs, labels=labels).loss)
