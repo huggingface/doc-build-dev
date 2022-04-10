@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;واژه‌نامه&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/course/pr_95/fa/_app/assets/pages/__layout.svelte-66353268.css">
-	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/start-ca2a400e.js">
+	<link rel="stylesheet" href="/docs/course/pr_95/fa/_app/assets/pages/__layout.svelte-434c0c15.css">
+	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/start-920c157c.js">
 	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/chunks/vendor-f4a867ed.js">
 	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/pages/__layout.svelte-065f68ce.js">
-	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/pages/glossary/1.mdx-0d62f58d.js"> 
+	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/pages/glossary/1.mdx-9befc0c3.js"> 
 
 
 
@@ -65,8 +65,12 @@
 <td>دوره‌ی آموزشی</td></tr>
 <tr><td>Working Environment</td>
 <td>محیط کار</td></tr>
+<tr><td>Workspace</td>
+<td>فضای کار</td></tr>
 <tr><td>Setup</td>
 <td>راه‌اندازی</td></tr>
+<tr><td>Create</td>
+<td>ایجاد یا ساختن</td></tr>
 <tr><td>Code</td>
 <td>کد</td></tr>
 <tr><td>Package</td>
@@ -86,11 +90,11 @@
 <tr><td>Linux</td>
 <td>لینوکس</td></tr>
 <tr><td>Workload</td>
-<td>پردازش‌?</td></tr>
+<td>محاسبه، محاسبات</td></tr>
 <tr><td>Package Manager</td>
 <td>پکیج‌منیجر</td></tr>
 <tr><td>Command</td>
-<td>فرمان‌</td></tr>
+<td>دستور یا فرمان</td></tr>
 <tr><td>Feature</td>
 <td>قابلیت‌</td></tr>
 <tr><td>Development</td>
@@ -102,11 +106,20 @@
 <tr><td>Terminal</td>
 <td>ترمینال</td></tr>
 <tr><td>Incompatibility</td>
-<td>ناهماهنگی‌</td></tr>
+<td>ناسازگاری</td></tr>
 <tr><td>Self-Contained</td>
-<td>قائم به خود</td></tr>
+<td>قائم به خود    یا      بدون وابستگی خارجی؟</td></tr>
 <tr><td>Script</td>
-<td>اسکریپت‌</td></tr></tbody></table>
+<td>اسکریپت‌</td></tr>
+<tr><td>Feature</td>
+<td>قابلیت</td></tr>
+<tr><td>Folder</td>
+<td>پوشه</td></tr></tbody></table>
+<p>معادل‌هایی که استفاده نمی‌کنیم:</p>
+<table><thead><tr><th>معادل در منبع</th>
+<th>معادل اشتباه در ترجمه</th></tr></thead>
+<tbody><tr><td>Application, as in an app and not as in apply</td>
+<td>کاربرد</td></tr></tbody></table>
 <p>کلمات مخفف:</p>
 <table><thead><tr><th>معادل در منبع</th>
 <th>معادل در ترجمه</th></tr></thead>
@@ -119,18 +132,42 @@
 <tr><td>TPU</td>
 <td>TPU</td></tr>
 <tr><td>ML</td>
-<td>یادگیری ماشین</td></tr></tbody></table></div>
+<td>یادگیری ماشین</td></tr></tbody></table>
+<p>املای مورد استفاده کلمات فارسی:</p>
+<p>|ارائه|</p></div>
 <ul><li><ul><li>Used in chapter1/page2 to loosely mean ‘running’ the model.
 If used anywhere else to exact technical meaning we could go
 with ‘استنتاج’ probably? But that sounds archaic to me.</li></ul></li>
-<li><p>Don’t translate industry-accepted acronyms.</p></li>
-<li><p>Translate acronyms used for convenience in English to full Persian form.</p></li></ul>
+<li><p>Don’t translate industry-accepted acronyms. e.g. TPU or GPU.</p></li>
+<li><p>Translate acronyms used for convenience in English to full Persian form. e.g. ML</p></li>
+<li><p>Keep voice active as consistent. Don’t overdo it but try to avoid a passive voice.</p></li>
+<li><p>Refer to glossary. Editing is tedious. let’s kindly minimize it.</p></li>
+<li><p>Keep POV consistent.</p></li>
+<li><p>Smaller sentences are better sentences.</p></li>
+<li><p>If translating a technical word, keep the choice of Persian equivalent consistent.
+If workspace is mohit-e-kari don’t just switch to faza-ye-kari. This ofc
+does not apply for non-technical choices, as in those cases variety actually
+helps keep the text engaging.</p></li>
+<li><p>This is merely a translation. Don’t add any technical/contextual information
+not present in the original text. Also don’t leave stuff out, the creative
+choices in composing this information were the original authors’ to make.
+Our creative choices are in doing a quality translation.</p></li>
+<li><p>Note on translating indefinite articles(a, an) to Persian. Persian syntax does
+not have these. Common problem in translations is using
+the word ‘One’(“Yek”, “Yeki”)“Yek”(One) as a direct word-for-word substitute
+which makes for ugly Persian. Be creative with Persian word order to avoid this.</p>
+<p>For example, the sentence “we use a library” should be translated as
+“ما از کتابخانه‌ای استفاده می‌کنیم” and not “ما از یک کتابخانه استفاده می‌کنیم”.
+“Yek” here implies a number(1) to the Persian reader, but the original text
+was emphasizing the indefinite nature of the library and not its count.</p></li>
+<li><p>Be exact when choosing equivalents for technical words. Package is package.
+Library is library. Don’t mix and match.</p></li></ul>
 
 
-		<script type="module" data-hydrate="f3h4bd">
-		import { start } from "/docs/course/pr_95/fa/_app/start-ca2a400e.js";
+		<script type="module" data-hydrate="cyznww">
+		import { start } from "/docs/course/pr_95/fa/_app/start-920c157c.js";
 		start({
-			target: document.querySelector('[data-hydrate="f3h4bd"]').parentNode,
+			target: document.querySelector('[data-hydrate="cyznww"]').parentNode,
 			paths: {"base":"/docs/course/pr_95/fa","assets":"/docs/course/pr_95/fa"},
 			session: {},
 			route: false,
@@ -141,7 +178,7 @@ with ‘استنتاج’ probably? But that sounds archaic to me.</li></ul></li
 				error: null,
 				nodes: [
 					import("/docs/course/pr_95/fa/_app/pages/__layout.svelte-065f68ce.js"),
-						import("/docs/course/pr_95/fa/_app/pages/glossary/1.mdx-0d62f58d.js")
+						import("/docs/course/pr_95/fa/_app/pages/glossary/1.mdx-9befc0c3.js")
 				],
 				params: {}
 			}
