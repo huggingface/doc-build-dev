@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;مقدمه&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/course/pr_95/fa/_app/assets/pages/__layout.svelte-434c0c15.css">
-	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/start-20c5d2d0.js">
+	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/start-faaafc3c.js">
 	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/chunks/vendor-f4a867ed.js">
 	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/pages/__layout.svelte-065f68ce.js">
-	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/pages/chapter0/1.mdx-4b656901.js"> 
+	<link rel="modulepreload" href="/docs/course/pr_95/fa/_app/pages/chapter0/1.mdx-033f564d.js"> 
 
 
 
@@ -26,7 +26,7 @@
 <br>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter0/new_colab.png" alt="An empty colab notebook" width="80%"></div>
 <br>
-<p>قدم اول نصب کتابخانه‌هایی است که در این دوره استفاده خواهیم کرد. برای نصب کتابخانه‌ها از pip استفاده می‌کنیم که پکیج‌منیجر پایتون است. در فضای نوت‌بوک، برای اجرای دستورهای سیستمی، کافی است یک علامت <code>!</code> به ابتدای خط اضافه کنید. برای نصب کتابخانه ترنسفورمرهای هاگینگ‌فیس این دستور را اجرا کنید:</p>
+<p>قدم اول نصب کتابخانه‌هایی است که در این دوره استفاده خواهیم کرد. برای نصب کتابخانه‌ها از <code>pip</code> استفاده می‌کنیم که پکیج‌منیجر پایتون است. در فضای نوت‌بوک، برای اجرای دستورهای سیستمی، کافی است یک علامت <code>!</code> به ابتدای خط اضافه کنید. برای نصب کتابخانه ترنسفورمرهای هاگینگ‌فیس این دستور را اجرا کنید:</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -59,7 +59,7 @@
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-built_in">mkdir</span> ~/transformers-course
 <span class="hljs-built_in">cd</span> ~/transformers-course<!-- HTML_TAG_END --></pre></div></div>
-<p>درون این پوشه، با استفاده از ماژول venv پایتون، محیط مجازی خود را بسازید:</p>
+<p>درون این پوشه، با استفاده از ماژول <code>venv</code> پایتون، محیط مجازی خود را بسازید:</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -79,7 +79,7 @@
 
 \<span class="hljs-comment"># Deactivate the virtual environment</span>
 <span class="hljs-built_in">source</span> .<span class="hljs-built_in">env</span>/bin/deactivate<!-- HTML_TAG_END --></pre></div></div>
-<p>‌با اجرای دستور which python از فعال شدن محیط مجازی خود اطمینان حاصل کنید. اگر این دستور به آدرس محیط مجازی جدید اشاره کند، با موفقیت این محیط را فعال کرده‌اید.</p>
+<p>‌با اجرای دستور <code>which python</code> از فعال شدن محیط مجازی خود اطمینان حاصل کنید. اگر این دستور به آدرس محیط مجازی جدید اشاره کند، با موفقیت این محیط را فعال کرده‌اید.</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -89,7 +89,7 @@
 	<span>نصب وابستگی‌ها
 	</span></h3>
 
-<p>مانند آنچه در بخش استفاده از گوگل کولَب گفتیم، اکنون باید پکیج‌های موردنیاز برای ادامه دوره را نصب کنید. می‌توانید نسخه توسعه‌ی پکیج ترنسفورمرهای هاگینگ‌فیس را با استفاده از پکیج‌منیجر pip نصب کنید:</p>
+<p>مانند آنچه در بخش استفاده از گوگل کولَب گفتیم، اکنون باید پکیج‌های موردنیاز برای ادامه دوره را نصب کنید. می‌توانید نسخه توسعه‌ی پکیج ترنسفورمرهای هاگینگ‌فیس را با استفاده از پکیج‌منیجر <code>pip</code> نصب کنید:</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -97,10 +97,10 @@
 <p>شما تمام مراحل راه‌اندازی را طی کرده و آماده شروع دوره هستید!</p></div>
 
 
-		<script type="module" data-hydrate="tjkj6w">
-		import { start } from "/docs/course/pr_95/fa/_app/start-20c5d2d0.js";
+		<script type="module" data-hydrate="1vbx2mg">
+		import { start } from "/docs/course/pr_95/fa/_app/start-faaafc3c.js";
 		start({
-			target: document.querySelector('[data-hydrate="tjkj6w"]').parentNode,
+			target: document.querySelector('[data-hydrate="1vbx2mg"]').parentNode,
 			paths: {"base":"/docs/course/pr_95/fa","assets":"/docs/course/pr_95/fa"},
 			session: {},
 			route: false,
@@ -111,7 +111,7 @@
 				error: null,
 				nodes: [
 					import("/docs/course/pr_95/fa/_app/pages/__layout.svelte-065f68ce.js"),
-						import("/docs/course/pr_95/fa/_app/pages/chapter0/1.mdx-4b656901.js")
+						import("/docs/course/pr_95/fa/_app/pages/chapter0/1.mdx-033f564d.js")
 				],
 				params: {}
 			}
