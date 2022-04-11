@@ -1,4 +1,4 @@
-import{S as Hs,i as zs,s as Ds,e as n,k as h,w,t as r,M as Ks,c as o,d as a,m as d,a as s,x as $,h as l,b as u,F as t,g as f,y as _,q as P,o as b,B as A,v as Fs,L as Uo}from"../chunks/vendor-7c454903.js";import{I as X}from"../chunks/IconCopyLink-5457534b.js";import{C as jt,I as Js,M as So}from"../chunks/InferenceApi-ace294d3.js";function Ws(k){let c,m;return c=new jt({props:{code:`import json
+import{S as Hs,i as zs,s as Ds,e as n,k as h,w,t as r,M as Ks,c as o,d as a,m as d,a as s,x as $,h as l,b as u,F as t,g as f,y as _,q as P,o as b,B as A,v as Fs,L as Uo}from"../chunks/vendor-7c454903.js";import{I as X}from"../chunks/IconCopyLink-5457534b.js";import{C as jt,I as Js,M as So}from"../chunks/InferenceApi-9b73136f.js";function Ws(k){let c,m;return c=new jt({props:{code:`import json
 import requests
 API_URL = "https://api-inference.huggingface.co/models/gpt2"
 headers = {"Authorization": f"Bearer {API_TOKEN}"}

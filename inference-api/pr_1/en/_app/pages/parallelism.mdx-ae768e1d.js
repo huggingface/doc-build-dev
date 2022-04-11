@@ -1,4 +1,4 @@
-import{S as Ya,i as Fa,s as Ga,e as p,k as m,w as y,t as h,M as Xa,c as i,d as e,m as g,a as c,x as w,h as f,b as _,F as l,g as u,y as b,q,o as $,B as k,v as Qa,L as Q}from"../chunks/vendor-7c454903.js";import{I as qa}from"../chunks/IconCopyLink-5457534b.js";import{I as Wa,M as V,C as Z}from"../chunks/InferenceApi-ace294d3.js";function Va(j){let t,n;return t=new Z({props:{code:`# !pip install websockets
+import{S as Ya,i as Fa,s as Ga,e as p,k as m,w as y,t as h,M as Xa,c as i,d as e,m as g,a as c,x as w,h as f,b as _,F as l,g as u,y as b,q,o as $,B as k,v as Qa,L as Q}from"../chunks/vendor-7c454903.js";import{I as qa}from"../chunks/IconCopyLink-5457534b.js";import{I as Wa,M as V,C as Z}from"../chunks/InferenceApi-9b73136f.js";function Va(j){let t,n;return t=new Z({props:{code:`# !pip install websockets
 import asyncio
 import json
 import uuid
