@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;detailed-parameters&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;which-task-is-used-by-this-model&quot;,&quot;title&quot;:&quot;Which task is used by this model ?&quot;},{&quot;local&quot;:&quot;zeroshot-classification-task&quot;,&quot;title&quot;:&quot;Zero-shot classification task&quot;},{&quot;local&quot;:&quot;translation-task&quot;,&quot;title&quot;:&quot;Translation task&quot;},{&quot;local&quot;:&quot;summarization-task&quot;,&quot;title&quot;:&quot;Summarization task&quot;},{&quot;local&quot;:&quot;conversational-task&quot;,&quot;title&quot;:&quot;Conversational task&quot;},{&quot;local&quot;:&quot;table-question-answering-task&quot;,&quot;title&quot;:&quot;Table question answering task&quot;},{&quot;local&quot;:&quot;question-answering-task&quot;,&quot;title&quot;:&quot;Question answering task&quot;},{&quot;local&quot;:&quot;textclassification-task&quot;,&quot;title&quot;:&quot;Text-classification task&quot;},{&quot;local&quot;:&quot;named-entity-recognition-ner-task&quot;,&quot;title&quot;:&quot;Named Entity Recognition (NER) task&quot;},{&quot;local&quot;:&quot;tokenclassification-task&quot;,&quot;title&quot;:&quot;Token-classification task&quot;},{&quot;local&quot;:&quot;textgeneration-task&quot;,&quot;title&quot;:&quot;Text-generation task&quot;},{&quot;local&quot;:&quot;text2textgeneration-task&quot;,&quot;title&quot;:&quot;Text2text-generation task&quot;},{&quot;local&quot;:&quot;fill-mask-task&quot;,&quot;title&quot;:&quot;Fill mask task&quot;},{&quot;local&quot;:&quot;automatic-speech-recognition-task&quot;,&quot;title&quot;:&quot;Automatic speech recognition task&quot;},{&quot;local&quot;:&quot;featureextraction-task&quot;,&quot;title&quot;:&quot;Feature-extraction task&quot;},{&quot;local&quot;:&quot;audioclassification-task&quot;,&quot;title&quot;:&quot;Audio-classification task&quot;},{&quot;local&quot;:&quot;objectdetection-task&quot;,&quot;title&quot;:&quot;Object-detection task&quot;}],&quot;title&quot;:&quot;Detailed parameters&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/assets/pages/__layout.svelte-99ad7269.css">
-	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/start-a8052a92.js">
+	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/start-83c5f616.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/vendor-7c454903.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/pages/__layout.svelte-6835d907.js">
-	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-4e95dbca.js">
+	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-bad07965.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/Tip-735285fc.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/IconCopyLink-5457534b.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/InferenceApi-143e589f.js"> 
@@ -51,18 +51,19 @@ sentence and you get a result.</p>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->self.assertEqual(
-    deep_round(data),
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> requests
+headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{API_TOKEN}</span>&quot;</span>}
+API_URL = <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/facebook/bart-large-mnli&quot;</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">payload</span>):
+    data = json.dumps(payload)
+    response = requests.request(<span class="hljs-string">&quot;POST&quot;</span>, API_URL, headers=headers, data=data)
+    <span class="hljs-keyword">return</span> json.loads(response.content.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+data = query(
     {
-        <span class="hljs-string">&quot;sequence&quot;</span>: <span class="hljs-string">&quot;Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed!&quot;</span>,
-        <span class="hljs-string">&quot;labels&quot;</span>: [<span class="hljs-string">&quot;refund&quot;</span>, <span class="hljs-string">&quot;faq&quot;</span>, <span class="hljs-string">&quot;legal&quot;</span>],
-        <span class="hljs-string">&quot;scores&quot;</span>: [
-            <span class="hljs-comment"># 88% refund</span>
-            <span class="hljs-number">0.8778</span>,
-            <span class="hljs-number">0.1052</span>,
-            <span class="hljs-number">0.017</span>,
-        ],
-    },
+        <span class="hljs-string">&quot;inputs&quot;</span>: <span class="hljs-string">&quot;Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed!&quot;</span>,
+        <span class="hljs-string">&quot;parameters&quot;</span>: {<span class="hljs-string">&quot;candidate_labels&quot;</span>: [<span class="hljs-string">&quot;refund&quot;</span>, <span class="hljs-string">&quot;legal&quot;</span>, <span class="hljs-string">&quot;faq&quot;</span>]},
+    }
 )<!-- HTML_TAG_END --></pre></div>
 
 
@@ -406,14 +407,30 @@ questions in plain english!</p>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->self.assertEqual(
-    data,
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> requests
+headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{API_TOKEN}</span>&quot;</span>}
+API_URL = <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/google/tapas-base-finetuned-wtq&quot;</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">payload</span>):
+    data = json.dumps(payload)
+    response = requests.request(<span class="hljs-string">&quot;POST&quot;</span>, API_URL, headers=headers, data=data)
+    <span class="hljs-keyword">return</span> json.loads(response.content.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+data = query(
     {
-        <span class="hljs-string">&quot;answer&quot;</span>: <span class="hljs-string">&quot;AVERAGE &gt; 36542&quot;</span>,
-        <span class="hljs-string">&quot;coordinates&quot;</span>: [[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]],
-        <span class="hljs-string">&quot;cells&quot;</span>: [<span class="hljs-string">&quot;36542&quot;</span>],
-        <span class="hljs-string">&quot;aggregator&quot;</span>: <span class="hljs-string">&quot;AVERAGE&quot;</span>,
-    },
+        <span class="hljs-string">&quot;inputs&quot;</span>: {
+            <span class="hljs-string">&quot;query&quot;</span>: <span class="hljs-string">&quot;How many stars does the transformers repository have?&quot;</span>,
+            <span class="hljs-string">&quot;table&quot;</span>: {
+                <span class="hljs-string">&quot;Repository&quot;</span>: [<span class="hljs-string">&quot;Transformers&quot;</span>, <span class="hljs-string">&quot;Datasets&quot;</span>, <span class="hljs-string">&quot;Tokenizers&quot;</span>],
+                <span class="hljs-string">&quot;Stars&quot;</span>: [<span class="hljs-string">&quot;36542&quot;</span>, <span class="hljs-string">&quot;4512&quot;</span>, <span class="hljs-string">&quot;3934&quot;</span>],
+                <span class="hljs-string">&quot;Contributors&quot;</span>: [<span class="hljs-string">&quot;651&quot;</span>, <span class="hljs-string">&quot;77&quot;</span>, <span class="hljs-string">&quot;34&quot;</span>],
+                <span class="hljs-string">&quot;Programming language&quot;</span>: [
+                    <span class="hljs-string">&quot;Python&quot;</span>,
+                    <span class="hljs-string">&quot;Python&quot;</span>,
+                    <span class="hljs-string">&quot;Rust, Python and NodeJS&quot;</span>,
+                ],
+            },
+        }
+    }
 )<!-- HTML_TAG_END --></pre></div>
 
 
@@ -491,9 +508,21 @@ are all the options</p>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->self.assertEqual(
-    deep_round(data),
-    {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9327</span>, <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-number">11</span>, <span class="hljs-string">&quot;end&quot;</span>: <span class="hljs-number">16</span>, <span class="hljs-string">&quot;answer&quot;</span>: <span class="hljs-string">&quot;Clara&quot;</span>},
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> requests
+headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{API_TOKEN}</span>&quot;</span>}
+API_URL = <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/deepset/roberta-base-squad2&quot;</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">payload</span>):
+    data = json.dumps(payload)
+    response = requests.request(<span class="hljs-string">&quot;POST&quot;</span>, API_URL, headers=headers, data=data)
+    <span class="hljs-keyword">return</span> json.loads(response.content.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+data = query(
+    {
+        <span class="hljs-string">&quot;inputs&quot;</span>: {
+            <span class="hljs-string">&quot;question&quot;</span>: <span class="hljs-string">&quot;What&#x27;s my name?&quot;</span>,
+            <span class="hljs-string">&quot;context&quot;</span>: <span class="hljs-string">&quot;My name is Clara and I live in Berkeley.&quot;</span>,
+        }
+    }
 )<!-- HTML_TAG_END --></pre></div>
 
 
@@ -550,15 +579,15 @@ classes of an input.</p>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->self.assertEqual(
-    deep_round(data),
-    [
-        [
-            {<span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;NEGATIVE&quot;</span>, <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.0001</span>},
-            {<span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;POSITIVE&quot;</span>, <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9999</span>},
-        ]
-    ],
-)<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> requests
+headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{API_TOKEN}</span>&quot;</span>}
+API_URL = <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english&quot;</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">payload</span>):
+    data = json.dumps(payload)
+    response = requests.request(<span class="hljs-string">&quot;POST&quot;</span>, API_URL, headers=headers, data=data)
+    <span class="hljs-keyword">return</span> json.loads(response.content.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+data = query({<span class="hljs-string">&quot;inputs&quot;</span>: <span class="hljs-string">&quot;I like you. I love you&quot;</span>})<!-- HTML_TAG_END --></pre></div>
 
 
 <p>When sending your request, you should send a JSON encoded payload. Here
@@ -633,25 +662,15 @@ Recognition (NER) to understand keywords contained within text.</p>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->self.assertEqual(
-    deep_round(data),
-    [
-        {
-            <span class="hljs-string">&quot;entity_group&quot;</span>: <span class="hljs-string">&quot;PER&quot;</span>,
-            <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9991</span>,
-            <span class="hljs-string">&quot;word&quot;</span>: <span class="hljs-string">&quot;Sarah Jessica Parker&quot;</span>,
-            <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-number">11</span>,
-            <span class="hljs-string">&quot;end&quot;</span>: <span class="hljs-number">31</span>,
-        },
-        {
-            <span class="hljs-string">&quot;entity_group&quot;</span>: <span class="hljs-string">&quot;PER&quot;</span>,
-            <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.998</span>,
-            <span class="hljs-string">&quot;word&quot;</span>: <span class="hljs-string">&quot;Jessica&quot;</span>,
-            <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-number">52</span>,
-            <span class="hljs-string">&quot;end&quot;</span>: <span class="hljs-number">59</span>,
-        },
-    ],
-)<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> requests
+headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{API_TOKEN}</span>&quot;</span>}
+API_URL = <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/dbmdz/bert-large-cased-finetuned-conll03-english&quot;</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">payload</span>):
+    data = json.dumps(payload)
+    response = requests.request(<span class="hljs-string">&quot;POST&quot;</span>, API_URL, headers=headers, data=data)
+    <span class="hljs-keyword">return</span> json.loads(response.content.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+data = query({<span class="hljs-string">&quot;inputs&quot;</span>: <span class="hljs-string">&quot;My name is Sarah Jessica Parker but you can call me Jessica&quot;</span>})<!-- HTML_TAG_END --></pre></div>
 
 
 <p>When sending your request, you should send a JSON encoded payload. Here
@@ -738,11 +757,15 @@ are all the options</p>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->data == [
-    {
-        <span class="hljs-string">&quot;generated_text&quot;</span>: <span class="hljs-string">&#x27;The answer to the universe is that we are the creation of the entire universe,&quot; says Fitch.\n\nAs of the 1960s, six times as many Americans still make fewer than six bucks ($}17) per year on their way to retirement.&#x27;</span>
-    }
-]<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> requests
+headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{API_TOKEN}</span>&quot;</span>}
+API_URL = <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/gpt2&quot;</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">payload</span>):
+    data = json.dumps(payload)
+    response = requests.request(<span class="hljs-string">&quot;POST&quot;</span>, API_URL, headers=headers, data=data)
+    <span class="hljs-keyword">return</span> json.loads(response.content.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+data = query({<span class="hljs-string">&quot;inputs&quot;</span>: <span class="hljs-string">&quot;The answer to the universe is&quot;</span>})<!-- HTML_TAG_END --></pre></div>
 
 
 <p>When sending your request, you should send a JSON encoded payload. Here
@@ -832,41 +855,15 @@ That’s the base task for BERT models.</p>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->self.assertEqual(
-    deep_round(data),
-    [
-        {
-            <span class="hljs-string">&quot;sequence&quot;</span>: <span class="hljs-string">&quot;the answer to the universe is no.&quot;</span>,
-            <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.1696</span>,
-            <span class="hljs-string">&quot;token&quot;</span>: <span class="hljs-number">2053</span>,
-            <span class="hljs-string">&quot;token_str&quot;</span>: <span class="hljs-string">&quot;no&quot;</span>,
-        },
-        {
-            <span class="hljs-string">&quot;sequence&quot;</span>: <span class="hljs-string">&quot;the answer to the universe is nothing.&quot;</span>,
-            <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.0734</span>,
-            <span class="hljs-string">&quot;token&quot;</span>: <span class="hljs-number">2498</span>,
-            <span class="hljs-string">&quot;token_str&quot;</span>: <span class="hljs-string">&quot;nothing&quot;</span>,
-        },
-        {
-            <span class="hljs-string">&quot;sequence&quot;</span>: <span class="hljs-string">&quot;the answer to the universe is yes.&quot;</span>,
-            <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.0580</span>,
-            <span class="hljs-string">&quot;token&quot;</span>: <span class="hljs-number">2748</span>,
-            <span class="hljs-string">&quot;token_str&quot;</span>: <span class="hljs-string">&quot;yes&quot;</span>,
-        },
-        {
-            <span class="hljs-string">&quot;sequence&quot;</span>: <span class="hljs-string">&quot;the answer to the universe is unknown.&quot;</span>,
-            <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.044</span>,
-            <span class="hljs-string">&quot;token&quot;</span>: <span class="hljs-number">4242</span>,
-            <span class="hljs-string">&quot;token_str&quot;</span>: <span class="hljs-string">&quot;unknown&quot;</span>,
-        },
-        {
-            <span class="hljs-string">&quot;sequence&quot;</span>: <span class="hljs-string">&quot;the answer to the universe is simple.&quot;</span>,
-            <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.0402</span>,
-            <span class="hljs-string">&quot;token&quot;</span>: <span class="hljs-number">3722</span>,
-            <span class="hljs-string">&quot;token_str&quot;</span>: <span class="hljs-string">&quot;simple&quot;</span>,
-        },
-    ],
-)<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> requests
+headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{API_TOKEN}</span>&quot;</span>}
+API_URL = <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/bert-base-uncased&quot;</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">payload</span>):
+    data = json.dumps(payload)
+    response = requests.request(<span class="hljs-string">&quot;POST&quot;</span>, API_URL, headers=headers, data=data)
+    <span class="hljs-keyword">return</span> json.loads(response.content.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+data = query({<span class="hljs-string">&quot;inputs&quot;</span>: <span class="hljs-string">&quot;The answer to the universe is [MASK].&quot;</span>})<!-- HTML_TAG_END --></pre></div>
 
 
 <p>When sending your request, you should send a JSON encoded payload. Here
@@ -971,12 +968,16 @@ langage</a>.</p></div>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->    self.assertEqual(
-        data,
-        {
-            <span class="hljs-string">&quot;text&quot;</span>: <span class="hljs-string">&quot;GOING ALONG SLUSHY COUNTRY ROADS AND SPEAKING TO DAMP AUDIENCES IN DRAUGHTY SCHOOL ROOMS DAY AFTER DAY FOR A FORTNIGHT HE&#x27;LL HAVE TO PUT IN AN APPEARANCE AT SOME PLACE OF WORSHIP ON SUNDAY MORNING AND HE CAN COME TO US IMMEDIATELY AFTERWARDS&quot;</span>
-        },
-    )<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START -->    <span class="hljs-keyword">import</span> json
+    <span class="hljs-keyword">import</span> requests
+    headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{API_TOKEN}</span>&quot;</span>}
+    API_URL = <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/facebook/wav2vec2-base-960h&quot;</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">filename</span>):
+        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&quot;rb&quot;</span>) <span class="hljs-keyword">as</span> f:
+            data = f.read()
+        response = requests.request(<span class="hljs-string">&quot;POST&quot;</span>, API_URL, headers=headers, data=data)
+        <span class="hljs-keyword">return</span> json.loads(response.content.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+    data = query(<span class="hljs-string">&quot;sample1.flac&quot;</span>)<!-- HTML_TAG_END --></pre></div>
 
 
 <p>When sending your request, you should send a binary payload that simply
@@ -1070,15 +1071,16 @@ you or not. This should be explained on the model&#39;s README.
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->    self.assertEqual(
-        deep_round(data, <span class="hljs-number">4</span>),
-        [
-            {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.5928</span>, <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;neu&quot;</span>},
-            {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.2003</span>, <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;hap&quot;</span>},
-            {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.128</span>, <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;ang&quot;</span>},
-            {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.079</span>, <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;sad&quot;</span>},
-        ],
-    )<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START -->    <span class="hljs-keyword">import</span> json
+    <span class="hljs-keyword">import</span> requests
+    headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{API_TOKEN}</span>&quot;</span>}
+    API_URL = <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/superb/hubert-large-superb-er&quot;</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">filename</span>):
+        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&quot;rb&quot;</span>) <span class="hljs-keyword">as</span> f:
+            data = f.read()
+        response = requests.request(<span class="hljs-string">&quot;POST&quot;</span>, API_URL, headers=headers, data=data)
+        <span class="hljs-keyword">return</span> json.loads(response.content.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+    data = query(<span class="hljs-string">&quot;sample1.flac&quot;</span>)<!-- HTML_TAG_END --></pre></div>
 
 
 <p>When sending your request, you should send a binary payload that simply
@@ -1141,36 +1143,16 @@ bounding boxes of detected objects.</p>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->    self.assertEqual(
-        deep_round(data, <span class="hljs-number">4</span>),
-        [
-            {
-                <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9982</span>,
-                <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;remote&quot;</span>,
-                <span class="hljs-string">&quot;box&quot;</span>: {<span class="hljs-string">&quot;xmin&quot;</span>: <span class="hljs-number">40</span>, <span class="hljs-string">&quot;ymin&quot;</span>: <span class="hljs-number">70</span>, <span class="hljs-string">&quot;xmax&quot;</span>: <span class="hljs-number">175</span>, <span class="hljs-string">&quot;ymax&quot;</span>: <span class="hljs-number">117</span>},
-            },
-            {
-                <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9960</span>,
-                <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;remote&quot;</span>,
-                <span class="hljs-string">&quot;box&quot;</span>: {<span class="hljs-string">&quot;xmin&quot;</span>: <span class="hljs-number">333</span>, <span class="hljs-string">&quot;ymin&quot;</span>: <span class="hljs-number">72</span>, <span class="hljs-string">&quot;xmax&quot;</span>: <span class="hljs-number">368</span>, <span class="hljs-string">&quot;ymax&quot;</span>: <span class="hljs-number">187</span>},
-            },
-            {
-                <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9955</span>,
-                <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;couch&quot;</span>,
-                <span class="hljs-string">&quot;box&quot;</span>: {<span class="hljs-string">&quot;xmin&quot;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&quot;ymin&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&quot;xmax&quot;</span>: <span class="hljs-number">639</span>, <span class="hljs-string">&quot;ymax&quot;</span>: <span class="hljs-number">473</span>},
-            },
-            {
-                <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9988</span>,
-                <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;cat&quot;</span>,
-                <span class="hljs-string">&quot;box&quot;</span>: {<span class="hljs-string">&quot;xmin&quot;</span>: <span class="hljs-number">13</span>, <span class="hljs-string">&quot;ymin&quot;</span>: <span class="hljs-number">52</span>, <span class="hljs-string">&quot;xmax&quot;</span>: <span class="hljs-number">314</span>, <span class="hljs-string">&quot;ymax&quot;</span>: <span class="hljs-number">470</span>},
-            },
-            {
-                <span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9987</span>,
-                <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;cat&quot;</span>,
-                <span class="hljs-string">&quot;box&quot;</span>: {<span class="hljs-string">&quot;xmin&quot;</span>: <span class="hljs-number">345</span>, <span class="hljs-string">&quot;ymin&quot;</span>: <span class="hljs-number">23</span>, <span class="hljs-string">&quot;xmax&quot;</span>: <span class="hljs-number">640</span>, <span class="hljs-string">&quot;ymax&quot;</span>: <span class="hljs-number">368</span>},
-            },
-        ],
-    )<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START -->    <span class="hljs-keyword">import</span> json
+    <span class="hljs-keyword">import</span> requests
+    headers = {<span class="hljs-string">&quot;Authorization&quot;</span>: <span class="hljs-string">f&quot;Bearer <span class="hljs-subst">{API_TOKEN}</span>&quot;</span>}
+    API_URL = <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/facebook/detr-resnet-50&quot;</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">query</span>(<span class="hljs-params">filename</span>):
+        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&quot;rb&quot;</span>) <span class="hljs-keyword">as</span> f:
+            data = f.read()
+        response = requests.request(<span class="hljs-string">&quot;POST&quot;</span>, API_URL, headers=headers, data=data)
+        <span class="hljs-keyword">return</span> json.loads(response.content.decode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+    data = query(<span class="hljs-string">&quot;cats.jpg&quot;</span>)<!-- HTML_TAG_END --></pre></div>
 
 
 <p>When sending your request, you should send a binary payload that simply
@@ -1234,10 +1216,10 @@ supports</a>.</p>
 <td align="left">A dict (with keys [xmin,ymin,xmax,ymax]) representing the bounding box of a detected object.</td></tr></tbody></table>
 
 
-		<script type="module" data-hydrate="3s1i26">
-		import { start } from "/docs/inference-api/pr_1/en/_app/start-a8052a92.js";
+		<script type="module" data-hydrate="rlwdrv">
+		import { start } from "/docs/inference-api/pr_1/en/_app/start-83c5f616.js";
 		start({
-			target: document.querySelector('[data-hydrate="3s1i26"]').parentNode,
+			target: document.querySelector('[data-hydrate="rlwdrv"]').parentNode,
 			paths: {"base":"/docs/inference-api/pr_1/en","assets":"/docs/inference-api/pr_1/en"},
 			session: {},
 			route: false,
@@ -1248,7 +1230,7 @@ supports</a>.</p>
 				error: null,
 				nodes: [
 					import("/docs/inference-api/pr_1/en/_app/pages/__layout.svelte-6835d907.js"),
-						import("/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-4e95dbca.js")
+						import("/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-bad07965.js")
 				],
 				params: {}
 			}
