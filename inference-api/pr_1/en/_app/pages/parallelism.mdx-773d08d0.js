@@ -1,4 +1,4 @@
-import{S as Xt,i as Wt,s as Ft,e as i,k as d,w as q,t as h,M as Qt,c as p,d as e,m as g,a as u,x as $,h as f,b as j,F as l,g as c,y as b,q as y,o as w,B as k,v as Vt,L as V}from"../chunks/vendor-7c454903.js";import{I as yt}from"../chunks/IconCopyLink-5457534b.js";import{I as Gt,M as Y,C as Z}from"../chunks/InferenceApi-ceeeb92c.js";function Yt(_){let a,n;return a=new Z({props:{code:`import requests
+import{S as Xt,i as Wt,s as Ft,e as i,k as d,w as q,t as h,M as Qt,c as p,d as e,m as g,a as u,x as $,h as f,b as j,F as l,g as c,y as b,q as y,o as w,B as k,v as Vt,L as V}from"../chunks/vendor-7c454903.js";import{I as yt}from"../chunks/IconCopyLink-5457534b.js";import{I as Gt,M as Y,C as Z}from"../chunks/InferenceApi-143e589f.js";function Yt(_){let a,n;return a=new Z({props:{code:`import requests
 model_id = "facebook/wav2vec2-base-960h"
 API_URL = f"https://api-inference.huggingface.co/bulk/run/cpu/{model_id}"
 headers = {"Authorization": f"Bearer {API_TOKEN}"}

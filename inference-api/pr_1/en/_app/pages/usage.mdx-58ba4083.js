@@ -1,4 +1,4 @@
-import{S as cs,i as us,s as ds,e as i,k as m,w,t as $,M as hs,c,d as o,m as g,a as u,x as j,h as _,b as f,N as fs,F as r,g as p,y as q,q as y,o as v,B as k,v as ms,L as R}from"../chunks/vendor-7c454903.js";import{T as gs}from"../chunks/Tip-735285fc.js";import{I as Ce}from"../chunks/IconCopyLink-5457534b.js";import{I as is,M as Q,C as V}from"../chunks/InferenceApi-ceeeb92c.js";function $s(d){let s,a;return s=new V({props:{code:`import requests
+import{S as cs,i as us,s as ds,e as i,k as m,w,t as $,M as hs,c,d as o,m as g,a as u,x as j,h as _,b as f,N as fs,F as r,g as p,y as q,q as y,o as v,B as k,v as ms,L as R}from"../chunks/vendor-7c454903.js";import{T as gs}from"../chunks/Tip-735285fc.js";import{I as Ce}from"../chunks/IconCopyLink-5457534b.js";import{I as is,M as Q,C as V}from"../chunks/InferenceApi-143e589f.js";function $s(d){let s,a;return s=new V({props:{code:`import requests
 api_url = "https://api-inference.huggingface.co/usage/pinned_models"
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
 response = requests.get(api_url, headers=headers)

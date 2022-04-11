@@ -1,4 +1,4 @@
-import{S as Hn,i as zn,s as Dn,e as o,k as h,w,t as s,M as Fn,c as r,d as a,m as d,a as n,x as $,h as l,b as p,F as t,g as f,y as _,q as b,o as P,B as E,v as Jn,L as Tr}from"../chunks/vendor-7c454903.js";import{I as R}from"../chunks/IconCopyLink-5457534b.js";import{C as jt,I as Kn,M as Sr}from"../chunks/InferenceApi-ceeeb92c.js";function Wn(k){let c,m;return c=new jt({props:{code:`data == [
+import{S as Hn,i as zn,s as Dn,e as o,k as h,w,t as s,M as Fn,c as r,d as a,m as d,a as n,x as $,h as l,b as p,F as t,g as f,y as _,q as b,o as P,B as E,v as Jn,L as Tr}from"../chunks/vendor-7c454903.js";import{I as R}from"../chunks/IconCopyLink-5457534b.js";import{C as jt,I as Kn,M as Sr}from"../chunks/InferenceApi-143e589f.js";function Wn(k){let c,m;return c=new jt({props:{code:`data == [
     {
         "generated_text": "Can you please let us know more details about your ids as a subscriber or other related project? Be sure to update your username and password or it will be stolen via email. Our information is only accessible through our website, and the payment support services"
     }
