@@ -1309,7 +1309,7 @@ tokenizer.decode(predicted_token_id)`,highlighted:`<span class="hljs-meta">&gt;&
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_token_id = tf.math.argmax(logits[<span class="hljs-number">0</span>, mask_token_index], axis=-<span class="hljs-number">1</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.decode(predicted_token_id)
-<span class="hljs-string">&#x27;p a r i s&#x27;</span>`}}),vr=new Ee({props:{code:`labels = tokenizer("The capital of France is Paris.", return_tensors="tf")["input_ids"]
+<span class="hljs-string">&#x27;paris&#x27;</span>`}}),vr=new Ee({props:{code:`labels = tokenizer("The capital of France is Paris.", return_tensors="tf")["input_ids"]
 # mask labels of non-[MASK] tokens
 labels = tf.where(inputs.input_ids == tokenizer.mask_token_id, labels, -100)
 
