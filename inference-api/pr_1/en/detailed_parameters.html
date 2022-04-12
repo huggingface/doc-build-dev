@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;detailed-parameters&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;which-task-is-used-by-this-model&quot;,&quot;title&quot;:&quot;Which task is used by this model ?&quot;},{&quot;local&quot;:&quot;zeroshot-classification-task&quot;,&quot;title&quot;:&quot;Zero-shot classification task&quot;},{&quot;local&quot;:&quot;translation-task&quot;,&quot;title&quot;:&quot;Translation task&quot;},{&quot;local&quot;:&quot;summarization-task&quot;,&quot;title&quot;:&quot;Summarization task&quot;},{&quot;local&quot;:&quot;conversational-task&quot;,&quot;title&quot;:&quot;Conversational task&quot;},{&quot;local&quot;:&quot;table-question-answering-task&quot;,&quot;title&quot;:&quot;Table question answering task&quot;},{&quot;local&quot;:&quot;question-answering-task&quot;,&quot;title&quot;:&quot;Question answering task&quot;},{&quot;local&quot;:&quot;textclassification-task&quot;,&quot;title&quot;:&quot;Text-classification task&quot;},{&quot;local&quot;:&quot;named-entity-recognition-ner-task&quot;,&quot;title&quot;:&quot;Named Entity Recognition (NER) task&quot;},{&quot;local&quot;:&quot;tokenclassification-task&quot;,&quot;title&quot;:&quot;Token-classification task&quot;},{&quot;local&quot;:&quot;textgeneration-task&quot;,&quot;title&quot;:&quot;Text-generation task&quot;},{&quot;local&quot;:&quot;text2textgeneration-task&quot;,&quot;title&quot;:&quot;Text2text-generation task&quot;},{&quot;local&quot;:&quot;fill-mask-task&quot;,&quot;title&quot;:&quot;Fill mask task&quot;},{&quot;local&quot;:&quot;automatic-speech-recognition-task&quot;,&quot;title&quot;:&quot;Automatic speech recognition task&quot;},{&quot;local&quot;:&quot;featureextraction-task&quot;,&quot;title&quot;:&quot;Feature-extraction task&quot;},{&quot;local&quot;:&quot;audioclassification-task&quot;,&quot;title&quot;:&quot;Audio-classification task&quot;},{&quot;local&quot;:&quot;objectdetection-task&quot;,&quot;title&quot;:&quot;Object-detection task&quot;}],&quot;title&quot;:&quot;Detailed parameters&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/assets/pages/__layout.svelte-4a2f3796.css">
-	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/start-9efb4c20.js">
+	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/start-36ac2358.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/vendor-7c454903.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/pages/__layout.svelte-6835d907.js">
-	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-d177d121.js">
+	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-1f6fefcc.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/Tip-735285fc.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/IconCopyLink-5457534b.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/InferenceApi-9b73136f.js"> 
@@ -256,7 +256,7 @@ are all the options</p>
 <tr><td align="left">top_k</td>
 <td align="left">(Default: <code>None</code>). Integer to define the top tokens considered within the <code>sample</code> operation to create new text.</td></tr>
 <tr><td align="left">top_p</td>
-<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the sample<code>operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than</code>top_p`.</td></tr>
+<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the <code>sample</code> operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than <code>top_p</code>.</td></tr>
 <tr><td align="left">temperature</td>
 <td align="left">(Default: <code>1.0</code>). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means <code>100.0</code> is getting closer to uniform probability.</td></tr>
 <tr><td align="left">repetition_penalty</td>
@@ -358,7 +358,7 @@ are all the options</p>
 <tr><td align="left">top_k</td>
 <td align="left">(Default: <code>None</code>). Integer to define the top tokens considered within the <code>sample</code> operation to create new text.</td></tr>
 <tr><td align="left">top_p</td>
-<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the sample<code>operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than</code>top_p`.</td></tr>
+<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the <code>sample</code> operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than <code>top_p</code>.</td></tr>
 <tr><td align="left">temperature</td>
 <td align="left">(Default: <code>1.0</code>). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means <code>100.0</code> is getting closer to uniform probability.</td></tr>
 <tr><td align="left">repetition_penalty</td>
@@ -779,7 +779,7 @@ are all the options</p>
 <tr><td align="left">top_k</td>
 <td align="left">(Default: <code>None</code>). Integer to define the top tokens considered within the <code>sample</code> operation to create new text.</td></tr>
 <tr><td align="left">top_p</td>
-<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the  sample<code>operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than</code>top_p`.</td></tr>
+<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the <code>sample</code> operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than <code>top_p</code>.</td></tr>
 <tr><td align="left">temperature</td>
 <td align="left">(Default: <code>1.0</code>). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means <code>100.0</code> is getting closer to uniform probability.</td></tr>
 <tr><td align="left">repetition_penalty</td>
@@ -787,7 +787,7 @@ are all the options</p>
 <tr><td align="left">max_new_tokens</td>
 <td align="left">(Default: <code>None</code>). Int (0-250). The amount of new tokens to be generated, this does <strong>not</strong> include the input length it is a estimate of the size of generated text you want. Each new tokens slows down the request, so look for balance between response times and length of text generated.</td></tr>
 <tr><td align="left">max_time</td>
-<td align="left">(Default: <code>None</code>). Float (0-120.0). The amount of time in seconds that the query should take maximum. Network can cause some overhead so it will be a soft limit. Use that in combination with ‘max_new_tokens` for best results.</td></tr>
+<td align="left">(Default: <code>None</code>). Float (0-120.0). The amount of time in seconds that the query should take maximum. Network can cause some overhead so it will be a soft limit. Use that in combination with <code>max_new_tokens</code> for best results.</td></tr>
 <tr><td align="left">return_full_text</td>
 <td align="left">(Default: <code>True</code>). Bool. If set to False, the return results will <strong>not</strong> contain the original query making it easier for prompting.</td></tr>
 <tr><td align="left">num_return_sequences</td>
@@ -1216,10 +1216,10 @@ supports</a>.</p>
 <td align="left">A dict (with keys [xmin,ymin,xmax,ymax]) representing the bounding box of a detected object.</td></tr></tbody></table>
 
 
-		<script type="module" data-hydrate="1m4hk2g">
-		import { start } from "/docs/inference-api/pr_1/en/_app/start-9efb4c20.js";
+		<script type="module" data-hydrate="17ig30g">
+		import { start } from "/docs/inference-api/pr_1/en/_app/start-36ac2358.js";
 		start({
-			target: document.querySelector('[data-hydrate="1m4hk2g"]').parentNode,
+			target: document.querySelector('[data-hydrate="17ig30g"]').parentNode,
 			paths: {"base":"/docs/inference-api/pr_1/en","assets":"/docs/inference-api/pr_1/en"},
 			session: {},
 			route: false,
@@ -1230,7 +1230,7 @@ supports</a>.</p>
 				error: null,
 				nodes: [
 					import("/docs/inference-api/pr_1/en/_app/pages/__layout.svelte-6835d907.js"),
-						import("/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-d177d121.js")
+						import("/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-1f6fefcc.js")
 				],
 				params: {}
 			}
