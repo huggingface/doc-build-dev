@@ -11,7 +11,7 @@ async function pinned_models() {
     const response = await fetch(
         "https://api-inference.huggingface.co/usage/pinned_models",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
         }
     );
     const result = await response.json();
@@ -25,7 +25,7 @@ pinned_models().then((response) => {
     <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(
         <span class="hljs-string">&quot;https://api-inference.huggingface.co/usage/pinned_models&quot;</span>,
         {
-            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">$}{API_TOKEN}</span>\`</span> },
+            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">\${API_TOKEN}</span>\`</span> },
         }
     );
     <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> response.<span class="hljs-title function_">json</span>();
@@ -35,9 +35,9 @@ pinned_models().then((response) => {
     <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(response));
 });
 <span class="hljs-comment">// {{&#x27;pinned_models&#x27;: [....], &#x27;allowed_pinned_models&#x27;: 5}}</span>`}}),{c(){w(s.$$.fragment)},l(e){j(s.$$.fragment,e)},m(e,t){q(s,e,t),a=!0},p:R,i(e){a||(y(s.$$.fragment,e),a=!0)},o(e){v(s.$$.fragment,e),a=!1},d(e){k(s,e)}}}function js(d){let s,a;return s=new Q({props:{$$slots:{default:[ws]},$$scope:{ctx:d}}}),{c(){w(s.$$.fragment)},l(e){j(s.$$.fragment,e)},m(e,t){q(s,e,t),a=!0},p(e,t){const h={};t&2&&(h.$$scope={dirty:t,ctx:e}),s.$set(h)},i(e){a||(y(s.$$.fragment,e),a=!0)},o(e){v(s.$$.fragment,e),a=!1},d(e){k(s,e)}}}function qs(d){let s,a;return s=new V({props:{code:`curl https://api-inference.huggingface.co/usage/pinned_models \\
-        -H "Authorization: Bearer $}{API_TOKEN}"
+        -H "Authorization: Bearer \${API_TOKEN}"
 # {{'pinned_models': [....], 'allowed_pinned_models': 5}}`,highlighted:`<span class="language-xml">curl https://api-inference.huggingface.co/usage/pinned_models \\
-        -H &quot;Authorization: Bearer $}{API_TOKEN}&quot;
+        -H &quot;Authorization: Bearer \${API_TOKEN}&quot;
 # </span><span class="hljs-template-variable">{{<span class="hljs-name">&#x27;pinned_models&#x27;</span>: [....], <span class="hljs-string">&#x27;allowed_pinned_models&#x27;</span>: <span class="hljs-number">5</span>}}</span>`}}),{c(){w(s.$$.fragment)},l(e){j(s.$$.fragment,e)},m(e,t){q(s,e,t),a=!0},p:R,i(e){a||(y(s.$$.fragment,e),a=!0)},o(e){v(s.$$.fragment,e),a=!1},d(e){k(s,e)}}}function ys(d){let s,a;return s=new Q({props:{$$slots:{default:[qs]},$$scope:{ctx:d}}}),{c(){w(s.$$.fragment)},l(e){j(s.$$.fragment,e)},m(e,t){q(s,e,t),a=!0},p(e,t){const h={};t&2&&(h.$$scope={dirty:t,ctx:e}),s.$set(h)},i(e){a||(y(s.$$.fragment,e),a=!0)},o(e){v(s.$$.fragment,e),a=!1},d(e){k(s,e)}}}function vs(d){let s,a;return{c(){s=i("p"),a=$("Be careful, you need to specify ALL the pinned models each time !")},l(e){s=c(e,"P",{});var t=u(s);a=_(t,"Be careful, you need to specify ALL the pinned models each time !"),t.forEach(o)},m(e,t){p(e,s,t),r(s,a)},d(e){e&&o(s)}}}function ks(d){let s,a;return s=new V({props:{code:`import json
 import requests
 api_url = "https://api-inference.huggingface.co/usage/pinned_models"
@@ -59,7 +59,7 @@ async function set_pinned_models(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/usage/pinned_models",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data)
         }
@@ -75,7 +75,7 @@ set_pinned_models({pinned_models: [{model_id:"gpt2",compute_type:"cpu"}]}).then(
     <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(
         <span class="hljs-string">&quot;https://api-inference.huggingface.co/usage/pinned_models&quot;</span>,
         {
-            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">$}{API_TOKEN}</span>\`</span> },
+            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">\${API_TOKEN}</span>\`</span> },
             <span class="hljs-attr">method</span>: <span class="hljs-string">&quot;POST&quot;</span>,
             <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(data)
         }
@@ -89,11 +89,11 @@ set_pinned_models({pinned_models: [{model_id:"gpt2",compute_type:"cpu"}]}).then(
 <span class="hljs-comment">// {&quot;ok&quot;:&quot;Pinned 1 models, please wait while we load them.&quot;}&#x27;</span>`}}),{c(){w(s.$$.fragment)},l(e){j(s.$$.fragment,e)},m(e,t){q(s,e,t),a=!0},p:R,i(e){a||(y(s.$$.fragment,e),a=!0)},o(e){v(s.$$.fragment,e),a=!1},d(e){k(s,e)}}}function bs(d){let s,a;return s=new Q({props:{$$slots:{default:[As]},$$scope:{ctx:d}}}),{c(){w(s.$$.fragment)},l(e){j(s.$$.fragment,e)},m(e,t){q(s,e,t),a=!0},p(e,t){const h={};t&2&&(h.$$scope={dirty:t,ctx:e}),s.$set(h)},i(e){a||(y(s.$$.fragment,e),a=!0)},o(e){v(s.$$.fragment,e),a=!1},d(e){k(s,e)}}}function Es(d){let s,a;return s=new V({props:{code:`curl https://api-inference.huggingface.co/usage/pinned_models \\
         -X POST \\
         -d '{"pinned_models": [{"model_id":"gpt2","compute_type":"cpu"}]}' \\
-        -H "Authorization: Bearer $}{API_TOKEN}"
+        -H "Authorization: Bearer \${API_TOKEN}"
 # {"ok":"Pinned 1 models, please wait while we load them."}'`,highlighted:`curl https:<span class="hljs-comment">//api-inference.huggingface.co/usage/pinned_models \\</span>
         -X <span class="hljs-keyword">POST</span> \\
         -<span class="hljs-keyword">d</span> &#x27;{<span class="hljs-string">&quot;pinned_models&quot;</span>: [{<span class="hljs-string">&quot;model_id&quot;</span>:<span class="hljs-string">&quot;gpt2&quot;</span>,<span class="hljs-string">&quot;compute_type&quot;</span>:<span class="hljs-string">&quot;cpu&quot;</span>}]}&#x27; \\
-        -<span class="hljs-keyword">H</span> <span class="hljs-string">&quot;Authorization: Bearer $}{API_TOKEN}&quot;</span>
+        -<span class="hljs-keyword">H</span> <span class="hljs-string">&quot;Authorization: Bearer \${API_TOKEN}&quot;</span>
 # {<span class="hljs-string">&quot;ok&quot;</span>:<span class="hljs-string">&quot;Pinned 1 models, please wait while we load them.&quot;</span>}&#x27;`}}),{c(){w(s.$$.fragment)},l(e){j(s.$$.fragment,e)},m(e,t){q(s,e,t),a=!0},p:R,i(e){a||(y(s.$$.fragment,e),a=!0)},o(e){v(s.$$.fragment,e),a=!1},d(e){k(s,e)}}}function Is(d){let s,a;return s=new Q({props:{$$slots:{default:[Es]},$$scope:{ctx:d}}}),{c(){w(s.$$.fragment)},l(e){j(s.$$.fragment,e)},m(e,t){q(s,e,t),a=!0},p(e,t){const h={};t&2&&(h.$$scope={dirty:t,ctx:e}),s.$set(h)},i(e){a||(y(s.$$.fragment,e),a=!0)},o(e){v(s.$$.fragment,e),a=!1},d(e){k(s,e)}}}function Ts(d){let s,a,e,t,h,z,Pe,W,Ae,oe,P,b,Z,B,be,ee,Ee,le,E,Ie,L,Te,xe,re,I,Ne,J,Se,Oe,pe,K,Ye,ie,A,T,se,H,ze,ne,Be,ce,D,Le,ue,x,Ke,U,He,Ue,de,C,Me,he,Y,M,Xe,fe,F,Je,me,N,ge,G,De,$e,S,_e,O,we;return z=new Ce({}),B=new Ce({}),H=new Ce({}),N=new is({props:{python:!0,js:!0,curl:!0,$$slots:{curl:[ys],js:[js],python:[_s]},$$scope:{ctx:d}}}),S=new gs({props:{warning:!0,$$slots:{default:[vs]},$$scope:{ctx:d}}}),O=new is({props:{python:!0,js:!0,curl:!0,$$slots:{curl:[Is],js:[bs],python:[Ps]},$$scope:{ctx:d}}}),{c(){s=i("meta"),a=m(),e=i("h1"),t=i("a"),h=i("span"),w(z.$$.fragment),Pe=m(),W=i("span"),Ae=$("Detailed usage and pinned models"),oe=m(),P=i("h2"),b=i("a"),Z=i("span"),w(B.$$.fragment),be=m(),ee=i("span"),Ee=$("API Usage dashboard"),le=m(),E=i("p"),Ie=$("The "),L=i("a"),Te=$("API Usage Dashboard"),xe=$(` (beta) shows
 historical number of requests and input characters per model for an API Token.`),re=m(),I=i("p"),Ne=$(`Please note that each user account, and each organization, has its own
 API Token. Lab, Startup and Enterprise subscriptions are billed

@@ -31,7 +31,7 @@ async function query(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/facebook/bart-large-mnli",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data),
         }
@@ -47,7 +47,7 @@ query({inputs: "Hi, I recently bought a device from your company but it is not w
     <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(
         <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/facebook/bart-large-mnli&quot;</span>,
         {
-            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">$}{API_TOKEN}</span>\`</span> },
+            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">\${API_TOKEN}</span>\`</span> },
             <span class="hljs-attr">method</span>: <span class="hljs-string">&quot;POST&quot;</span>,
             <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(data),
         }
@@ -61,11 +61,11 @@ query({inputs: "Hi, I recently bought a device from your company but it is not w
 <span class="hljs-comment">// {&quot;sequence&quot;:&quot;Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed!&quot;,&quot;labels&quot;:[&quot;refund&quot;,&quot;faq&quot;,&quot;legal&quot;],&quot;scores&quot;:[0.8778, 0.1052, 0.017]}</span>`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function WU($){let n,c;return n=new R({props:{$$slots:{default:[KU]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function YU($){let n,c;return n=new N({props:{code:`curl https://api-inference.huggingface.co/models/facebook/bart-large-mnli \\
         -X POST \\
         -d '{"inputs": "Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed!", "parameters": {"candidate_labels": ["refund", "legal", "faq"]}}' \\
-        -H "Authorization: Bearer $}{HF_API_TOKEN}"
+        -H "Authorization: Bearer \${HF_API_TOKEN}"
 # {"sequence":"Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed!","labels":["refund","faq","legal"],"scores":[0.8778, 0.1052, 0.017]}`,highlighted:`curl https:<span class="hljs-comment">//api-inference.huggingface.co/models/facebook/bart-large-mnli \\</span>
         -X <span class="hljs-keyword">POST</span> \\
         -<span class="hljs-keyword">d</span> &#x27;{<span class="hljs-string">&quot;inputs&quot;</span>: <span class="hljs-string">&quot;Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed!&quot;</span>, <span class="hljs-string">&quot;parameters&quot;</span>: {<span class="hljs-string">&quot;candidate_labels&quot;</span>: [<span class="hljs-string">&quot;refund&quot;</span>, <span class="hljs-string">&quot;legal&quot;</span>, <span class="hljs-string">&quot;faq&quot;</span>]}}&#x27; \\
-        -<span class="hljs-keyword">H</span> <span class="hljs-string">&quot;Authorization: Bearer $}{HF_API_TOKEN}&quot;</span>
+        -<span class="hljs-keyword">H</span> <span class="hljs-string">&quot;Authorization: Bearer \${HF_API_TOKEN}&quot;</span>
 # {<span class="hljs-string">&quot;sequence&quot;</span>:<span class="hljs-string">&quot;Hi, I recently bought a device from your company but it is not working as advertised and I would like to get reimbursed!&quot;</span>,<span class="hljs-string">&quot;labels&quot;</span>:[<span class="hljs-string">&quot;refund&quot;</span>,<span class="hljs-string">&quot;faq&quot;</span>,<span class="hljs-string">&quot;legal&quot;</span>],<span class="hljs-string">&quot;scores&quot;</span>:[0.8778, 0.1052, 0.017]}`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function VU($){let n,c;return n=new R({props:{$$slots:{default:[YU]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function XU($){let n,c;return n=new N({props:{code:`self.assertEqual(
     deep_round(data),
     {
@@ -143,7 +143,7 @@ async function query(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-ru-en",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data),
         }
@@ -159,7 +159,7 @@ query({inputs: "\u041C\u0435\u043D\u044F \u0437\u043E\u0432\u0443\u0442 \u0412\u
     <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(
         <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-ru-en&quot;</span>,
         {
-            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">$}{API_TOKEN}</span>\`</span> },
+            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">\${API_TOKEN}</span>\`</span> },
             <span class="hljs-attr">method</span>: <span class="hljs-string">&quot;POST&quot;</span>,
             <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(data),
         }
@@ -173,11 +173,11 @@ query({inputs: "\u041C\u0435\u043D\u044F \u0437\u043E\u0432\u0443\u0442 \u0412\u
 <span class="hljs-comment">// [{&quot;translation_text&quot;:&quot;My name is Wolfgang and I live in Berlin.&quot;}]</span>`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function aL($){let n,c;return n=new R({props:{$$slots:{default:[sL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function nL($){let n,c;return n=new N({props:{code:`curl https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-ru-en \\
         -X POST \\
         -d '{"inputs": "\u041C\u0435\u043D\u044F \u0437\u043E\u0432\u0443\u0442 \u0412\u043E\u043B\u044C\u0444\u0433\u0430\u043D\u0433 \u0438 \u044F \u0436\u0438\u0432\u0443 \u0432 \u0411\u0435\u0440\u043B\u0438\u043D\u0435"}' \\
-        -H "Authorization: Bearer $}{HF_API_TOKEN}"
+        -H "Authorization: Bearer \${HF_API_TOKEN}"
 # [{"translation_text":"My name is Wolfgang and I live in Berlin."}]`,highlighted:`curl https:<span class="hljs-regexp">//</span>api-inference.huggingface.co<span class="hljs-regexp">/models/</span>Helsinki-NLP/opus-mt-ru-en \\
         -X POST \\
         -d <span class="hljs-string">&#x27;{&quot;inputs&quot;: &quot;\u041C\u0435\u043D\u044F \u0437\u043E\u0432\u0443\u0442 \u0412\u043E\u043B\u044C\u0444\u0433\u0430\u043D\u0433 \u0438 \u044F \u0436\u0438\u0432\u0443 \u0432 \u0411\u0435\u0440\u043B\u0438\u043D\u0435&quot;}&#x27;</span> \\
-        -H <span class="hljs-string">&quot;Authorization: Bearer $}{HF_API_TOKEN}&quot;</span>
+        -H <span class="hljs-string">&quot;Authorization: Bearer \${HF_API_TOKEN}&quot;</span>
 <span class="hljs-comment"># [{&quot;translation_text&quot;:&quot;My name is Wolfgang and I live in Berlin.&quot;}]</span>`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function rL($){let n,c;return n=new R({props:{$$slots:{default:[nL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function oL($){let n,c,s,d,_,k,A;return{c(){n=r("p"),c=r("strong"),s=i("Recommended model"),d=i(`:
 `),_=r("a"),k=i("facebook/bart-large-cnn"),A=i("."),this.h()},l(T){n=o(T,"P",{});var j=l(n);c=o(j,"STRONG",{});var O=l(c);s=u(O,"Recommended model"),O.forEach(t),d=u(j,`:
 `),_=o(j,"A",{href:!0,rel:!0});var D=l(_);k=u(D,"facebook/bart-large-cnn"),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https://huggingface.co/facebook/bart-large-cnn"),h(_,"rel","nofollow")},m(T,j){m(T,n,j),e(n,c),e(c,s),e(n,d),e(n,_),e(_,k),e(n,A)},d(T){T&&t(n)}}}function lL($){let n,c;return n=new N({props:{code:`import json
@@ -229,7 +229,7 @@ async function query(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/facebook/bart-large-cnn",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data),
         }
@@ -245,7 +245,7 @@ async function query(data) {
     const response = await fetch(
         <span class="hljs-comment">&quot;https://api-inference.huggingface.co/models/facebook/bart-large-cnn&quot;</span>,
         {
-            headers: { <span class="hljs-type">Authorization</span>: \`<span class="hljs-type">Bearer</span> <span class="hljs-string">$}{</span><span class="hljs-type">API_TOKEN</span>}\` },
+            headers: { <span class="hljs-type">Authorization</span>: \`<span class="hljs-type">Bearer</span> <span class="hljs-string">\${</span><span class="hljs-type">API_TOKEN</span>}\` },
             method: <span class="hljs-comment">&quot;POST&quot;</span>,
             body: <span class="hljs-type">JSON</span>.stringify(data),
         }
@@ -259,11 +259,11 @@ query({inputs: <span class="hljs-comment">&quot;The tower is 324 metres (1,063 f
 // [{<span class="hljs-comment">&quot;summary_text&quot;</span>:<span class="hljs-comment">&quot;The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, and the tallest structure in Paris. Its base is square, measuring 125 metres (410 ft) on each side. It was the first structure to reach a height of 300 metres.&quot;</span>}]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function cL($){let n,c;return n=new R({props:{$$slots:{default:[uL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function pL($){let n,c;return n=new N({props:{code:`curl https://api-inference.huggingface.co/models/facebook/bart-large-cnn \\
         -X POST \\
         -d '{"inputs": "The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, and the tallest structure in Paris. Its base is square, measuring 125 metres (410 ft) on each side. During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world, a title it held for 41 years until the Chrysler Building in New York City was finished in 1930. It was the first structure to reach a height of 300 metres. Due to the addition of a broadcasting aerial at the top of the tower in 1957, it is now taller than the Chrysler Building by 5.2 metres (17 ft). Excluding transmitters, the Eiffel Tower is the second tallest free-standing structure in France after the Millau Viaduct.", "parameters": {"do_sample": false}}' \\
-        -H "Authorization: Bearer $}{HF_API_TOKEN}"
+        -H "Authorization: Bearer \${HF_API_TOKEN}"
 # [{"summary_text":"The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building. Its base is square, measuring 125 metres (410 ft) on each side. During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world."}]`,highlighted:`curl https:<span class="hljs-comment">//api-inference.huggingface.co/models/facebook/bart-large-cnn \\
         -X POST \\
         -d &#x27;{&quot;inputs&quot;: &quot;The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, and the tallest structure in Paris. Its base is square, measuring 125 metres (410 ft) on each side. During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world, a title it held for 41 years until the Chrysler Building in New York City was finished in 1930. It was the first structure to reach a height of 300 metres. Due to the addition of a broadcasting aerial at the top of the tower in 1957, it is now taller than the Chrysler Building by 5.2 metres (17 ft). Excluding transmitters, the Eiffel Tower is the second tallest free-standing structure in France after the Millau Viaduct.&quot;, &quot;parameters&quot;: {&quot;do_sample&quot;: false}}&#x27; \\
-        -H &quot;Authorization: Bearer $}{HF_API_TOKEN}&quot;</span>
+        -H &quot;Authorization: Bearer \${HF_API_TOKEN}&quot;</span>
 # [{<span class="hljs-string">&quot;summary_text&quot;</span>:<span class="hljs-string">&quot;The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building. Its base is square, measuring 125 metres (410 ft) on each side. During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world.&quot;</span>}]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function fL($){let n,c;return n=new R({props:{$$slots:{default:[pL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function hL($){let n,c,s,d,_,k,A;return{c(){n=r("p"),c=r("strong"),s=i("Recommended model"),d=i(`:
 `),_=r("a"),k=i("microsoft/DialoGPT-large"),A=i("."),this.h()},l(T){n=o(T,"P",{});var j=l(n);c=o(j,"STRONG",{});var O=l(c);s=u(O,"Recommended model"),O.forEach(t),d=u(j,`:
 `),_=o(j,"A",{href:!0,rel:!0});var D=l(_);k=u(D,"microsoft/DialoGPT-large"),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https://huggingface.co/microsoft/DialoGPT-large"),h(_,"rel","nofollow")},m(T,j){m(T,n,j),e(n,c),e(c,s),e(n,d),e(n,_),e(_,k),e(n,A)},d(T){T&&t(n)}}}function dL($){let n,c;return n=new N({props:{code:`import json
@@ -339,7 +339,7 @@ async function query(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data),
         }
@@ -355,7 +355,7 @@ async <span class="hljs-keyword">function</span> query(data) {
     const response = await <span class="hljs-keyword">fetch</span>(
         &quot;https://api-inference.huggingface.co/models/microsoft/DialoGPT-large&quot;,
         {
-            headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer $}{API_TOKEN}\` },
+            headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer \${API_TOKEN}\` },
             <span class="hljs-keyword">method</span>: &quot;POST&quot;,
             body: <span class="hljs-type">JSON</span>.stringify(data),
         }
@@ -369,8 +369,8 @@ query({inputs: {past_user_inputs: [&quot;Which movie is the best ?&quot;], gener
 // {&quot;generated_text&quot;:&quot;It&#x27;s the best movie ever.&quot;,&quot;conversation&quot;:{&quot;past_user_inputs&quot;:[&quot;Which movie is the best ?&quot;,&quot;Can you explain why ?&quot;],&quot;generated_responses&quot;:[&quot;It is Die Hard for sure.&quot;,&quot;It&#x27;s the best movie ever.&quot;]},&quot;warnings&quot;:[&quot;Setting \`pad_token_id\` to \`eos_token_id\`:50256 for open-end generation.&quot;]}`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function _L($){let n,c;return n=new R({props:{$$slots:{default:[mL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function $L($){let n,c;return n=new N({props:{code:`curl https://api-inference.huggingface.co/models/microsoft/DialoGPT-large \\
         -X POST \\
         -d '{"inputs": {"past_user_inputs": ["Which movie is the best ?"], "generated_responses": ["It is Die Hard for sure."], "text":"Can you explain why ?"}}' \\
-        -H "Authorization: Bearer $}{HF_API_TOKEN}"
-# {"generated_text":"It's the best movie ever.","conversation":{"past_user_inputs":["Which movie is the best ?","Can you explain why ?"],"generated_responses":["It is Die Hard for sure.","It's the best movie ever."]},"warnings":["Setting \`pad_token_id\` to \`eos_token_id\`:50256 for open-end generation."]}`,highlighted:'<span class="hljs-title">curl https:</span>//api-inference.huggingface.co/models/microsoft/DialoGPT-large \\\n        -X POST \\\n        -d &#x27;{<span class="hljs-string">&quot;inputs&quot;</span>: {<span class="hljs-string">&quot;past_user_inputs&quot;</span>: [<span class="hljs-string">&quot;Which movie is the best ?&quot;</span>], <span class="hljs-string">&quot;generated_responses&quot;</span>: [<span class="hljs-string">&quot;It is Die Hard for sure.&quot;</span>], <span class="hljs-string">&quot;text&quot;</span>:<span class="hljs-string">&quot;Can you explain why ?&quot;</span>}}&#x27; \\\n        -H <span class="hljs-string">&quot;Authorization: Bearer $}{HF_API_TOKEN}&quot;</span>\n# {<span class="hljs-string">&quot;generated_text&quot;</span>:<span class="hljs-string">&quot;It&#x27;s the best movie ever.&quot;</span>,<span class="hljs-string">&quot;conversation&quot;</span>:{<span class="hljs-string">&quot;past_user_inputs&quot;</span>:[<span class="hljs-string">&quot;Which movie is the best ?&quot;</span>,<span class="hljs-string">&quot;Can you explain why ?&quot;</span>],<span class="hljs-string">&quot;generated_responses&quot;</span>:[<span class="hljs-string">&quot;It is Die Hard for sure.&quot;</span>,<span class="hljs-string">&quot;It&#x27;s the best movie ever.&quot;</span>]},<span class="hljs-string">&quot;warnings&quot;</span>:[<span class="hljs-string">&quot;Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.&quot;</span>]}'}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function qL($){let n,c;return n=new R({props:{$$slots:{default:[$L]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function vL($){let n,c,s,d,_,k,A;return{c(){n=r("p"),c=r("strong"),s=i("Recommended model"),d=i(`:
+        -H "Authorization: Bearer \${HF_API_TOKEN}"
+# {"generated_text":"It's the best movie ever.","conversation":{"past_user_inputs":["Which movie is the best ?","Can you explain why ?"],"generated_responses":["It is Die Hard for sure.","It's the best movie ever."]},"warnings":["Setting \`pad_token_id\` to \`eos_token_id\`:50256 for open-end generation."]}`,highlighted:'<span class="hljs-title">curl https:</span>//api-inference.huggingface.co/models/microsoft/DialoGPT-large \\\n        -X POST \\\n        -d &#x27;{<span class="hljs-string">&quot;inputs&quot;</span>: {<span class="hljs-string">&quot;past_user_inputs&quot;</span>: [<span class="hljs-string">&quot;Which movie is the best ?&quot;</span>], <span class="hljs-string">&quot;generated_responses&quot;</span>: [<span class="hljs-string">&quot;It is Die Hard for sure.&quot;</span>], <span class="hljs-string">&quot;text&quot;</span>:<span class="hljs-string">&quot;Can you explain why ?&quot;</span>}}&#x27; \\\n        -H <span class="hljs-string">&quot;Authorization: Bearer ${HF_API_TOKEN}&quot;</span>\n# {<span class="hljs-string">&quot;generated_text&quot;</span>:<span class="hljs-string">&quot;It&#x27;s the best movie ever.&quot;</span>,<span class="hljs-string">&quot;conversation&quot;</span>:{<span class="hljs-string">&quot;past_user_inputs&quot;</span>:[<span class="hljs-string">&quot;Which movie is the best ?&quot;</span>,<span class="hljs-string">&quot;Can you explain why ?&quot;</span>],<span class="hljs-string">&quot;generated_responses&quot;</span>:[<span class="hljs-string">&quot;It is Die Hard for sure.&quot;</span>,<span class="hljs-string">&quot;It&#x27;s the best movie ever.&quot;</span>]},<span class="hljs-string">&quot;warnings&quot;</span>:[<span class="hljs-string">&quot;Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.&quot;</span>]}'}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function qL($){let n,c;return n=new R({props:{$$slots:{default:[$L]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function vL($){let n,c,s,d,_,k,A;return{c(){n=r("p"),c=r("strong"),s=i("Recommended model"),d=i(`:
 `),_=r("a"),k=i("google/tapas-base-finetuned-wtq"),A=i("."),this.h()},l(T){n=o(T,"P",{});var j=l(n);c=o(j,"STRONG",{});var O=l(c);s=u(O,"Recommended model"),O.forEach(t),d=u(j,`:
 `),_=o(j,"A",{href:!0,rel:!0});var D=l(_);k=u(D,"google/tapas-base-finetuned-wtq"),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https://huggingface.co/google/tapas-base-finetuned-wtq"),h(_,"rel","nofollow")},m(T,j){m(T,n,j),e(n,c),e(c,s),e(n,d),e(n,_),e(_,k),e(n,A)},d(T){T&&t(n)}}}function yL($){let n,c;return n=new N({props:{code:`import json
 import requests
@@ -425,7 +425,7 @@ async function query(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/google/tapas-base-finetuned-wtq",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data),
         }
@@ -441,7 +441,7 @@ async <span class="hljs-keyword">function</span> query(data) {
     const response = await <span class="hljs-keyword">fetch</span>(
         &quot;https://api-inference.huggingface.co/models/google/tapas-base-finetuned-wtq&quot;,
         {
-            headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer $}{API_TOKEN}\` },
+            headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer \${API_TOKEN}\` },
             <span class="hljs-keyword">method</span>: &quot;POST&quot;,
             body: <span class="hljs-type">JSON</span>.stringify(data),
         }
@@ -455,11 +455,11 @@ query({inputs:{query:&quot;How many stars does the transformers repository have?
 // {&quot;answer&quot;:&quot;AVERAGE &gt; 36542&quot;,&quot;coordinates&quot;:[[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>]],&quot;cells&quot;:[&quot;36542&quot;],&quot;aggregator&quot;:&quot;AVERAGE&quot;}`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function bL($){let n,c;return n=new R({props:{$$slots:{default:[wL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function jL($){let n,c;return n=new N({props:{code:`curl https://api-inference.huggingface.co/models/google/tapas-base-finetuned-wtq \\
         -X POST \\
         -d '{"inputs":{"query":"How many stars does the transformers repository have?","table":{"Repository":["Transformers","Datasets","Tokenizers"],"Stars":["36542","4512","3934"],"Contributors":["651","77","34"],"Programming language":["Python","Python","Rust, Python and NodeJS"]}}}' \\
-        -H "Authorization: Bearer $}{HF_API_TOKEN}"
+        -H "Authorization: Bearer \${HF_API_TOKEN}"
 # {"answer":"AVERAGE > 36542","coordinates":[[0,1]],"cells":["36542"],"aggregator":"AVERAGE"}`,highlighted:`curl https:<span class="hljs-comment">//api-inference.huggingface.co/models/google/tapas-base-finetuned-wtq \\</span>
         -X <span class="hljs-keyword">POST</span> \\
         -<span class="hljs-keyword">d</span> &#x27;{<span class="hljs-string">&quot;inputs&quot;</span>:{<span class="hljs-string">&quot;query&quot;</span>:<span class="hljs-string">&quot;How many stars does the transformers repository have?&quot;</span>,<span class="hljs-string">&quot;table&quot;</span>:{<span class="hljs-string">&quot;Repository&quot;</span>:[<span class="hljs-string">&quot;Transformers&quot;</span>,<span class="hljs-string">&quot;Datasets&quot;</span>,<span class="hljs-string">&quot;Tokenizers&quot;</span>],<span class="hljs-string">&quot;Stars&quot;</span>:[<span class="hljs-string">&quot;36542&quot;</span>,<span class="hljs-string">&quot;4512&quot;</span>,<span class="hljs-string">&quot;3934&quot;</span>],<span class="hljs-string">&quot;Contributors&quot;</span>:[<span class="hljs-string">&quot;651&quot;</span>,<span class="hljs-string">&quot;77&quot;</span>,<span class="hljs-string">&quot;34&quot;</span>],<span class="hljs-string">&quot;Programming language&quot;</span>:[<span class="hljs-string">&quot;Python&quot;</span>,<span class="hljs-string">&quot;Python&quot;</span>,<span class="hljs-string">&quot;Rust, Python and NodeJS&quot;</span>]}}}&#x27; \\
-        -<span class="hljs-keyword">H</span> <span class="hljs-string">&quot;Authorization: Bearer $}{HF_API_TOKEN}&quot;</span>
+        -<span class="hljs-keyword">H</span> <span class="hljs-string">&quot;Authorization: Bearer \${HF_API_TOKEN}&quot;</span>
 # {<span class="hljs-string">&quot;answer&quot;</span>:<span class="hljs-string">&quot;AVERAGE &gt; 36542&quot;</span>,<span class="hljs-string">&quot;coordinates&quot;</span>:[[0,1]],<span class="hljs-string">&quot;cells&quot;</span>:[<span class="hljs-string">&quot;36542&quot;</span>],<span class="hljs-string">&quot;aggregator&quot;</span>:<span class="hljs-string">&quot;AVERAGE&quot;</span>}`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function TL($){let n,c;return n=new R({props:{$$slots:{default:[jL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function kL($){let n,c;return n=new N({props:{code:`self.assertEqual(
     data,
     {
@@ -513,7 +513,7 @@ async function query(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/deepset/roberta-base-squad2",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data),
         }
@@ -529,7 +529,7 @@ query({inputs:{question:"What is my name?",context:"My name is Clara and I live 
     <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(
         <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/deepset/roberta-base-squad2&quot;</span>,
         {
-            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">$}{API_TOKEN}</span>\`</span> },
+            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">\${API_TOKEN}</span>\`</span> },
             <span class="hljs-attr">method</span>: <span class="hljs-string">&quot;POST&quot;</span>,
             <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(data),
         }
@@ -543,11 +543,11 @@ query({inputs:{question:"What is my name?",context:"My name is Clara and I live 
 <span class="hljs-comment">// {&quot;score&quot;:0.933128833770752,&quot;start&quot;:11,&quot;end&quot;:16,&quot;answer&quot;:&quot;Clara&quot;}</span>`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function NL($){let n,c;return n=new R({props:{$$slots:{default:[RL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function xL($){let n,c;return n=new N({props:{code:`curl https://api-inference.huggingface.co/models/deepset/roberta-base-squad2 \\
         -X POST \\
         -d '{"inputs":{"question":"What is my name?","context":"My name is Clara and I live in Berkeley."}}' \\
-        -H "Authorization: Bearer $}{HF_API_TOKEN}"
+        -H "Authorization: Bearer \${HF_API_TOKEN}"
 # {"score":0.933128833770752,"start":11,"end":16,"answer":"Clara"}`,highlighted:`curl https:<span class="hljs-comment">//api-inference.huggingface.co/models/deepset/roberta-base-squad2 \\</span>
         -X <span class="hljs-keyword">POST</span> \\
         -<span class="hljs-keyword">d</span> &#x27;{<span class="hljs-string">&quot;inputs&quot;</span>:{<span class="hljs-string">&quot;question&quot;</span>:<span class="hljs-string">&quot;What is my name?&quot;</span>,<span class="hljs-string">&quot;context&quot;</span>:<span class="hljs-string">&quot;My name is Clara and I live in Berkeley.&quot;</span>}}&#x27; \\
-        -<span class="hljs-keyword">H</span> <span class="hljs-string">&quot;Authorization: Bearer $}{HF_API_TOKEN}&quot;</span>
+        -<span class="hljs-keyword">H</span> <span class="hljs-string">&quot;Authorization: Bearer \${HF_API_TOKEN}&quot;</span>
 # {<span class="hljs-string">&quot;score&quot;</span>:0.933128833770752,<span class="hljs-string">&quot;start&quot;</span>:11,<span class="hljs-string">&quot;end&quot;</span>:16,<span class="hljs-string">&quot;answer&quot;</span>:<span class="hljs-string">&quot;Clara&quot;</span>}`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function SL($){let n,c;return n=new R({props:{$$slots:{default:[xL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function IL($){let n,c;return n=new N({props:{code:`self.assertEqual(
     deep_round(data),
     {"score": 0.9327, "start": 11, "end": 16, "answer": "Clara"},
@@ -577,7 +577,7 @@ async function query(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data),
         }
@@ -593,7 +593,7 @@ query({inputs:"I like you. I love you"}).then((response) => {
     <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(
         <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english&quot;</span>,
         {
-            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">$}{API_TOKEN}</span>\`</span> },
+            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">\${API_TOKEN}</span>\`</span> },
             <span class="hljs-attr">method</span>: <span class="hljs-string">&quot;POST&quot;</span>,
             <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(data),
         }
@@ -607,11 +607,11 @@ query({inputs:"I like you. I love you"}).then((response) => {
 <span class="hljs-comment">// [[{&quot;label&quot;:&quot;NEGATIVE&quot;,&quot;score&quot;:0.0001261125144083053},{&quot;label&quot;:&quot;POSITIVE&quot;,&quot;score&quot;:0.9998738765716553}]]</span>`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function LL($){let n,c;return n=new R({props:{$$slots:{default:[UL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function zL($){let n,c;return n=new N({props:{code:`curl https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english \\
         -X POST \\
         -d '{"inputs":"I like you. I love you"}' \\
-        -H "Authorization: Bearer $}{HF_API_TOKEN}"
+        -H "Authorization: Bearer \${HF_API_TOKEN}"
 # [[{"label":"NEGATIVE","score":0.0001261125144083053},{"label":"POSITIVE","score":0.9998738765716553}]]`,highlighted:`curl https:<span class="hljs-comment">//api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english \\
         -X POST \\
         -d &#x27;{&quot;inputs&quot;:&quot;I like you. I love you&quot;}&#x27; \\
-        -H &quot;Authorization: Bearer $}{HF_API_TOKEN}&quot;</span>
+        -H &quot;Authorization: Bearer \${HF_API_TOKEN}&quot;</span>
 # [[{<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;NEGATIVE&quot;</span>,<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.0001261125144083053</span>},{<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;POSITIVE&quot;</span>,<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.9998738765716553</span>}]]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function ML($){let n,c;return n=new R({props:{$$slots:{default:[zL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function FL($){let n,c;return n=new N({props:{code:`self.assertEqual(
     deep_round(data),
     [
@@ -651,7 +651,7 @@ async function query(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/dbmdz/bert-large-cased-finetuned-conll03-english",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data),
         }
@@ -667,7 +667,7 @@ async <span class="hljs-keyword">function</span> query(data) {
     const response = await <span class="hljs-keyword">fetch</span>(
         &quot;https://api-inference.huggingface.co/models/dbmdz/bert-large-cased-finetuned-conll03-english&quot;,
         {
-            headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer $}{API_TOKEN}\` },
+            headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer \${API_TOKEN}\` },
             <span class="hljs-keyword">method</span>: &quot;POST&quot;,
             body: <span class="hljs-type">JSON</span>.stringify(data),
         }
@@ -681,11 +681,11 @@ query({inputs:&quot;My name is Sarah Jessica Parker but you can call me Jessica&
 // [{&quot;entity_group&quot;:&quot;PER&quot;,&quot;score&quot;:<span class="hljs-number">0.9991337060928345</span>,&quot;word&quot;:&quot;Sarah Jessica Parker&quot;,&quot;start&quot;:<span class="hljs-number">11</span>,&quot;end&quot;:<span class="hljs-number">31</span>},{&quot;entity_group&quot;:&quot;PER&quot;,&quot;score&quot;:<span class="hljs-number">0.9979912042617798</span>,&quot;word&quot;:&quot;Jessica&quot;,&quot;start&quot;:<span class="hljs-number">52</span>,&quot;end&quot;:<span class="hljs-number">59</span>}]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function XL($){let n,c;return n=new R({props:{$$slots:{default:[VL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function QL($){let n,c;return n=new N({props:{code:`curl https://api-inference.huggingface.co/models/dbmdz/bert-large-cased-finetuned-conll03-english \\
         -X POST \\
         -d '{"inputs":"My name is Sarah Jessica Parker but you can call me Jessica"}' \\
-        -H "Authorization: Bearer $}{HF_API_TOKEN}"
+        -H "Authorization: Bearer \${HF_API_TOKEN}"
 # [{"entity_group":"PER","score":0.9991337060928345,"word":"Sarah Jessica Parker","start":11,"end":31},{"entity_group":"PER","score":0.9979912042617798,"word":"Jessica","start":52,"end":59}]`,highlighted:`curl https:<span class="hljs-comment">//api-inference.huggingface.co/models/dbmdz/bert-large-cased-finetuned-conll03-english \\
         -X POST \\
         -d &#x27;{&quot;inputs&quot;:&quot;My name is Sarah Jessica Parker but you can call me Jessica&quot;}&#x27; \\
-        -H &quot;Authorization: Bearer $}{HF_API_TOKEN}&quot;</span>
+        -H &quot;Authorization: Bearer \${HF_API_TOKEN}&quot;</span>
 # [{<span class="hljs-string">&quot;entity_group&quot;</span>:<span class="hljs-string">&quot;PER&quot;</span>,<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.9991337060928345</span>,<span class="hljs-string">&quot;word&quot;</span>:<span class="hljs-string">&quot;Sarah Jessica Parker&quot;</span>,<span class="hljs-string">&quot;start&quot;</span>:<span class="hljs-number">11</span>,<span class="hljs-string">&quot;end&quot;</span>:<span class="hljs-number">31</span>},{<span class="hljs-string">&quot;entity_group&quot;</span>:<span class="hljs-string">&quot;PER&quot;</span>,<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.9979912042617798</span>,<span class="hljs-string">&quot;word&quot;</span>:<span class="hljs-string">&quot;Jessica&quot;</span>,<span class="hljs-string">&quot;start&quot;</span>:<span class="hljs-number">52</span>,<span class="hljs-string">&quot;end&quot;</span>:<span class="hljs-number">59</span>}]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function ZL($){let n,c;return n=new R({props:{$$slots:{default:[QL]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function ez($){let n,c;return n=new N({props:{code:`self.assertEqual(
     deep_round(data),
     [
@@ -743,7 +743,7 @@ async function query(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/gpt2",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data),
         }
@@ -759,7 +759,7 @@ query({inputs:"The answer to the universe is"}).then((response) => {
     <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(
         <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/gpt2&quot;</span>,
         {
-            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">$}{API_TOKEN}</span>\`</span> },
+            <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">\${API_TOKEN}</span>\`</span> },
             <span class="hljs-attr">method</span>: <span class="hljs-string">&quot;POST&quot;</span>,
             <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(data),
         }
@@ -773,18 +773,18 @@ query({inputs:"The answer to the universe is"}).then((response) => {
 <span class="hljs-comment">// [{&quot;generated_text&quot;:&quot;The answer to the universe is in a different shape (or shapeless) than&quot;}]</span>`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function oz($){let n,c;return n=new R({props:{$$slots:{default:[rz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function lz($){let n,c;return n=new N({props:{code:`curl https://api-inference.huggingface.co/models/gpt2 \\
         -X POST \\
         -d '{"inputs":"The answer to the universe is"}' \\
-        -H "Authorization: Bearer $}{HF_API_TOKEN}"
+        -H "Authorization: Bearer \${HF_API_TOKEN}"
 # [{"generated_text":"The answer to the universe is in a different shape (or shapeless) than"}]`,highlighted:`curl https:<span class="hljs-regexp">//</span>api-inference.huggingface.co<span class="hljs-regexp">/models/g</span>pt2 \\
         -X POST \\
         -d <span class="hljs-string">&#x27;{&quot;inputs&quot;:&quot;The answer to the universe is&quot;}&#x27;</span> \\
-        -H <span class="hljs-string">&quot;Authorization: Bearer $}{HF_API_TOKEN}&quot;</span>
+        -H <span class="hljs-string">&quot;Authorization: Bearer \${HF_API_TOKEN}&quot;</span>
 <span class="hljs-comment"># [{&quot;generated_text&quot;:&quot;The answer to the universe is in a different shape (or shapeless) than&quot;}]</span>`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function iz($){let n,c;return n=new R({props:{$$slots:{default:[lz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function uz($){let n,c;return n=new N({props:{code:`data == [
     {
-        "generated_text": 'The answer to the universe is that we are the creation of the entire universe," says Fitch.\\n\\nAs of the 1960s, six times as many Americans still make fewer than six bucks ($}17) per year on their way to retirement.'
+        "generated_text": 'The answer to the universe is that we are the creation of the entire universe," says Fitch.\\n\\nAs of the 1960s, six times as many Americans still make fewer than six bucks ($17) per year on their way to retirement.'
     }
 ]`,highlighted:`data == [
     {
-        <span class="hljs-string">&quot;generated_text&quot;</span>: <span class="hljs-string">&#x27;The answer to the universe is that we are the creation of the entire universe,&quot; says Fitch.\\n\\nAs of the 1960s, six times as many Americans still make fewer than six bucks ($}17) per year on their way to retirement.&#x27;</span>
+        <span class="hljs-string">&quot;generated_text&quot;</span>: <span class="hljs-string">&#x27;The answer to the universe is that we are the creation of the entire universe,&quot; says Fitch.\\n\\nAs of the 1960s, six times as many Americans still make fewer than six bucks ($17) per year on their way to retirement.&#x27;</span>
     }
 ]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function cz($){let n,c;return n=new R({props:{$$slots:{default:[uz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function pz($){let n,c,s,d,_,k,A;return{c(){n=r("p"),c=r("strong"),s=i("Recommended model"),d=i(`:
 `),_=r("a"),k=i("bert-base-uncased"),A=i(" (it\u2019s a simple model, but fun to play with)."),this.h()},l(T){n=o(T,"P",{});var j=l(n);c=o(j,"STRONG",{});var O=l(c);s=u(O,"Recommended model"),O.forEach(t),d=u(j,`:
@@ -809,7 +809,7 @@ async function query(data) {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/bert-base-uncased",
         {
-            headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+            headers: { Authorization: \`Bearer \${API_TOKEN}\` },
             method: "POST",
             body: JSON.stringify(data),
         }
@@ -825,7 +825,7 @@ async <span class="hljs-keyword">function</span> query(data) {
     const response = await <span class="hljs-keyword">fetch</span>(
         &quot;https://api-inference.huggingface.co/models/bert-base-uncased&quot;,
         {
-            headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer $}{API_TOKEN}\` },
+            headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer \${API_TOKEN}\` },
             <span class="hljs-keyword">method</span>: &quot;POST&quot;,
             body: <span class="hljs-type">JSON</span>.stringify(data),
         }
@@ -839,11 +839,11 @@ query({inputs:&quot;The answer to the universe is [MASK].&quot;}).<span class="h
 // [{&quot;sequence&quot;:&quot;the answer to the universe is no.&quot;,&quot;score&quot;:<span class="hljs-number">0.16963955760002136</span>,&quot;token&quot;:<span class="hljs-number">2053</span>,&quot;token_str&quot;:&quot;no&quot;},{&quot;sequence&quot;:&quot;the answer to the universe is nothing.&quot;,&quot;score&quot;:<span class="hljs-number">0.07344776391983032</span>,&quot;token&quot;:<span class="hljs-number">2498</span>,&quot;token_str&quot;:&quot;nothing&quot;},{&quot;sequence&quot;:&quot;the answer to the universe is yes.&quot;,&quot;score&quot;:<span class="hljs-number">0.05803241208195686</span>,&quot;token&quot;:<span class="hljs-number">2748</span>,&quot;token_str&quot;:&quot;yes&quot;},{&quot;sequence&quot;:&quot;the answer to the universe is unknown.&quot;,&quot;score&quot;:<span class="hljs-number">0.043957844376564026</span>,&quot;token&quot;:<span class="hljs-number">4242</span>,&quot;token_str&quot;:&quot;unknown&quot;},{&quot;sequence&quot;:&quot;the answer to the universe is simple.&quot;,&quot;score&quot;:<span class="hljs-number">0.04015745222568512</span>,&quot;token&quot;:<span class="hljs-number">3722</span>,&quot;token_str&quot;:&quot;simple&quot;}]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function gz($){let n,c;return n=new R({props:{$$slots:{default:[dz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function mz($){let n,c;return n=new N({props:{code:`curl https://api-inference.huggingface.co/models/bert-base-uncased \\
         -X POST \\
         -d '{"inputs":"The answer to the universe is [MASK]."}' \\
-        -H "Authorization: Bearer $}{HF_API_TOKEN}"
+        -H "Authorization: Bearer \${HF_API_TOKEN}"
 # [{"sequence":"the answer to the universe is no.","score":0.16963955760002136,"token":2053,"token_str":"no"},{"sequence":"the answer to the universe is nothing.","score":0.07344776391983032,"token":2498,"token_str":"nothing"},{"sequence":"the answer to the universe is yes.","score":0.05803241208195686,"token":2748,"token_str":"yes"},{"sequence":"the answer to the universe is unknown.","score":0.043957844376564026,"token":4242,"token_str":"unknown"},{"sequence":"the answer to the universe is simple.","score":0.04015745222568512,"token":3722,"token_str":"simple"}]`,highlighted:`curl https://api-inference.huggingface.co/models/bert-base-uncased \\
         -<span class="hljs-type">X</span> <span class="hljs-type">POST</span> \\
         -d <span class="hljs-string">&#x27;{&quot;inputs&quot;:&quot;The answer to the universe is [MASK].&quot;}&#x27;</span> \\
-        -<span class="hljs-type">H</span> <span class="hljs-comment">&quot;Authorization: Bearer $}{HF_API_TOKEN}&quot;</span>
+        -<span class="hljs-type">H</span> <span class="hljs-comment">&quot;Authorization: Bearer \${HF_API_TOKEN}&quot;</span>
 # [{<span class="hljs-comment">&quot;sequence&quot;</span>:<span class="hljs-comment">&quot;the answer to the universe is no.&quot;</span>,<span class="hljs-comment">&quot;score&quot;</span>:<span class="hljs-number">0.16963955760002136</span>,<span class="hljs-comment">&quot;token&quot;</span>:<span class="hljs-number">2053</span>,<span class="hljs-comment">&quot;token_str&quot;</span>:<span class="hljs-comment">&quot;no&quot;</span>},{<span class="hljs-comment">&quot;sequence&quot;</span>:<span class="hljs-comment">&quot;the answer to the universe is nothing.&quot;</span>,<span class="hljs-comment">&quot;score&quot;</span>:<span class="hljs-number">0.07344776391983032</span>,<span class="hljs-comment">&quot;token&quot;</span>:<span class="hljs-number">2498</span>,<span class="hljs-comment">&quot;token_str&quot;</span>:<span class="hljs-comment">&quot;nothing&quot;</span>},{<span class="hljs-comment">&quot;sequence&quot;</span>:<span class="hljs-comment">&quot;the answer to the universe is yes.&quot;</span>,<span class="hljs-comment">&quot;score&quot;</span>:<span class="hljs-number">0.05803241208195686</span>,<span class="hljs-comment">&quot;token&quot;</span>:<span class="hljs-number">2748</span>,<span class="hljs-comment">&quot;token_str&quot;</span>:<span class="hljs-comment">&quot;yes&quot;</span>},{<span class="hljs-comment">&quot;sequence&quot;</span>:<span class="hljs-comment">&quot;the answer to the universe is unknown.&quot;</span>,<span class="hljs-comment">&quot;score&quot;</span>:<span class="hljs-number">0.043957844376564026</span>,<span class="hljs-comment">&quot;token&quot;</span>:<span class="hljs-number">4242</span>,<span class="hljs-comment">&quot;token_str&quot;</span>:<span class="hljs-comment">&quot;unknown&quot;</span>},{<span class="hljs-comment">&quot;sequence&quot;</span>:<span class="hljs-comment">&quot;the answer to the universe is simple.&quot;</span>,<span class="hljs-comment">&quot;score&quot;</span>:<span class="hljs-number">0.04015745222568512</span>,<span class="hljs-comment">&quot;token&quot;</span>:<span class="hljs-number">3722</span>,<span class="hljs-comment">&quot;token_str&quot;</span>:<span class="hljs-comment">&quot;simple&quot;</span>}]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function _z($){let n,c;return n=new R({props:{$$slots:{default:[mz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function $z($){let n,c;return n=new N({props:{code:`self.assertEqual(
     deep_round(data),
     [
@@ -941,7 +941,7 @@ langage`),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https:/
         const response = await fetch(
             "https://api-inference.huggingface.co/models/facebook/wav2vec2-base-960h",
             {
-                headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+                headers: { Authorization: \`Bearer \${API_TOKEN}\` },
                 method: "POST",
                 body: data,
             }
@@ -959,7 +959,7 @@ langage`),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https:/
         <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(
             <span class="hljs-string">&quot;https://api-inference.huggingface.co/models/facebook/wav2vec2-base-960h&quot;</span>,
             {
-                <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">$}{API_TOKEN}</span>\`</span> },
+                <span class="hljs-attr">headers</span>: { <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">\`Bearer <span class="hljs-subst">\${API_TOKEN}</span>\`</span> },
                 <span class="hljs-attr">method</span>: <span class="hljs-string">&quot;POST&quot;</span>,
                 <span class="hljs-attr">body</span>: data,
             }
@@ -973,11 +973,11 @@ langage`),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https:/
     <span class="hljs-comment">// {&quot;text&quot;:&quot;GOING ALONG SLUSHY COUNTRY ROADS AND SPEAKING TO DAMP AUDIENCES IN DRAUGHTY SCHOOL ROOMS DAY AFTER DAY FOR A FORTNIGHT HE&#x27;LL HAVE TO PUT IN AN APPEARANCE AT SOME PLACE OF WORSHIP ON SUNDAY MORNING AND HE CAN COME TO US IMMEDIATELY AFTERWARDS&quot;}</span>`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function jz($){let n,c;return n=new R({props:{$$slots:{default:[bz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function Tz($){let n,c;return n=new N({props:{code:`    curl https://api-inference.huggingface.co/models/facebook/wav2vec2-base-960h \\
             -X POST \\
             --data-binary '@sample1.flac' \\
-            -H "Authorization: Bearer $}{HF_API_TOKEN}"
+            -H "Authorization: Bearer \${HF_API_TOKEN}"
     # {"text":"GOING ALONG SLUSHY COUNTRY ROADS AND SPEAKING TO DAMP AUDIENCES IN DRAUGHTY SCHOOL ROOMS DAY AFTER DAY FOR A FORTNIGHT HE'LL HAVE TO PUT IN AN APPEARANCE AT SOME PLACE OF WORSHIP ON SUNDAY MORNING AND HE CAN COME TO US IMMEDIATELY AFTERWARDS"}`,highlighted:`    curl https://api-inference.huggingface.co/models/facebook/wav2vec2-base-<span class="hljs-number">960</span>h \\
             -X POST \\
             --data-binary <span class="hljs-string">&#x27;@sample1.flac&#x27;</span> \\
-            -H <span class="hljs-string">&quot;Authorization: Bearer <span class="hljs-variable">$}{HF_API_TOKEN}</span>&quot;</span>
+            -H <span class="hljs-string">&quot;Authorization: Bearer <span class="hljs-variable">\${HF_API_TOKEN}</span>&quot;</span>
     <span class="hljs-comment"># {&quot;text&quot;:&quot;GOING ALONG SLUSHY COUNTRY ROADS AND SPEAKING TO DAMP AUDIENCES IN DRAUGHTY SCHOOL ROOMS DAY AFTER DAY FOR A FORTNIGHT HE&#x27;LL HAVE TO PUT IN AN APPEARANCE AT SOME PLACE OF WORSHIP ON SUNDAY MORNING AND HE CAN COME TO US IMMEDIATELY AFTERWARDS&quot;}</span>`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function kz($){let n,c;return n=new R({props:{$$slots:{default:[Tz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function Az($){let n,c;return n=new N({props:{code:`    self.assertEqual(
         data,
         {
@@ -1017,7 +1017,7 @@ langage`),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https:/
         const response = await fetch(
             "https://api-inference.huggingface.co/models/superb/hubert-large-superb-er",
             {
-                headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+                headers: { Authorization: \`Bearer \${API_TOKEN}\` },
                 method: "POST",
                 body: data,
             }
@@ -1035,7 +1035,7 @@ langage`),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https:/
         const response = await <span class="hljs-keyword">fetch</span>(
             &quot;https://api-inference.huggingface.co/models/superb/hubert-large-superb-er&quot;,
             {
-                headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer $}{API_TOKEN}\` },
+                headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer \${API_TOKEN}\` },
                 <span class="hljs-keyword">method</span>: &quot;POST&quot;,
                 body: data,
             }
@@ -1049,11 +1049,11 @@ langage`),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https:/
     // [{&quot;score&quot;:<span class="hljs-number">0.5927661657333374</span>,&quot;label&quot;:&quot;neu&quot;},{&quot;score&quot;:<span class="hljs-number">0.2002529799938202</span>,&quot;label&quot;:&quot;hap&quot;},{&quot;score&quot;:<span class="hljs-number">0.12795612215995789</span>,&quot;label&quot;:&quot;ang&quot;},{&quot;score&quot;:<span class="hljs-number">0.07902472466230392</span>,&quot;label&quot;:&quot;sad&quot;}]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function Sz($){let n,c;return n=new R({props:{$$slots:{default:[xz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function Iz($){let n,c;return n=new N({props:{code:`    curl https://api-inference.huggingface.co/models/superb/hubert-large-superb-er \\
             -X POST \\
             --data-binary '@sample1.flac' \\
-            -H "Authorization: Bearer $}{HF_API_TOKEN}"
+            -H "Authorization: Bearer \${HF_API_TOKEN}"
     # [{"score":0.5927661657333374,"label":"neu"},{"score":0.2002529799938202,"label":"hap"},{"score":0.12795612215995789,"label":"ang"},{"score":0.07902472466230392,"label":"sad"}]`,highlighted:`    curl https:<span class="hljs-comment">//api-inference.huggingface.co/models/superb/hubert-large-superb-er \\</span>
             -X POST \\
             --<span class="hljs-keyword">data</span>-binary <span class="hljs-string">&#x27;@sample1.flac&#x27;</span> \\
-            -H <span class="hljs-string">&quot;Authorization: Bearer <span class="hljs-subst">$}{HF_API_TOKEN}</span>&quot;</span>
+            -H <span class="hljs-string">&quot;Authorization: Bearer <span class="hljs-subst">\${HF_API_TOKEN}</span>&quot;</span>
     # [{<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.5927661657333374</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;neu&quot;</span>},{<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.2002529799938202</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;hap&quot;</span>},{<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.12795612215995789</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;ang&quot;</span>},{<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.07902472466230392</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;sad&quot;</span>}]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function Hz($){let n,c;return n=new R({props:{$$slots:{default:[Iz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function Bz($){let n,c;return n=new N({props:{code:`    self.assertEqual(
         deep_round(data, 4),
         [
@@ -1097,7 +1097,7 @@ langage`),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https:/
         const response = await fetch(
             "https://api-inference.huggingface.co/models/facebook/detr-resnet-50",
             {
-                headers: { Authorization: \`Bearer $}{API_TOKEN}\` },
+                headers: { Authorization: \`Bearer \${API_TOKEN}\` },
                 method: "POST",
                 body: data,
             }
@@ -1115,7 +1115,7 @@ langage`),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https:/
         const response = await <span class="hljs-keyword">fetch</span>(
             &quot;https://api-inference.huggingface.co/models/facebook/detr-resnet-50&quot;,
             {
-                headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer $}{API_TOKEN}\` },
+                headers: { <span class="hljs-keyword">Authorization</span>: \`Bearer \${API_TOKEN}\` },
                 <span class="hljs-keyword">method</span>: &quot;POST&quot;,
                 body: data,
             }
@@ -1129,11 +1129,11 @@ langage`),D.forEach(t),A=u(j,"."),j.forEach(t),this.h()},h(){h(_,"href","https:/
     // [{&quot;score&quot;:<span class="hljs-number">0.9982201457023621</span>,&quot;label&quot;:&quot;remote&quot;,&quot;box&quot;:{&quot;xmin&quot;:<span class="hljs-number">40</span>,&quot;ymin&quot;:<span class="hljs-number">70</span>,&quot;xmax&quot;:<span class="hljs-number">175</span>,&quot;ymax&quot;:<span class="hljs-number">117</span>}},{&quot;score&quot;:<span class="hljs-number">0.9960021376609802</span>,&quot;label&quot;:&quot;remote&quot;,&quot;box&quot;:{&quot;xmin&quot;:<span class="hljs-number">333</span>,&quot;ymin&quot;:<span class="hljs-number">72</span>,&quot;xmax&quot;:<span class="hljs-number">368</span>,&quot;ymax&quot;:<span class="hljs-number">187</span>}},{&quot;score&quot;:<span class="hljs-number">0.9954745173454285</span>,&quot;label&quot;:&quot;couch&quot;,&quot;box&quot;:{&quot;xmin&quot;:<span class="hljs-number">0</span>,&quot;ymin&quot;:<span class="hljs-number">1</span>,&quot;xmax&quot;:<span class="hljs-number">639</span>,&quot;ymax&quot;:<span class="hljs-number">473</span>}},{&quot;score&quot;:<span class="hljs-number">0.9988006353378296</span>,&quot;label&quot;:&quot;cat&quot;,&quot;box&quot;:{&quot;xmin&quot;:<span class="hljs-number">13</span>,&quot;ymin&quot;:<span class="hljs-number">52</span>,&quot;xmax&quot;:<span class="hljs-number">314</span>,&quot;ymax&quot;:<span class="hljs-number">470</span>}},{&quot;score&quot;:<span class="hljs-number">0.9986783862113953</span>,&quot;label&quot;:&quot;cat&quot;,&quot;box&quot;:{&quot;xmin&quot;:<span class="hljs-number">345</span>,&quot;ymin&quot;:<span class="hljs-number">23</span>,&quot;xmax&quot;:<span class="hljs-number">640</span>,&quot;ymax&quot;:<span class="hljs-number">368</span>}}]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function Mz($){let n,c;return n=new R({props:{$$slots:{default:[zz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function Fz($){let n,c;return n=new N({props:{code:`    curl https://api-inference.huggingface.co/models/facebook/detr-resnet-50 \\
             -X POST \\
             --data-binary '@cats.jpg' \\
-            -H "Authorization: Bearer $}{HF_API_TOKEN}"
+            -H "Authorization: Bearer \${HF_API_TOKEN}"
     # [{"score":0.9982201457023621,"label":"remote","box":{"xmin":40,"ymin":70,"xmax":175,"ymax":117}},{"score":0.9960021376609802,"label":"remote","box":{"xmin":333,"ymin":72,"xmax":368,"ymax":187}},{"score":0.9954745173454285,"label":"couch","box":{"xmin":0,"ymin":1,"xmax":639,"ymax":473}},{"score":0.9988006353378296,"label":"cat","box":{"xmin":13,"ymin":52,"xmax":314,"ymax":470}},{"score":0.9986783862113953,"label":"cat","box":{"xmin":345,"ymin":23,"xmax":640,"ymax":368}}]`,highlighted:`    curl https:<span class="hljs-comment">//api-inference.huggingface.co/models/facebook/detr-resnet-50 \\</span>
             -X POST \\
             --<span class="hljs-keyword">data</span>-binary <span class="hljs-string">&#x27;@cats.jpg&#x27;</span> \\
-            -H <span class="hljs-string">&quot;Authorization: Bearer <span class="hljs-subst">$}{HF_API_TOKEN}</span>&quot;</span>
+            -H <span class="hljs-string">&quot;Authorization: Bearer <span class="hljs-subst">\${HF_API_TOKEN}</span>&quot;</span>
     # [{<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.9982201457023621</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;remote&quot;</span>,<span class="hljs-string">&quot;box&quot;</span>:{<span class="hljs-string">&quot;xmin&quot;</span>:<span class="hljs-number">40</span>,<span class="hljs-string">&quot;ymin&quot;</span>:<span class="hljs-number">70</span>,<span class="hljs-string">&quot;xmax&quot;</span>:<span class="hljs-number">175</span>,<span class="hljs-string">&quot;ymax&quot;</span>:<span class="hljs-number">117</span>}},{<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.9960021376609802</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;remote&quot;</span>,<span class="hljs-string">&quot;box&quot;</span>:{<span class="hljs-string">&quot;xmin&quot;</span>:<span class="hljs-number">333</span>,<span class="hljs-string">&quot;ymin&quot;</span>:<span class="hljs-number">72</span>,<span class="hljs-string">&quot;xmax&quot;</span>:<span class="hljs-number">368</span>,<span class="hljs-string">&quot;ymax&quot;</span>:<span class="hljs-number">187</span>}},{<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.9954745173454285</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;couch&quot;</span>,<span class="hljs-string">&quot;box&quot;</span>:{<span class="hljs-string">&quot;xmin&quot;</span>:<span class="hljs-number">0</span>,<span class="hljs-string">&quot;ymin&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&quot;xmax&quot;</span>:<span class="hljs-number">639</span>,<span class="hljs-string">&quot;ymax&quot;</span>:<span class="hljs-number">473</span>}},{<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.9988006353378296</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;cat&quot;</span>,<span class="hljs-string">&quot;box&quot;</span>:{<span class="hljs-string">&quot;xmin&quot;</span>:<span class="hljs-number">13</span>,<span class="hljs-string">&quot;ymin&quot;</span>:<span class="hljs-number">52</span>,<span class="hljs-string">&quot;xmax&quot;</span>:<span class="hljs-number">314</span>,<span class="hljs-string">&quot;ymax&quot;</span>:<span class="hljs-number">470</span>}},{<span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">0.9986783862113953</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;cat&quot;</span>,<span class="hljs-string">&quot;box&quot;</span>:{<span class="hljs-string">&quot;xmin&quot;</span>:<span class="hljs-number">345</span>,<span class="hljs-string">&quot;ymin&quot;</span>:<span class="hljs-number">23</span>,<span class="hljs-string">&quot;xmax&quot;</span>:<span class="hljs-number">640</span>,<span class="hljs-string">&quot;ymax&quot;</span>:<span class="hljs-number">368</span>}}]`}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:P,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function Jz($){let n,c;return n=new R({props:{$$slots:{default:[Fz]},$$scope:{ctx:$}}}),{c(){q(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const _={};d&2&&(_.$$scope={dirty:d,ctx:s}),n.$set(_)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function Kz($){let n,c;return n=new N({props:{code:`    self.assertEqual(
         deep_round(data, 4),
         [
