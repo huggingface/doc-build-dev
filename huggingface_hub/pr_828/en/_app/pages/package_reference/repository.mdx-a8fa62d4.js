@@ -26,7 +26,7 @@ The name of the tag to be added.`,name:"tag_name"},{anchor:"huggingface_hub.Repo
 The message that accompanies the tag. The tag will turn into an
 annotated tag if a message is passed.`,name:"message"},{anchor:"huggingface_hub.Repository.add_tag.remote",description:`<strong>remote</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 The remote on which to add the tag.`,name:"remote"}]}}),We=new v({props:{name:"auto_track_binary_files",anchor:"huggingface_hub.Repository.auto_track_binary_files",parameters:[{name:"pattern",val:": typing.Optional[str] = '.'"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_828/src/huggingface_hub/repository.py#L1005",parametersDescription:[{anchor:"huggingface_hub.Repository.auto_track_binary_files.pattern",description:`<strong>pattern</strong> (<code>str</code>, <em>optional</em>, defaults to &#x201D;.&#x201C;) &#x2014;
-The pattern with which to track files that are above 10MBs.`,name:"pattern"}],returnDescription:`
+The pattern with which to track files that are binary.`,name:"pattern"}],returnDescription:`
 <p>List of filenames that are now tracked due to being
 binary files</p>
 `,returnType:`
@@ -97,7 +97,7 @@ If remote is not passed, will just be updated locally</p>
 <p><code>bool</code></p>
 `}}),Xe=new v({props:{name:"git_add",anchor:"huggingface_hub.Repository.git_add",parameters:[{name:"pattern",val:": typing.Optional[str] = '.'"},{name:"auto_lfs_track",val:": typing.Optional[bool] = False"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_828/src/huggingface_hub/repository.py#L1137",parametersDescription:[{anchor:"huggingface_hub.Repository.git_add.pattern",description:`<strong>pattern</strong> (<code>str</code>, <em>optional</em>, defaults to &#x201D;.&#x201C;) &#x2014;
 The pattern with which to add files to staging.`,name:"pattern"},{anchor:"huggingface_hub.Repository.git_add.auto_lfs_track",description:`<strong>auto_lfs_track</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
-Whether to automatically track large and binaryfiles with
+Whether to automatically track large and binary files with
 git-lfs. Any file over 10MB in size, or in binary format, will
 be automatically tracked.`,name:"auto_lfs_track"}]}}),Ye=new v({props:{name:"git_checkout",anchor:"huggingface_hub.Repository.git_checkout",parameters:[{name:"revision",val:": str"},{name:"create_branch_ok",val:": typing.Optional[bool] = False"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_828/src/huggingface_hub/repository.py#L1295",parametersDescription:[{anchor:"huggingface_hub.Repository.git_checkout.revision",description:`<strong>revision</strong> (<code>str</code>) &#x2014;
 The revision to checkout.`,name:"revision"},{anchor:"huggingface_hub.Repository.git_checkout.create_branch_ok",description:`<strong>create_branch_ok</strong> (<code>str</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
