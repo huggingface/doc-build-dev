@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;detailed-parameters&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;which-task-is-used-by-this-model&quot;,&quot;title&quot;:&quot;Which task is used by this model ?&quot;},{&quot;local&quot;:&quot;zeroshot-classification-task&quot;,&quot;title&quot;:&quot;Zero-shot classification task&quot;},{&quot;local&quot;:&quot;translation-task&quot;,&quot;title&quot;:&quot;Translation task&quot;},{&quot;local&quot;:&quot;summarization-task&quot;,&quot;title&quot;:&quot;Summarization task&quot;},{&quot;local&quot;:&quot;conversational-task&quot;,&quot;title&quot;:&quot;Conversational task&quot;},{&quot;local&quot;:&quot;table-question-answering-task&quot;,&quot;title&quot;:&quot;Table question answering task&quot;},{&quot;local&quot;:&quot;question-answering-task&quot;,&quot;title&quot;:&quot;Question answering task&quot;},{&quot;local&quot;:&quot;textclassification-task&quot;,&quot;title&quot;:&quot;Text-classification task&quot;},{&quot;local&quot;:&quot;named-entity-recognition-ner-task&quot;,&quot;title&quot;:&quot;Named Entity Recognition (NER) task&quot;},{&quot;local&quot;:&quot;tokenclassification-task&quot;,&quot;title&quot;:&quot;Token-classification task&quot;},{&quot;local&quot;:&quot;textgeneration-task&quot;,&quot;title&quot;:&quot;Text-generation task&quot;},{&quot;local&quot;:&quot;text2textgeneration-task&quot;,&quot;title&quot;:&quot;Text2text-generation task&quot;},{&quot;local&quot;:&quot;fill-mask-task&quot;,&quot;title&quot;:&quot;Fill mask task&quot;},{&quot;local&quot;:&quot;automatic-speech-recognition-task&quot;,&quot;title&quot;:&quot;Automatic speech recognition task&quot;},{&quot;local&quot;:&quot;featureextraction-task&quot;,&quot;title&quot;:&quot;Feature-extraction task&quot;},{&quot;local&quot;:&quot;audioclassification-task&quot;,&quot;title&quot;:&quot;Audio-classification task&quot;},{&quot;local&quot;:&quot;objectdetection-task&quot;,&quot;title&quot;:&quot;Object-detection task&quot;}],&quot;title&quot;:&quot;Detailed parameters&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/assets/pages/__layout.svelte-4a2f3796.css">
-	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/start-8339e186.js">
+	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/start-9efb4c20.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/vendor-7c454903.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/pages/__layout.svelte-6835d907.js">
-	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-602249c7.js">
+	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-d177d121.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/Tip-735285fc.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/IconCopyLink-5457534b.js">
 	<link rel="modulepreload" href="/docs/inference-api/pr_1/en/_app/chunks/InferenceApi-9b73136f.js"> 
@@ -76,7 +76,7 @@ are all the options</p>
 <tr><td align="left"><strong>parameters</strong> (required)</td>
 <td align="left">a dict containing the following keys:</td></tr>
 <tr><td align="left">candidate_labels (required)</td>
-<td align="left">a list of strings that are potential classes for <code>inputs</code>. (max 10 candidate_labels, for more, simply run multiple requests, results are going to be misleading if using too many candidate_labels anyway. If you want to keep the exact same, you can simply run <span class="incremental">multi_label=True</span> and do the scaling on your end. )</td></tr>
+<td align="left">a list of strings that are potential classes for <code>inputs</code>. (max 10 candidate_labels, for more, simply run multiple requests, results are going to be misleading if using too many candidate_labels anyway. If you want to keep the exact same, you can simply run <code>multi_label=True</code> and do the scaling on your end. )</td></tr>
 <tr><td align="left">multi_label</td>
 <td align="left">(Default: <code>false</code>) Boolean that is set to True if classes can overlap</td></tr>
 <tr><td align="left"><strong>options</strong></td>
@@ -254,11 +254,11 @@ are all the options</p>
 <tr><td align="left">max_length</td>
 <td align="left">(Default: <code>None</code>). Integer to define the maximum length <strong>in tokens</strong> of the output summary.</td></tr>
 <tr><td align="left">top_k</td>
-<td align="left">(Default: <code>None</code>). Integer to define the top tokens considered within the <span class="incremental">sample</span> operation to create new text.</td></tr>
+<td align="left">(Default: <code>None</code>). Integer to define the top tokens considered within the <code>sample</code> operation to create new text.</td></tr>
 <tr><td align="left">top_p</td>
-<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the sample` operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than <span class="incremental">top_p</span>.</td></tr>
+<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the sample<code>operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than</code>top_p`.</td></tr>
 <tr><td align="left">temperature</td>
-<td align="left">(Default: <code>1.0</code>). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means <span class="incremental">top_k=1</span>, <span class="incremental">100.0</span> is getting closer to uniform probability.</td></tr>
+<td align="left">(Default: <code>1.0</code>). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means <code>100.0</code> is getting closer to uniform probability.</td></tr>
 <tr><td align="left">repetition_penalty</td>
 <td align="left">(Default: <code>None</code>). Float (0.0-100.0). The more a token is used within generation the more it is penalized to not be picked in successive generation passes.</td></tr>
 <tr><td align="left">max_time</td>
@@ -356,11 +356,11 @@ are all the options</p>
 <tr><td align="left">max_length</td>
 <td align="left">(Default: <code>None</code>). Integer to define the maximum length <strong>in tokens</strong> of the output summary.</td></tr>
 <tr><td align="left">top_k</td>
-<td align="left">(Default: <code>None</code>). Integer to define the top tokens considered within the <span class="incremental">sample</span> operation to create new text.</td></tr>
+<td align="left">(Default: <code>None</code>). Integer to define the top tokens considered within the <code>sample</code> operation to create new text.</td></tr>
 <tr><td align="left">top_p</td>
-<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the sample` operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than <span class="incremental">top_p</span>.</td></tr>
+<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the sample<code>operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than</code>top_p`.</td></tr>
 <tr><td align="left">temperature</td>
-<td align="left">(Default: <code>1.0</code>). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means <span class="incremental">top_k=1</span>, <span class="incremental">100.0</span> is getting closer to uniform probability.</td></tr>
+<td align="left">(Default: <code>1.0</code>). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means <code>100.0</code> is getting closer to uniform probability.</td></tr>
 <tr><td align="left">repetition_penalty</td>
 <td align="left">(Default: <code>None</code>). Float (0.0-100.0). The more a token is used within generation the more it is penalized to not be picked in successive generation passes.</td></tr>
 <tr><td align="left">max_time</td>
@@ -682,7 +682,7 @@ are all the options</p>
 <tr><td align="left"><strong>parameters</strong></td>
 <td align="left">a dict containing the following key:</td></tr>
 <tr><td align="left">aggregation_strategy</td>
-<td align="left">(Default: <code>simple&lt;/span&gt;&lt;/code&gt;). There are several aggregation strategies:&lt;br&gt;* &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;none&lt;/span&gt;&lt;/code&gt;: Every token gets classified without further aggregation.&lt;br&gt;* &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;simple&lt;/span&gt;&lt;/code&gt;: Entities are grouped according to the default schema (B-, I- tags get merged when the tag is similar).&lt;br&gt;* &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;first&lt;/span&gt;&lt;/code&gt;: Same as the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;simple&lt;/span&gt;&lt;/code&gt; strategy except words cannot end up with different tags. Words will use the tag of the first token when there is ambiguity.&lt;br&gt;* &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;average&lt;/span&gt;&lt;/code&gt;: Same as the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;simple&lt;/span&gt;&lt;/code&gt; strategy except words cannot end up with different tags. Scores are averaged across tokens and then the maximum label is applied.&lt;br&gt;* &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;max&lt;/span&gt;&lt;/code&gt;: Same as the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;simple</code> strategy except words cannot end up with different tags. Word entity will be the token with the maximum score.</td></tr>
+<td align="left">(Default: <code>simple</code>). There are several aggregation strategies: <br> <code>none</code>: Every token gets classified without further aggregation. <br> <code>simple</code>: Entities are grouped according to the default schema (B-, I- tags get merged when the tag is similar). <br> <code>first</code>: Same as the <code>simple</code> strategy except words cannot end up with different tags. Words will use the tag of the first token when there is ambiguity. <br> <code>average</code>: Same as the <code>simple</code> strategy except words cannot end up with different tags. Scores are averaged across tokens and then the maximum label is applied. <br> <code>max</code>: Same as the <code>simple</code> strategy except words cannot end up with different tags. Word entity will be the token with the maximum score.</td></tr>
 <tr><td align="left"><strong>options</strong></td>
 <td align="left">a dict containing the following keys:</td></tr>
 <tr><td align="left">use_gpu</td>
@@ -777,17 +777,17 @@ are all the options</p>
 <tr><td align="left"><strong>parameters</strong></td>
 <td align="left">dict containing the following keys:</td></tr>
 <tr><td align="left">top_k</td>
-<td align="left">(Default: <code>None</code>). Integer to define the top tokens considered within the <span class="incremental">sample</span> operation to create new text.</td></tr>
+<td align="left">(Default: <code>None</code>). Integer to define the top tokens considered within the <code>sample</code> operation to create new text.</td></tr>
 <tr><td align="left">top_p</td>
-<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the  sample` operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than <span class="incremental">top_p</span>.</td></tr>
+<td align="left">(Default: <code>None</code>). Float to define the tokens that are within the  sample<code>operation of text generation. Add tokens in the sample for more probable to least probable until the sum of the probabilities is greater than</code>top_p`.</td></tr>
 <tr><td align="left">temperature</td>
-<td align="left">(Default: <code>1.0</code>). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means <span class="incremental">top_k=1</span>, <span class="incremental">100.0</span> is getting closer to uniform probability.</td></tr>
+<td align="left">(Default: <code>1.0</code>). Float (0.0-100.0). The temperature of the sampling operation. 1 means regular sampling, 0 means <code>100.0</code> is getting closer to uniform probability.</td></tr>
 <tr><td align="left">repetition_penalty</td>
 <td align="left">(Default: <code>None</code>). Float (0.0-100.0). The more a token is used within generation the more it is penalized to not be picked in successive generation passes.</td></tr>
 <tr><td align="left">max_new_tokens</td>
 <td align="left">(Default: <code>None</code>). Int (0-250). The amount of new tokens to be generated, this does <strong>not</strong> include the input length it is a estimate of the size of generated text you want. Each new tokens slows down the request, so look for balance between response times and length of text generated.</td></tr>
 <tr><td align="left">max_time</td>
-<td align="left">(Default: <code>None&lt;/span&gt;&lt;/code&gt;). Float (0-120.0). The amount of time in seconds that the query should take maximum. Network can cause some overhead so it will be a soft limit. Use that in combination with &lt;code class=&quot;xref py py-obj docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;max_new_tokens</code> for best results.</td></tr>
+<td align="left">(Default: <code>None</code>). Float (0-120.0). The amount of time in seconds that the query should take maximum. Network can cause some overhead so it will be a soft limit. Use that in combination with ‘max_new_tokens` for best results.</td></tr>
 <tr><td align="left">return_full_text</td>
 <td align="left">(Default: <code>True</code>). Bool. If set to False, the return results will <strong>not</strong> contain the original query making it easier for prompting.</td></tr>
 <tr><td align="left">num_return_sequences</td>
@@ -1216,10 +1216,10 @@ supports</a>.</p>
 <td align="left">A dict (with keys [xmin,ymin,xmax,ymax]) representing the bounding box of a detected object.</td></tr></tbody></table>
 
 
-		<script type="module" data-hydrate="14jdq9n">
-		import { start } from "/docs/inference-api/pr_1/en/_app/start-8339e186.js";
+		<script type="module" data-hydrate="1m4hk2g">
+		import { start } from "/docs/inference-api/pr_1/en/_app/start-9efb4c20.js";
 		start({
-			target: document.querySelector('[data-hydrate="14jdq9n"]').parentNode,
+			target: document.querySelector('[data-hydrate="1m4hk2g"]').parentNode,
 			paths: {"base":"/docs/inference-api/pr_1/en","assets":"/docs/inference-api/pr_1/en"},
 			session: {},
 			route: false,
@@ -1230,7 +1230,7 @@ supports</a>.</p>
 				error: null,
 				nodes: [
 					import("/docs/inference-api/pr_1/en/_app/pages/__layout.svelte-6835d907.js"),
-						import("/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-602249c7.js")
+						import("/docs/inference-api/pr_1/en/_app/pages/detailed_parameters.mdx-d177d121.js")
 				],
 				params: {}
 			}
