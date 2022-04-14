@@ -1,0 +1,219 @@
+<script lang="ts">
+import {onMount} from "svelte";
+import Tip from "$lib/Tip.svelte";
+import Youtube from "$lib/Youtube.svelte";
+import Docstring from "$lib/Docstring.svelte";
+import CodeBlock from "$lib/CodeBlock.svelte";
+import CodeBlockFw from "$lib/CodeBlockFw.svelte";
+import DocNotebookDropdown from "$lib/DocNotebookDropdown.svelte";
+import IconCopyLink from "$lib/IconCopyLink.svelte";
+import FrameworkContent from "$lib/FrameworkContent.svelte";
+import Markdown from "$lib/Markdown.svelte";
+import Question from "$lib/Question.svelte";
+import FrameworkSwitchCourse from "$lib/FrameworkSwitchCourse.svelte";
+import InferenceApi from "$lib/InferenceApi.svelte";
+import TokenizersLanguageContent from "$lib/TokenizersLanguageContent.svelte";
+let fw: "pt" | "tf" = "pt";
+onMount(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    fw = urlParams.get("fw") || "pt";
+});
+</script>
+<svelte:head>
+  <meta name="hf:doc:metadata" content={JSON.stringify(metadata)} >
+</svelte:head>
+# Encoding
+
+<tokenizerslangcontent>
+<python>
+## Encoding[[tokenizers.Encoding]][[tokenizers.Encoding]]
+
+<div class="docstring">
+
+<docstring><name>class tokenizers.Encoding</name><anchor>tokenizers.Encoding</anchor><parameters>""</parameters></docstring>
+The [`~tokenizers.Encoding`] represents the output of a [`~tokenizers.Tokenizer`].
+
+
+<div class="docstring">
+<docstring><name>char_to_token</name><anchor>tokenizers.Encoding.char_to_token</anchor><parameters>[{"name": "char_pos", "val": ""}, {"name": "sequence_index", "val": " = 0"}]</parameters><paramsdesc>- **char_pos** (`int`) --
+  The position of a char in the input string
+- **sequence_index** (`int`, defaults to `0`) --
+  The index of the sequence that contains the target char</paramsdesc><paramgroups>0</paramgroups><rettype>`int`</rettype><retdesc>The index of the token that contains this char in the encoded sequence</retdesc></docstring>
+Get the token that contains the char at the given position in the input sequence.
+
+
+
+
+
+
+
+
+</div>
+<div class="docstring">
+<docstring><name>char_to_word</name><anchor>tokenizers.Encoding.char_to_word</anchor><parameters>[{"name": "char_pos", "val": ""}, {"name": "sequence_index", "val": " = 0"}]</parameters><paramsdesc>- **char_pos** (`int`) --
+  The position of a char in the input string
+- **sequence_index** (`int`, defaults to `0`) --
+  The index of the sequence that contains the target char</paramsdesc><paramgroups>0</paramgroups><rettype>`int`</rettype><retdesc>The index of the word that contains this char in the input sequence</retdesc></docstring>
+Get the word that contains the char at the given position in the input sequence.
+
+
+
+
+
+
+
+
+</div>
+<div class="docstring">
+<docstring><name>merge</name><anchor>tokenizers.Encoding.merge</anchor><parameters>[{"name": "encodings", "val": ""}, {"name": "growing_offsets", "val": " = True"}]</parameters><paramsdesc>- **encodings** (A `List` of [`~tokenizers.Encoding`]) --
+  The list of encodings that should be merged in one
+
+- **growing_offsets** (`bool`, defaults to `True`) --
+  Whether the offsets should accumulate while merging</paramsdesc><paramgroups>0</paramgroups><rettype>[`~tokenizers.Encoding`]</rettype><retdesc>The resulting Encoding</retdesc></docstring>
+Merge the list of encodings into one final [`~tokenizers.Encoding`]
+
+
+
+
+
+
+
+
+</div>
+<div class="docstring">
+<docstring><name>pad</name><anchor>tokenizers.Encoding.pad</anchor><parameters>[{"name": "length", "val": ""}, {"name": "direction", "val": " = 'right'"}, {"name": "pad_id", "val": " = 0"}, {"name": "pad_type_id", "val": " = 0"}, {"name": "pad_token", "val": " = '[PAD]'"}]</parameters><paramsdesc>- **length** (`int`) --
+  The desired length
+
+  direction -- (`str`, defaults to `right`):
+  The expected padding direction. Can be either `right` or `left`
+
+- **pad_id** (`int`, defaults to `0`) --
+  The ID corresponding to the padding token
+
+- **pad_type_id** (`int`, defaults to `0`) --
+  The type ID corresponding to the padding token
+
+- **pad_token** (`str`, defaults to *[PAD]*) --
+  The pad token to use</paramsdesc><paramgroups>0</paramgroups></docstring>
+Pad the [`~tokenizers.Encoding`] at the given length
+
+
+
+
+</div>
+<div class="docstring">
+<docstring><name>set_sequence_id</name><anchor>tokenizers.Encoding.set_sequence_id</anchor><parameters>[{"name": "sequence_id", "val": ""}]</parameters></docstring>
+Set the given sequence index
+
+Set the given sequence index for the whole range of tokens contained in this
+[`~tokenizers.Encoding`].
+
+</div>
+<div class="docstring">
+<docstring><name>token_to_chars</name><anchor>tokenizers.Encoding.token_to_chars</anchor><parameters>[{"name": "token_index", "val": ""}]</parameters><paramsdesc>- **token_index** (`int`) --
+  The index of a token in the encoded sequence.</paramsdesc><paramgroups>0</paramgroups><rettype>`Tuple[int, int]`</rettype><retdesc>The token offsets `(first, last + 1)`</retdesc></docstring>
+Get the offsets of the token at the given index.
+
+The returned offsets are related to the input sequence that contains the
+token.  In order to determine in which input sequence it belongs, you
+must call [`~tokenizers.Encoding.token_to_sequence()`].
+
+
+
+
+
+
+
+
+</div>
+<div class="docstring">
+<docstring><name>token_to_sequence</name><anchor>tokenizers.Encoding.token_to_sequence</anchor><parameters>[{"name": "token_index", "val": ""}]</parameters><paramsdesc>- **token_index** (`int`) --
+  The index of a token in the encoded sequence.</paramsdesc><paramgroups>0</paramgroups><rettype>`int`</rettype><retdesc>The sequence id of the given token</retdesc></docstring>
+Get the index of the sequence represented by the given token.
+
+In the general use case, this method returns `0` for a single sequence or
+the first sequence of a pair, and `1` for the second sequence of a pair
+
+
+
+
+
+
+
+
+</div>
+<div class="docstring">
+<docstring><name>token_to_word</name><anchor>tokenizers.Encoding.token_to_word</anchor><parameters>[{"name": "token_index", "val": ""}]</parameters><paramsdesc>- **token_index** (`int`) --
+  The index of a token in the encoded sequence.</paramsdesc><paramgroups>0</paramgroups><rettype>`int`</rettype><retdesc>The index of the word in the relevant input sequence.</retdesc></docstring>
+Get the index of the word that contains the token in one of the input sequences.
+
+The returned word index is related to the input sequence that contains
+the token.  In order to determine in which input sequence it belongs, you
+must call [`~tokenizers.Encoding.token_to_sequence()`].
+
+
+
+
+
+
+
+
+</div>
+<div class="docstring">
+<docstring><name>truncate</name><anchor>tokenizers.Encoding.truncate</anchor><parameters>[{"name": "max_length", "val": ""}, {"name": "stride", "val": " = 0"}, {"name": "direction", "val": " = 'right'"}]</parameters><paramsdesc>- **max_length** (`int`) --
+  The desired length
+
+- **stride** (`int`, defaults to `0`) --
+  The length of previous content to be included in each overflowing piece
+
+- **direction** (`str`, defaults to `right`) --
+  Truncate direction</paramsdesc><paramgroups>0</paramgroups></docstring>
+Truncate the [`~tokenizers.Encoding`] at the given length
+
+If this [`~tokenizers.Encoding`] represents multiple sequences, when truncating
+this information is lost. It will be considered as representing a single sequence.
+
+
+
+
+</div>
+<div class="docstring">
+<docstring><name>word_to_chars</name><anchor>tokenizers.Encoding.word_to_chars</anchor><parameters>[{"name": "word_index", "val": ""}, {"name": "sequence_index", "val": " = 0"}]</parameters><paramsdesc>- **word_index** (`int`) --
+  The index of a word in one of the input sequences.
+- **sequence_index** (`int`, defaults to `0`) --
+  The index of the sequence that contains the target word</paramsdesc><paramgroups>0</paramgroups><rettype>`Tuple[int, int]`</rettype><retdesc>The range of characters (span) `(first, last + 1)`</retdesc></docstring>
+Get the offsets of the word at the given index in one of the input sequences.
+
+
+
+
+
+
+
+
+</div>
+<div class="docstring">
+<docstring><name>word_to_tokens</name><anchor>tokenizers.Encoding.word_to_tokens</anchor><parameters>[{"name": "word_index", "val": ""}, {"name": "sequence_index", "val": " = 0"}]</parameters><paramsdesc>- **word_index** (`int`) --
+  The index of a word in one of the input sequences.
+- **sequence_index** (`int`, defaults to `0`) --
+  The index of the sequence that contains the target word</paramsdesc><paramgroups>0</paramgroups><rettype>`Tuple[int, int]`</rettype><retdesc>The range of tokens: `(first, last + 1)`</retdesc></docstring>
+Get the encoded tokens corresponding to the word at the given index
+in one of the input sequences.
+
+
+
+
+
+
+
+
+</div></div>
+
+</python>
+<rust>
+The Rust API Reference is available directly on the [Docs.rs](https://docs.rs/tokenizers/latest/tokenizers/) website.
+</rust>
+<node>
+The node API has not been documented yet.
+</node>
+</tokenizerslangcontent>
