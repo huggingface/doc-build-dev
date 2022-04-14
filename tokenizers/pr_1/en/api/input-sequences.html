@@ -1,10 +1,10 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;input-sequences&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;tokenizers.TextInputSequence&quot;,&quot;title&quot;:&quot;`tokenizers.TextInputSequence`&quot;},{&quot;local&quot;:&quot;tokenizers.PreTokenizedInputSequence&quot;,&quot;title&quot;:&quot;`tokenizers.PreTokenizedInputSequence`&quot;},{&quot;local&quot;:&quot;tokenizersinputsequence&quot;,&quot;title&quot;:&quot;`tokenizers.InputSequence`&quot;}],&quot;title&quot;:&quot;Input Sequences&quot;}" data-svelte="svelte-1phssyn">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;input-sequences&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;tokenizers.TextInputSequence&quot;,&quot;title&quot;:&quot;TextInputSequence&quot;},{&quot;local&quot;:&quot;tokenizers.PreTokenizedInputSequence&quot;,&quot;title&quot;:&quot;PreTokenizedInputSequence&quot;},{&quot;local&quot;:&quot;tokenizers.InputSequence&quot;,&quot;title&quot;:&quot;InputSequence&quot;}],&quot;title&quot;:&quot;Input Sequences&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/assets/pages/__layout.svelte-743526ae.css">
-	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/start-5b2ec046.js">
+	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/start-69b7e52c.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/chunks/vendor-0d3f0756.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/pages/__layout.svelte-8db02328.js">
-	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/pages/api/input-sequences.mdx-64766c10.js">
+	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/pages/api/input-sequences.mdx-4def622c.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/chunks/IconCopyLink-9193371d.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/chunks/TokenizersLanguageContent-ca787841.js"> 
 
@@ -28,19 +28,25 @@
 Globally, any sequence can be either a string or a list of strings, according to the operating
 mode of the tokenizer: <code>raw text</code> vs <code>pre-tokenized</code>.</p>
 <h2 class="relative group"><a id="tokenizers.TextInputSequence" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.TextInputSequence"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span><code>tokenizers.TextInputSequence</code></span></h2>
+	<span>TextInputSequence
+	</span></h2>
 
+<code>tokenizers.TextInputSequence</code>
 <p>A <code>str</code> that represents an input sequence</p>
 <h2 class="relative group"><a id="tokenizers.PreTokenizedInputSequence" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.PreTokenizedInputSequence"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span><code>tokenizers.PreTokenizedInputSequence</code></span></h2>
+	<span>PreTokenizedInputSequence
+	</span></h2>
 
+<code>tokenizers.PreTokenizedInputSequence</code>
 <p>A pre-tokenized input sequence. Can be one of:</p>
 <ul><li>A <code>List</code> of <code>str</code></li>
 <li>A <code>Tuple</code> of <code>str</code></li></ul>
 <p>alias of <code>Union[List[str], Tuple[str]]</code>.</p>
-<h2 class="relative group"><a id="tokenizersinputsequence" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizersinputsequence"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span><code>tokenizers.InputSequence</code></span></h2>
+<h2 class="relative group"><a id="tokenizers.InputSequence" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.InputSequence"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>InputSequence
+	</span></h2>
 
+<code>tokenizers.InputSequence</code>
 <p>Represents all the possible types of input sequences for encoding. Can be:</p>
 <ul><li>When <code>is_pretokenized=False</code>: <a href="#tokenizers.TextInputSequence">TextInputSequence</a></li>
 <li>When <code>is_pretokenized=True</code>: <a href="#tokenizers.PreTokenizedInputSequence">PreTokenizedInputSequence</a></li></ul>
@@ -49,10 +55,10 @@ mode of the tokenizer: <code>raw text</code> vs <code>pre-tokenized</code>.</p>
 	</div>
 
 
-		<script type="module" data-hydrate="1pgior5">
-		import { start } from "/docs/tokenizers/pr_1/en/_app/start-5b2ec046.js";
+		<script type="module" data-hydrate="6qe92a">
+		import { start } from "/docs/tokenizers/pr_1/en/_app/start-69b7e52c.js";
 		start({
-			target: document.querySelector('[data-hydrate="1pgior5"]').parentNode,
+			target: document.querySelector('[data-hydrate="6qe92a"]').parentNode,
 			paths: {"base":"/docs/tokenizers/pr_1/en","assets":"/docs/tokenizers/pr_1/en"},
 			session: {},
 			route: false,
@@ -63,7 +69,7 @@ mode of the tokenizer: <code>raw text</code> vs <code>pre-tokenized</code>.</p>
 				error: null,
 				nodes: [
 					import("/docs/tokenizers/pr_1/en/_app/pages/__layout.svelte-8db02328.js"),
-						import("/docs/tokenizers/pr_1/en/_app/pages/api/input-sequences.mdx-64766c10.js")
+						import("/docs/tokenizers/pr_1/en/_app/pages/api/input-sequences.mdx-4def622c.js")
 				],
 				params: {}
 			}
