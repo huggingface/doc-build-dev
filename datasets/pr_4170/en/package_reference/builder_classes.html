@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;datasets.DatasetBuilder&quot;,&quot;title&quot;:&quot;Builder classes&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/datasets/pr_4170/en/_app/assets/pages/__layout.svelte-baffe7e9.css">
-	<link rel="modulepreload" href="/docs/datasets/pr_4170/en/_app/start-ac793b61.js">
+	<link rel="modulepreload" href="/docs/datasets/pr_4170/en/_app/start-3b2cb77c.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4170/en/_app/chunks/vendor-8138ceec.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4170/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4170/en/_app/pages/__layout.svelte-efb8e839.js">
-	<link rel="modulepreload" href="/docs/datasets/pr_4170/en/_app/pages/package_reference/builder_classes.mdx-b055df7a.js">
+	<link rel="modulepreload" href="/docs/datasets/pr_4170/en/_app/pages/package_reference/builder_classes.mdx-295b3fe2.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4170/en/_app/chunks/Docstring-fd69b455.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4170/en/_app/chunks/IconCopyLink-2dd3a6ac.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4170/en/_app/chunks/CodeBlock-fc89709f.js"> 
@@ -32,7 +32,7 @@
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">base_path<span class="opacity-60">: typing.Optional[str] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">info<span class="opacity-60">: typing.Optional[datasets.info.DatasetInfo] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">features<span class="opacity-60">: typing.Optional[datasets.features.features.Features] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[str, bool, NoneType] = None</span></span>
+			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">namespace<span class="opacity-60">: typing.Optional[str] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">data_files<span class="opacity-60">: typing.Union[str, list, dict, datasets.data_files.DataFilesDict, NoneType] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">data_dir<span class="opacity-60">: typing.Optional[str] = None</span></span>
@@ -108,7 +108,7 @@ downloaded/processed dataset information (checksums/size/splits/&#x2026;).<!-- H
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">try_from_hf_gcs<span class="opacity-60">: bool = True</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">dl_manager<span class="opacity-60">: typing.Optional[datasets.utils.download_manager.DownloadManager] = None</span></span>
 			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">base_path<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[str, bool, NoneType] = None</span></span>
+			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**download_and_prepare_kwargs<span class="opacity-60"></span></span>
 			</span>
 		<span>)</span>
@@ -260,7 +260,7 @@ implement generators of feature dictionaries across the dataset splits
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">base_path<span class="opacity-60">: typing.Optional[str] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">info<span class="opacity-60">: typing.Optional[datasets.info.DatasetInfo] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">features<span class="opacity-60">: typing.Optional[datasets.features.features.Features] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[str, bool, NoneType] = None</span></span>
+			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">namespace<span class="opacity-60">: typing.Optional[str] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">data_files<span class="opacity-60">: typing.Union[str, list, dict, datasets.data_files.DataFilesDict, NoneType] = None</span></span>
 			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">data_dir<span class="opacity-60">: typing.Optional[str] = None</span></span>
@@ -990,10 +990,10 @@ the download URL before using it for caching the file.<!-- HTML_TAG_END -->
 <p>Returns True if other_version matches.</p></div></div>
 
 
-		<script type="module" data-hydrate="105bi6e">
-		import { start } from "/docs/datasets/pr_4170/en/_app/start-ac793b61.js";
+		<script type="module" data-hydrate="11p5406">
+		import { start } from "/docs/datasets/pr_4170/en/_app/start-3b2cb77c.js";
 		start({
-			target: document.querySelector('[data-hydrate="105bi6e"]').parentNode,
+			target: document.querySelector('[data-hydrate="11p5406"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_4170/en","assets":"/docs/datasets/pr_4170/en"},
 			session: {},
 			route: false,
@@ -1004,7 +1004,7 @@ the download URL before using it for caching the file.<!-- HTML_TAG_END -->
 				error: null,
 				nodes: [
 					import("/docs/datasets/pr_4170/en/_app/pages/__layout.svelte-efb8e839.js"),
-						import("/docs/datasets/pr_4170/en/_app/pages/package_reference/builder_classes.mdx-b055df7a.js")
+						import("/docs/datasets/pr_4170/en/_app/pages/package_reference/builder_classes.mdx-295b3fe2.js")
 				],
 				params: {}
 			}
