@@ -1,10 +1,10 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;efficient-training-on-a-single-gpu&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;load-model&quot;,&quot;title&quot;:&quot;Load Model&quot;},{&quot;local&quot;:&quot;vanilla-training&quot;,&quot;title&quot;:&quot;Vanilla Training&quot;},{&quot;local&quot;:&quot;anatomy-of-models-operations&quot;,&quot;title&quot;:&quot;Anatomy of Model&#39;s Operations&quot;},{&quot;local&quot;:&quot;anatomy-of-models-memory&quot;,&quot;title&quot;:&quot;Anatomy of Model&#39;s Memory&quot;},{&quot;local&quot;:&quot;batch-sizes&quot;,&quot;title&quot;:&quot;Batch sizes&quot;},{&quot;local&quot;:&quot;gradient-accumulation&quot;,&quot;title&quot;:&quot;Gradient Accumulation&quot;},{&quot;local&quot;:&quot;gradient-checkpointing&quot;,&quot;title&quot;:&quot;Gradient Checkpointing&quot;},{&quot;local&quot;:&quot;floating-data-types&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;fp16-training&quot;,&quot;title&quot;:&quot;FP16 Training&quot;},{&quot;local&quot;:&quot;bf16&quot;,&quot;title&quot;:&quot;BF16&quot;},{&quot;local&quot;:&quot;tf32&quot;,&quot;title&quot;:&quot;TF32&quot;}],&quot;title&quot;:&quot;Floating Data Types&quot;},{&quot;local&quot;:&quot;optimizer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;adafactor&quot;,&quot;title&quot;:&quot;Adafactor&quot;},{&quot;local&quot;:&quot;8bit-adam&quot;,&quot;title&quot;:&quot;8-bit Adam&quot;},{&quot;local&quot;:&quot;multitensor&quot;,&quot;title&quot;:&quot;`_multi_tensor`&quot;}],&quot;title&quot;:&quot;Optimizer&quot;},{&quot;local&quot;:&quot;using-accelerate&quot;,&quot;title&quot;:&quot;Using 🤗 Accelerate&quot;},{&quot;local&quot;:&quot;dataloader&quot;,&quot;title&quot;:&quot;DataLoader&quot;},{&quot;local&quot;:&quot;deepspeed-zero&quot;,&quot;title&quot;:&quot;DeepSpeed ZeRO&quot;},{&quot;local&quot;:&quot;choice-of-gpu&quot;,&quot;title&quot;:&quot;Choice of GPU&quot;},{&quot;local&quot;:&quot;how-to-scale&quot;,&quot;title&quot;:&quot;How to scale&quot;},{&quot;local&quot;:&quot;efficient-software-prebuilds&quot;,&quot;title&quot;:&quot;Efficient Software Prebuilds&quot;},{&quot;local&quot;:&quot;sparsity&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;mixture-of-experts&quot;,&quot;title&quot;:&quot;Mixture of Experts&quot;}],&quot;title&quot;:&quot;Sparsity&quot;},{&quot;local&quot;:&quot;scaling-beyond-a-single-gpu&quot;,&quot;title&quot;:&quot;Scaling beyond a single GPU&quot;}],&quot;title&quot;:&quot;Efficient Training on a Single GPU&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/transformers/pr_15723/en/_app/assets/pages/__layout.svelte-8068c90a.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_15723/en/_app/start-c4ee3b8f.js">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;efficient-training-on-a-single-gpu&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;load-model&quot;,&quot;title&quot;:&quot;Load Model&quot;},{&quot;local&quot;:&quot;vanilla-training&quot;,&quot;title&quot;:&quot;Vanilla Training&quot;},{&quot;local&quot;:&quot;anatomy-of-models-operations&quot;,&quot;title&quot;:&quot;Anatomy of Model&#39;s Operations&quot;},{&quot;local&quot;:&quot;anatomy-of-models-memory&quot;,&quot;title&quot;:&quot;Anatomy of Model&#39;s Memory&quot;},{&quot;local&quot;:&quot;batch-sizes&quot;,&quot;title&quot;:&quot;Batch sizes&quot;},{&quot;local&quot;:&quot;gradient-accumulation&quot;,&quot;title&quot;:&quot;Gradient Accumulation&quot;},{&quot;local&quot;:&quot;gradient-checkpointing&quot;,&quot;title&quot;:&quot;Gradient Checkpointing&quot;},{&quot;local&quot;:&quot;floating-data-types&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;fp16-training&quot;,&quot;title&quot;:&quot;FP16 Training&quot;},{&quot;local&quot;:&quot;bf16&quot;,&quot;title&quot;:&quot;BF16&quot;},{&quot;local&quot;:&quot;tf32&quot;,&quot;title&quot;:&quot;TF32&quot;}],&quot;title&quot;:&quot;Floating Data Types&quot;}],&quot;title&quot;:&quot;Efficient Training on a Single GPU&quot;}" data-svelte="svelte-1phssyn">
+	<link rel="stylesheet" href="/docs/transformers/pr_15723/en/_app/assets/pages/__layout.svelte-d09a9348.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_15723/en/_app/start-2b98ef5d.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15723/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15723/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15723/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15723/en/_app/pages/perf_train_gpu_one.mdx-6081b7e8.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15723/en/_app/pages/perf_train_gpu_one.mdx-0d83d008.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15723/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15723/en/_app/chunks/IconCopyLink-7a11ce68.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15723/en/_app/chunks/CodeBlock-3a8b25a8.js"> 
@@ -219,13 +219,13 @@ We&#39;ve seen that training the model uses much more memory than just putting t
 <p>Let’s look at the details.</p>
 <p><strong>Model Weights:</strong></p>
 <ul><li>4 bytes * number of parameters for fp32 training</li>
-<li>6 bytes * number of parameters for mixed precision training</li></ul>
+<li>6 bytes * number of parameters for mixed precision training (maintains a model in fp32 and one in fp16 in memory)</li></ul>
 <p><strong>Optimizer States:</strong></p>
 <ul><li>8 bytes * number of parameters for normal AdamW (maintains 2 states)</li>
 <li>2 bytes * number of parameters for 8-bit AdamW optimizers like <a href="https://github.com/facebookresearch/bitsandbytes" rel="nofollow">bitsandbytes</a></li>
-<li>4 bytes * number of parameters for optimizers like SGD (maintains only 1 state)</li></ul>
+<li>4 bytes * number of parameters for optimizers like SGD with momentum (maintains only 1 state)</li></ul>
 <p><strong>Gradients</strong></p>
-<ul><li>4 bytes * number of parameters for either fp32 or mixed precision training</li></ul>
+<ul><li>4 bytes * number of parameters for either fp32 or mixed precision training (gradients are always kept in fp32)</li></ul>
 <p><strong>Forward Activations</strong></p>
 <ul><li>size depends on many factors, the key ones being sequence length, hidden size and batch size.</li></ul>
 <p>There are the input and output that are being passed and returned by the forward and the backward functions and the forward activations saved for gradient computation.</p>
@@ -306,8 +306,7 @@ GPU memory occupied: 6775 MB.<!-- HTML_TAG_END --></pre></div>
 <li>bf16 (<code>bfloat16</code>)</li>
 <li>tf32 (CUDA internal data type)</li></ul>
 <p>Here is a diagram that shows how these data types correlate to each other.</p>
-<p><strong>TODO:</strong> Can we make this graphic prettier maybe?
-<img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/tf32-bf16-fp16-fp32.png" alt="data types">
+<p><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/tf32-bf16-fp16-fp32.png" alt="data types">
 (source: <a href="https://developer.nvidia.com/blog/accelerating-ai-training-with-tf32-tensor-cores/" rel="nofollow">NVIDIA Blog</a>)</p>
 <p>While fp16 and fp32 have been around for quite some time, bf16 and tf32 are only available on the Ampere architecture GPUS and TPUs support bf16 as well. Let’s start with the most commonly used method which is FP16 training/</p>
 <h3 class="relative group"><a id="fp16-training" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#fp16-training"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
@@ -387,7 +386,6 @@ torch<span class="hljs-selector-class">.backends</span><span class="hljs-selecto
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->TrainingArguments(tf32=<span class="hljs-literal">True</span>)
-```
 By default the PyTorch default <span class="hljs-keyword">is</span> used.
 
 Note: tf32 mode <span class="hljs-keyword">is</span> internal to CUDA <span class="hljs-keyword">and</span> can<span class="hljs-string">&#x27;t be accessed directly via `tensor.to(dtype=torch.tf32)` as `torch.tf32` doesn&#x27;</span>t exit.
@@ -400,7 +398,7 @@ You can also see a variety of benchmarks on tf32 vs other precisions:
 
 We<span class="hljs-string">&#x27;ve now seen how we can change the floating types to increase throughput, but we are not done, yet! There is another area where we can save GPU memory: the optimizer.
 
-&lt;h2 id=&quot;optimizer&quot;&gt;Optimizer&lt;/h2&gt;
+## Optimizer
 
 The most common optimizer used to train transformer model is Adam or AdamW (Adam with weight decay). Adam achieves good convergence by storing the rolling average of the previous gradients which, however, adds an additional memory footprint of the order of the number of model parameters. One remedy to this is to use an alternative optimizer such as Adafactor, which works well for some models but often it has instability issues.
 
@@ -410,7 +408,7 @@ To see which optimizers are currently supported:
 
 ```bash
 $ python examples/pytorch/translation/run_translation.py -h | grep &quot;\-optim&quot;
-     [--optim {adamw_hf,adamw_torch,adamw_torch_xla,adamw_apex_fused,adafactor}]</span><!-- HTML_TAG_END --></pre></div>
+         [--optim {adamw_hf,adamw_torch,adamw_torch_xla,adamw_apex_fused,adafactor}]</span><!-- HTML_TAG_END --></pre></div>
 <p>For example, if you have <a href="https://github.com/NVIDIA/apex" rel="nofollow">NVIDIA/apex</a> installed <code>--optim adamw_apex_fused</code> will give you the fastest training experience among all supported AdamW optimizers.</p>
 <p>On the other hand <a href="https://github.com/facebookresearch/bitsandbytes" rel="nofollow">8bit BNB optimizer</a> can save 3/4 of memory normally used by a typical AdamW optimizer if it is configured to quantize all optimizer states, but in some situations only some optimizer states are quintized and then more memory is used. XXX: update once  <a href="https://github.com/huggingface/transformers/pull/15622" rel="nofollow">https://github.com/huggingface/transformers/pull/15622</a> is merged.</p>
 <p>Let’s get a feel for the numbers and use for example use a 3B-parameter model, like <code>t5-3b</code>. Note that since a Gigabyte correpsonds to a billion bytes we can simply multiply the parameters (in billions) with the number of necessary bytes per parameter to get Gigabytes of GPU memory usage:</p>
@@ -464,7 +462,7 @@ print_summary(result)<!-- HTML_TAG_END --></pre></div>
 Samples/second: 9.06
 GPU memory occupied: 4847 MB.<!-- HTML_TAG_END --></pre></div>
 <p>We went from 15 GB memory usage to 5 GB - a 3x improvement while maintaining the throughput! However, as mentioned before, the convergence of Adafactor can be worse than Adam. There is an alternative to Adafactor called 8-bit Adam that takes a slightly different approach.</p>
-<h3 class="relative group"><a id="8bit-adam" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#8bit-adam"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+<h3 class="relative group"><a id="8-bit-adam" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#8-bit-adam"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>8-bit Adam
 	</span></h3>
 
@@ -550,11 +548,11 @@ Samples/second: 10.35
 GPU memory occupied: 5363 MB.<!-- HTML_TAG_END --></pre></div>
 <p>Again, we get about a 3x memory improvement and even slightly higher throughput as using Adafactor. So we have seen how we can optimize the memory footprint of large models. The following plot summarizes all our experiments:</p>
 <p><img src="https://huggingface.co/datasets/lvwerra/repo-images/raw/main/gpu-memory-savings.png" alt="png"></p>
-<h3 class="relative group"><a id="multitensor" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#multitensor"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+<h3 class="relative group"><a id="<code>_multi_tensor</code>" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#<code>_multi_tensor</code>"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span><code>_multi_tensor</code></span></h3>
 
-pytorch-nightly introduced `torch.optim._multi_tensor` which should significantly speed up the optimizers for situations with lots of small feature tensors. It should eventually become the default, but if you want to experiment with it sooner and don&#39;t mind using the bleed-edge, see: https://github.com/huggingface/transformers/issues/9965
-<h2 class="relative group"><a id="using-accelerate" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#using-accelerate"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+<p>pytorch-nightly introduced <code>torch.optim._multi_tensor</code> which should significantly speed up the optimizers for situations with lots of small feature tensors. It should eventually become the default, but if you want to experiment with it sooner and don’t mind using the bleed-edge, see: <a href="https://github.com/huggingface/transformers/issues/9965" rel="nofollow">https://github.com/huggingface/transformers/issues/9965</a></p>
+<h2 class="relative group"><a id="using-🤗-accelerate" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#using-🤗-accelerate"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Using 🤗 Accelerate
 	</span></h2>
 
@@ -633,7 +631,7 @@ GPU memory occupied: <span class="hljs-number">5363</span> MB.<!-- HTML_TAG_END 
 	<span>Choice of GPU
 	</span></h2>
 
-Sometimes, even when applying all the above tweaks the throughput on a given GPU might still not be good enough. One easy solution is to change the type of GPU. For example switching from let&#39;s say a K80 (which you typically get on Google Colab) to a fancier GPU such as the V100 or A100. Although they are more expensive they are usually more cost effective than cheaper GPUs due to their larger memory and faster architecture.
+<p>Sometimes, even when applying all the above tweaks the throughput on a given GPU might still not be good enough. One easy solution is to change the type of GPU. For example switching from let’s say a K80 (which you typically get on Google Colab) to a fancier GPU such as the V100 or A100. Although they are more expensive they are usually more cost effective than cheaper GPUs due to their larger memory and faster architecture. </p>
 <p>Now, let’s take a step back and discuss what we should optimize for when scaling the training of large models.</p>
 <h2 class="relative group"><a id="how-to-scale" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#how-to-scale"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>How to scale
@@ -683,10 +681,10 @@ Mixture of Experts (MoE) into the Transformer models.</p>
 <p>Another use case for training on many GPUs is if the model does not fit on a single GPU with all the mentioned tricks. There are still more methods we can apply although life starts to get a bit more complicated. This usually involves some form of pipeline or tensor parallelism where the model itself is distributed across several GPUs. One can also make use of DeepSpeed which implements some of these parallelism strategies along with some more optimization to reduce the memory footprint such as partitioning the optimizer states. You can read more about this in the <a href="perf_train_gpu_many">“Multi-GPU training” section</a>.</p>
 
 
-		<script type="module" data-hydrate="t3gzf">
-		import { start } from "/docs/transformers/pr_15723/en/_app/start-c4ee3b8f.js";
+		<script type="module" data-hydrate="1f6p9un">
+		import { start } from "/docs/transformers/pr_15723/en/_app/start-2b98ef5d.js";
 		start({
-			target: document.querySelector('[data-hydrate="t3gzf"]').parentNode,
+			target: document.querySelector('[data-hydrate="1f6p9un"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15723/en","assets":"/docs/transformers/pr_15723/en"},
 			session: {},
 			route: false,
@@ -697,7 +695,7 @@ Mixture of Experts (MoE) into the Transformer models.</p>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15723/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_15723/en/_app/pages/perf_train_gpu_one.mdx-6081b7e8.js")
+						import("/docs/transformers/pr_15723/en/_app/pages/perf_train_gpu_one.mdx-0d83d008.js")
 				],
 				params: {}
 			}
