@@ -1,10 +1,10 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;postprocessors&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;tokenizers.processors.BertProcessing]][[tokenizers.processors.BertProcessing&quot;,&quot;title&quot;:&quot;BertProcessing&quot;},{&quot;local&quot;:&quot;tokenizers.processors.ByteLevel]][[tokenizers.processors.ByteLevel&quot;,&quot;title&quot;:&quot;ByteLevel&quot;},{&quot;local&quot;:&quot;tokenizers.processors.RobertaProcessing]][[tokenizers.processors.RobertaProcessing&quot;,&quot;title&quot;:&quot;RobertaProcessing&quot;},{&quot;local&quot;:&quot;tokenizers.processors.TemplateProcessing]][[tokenizers.processors.TemplateProcessing&quot;,&quot;title&quot;:&quot;TemplateProcessing&quot;}],&quot;title&quot;:&quot;Post-processors&quot;}" data-svelte="svelte-1phssyn">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;postprocessors&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;tokenizers.processors.BertProcessing&quot;,&quot;title&quot;:&quot;BertProcessing&quot;},{&quot;local&quot;:&quot;tokenizers.processors.ByteLevel&quot;,&quot;title&quot;:&quot;ByteLevel&quot;},{&quot;local&quot;:&quot;tokenizers.processors.RobertaProcessing&quot;,&quot;title&quot;:&quot;RobertaProcessing&quot;},{&quot;local&quot;:&quot;tokenizers.processors.TemplateProcessing&quot;,&quot;title&quot;:&quot;TemplateProcessing&quot;}],&quot;title&quot;:&quot;Post-processors&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/assets/pages/__layout.svelte-b40848fb.css">
-	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/start-1b90d509.js">
+	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/start-eeca3af7.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/chunks/vendor-0d3f0756.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/pages/__layout.svelte-8db02328.js">
-	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/pages/api/post-processors.mdx-da2396bb.js">
+	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/pages/api/post-processors.mdx-feba4cad.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/chunks/Docstring-cebdcc97.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/chunks/IconCopyLink-9193371d.js">
 	<link rel="modulepreload" href="/docs/tokenizers/pr_1/en/_app/chunks/CodeBlock-7b0cb15c.js">
@@ -26,7 +26,7 @@
 			Node
 		</div></div>
 <div class="language-select">
-<h2 class="relative group"><a id="tokenizers.processors.BertProcessing]][[tokenizers.processors.BertProcessing" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.processors.BertProcessing]][[tokenizers.processors.BertProcessing"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+<h2 class="relative group"><a id="tokenizers.processors.BertProcessing" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.processors.BertProcessing"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>BertProcessing
 	</span></h2>
 
@@ -60,7 +60,7 @@ A tuple with the string representation of the CLS token, and its id<!-- HTML_TAG
 a Bert model:</p>
 <ul><li>a SEP token</li>
 <li>a CLS token</li></ul></div>
-<h2 class="relative group"><a id="tokenizers.processors.ByteLevel]][[tokenizers.processors.ByteLevel" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.processors.ByteLevel]][[tokenizers.processors.ByteLevel"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+<h2 class="relative group"><a id="tokenizers.processors.ByteLevel" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.processors.ByteLevel"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>ByteLevel
 	</span></h2>
 
@@ -88,7 +88,7 @@ Whether to trim the whitespaces from the produced offsets.<!-- HTML_TAG_END -->
 <p>This post-processor takes care of trimming the offsets.</p>
 <p>By default, the ByteLevel BPE might include whitespaces in the produced tokens. If you don’t
 want the offsets to include these whitespaces, then this PostProcessor must be used.</p></div>
-<h2 class="relative group"><a id="tokenizers.processors.RobertaProcessing]][[tokenizers.processors.RobertaProcessing" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.processors.RobertaProcessing]][[tokenizers.processors.RobertaProcessing"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+<h2 class="relative group"><a id="tokenizers.processors.RobertaProcessing" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.processors.RobertaProcessing"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>RobertaProcessing
 	</span></h2>
 
@@ -137,7 +137,7 @@ a Roberta model:</p>
 By default, the ByteLevel BPE might include whitespaces in the produced tokens. If you don’t
 want the offsets to include these whitespaces, then this PostProcessor should be initialized
 with <code>trim_offsets=True</code></p></div>
-<h2 class="relative group"><a id="tokenizers.processors.TemplateProcessing]][[tokenizers.processors.TemplateProcessing" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.processors.TemplateProcessing]][[tokenizers.processors.TemplateProcessing"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+<h2 class="relative group"><a id="tokenizers.processors.TemplateProcessing" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#tokenizers.processors.TemplateProcessing"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>TemplateProcessing
 	</span></h2>
 
@@ -224,10 +224,10 @@ the same length.</p></li></ul></div>
 	</div>
 
 
-		<script type="module" data-hydrate="xzjpyu">
-		import { start } from "/docs/tokenizers/pr_1/en/_app/start-1b90d509.js";
+		<script type="module" data-hydrate="1jaq7fa">
+		import { start } from "/docs/tokenizers/pr_1/en/_app/start-eeca3af7.js";
 		start({
-			target: document.querySelector('[data-hydrate="xzjpyu"]').parentNode,
+			target: document.querySelector('[data-hydrate="1jaq7fa"]').parentNode,
 			paths: {"base":"/docs/tokenizers/pr_1/en","assets":"/docs/tokenizers/pr_1/en"},
 			session: {},
 			route: false,
@@ -238,7 +238,7 @@ the same length.</p></li></ul></div>
 				error: null,
 				nodes: [
 					import("/docs/tokenizers/pr_1/en/_app/pages/__layout.svelte-8db02328.js"),
-						import("/docs/tokenizers/pr_1/en/_app/pages/api/post-processors.mdx-da2396bb.js")
+						import("/docs/tokenizers/pr_1/en/_app/pages/api/post-processors.mdx-feba4cad.js")
 				],
 				params: {}
 			}
