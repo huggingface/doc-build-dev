@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;detailed-parameters&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;which-task-is-used-by-this-model&quot;,&quot;title&quot;:&quot;Which task is used by this model ?&quot;},{&quot;local&quot;:&quot;zeroshot-classification-task&quot;,&quot;title&quot;:&quot;Zero-shot classification task&quot;},{&quot;local&quot;:&quot;translation-task&quot;,&quot;title&quot;:&quot;Translation task&quot;},{&quot;local&quot;:&quot;summarization-task&quot;,&quot;title&quot;:&quot;Summarization task&quot;},{&quot;local&quot;:&quot;conversational-task&quot;,&quot;title&quot;:&quot;Conversational task&quot;},{&quot;local&quot;:&quot;table-question-answering-task&quot;,&quot;title&quot;:&quot;Table question answering task&quot;},{&quot;local&quot;:&quot;question-answering-task&quot;,&quot;title&quot;:&quot;Question answering task&quot;},{&quot;local&quot;:&quot;textclassification-task&quot;,&quot;title&quot;:&quot;Text-classification task&quot;},{&quot;local&quot;:&quot;named-entity-recognition-ner-task&quot;,&quot;title&quot;:&quot;Named Entity Recognition (NER) task&quot;},{&quot;local&quot;:&quot;tokenclassification-task&quot;,&quot;title&quot;:&quot;Token-classification task&quot;},{&quot;local&quot;:&quot;textgeneration-task&quot;,&quot;title&quot;:&quot;Text-generation task&quot;},{&quot;local&quot;:&quot;text2textgeneration-task&quot;,&quot;title&quot;:&quot;Text2text-generation task&quot;},{&quot;local&quot;:&quot;fill-mask-task&quot;,&quot;title&quot;:&quot;Fill mask task&quot;},{&quot;local&quot;:&quot;automatic-speech-recognition-task&quot;,&quot;title&quot;:&quot;Automatic speech recognition task&quot;},{&quot;local&quot;:&quot;featureextraction-task&quot;,&quot;title&quot;:&quot;Feature-extraction task&quot;},{&quot;local&quot;:&quot;audioclassification-task&quot;,&quot;title&quot;:&quot;Audio-classification task&quot;},{&quot;local&quot;:&quot;objectdetection-task&quot;,&quot;title&quot;:&quot;Object-detection task&quot;},{&quot;local&quot;:&quot;image-segmentation-task&quot;,&quot;title&quot;:&quot;Image Segmentation task&quot;},{&quot;local&quot;:&quot;image-classification-task&quot;,&quot;title&quot;:&quot;Image Classification task&quot;}],&quot;title&quot;:&quot;Detailed parameters&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/api-inference/pr_818/en/_app/assets/pages/__layout.svelte-ac0748b8.css">
-	<link rel="modulepreload" href="/docs/api-inference/pr_818/en/_app/start-46436ac1.js">
+	<link rel="stylesheet" href="/docs/api-inference/pr_818/en/_app/assets/pages/__layout.svelte-dbbd4583.css">
+	<link rel="modulepreload" href="/docs/api-inference/pr_818/en/_app/start-77f800cb.js">
 	<link rel="modulepreload" href="/docs/api-inference/pr_818/en/_app/chunks/vendor-7c454903.js">
 	<link rel="modulepreload" href="/docs/api-inference/pr_818/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/api-inference/pr_818/en/_app/pages/__layout.svelte-6835d907.js">
-	<link rel="modulepreload" href="/docs/api-inference/pr_818/en/_app/pages/detailed_parameters.mdx-9d397561.js">
+	<link rel="modulepreload" href="/docs/api-inference/pr_818/en/_app/pages/detailed_parameters.mdx-9c00b5d2.js">
 	<link rel="modulepreload" href="/docs/api-inference/pr_818/en/_app/chunks/Tip-735285fc.js">
 	<link rel="modulepreload" href="/docs/api-inference/pr_818/en/_app/chunks/IconCopyLink-5457534b.js">
 	<link rel="modulepreload" href="/docs/api-inference/pr_818/en/_app/chunks/InferenceApi-041dc1b2.js"> 
@@ -1268,17 +1268,20 @@ supports</a>.</p>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->self.assertEqual(
-    deep_round(data, <span class="hljs-number">4</span>),
-    [
-        {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9094</span>, <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;blanket&quot;</span>, <span class="hljs-string">&quot;mask&quot;</span>: <span class="hljs-string">&quot;ff7cb6da186cb65a657d5bf39964f02e&quot;</span>},
-        {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9941</span>, <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;cat&quot;</span>, <span class="hljs-string">&quot;mask&quot;</span>: <span class="hljs-string">&quot;a4b62b30c4760fbb82a4c050486774b1&quot;</span>},
-        {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9987</span>, <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;remote&quot;</span>, <span class="hljs-string">&quot;mask&quot;</span>: <span class="hljs-string">&quot;635b6c45f2dbf09f217ed73e496e04d6&quot;</span>},
-        {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9995</span>, <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;remote&quot;</span>, <span class="hljs-string">&quot;mask&quot;</span>: <span class="hljs-string">&quot;3a9dd3459a7834fadf02f9150d6da859&quot;</span>},
-        {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9722</span>, <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;couch&quot;</span>, <span class="hljs-string">&quot;mask&quot;</span>: <span class="hljs-string">&quot;d106ae88eb4069a45ac79d463c2e761f&quot;</span>},
-        {<span class="hljs-string">&quot;score&quot;</span>: <span class="hljs-number">0.9994</span>, <span class="hljs-string">&quot;label&quot;</span>: <span class="hljs-string">&quot;cat&quot;</span>, <span class="hljs-string">&quot;mask&quot;</span>: <span class="hljs-string">&quot;c5c2f5fa5168dcb9f4e7713a54f33004&quot;</span>},
-    ],
-)<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">import</span> base64
+<span class="hljs-keyword">from</span> io <span class="hljs-keyword">import</span> BytesIO
+<span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
+<span class="hljs-keyword">with</span> Image.<span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;cats.jpg&quot;</span>) <span class="hljs-keyword">as</span> img:
+    masks = [d[<span class="hljs-string">&quot;mask&quot;</span>] <span class="hljs-keyword">for</span> d <span class="hljs-keyword">in</span> data]
+    self.assertEqual(img.size, (<span class="hljs-number">640</span>, <span class="hljs-number">480</span>))
+    mask_imgs = [Image.<span class="hljs-built_in">open</span>(BytesIO(base64.b64decode(mask))) <span class="hljs-keyword">for</span> mask <span class="hljs-keyword">in</span> masks]
+    <span class="hljs-keyword">for</span> mask_img <span class="hljs-keyword">in</span> mask_imgs:
+        self.assertEqual(mask_img.size, img.size)
+        self.assertEqual(mask_img.mode, <span class="hljs-string">&quot;L&quot;</span>)  <span class="hljs-comment"># L (8-bit pixels, black and white)</span>
+    first_mask_img = mask_imgs[<span class="hljs-number">0</span>]
+    min_pxl_val, max_pxl_val = first_mask_img.getextrema()
+    self.assertGreaterEqual(min_pxl_val, <span class="hljs-number">0</span>)
+    self.assertLessEqual(max_pxl_val, <span class="hljs-number">255</span>)<!-- HTML_TAG_END --></pre></div>
 	
 	</div>
 <table><thead><tr><th align="left">Returned values</th>
@@ -1362,10 +1365,10 @@ supports</a>.</p>
 <td align="left">A float that represents how likely it is that the image file belongs to this class.</td></tr></tbody></table>
 
 
-		<script type="module" data-hydrate="su7vpl">
-		import { start } from "/docs/api-inference/pr_818/en/_app/start-46436ac1.js";
+		<script type="module" data-hydrate="16yclr7">
+		import { start } from "/docs/api-inference/pr_818/en/_app/start-77f800cb.js";
 		start({
-			target: document.querySelector('[data-hydrate="su7vpl"]').parentNode,
+			target: document.querySelector('[data-hydrate="16yclr7"]').parentNode,
 			paths: {"base":"/docs/api-inference/pr_818/en","assets":"/docs/api-inference/pr_818/en"},
 			session: {},
 			route: false,
@@ -1376,7 +1379,7 @@ supports</a>.</p>
 				error: null,
 				nodes: [
 					import("/docs/api-inference/pr_818/en/_app/pages/__layout.svelte-6835d907.js"),
-						import("/docs/api-inference/pr_818/en/_app/pages/detailed_parameters.mdx-9d397561.js")
+						import("/docs/api-inference/pr_818/en/_app/pages/detailed_parameters.mdx-9c00b5d2.js")
 				],
 				params: {}
 			}
