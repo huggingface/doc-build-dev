@@ -1,12 +1,12 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;flava&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.FLAVAConfig&quot;,&quot;title&quot;:&quot;FLAVAConfig&quot;},{&quot;local&quot;:&quot;transformers.FLAVATextConfig&quot;,&quot;title&quot;:&quot;FLAVATextConfig&quot;},{&quot;local&quot;:&quot;transformers.FLAVAImageConfig&quot;,&quot;title&quot;:&quot;FLAVAImageConfig&quot;},{&quot;local&quot;:&quot;transformers.FLAVAMultimodalConfig&quot;,&quot;title&quot;:&quot;FLAVAMultimodalConfig&quot;},{&quot;local&quot;:&quot;transformers.FLAVACodebookConfig&quot;,&quot;title&quot;:&quot;FLAVACodebookConfig&quot;},{&quot;local&quot;:&quot;transformers.FLAVAProcessor&quot;,&quot;title&quot;:&quot;FLAVAProcessor&quot;},{&quot;local&quot;:&quot;transformers.FLAVAFeatureExtractor&quot;,&quot;title&quot;:&quot;FLAVAFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.FLAVACodebookFeatureExtractor&quot;,&quot;title&quot;:&quot;FLAVACodebookFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.FLAVAForPreTraining&quot;,&quot;title&quot;:&quot;FLAVAForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.FLAVAModel&quot;,&quot;title&quot;:&quot;FLAVAModel&quot;},{&quot;local&quot;:&quot;transformers.FLAVACodebook&quot;,&quot;title&quot;:&quot;FLAVACodebook&quot;},{&quot;local&quot;:&quot;transformers.FLAVATextModel&quot;,&quot;title&quot;:&quot;FLAVATextModel&quot;},{&quot;local&quot;:&quot;transformers.FLAVAImageModel&quot;,&quot;title&quot;:&quot;FLAVAImageModel&quot;},{&quot;local&quot;:&quot;transformers.FLAVAMultimodalModel&quot;,&quot;title&quot;:&quot;FLAVAMultimodalModel&quot;}],&quot;title&quot;:&quot;FLAVA&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/transformers/pr_16654/en/_app/assets/pages/__layout.svelte-1eb93b44.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/start-daa9fbaf.js">
+	<link rel="stylesheet" href="/docs/transformers/pr_16654/en/_app/assets/pages/__layout.svelte-efd23bfe.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/start-10704986.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/pages/model_doc/flava.mdx-87a748b7.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/pages/model_doc/flava.mdx-2c3f515e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/Tip-39098574.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/Docstring-17b815d9.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/IconCopyLink-7a11ce68.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/CodeBlock-3a8b25a8.js"> 
 
@@ -50,28 +50,28 @@ impressive performance on a wide range of 35 tasks spanning these target modalit
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_config_dict<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_config_dict<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">multimodal_config_dict<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_size<span class="opacity-60"> = 768</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">layer_norm_eps<span class="opacity-60"> = 1e-12</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">projection_dim<span class="opacity-60"> = 768</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">logit_scale_init_value<span class="opacity-60"> = 2.6592</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">ce_ignore_index<span class="opacity-60"> = -100</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mim_weight<span class="opacity-60"> = 1.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mlm_weight<span class="opacity-60"> = 1.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">global_contrastive_weight<span class="opacity-60"> = 1.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">itm_weight<span class="opacity-60"> = 1.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mmm_image_weight<span class="opacity-60"> = 1.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mmm_text_weight<span class="opacity-60"> = 1.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">global_backprop_contrastive<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_unmasked_multimodal_encoder<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_loss<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_config_dict<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_config_dict<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">multimodal_config_dict<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_size<span class="opacity-60"> = 768</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">layer_norm_eps<span class="opacity-60"> = 1e-12</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">projection_dim<span class="opacity-60"> = 768</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">logit_scale_init_value<span class="opacity-60"> = 2.6592</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">ce_ignore_index<span class="opacity-60"> = -100</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mim_weight<span class="opacity-60"> = 1.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mlm_weight<span class="opacity-60"> = 1.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">global_contrastive_weight<span class="opacity-60"> = 1.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">itm_weight<span class="opacity-60"> = 1.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mmm_image_weight<span class="opacity-60"> = 1.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mmm_text_weight<span class="opacity-60"> = 1.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">global_backprop_contrastive<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_unmasked_multimodal_encoder<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_loss<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -186,14 +186,14 @@ documentation from <a href="/docs/transformers/pr_16654/en/main_classes/configur
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_config<span class="opacity-60">: FLAVAImageConfig</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_config<span class="opacity-60">: FLAVATextConfig</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">multimodal_config<span class="opacity-60">: FLAVAMultimodalConfig</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_config<span class="opacity-60">: FLAVAImageConfig</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_config<span class="opacity-60">: FLAVATextConfig</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">multimodal_config<span class="opacity-60">: FLAVAMultimodalConfig</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
   href="/docs/transformers/pr_16654/en/model_doc/flava#transformers.FLAVAConfig"
 >FLAVAConfig</a></span><!-- HTML_TAG_END --></span></p>
 
@@ -225,25 +225,25 @@ configuration and flava multimodal model configuration.</p></div></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">vocab_size<span class="opacity-60"> = 30522</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">type_vocab_size<span class="opacity-60"> = 2</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_position_embeddings<span class="opacity-60"> = 512</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_embedding_type<span class="opacity-60"> = &#39;absolute&#39;</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_size<span class="opacity-60"> = 768</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_hidden_layers<span class="opacity-60"> = 12</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_attention_heads<span class="opacity-60"> = 12</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">intermediate_size<span class="opacity-60"> = 3072</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_act<span class="opacity-60"> = &#39;gelu&#39;</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_dropout_prob<span class="opacity-60"> = 0.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_probs_dropout_prob<span class="opacity-60"> = 0.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">layer_norm_eps<span class="opacity-60"> = 1e-12</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pad_token_id<span class="opacity-60"> = 0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">qkv_bias<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">vocab_size<span class="opacity-60"> = 30522</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">type_vocab_size<span class="opacity-60"> = 2</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_position_embeddings<span class="opacity-60"> = 512</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_embedding_type<span class="opacity-60"> = &#39;absolute&#39;</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_size<span class="opacity-60"> = 768</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_hidden_layers<span class="opacity-60"> = 12</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_attention_heads<span class="opacity-60"> = 12</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">intermediate_size<span class="opacity-60"> = 3072</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_act<span class="opacity-60"> = &#39;gelu&#39;</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_dropout_prob<span class="opacity-60"> = 0.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_probs_dropout_prob<span class="opacity-60"> = 0.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">layer_norm_eps<span class="opacity-60"> = 1e-12</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pad_token_id<span class="opacity-60"> = 0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">qkv_bias<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -361,25 +361,25 @@ documentation from <a href="/docs/transformers/pr_16654/en/main_classes/configur
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_size<span class="opacity-60"> = 768</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_hidden_layers<span class="opacity-60"> = 12</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_attention_heads<span class="opacity-60"> = 12</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">intermediate_size<span class="opacity-60"> = 3072</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_act<span class="opacity-60"> = &#39;gelu&#39;</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_dropout_prob<span class="opacity-60"> = 0.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_probs_dropout_prob<span class="opacity-60"> = 0.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">layer_norm_eps<span class="opacity-60"> = 1e-12</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_size<span class="opacity-60"> = 224</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">patch_size<span class="opacity-60"> = 16</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_channels<span class="opacity-60"> = 3</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">qkv_bias<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_token<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">vocab_size<span class="opacity-60"> = 8192</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_size<span class="opacity-60"> = 768</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_hidden_layers<span class="opacity-60"> = 12</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_attention_heads<span class="opacity-60"> = 12</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">intermediate_size<span class="opacity-60"> = 3072</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_act<span class="opacity-60"> = &#39;gelu&#39;</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_dropout_prob<span class="opacity-60"> = 0.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_probs_dropout_prob<span class="opacity-60"> = 0.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">layer_norm_eps<span class="opacity-60"> = 1e-12</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_size<span class="opacity-60"> = 224</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">patch_size<span class="opacity-60"> = 16</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_channels<span class="opacity-60"> = 3</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">qkv_bias<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_token<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">vocab_size<span class="opacity-60"> = 8192</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -481,21 +481,21 @@ documentation from <a href="/docs/transformers/pr_16654/en/main_classes/configur
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_size<span class="opacity-60"> = 768</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_hidden_layers<span class="opacity-60"> = 6</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_attention_heads<span class="opacity-60"> = 12</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">intermediate_size<span class="opacity-60"> = 3072</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_act<span class="opacity-60"> = &#39;gelu&#39;</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_dropout_prob<span class="opacity-60"> = 0.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_probs_dropout_prob<span class="opacity-60"> = 0.0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">layer_norm_eps<span class="opacity-60"> = 1e-12</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">qkv_bias<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_cls_token<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_size<span class="opacity-60"> = 768</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_hidden_layers<span class="opacity-60"> = 6</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_attention_heads<span class="opacity-60"> = 12</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">intermediate_size<span class="opacity-60"> = 3072</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_act<span class="opacity-60"> = &#39;gelu&#39;</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_dropout_prob<span class="opacity-60"> = 0.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_probs_dropout_prob<span class="opacity-60"> = 0.0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">layer_norm_eps<span class="opacity-60"> = 1e-12</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">qkv_bias<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_cls_token<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -581,17 +581,17 @@ documentation from <a href="/docs/transformers/pr_16654/en/main_classes/configur
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_groups<span class="opacity-60"> = 4</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_channels<span class="opacity-60"> = 3</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_blocks_per_group<span class="opacity-60"> = 2</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_size<span class="opacity-60"> = 256</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">vocab_size<span class="opacity-60"> = 8192</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">freeze<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_groups<span class="opacity-60"> = 4</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_channels<span class="opacity-60"> = 3</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">num_blocks_per_group<span class="opacity-60"> = 2</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_size<span class="opacity-60"> = 256</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">vocab_size<span class="opacity-60"> = 8192</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">freeze<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -610,12 +610,12 @@ documentation from <a href="/docs/transformers/pr_16654/en/main_classes/configur
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">feature_extractor<span class="opacity-60"></span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tokenizer<span class="opacity-60"></span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mlm_probability<span class="opacity-60"> = 0.15</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">feature_extractor<span class="opacity-60"></span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tokenizer<span class="opacity-60"></span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mlm_probability<span class="opacity-60"> = 0.15</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -642,11 +642,11 @@ The tokenizer is a required input.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">*args<span class="opacity-60"></span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">*args<span class="opacity-60"></span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -663,11 +663,11 @@ refer to the docstring of this method for more information.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">*args<span class="opacity-60"></span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">*args<span class="opacity-60"></span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -688,24 +688,24 @@ the docstring of this method for more information.</p></div></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_resize<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">size<span class="opacity-60"> = 224</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">resample<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_center_crop<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">crop_size<span class="opacity-60"> = 224</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_normalize<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_mean<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_std<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_size_patches<span class="opacity-60">: int = 14</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">total_mask_patches<span class="opacity-60">: int = 75</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_group_min_patches<span class="opacity-60">: typing.Optional[int] = 16</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_group_max_patches<span class="opacity-60">: int = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_group_min_aspect_ratio<span class="opacity-60">: float = 0.3</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_group_max_aspect_ratio<span class="opacity-60">: typing.Optional[float] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_resize<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">size<span class="opacity-60"> = 224</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">resample<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_center_crop<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">crop_size<span class="opacity-60"> = 224</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_normalize<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_mean<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_std<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_size_patches<span class="opacity-60">: int = 14</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">total_mask_patches<span class="opacity-60">: int = 75</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_group_min_patches<span class="opacity-60">: typing.Optional[int] = 16</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_group_max_patches<span class="opacity-60">: int = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_group_min_aspect_ratio<span class="opacity-60">: float = 0.3</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_group_max_aspect_ratio<span class="opacity-60">: typing.Optional[float] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -762,19 +762,19 @@ should refer to this superclass for more information regarding those methods.</p
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_resize<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">size<span class="opacity-60"> = 112</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">resample<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_center_crop<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">crop_size<span class="opacity-60"> = 112</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_map_pixels<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_normalize<span class="opacity-60"> = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_mean<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_std<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_resize<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">size<span class="opacity-60"> = 112</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">resample<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_center_crop<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">crop_size<span class="opacity-60"> = 112</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_map_pixels<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_normalize<span class="opacity-60"> = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_mean<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_std<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -793,10 +793,10 @@ should refer to this superclass for more information regarding those methods.</p
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVAConfig</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVAConfig</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -821,26 +821,26 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids_masked<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">bool_masked_pos<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_unmasked_multimodal_encoder<span class="opacity-60">: bool = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mlm_labels<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mim_labels<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">itm_labels<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_loss<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.flava.modeling_flava.FLAVAForPreTrainingOutput</code> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids_masked<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">bool_masked_pos<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_unmasked_multimodal_encoder<span class="opacity-60">: bool = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mlm_labels<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mim_labels<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">itm_labels<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_loss<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.flava.modeling_flava.FLAVAForPreTrainingOutput</code> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -982,10 +982,10 @@ the latter silently ignores them.</p></div></div></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVAConfig</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVAConfig</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1010,21 +1010,21 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">bool_masked_pos<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_multimodal_encoder<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.flava.modeling_flava.FLAVAModelOutput</code> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: typing.Optional[torch.FloatTensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">bool_masked_pos<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.LongTensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_multimodal_encoder<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>transformers.models.flava.modeling_flava.FLAVAModelOutput</code> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1158,16 +1158,16 @@ the latter silently ignores them.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1235,17 +1235,17 @@ the latter silently ignores them.</p></div></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">bool_masked_pos<span class="opacity-60">: typing.Optional[torch.BoolTensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">interpolate_pos_encoding<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">bool_masked_pos<span class="opacity-60">: typing.Optional[torch.BoolTensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">interpolate_pos_encoding<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1315,11 +1315,11 @@ the latter silently ignores them.</p></div></div></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVACodebookConfig</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60">: typing.Any</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVACodebookConfig</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60">: typing.Any</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1346,10 +1346,10 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: FloatTensor</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: FloatTensor</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1364,10 +1364,10 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: Tensor</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: Tensor</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1382,10 +1382,10 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: Tensor</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: Tensor</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1404,11 +1404,11 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVATextConfig</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_pooling_layer<span class="opacity-60">: bool = True</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVATextConfig</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_pooling_layer<span class="opacity-60">: bool = True</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1433,18 +1433,18 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_type_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">position_ids<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
   href="/docs/transformers/pr_16654/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling"
 >transformers.modeling_outputs.BaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
 
@@ -1569,11 +1569,11 @@ the latter silently ignores them.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVAImageConfig</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_pooling_layer<span class="opacity-60">: bool = True</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVAImageConfig</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_pooling_layer<span class="opacity-60">: bool = True</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1598,18 +1598,18 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">bool_masked_pos<span class="opacity-60">: typing.Optional[torch.BoolTensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">interpolate_pos_encoding<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pixel_values<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">bool_masked_pos<span class="opacity-60">: typing.Optional[torch.BoolTensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">interpolate_pos_encoding<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
   href="/docs/transformers/pr_16654/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling"
 >transformers.modeling_outputs.BaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
 
@@ -1740,11 +1740,11 @@ the latter silently ignores them.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVAMultimodalConfig</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_pooling_layer<span class="opacity-60"> = True</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config<span class="opacity-60">: FLAVAMultimodalConfig</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_pooling_layer<span class="opacity-60"> = True</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1769,16 +1769,16 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_states<span class="opacity-60">: Tensor</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">hidden_states<span class="opacity-60">: Tensor</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">head_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_dict<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
   href="/docs/transformers/pr_16654/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPooling"
 >transformers.modeling_outputs.BaseModelOutputWithPooling</a> or <code>tuple(torch.FloatTensor)</code></span><!-- HTML_TAG_END --></span></p>
 
@@ -1882,10 +1882,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>last_hidden_states = outputs.last_hidden_state<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="csbom7">
-		import { start } from "/docs/transformers/pr_16654/en/_app/start-daa9fbaf.js";
+		<script type="module" data-hydrate="ayu7li">
+		import { start } from "/docs/transformers/pr_16654/en/_app/start-10704986.js";
 		start({
-			target: document.querySelector('[data-hydrate="csbom7"]').parentNode,
+			target: document.querySelector('[data-hydrate="ayu7li"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16654/en","assets":"/docs/transformers/pr_16654/en"},
 			session: {},
 			route: false,
@@ -1896,7 +1896,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16654/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16654/en/_app/pages/model_doc/flava.mdx-87a748b7.js")
+						import("/docs/transformers/pr_16654/en/_app/pages/model_doc/flava.mdx-2c3f515e.js")
 				],
 				params: {}
 			}
