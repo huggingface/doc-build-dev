@@ -1,12 +1,12 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;tokenizer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers.PreTrainedTokenizer&quot;,&quot;title&quot;:&quot;PreTrainedTokenizer&quot;},{&quot;local&quot;:&quot;transformers.PreTrainedTokenizerFast&quot;,&quot;title&quot;:&quot;PreTrainedTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.BatchEncoding&quot;,&quot;title&quot;:&quot;BatchEncoding&quot;}],&quot;title&quot;:&quot;Tokenizer&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/transformers/pr_15529/en/_app/assets/pages/__layout.svelte-1eb93b44.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/start-47a460ed.js">
+	<link rel="stylesheet" href="/docs/transformers/pr_15529/en/_app/assets/pages/__layout.svelte-efd23bfe.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/start-2b9b1fda.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/pages/main_classes/tokenizer.mdx-ce937a01.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/pages/main_classes/tokenizer.mdx-d4fa3a25.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/chunks/Tip-39098574.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/chunks/Docstring-17b815d9.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/chunks/IconCopyLink-7a11ce68.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_15529/en/_app/chunks/CodeBlock-3a8b25a8.js"> 
 
@@ -24,7 +24,9 @@ of the tokenizers are available in two flavors: a full python implementation and
 Rust library <a href="https://github.com/huggingface/tokenizers" rel="nofollow">🤗 Tokenizers</a>. The “Fast” implementations allows:</p>
 <ol><li>a significant speed-up in particular when doing batched tokenization and</li>
 <li>additional methods to map between the original string (character and words) and the token space (e.g. getting the
-index of the token comprising a given character or the span of characters corresponding to a given token). </li></ol>
+index of the token comprising a given character or the span of characters corresponding to a given token). Currently
+no “Fast” implementation is available for the SentencePiece-based tokenizers (for T5, ALBERT, CamemBERT, XLM-RoBERTa
+and XLNet models).</li></ol>
 <p>The base classes <a href="/docs/transformers/pr_15529/en/main_classes/tokenizer#transformers.PreTrainedTokenizer">PreTrainedTokenizer</a> and <a href="/docs/transformers/pr_15529/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast">PreTrainedTokenizerFast</a>
 implement the common methods for encoding string inputs in model inputs (see below) and instantiating/saving python and
 “Fast” tokenizers either from a local file or directory or from a pretrained tokenizer provided by the library
@@ -59,10 +61,10 @@ to a given token).</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -167,28 +169,28 @@ applied. Should be <code>&#39;right&#39;</code> or <code>&#39;left&#39;</code>.<
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[typing.List[str]]]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_pair<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[typing.List[str]], NoneType] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_special_tokens<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">padding<span class="opacity-60">: typing.Union[bool, str, transformers.utils.generic.PaddingStrategy] = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">truncation<span class="opacity-60">: typing.Union[bool, str, transformers.tokenization_utils_base.TruncationStrategy] = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_length<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">stride<span class="opacity-60">: int = 0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">is_split_into_words<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pad_to_multiple_of<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_token_type_ids<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_attention_mask<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_overflowing_tokens<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_special_tokens_mask<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_offsets_mapping<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_length<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">verbose<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[typing.List[str]]]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_pair<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[typing.List[str]], NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_special_tokens<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">padding<span class="opacity-60">: typing.Union[bool, str, transformers.utils.generic.PaddingStrategy] = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">truncation<span class="opacity-60">: typing.Union[bool, str, transformers.tokenization_utils_base.TruncationStrategy] = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_length<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">stride<span class="opacity-60">: int = 0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">is_split_into_words<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pad_to_multiple_of<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_token_type_ids<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_attention_mask<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_overflowing_tokens<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_special_tokens_mask<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_offsets_mapping<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_length<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">verbose<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
   href="/docs/transformers/pr_15529/en/main_classes/tokenizer#transformers.BatchEncoding"
 >BatchEncoding</a></span><!-- HTML_TAG_END --></span></p>
 
@@ -367,14 +369,14 @@ sequences.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequences<span class="opacity-60">: typing.Union[typing.List[int], typing.List[typing.List[int]], ForwardRef(&#39;np.ndarray&#39;), ForwardRef(&#39;torch.Tensor&#39;), ForwardRef(&#39;tf.Tensor&#39;)]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clean_up_tokenization_spaces<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequences<span class="opacity-60">: typing.Union[typing.List[int], typing.List[typing.List[int]], ForwardRef(&#39;np.ndarray&#39;), ForwardRef(&#39;torch.Tensor&#39;), ForwardRef(&#39;tf.Tensor&#39;)]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clean_up_tokenization_spaces<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -414,14 +416,14 @@ Will be passed to the underlying model specific decode method.<!-- HTML_TAG_END 
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_ids<span class="opacity-60">: typing.Union[int, typing.List[int], ForwardRef(&#39;np.ndarray&#39;), ForwardRef(&#39;torch.Tensor&#39;), ForwardRef(&#39;tf.Tensor&#39;)]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clean_up_tokenization_spaces<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_ids<span class="opacity-60">: typing.Union[int, typing.List[int], ForwardRef(&#39;np.ndarray&#39;), ForwardRef(&#39;torch.Tensor&#39;), ForwardRef(&#39;tf.Tensor&#39;)]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clean_up_tokenization_spaces<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -463,19 +465,19 @@ tokens and clean up tokenization spaces.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[int]]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_pair<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[int], NoneType] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_special_tokens<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">padding<span class="opacity-60">: typing.Union[bool, str, transformers.utils.generic.PaddingStrategy] = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">truncation<span class="opacity-60">: typing.Union[bool, str, transformers.tokenization_utils_base.TruncationStrategy] = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_length<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">stride<span class="opacity-60">: int = 0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[int]</code>, <code>torch.Tensor</code>, <code>tf.Tensor</code> or <code>np.ndarray</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[int]]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_pair<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[int], NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_special_tokens<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">padding<span class="opacity-60">: typing.Union[bool, str, transformers.utils.generic.PaddingStrategy] = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">truncation<span class="opacity-60">: typing.Union[bool, str, transformers.tokenization_utils_base.TruncationStrategy] = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_length<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">stride<span class="opacity-60">: int = 0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[int]</code>, <code>torch.Tensor</code>, <code>tf.Tensor</code> or <code>np.ndarray</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -581,18 +583,18 @@ If set, will return tensors instead of list of python integers. Acceptable value
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_path_or_name<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_url<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_temp_dir<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">commit_message<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">organization<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**model_card_kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_path_or_name<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_url<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_temp_dir<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">commit_message<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">organization<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**model_card_kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -674,12 +676,12 @@ tokenizer.push_to_hub(<span class="hljs-string">&quot;my-finetuned-bert&quot;</s
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">ids<span class="opacity-60">: typing.Union[int, typing.List[int]]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code> or <code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">ids<span class="opacity-60">: typing.Union[int, typing.List[int]]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code> or <code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -712,11 +714,11 @@ added tokens.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tokens<span class="opacity-60">: typing.Union[str, typing.List[str]]</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code> or <code>List[int]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tokens<span class="opacity-60">: typing.Union[str, typing.List[str]]</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code> or <code>List[int]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -744,10 +746,10 @@ vocabulary.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>Dict[str, int]</code></span><!-- HTML_TAG_END --></span></p>
+			
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>Dict[str, int]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -770,11 +772,11 @@ vocabulary.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pair<span class="opacity-60">: bool = False</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pair<span class="opacity-60">: bool = False</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -807,13 +809,13 @@ this inside your training loop.</p></div></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">is_split_into_words<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>Tuple[str, Dict[str, Any]]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">is_split_into_words<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>Tuple[str, Dict[str, Any]]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -851,12 +853,12 @@ Keyword arguments to use for the tokenization.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -896,11 +898,11 @@ loaded very simply into 🤗 transformers. Take a look at the <a href="../fast_t
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">*args<span class="opacity-60"></span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">*args<span class="opacity-60"></span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1015,28 +1017,28 @@ applied. Should be <code>&#39;right&#39;</code> or <code>&#39;left&#39;</code>.<
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[typing.List[str]]]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_pair<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[typing.List[str]], NoneType] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_special_tokens<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">padding<span class="opacity-60">: typing.Union[bool, str, transformers.utils.generic.PaddingStrategy] = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">truncation<span class="opacity-60">: typing.Union[bool, str, transformers.tokenization_utils_base.TruncationStrategy] = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_length<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">stride<span class="opacity-60">: int = 0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">is_split_into_words<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pad_to_multiple_of<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_token_type_ids<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_attention_mask<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_overflowing_tokens<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_special_tokens_mask<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_offsets_mapping<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_length<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">verbose<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[typing.List[str]]]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_pair<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[typing.List[str]], NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_special_tokens<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">padding<span class="opacity-60">: typing.Union[bool, str, transformers.utils.generic.PaddingStrategy] = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">truncation<span class="opacity-60">: typing.Union[bool, str, transformers.tokenization_utils_base.TruncationStrategy] = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_length<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">stride<span class="opacity-60">: int = 0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">is_split_into_words<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pad_to_multiple_of<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_token_type_ids<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_attention_mask<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_overflowing_tokens<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_special_tokens_mask<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_offsets_mapping<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_length<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">verbose<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
   href="/docs/transformers/pr_15529/en/main_classes/tokenizer#transformers.BatchEncoding"
 >BatchEncoding</a></span><!-- HTML_TAG_END --></span></p>
 
@@ -1215,14 +1217,14 @@ sequences.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequences<span class="opacity-60">: typing.Union[typing.List[int], typing.List[typing.List[int]], ForwardRef(&#39;np.ndarray&#39;), ForwardRef(&#39;torch.Tensor&#39;), ForwardRef(&#39;tf.Tensor&#39;)]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clean_up_tokenization_spaces<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequences<span class="opacity-60">: typing.Union[typing.List[int], typing.List[typing.List[int]], ForwardRef(&#39;np.ndarray&#39;), ForwardRef(&#39;torch.Tensor&#39;), ForwardRef(&#39;tf.Tensor&#39;)]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clean_up_tokenization_spaces<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1262,14 +1264,14 @@ Will be passed to the underlying model specific decode method.<!-- HTML_TAG_END 
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_ids<span class="opacity-60">: typing.Union[int, typing.List[int], ForwardRef(&#39;np.ndarray&#39;), ForwardRef(&#39;torch.Tensor&#39;), ForwardRef(&#39;tf.Tensor&#39;)]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clean_up_tokenization_spaces<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_ids<span class="opacity-60">: typing.Union[int, typing.List[int], ForwardRef(&#39;np.ndarray&#39;), ForwardRef(&#39;torch.Tensor&#39;), ForwardRef(&#39;tf.Tensor&#39;)]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clean_up_tokenization_spaces<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1311,19 +1313,19 @@ tokens and clean up tokenization spaces.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[int]]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_pair<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[int], NoneType] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_special_tokens<span class="opacity-60">: bool = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">padding<span class="opacity-60">: typing.Union[bool, str, transformers.utils.generic.PaddingStrategy] = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">truncation<span class="opacity-60">: typing.Union[bool, str, transformers.tokenization_utils_base.TruncationStrategy] = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_length<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">stride<span class="opacity-60">: int = 0</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[int]</code>, <code>torch.Tensor</code>, <code>tf.Tensor</code> or <code>np.ndarray</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[int]]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_pair<span class="opacity-60">: typing.Union[str, typing.List[str], typing.List[int], NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">add_special_tokens<span class="opacity-60">: bool = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">padding<span class="opacity-60">: typing.Union[bool, str, transformers.utils.generic.PaddingStrategy] = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">truncation<span class="opacity-60">: typing.Union[bool, str, transformers.tokenization_utils_base.TruncationStrategy] = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_length<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">stride<span class="opacity-60">: int = 0</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">return_tensors<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[int]</code>, <code>torch.Tensor</code>, <code>tf.Tensor</code> or <code>np.ndarray</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1429,18 +1431,18 @@ If set, will return tensors instead of list of python integers. Acceptable value
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_path_or_name<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_url<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_temp_dir<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">commit_message<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">organization<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: typing.Optional[bool] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**model_card_kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_path_or_name<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_url<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_temp_dir<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">commit_message<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">organization<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: typing.Optional[bool] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**model_card_kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1522,12 +1524,12 @@ tokenizer.push_to_hub(<span class="hljs-string">&quot;my-finetuned-bert&quot;</s
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">ids<span class="opacity-60">: typing.Union[int, typing.List[int]]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code> or <code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">ids<span class="opacity-60">: typing.Union[int, typing.List[int]]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_special_tokens<span class="opacity-60">: bool = False</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code> or <code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1560,11 +1562,11 @@ added tokens.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tokens<span class="opacity-60">: typing.Union[str, typing.List[str]]</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code> or <code>List[int]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tokens<span class="opacity-60">: typing.Union[str, typing.List[str]]</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code> or <code>List[int]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1592,10 +1594,10 @@ vocabulary.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>Dict[str, int]</code></span><!-- HTML_TAG_END --></span></p>
+			
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>Dict[str, int]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1618,11 +1620,11 @@ vocabulary.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pair<span class="opacity-60">: bool = False</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pair<span class="opacity-60">: bool = False</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1655,14 +1657,14 @@ this inside your training loop.</p></div></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">padding_strategy<span class="opacity-60">: PaddingStrategy</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">truncation_strategy<span class="opacity-60">: TruncationStrategy</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_length<span class="opacity-60">: int</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">stride<span class="opacity-60">: int</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pad_to_multiple_of<span class="opacity-60">: typing.Optional[int]</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">padding_strategy<span class="opacity-60">: PaddingStrategy</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">truncation_strategy<span class="opacity-60">: TruncationStrategy</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_length<span class="opacity-60">: int</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">stride<span class="opacity-60">: int</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pad_to_multiple_of<span class="opacity-60">: typing.Optional[int]</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1704,16 +1706,16 @@ section.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_iterator<span class="opacity-60"></span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">vocab_size<span class="opacity-60"></span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">length<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">new_special_tokens<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">special_tokens_map<span class="opacity-60"> = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">text_iterator<span class="opacity-60"></span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">vocab_size<span class="opacity-60"></span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">length<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">new_special_tokens<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">special_tokens_map<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
   href="/docs/transformers/pr_15529/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast"
 >PreTrainedTokenizerFast</a></span><!-- HTML_TAG_END --></span></p>
 
@@ -1771,14 +1773,14 @@ as the current one.</p></div></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">data<span class="opacity-60">: typing.Union[typing.Dict[str, typing.Any], NoneType] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">encoding<span class="opacity-60">: typing.Union[tokenizers.Encoding, typing.Sequence[tokenizers.Encoding], NoneType] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tensor_type<span class="opacity-60">: typing.Union[NoneType, str, transformers.utils.generic.TensorType] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">prepend_batch_axis<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">n_sequences<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">data<span class="opacity-60">: typing.Union[typing.Dict[str, typing.Any], NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">encoding<span class="opacity-60">: typing.Union[tokenizers.Encoding, typing.Sequence[tokenizers.Encoding], NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tensor_type<span class="opacity-60">: typing.Union[NoneType, str, transformers.utils.generic.TensorType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">prepend_batch_axis<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">n_sequences<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1824,13 +1826,13 @@ utility methods to map from word/character space to token space.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_char_index<span class="opacity-60">: int</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">char_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequence_index<span class="opacity-60">: int = 0</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_char_index<span class="opacity-60">: int</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">char_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequence_index<span class="opacity-60">: int = 0</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1876,13 +1878,13 @@ words.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_char_index<span class="opacity-60">: int</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">char_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequence_index<span class="opacity-60">: int = 0</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code> or <code>List[int]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_char_index<span class="opacity-60">: int</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">char_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequence_index<span class="opacity-60">: int = 0</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code> or <code>List[int]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1928,11 +1930,11 @@ words.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tensor_type<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">prepend_batch_axis<span class="opacity-60">: bool = False</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tensor_type<span class="opacity-60">: typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">prepend_batch_axis<span class="opacity-60">: bool = False</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1958,11 +1960,11 @@ Whether or not to add the batch dimension during the conversion.<!-- HTML_TAG_EN
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_index<span class="opacity-60">: int = 0</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[Optional[int]]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_index<span class="opacity-60">: int = 0</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[Optional[int]]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1995,11 +1997,11 @@ encoded.</li></ul></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">device<span class="opacity-60">: typing.Union[str, ForwardRef(&#39;torch.device&#39;)]</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">device<span class="opacity-60">: typing.Union[str, ForwardRef(&#39;torch.device&#39;)]</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
   href="/docs/transformers/pr_15529/en/main_classes/tokenizer#transformers.BatchEncoding"
 >BatchEncoding</a></span><!-- HTML_TAG_END --></span></p>
 
@@ -2030,12 +2032,12 @@ encoded.</li></ul></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_token_index<span class="opacity-60">: int</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_token_index<span class="opacity-60">: int</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><a
   href="/docs/transformers/pr_15529/en/internal/tokenization_utils#transformers.CharSpan"
 >CharSpan</a></span><!-- HTML_TAG_END --></span></p>
 
@@ -2080,12 +2082,12 @@ token.</li></ul>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_token_index<span class="opacity-60">: int</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_token_index<span class="opacity-60">: int</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2126,12 +2128,12 @@ tokenized words.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_token_index<span class="opacity-60">: int</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_token_index<span class="opacity-60">: int</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">token_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2171,11 +2173,11 @@ tokenized words.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_index<span class="opacity-60">: int = 0</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_index<span class="opacity-60">: int = 0</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2203,11 +2205,11 @@ integer indices) at a given batch index (only works for the output of a fast tok
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_index<span class="opacity-60">: int = 0</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[Optional[int]]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_index<span class="opacity-60">: int = 0</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[Optional[int]]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2236,13 +2238,13 @@ tokenizer are mapped to <code>None</code> and other tokens are mapped to the ind
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_word_index<span class="opacity-60">: int</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">word_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequence_index<span class="opacity-60">: int = 0</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>CharSpan</code> or <code>List[CharSpan]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_word_index<span class="opacity-60">: int</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">word_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequence_index<span class="opacity-60">: int = 0</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>CharSpan</code> or <code>List[CharSpan]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2293,12 +2295,12 @@ string</li>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_word_index<span class="opacity-60">: int</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">word_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequence_index<span class="opacity-60">: int = 0</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_or_word_index<span class="opacity-60">: int</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">word_index<span class="opacity-60">: typing.Optional[int] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">sequence_index<span class="opacity-60">: int = 0</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2340,11 +2342,11 @@ words.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_index<span class="opacity-60">: int = 0</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[Optional[int]]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">batch_index<span class="opacity-60">: int = 0</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[Optional[int]]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -2367,10 +2369,10 @@ tokenizer are mapped to <code>None</code> and other tokens are mapped to the ind
 <p>Return a list mapping the tokens to their actual word in the initial sentence for a fast tokenizer.</p></div></div>
 
 
-		<script type="module" data-hydrate="ma246q">
-		import { start } from "/docs/transformers/pr_15529/en/_app/start-47a460ed.js";
+		<script type="module" data-hydrate="1o180gp">
+		import { start } from "/docs/transformers/pr_15529/en/_app/start-2b9b1fda.js";
 		start({
-			target: document.querySelector('[data-hydrate="ma246q"]').parentNode,
+			target: document.querySelector('[data-hydrate="1o180gp"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_15529/en","assets":"/docs/transformers/pr_15529/en"},
 			session: {},
 			route: false,
@@ -2381,7 +2383,7 @@ tokenizer are mapped to <code>None</code> and other tokens are mapped to the ind
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_15529/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_15529/en/_app/pages/main_classes/tokenizer.mdx-ce937a01.js")
+						import("/docs/transformers/pr_15529/en/_app/pages/main_classes/tokenizer.mdx-d4fa3a25.js")
 				],
 				params: {}
 			}
