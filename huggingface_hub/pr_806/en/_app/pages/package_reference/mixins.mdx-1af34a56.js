@@ -154,7 +154,7 @@ Specify directory in which you want to save the Keras model.`,name:"save_directo
 Configuration object to be saved alongside the model weights.`,name:"config"},{anchor:"huggingface_hub.save_pretrained_keras.include_optimizer(bool,",description:`<strong>include_optimizer(<code>bool</code>,</strong> <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to include optimizer in serialization.`,name:"include_optimizer(bool,"},{anchor:"huggingface_hub.save_pretrained_keras.plot_model",description:`<strong>plot_model</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
 Setting this to <code>True</code> will plot the model and put it in the model
-card. Requires graphviz and pydot to be installed.`,name:"plot_model"},{anchor:"huggingface_hub.save_pretrained_keras.tags",description:`<strong>tags</strong> (<code>list</code>, <em>optional</em>) &#x2014;
+card. Requires graphviz and pydot to be installed.`,name:"plot_model"},{anchor:"huggingface_hub.save_pretrained_keras.tags",description:`<strong>tags</strong> (Union[<code>str</code>,<code>list</code>], <em>optional</em>) &#x2014;
 List of tags that are related to model or string of a single tag. See example tags
 <a href="https://github.com/huggingface/hub-docs/blame/main/modelcard.md" rel="nofollow">here</a>.`,name:"tags"},{anchor:"huggingface_hub.save_pretrained_keras.model_save_kwargs(dict,",description:`<strong>model_save_kwargs(<code>dict</code>,</strong> <em>optional</em>) &#x2014;
 model_save_kwargs will be passed to
