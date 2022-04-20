@@ -1,29 +1,29 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پیش‌پردازش با توکِنایزر&quot;},{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;بردار‌های چند بعدی؟&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;سر مدل: درک اعداد درون مدل&quot;}],&quot;title&quot;:&quot;گذر از مدل&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پس پردازش خروجی&quot;}],&quot;title&quot;:&quot;پشت صحنه خط‌تولید&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/course/pr_129/fa/_app/assets/pages/__layout.svelte-ab5b3a22.css">
-	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/start-a70839af.js">
+	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/start-42c00746.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/chunks/vendor-378cdcd7.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/pages/__layout.svelte-3c51a8cf.js">
-	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-2fe23d64.js">
+	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-925ecb8a.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/chunks/CodeBlock-be794267.js"> 
 
 
 
 
 
-<div dir="rtl"><div class="bg-white leading-none border border-gray-100 rounded-lg flex p-0.5 w-56 text-sm mb-4"><a class="flex justify-center flex-1 py-1.5 px-2.5 focus:outline-none !no-underline rounded-l bg-red-50 dark:bg-transparent text-red-600" href="?fw=pt"><svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><defs><clipPath id="a"><rect x="3.05" y="0.5" width="25.73" height="31" fill="none"></rect></clipPath></defs><g clip-path="url(#a)"><path d="M24.94,9.51a12.81,12.81,0,0,1,0,18.16,12.68,12.68,0,0,1-18,0,12.81,12.81,0,0,1,0-18.16l9-9V5l-.84.83-6,6a9.58,9.58,0,1,0,13.55,0ZM20.44,9a1.68,1.68,0,1,1,1.67-1.67A1.68,1.68,0,0,1,20.44,9Z" fill="#ee4c2c"></path></g></svg>
+<div class="bg-white leading-none border border-gray-100 rounded-lg flex p-0.5 w-56 text-sm mb-4"><a class="flex justify-center flex-1 py-1.5 px-2.5 focus:outline-none !no-underline rounded-l bg-red-50 dark:bg-transparent text-red-600" href="?fw=pt"><svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><defs><clipPath id="a"><rect x="3.05" y="0.5" width="25.73" height="31" fill="none"></rect></clipPath></defs><g clip-path="url(#a)"><path d="M24.94,9.51a12.81,12.81,0,0,1,0,18.16,12.68,12.68,0,0,1-18,0,12.81,12.81,0,0,1,0-18.16l9-9V5l-.84.83-6,6a9.58,9.58,0,1,0,13.55,0ZM20.44,9a1.68,1.68,0,1,1,1.67-1.67A1.68,1.68,0,0,1,20.44,9Z" fill="#ee4c2c"></path></g></svg>
 			Pytorch
 		</a><a class="flex justify-center flex-1 py-1.5 px-2.5 focus:outline-none !no-underline rounded-r text-gray-500 filter grayscale" href="?fw=tf"><svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="0.94em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 274"><path d="M145.726 42.065v42.07l72.861 42.07v-42.07l-72.86-42.07zM0 84.135v42.07l36.43 21.03V105.17L0 84.135zm109.291 21.035l-36.43 21.034v126.2l36.43 21.035v-84.135l36.435 21.035v-42.07l-36.435-21.034V105.17z" fill="#E55B2D"></path><path d="M145.726 42.065L36.43 105.17v42.065l72.861-42.065v42.065l36.435-21.03v-84.14zM255.022 63.1l-36.435 21.035v42.07l36.435-21.035V63.1zm-72.865 84.135l-36.43 21.035v42.07l36.43-21.036v-42.07zm-36.43 63.104l-36.436-21.035v84.135l36.435-21.035V210.34z" fill="#ED8E24"></path><path d="M145.726 0L0 84.135l36.43 21.035l109.296-63.105l72.861 42.07L255.022 63.1L145.726 0zm0 126.204l-36.435 21.03l36.435 21.036l36.43-21.035l-36.43-21.03z" fill="#F8BF3C"></path></svg>
 			TensorFlow
 		</a></div>
-<h1 id="">پشت صحنه خط‌تولید</h1>
+<div dir="rtl"><h1 id="">پشت صحنه خط‌تولید</h1>
 
 
 <div class="flex space-x-1 absolute z-10 right-0 top-0"><a href="https://colab.research.google.com/github/huggingface/notebooks/blob/master/course/chapter2/section2_pt.ipynb" target="_blank"><img alt="Open In Colab" class="!m-0" src="https://colab.research.google.com/assets/colab-badge.svg"></a>
 	<a href="https://studiolab.sagemaker.aws/import/github/huggingface/notebooks/blob/master/course/chapter2/section2_pt.ipynb" target="_blank"><img alt="Open In Studio Lab" class="!m-0" src="https://studiolab.sagemaker.aws/studiolab.svg"></a></div>
 
 
-<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400">این اولین بخشی است که محتوای آن بسته به اینکه از پایتورچ یا تنسورفلو استفاده می کنید کمی متفاوت است. از سویچ بالای صفحه برای انتخاب پلتفرمی که ترجیح می دهید استفاده کنید!
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400">این اولین بخشی است که محتوای آن بسته به اینکه از پایتورچ یا تِنسورفِلو استفاده می کنید کمی متفاوت است. از سویچ بالای صفحه برای انتخاب پلتفرمی که ترجیح می دهید استفاده کنید!
 </div>
 <iframe class="w-full xl:w-4/6 h-80" src="https://www.youtube-nocookie.com/embed/1pedAIvTWXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>بگذارید با یک مثال کامل شروع کنیم که در آن نگاهی می‌اندازیم به آنچه که در پشت صحنه اتفاق می افتد هنگامی که این کد را در <a href="/course/chapter1">Chapter 1</a> اجرا کردیم:</p>
@@ -39,7 +39,7 @@ classifier(
         <span class="hljs-string">&quot;I hate this so much!&quot;</span>,
     ]
 )<!-- HTML_TAG_END --></pre></div></div>
-<p>این خروجی را دریافت کردیم: </p>
+<p>این خروجی را دریافت کردیم:</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -83,7 +83,7 @@ inputs = tokenizer(raw_inputs, padding=<span class="hljs-literal">True</span>, t
     <span class="hljs-string">&#x27;input_ids&#x27;</span>: tensor([
         [  <span class="hljs-number">101</span>,  <span class="hljs-number">1045</span>,  <span class="hljs-number">1005</span>,  <span class="hljs-number">2310</span>,  <span class="hljs-number">2042</span>,  <span class="hljs-number">3403</span>,  <span class="hljs-number">2005</span>,  <span class="hljs-number">1037</span>, <span class="hljs-number">17662</span>, <span class="hljs-number">12172</span>, <span class="hljs-number">2607</span>,  <span class="hljs-number">2026</span>,  <span class="hljs-number">2878</span>,  <span class="hljs-number">2166</span>,  <span class="hljs-number">1012</span>,   <span class="hljs-number">102</span>],
         [  <span class="hljs-number">101</span>,  <span class="hljs-number">1045</span>,  <span class="hljs-number">5223</span>,  <span class="hljs-number">2023</span>,  <span class="hljs-number">2061</span>,  <span class="hljs-number">2172</span>,   <span class="hljs-number">999</span>,   <span class="hljs-number">102</span>,     <span class="hljs-number">0</span>,     <span class="hljs-number">0</span>,     <span class="hljs-number">0</span>,     <span class="hljs-number">0</span>,     <span class="hljs-number">0</span>,     <span class="hljs-number">0</span>,     <span class="hljs-number">0</span>,     <span class="hljs-number">0</span>]
-    ]), 
+    ]),
     <span class="hljs-string">&#x27;attention_mask&#x27;</span>: tensor([
         [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>],
         [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
@@ -104,16 +104,11 @@ model = AutoModel.from_pretrained(checkpoint)<!-- HTML_TAG_END --></pre></div></
 <p>نگران نباشید اگر درک این مفاهیم سخت است. همه آنها را بعدتر توضیح خواهیم داد.</p>
 <p>اگرچه وضعیت‌های پنهان به خودی خود می توانند مفید باشند، آن‌ها معمولا ورودی بخش دیگری از مدل که به آن <em>سر</em> مدل می گوییم هستند. در <a href="/course/chapter1">فصل اول</a>، همه مسائل مختلف را می‌توانستیم توسط یک معماری حل کنیم، و سپس خروجی را به سر متفاوتی در ادامه مدل پاس بدهیم.</p>
 <h3 id="">بردار‌های چند بعدی؟</h3>
-<p>The vector output by the Transformer module is usually large. Information about these vectors is available in the <code>shape</code> attribute that generally has three dimensions:</p>
-<ul><li><strong>Batch size</strong>: The number of sequences processed at a time (2 in our example).</li>
-<li><strong>Sequence length</strong>: The length of the numerical representation of the sequence (16 in our example).</li>
-<li><strong>Hidden size</strong>: The vector dimension of each model input.</li></ul>
-<p>The hidden size can be very large (768 is common for smaller models, and in larger models this can reach 3072 or more) and that’s why it is said to be “high dimensional”.</p>
 <p>بردار خروجی ماژول <code>Transformer</code> معمولا بسیار بزرگ است. اطلاعات در مورد این بردارها در ویژگی <code>shape</code> که معمولا سه بعد دارد موجود است:</p>
 <ul><li><strong>اندازه بتج</strong>: تعداد رشته‌های مورد پردازش در یک دسته، که در مثال ما دو عدد است.</li>
 <li><strong>طول رشته</strong>: طول بردار عددی معادل رشته‌ها، که در مثال ما ۱۶ است.</li>
 <li><strong>اندازه پنهان</strong>: ابعاد بردار برای هر ورودی مدل.</li></ul>
-<p>اندازه پنهان می‌تواند بسیار بزرگ باشد(معمولا ۷۶۸ برای مدل‌های کوچکتر، و در مدل‌های بزرگتر این عدد به ۳۰۷۲ یا بیشتر هم می رسد) و به همین دلیل به این بردارها «چندین بعدی» می گوییم.</p>
+<p>اندازه پنهان می‌تواند بسیار بزرگ باشد(معمولا ۷۶۸ برای مدل‌های کوچکتر، و در مدل‌های بزرگتر این عدد به ۳۰۷۲ یا بیشتر هم می رسد) و به همین دلیل به این بردارهای خروجی «چندین بعدی» می گوییم.</p>
 <p>این را با پاس دادن ورودی‌های پیش‌پردازش شده به مدل خود می توانیم ببینیم:</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -200,13 +195,13 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 <p>ما با موفقیت سه مرحله خط‌تولید را در اینجا نشان دادیم: پیش‌پردازش توسط توکِنایزرها، گذر ورودی‌ها از مدل و پس‌پردازش! حالا کمی زمان می‌گذاریم تا به صورت عمیق‌تر وارد هر‌کدام از این مراحل شویم.</p>
 
 
-<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>خودتان امتحان کنید!</strong> دو(یا بیشتر) نوشته خودتان را از خط‌تولید <code>sentiment-analysis</code> بگذرانید. سپس مراحلی که در اینجا دیدیم را خودتان تکرار کنید و مطمئن شوید همان نتایج را دریافت می کنید!</p></div></div>
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>خودتان امتحان کنید!</strong> دو(یا بیشتر) نوشته از خودتان را از خط‌تولید <code>sentiment-analysis</code> بگذرانید. سپس مراحلی که در اینجا دیدیم را تکرار کنید و مطمئن شوید همان نتایج را دریافت می کنید!</p></div></div>
 
 
-		<script type="module" data-hydrate="txxwcc">
-		import { start } from "/docs/course/pr_129/fa/_app/start-a70839af.js";
+		<script type="module" data-hydrate="t80gn3">
+		import { start } from "/docs/course/pr_129/fa/_app/start-42c00746.js";
 		start({
-			target: document.querySelector('[data-hydrate="txxwcc"]').parentNode,
+			target: document.querySelector('[data-hydrate="t80gn3"]').parentNode,
 			paths: {"base":"/docs/course/pr_129/fa","assets":"/docs/course/pr_129/fa"},
 			session: {},
 			route: false,
@@ -217,7 +212,7 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 				error: null,
 				nodes: [
 					import("/docs/course/pr_129/fa/_app/pages/__layout.svelte-3c51a8cf.js"),
-						import("/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-2fe23d64.js")
+						import("/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-925ecb8a.js")
 				],
 				params: {}
 			}
