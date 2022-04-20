@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پیش‌پردازش با توکِنایزر&quot;},{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;بردار‌های چند بعدی؟&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;سر مدل: درک اعداد درون مدل&quot;}],&quot;title&quot;:&quot;گذر از مدل&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پس پردازش خروجی&quot;}],&quot;title&quot;:&quot;پشت صحنه خط‌تولید&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/course/pr_129/fa/_app/assets/pages/__layout.svelte-ab5b3a22.css">
-	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/start-42c00746.js">
+	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/start-387744f5.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/chunks/vendor-378cdcd7.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/pages/__layout.svelte-3c51a8cf.js">
-	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-925ecb8a.js">
+	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-693f4194.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/chunks/CodeBlock-be794267.js"> 
 
 
@@ -165,7 +165,7 @@ outputs = model(**inputs)<!-- HTML_TAG_END --></pre></div></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->tensor([[-<span class="hljs-number">1.5607</span>,  <span class="hljs-number">1.6123</span>],
         [ <span class="hljs-number">4.1692</span>, -<span class="hljs-number">3.3464</span>]], grad_fn=&lt;AddmmBackward&gt;)<!-- HTML_TAG_END --></pre></div></div>
-<p>خروجی مدل ما برای جمله اول <code>[-1.5607, 1.6123]</code> و برای جمله دوم <code>[ 4.1692, -3.3464]</code> است. این‌ خروجی‌ها مقادیر آماری نیستند، بلکه به آنها <em>لوجیت</em> می‌گوییم. آن‌ها مقادیر خام و نرمال‌نشده خروجی از آخرین لایه مدل هستند. برای تبدیل به مقادیر آماری باید آن‌ها را از یک لایه‌ <a href="https://en.wikipedia.org/wiki/Softmax_function" rel="nofollow">سافت‌مکس</a> بگذرانیم(تمام ترنسفورمرهای هاگینگ‌فِیس در خروجی لوجیت تولید می‌کنند زیرا معمولا تابع لاس مورد استفاده در تعلیم مدل، آخرین تابع فعال‌ساز مانند سافت‌مکس‌ را با خود تابع لاس مانند کِراس‌آنتروپی ترکیب می‌کند).</p>
+<p>پیش‌بینی مدل ما برای جمله اول <code>[-1.5607, 1.6123]</code> و برای جمله دوم <code>[ 4.1692, -3.3464]</code> است. این‌ خروجی‌ها مقادیر آماری نیستند، بلکه به آنها <em>لوجیت</em> می‌گوییم. آن‌ها مقادیر خام و نرمال‌نشده خروجی از آخرین لایه مدل هستند. برای تبدیل به مقادیر آماری باید آن‌ها را از یک لایه‌ <a href="https://en.wikipedia.org/wiki/Softmax_function" rel="nofollow">سافت‌مکس</a> بگذرانیم(تمام ترنسفورمرهای هاگینگ‌فِیس در خروجی لوجیت تولید می‌کنند زیرا معمولا تابع لاس مورد استفاده در تعلیم مدل، آخرین تابع فعال‌ساز مانند سافت‌مکس‌ را با خود تابع لاس مانند کِراس‌آنتروپی ترکیب می‌کند).</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -178,7 +178,7 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->tensor([[<span class="hljs-number">4.0195e-02</span>, <span class="hljs-number">9.5980e-01</span>],
         [<span class="hljs-number">9.9946e-01</span>, <span class="hljs-number">5.4418e-04</span>]], grad_fn=&lt;SoftmaxBackward&gt;)<!-- HTML_TAG_END --></pre></div></div>
-<p>حالا می‌توانیم ببینیم که خروجی مدل برای جمله اول <code>[0.9995, 0.0005]</code> و برای جمله دوم <code>[0.9995, 0.0005]</code> است. این‌ها مقادیر آشنای آماری هستند.</p>
+<p>حالا می‌توانیم ببینیم که پیش‌بینی مدل برای جمله اول <code>[0.9995, 0.0005]</code> و برای جمله دوم <code>[0.9995, 0.0005]</code> است. این‌ها مقادیر آشنای آماری هستند.</p>
 <p>برای تبدیل این مقادیر به عنوان دسته تشخیص داده شده می‌توانیم از ویژگی <code>id2label</code> تنظیمات مدل استفاده کنیم(در بخش بعدی بیشتر در این مورد صحبت خواهیم کرد):</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -189,7 +189,7 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->{<span class="hljs-number">0</span>: <span class="hljs-string">&#x27;NEGATIVE&#x27;</span>, <span class="hljs-number">1</span>: <span class="hljs-string">&#x27;POSITIVE&#x27;</span>}<!-- HTML_TAG_END --></pre></div></div>
-<p>اکنون مشخص است که خروجی‌های مدل از این قرار هستند:</p>
+<p>اکنون مشخص است که پیش‌بینی‌های مدل از این قرار هستند:</p>
 <ul><li>جمله اول: NEGATIVE: 0.0402, POSITIVE: 0.9598</li>
 <li>جمله دوم: NEGATIVE: 0.9995, POSITIVE: 0.0005</li></ul>
 <p>ما با موفقیت سه مرحله خط‌تولید را در اینجا نشان دادیم: پیش‌پردازش توسط توکِنایزرها، گذر ورودی‌ها از مدل و پس‌پردازش! حالا کمی زمان می‌گذاریم تا به صورت عمیق‌تر وارد هر‌کدام از این مراحل شویم.</p>
@@ -198,10 +198,10 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>خودتان امتحان کنید!</strong> دو(یا بیشتر) نوشته از خودتان را از خط‌تولید <code>sentiment-analysis</code> بگذرانید. سپس مراحلی که در اینجا دیدیم را تکرار کنید و مطمئن شوید همان نتایج را دریافت می کنید!</p></div></div>
 
 
-		<script type="module" data-hydrate="t80gn3">
-		import { start } from "/docs/course/pr_129/fa/_app/start-42c00746.js";
+		<script type="module" data-hydrate="rh3j64">
+		import { start } from "/docs/course/pr_129/fa/_app/start-387744f5.js";
 		start({
-			target: document.querySelector('[data-hydrate="t80gn3"]').parentNode,
+			target: document.querySelector('[data-hydrate="rh3j64"]').parentNode,
 			paths: {"base":"/docs/course/pr_129/fa","assets":"/docs/course/pr_129/fa"},
 			session: {},
 			route: false,
@@ -212,7 +212,7 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 				error: null,
 				nodes: [
 					import("/docs/course/pr_129/fa/_app/pages/__layout.svelte-3c51a8cf.js"),
-						import("/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-925ecb8a.js")
+						import("/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-693f4194.js")
 				],
 				params: {}
 			}
