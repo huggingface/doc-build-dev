@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پیش‌پردازش با توکِنایزر&quot;},{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;بردار‌های چند بعدی؟&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;سر مدل: درک اعداد درون مدل&quot;}],&quot;title&quot;:&quot;گذر از مدل&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پس پردازش خروجی&quot;}],&quot;title&quot;:&quot;پشت صحنه خط‌تولید&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/course/pr_129/fa/_app/assets/pages/__layout.svelte-ab5b3a22.css">
-	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/start-387744f5.js">
+	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/start-143dda0b.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/chunks/vendor-378cdcd7.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/pages/__layout.svelte-3c51a8cf.js">
-	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-693f4194.js">
+	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-e016c511.js">
 	<link rel="modulepreload" href="/docs/course/pr_129/fa/_app/chunks/CodeBlock-be794267.js"> 
 
 
@@ -104,11 +104,11 @@ model = AutoModel.from_pretrained(checkpoint)<!-- HTML_TAG_END --></pre></div></
 <p>نگران نباشید اگر درک این مفاهیم سخت است. همه آنها را بعدتر توضیح خواهیم داد.</p>
 <p>اگرچه وضعیت‌های پنهان به خودی خود می توانند مفید باشند، آن‌ها معمولا ورودی بخش دیگری از مدل که به آن <em>سر</em> مدل می گوییم هستند. در <a href="/course/chapter1">فصل اول</a>، همه مسائل مختلف را می‌توانستیم توسط یک معماری حل کنیم، و سپس خروجی را به سر متفاوتی در ادامه مدل پاس بدهیم.</p>
 <h3 id="">بردار‌های چند بعدی؟</h3>
-<p>بردار خروجی ماژول <code>Transformer</code> معمولا بسیار بزرگ است. اطلاعات در مورد این بردارها در ویژگی <code>shape</code> که معمولا سه بعد دارد موجود است:</p>
-<ul><li><strong>اندازه بتج</strong>: تعداد رشته‌های مورد پردازش در یک دسته، که در مثال ما دو عدد است.</li>
-<li><strong>طول رشته</strong>: طول بردار عددی معادل رشته‌ها، که در مثال ما ۱۶ است.</li>
-<li><strong>اندازه پنهان</strong>: ابعاد بردار برای هر ورودی مدل.</li></ul>
-<p>اندازه پنهان می‌تواند بسیار بزرگ باشد(معمولا ۷۶۸ برای مدل‌های کوچکتر، و در مدل‌های بزرگتر این عدد به ۳۰۷۲ یا بیشتر هم می رسد) و به همین دلیل به این بردارهای خروجی «چندین بعدی» می گوییم.</p>
+<p>خروجی ماژول <code>Transformer</code> تِنسوری است که معمولا سه بعد دارد:</p>
+<ul><li><p><strong>اندازه بتج</strong>: تعداد رشته‌های مورد پردازش در یک دسته، که در مثال ما دو عدد است.</p></li>
+<li><p><strong>طول رشته</strong>: طول بردار عددی معادل رشته‌ها، که در مثال ما ۱۶ است.</p></li>
+<li><p><strong>اندازه پنهان</strong>: ابعاد بردار برای هر ورودی مدل.</p>
+<p>به خاطر همین مقدار آخر به این تِنسور «چندین بعدی» می گوییم. اندازه پنهان می‌تواند بسیار بزرگ باشد(معمولا ۷۶۸ برای مدل‌های کوچکتر، و در مدل‌های بزرگتر این عدد به ۳۰۷۲ یا بیشتر هم می رسد)</p></li></ul>
 <p>این را با پاس دادن ورودی‌های پیش‌پردازش شده به مدل خود می توانیم ببینیم:</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -198,10 +198,10 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>خودتان امتحان کنید!</strong> دو(یا بیشتر) نوشته از خودتان را از خط‌تولید <code>sentiment-analysis</code> بگذرانید. سپس مراحلی که در اینجا دیدیم را تکرار کنید و مطمئن شوید همان نتایج را دریافت می کنید!</p></div></div>
 
 
-		<script type="module" data-hydrate="rh3j64">
-		import { start } from "/docs/course/pr_129/fa/_app/start-387744f5.js";
+		<script type="module" data-hydrate="ufqqs4">
+		import { start } from "/docs/course/pr_129/fa/_app/start-143dda0b.js";
 		start({
-			target: document.querySelector('[data-hydrate="rh3j64"]').parentNode,
+			target: document.querySelector('[data-hydrate="ufqqs4"]').parentNode,
 			paths: {"base":"/docs/course/pr_129/fa","assets":"/docs/course/pr_129/fa"},
 			session: {},
 			route: false,
@@ -212,7 +212,7 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 				error: null,
 				nodes: [
 					import("/docs/course/pr_129/fa/_app/pages/__layout.svelte-3c51a8cf.js"),
-						import("/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-693f4194.js")
+						import("/docs/course/pr_129/fa/_app/pages/chapter2/2.mdx-e016c511.js")
 				],
 				params: {}
 			}
