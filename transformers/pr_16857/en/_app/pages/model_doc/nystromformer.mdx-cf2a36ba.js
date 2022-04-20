@@ -135,19 +135,19 @@ weighted average in the cross-attention heads.</p>
 <p><a
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithPastAndCrossAttentions"
 >transformers.modeling_outputs.BaseModelOutputWithPastAndCrossAttentions</a> or <code>tuple(torch.FloatTensor)</code></p>
-`}}),ke=new nt({props:{$$slots:{default:[Pi]},$$scope:{ctx:A}}}),Ge=new W({props:{code:`from transformers import AlbertTokenizer, NystromformerModel
+`}}),ke=new nt({props:{$$slots:{default:[Pi]},$$scope:{ctx:A}}}),Ge=new W({props:{code:`from transformers import AutoTokenizer, NystromformerModel
 import torch
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/nystromformer-512")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/nystromformer-512")
 model = NystromformerModel.from_pretrained("uw-madison/nystromformer-512")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 outputs = model(**inputs)
 
-last_hidden_states = outputs.last_hidden_state`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, NystromformerModel
+last_hidden_states = outputs.last_hidden_state`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, NystromformerModel
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = NystromformerModel.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -218,10 +218,10 @@ heads.</p>
 <p><a
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.MaskedLMOutput"
 >transformers.modeling_outputs.MaskedLMOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-`}}),ve=new nt({props:{$$slots:{default:[Oi]},$$scope:{ctx:A}}}),Xe=new W({props:{code:`from transformers import AlbertTokenizer, NystromformerForMaskedLM
+`}}),ve=new nt({props:{$$slots:{default:[Oi]},$$scope:{ctx:A}}}),Xe=new W({props:{code:`from transformers import AutoTokenizer, NystromformerForMaskedLM
 import torch
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/nystromformer-512")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/nystromformer-512")
 model = NystromformerForMaskedLM.from_pretrained("uw-madison/nystromformer-512")
 
 inputs = tokenizer("The capital of France is [MASK].", return_tensors="pt")
@@ -234,10 +234,10 @@ mask_token_index = (inputs.input_ids == tokenizer.mask_token_id)[0].nonzero(as_t
 
 predicted_token_id = logits[0, mask_token_index].argmax(axis=-1)
 tokenizer.decode(predicted_token_id)
-`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, NystromformerForMaskedLM
+`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, NystromformerForMaskedLM
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = NystromformerForMaskedLM.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;The capital of France is [MASK].&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -328,9 +328,9 @@ heads.</p>
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput"
 >transformers.modeling_outputs.SequenceClassifierOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
 `}}),$e=new nt({props:{$$slots:{default:[Si]},$$scope:{ctx:A}}}),ao=new W({props:{code:`import torch
-from transformers import AlbertTokenizer, NystromformerForSequenceClassification
+from transformers import AutoTokenizer, NystromformerForSequenceClassification
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/nystromformer-512")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/nystromformer-512")
 model = NystromformerForSequenceClassification.from_pretrained("uw-madison/nystromformer-512")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
@@ -341,9 +341,9 @@ with torch.no_grad():
 predicted_class_id = logits.argmax().item()
 model.config.id2label[predicted_class_id]
 `,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, NystromformerForSequenceClassification
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, NystromformerForSequenceClassification
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = NystromformerForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -368,9 +368,9 @@ round(loss.item(), 2)
 <span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(**inputs, labels=labels).loss
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">round</span>(loss.item(), <span class="hljs-number">2</span>)
 `}}),lo=new W({props:{code:`import torch
-from transformers import AlbertTokenizer, NystromformerForSequenceClassification
+from transformers import AutoTokenizer, NystromformerForSequenceClassification
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/nystromformer-512")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/nystromformer-512")
 model = NystromformerForSequenceClassification.from_pretrained("uw-madison/nystromformer-512", problem_type="multi_label_classification")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
@@ -381,9 +381,9 @@ with torch.no_grad():
 predicted_class_id = logits.argmax().item()
 model.config.id2label[predicted_class_id]
 `,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, NystromformerForSequenceClassification
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, NystromformerForSequenceClassification
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = NystromformerForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>, problem_type=<span class="hljs-string">&quot;multi_label_classification&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -479,10 +479,10 @@ heads.</p>
 <p><a
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.MultipleChoiceModelOutput"
 >transformers.modeling_outputs.MultipleChoiceModelOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-`}}),Me=new nt({props:{$$slots:{default:[Li]},$$scope:{ctx:A}}}),go=new W({props:{code:`from transformers import AlbertTokenizer, NystromformerForMultipleChoice
+`}}),Me=new nt({props:{$$slots:{default:[Li]},$$scope:{ctx:A}}}),go=new W({props:{code:`from transformers import AutoTokenizer, NystromformerForMultipleChoice
 import torch
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/nystromformer-512")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/nystromformer-512")
 model = NystromformerForMultipleChoice.from_pretrained("uw-madison/nystromformer-512")
 
 prompt = "In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced."
@@ -495,10 +495,10 @@ outputs = model(**{k: v.unsqueeze(0) for k, v in encoding.items()}, labels=label
 
 # the linear classifier still needs to be trained
 loss = outputs.loss
-logits = outputs.logits`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, NystromformerForMultipleChoice
+logits = outputs.logits`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, NystromformerForMultipleChoice
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = NystromformerForMultipleChoice.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>prompt = <span class="hljs-string">&quot;In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced.&quot;</span>
@@ -575,10 +575,10 @@ heads.</p>
 <p><a
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.TokenClassifierOutput"
 >transformers.modeling_outputs.TokenClassifierOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-`}}),qe=new nt({props:{$$slots:{default:[Ii]},$$scope:{ctx:A}}}),vo=new W({props:{code:`from transformers import AlbertTokenizer, NystromformerForTokenClassification
+`}}),qe=new nt({props:{$$slots:{default:[Ii]},$$scope:{ctx:A}}}),vo=new W({props:{code:`from transformers import AutoTokenizer, NystromformerForTokenClassification
 import torch
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/nystromformer-512")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/nystromformer-512")
 model = NystromformerForTokenClassification.from_pretrained("uw-madison/nystromformer-512")
 
 inputs = tokenizer(
@@ -595,10 +595,10 @@ predicted_token_class_ids = logits.argmax(-1)
 # Multiple token classes might account for the same word
 predicted_tokens_classes = [model.config.id2label[t.item()] for t in predicted_token_class_ids[0]]
 predicted_tokens_classes
-`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, NystromformerForTokenClassification
+`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, NystromformerForTokenClassification
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = NystromformerForTokenClassification.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(
@@ -693,10 +693,10 @@ heads.</p>
 <p><a
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.QuestionAnsweringModelOutput"
 >transformers.modeling_outputs.QuestionAnsweringModelOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-`}}),je=new nt({props:{$$slots:{default:[Di]},$$scope:{ctx:A}}}),zo=new W({props:{code:`from transformers import AlbertTokenizer, NystromformerForQuestionAnswering
+`}}),je=new nt({props:{$$slots:{default:[Di]},$$scope:{ctx:A}}}),zo=new W({props:{code:`from transformers import AutoTokenizer, NystromformerForQuestionAnswering
 import torch
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/nystromformer-512")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/nystromformer-512")
 model = NystromformerForQuestionAnswering.from_pretrained("uw-madison/nystromformer-512")
 
 question, text = "Who was Jim Henson?", "Jim Henson was a nice puppet"
@@ -710,10 +710,10 @@ answer_end_index = outputs.end_logits.argmax()
 
 predict_answer_tokens = inputs.input_ids[0, answer_start_index : answer_end_index + 1]
 tokenizer.decode(predict_answer_tokens)
-`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, NystromformerForQuestionAnswering
+`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, NystromformerForQuestionAnswering
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = NystromformerForQuestionAnswering.from_pretrained(<span class="hljs-string">&quot;uw-madison/nystromformer-512&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>question, text = <span class="hljs-string">&quot;Who was Jim Henson?&quot;</span>, <span class="hljs-string">&quot;Jim Henson was a nice puppet&quot;</span>

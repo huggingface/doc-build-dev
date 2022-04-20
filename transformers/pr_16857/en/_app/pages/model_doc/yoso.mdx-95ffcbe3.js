@@ -127,19 +127,19 @@ weighted average in the cross-attention heads.</p>
 <p><a
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.BaseModelOutputWithCrossAttentions"
 >transformers.modeling_outputs.BaseModelOutputWithCrossAttentions</a> or <code>tuple(torch.FloatTensor)</code></p>
-`}}),Ye=new ht({props:{$$slots:{default:[cl]},$$scope:{ctx:A}}}),Ke=new P({props:{code:`from transformers import AlbertTokenizer, YosoModel
+`}}),Ye=new ht({props:{$$slots:{default:[cl]},$$scope:{ctx:A}}}),Ke=new P({props:{code:`from transformers import AutoTokenizer, YosoModel
 import torch
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/yoso-4096")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 model = YosoModel.from_pretrained("uw-madison/yoso-4096")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 outputs = model(**inputs)
 
-last_hidden_states = outputs.last_hidden_state`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, YosoModel
+last_hidden_states = outputs.last_hidden_state`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, YosoModel
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = YosoModel.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -210,10 +210,10 @@ heads.</p>
 <p><a
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.MaskedLMOutput"
 >transformers.modeling_outputs.MaskedLMOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-`}}),qe=new ht({props:{$$slots:{default:[pl]},$$scope:{ctx:A}}}),oo=new P({props:{code:`from transformers import AlbertTokenizer, YosoForMaskedLM
+`}}),qe=new ht({props:{$$slots:{default:[pl]},$$scope:{ctx:A}}}),oo=new P({props:{code:`from transformers import AutoTokenizer, YosoForMaskedLM
 import torch
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/yoso-4096")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 model = YosoForMaskedLM.from_pretrained("uw-madison/yoso-4096")
 
 inputs = tokenizer("The capital of France is [MASK].", return_tensors="pt")
@@ -226,10 +226,10 @@ mask_token_index = (inputs.input_ids == tokenizer.mask_token_id)[0].nonzero(as_t
 
 predicted_token_id = logits[0, mask_token_index].argmax(axis=-1)
 tokenizer.decode(predicted_token_id)
-`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, YosoForMaskedLM
+`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, YosoForMaskedLM
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = YosoForMaskedLM.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;The capital of France is [MASK].&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -320,9 +320,9 @@ heads.</p>
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.SequenceClassifierOutput"
 >transformers.modeling_outputs.SequenceClassifierOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
 `}}),xe=new ht({props:{$$slots:{default:[hl]},$$scope:{ctx:A}}}),lo=new P({props:{code:`import torch
-from transformers import AlbertTokenizer, YosoForSequenceClassification
+from transformers import AutoTokenizer, YosoForSequenceClassification
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/yoso-4096")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 model = YosoForSequenceClassification.from_pretrained("uw-madison/yoso-4096")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
@@ -333,9 +333,9 @@ with torch.no_grad():
 predicted_class_id = logits.argmax().item()
 model.config.id2label[predicted_class_id]
 `,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, YosoForSequenceClassification
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, YosoForSequenceClassification
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = YosoForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -360,9 +360,9 @@ round(loss.item(), 2)
 <span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(**inputs, labels=labels).loss
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">round</span>(loss.item(), <span class="hljs-number">2</span>)
 `}}),po=new P({props:{code:`import torch
-from transformers import AlbertTokenizer, YosoForSequenceClassification
+from transformers import AutoTokenizer, YosoForSequenceClassification
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/yoso-4096")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 model = YosoForSequenceClassification.from_pretrained("uw-madison/yoso-4096", problem_type="multi_label_classification")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
@@ -373,9 +373,9 @@ with torch.no_grad():
 predicted_class_id = logits.argmax().item()
 model.config.id2label[predicted_class_id]
 `,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, YosoForSequenceClassification
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, YosoForSequenceClassification
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = YosoForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>, problem_type=<span class="hljs-string">&quot;multi_label_classification&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -471,10 +471,10 @@ heads.</p>
 <p><a
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.MultipleChoiceModelOutput"
 >transformers.modeling_outputs.MultipleChoiceModelOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-`}}),ze=new ht({props:{$$slots:{default:[ml]},$$scope:{ctx:A}}}),bo=new P({props:{code:`from transformers import AlbertTokenizer, YosoForMultipleChoice
+`}}),ze=new ht({props:{$$slots:{default:[ml]},$$scope:{ctx:A}}}),bo=new P({props:{code:`from transformers import AutoTokenizer, YosoForMultipleChoice
 import torch
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/yoso-4096")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 model = YosoForMultipleChoice.from_pretrained("uw-madison/yoso-4096")
 
 prompt = "In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced."
@@ -487,10 +487,10 @@ outputs = model(**{k: v.unsqueeze(0) for k, v in encoding.items()}, labels=label
 
 # the linear classifier still needs to be trained
 loss = outputs.loss
-logits = outputs.logits`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, YosoForMultipleChoice
+logits = outputs.logits`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, YosoForMultipleChoice
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = YosoForMultipleChoice.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>prompt = <span class="hljs-string">&quot;In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced.&quot;</span>
@@ -567,10 +567,10 @@ heads.</p>
 <p><a
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.TokenClassifierOutput"
 >transformers.modeling_outputs.TokenClassifierOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-`}}),Ae=new ht({props:{$$slots:{default:[ul]},$$scope:{ctx:A}}}),$o=new P({props:{code:`from transformers import AlbertTokenizer, YosoForTokenClassification
+`}}),Ae=new ht({props:{$$slots:{default:[ul]},$$scope:{ctx:A}}}),$o=new P({props:{code:`from transformers import AutoTokenizer, YosoForTokenClassification
 import torch
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/yoso-4096")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 model = YosoForTokenClassification.from_pretrained("uw-madison/yoso-4096")
 
 inputs = tokenizer(
@@ -587,10 +587,10 @@ predicted_token_class_ids = logits.argmax(-1)
 # Multiple token classes might account for the same word
 predicted_tokens_classes = [model.config.id2label[t.item()] for t in predicted_token_class_ids[0]]
 predicted_tokens_classes
-`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, YosoForTokenClassification
+`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, YosoForTokenClassification
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = YosoForTokenClassification.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(
@@ -685,10 +685,10 @@ heads.</p>
 <p><a
   href="/docs/transformers/pr_16857/en/main_classes/output#transformers.modeling_outputs.QuestionAnsweringModelOutput"
 >transformers.modeling_outputs.QuestionAnsweringModelOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
-`}}),Ee=new ht({props:{$$slots:{default:[fl]},$$scope:{ctx:A}}}),jo=new P({props:{code:`from transformers import AlbertTokenizer, YosoForQuestionAnswering
+`}}),Ee=new ht({props:{$$slots:{default:[fl]},$$scope:{ctx:A}}}),jo=new P({props:{code:`from transformers import AutoTokenizer, YosoForQuestionAnswering
 import torch
 
-tokenizer = AlbertTokenizer.from_pretrained("uw-madison/yoso-4096")
+tokenizer = AutoTokenizer.from_pretrained("uw-madison/yoso-4096")
 model = YosoForQuestionAnswering.from_pretrained("uw-madison/yoso-4096")
 
 question, text = "Who was Jim Henson?", "Jim Henson was a nice puppet"
@@ -702,10 +702,10 @@ answer_end_index = outputs.end_logits.argmax()
 
 predict_answer_tokens = inputs.input_ids[0, answer_start_index : answer_end_index + 1]
 tokenizer.decode(predict_answer_tokens)
-`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AlbertTokenizer, YosoForQuestionAnswering
+`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, YosoForQuestionAnswering
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AlbertTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = YosoForQuestionAnswering.from_pretrained(<span class="hljs-string">&quot;uw-madison/yoso-4096&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>question, text = <span class="hljs-string">&quot;Who was Jim Henson?&quot;</span>, <span class="hljs-string">&quot;Jim Henson was a nice puppet&quot;</span>
