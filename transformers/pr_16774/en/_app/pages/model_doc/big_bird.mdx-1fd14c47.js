@@ -902,8 +902,8 @@ heads.</p>
 `}}),Bo=new K({props:{$$slots:{default:[Zx]},$$scope:{ctx:q}}}),Ts=new M({props:{code:`from transformers import BigBirdTokenizer, BigBirdForTokenClassification
 import torch
 
-tokenizer = BigBirdTokenizer.from_pretrained("vumichien/token-classification-bigbird-roberta-base")
-model = BigBirdForTokenClassification.from_pretrained("vumichien/token-classification-bigbird-roberta-base")
+tokenizer = BigBirdTokenizer.from_pretrained("vumichien/token-classification-bigbird-roberta-base-random")
+model = BigBirdForTokenClassification.from_pretrained("vumichien/token-classification-bigbird-roberta-base-random")
 
 inputs = tokenizer(
     "HuggingFace is a company based in Paris and New York", add_special_tokens=False, return_tensors="pt"
@@ -921,8 +921,8 @@ predicted_tokens_classes = [model.config.id2label[t.item()] for t in predicted_t
 predicted_tokens_classes`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> BigBirdTokenizer, BigBirdForTokenClassification
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BigBirdTokenizer.from_pretrained(<span class="hljs-string">&quot;vumichien/token-classification-bigbird-roberta-base&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = BigBirdForTokenClassification.from_pretrained(<span class="hljs-string">&quot;vumichien/token-classification-bigbird-roberta-base&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BigBirdTokenizer.from_pretrained(<span class="hljs-string">&quot;vumichien/token-classification-bigbird-roberta-base-random&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = BigBirdForTokenClassification.from_pretrained(<span class="hljs-string">&quot;vumichien/token-classification-bigbird-roberta-base-random&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(
 <span class="hljs-meta">... </span>    <span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>
