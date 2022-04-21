@@ -1,11 +1,11 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;managing-local-and-online-repositories&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;huggingface_hub.Repository&quot;,&quot;title&quot;:&quot;The Repository class&quot;},{&quot;local&quot;:&quot;huggingface_hub.repository.is_git_repo&quot;,&quot;title&quot;:&quot;Helper methods&quot;},{&quot;local&quot;:&quot;huggingface_hub.Repository&quot;,&quot;title&quot;:&quot;Following asynchronous commands&quot;}],&quot;title&quot;:&quot;Managing local and online repositories&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/huggingface_hub/pr_844/en/_app/assets/pages/__layout.svelte-b9cacbf0.css">
-	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/start-9adc8a6c.js">
+	<link rel="stylesheet" href="/docs/huggingface_hub/pr_844/en/_app/assets/pages/__layout.svelte-2453514a.css">
+	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/start-7465edb3.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/chunks/vendor-d3924577.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/pages/__layout.svelte-0e32ccb8.js">
-	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/pages/package_reference/repository.mdx-ff24d7ab.js">
-	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/chunks/Docstring-a36c2bf7.js">
+	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/pages/package_reference/repository.mdx-91acb60c.js">
+	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/chunks/Docstring-6e765b82.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/chunks/IconCopyLink-f94c3d80.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_844/en/_app/chunks/CodeBlock-ff545b14.js"> 
 
@@ -33,19 +33,19 @@ of focus with the repository itself.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">local_dir<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clone_from<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_type<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str] = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_user<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_email<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_lfs_files<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">client<span class="opacity-60">: typing.Optional[huggingface_hub.hf_api.HfApi] = None</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">local_dir<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clone_from<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_type<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str] = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_user<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_email<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_lfs_files<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">client<span class="opacity-60">: typing.Optional[huggingface_hub.hf_api.HfApi] = None</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -64,19 +64,19 @@ huggingface.co.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">local_dir<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clone_from<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_type<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str] = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_user<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_email<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_lfs_files<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">client<span class="opacity-60">: typing.Optional[huggingface_hub.hf_api.HfApi] = None</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">local_dir<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clone_from<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_type<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str] = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_user<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_email<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_lfs_files<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">client<span class="opacity-60">: typing.Optional[huggingface_hub.hf_api.HfApi] = None</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -148,10 +148,10 @@ explicitly specified.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
+			
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -174,12 +174,12 @@ explicitly specified.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tag_name<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">message<span class="opacity-60">: str = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">remote<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tag_name<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">message<span class="opacity-60">: str = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">remote<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -212,11 +212,11 @@ provided, the tag will be annotated.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pattern<span class="opacity-60">: typing.Optional[str] = &#39;.&#39;</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pattern<span class="opacity-60">: typing.Optional[str] = &#39;.&#39;</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -246,9 +246,9 @@ git-lfs.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		</p>
+			
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -264,11 +264,11 @@ git-lfs.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_url<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_url<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -304,14 +304,14 @@ update the repository.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">commit_message<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">branch<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">track_large_files<span class="opacity-60">: typing.Optional[bool] = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">blocking<span class="opacity-60">: typing.Optional[bool] = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">auto_lfs_prune<span class="opacity-60">: typing.Optional[bool] = False</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">commit_message<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">branch<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">track_large_files<span class="opacity-60">: typing.Optional[bool] = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">blocking<span class="opacity-60">: typing.Optional[bool] = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">auto_lfs_prune<span class="opacity-60">: typing.Optional[bool] = False</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -377,12 +377,12 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tag_name<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">remote<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tag_name<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">remote<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -415,11 +415,11 @@ If remote is not passed, will just be updated locally</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pattern<span class="opacity-60">: typing.Optional[str] = &#39;.&#39;</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">auto_lfs_track<span class="opacity-60">: typing.Optional[bool] = False</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pattern<span class="opacity-60">: typing.Optional[str] = &#39;.&#39;</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">auto_lfs_track<span class="opacity-60">: typing.Optional[bool] = False</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -447,11 +447,11 @@ track files that are larger than 10MB with <code>git-lfs</code>.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">create_branch_ok<span class="opacity-60">: typing.Optional[bool] = False</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">create_branch_ok<span class="opacity-60">: typing.Optional[bool] = False</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -480,10 +480,10 @@ given revision if that revision doesn’t exist.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">commit_message<span class="opacity-60">: str = &#39;commit files to HF hub&#39;</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">commit_message<span class="opacity-60">: str = &#39;commit files to HF hub&#39;</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -504,11 +504,11 @@ The message attributed to the commit.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_user<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_email<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_user<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_email<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -533,9 +533,9 @@ The email to register through <code>git</code>.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		</p>
+			
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -551,10 +551,10 @@ The email to register through <code>git</code>.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
+			
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -578,10 +578,10 @@ scheme is the same one as for GitHub or HuggingFace.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
+			
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -604,11 +604,11 @@ scheme is the same one as for GitHub or HuggingFace.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">rebase<span class="opacity-60">: typing.Optional[bool] = False</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">lfs<span class="opacity-60">: typing.Optional[bool] = False</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">rebase<span class="opacity-60">: typing.Optional[bool] = False</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">lfs<span class="opacity-60">: typing.Optional[bool] = False</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -637,12 +637,12 @@ file from the remote repository.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">upstream<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">blocking<span class="opacity-60">: typing.Optional[bool] = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">auto_lfs_prune<span class="opacity-60">: typing.Optional[bool] = False</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">upstream<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">blocking<span class="opacity-60">: typing.Optional[bool] = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">auto_lfs_prune<span class="opacity-60">: typing.Optional[bool] = False</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -680,10 +680,10 @@ process.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
+			
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>str</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -706,10 +706,10 @@ process.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
+			
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -732,9 +732,9 @@ process.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		</p>
+			
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -750,10 +750,10 @@ process.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">recent<span class="opacity-60"> = False</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">recent<span class="opacity-60"> = False</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -777,11 +777,11 @@ for more information.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">patterns<span class="opacity-60">: typing.Union[str, typing.List[str]]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">filename<span class="opacity-60">: typing.Optional[bool] = False</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">patterns<span class="opacity-60">: typing.Union[str, typing.List[str]]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">filename<span class="opacity-60">: typing.Optional[bool] = False</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -809,10 +809,10 @@ filename will be escaped when writing to the <code>.gitattributes</code> file.</
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">patterns<span class="opacity-60">: typing.Union[str, typing.List[str]]</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">patterns<span class="opacity-60">: typing.Union[str, typing.List[str]]</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -833,10 +833,10 @@ The pattern, or list of patterns, to untrack with git-lfs.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
+			
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -861,13 +861,13 @@ index.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">commit_message<span class="opacity-60">: typing.Optional[str] = &#39;commit files to HF hub&#39;</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">blocking<span class="opacity-60">: typing.Optional[bool] = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clean_ok<span class="opacity-60">: typing.Optional[bool] = True</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">auto_lfs_prune<span class="opacity-60">: typing.Optional[bool] = False</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">commit_message<span class="opacity-60">: typing.Optional[str] = &#39;commit files to HF hub&#39;</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">blocking<span class="opacity-60">: typing.Optional[bool] = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clean_ok<span class="opacity-60">: typing.Optional[bool] = True</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">auto_lfs_prune<span class="opacity-60">: typing.Optional[bool] = False</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -905,12 +905,12 @@ HuggingFace Hub. Will automatically track large files (&gt;10MB).</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tag_name<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">remote<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">tag_name<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">remote<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -943,9 +943,9 @@ should be the identifier of the remote.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		</p>
+			
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -966,11 +966,11 @@ been processed.</p></div></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">folder<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">folder<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -999,12 +999,12 @@ otherwise.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">folder<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">remote_url<span class="opacity-60">: str</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">folder<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">remote_url<span class="opacity-60">: str</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1037,11 +1037,11 @@ repository specified, <code>False</code> otherwise.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">filename<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">filename<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1070,11 +1070,11 @@ otherwise.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">filename<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">filename<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1103,12 +1103,12 @@ otherwise.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pattern<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">folder<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">pattern<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">folder<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>List[str]</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1140,11 +1140,11 @@ The folder in which to run the command.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">folder<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">folder<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>bool</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1173,12 +1173,12 @@ The folder in which to run the command.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">folder<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
-			</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">upstream<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span>
-		<span>)</span>
-		<span class="font-bold">→</span>
-			<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">folder<span class="opacity-60">: typing.Union[str, pathlib.Path]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">upstream<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span>
+			<span>)</span>
+			<span class="font-bold">→</span>
+				<span class="rounded hover:bg-gray-400 cursor-pointer"><!-- HTML_TAG_START --><span><code>int</code></span><!-- HTML_TAG_END --></span></p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1221,19 +1221,19 @@ made.</p></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">local_dir<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clone_from<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_type<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str] = True</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_user<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_email<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Optional[str] = None</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_lfs_files<span class="opacity-60">: bool = False</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">client<span class="opacity-60">: typing.Optional[huggingface_hub.hf_api.HfApi] = None</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">local_dir<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">clone_from<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">repo_type<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str] = True</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_user<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">git_email<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Optional[str] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">skip_lfs_files<span class="opacity-60">: bool = False</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">client<span class="opacity-60">: typing.Optional[huggingface_hub.hf_api.HfApi] = None</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1252,9 +1252,9 @@ huggingface.co.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		</p>
+			
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1270,9 +1270,9 @@ huggingface.co.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		</p>
+			
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1288,9 +1288,9 @@ huggingface.co.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		
-		<span>)</span>
-		</p>
+			
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1307,14 +1307,14 @@ been processed.</p></div></div>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-		<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">title<span class="opacity-60">: str</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">is_done_method<span class="opacity-60">: typing.Callable</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">status_method<span class="opacity-60">: typing.Callable</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">process<span class="opacity-60">: Popen</span></span>
-			</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">post_method<span class="opacity-60">: typing.Optional[typing.Callable] = None</span></span>
-			</span>
-		<span>)</span>
-		</p>
+			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">title<span class="opacity-60">: str</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">is_done_method<span class="opacity-60">: typing.Callable</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">status_method<span class="opacity-60">: typing.Callable</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">process<span class="opacity-60">: Popen</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">post_method<span class="opacity-60">: typing.Optional[typing.Callable] = None</span></span>
+				</span>
+			<span>)</span>
+			</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
@@ -1324,10 +1324,10 @@ been processed.</p></div></div>
 <p>Utility to follow commands launched asynchronously.</p></div>
 
 
-		<script type="module" data-hydrate="aleyh8">
-		import { start } from "/docs/huggingface_hub/pr_844/en/_app/start-9adc8a6c.js";
+		<script type="module" data-hydrate="4ztjv0">
+		import { start } from "/docs/huggingface_hub/pr_844/en/_app/start-7465edb3.js";
 		start({
-			target: document.querySelector('[data-hydrate="aleyh8"]').parentNode,
+			target: document.querySelector('[data-hydrate="4ztjv0"]').parentNode,
 			paths: {"base":"/docs/huggingface_hub/pr_844/en","assets":"/docs/huggingface_hub/pr_844/en"},
 			session: {},
 			route: false,
@@ -1338,7 +1338,7 @@ been processed.</p></div></div>
 				error: null,
 				nodes: [
 					import("/docs/huggingface_hub/pr_844/en/_app/pages/__layout.svelte-0e32ccb8.js"),
-						import("/docs/huggingface_hub/pr_844/en/_app/pages/package_reference/repository.mdx-ff24d7ab.js")
+						import("/docs/huggingface_hub/pr_844/en/_app/pages/package_reference/repository.mdx-91acb60c.js")
 				],
 				params: {}
 			}
