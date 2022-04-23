@@ -1,10 +1,10 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پیش‌پردازش با توکِنایزر&quot;},{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;بردار‌های با بُعد بالا؟&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;سَر مدل: درک اعداد درون مدل&quot;}],&quot;title&quot;:&quot;گذر از مدل&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پس‌پردازش خروجی&quot;}],&quot;title&quot;:&quot;پشت صحنه خط‌تولید&quot;}" data-svelte="svelte-1phssyn">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پیش‌پردازش با توکِنایزر&quot;},{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;بردار‌های با بُعد بالا؟&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;سَر مدل: درک اعداد درون مدل&quot;}],&quot;title&quot;:&quot;گذر از مدل&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پس‌پردازش خروجی&quot;}],&quot;title&quot;:&quot;پشت صحنه خط تولید&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/course/pr_139/fa/_app/assets/pages/__layout.svelte-ab5b3a22.css">
-	<link rel="modulepreload" href="/docs/course/pr_139/fa/_app/start-e3e6af21.js">
+	<link rel="modulepreload" href="/docs/course/pr_139/fa/_app/start-25448118.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/fa/_app/chunks/vendor-378cdcd7.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/fa/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/fa/_app/pages/__layout.svelte-3c51a8cf.js">
-	<link rel="modulepreload" href="/docs/course/pr_139/fa/_app/pages/chapter2/2.mdx-e73c1325.js">
+	<link rel="modulepreload" href="/docs/course/pr_139/fa/_app/pages/chapter2/2.mdx-80c5cb78.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/fa/_app/chunks/Youtube-8def75c0.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/fa/_app/chunks/CodeBlock-be794267.js"> 
 
@@ -17,7 +17,7 @@
 		</a><a class="flex justify-center flex-1 py-1.5 px-2.5 focus:outline-none !no-underline rounded-r text-gray-500 filter grayscale" href="?fw=tf"><svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="0.94em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 274"><path d="M145.726 42.065v42.07l72.861 42.07v-42.07l-72.86-42.07zM0 84.135v42.07l36.43 21.03V105.17L0 84.135zm109.291 21.035l-36.43 21.034v126.2l36.43 21.035v-84.135l36.435 21.035v-42.07l-36.435-21.034V105.17z" fill="#E55B2D"></path><path d="M145.726 42.065L36.43 105.17v42.065l72.861-42.065v42.065l36.435-21.03v-84.14zM255.022 63.1l-36.435 21.035v42.07l36.435-21.035V63.1zm-72.865 84.135l-36.43 21.035v42.07l36.43-21.036v-42.07zm-36.43 63.104l-36.436-21.035v84.135l36.435-21.035V210.34z" fill="#ED8E24"></path><path d="M145.726 0L0 84.135l36.43 21.035l109.296-63.105l72.861 42.07L255.022 63.1L145.726 0zm0 126.204l-36.435 21.03l36.435 21.036l36.43-21.035l-36.43-21.03z" fill="#F8BF3C"></path></svg>
 			TensorFlow
 		</a></div>
-<div dir="rtl"><h1 id="">پشت صحنه خط‌تولید</h1>
+<div dir="rtl"><h1 id="">پشت صحنه خط تولید</h1>
 
 
 <div class="flex space-x-1 absolute z-10 right-0 top-0"><a href="https://colab.research.google.com/github/huggingface/notebooks/blob/master/course/chapter2/section2_pt.ipynb" target="_blank"><img alt="Open In Colab" class="!m-0" src="https://colab.research.google.com/assets/colab-badge.svg"></a>
@@ -193,16 +193,16 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 <p>اکنون مشخص است که پیش‌بینی‌های مدل از این قرار هستند:</p>
 <ul><li>جمله اول: NEGATIVE: 0.0402, POSITIVE: 0.9598</li>
 <li>جمله دوم: NEGATIVE: 0.9995, POSITIVE: 0.0005</li></ul>
-<p>ما با موفقیت سه مرحله خط‌تولید را در اینجا نشان دادیم: پیش‌پردازش توسط توکِنایزرها، گذر ورودی‌ها از مدل و پس‌پردازش! حالا کمی زمان می‌گذاریم تا به صورت عمیق‌تر وارد هر‌کدام از این مراحل شویم.</p>
+<p>ما با موفقیت سه مرحله خط تولید را در اینجا نشان دادیم: پیش‌پردازش توسط توکِنایزرها، گذر ورودی‌ها از مدل و پس‌پردازش! حالا کمی زمان می‌گذاریم تا به صورت عمیق‌تر وارد هر‌کدام از این مراحل شویم.</p>
 
 
-<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>خودتان امتحان کنید!</strong> دو(یا بیشتر) نوشته از خودتان را از خط‌تولید <code>sentiment-analysis</code> بگذرانید. سپس مراحلی که در اینجا دیدیم را تکرار کنید و مطمئن شوید همان نتایج را دریافت می کنید!</p></div></div>
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>خودتان امتحان کنید!</strong> دو(یا بیشتر) نوشته از خودتان را از خط تولید <code>sentiment-analysis</code> بگذرانید. سپس مراحلی که در اینجا دیدیم را تکرار کنید و مطمئن شوید همان نتایج را دریافت می کنید!</p></div></div>
 
 
-		<script type="module" data-hydrate="1u8x0sd">
-		import { start } from "/docs/course/pr_139/fa/_app/start-e3e6af21.js";
+		<script type="module" data-hydrate="anse4x">
+		import { start } from "/docs/course/pr_139/fa/_app/start-25448118.js";
 		start({
-			target: document.querySelector('[data-hydrate="1u8x0sd"]').parentNode,
+			target: document.querySelector('[data-hydrate="anse4x"]').parentNode,
 			paths: {"base":"/docs/course/pr_139/fa","assets":"/docs/course/pr_139/fa"},
 			session: {},
 			route: false,
@@ -213,7 +213,7 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 				error: null,
 				nodes: [
 					import("/docs/course/pr_139/fa/_app/pages/__layout.svelte-3c51a8cf.js"),
-						import("/docs/course/pr_139/fa/_app/pages/chapter2/2.mdx-e73c1325.js")
+						import("/docs/course/pr_139/fa/_app/pages/chapter2/2.mdx-80c5cb78.js")
 				],
 				params: {}
 			}
