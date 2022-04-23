@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;imagegpt&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.ImageGPTConfig&quot;,&quot;title&quot;:&quot;ImageGPTConfig&quot;},{&quot;local&quot;:&quot;transformers.ImageGPTFeatureExtractor&quot;,&quot;title&quot;:&quot;ImageGPTFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.ImageGPTModel&quot;,&quot;title&quot;:&quot;ImageGPTModel&quot;},{&quot;local&quot;:&quot;transformers.ImageGPTForCausalImageModeling&quot;,&quot;title&quot;:&quot;ImageGPTForCausalImageModeling&quot;},{&quot;local&quot;:&quot;transformers.ImageGPTForImageClassification&quot;,&quot;title&quot;:&quot;ImageGPTForImageClassification&quot;}],&quot;title&quot;:&quot;ImageGPT&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/transformers/pr_16782/en/_app/assets/pages/__layout.svelte-efd23bfe.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16782/en/_app/start-b0d5fea3.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16782/en/_app/start-b13adfcb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16782/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16782/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16782/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16782/en/_app/pages/model_doc/imagegpt.mdx-abfa0eef.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16782/en/_app/pages/model_doc/imagegpt.mdx-6dbc38b8.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16782/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16782/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16782/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -342,8 +342,7 @@ If set, will return tensors of a particular framework. Acceptable values are:</p
   href="/docs/transformers/pr_16782/en/main_classes/feature_extractor#transformers.BatchFeature"
 >BatchFeature</a> with the following fields:</p>
 <ul>
-<li><strong>pixel_values</strong> — Pixel values to be fed to a model, of shape (batch_size, num_channels, height,
-width).</li>
+<li><strong>input_ids</strong> — Input IDs to be fed to a model, of shape <code>(batch_size, height * width)</code>.</li>
 </ul>
 <!-- HTML_TAG_END --></p></div></div>
 <p>Main method to prepare for the model one or several image(s).</p>
@@ -1015,10 +1014,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="1v74a3a">
-		import { start } from "/docs/transformers/pr_16782/en/_app/start-b0d5fea3.js";
+		<script type="module" data-hydrate="uu7g5c">
+		import { start } from "/docs/transformers/pr_16782/en/_app/start-b13adfcb.js";
 		start({
-			target: document.querySelector('[data-hydrate="1v74a3a"]').parentNode,
+			target: document.querySelector('[data-hydrate="uu7g5c"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16782/en","assets":"/docs/transformers/pr_16782/en"},
 			session: {},
 			route: false,
@@ -1029,7 +1028,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16782/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16782/en/_app/pages/model_doc/imagegpt.mdx-abfa0eef.js")
+						import("/docs/transformers/pr_16782/en/_app/pages/model_doc/imagegpt.mdx-6dbc38b8.js")
 				],
 				params: {}
 			}
