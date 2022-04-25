@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;روش‌های مختلف بارگذاری&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;روش‌های ذخیره‌سازی&quot;}],&quot;title&quot;:&quot;ساخت ترنسفورمر&quot;},{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;استفاده از تِنسور‌ها به عنوان ورودی مدل&quot;}],&quot;title&quot;:&quot;اجرای یک مدل ترنسفورمر&quot;}],&quot;title&quot;:&quot;مدل‌ها&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="stylesheet" href="/docs/course/pr_140/fa/_app/assets/pages/__layout.svelte-ab5b3a22.css">
-	<link rel="modulepreload" href="/docs/course/pr_140/fa/_app/start-a1511e3f.js">
+	<link rel="modulepreload" href="/docs/course/pr_140/fa/_app/start-f71044ae.js">
 	<link rel="modulepreload" href="/docs/course/pr_140/fa/_app/chunks/vendor-378cdcd7.js">
 	<link rel="modulepreload" href="/docs/course/pr_140/fa/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_140/fa/_app/pages/__layout.svelte-3c51a8cf.js">
-	<link rel="modulepreload" href="/docs/course/pr_140/fa/_app/pages/chapter2/3.mdx-38d4a33d.js">
+	<link rel="modulepreload" href="/docs/course/pr_140/fa/_app/pages/chapter2/3.mdx-031dee29.js">
 	<link rel="modulepreload" href="/docs/course/pr_140/fa/_app/chunks/Youtube-8def75c0.js">
 	<link rel="modulepreload" href="/docs/course/pr_140/fa/_app/chunks/CodeBlock-be794267.js">
 	<link rel="modulepreload" href="/docs/course/pr_140/fa/_app/chunks/FrameworkSwitchCourse-f6c48952.js"> 
@@ -79,7 +79,7 @@ model = BertModel(config)
 model = BertModel.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)<!-- HTML_TAG_END --></pre></div></div>
 <p>همان طور که قبلا دیدید، می‌توانیم کلاس <code>BertModel</code> را با کلاس معادل <code>AutoModel</code> جایگزین کنیم. از این پس همین کار را خواهیم کرد چون به این صورت کد وابسته به نقطه تعلیم خاصی نخواهد بود. اگر کد شما با یک نقطه تعلیم اجرا می‌شود، بدون تغییر با نقاط تعلیم دیگر هم اجرا خواهد شد. این حتی در مورد معماری‌های متفاوت هم صدق می‌کند، البته در صورتی که نقطه تعلیم متعلق به مسئله مشابهی(برای مثال تحلیل احساسات) باشد. </p>
 <p>در کد نمونه بالا، کلاس <code>BertConfig</code> را به کار نبرده و در عوض از مدلی از پیش تعلیم دیده با شناسه <code>bert-base-cased</code> استفاده کردیم؛ نقطه تعلیم مدلی که توسط خود مؤلفان مدل BERT تعلیم دیده است. اطلاعات بیشتر در مورد این نقطه تعلیم را می‌توانید در <a href="https://huggingface.co/bert-base-cased" rel="nofollow">صفحه توضیحات</a> آن ببینید.</p>
-<p>این مدل اکنون با وزن‌های نقطه تعلیم پر شده است و می‌توان آن را مستقیماً برای مسائلی که برای آن تعلیم دیده به کار برد یا برای مسئله جدیدی کوک کرد. با تعلیم روی وزن‌های از پیش تعلیم دیده، به جای تعلیم از صفر، می توانیم به سرعت به نتایج خوبی دست پیدا کنیم.</p>
+<p>این مدل اکنون با وزن‌های نقطه تعلیم پر شده است و می‌توان آن را مستقیماً برای مسائلی که برای آن تعلیم دیده به کار برد یا برای مسئله جدیدی کوک کرد. با تعلیم روی وزن‌های از پیش تعلیم دیده، به جای تعلیم از صفر، می‌توانیم به سرعت به نتایج خوبی دست پیدا کنیم.</p>
 <p>این وزن‌ها دانلود و در پوشه‌ای مخصوص انبار شده‌اند، تا اجرای تابع <code>from_pretrained()</code> در آینده مسبب دانلود دوباره‌اشان نباشد. این پوشه به صورت پیش‌فرض در آدرس <em>~/.cache/huggingface/transformers</em> قرار دارد. شما می‌توانید با تخصیص مقدار به متغیر محیطی <code>HF_HOME</code> مکان این پوشه را تغییر دهید.</p>
 <p>شناسه هر مدلی در هاب مدل‌ها را می‌توانید برای بارگذاری استفاده کنید. البته در صورتی که آن مدل با معماری BERT سازگاری داشته باشد. فهرست کامل تمام نقاط تعلیم سازگار با BERT را <a href="https://huggingface.co/models?filter=bert" rel="nofollow">اینجا مشاهده کنید</a>.</p>
 <h3 id="">روش‌های ذخیره‌سازی</h3>
@@ -98,7 +98,7 @@ model = BertModel.from_pretrained(<span class="hljs-string">&quot;bert-base-case
 <p>اگر نگاهی به فایل <em>config.json</em> بیاندازید، با ویژگی‌های آشنای مورد نیاز برای ساختن معماری مدل روبرو خواهید شد. این فایل حاوی مقادیری متادیتا، مانند نقطه مادر این نقطه تعلیم و نسخه‌‌ کتابخانه ترنسفورمرهای هاگینگ‌فِیس که آخرین بار برای ذخیره‌سازی این نقطه به کار رفته است، می‌باشد.</p>
 <p>فایل <em>pytorch_model.bin</em> در واقع <em>دیکشنری وضعیت‌ها</em> است و حاوی تمام وزن‌های مدل شماست. این دو فایل به همراه هم کاربرد دارند؛ فایل تنظیمات برای دانستن معماری به کار رفته در مدل ضروری است و پارامترهای مدل هم که همان وزن‌های داخل فایل دوم هستند.</p>
 <h2 id="">اجرای یک مدل ترنسفورمر</h2>
-<p>حالا که می‌دانید چگونه مدل‌ها را ذخیره‌سازی و بارگذاری کنید، می توانیم آنها را برای پیش‌بینی به کار بگیریم. مدل‌های ترنسفورمر فقط می‌توانند اعداد را پردازش کنند؛ اعدادی که توکِنایزر تولید نموده است. ولی پیش از آن که سراغ بحث توکِنایزرها برویم، ورودی‌های قابل قبول برای مدل‌ها را بررسی می‌کنیم.</p>
+<p>حالا که می‌دانید چگونه مدل‌ها را ذخیره‌سازی و بارگذاری کنید، می‌توانیم آنها را برای پیش‌بینی به کار بگیریم. مدل‌های ترنسفورمر فقط می‌توانند اعداد را پردازش کنند؛ اعدادی که توکِنایزر تولید نموده است. ولی پیش از آن که سراغ بحث توکِنایزرها برویم، ورودی‌های قابل قبول برای مدل‌ها را بررسی می‌کنیم.</p>
 <p>توکِنایزرها می‌توانند ورودی‌ها را به تِنسورهای مخصوص هر فریمورک تبدیل کنند ولی برای آنکه درست متوجه آنچه اتفاق می‌افتد شویم، نگاهی کوتاه به کارهایی که باید قبل از فرستادن ورودی‌ها به مدل انجام شود می‌اندازیم.</p>
 <p>تصور کنید چند جمله به این صورت داریم:</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -130,10 +130,10 @@ model_inputs = torch.tensor(encoded_sequences)<!-- HTML_TAG_END --></pre></div><
 <p>این تابع آرگومان‌های بسیاری را می‌پذیرد ولی تنها شناسه‌های ورودی ضروری هستند. کاربرد آرگومان‌های دیگر و شرایط ضرورت آنها را بعد توضیح خواهیم داد. ولی ابتدا باید نگاهی نزدیک‌تر به توکِنایزرهایی که ورودی‌های قابل فهم مدل‌های ترنسفورمر را می‌سازند، بیاندازیم.</p></div>
 
 
-		<script type="module" data-hydrate="6fhsl2">
-		import { start } from "/docs/course/pr_140/fa/_app/start-a1511e3f.js";
+		<script type="module" data-hydrate="1xeuy9i">
+		import { start } from "/docs/course/pr_140/fa/_app/start-f71044ae.js";
 		start({
-			target: document.querySelector('[data-hydrate="6fhsl2"]').parentNode,
+			target: document.querySelector('[data-hydrate="1xeuy9i"]').parentNode,
 			paths: {"base":"/docs/course/pr_140/fa","assets":"/docs/course/pr_140/fa"},
 			session: {},
 			route: false,
@@ -144,7 +144,7 @@ model_inputs = torch.tensor(encoded_sequences)<!-- HTML_TAG_END --></pre></div><
 				error: null,
 				nodes: [
 					import("/docs/course/pr_140/fa/_app/pages/__layout.svelte-3c51a8cf.js"),
-						import("/docs/course/pr_140/fa/_app/pages/chapter2/3.mdx-38d4a33d.js")
+						import("/docs/course/pr_140/fa/_app/pages/chapter2/3.mdx-031dee29.js")
 				],
 				params: {}
 			}
