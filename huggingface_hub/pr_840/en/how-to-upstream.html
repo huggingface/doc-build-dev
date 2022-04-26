@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;upload-files-to-the-hub&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;commit-context-manager&quot;,&quot;title&quot;:&quot;commit context manager&quot;},{&quot;local&quot;:&quot;pushtohub&quot;,&quot;title&quot;:&quot;push_to_hub&quot;},{&quot;local&quot;:&quot;upload-with-git-lfs&quot;,&quot;title&quot;:&quot;Upload with Git LFS&quot;}],&quot;title&quot;:&quot;Upload files to the Hub&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/huggingface_hub/pr_840/en/_app/assets/pages/__layout.svelte-2453514a.css">
-	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/start-968b8234.js">
+	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/assets/pages/__layout.svelte-8197f58c.css">
+	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/start-57187791.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/chunks/vendor-d3924577.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/pages/__layout.svelte-0e32ccb8.js">
-	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/pages/how-to-upstream.mdx-32339aca.js">
+	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/pages/how-to-upstream.mdx-9405707e.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/chunks/IconCopyLink-f94c3d80.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/chunks/CodeBlock-ff545b14.js"> 
 
@@ -16,7 +16,7 @@
 	<span>Upload files to the Hub
 	</span></h1>
 
-<p>Sharing your files and work is a very important aspect of the Hub. The <code>huggingface_hub</code> uses a Git-based workflow to upload files to the Hub. You can use these functions independently or integrate them into your own library so it is more convenient for your users to interact with the Hub. This guide will show you how to:</p>
+<p>Sharing your files and work is a very important aspect of the Hub. The <code>huggingface_hub</code> uses a Git-based workflow to upload files to the Hub. You can use these functions independently or integrate them into your own library, making it more convenient for your users to interact with the Hub. This guide will show you how to:</p>
 <ul><li>Push files with a <code>commit</code> context manager.</li>
 <li>Push files with the <a href="/docs/huggingface_hub/pr_840/en/package_reference/repository#huggingface_hub.Repository.push_to_hub">push_to_hub()</a> function.</li>
 <li>Upload very large files with <a href="https://git-lfs.github.com/" rel="nofollow">Git LFS</a>.</li></ul>
@@ -48,7 +48,8 @@
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">with</span> Repository(local_dir=<span class="hljs-string">&quot;text-files&quot;</span>, clone_from=<span class="hljs-string">&quot;&lt;user&gt;/text-files&quot;</span>).commit(commit_message=<span class="hljs-string">&quot;My first file :)&quot;</span>):
+	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> Repository
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">with</span> Repository(local_dir=<span class="hljs-string">&quot;text-files&quot;</span>, clone_from=<span class="hljs-string">&quot;&lt;user&gt;/text-files&quot;</span>).commit(commit_message=<span class="hljs-string">&quot;My first file :)&quot;</span>):
 <span class="hljs-meta">... </span>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;file.txt&quot;</span>, <span class="hljs-string">&quot;w+&quot;</span>) <span class="hljs-keyword">as</span> f:
 <span class="hljs-meta">... </span>        f.write(json.dumps({<span class="hljs-string">&quot;hey&quot;</span>: <span class="hljs-number">8</span>}))<!-- HTML_TAG_END --></pre></div>
 <p>Here is another example of how to save and upload a file to a repository:</p>
@@ -72,11 +73,17 @@
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>last_command = repo.command_queue[-<span class="hljs-number">1</span>]
-<span class="hljs-meta">&gt;&gt;&gt; </span>last_command.status
-<span class="hljs-comment"># -&gt; -1 indicates the push is ongoing.</span>
-<span class="hljs-comment"># -&gt; 0 indicates the push has completed successfully.</span>
-<span class="hljs-comment"># -&gt; Non-zero code indicates the error code if there was an error.</span><!-- HTML_TAG_END --></pre></div>
-<p>When <code>blocking=False</code>, commands are tracked, and your script will only exit when all pushes are completed even if other errors occur in your script. Some additional useful commands for checking the status of a push include:</p>
+<span class="hljs-meta">&gt;&gt;&gt; </span>last_command.status<!-- HTML_TAG_END --></pre></div>
+<p>Refer to the table below for the possible statuses:</p>
+<table><thead><tr><th>Status</th>
+<th>Description</th></tr></thead>
+<tbody><tr><td>-1</td>
+<td>The push is ongoing.</td></tr>
+<tr><td>0</td>
+<td>The push has completed successfully.</td></tr>
+<tr><td>Non-zero</td>
+<td>An error has occurred.</td></tr></tbody></table>
+<p>When <code>blocking=False</code>, commands are tracked, and your script will only exit when all pushes are completed, even if other errors occur in your script. Some additional useful commands for checking the status of a push include:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -98,16 +105,17 @@
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>repo.git_pull()
+	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> Repository
+<span class="hljs-meta">&gt;&gt;&gt; </span>repo.git_pull()
 <span class="hljs-meta">&gt;&gt;&gt; </span>repo.push_to_hub(commit_message=<span class="hljs-string">&quot;Commit my-awesome-file to the Hub&quot;</span>)<!-- HTML_TAG_END --></pre></div>
-<p>However, if you aren’t ready to push a file yet, you can still use <code>git_add</code> and <code>git_commit</code> to add and commit your file:</p>
+<p>However, if you aren’t ready to push a file yet, you can still use <a href="/docs/huggingface_hub/pr_840/en/package_reference/repository#huggingface_hub.Repository.git_add">git_add()</a> and <a href="/docs/huggingface_hub/pr_840/en/package_reference/repository#huggingface_hub.Repository.git_commit">git_commit()</a> to add and commit your file:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>repo.git_add(<span class="hljs-string">&quot;path/to/file&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>repo.git_commit(commit_message=<span class="hljs-string">&quot;add my first model config file :)&quot;</span>)<!-- HTML_TAG_END --></pre></div>
-<p>Once you’re ready, you can push your file to your repository with <code>git_push</code>:</p>
+<p>Once you’re ready, you can push your file to your repository with <a href="/docs/huggingface_hub/pr_840/en/package_reference/repository#huggingface_hub.Repository.git_push">git_push()</a>:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -126,10 +134,10 @@
 <p>You should install this for each model repository that contains a model file. Once installed, you are now able to push files larger than 5GB.</p>
 
 
-		<script type="module" data-hydrate="1yj6bes">
-		import { start } from "/docs/huggingface_hub/pr_840/en/_app/start-968b8234.js";
+		<script type="module" data-hydrate="1us1uey">
+		import { start } from "/docs/huggingface_hub/pr_840/en/_app/start-57187791.js";
 		start({
-			target: document.querySelector('[data-hydrate="1yj6bes"]').parentNode,
+			target: document.querySelector('[data-hydrate="1us1uey"]').parentNode,
 			paths: {"base":"/docs/huggingface_hub/pr_840/en","assets":"/docs/huggingface_hub/pr_840/en"},
 			session: {},
 			route: false,
@@ -140,7 +148,7 @@
 				error: null,
 				nodes: [
 					import("/docs/huggingface_hub/pr_840/en/_app/pages/__layout.svelte-0e32ccb8.js"),
-						import("/docs/huggingface_hub/pr_840/en/_app/pages/how-to-upstream.mdx-32339aca.js")
+						import("/docs/huggingface_hub/pr_840/en/_app/pages/how-to-upstream.mdx-9405707e.js")
 				],
 				params: {}
 			}

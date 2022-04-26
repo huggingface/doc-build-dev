@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;download-files-from-the-hub&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;choose-a-file-to-download&quot;,&quot;title&quot;:&quot;Choose a file to download&quot;},{&quot;local&quot;:&quot;download-and-store-a-file&quot;,&quot;title&quot;:&quot;Download and store a file&quot;},{&quot;local&quot;:&quot;download-an-entire-repository&quot;,&quot;title&quot;:&quot;Download an entire repository&quot;}],&quot;title&quot;:&quot;Download files from the Hub&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/huggingface_hub/pr_840/en/_app/assets/pages/__layout.svelte-2453514a.css">
-	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/start-968b8234.js">
+	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/assets/pages/__layout.svelte-8197f58c.css">
+	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/start-57187791.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/chunks/vendor-d3924577.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/pages/__layout.svelte-0e32ccb8.js">
-	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/pages/how-to-downstream.mdx-54ba8039.js">
+	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/pages/how-to-downstream.mdx-bccfd6bb.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/chunks/IconCopyLink-f94c3d80.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_840/en/_app/chunks/CodeBlock-ff545b14.js"> 
 
@@ -16,7 +16,10 @@
 	<span>Download files from the Hub
 	</span></h1>
 
-<p>The <code>huggingface_hub</code> library provides functions to download files from the repositories stored on the Hub. You can use these functions independently or integrate them into your own library so it is more convenient for your users to interact with the Hub. This guide will show you how to:</p>
+<p>The <code>huggingface_hub</code> library provides functions to download files from the repositories
+stored on the Hub. You can use these functions independently or integrate them into your
+own library, making it more convenient for your users to interact with the Hub. This
+guide will show you how to:</p>
 <ul><li>Specify a file to download from the Hub.</li>
 <li>Download and cache a file on your disk.</li>
 <li>Download all the files in a repository.</li></ul>
@@ -24,7 +27,8 @@
 	<span>Choose a file to download
 	</span></h2>
 
-<p>Use the <code>filename</code> parameter in the <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.hf_hub_url">hf_hub_url()</a> function to retrieve the URL of a specific file to download:</p>
+<p>Use the <code>filename</code> parameter in the <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.hf_hub_url">hf_hub_url()</a> function to retrieve the URL of a
+specific file to download:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -33,20 +37,26 @@
 <span class="hljs-meta">&gt;&gt;&gt; </span>hf_hub_url(repo_id=<span class="hljs-string">&quot;lysandre/arxiv-nlp&quot;</span>, filename=<span class="hljs-string">&quot;config.json&quot;</span>)
 <span class="hljs-string">&#x27;https://huggingface.co/lysandre/arxiv-nlp/resolve/main/config.json&#x27;</span><!-- HTML_TAG_END --></pre></div>
 <p><img src="/docs/assets/hub/repo.png" alt="/docs/assets/hub/repo.png"></p>
-<p>Specify a particular file version by providing the file revision, which can be a branch, a tag, or a commit hash. When using the commit hash, it must be the full-length hash instead of a 7-character commit hash:</p>
+<p>Specify a particular file version by providing the file revision, which can be the
+branch name, a tag, or a commit hash. When using the commit hash, it must be the
+full-length hash instead of a 7-character commit hash:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>hf_hub_url(repo_id=<span class="hljs-string">&quot;lysandre/arxiv-nlp&quot;</span>, filename=<span class="hljs-string">&quot;config.json&quot;</span>, revision=<span class="hljs-string">&quot;877b84a8f93f2d619faa2a6e514a32beef88ab0a&quot;</span>)
+	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>hf_hub_url(repo_id=<span class="hljs-string">&quot;lysandre/arxiv-nlp&quot;</span>, 
+<span class="hljs-meta">... </span>           filename=<span class="hljs-string">&quot;config.json&quot;</span>, 
+<span class="hljs-meta">... </span>           revision=<span class="hljs-string">&quot;877b84a8f93f2d619faa2a6e514a32beef88ab0a&quot;</span>,
+<span class="hljs-meta">... </span>)
 <span class="hljs-string">&#x27;https://huggingface.co/lysandre/arxiv-nlp/resolve/877b84a8f93f2d619faa2a6e514a32beef88ab0a/config.json&#x27;</span><!-- HTML_TAG_END --></pre></div>
-<p><a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.hf_hub_url">hf_hub_url()</a> can also use the branch name to specify a file revision:</p>
+<p>To specify a file revision with the branch name:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>hf_hub_url(repo_id=<span class="hljs-string">&quot;lysandre/arxiv-nlp&quot;</span>, filename=<span class="hljs-string">&quot;config.json&quot;</span>, revision=<span class="hljs-string">&quot;main&quot;</span>)<!-- HTML_TAG_END --></pre></div>
-<p>You can also specify a file revision with a tag identifier. For example, if you want <code>v1.0</code> of the <code>config.json</code> file:</p>
+<p>To specify a file revision with a tag identifier. For example, if you want <code>v1.0</code> of the
+<code>config.json</code> file:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -56,8 +66,13 @@
 	<span>Download and store a file
 	</span></h2>
 
-<p><a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a> is used to download and cache a file on your local disk. Once a file is stored in your cache, you don’t have to redownload the file the next time you use it. <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a> is a hands-free solution for staying up to date with new file versions. When a downloaded file is updated in the remote repository, <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a> will automatically download and store it.</p>
-<p>Begin by retrieving your file URL with <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.hf_hub_url">hf_hub_url()</a>, and then pass the specified URL to <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a> to download the file:</p>
+<p><a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a> is used to download and cache a file on your local disk. Once a file
+is stored in your cache, you don’t have to redownload it the next time you use it.
+<a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a> is a hands-free solution for staying up to date with new file
+versions. When a downloaded file is updated in the remote repository,
+<a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a> will automatically download and store it.</p>
+<p>Begin by retrieving the file URL with <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.hf_hub_url">hf_hub_url()</a>, and then pass the specified URL to
+<a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a> to download the file:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -66,7 +81,9 @@
 <span class="hljs-meta">&gt;&gt;&gt; </span>config_file_url = hf_hub_url(<span class="hljs-string">&quot;lysandre/arxiv-nlp&quot;</span>, filename=<span class="hljs-string">&quot;config.json&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>cached_download(config_file_url)
 <span class="hljs-string">&#x27;/home/lysandre/.cache/huggingface/hub/bc0e8cc2f8271b322304e8bb84b3b7580701d53a335ab2d75da19c249e2eeebb.066dae6fdb1e2b8cce60c35cc0f78ed1451d9b341c78de19f3ad469d10a8cbb1&#x27;</span><!-- HTML_TAG_END --></pre></div>
-<p><a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.hf_hub_url">hf_hub_url()</a> and <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a> work hand-in-hand to download a file. This is precisely how <code>hf_hub_download</code> from the tutorial works! <code>hf_hub_download</code> is simply a wrapper that calls both <code>hf_hub_url</code> and <code>cached_download</code>.</p>
+<p><a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.hf_hub_url">hf_hub_url()</a> and <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a> work hand-in-hand to download a file. This is
+such a standard workflow that <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.hf_hub_download">hf_hub_download()</a> is a wrapper that calls both of these
+functions.</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -77,7 +94,9 @@
 	<span>Download an entire repository
 	</span></h2>
 
-<p><a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a> downloads an entire repository at a given revision. Like <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a>, all downloaded files are cached on your local disk. However, even if only a single file is updated, the entire repository will be redownloaded.</p>
+<p><a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a> downloads an entire repository at a given revision. Like
+<a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.cached_download">cached_download()</a>, all downloaded files are cached on your local disk. However, even
+if only a single file is updated, the entire repository will be redownloaded.</p>
 <p>Download a whole repository as shown in the following:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -86,19 +105,25 @@
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> snapshot_download
 <span class="hljs-meta">&gt;&gt;&gt; </span>snapshot_download(repo_id=<span class="hljs-string">&quot;lysandre/arxiv-nlp&quot;</span>)
 <span class="hljs-string">&#x27;/home/lysandre/.cache/huggingface/hub/lysandre__arxiv-nlp.894a9adde21d9a3e3843e6d5aeaaf01875c7fade&#x27;</span><!-- HTML_TAG_END --></pre></div>
-<p><a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a> downloads the latest revision by default. If you want a specific repository revision, use the <code>revision</code> parameter:</p>
+<p><a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a> downloads the latest revision by default. If you want a specific
+repository revision, use the <code>revision</code> parameter:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> snapshot_download
 <span class="hljs-meta">&gt;&gt;&gt; </span>snapshot_download(repo_id=<span class="hljs-string">&quot;lysandre/arxiv-nlp&quot;</span>, revision=<span class="hljs-string">&quot;main&quot;</span>)<!-- HTML_TAG_END --></pre></div>
-<p>In general, it is usually better to download files with <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.hf_hub_download">hf_hub_download()</a> - if you already know the file name - to avoid re-downloading an entire repository. <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a> is helpful when you are unaware of which files need to be downloaded.</p>
-<p>However, you don’t want to always download the contents of an entire repository with <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a>. Even if you don’t know the file name, you can download specific files if you know the file type with <code>allow_regex</code> and <code>ignore_regex</code>.
-Use the <code>allow_regex</code> and <code>ignore_regex</code> arguments to specify
-which files to download.
-These parameters accept either a single regex or a list of regexes. </p>
-<p>The regex matching is based on <a href="https://docs.python.org/3/library/fnmatch.html" rel="nofollow"><code>fnmatch</code></a> which means it provides support for Unix shell-style wildcards.</p>
+<p>In general, it is usually better to download files with <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.hf_hub_download">hf_hub_download()</a> - if you
+already know the file name - to avoid redownloading an entire repository.
+<a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a> is helpful when you are unaware of which files to download.</p>
+<p>However, you don’t always want to download the contents of an entire repository with
+<a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a>. Even if you don’t know the file name, you can download specific
+files if you know the file type with <code>allow_regex</code> and <code>ignore_regex</code>. Use the
+<code>allow_regex</code> and <code>ignore_regex</code> arguments to specify which files to download. These
+parameters accept either a single regex or a list of regexes. </p>
+<p>The regex matching is based on
+<a href="https://docs.python.org/3/library/fnmatch.html" rel="nofollow"><code>fnmatch</code></a>, which provides support for
+Unix shell-style wildcards.</p>
 <p>For example, you can use <code>allow_regex</code> to only download JSON configuration files:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -106,24 +131,25 @@ These parameters accept either a single regex or a list of regexes. </p>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> snapshot_download
 <span class="hljs-meta">&gt;&gt;&gt; </span>snapshot_download(repo_id=<span class="hljs-string">&quot;lysandre/arxiv-nlp&quot;</span>, allow_regex=<span class="hljs-string">&quot;*.json&quot;</span>)<!-- HTML_TAG_END --></pre></div>
-<p>On the other hand, <code>ignore_regex</code> can be used to exclude certain files from being downloaded. The following example ignores the <code>.msgpack</code> and <code>.h5</code> file extensions:</p>
+<p>On the other hand, <code>ignore_regex</code> can exclude certain files from being downloaded. The
+following example ignores the <code>.msgpack</code> and <code>.h5</code> file extensions:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> snapshot_download
 <span class="hljs-meta">&gt;&gt;&gt; </span>snapshot_download(repo_id=<span class="hljs-string">&quot;lysandre/arxiv-nlp&quot;</span>, ignore_regex=[<span class="hljs-string">&quot;*.msgpack&quot;</span>, <span class="hljs-string">&quot;*.h5&quot;</span>])<!-- HTML_TAG_END --></pre></div>
-<p>Passing a regex can be especially useful when repositories contain files that
-are never expected to be downloaded by <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a>.</p>
+<p>Passing a regex can be especially useful when repositories contain files that are never
+expected to be downloaded by <a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a>.</p>
 <p>Note that passing <code>allow_regex</code> or <code>ignore_regex</code> does <strong>not</strong> prevent
-<a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a> from re-downloading the entire model repository if an ignored
-file is changed.</p>
+<a href="/docs/huggingface_hub/pr_840/en/package_reference/file_download#huggingface_hub.snapshot_download">snapshot_download()</a> from redownloading the entire model repository if an ignored file
+is changed.</p>
 
 
-		<script type="module" data-hydrate="1h7ausg">
-		import { start } from "/docs/huggingface_hub/pr_840/en/_app/start-968b8234.js";
+		<script type="module" data-hydrate="5hiftg">
+		import { start } from "/docs/huggingface_hub/pr_840/en/_app/start-57187791.js";
 		start({
-			target: document.querySelector('[data-hydrate="1h7ausg"]').parentNode,
+			target: document.querySelector('[data-hydrate="5hiftg"]').parentNode,
 			paths: {"base":"/docs/huggingface_hub/pr_840/en","assets":"/docs/huggingface_hub/pr_840/en"},
 			session: {},
 			route: false,
@@ -134,7 +160,7 @@ file is changed.</p>
 				error: null,
 				nodes: [
 					import("/docs/huggingface_hub/pr_840/en/_app/pages/__layout.svelte-0e32ccb8.js"),
-						import("/docs/huggingface_hub/pr_840/en/_app/pages/how-to-downstream.mdx-54ba8039.js")
+						import("/docs/huggingface_hub/pr_840/en/_app/pages/how-to-downstream.mdx-bccfd6bb.js")
 				],
 				params: {}
 			}
