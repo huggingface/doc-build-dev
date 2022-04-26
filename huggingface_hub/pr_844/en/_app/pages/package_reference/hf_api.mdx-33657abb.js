@@ -333,7 +333,7 @@ space, <code>None</code> or <code>&quot;model&quot;</code> if uploading to a mod
 <code>None</code>.`,name:"repo_type"},{anchor:"huggingface_hub.HfApi.create_repo.exist_ok",description:`<strong>exist_ok</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 If <code>True</code>, do not raise an error if repo already exists.`,name:"exist_ok"},{anchor:"huggingface_hub.HfApi.create_repo.space_sdk",description:`<strong>space_sdk</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 Choice of SDK to use if repo_type is &#x201C;space&#x201D;. Can be
-&#x201C;streamlit&#x201D;, &#x201C;gradio&#x201D;, or &#x201C;static&#x201D;.`,name:"space_sdk"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1369",returnDescription:`
+&#x201C;streamlit&#x201D;, &#x201C;gradio&#x201D;, or &#x201C;static&#x201D;.`,name:"space_sdk"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1370",returnDescription:`
 <p>URL to the newly created repo.</p>
 `,returnType:`
 <p><code>str</code></p>
@@ -343,7 +343,7 @@ by a <code>/</code>.`,name:"repo_id"},{anchor:"huggingface_hub.HfApi.dataset_inf
 The revision of the dataset repository from which to get the
 information.`,name:"revision"},{anchor:"huggingface_hub.HfApi.dataset_info.token",description:`<strong>token</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 An authentication token (See <a href="https://huggingface.co/settings/token" rel="nofollow">https://huggingface.co/settings/token</a>)`,name:"token"},{anchor:"huggingface_hub.HfApi.dataset_info.timeout",description:`<strong>timeout</strong> (<code>float</code>, <em>optional</em>) &#x2014;
-Whether to set a timeout for the request to the Hub.`,name:"timeout"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1198",returnDescription:`
+Whether to set a timeout for the request to the Hub.`,name:"timeout"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1199",returnDescription:`
 <p>The dataset repository information.</p>
 `,returnType:`
 <p><code>DatasetInfo</code></p>
@@ -357,7 +357,7 @@ default to the stored token.`,name:"token"},{anchor:"huggingface_hub.HfApi.delet
 Set to <code>&quot;dataset&quot;</code> or <code>&quot;space&quot;</code> if the file is in a dataset or
 space, <code>None</code> or <code>&quot;model&quot;</code> if in a model. Default is <code>None</code>.`,name:"repo_type"},{anchor:"huggingface_hub.HfApi.delete_file.revision",description:`<strong>revision</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 The git revision to commit from. Defaults to the head of the
-<code>&quot;main&quot;</code> branch.`,name:"revision"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1866"}}),_e=new Qa({props:{$$slots:{default:[Yr]},$$scope:{ctx:P}}}),st=new N({props:{name:"delete_repo",anchor:"huggingface_hub.HfApi.delete_repo",parameters:[{name:"repo_id",val:": str = None"},{name:"token",val:": typing.Optional[str] = None"},{name:"organization",val:": typing.Optional[str] = None"},{name:"repo_type",val:": typing.Optional[str] = None"},{name:"name",val:": str = None"}],parametersDescription:[{anchor:"huggingface_hub.HfApi.delete_repo.repo_id",description:`<strong>repo_id</strong> (<code>str</code>) &#x2014;
+<code>&quot;main&quot;</code> branch.`,name:"revision"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1871"}}),_e=new Qa({props:{$$slots:{default:[Yr]},$$scope:{ctx:P}}}),st=new N({props:{name:"delete_repo",anchor:"huggingface_hub.HfApi.delete_repo",parameters:[{name:"repo_id",val:": str = None"},{name:"token",val:": typing.Optional[str] = None"},{name:"organization",val:": typing.Optional[str] = None"},{name:"repo_type",val:": typing.Optional[str] = None"},{name:"name",val:": str = None"}],parametersDescription:[{anchor:"huggingface_hub.HfApi.delete_repo.repo_id",description:`<strong>repo_id</strong> (<code>str</code>) &#x2014;
 A namespace (user or an organization) and a repo name separated
 by a <code>/</code>.</p>
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400">
@@ -367,11 +367,11 @@ by a <code>/</code>.</p>
 					</div>`,name:"repo_id"},{anchor:"huggingface_hub.HfApi.delete_repo.token",description:`<strong>token</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 An authentication token (See <a href="https://huggingface.co/settings/token" rel="nofollow">https://huggingface.co/settings/token</a>)`,name:"token"},{anchor:"huggingface_hub.HfApi.delete_repo.repo_type",description:`<strong>repo_type</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 Set to <code>&quot;dataset&quot;</code> or <code>&quot;space&quot;</code> if uploading to a dataset or
-space, <code>None</code> or <code>&quot;model&quot;</code> if uploading to a model.`,name:"repo_type"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1499"}}),rt=new N({props:{name:"get_dataset_tags",anchor:"huggingface_hub.HfApi.get_dataset_tags",parameters:[],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L750"}}),it=new N({props:{name:"get_full_repo_name",anchor:"huggingface_hub.HfApi.get_full_repo_name",parameters:[{name:"model_id",val:": str"},{name:"organization",val:": typing.Optional[str] = None"},{name:"token",val:": typing.Optional[str] = None"}],parametersDescription:[{anchor:"huggingface_hub.HfApi.get_full_repo_name.model_id",description:`<strong>model_id</strong> (<code>str</code>) &#x2014;
+space, <code>None</code> or <code>&quot;model&quot;</code> if uploading to a model.`,name:"repo_type"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1500"}}),rt=new N({props:{name:"get_dataset_tags",anchor:"huggingface_hub.HfApi.get_dataset_tags",parameters:[],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L750"}}),it=new N({props:{name:"get_full_repo_name",anchor:"huggingface_hub.HfApi.get_full_repo_name",parameters:[{name:"model_id",val:": str"},{name:"organization",val:": typing.Optional[str] = None"},{name:"token",val:": typing.Optional[str] = None"}],parametersDescription:[{anchor:"huggingface_hub.HfApi.get_full_repo_name.model_id",description:`<strong>model_id</strong> (<code>str</code>) &#x2014;
 The name of the model.`,name:"model_id"},{anchor:"huggingface_hub.HfApi.get_full_repo_name.organization",description:`<strong>organization</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 If passed, the repository name will be in the organization
 namespace instead of the user namespace.`,name:"organization"},{anchor:"huggingface_hub.HfApi.get_full_repo_name.token",description:`<strong>token</strong> (<code>str</code>, <em>optional</em>) &#x2014;
-The Hugging Face authentication token`,name:"token"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1925",returnDescription:`
+The Hugging Face authentication token`,name:"token"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1930",returnDescription:`
 <p>The repository name in the user\u2019s namespace
 ({username}/{model_id}) if no organization is passed, and under the
 organization namespace ({organization}/{model_id}) otherwise.</p>
@@ -394,7 +394,7 @@ Whether to fetch all dataset data, including the <code>lastModified</code>
 and the <code>cardData</code>.`,name:"full"},{anchor:"huggingface_hub.HfApi.list_datasets.use_auth_token",description:`<strong>use_auth_token</strong> (<code>bool</code> or <code>str</code>, <em>optional</em>) &#x2014;
 Whether to use the <code>auth_token</code> provided from the
 <code>huggingface_hub</code> cli. If not logged in, a valid <code>auth_token</code>
-can be passed in as a string.`,name:"use_auth_token"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L968"}}),ke=new he({props:{anchor:"huggingface_hub.HfApi.list_datasets.example",$$slots:{default:[Zr]},$$scope:{ctx:P}}}),we=new he({props:{anchor:"huggingface_hub.HfApi.list_datasets.example-2",$$slots:{default:[ei]},$$scope:{ctx:P}}}),pt=new N({props:{name:"list_metrics",anchor:"huggingface_hub.HfApi.list_metrics",parameters:[],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1134",returnDescription:`
+can be passed in as a string.`,name:"use_auth_token"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L969"}}),ke=new he({props:{anchor:"huggingface_hub.HfApi.list_datasets.example",$$slots:{default:[Zr]},$$scope:{ctx:P}}}),we=new he({props:{anchor:"huggingface_hub.HfApi.list_datasets.example-2",$$slots:{default:[ei]},$$scope:{ctx:P}}}),pt=new N({props:{name:"list_metrics",anchor:"huggingface_hub.HfApi.list_metrics",parameters:[],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1135",returnDescription:`
 <p>a list of <code>MetricInfo</code> objects which.</p>
 `,returnType:`
 <p><code>List[MetricInfo]</code></p>
@@ -432,7 +432,7 @@ Set to <code>&quot;dataset&quot;</code> or <code>&quot;space&quot;</code> if upl
 space, <code>None</code> or <code>&quot;model&quot;</code> if uploading to a model. Default is
 <code>None</code>.`,name:"repo_type"},{anchor:"huggingface_hub.HfApi.list_repo_files.token",description:`<strong>token</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 An authentication token (See <a href="https://huggingface.co/settings/token" rel="nofollow">https://huggingface.co/settings/token</a>)`,name:"token"},{anchor:"huggingface_hub.HfApi.list_repo_files.timeout",description:`<strong>timeout</strong> (<code>float</code>, <em>optional</em>) &#x2014;
-Whether to set a timeout for the request to the Hub.`,name:"timeout"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1328",returnDescription:`
+Whether to set a timeout for the request to the Hub.`,name:"timeout"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1329",returnDescription:`
 <p>the list of files in a given repository.</p>
 `,returnType:`
 <p><code>List[str]</code></p>
@@ -452,7 +452,7 @@ information.`,name:"revision"},{anchor:"huggingface_hub.HfApi.model_info.token",
 An authentication token (See <a href="https://huggingface.co/settings/token" rel="nofollow">https://huggingface.co/settings/token</a>)`,name:"token"},{anchor:"huggingface_hub.HfApi.model_info.timeout",description:`<strong>timeout</strong> (<code>float</code>, <em>optional</em>) &#x2014;
 Whether to set a timeout for the request to the Hub.`,name:"timeout"},{anchor:"huggingface_hub.HfApi.model_info.securityStatus",description:`<strong>securityStatus</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
 Whether to retrieve the security status from the model
-repository as well.`,name:"securityStatus"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1148",returnDescription:`
+repository as well.`,name:"securityStatus"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1149",returnDescription:`
 <p>The model repository information.</p>
 `,returnType:`
 <p><code>huggingface_hub.hf_api.ModelInfo</code></p>
@@ -464,13 +464,13 @@ by a <code>/</code>. Final repository identifier.`,name:"to_id"},{anchor:"huggin
 Set to <code>&quot;dataset&quot;</code> or <code>&quot;space&quot;</code> if uploading to a dataset or
 space, <code>None</code> or <code>&quot;model&quot;</code> if uploading to a model. Default is
 <code>None</code>.`,name:"repo_type"},{anchor:"huggingface_hub.HfApi.move_repo.token",description:`<strong>token</strong> (<code>str</code>, <em>optional</em>) &#x2014;
-An authentication token (See <a href="https://huggingface.co/settings/token" rel="nofollow">https://huggingface.co/settings/token</a>)`,name:"token"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1656"}}),$t=new N({props:{name:"repo_info",anchor:"huggingface_hub.HfApi.repo_info",parameters:[{name:"repo_id",val:": str"},{name:"revision",val:": typing.Optional[str] = None"},{name:"repo_type",val:": typing.Optional[str] = None"},{name:"token",val:": typing.Optional[str] = None"},{name:"timeout",val:": typing.Optional[float] = None"}],parametersDescription:[{anchor:"huggingface_hub.HfApi.repo_info.repo_id",description:`<strong>repo_id</strong> (<code>str</code>) &#x2014;
+An authentication token (See <a href="https://huggingface.co/settings/token" rel="nofollow">https://huggingface.co/settings/token</a>)`,name:"token"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1657"}}),$t=new N({props:{name:"repo_info",anchor:"huggingface_hub.HfApi.repo_info",parameters:[{name:"repo_id",val:": str"},{name:"revision",val:": typing.Optional[str] = None"},{name:"repo_type",val:": typing.Optional[str] = None"},{name:"token",val:": typing.Optional[str] = None"},{name:"timeout",val:": typing.Optional[float] = None"}],parametersDescription:[{anchor:"huggingface_hub.HfApi.repo_info.repo_id",description:`<strong>repo_id</strong> (<code>str</code>) &#x2014;
 A namespace (user or an organization) and a repo name separated
 by a <code>/</code>.`,name:"repo_id"},{anchor:"huggingface_hub.HfApi.repo_info.revision",description:`<strong>revision</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 The revision of the repository from which to get the
 information.`,name:"revision"},{anchor:"huggingface_hub.HfApi.repo_info.token",description:`<strong>token</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 An authentication token (See <a href="https://huggingface.co/settings/token" rel="nofollow">https://huggingface.co/settings/token</a>)`,name:"token"},{anchor:"huggingface_hub.HfApi.repo_info.timeout",description:`<strong>timeout</strong> (<code>float</code>, <em>optional</em>) &#x2014;
-Whether to set a timeout for the request to the Hub.`,name:"timeout"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1284",returnDescription:`
+Whether to set a timeout for the request to the Hub.`,name:"timeout"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1285",returnDescription:`
 <p>The repository
 information.</p>
 `,returnType:`
@@ -482,7 +482,7 @@ by a <code>/</code>.`,name:"repo_id"},{anchor:"huggingface_hub.HfApi.space_info.
 The revision of the space repository from which to get the
 information.`,name:"revision"},{anchor:"huggingface_hub.HfApi.space_info.token",description:`<strong>token</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 An authentication token (See <a href="https://huggingface.co/settings/token" rel="nofollow">https://huggingface.co/settings/token</a>)`,name:"token"},{anchor:"huggingface_hub.HfApi.space_info.timeout",description:`<strong>timeout</strong> (<code>float</code>, <em>optional</em>) &#x2014;
-Whether to set a timeout for the request to the Hub.`,name:"timeout"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1241",returnDescription:`
+Whether to set a timeout for the request to the Hub.`,name:"timeout"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1242",returnDescription:`
 <p>The space repository information.</p>
 `,returnType:`
 <p><code>SpaceInfo</code></p>
@@ -498,7 +498,7 @@ Whether the model repo should be private.`,name:"private"},{anchor:"huggingface_
 An authentication token (See <a href="https://huggingface.co/settings/token" rel="nofollow">https://huggingface.co/settings/token</a>)`,name:"token"},{anchor:"huggingface_hub.HfApi.update_repo_visibility.repo_type",description:`<strong>repo_type</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 Set to <code>&quot;dataset&quot;</code> or <code>&quot;space&quot;</code> if uploading to a dataset or
 space, <code>None</code> or <code>&quot;model&quot;</code> if uploading to a model. Default is
-<code>None</code>.`,name:"repo_type"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1590",returnDescription:`
+<code>None</code>.`,name:"repo_type"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1591",returnDescription:`
 <p>The HTTP response in json.</p>
 `}}),At=new N({props:{name:"upload_file",anchor:"huggingface_hub.HfApi.upload_file",parameters:[{name:"path_or_fileobj",val:": typing.Union[str, bytes, typing.IO]"},{name:"path_in_repo",val:": str"},{name:"repo_id",val:": str"},{name:"token",val:": typing.Optional[str] = None"},{name:"repo_type",val:": typing.Optional[str] = None"},{name:"revision",val:": typing.Optional[str] = None"},{name:"identical_ok",val:": bool = True"}],parametersDescription:[{anchor:"huggingface_hub.HfApi.upload_file.path_or_fileobj",description:`<strong>path_or_fileobj</strong> (<code>str</code>, <code>bytes</code>, or <code>IO</code>) &#x2014;
 Path to a file on the local machine or binary data stream /
@@ -516,18 +516,18 @@ The git revision to commit from. Defaults to the head of the
 <code>&quot;main&quot;</code> branch.`,name:"revision"},{anchor:"huggingface_hub.HfApi.upload_file.identical_ok",description:`<strong>identical_ok</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
 When set to false, will raise an <a href="https://2.python-requests.org/en/master/api/#requests.HTTPError" rel="nofollow">HTTPError</a>
 when the file you&#x2019;re trying to upload already exists on the hub
-and its content did not change.`,name:"identical_ok"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1722",returnDescription:`
+and its content did not change.`,name:"identical_ok"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1727",returnDescription:`
 <p>The URL to visualize the uploaded file on the hub</p>
 `,returnType:`
 <p><code>str</code></p>
 `}}),Le=new Qa({props:{$$slots:{default:[ri]},$$scope:{ctx:P}}}),Ie=new he({props:{anchor:"huggingface_hub.HfApi.upload_file.example",$$slots:{default:[ii]},$$scope:{ctx:P}}}),jt=new N({props:{name:"whoami",anchor:"huggingface_hub.HfApi.whoami",parameters:[{name:"token",val:": typing.Optional[str] = None"}],parametersDescription:[{anchor:"huggingface_hub.HfApi.whoami.token",description:`<strong>token</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 Hugging Face token. Will default to the locally saved token if
-not provided.`,name:"token"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L597"}}),Ht=new or({}),Dt=new N({props:{name:"class huggingface_hub.HfFolder",anchor:"huggingface_hub.HfFolder",parameters:[],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1961"}}),Et=new N({props:{name:"delete_token",anchor:"huggingface_hub.HfFolder.delete_token",parameters:[],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1998"}}),qt=new N({props:{name:"get_token",anchor:"huggingface_hub.HfFolder.get_token",parameters:[],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1977",returnDescription:`
+not provided.`,name:"token"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L597"}}),Ht=new or({}),Dt=new N({props:{name:"class huggingface_hub.HfFolder",anchor:"huggingface_hub.HfFolder",parameters:[],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1966"}}),Et=new N({props:{name:"delete_token",anchor:"huggingface_hub.HfFolder.delete_token",parameters:[],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L2003"}}),qt=new N({props:{name:"get_token",anchor:"huggingface_hub.HfFolder.get_token",parameters:[],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1982",returnDescription:`
 <p>The token, <code>None</code> if it doesn\u2019t exist.</p>
 `,returnType:`
 <p><code>str</code> or <code>None</code></p>
 `}}),Nt=new N({props:{name:"save_token",anchor:"huggingface_hub.HfFolder.save_token",parameters:[{name:"token",val:""}],parametersDescription:[{anchor:"huggingface_hub.HfFolder.save_token.token",description:`<strong>token</strong> (<code>str</code>) &#x2014;
-The token to save to the <a href="/docs/huggingface_hub/pr_844/en/package_reference/hf_api#huggingface_hub.HfFolder">HfFolder</a>`,name:"token"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1964"}}),Pt=new or({}),Tt=new N({props:{name:"class huggingface_hub.DatasetFilter",anchor:"huggingface_hub.DatasetFilter",parameters:[{name:"author",val:": str = None"},{name:"benchmark",val:": typing.Union[str, typing.List[str]] = None"},{name:"dataset_name",val:": str = None"},{name:"language_creators",val:": typing.Union[str, typing.List[str]] = None"},{name:"languages",val:": typing.Union[str, typing.List[str]] = None"},{name:"multilinguality",val:": typing.Union[str, typing.List[str]] = None"},{name:"size_categories",val:": typing.Union[str, typing.List[str]] = None"},{name:"task_categories",val:": typing.Union[str, typing.List[str]] = None"},{name:"task_ids",val:": typing.Union[str, typing.List[str]] = None"}],parametersDescription:[{anchor:"huggingface_hub.DatasetFilter.author",description:`<strong>author</strong> (<code>str</code>, <em>optional</em>) &#x2014;
+The token to save to the <a href="/docs/huggingface_hub/pr_844/en/package_reference/hf_api#huggingface_hub.HfFolder">HfFolder</a>`,name:"token"}],source:"https://github.com/huggingface/huggingface_hub/blob/pr_844/src/huggingface_hub/hf_api.py#L1969"}}),Pt=new or({}),Tt=new N({props:{name:"class huggingface_hub.DatasetFilter",anchor:"huggingface_hub.DatasetFilter",parameters:[{name:"author",val:": str = None"},{name:"benchmark",val:": typing.Union[str, typing.List[str]] = None"},{name:"dataset_name",val:": str = None"},{name:"language_creators",val:": typing.Union[str, typing.List[str]] = None"},{name:"languages",val:": typing.Union[str, typing.List[str]] = None"},{name:"multilinguality",val:": typing.Union[str, typing.List[str]] = None"},{name:"size_categories",val:": typing.Union[str, typing.List[str]] = None"},{name:"task_categories",val:": typing.Union[str, typing.List[str]] = None"},{name:"task_ids",val:": typing.Union[str, typing.List[str]] = None"}],parametersDescription:[{anchor:"huggingface_hub.DatasetFilter.author",description:`<strong>author</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 A string or list of strings that can be used to identify datasets on
 the Hub by the original uploader (author or organization), such as
 <code>facebook</code> or <code>huggingface</code>.`,name:"author"},{anchor:"huggingface_hub.DatasetFilter.benchmark",description:`<strong>benchmark</strong> (<code>str</code> or <code>List</code>, <em>optional</em>) &#x2014;
