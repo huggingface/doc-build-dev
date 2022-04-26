@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;به کارگیری مدل‌های از پیش تعلیم دیده&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/assets/pages/__layout.svelte-048423b6.css">
-	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/start-9702cb1d.js">
+	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/start-9a9585ff.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/chunks/vendor-378cdcd7.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/pages/__layout.svelte-3c51a8cf.js">
-	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/pages/chapter4/2.mdx-cf066277.js">
+	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/pages/chapter4/2.mdx-38434fd4.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/chunks/Tip-f1830e12.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/chunks/CodeBlock-be794267.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/chunks/FrameworkSwitchCourse-f6c48952.js"> 
@@ -27,54 +27,52 @@
 <p>فرض کنید به دنبال مدلی مبتنی بر زبان فرانسوی هستیم که قادر به پر کردن جاهای خالی متن است.</p>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter4/camembert.gif" alt="انتخاب مدل Camembert" width="80%"></div>
 <p>نقطه تعلیم <code>camembert-base</code> را انتخاب می‌کنیم تا مدل را با آن آزمایش نماییم. برای شروع استفاده از آن، تمام آنچه نیاز داریم شناسه <code>camembert-base</code>  است! همان گونه که در فصل‌های پیشین دیدید، می‌توانیم با استفاده از تابع <code>pipeline()</code> نمونه شیءای از آن بسازیم.</p>
-<div dir="ltr">```py
-from transformers import pipeline
-<p>camembert_fill_mask = pipeline(“fill-mask”, model=“camembert-base”)
-results = camembert_fill_mask(“Le camembert est &lt;mask&gt; :)“)</p>
+<div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> pipeline
+
+camembert_fill_mask = pipeline(<span class="hljs-string">&quot;fill-mask&quot;</span>, model=<span class="hljs-string">&quot;camembert-base&quot;</span>)
+results = camembert_fill_mask(<span class="hljs-string">&quot;Le camembert est &lt;mask&gt; :)&quot;</span>)<!-- HTML_TAG_END --></pre></div>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->
-```python <span class="hljs-keyword">out</span>
-[
-  {<span class="hljs-symbol">&#x27;sequence</span>&#x27;: <span class="hljs-symbol">&#x27;Le</span> camembert est délicieux :)&#x27;, <span class="hljs-symbol">&#x27;score</span>&#x27;: <span class="hljs-number">0.49091005325317383</span>, <span class="hljs-symbol">&#x27;token</span>&#x27;: <span class="hljs-number">7200</span>, <span class="hljs-symbol">&#x27;token_str</span>&#x27;: <span class="hljs-symbol">&#x27;d</span>élicieux&#x27;}, 
-  {<span class="hljs-symbol">&#x27;sequence</span>&#x27;: <span class="hljs-symbol">&#x27;Le</span> camembert est excellent :)&#x27;, <span class="hljs-symbol">&#x27;score</span>&#x27;: <span class="hljs-number">0.1055697426199913</span>, <span class="hljs-symbol">&#x27;token</span>&#x27;: <span class="hljs-number">2183</span>, <span class="hljs-symbol">&#x27;token_str</span>&#x27;: <span class="hljs-symbol">&#x27;excellent</span>&#x27;}, 
-  {<span class="hljs-symbol">&#x27;sequence</span>&#x27;: <span class="hljs-symbol">&#x27;Le</span> camembert est succulent :)&#x27;, <span class="hljs-symbol">&#x27;score</span>&#x27;: <span class="hljs-number">0.03453313186764717</span>, <span class="hljs-symbol">&#x27;token</span>&#x27;: <span class="hljs-number">26202</span>, <span class="hljs-symbol">&#x27;token_str</span>&#x27;: <span class="hljs-symbol">&#x27;succulent</span>&#x27;}, 
-  {<span class="hljs-symbol">&#x27;sequence</span>&#x27;: <span class="hljs-symbol">&#x27;Le</span> camembert est meilleur :)&#x27;, <span class="hljs-symbol">&#x27;score</span>&#x27;: <span class="hljs-number">0.0330314114689827</span>, <span class="hljs-symbol">&#x27;token</span>&#x27;: <span class="hljs-number">528</span>, <span class="hljs-symbol">&#x27;token_str</span>&#x27;: <span class="hljs-symbol">&#x27;meilleur</span>&#x27;}, 
-  {<span class="hljs-symbol">&#x27;sequence</span>&#x27;: <span class="hljs-symbol">&#x27;Le</span> camembert est parfait :)&#x27;, <span class="hljs-symbol">&#x27;score</span>&#x27;: <span class="hljs-number">0.03007650189101696</span>, <span class="hljs-symbol">&#x27;token</span>&#x27;: <span class="hljs-number">1654</span>, <span class="hljs-symbol">&#x27;token_str</span>&#x27;: <span class="hljs-symbol">&#x27;parfait</span>&#x27;}
+	<pre><!-- HTML_TAG_START -->[
+  {<span class="hljs-string">&#x27;sequence&#x27;</span>: <span class="hljs-string">&#x27;Le camembert est délicieux :)&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.49091005325317383</span>, <span class="hljs-string">&#x27;token&#x27;</span>: <span class="hljs-number">7200</span>, <span class="hljs-string">&#x27;token_str&#x27;</span>: <span class="hljs-string">&#x27;délicieux&#x27;</span>}, 
+  {<span class="hljs-string">&#x27;sequence&#x27;</span>: <span class="hljs-string">&#x27;Le camembert est excellent :)&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.1055697426199913</span>, <span class="hljs-string">&#x27;token&#x27;</span>: <span class="hljs-number">2183</span>, <span class="hljs-string">&#x27;token_str&#x27;</span>: <span class="hljs-string">&#x27;excellent&#x27;</span>}, 
+  {<span class="hljs-string">&#x27;sequence&#x27;</span>: <span class="hljs-string">&#x27;Le camembert est succulent :)&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.03453313186764717</span>, <span class="hljs-string">&#x27;token&#x27;</span>: <span class="hljs-number">26202</span>, <span class="hljs-string">&#x27;token_str&#x27;</span>: <span class="hljs-string">&#x27;succulent&#x27;</span>}, 
+  {<span class="hljs-string">&#x27;sequence&#x27;</span>: <span class="hljs-string">&#x27;Le camembert est meilleur :)&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.0330314114689827</span>, <span class="hljs-string">&#x27;token&#x27;</span>: <span class="hljs-number">528</span>, <span class="hljs-string">&#x27;token_str&#x27;</span>: <span class="hljs-string">&#x27;meilleur&#x27;</span>}, 
+  {<span class="hljs-string">&#x27;sequence&#x27;</span>: <span class="hljs-string">&#x27;Le camembert est parfait :)&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.03007650189101696</span>, <span class="hljs-string">&#x27;token&#x27;</span>: <span class="hljs-number">1654</span>, <span class="hljs-string">&#x27;token_str&#x27;</span>: <span class="hljs-string">&#x27;parfait&#x27;</span>}
 ]<!-- HTML_TAG_END --></pre></div></div>
 <p>همان طور که می‌بینید، بارگذاری مدل درون خط تولید بسیار ساده است. تنها چیزی که باید مراقبش باشید این است که نقطه تعلیم انتخاب شده، مناسب وظیفه‌ای باشد که برای انجام آن به کار گرفته خواهد شد. برای مثال، در اینجا نقطه تعلیم <code>camembert-base</code> را در خط تولید <code>fill-mask</code> استفاده می‌کنیم، که انتخابی کاملا معقول است. اما اگر ما این نقطه تعلیم را در خط تولید <code>text-classification</code> استفاده کنیم، نتایج هیچ معنایی نخواهند داشت، زیرا سَر مربوط به <code>camembert-base</code>، برای این کار مناسب نیست. توصیه می‌کنیم که از انتخاب‌گر وظیفه در رابط کاربری هاب هاگینگ‌فِیس برای انتخاب نقاط تعلیم مناسب استفاده نمایید:</p>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter4/tasks.png" alt="انتخاب‌گر وظیفه در رابط کاربری تحت وب" width="80%"></div>
 <p>همچنین می‌توانید نمونه‌سازی از نقطه تعلیم را مستقیما با استفاده از معماری مدل انجام دهید:</p>
-<div dir="ltr">```py
-from transformers import CamembertTokenizer, CamembertForMaskedLM
-<p>tokenizer = CamembertTokenizer.from_pretrained(“camembert-base”)
-model = CamembertForMaskedLM.from_pretrained(“camembert-base”)</p>
-
-	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+<div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->&lt;/<span class="hljs-keyword">div</span>&gt;
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> CamembertTokenizer, CamembertForMaskedLM
 
-با این حال، توصیه می‌کنیم به جای این کار از [`<span class="hljs-type">Auto</span>*` classes](https://huggingface.co/transformers/model_doc/<span class="hljs-type">auto</span>.html?highlight=<span class="hljs-type">auto</span><span class="hljs-comment">#auto-classes) استفاده کنید، چرا که طراحی این کلاس‌های خودکار به گونه‌ایست که، فارغ از هرگونه وابستگی به معماری به کار رفته هستند. در حالی که نمونه کد قبلی، کاربران را محدود به نقاط تعلیم قابل بارگذاری در معماری CamemBERT می‌کند، استفاده از کلاس‌های `Auto*`، سهولت تعویض نقاط تعلیم را در بر دارد:</span>
+tokenizer = CamembertTokenizer.from_pretrained(<span class="hljs-string">&quot;camembert-base&quot;</span>)
+model = CamembertForMaskedLM.from_pretrained(<span class="hljs-string">&quot;camembert-base&quot;</span>)<!-- HTML_TAG_END --></pre></div></div>
+<p>با این حال، توصیه می‌کنیم به جای این کار از <a href="https://huggingface.co/transformers/model_doc/auto.html?highlight=auto#auto-classes" rel="nofollow"><code>Auto*</code> classes</a> استفاده کنید، چرا که طراحی این کلاس‌های خودکار به گونه‌ایست که، فارغ از هرگونه وابستگی به معماری به کار رفته هستند. در حالی که نمونه کد قبلی، کاربران را محدود به نقاط تعلیم قابل بارگذاری در معماری CamemBERT می‌کند، استفاده از کلاس‌های <code>Auto*</code>، سهولت تعویض نقاط تعلیم را در بر دارد:</p>
+<div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, AutoModelForMaskedLM
 
-&lt;<span class="hljs-keyword">div</span> dir=<span class="hljs-string">&quot;ltr&quot;</span>&gt;
-```py
-<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> <span class="hljs-type">AutoTokenizer</span>, <span class="hljs-type">AutoModelForMaskedLM</span>
-
-tokenizer = <span class="hljs-type">AutoTokenizer</span>.from_pretrained(<span class="hljs-string">&quot;camembert-base&quot;</span>)
-model = <span class="hljs-type">AutoModelForMaskedLM</span>.from_pretrained(<span class="hljs-string">&quot;camembert-base&quot;</span>)<!-- HTML_TAG_END --></pre></div></div>
+tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;camembert-base&quot;</span>)
+model = AutoModelForMaskedLM.from_pretrained(<span class="hljs-string">&quot;camembert-base&quot;</span>)<!-- HTML_TAG_END --></pre></div></div>
 
 
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400">هنگامی که مدلی از پیش تعلیم دیده را استفاده می‌کنید، حتما بررسی کنید که این تعلیم چگونه و روی چه دیتاسِت‌هایی صورت پذیرفته و چه محدودیت‌ها و سوگیری‌هایی را شامل می‌شود. تمامی این اطلاعات می‌بایست در صفحه توضیحات مدل نشان داده شوند.
 </div></div>
 
 
-		<script type="module" data-hydrate="1fdm57k">
-		import { start } from "/docs/course/pr_148/fa/_app/start-9702cb1d.js";
+		<script type="module" data-hydrate="1669ilt">
+		import { start } from "/docs/course/pr_148/fa/_app/start-9a9585ff.js";
 		start({
-			target: document.querySelector('[data-hydrate="1fdm57k"]').parentNode,
+			target: document.querySelector('[data-hydrate="1669ilt"]').parentNode,
 			paths: {"base":"/docs/course/pr_148/fa","assets":"/docs/course/pr_148/fa"},
 			session: {},
 			route: false,
@@ -85,7 +83,7 @@ model = <span class="hljs-type">AutoModelForMaskedLM</span>.from_pretrained(<spa
 				error: null,
 				nodes: [
 					import("/docs/course/pr_148/fa/_app/pages/__layout.svelte-3c51a8cf.js"),
-						import("/docs/course/pr_148/fa/_app/pages/chapter4/2.mdx-cf066277.js")
+						import("/docs/course/pr_148/fa/_app/pages/chapter4/2.mdx-38434fd4.js")
 				],
 				params: {}
 			}
