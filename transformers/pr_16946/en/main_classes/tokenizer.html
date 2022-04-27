@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;tokenizer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers.PreTrainedTokenizer&quot;,&quot;title&quot;:&quot;PreTrainedTokenizer&quot;},{&quot;local&quot;:&quot;transformers.PreTrainedTokenizerFast&quot;,&quot;title&quot;:&quot;PreTrainedTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.BatchEncoding&quot;,&quot;title&quot;:&quot;BatchEncoding&quot;}],&quot;title&quot;:&quot;Tokenizer&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/start-375806e6.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/start-fb0dc87b.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/pages/main_classes/tokenizer.mdx-3462aa79.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/pages/main_classes/tokenizer.mdx-bd0a4a87.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16946/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -25,9 +25,7 @@ of the tokenizers are available in two flavors: a full python implementation and
 Rust library <a href="https://github.com/huggingface/tokenizers" rel="nofollow">🤗 Tokenizers</a>. The “Fast” implementations allows:</p>
 <ol><li>a significant speed-up in particular when doing batched tokenization and</li>
 <li>additional methods to map between the original string (character and words) and the token space (e.g. getting the
-index of the token comprising a given character or the span of characters corresponding to a given token). Currently
-no “Fast” implementation is available for the SentencePiece-based tokenizers (for T5, ALBERT, CamemBERT, XLM-RoBERTa
-and XLNet models).</li></ol>
+index of the token comprising a given character or the span of characters corresponding to a given token). </li></ol>
 <p>The base classes <a href="/docs/transformers/pr_16946/en/main_classes/tokenizer#transformers.PreTrainedTokenizer">PreTrainedTokenizer</a> and <a href="/docs/transformers/pr_16946/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast">PreTrainedTokenizerFast</a>
 implement the common methods for encoding string inputs in model inputs (see below) and instantiating/saving python and
 “Fast” tokenizers either from a local file or directory or from a pretrained tokenizer provided by the library
@@ -2377,10 +2375,10 @@ tokenizer are mapped to <code>None</code> and other tokens are mapped to the ind
 <p>Return a list mapping the tokens to their actual word in the initial sentence for a fast tokenizer.</p></div></div>
 
 
-		<script type="module" data-hydrate="4co5ey">
-		import { start } from "/docs/transformers/pr_16946/en/_app/start-375806e6.js";
+		<script type="module" data-hydrate="199yvfs">
+		import { start } from "/docs/transformers/pr_16946/en/_app/start-fb0dc87b.js";
 		start({
-			target: document.querySelector('[data-hydrate="4co5ey"]').parentNode,
+			target: document.querySelector('[data-hydrate="199yvfs"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16946/en","assets":"/docs/transformers/pr_16946/en"},
 			session: {},
 			route: false,
@@ -2391,7 +2389,7 @@ tokenizer are mapped to <code>None</code> and other tokens are mapped to the ind
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16946/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16946/en/_app/pages/main_classes/tokenizer.mdx-3462aa79.js")
+						import("/docs/transformers/pr_16946/en/_app/pages/main_classes/tokenizer.mdx-bd0a4a87.js")
 				],
 				params: {}
 			}
