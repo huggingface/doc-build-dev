@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;به کارگیری مدل‌های از پیش تعلیم دیده&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/assets/pages/__layout.svelte-048423b6.css">
-	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/start-983ca0d4.js">
+	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/start-9659ba1a.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/chunks/vendor-378cdcd7.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/pages/__layout.svelte-3c51a8cf.js">
-	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/pages/chapter4/2.mdx-128b2bed.js">
+	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/pages/chapter4/2.mdx-79d39f56.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/chunks/Tip-f1830e12.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/chunks/CodeBlock-be794267.js">
 	<link rel="modulepreload" href="/docs/course/pr_148/fa/_app/chunks/FrameworkSwitchCourse-f6c48952.js"> 
@@ -26,7 +26,7 @@
 <p>هاب مدل، انتخاب مدل مناسب را تسهیل می‌بخشد؛ به طوری که می‌توان با چند خط کد، آن را در هر کتابخانه پایین‌دستی وابسته استفاده نمود. بیایید به نحوه عملی به کارگیری یکی از این مدل‌ها نگاهی انداخته و ببینیم چگونه می‌توانیم در مقام کمک به جامعه کاربران برآییم.</p>
 <p>فرض کنید به دنبال مدلی مبتنی بر زبان فرانسوی هستیم که قادر به پر کردن جاهای خالی متن است.</p>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter4/camembert.gif" alt="انتخاب مدل Camembert" width="80%"></div>
-<p>نقطه تعلیم <code>camembert-base</code> را انتخاب می‌کنیم تا مدل را با آن آزمایش نماییم. برای شروع استفاده از آن، تمام آنچه نیاز داریم شناسه <code>camembert-base</code>  است! همان گونه که در فصل‌های پیشین دیدید، می‌توانیم با استفاده از تابع <code>pipeline()</code> نمونه شیءای از آن بسازیم.</p>
+<p>نقطه تعلیم <code>camembert-base</code> را انتخاب می‌کنیم تا مدل را با آن آزمایش نماییم. برای شروع استفاده از آن، تمام آنچه نیاز داریم شناسه <code>camembert-base</code>  است! همان گونه که در فصل‌های پیشین دیدید، می‌توانیم با استفاده از تابع <code>pipeline()</code> نمونه‌ای از آن بسازیم.</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -47,7 +47,7 @@ results = camembert_fill_mask(<span class="hljs-string">&quot;Le camembert est &
 ]<!-- HTML_TAG_END --></pre></div></div>
 <p>همان طور که می‌بینید، بارگذاری مدل درون خط تولید بسیار ساده است. تنها چیزی که باید مراقبش باشید این است که نقطه تعلیم انتخاب شده، مناسب وظیفه‌ای باشد که برای انجام آن به کار گرفته خواهد شد. برای مثال، در اینجا نقطه تعلیم <code>camembert-base</code> را در خط تولید <code>fill-mask</code> استفاده می‌کنیم، که انتخابی کاملا معقول است. اما اگر ما این نقطه تعلیم را در خط تولید <code>text-classification</code> استفاده کنیم، نتایج هیچ معنایی نخواهند داشت، زیرا سَر مربوط به <code>camembert-base</code>، برای این کار مناسب نیست. توصیه می‌کنیم که از انتخاب‌گر وظیفه در رابط کاربری هاب هاگینگ‌فِیس برای انتخاب نقاط تعلیم مناسب استفاده نمایید:</p>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter4/tasks.png" alt="انتخاب‌گر وظیفه در رابط کاربری تحت وب" width="80%"></div>
-<p>همچنین می‌توانید نمونه‌سازی از نقطه تعلیم را مستقیما با استفاده از معماری مدل انجام دهید:</p>
+<p>همچنین می‌توانید ایجاد نمونه از نقطه تعلیم را مستقیما با استفاده از معماری مدل انجام دهید:</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -69,10 +69,10 @@ model = AutoModelForMaskedLM.from_pretrained(<span class="hljs-string">&quot;cam
 </div></div>
 
 
-		<script type="module" data-hydrate="wy23l6">
-		import { start } from "/docs/course/pr_148/fa/_app/start-983ca0d4.js";
+		<script type="module" data-hydrate="1593c0m">
+		import { start } from "/docs/course/pr_148/fa/_app/start-9659ba1a.js";
 		start({
-			target: document.querySelector('[data-hydrate="wy23l6"]').parentNode,
+			target: document.querySelector('[data-hydrate="1593c0m"]').parentNode,
 			paths: {"base":"/docs/course/pr_148/fa","assets":"/docs/course/pr_148/fa"},
 			session: {},
 			route: false,
@@ -83,7 +83,7 @@ model = AutoModelForMaskedLM.from_pretrained(<span class="hljs-string">&quot;cam
 				error: null,
 				nodes: [
 					import("/docs/course/pr_148/fa/_app/pages/__layout.svelte-3c51a8cf.js"),
-						import("/docs/course/pr_148/fa/_app/pages/chapter4/2.mdx-128b2bed.js")
+						import("/docs/course/pr_148/fa/_app/pages/chapter4/2.mdx-79d39f56.js")
 				],
 				params: {}
 			}
