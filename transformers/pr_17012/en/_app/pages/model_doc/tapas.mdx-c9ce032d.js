@@ -797,7 +797,7 @@ logits = outputs.logits`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </spa
 <span class="hljs-meta">... </span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>labels = tokenizer(
 <span class="hljs-meta">... </span>    table=table, queries=<span class="hljs-string">&quot;How many movies has George Clooney played in?&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>)[<span class="hljs-string">&quot;input_ids&quot;</span>]
+<span class="hljs-meta">... </span>)[<span class="hljs-string">&quot;input_ids&quot;</span>]
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs, labels=labels)
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits`}}),{c(){l=o("p"),b=s("Examples:"),d=c(),y(u.$$.fragment)},l(p){l=n(p,"P",{});var g=r(l);b=a(g,"Examples:"),g.forEach(t),d=h(p),q(u.$$.fragment,p)},m(p,g){m(p,l,g),e(l,b),m(p,d,g),j(u,p,g),T=!0},p:ut,i(p){T||($(u.$$.fragment,p),T=!0)},o(p){E(u.$$.fragment,p),T=!1},d(p){p&&t(l),p&&t(d),F(u,p)}}}function Qk(P){let l,b,d,u,T;return{c(){l=o("p"),b=s("Although the recipe for forward pass needs to be defined within this function, one should call the "),d=o("code"),u=s("Module"),T=s(`
@@ -987,7 +987,7 @@ logits = outputs.logits`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </spa
 <span class="hljs-meta">... </span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>labels = tokenizer(
 <span class="hljs-meta">... </span>    table=table, queries=<span class="hljs-string">&quot;How many movies has George Clooney played in?&quot;</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>)[<span class="hljs-string">&quot;input_ids&quot;</span>]
+<span class="hljs-meta">... </span>)[<span class="hljs-string">&quot;input_ids&quot;</span>]
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs, labels=labels)
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits`}}),{c(){l=o("p"),b=s("Examples:"),d=c(),y(u.$$.fragment)},l(p){l=n(p,"P",{});var g=r(l);b=a(g,"Examples:"),g.forEach(t),d=h(p),q(u.$$.fragment,p)},m(p,g){m(p,l,g),e(l,b),m(p,d,g),j(u,p,g),T=!0},p:ut,i(p){T||($(u.$$.fragment,p),T=!0)},o(p){E(u.$$.fragment,p),T=!1},d(p){p&&t(l),p&&t(d),F(u,p)}}}function Yk(P){let l,b,d,u,T,p,g,A,k,N,x,U,G,V,B,K,re,W,L,w,M,R,C,O,ee,te,ce,oe,se,S,Q,H,X,I,Y,ge,ue,_e,me,ne,qe,ie,ve;return{c(){l=o("p"),b=s("TF 2.0 models accepts two formats as inputs:"),d=c(),u=o("ul"),T=o("li"),p=s("having all inputs as keyword arguments (like PyTorch models), or"),g=c(),A=o("li"),k=s("having all inputs as a list, tuple or dict in the first positional arguments."),N=c(),x=o("p"),U=s("This second option is useful when using "),G=o("code"),V=s("tf.keras.Model.fit"),B=s(` method which currently requires having all the
