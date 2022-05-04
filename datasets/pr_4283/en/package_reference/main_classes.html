@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;main-classes&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;datasets.DatasetInfo&quot;,&quot;title&quot;:&quot;DatasetInfo&quot;},{&quot;local&quot;:&quot;datasets.Dataset&quot;,&quot;title&quot;:&quot;Dataset&quot;},{&quot;local&quot;:&quot;datasets.DatasetDict&quot;,&quot;title&quot;:&quot;DatasetDict&quot;},{&quot;local&quot;:&quot;datasets.IterableDataset&quot;,&quot;title&quot;:&quot;IterableDataset&quot;},{&quot;local&quot;:&quot;datasets.IterableDatasetDict&quot;,&quot;title&quot;:&quot;IterableDatasetDict&quot;},{&quot;local&quot;:&quot;datasets.Features&quot;,&quot;title&quot;:&quot;Features&quot;},{&quot;local&quot;:&quot;datasets.MetricInfo&quot;,&quot;title&quot;:&quot;MetricInfo&quot;},{&quot;local&quot;:&quot;datasets.Metric&quot;,&quot;title&quot;:&quot;Metric&quot;},{&quot;local&quot;:&quot;datasets.filesystems.S3FileSystem&quot;,&quot;title&quot;:&quot;Filesystems&quot;},{&quot;local&quot;:&quot;datasets.fingerprint.Hasher&quot;,&quot;title&quot;:&quot;Fingerprint&quot;}],&quot;title&quot;:&quot;Main classes&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/assets/pages/__layout.svelte-efc77dbd.css">
-	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/start-e32aa3d8.js">
+	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/start-dd8f75ca.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/chunks/vendor-8138ceec.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/pages/__layout.svelte-efb8e839.js">
-	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/pages/package_reference/main_classes.mdx-7bc50448.js">
+	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/pages/package_reference/main_classes.mdx-968d36fd.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/chunks/Tip-12722dfc.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/chunks/Docstring-6fa3bd37.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4283/en/_app/chunks/IconCopyLink-2dd3a6ac.js">
@@ -8837,11 +8837,19 @@ first find out which region it belongs and then use the client for that region.<
 							<span><!-- HTML_TAG_START --><strong>config_kwargs</strong> (<code>Dict</code>) &#x2014; Parameters passed to <code>botocore.client.Config</code>.
 kwargs &#x2014; other parameters for core session.
 session &#x2014; aiobotocore AioSession object to be used for all connections. This session will be used inplace of creating a new
-session inside S3FileSystem. For example: <code>aiobotocore.session.AioSession(profile=&apos;test_user&apos;)</code>.
-skip_instance_cache &#x2014; Control reuse of instances. Passed on to <code>fsspec</code>.
-use_listings_cache &#x2014; Control reuse of directory listings. Passed on to <code>fsspec</code>.
-listings_expirty_time &#x2014; Control reuse of directory listings. Passed on to <code>fsspec</code>.
-max_paths &#x2014; Control reuse of directory listings. Passed on to <code>fsspec</code>.<!-- HTML_TAG_END -->
+session inside S3FileSystem. For example: <code>aiobotocore.session.AioSession(profile=&apos;test_user&apos;)</code>.<!-- HTML_TAG_END -->
+							</span></span>
+					</li><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="datasets.filesystems.S3FileSystem.skip_instance_cache" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#datasets.filesystems.S3FileSystem.skip_instance_cache"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+							<span><!-- HTML_TAG_START --><strong>skip_instance_cache</strong> (<code>bool</code>) &#x2014; Control reuse of instances. Passed on to <code>fsspec</code>.<!-- HTML_TAG_END -->
+							</span></span>
+					</li><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="datasets.filesystems.S3FileSystem.use_listings_cache" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#datasets.filesystems.S3FileSystem.use_listings_cache"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+							<span><!-- HTML_TAG_START --><strong>use_listings_cache</strong> (<code>bool</code>) &#x2014; Control reuse of directory listings. Passed on to <code>fsspec</code>.<!-- HTML_TAG_END -->
+							</span></span>
+					</li><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="datasets.filesystems.S3FileSystem.listings_expiry_time" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#datasets.filesystems.S3FileSystem.listings_expiry_time"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+							<span><!-- HTML_TAG_START --><strong>listings_expiry_time</strong> (<code>int</code> or <code>float</code>) &#x2014; Control reuse of directory listings. Passed on to <code>fsspec</code>.<!-- HTML_TAG_END -->
+							</span></span>
+					</li><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="datasets.filesystems.S3FileSystem.max_paths" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#datasets.filesystems.S3FileSystem.max_paths"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+							<span><!-- HTML_TAG_START --><strong>max_paths</strong> (<code>int</code>) &#x2014; Control reuse of directory listings. Passed on to <code>fsspec</code>.<!-- HTML_TAG_END -->
 							</span></span>
 					</li></ul>
 		
@@ -8980,10 +8988,10 @@ max_paths &#x2014; Control reuse of directory listings. Passed on to <code>fsspe
 <p>Hasher that accepts python objects as inputs.</p></div>
 
 
-		<script type="module" data-hydrate="1vb3302">
-		import { start } from "/docs/datasets/pr_4283/en/_app/start-e32aa3d8.js";
+		<script type="module" data-hydrate="41m9r8">
+		import { start } from "/docs/datasets/pr_4283/en/_app/start-dd8f75ca.js";
 		start({
-			target: document.querySelector('[data-hydrate="1vb3302"]').parentNode,
+			target: document.querySelector('[data-hydrate="41m9r8"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_4283/en","assets":"/docs/datasets/pr_4283/en"},
 			session: {},
 			route: false,
@@ -8994,7 +9002,7 @@ max_paths &#x2014; Control reuse of directory listings. Passed on to <code>fsspe
 				error: null,
 				nodes: [
 					import("/docs/datasets/pr_4283/en/_app/pages/__layout.svelte-efb8e839.js"),
-						import("/docs/datasets/pr_4283/en/_app/pages/package_reference/main_classes.mdx-7bc50448.js")
+						import("/docs/datasets/pr_4283/en/_app/pages/package_reference/main_classes.mdx-968d36fd.js")
 				],
 				params: {}
 			}
