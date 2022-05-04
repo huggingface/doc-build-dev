@@ -21,7 +21,7 @@ last_hidden_states = outputs.last_hidden_state`,highlighted:`<span class="hljs-m
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>input_ids = tokenizer(
 <span class="hljs-meta">... </span>    <span class="hljs-string">&quot;Studies have been shown that owning a dog is good for you&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>).input_ids  <span class="hljs-comment"># Batch size 1</span>
+<span class="hljs-meta">... </span>).input_ids  <span class="hljs-comment"># Batch size 1</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>decoder_input_ids = tokenizer(<span class="hljs-string">&quot;Studies show that&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>).input_ids  <span class="hljs-comment"># Batch size 1</span>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># forward pass</span>
@@ -63,7 +63,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># inference</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>input_ids = tokenizer(
 <span class="hljs-meta">... </span>    <span class="hljs-string">&quot;summarize: studies have shown that owning a dog is good for you&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>).input_ids  <span class="hljs-comment"># Batch size 1</span>
+<span class="hljs-meta">... </span>).input_ids  <span class="hljs-comment"># Batch size 1</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model.generate(input_ids)
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(tokenizer.decode(outputs[<span class="hljs-number">0</span>], skip_special_tokens=<span class="hljs-literal">True</span>))
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># studies have shown that owning a dog is good for you.</span>`}}),{c(){d=a("p"),b=i("Examples:"),u=m(),y(p.$$.fragment)},l(n){d=s(n,"P",{});var c=r(d);b=l(c,"Examples:"),c.forEach(t),u=f(n),v(p.$$.fragment,n)},m(n,c){T(n,d,c),e(d,b),T(n,u,c),k(p,n,c),_=!0},p:se,i(n){_||(w(p.$$.fragment,n),_=!0)},o(n){$(p.$$.fragment,n),_=!1},d(n){n&&t(d),n&&t(u),x(p,n)}}}function sd(z){let d,b,u,p,_;return{c(){d=a("p"),b=i("Although the recipe for forward pass needs to be defined within this function, one should call the "),u=a("code"),p=i("Module"),_=i(`
@@ -84,7 +84,7 @@ last_hidden_states = outputs.last_hidden_state`,highlighted:`<span class="hljs-m
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = LongT5EncoderModel.from_pretrained(<span class="hljs-string">&quot;&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>input_ids = tokenizer(
 <span class="hljs-meta">... </span>    <span class="hljs-string">&quot;Studies have been shown that owning a dog is good for you&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>).input_ids  <span class="hljs-comment"># Batch size 1</span>
+<span class="hljs-meta">... </span>).input_ids  <span class="hljs-comment"># Batch size 1</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(input_ids=input_ids)
 <span class="hljs-meta">&gt;&gt;&gt; </span>last_hidden_states = outputs.last_hidden_state`}}),{c(){d=a("p"),b=i("Example:"),u=m(),y(p.$$.fragment)},l(n){d=s(n,"P",{});var c=r(d);b=l(c,"Example:"),c.forEach(t),u=f(n),v(p.$$.fragment,n)},m(n,c){T(n,d,c),e(d,b),T(n,u,c),k(p,n,c),_=!0},p:se,i(n){_||(w(p.$$.fragment,n),_=!0)},o(n){$(p.$$.fragment,n),_=!1},d(n){n&&t(d),n&&t(u),x(p,n)}}}function dd(z){let d,b,u,p,_;return{c(){d=a("p"),b=i("Although the recipe for forward pass needs to be defined within this function, one should call the "),u=a("code"),p=i("Module"),_=i(`
 instance afterwards instead of this since the former takes care of running the pre and post processing steps while
@@ -109,7 +109,7 @@ last_hidden_states = outputs.last_hidden_state`,highlighted:`<span class="hljs-m
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>input_ids = tokenizer(
 <span class="hljs-meta">... </span>    <span class="hljs-string">&quot;Studies have been shown that owning a dog is good for you&quot;</span>, return_tensors=<span class="hljs-string">&quot;np&quot;</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>).input_ids
+<span class="hljs-meta">... </span>).input_ids
 <span class="hljs-meta">&gt;&gt;&gt; </span>decoder_input_ids = tokenizer(<span class="hljs-string">&quot;Studies show that&quot;</span>, return_tensors=<span class="hljs-string">&quot;np&quot;</span>).input_ids
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># forward pass</span>
