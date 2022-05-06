@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;transformadores-qu-pueden-hacer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;los-transformadores-estn-en-todas-partes&quot;,&quot;title&quot;:&quot;¡Los Transformadores están en todas partes!&quot;},{&quot;local&quot;:&quot;trabajando-con-pipelines&quot;,&quot;title&quot;:&quot;Trabajando con pipelines&quot;},{&quot;local&quot;:&quot;clasificacin-zeroshot&quot;,&quot;title&quot;:&quot;Clasificación *zero-shot*&quot;},{&quot;local&quot;:&quot;generacin-de-texto&quot;,&quot;title&quot;:&quot;Generación de texto&quot;},{&quot;local&quot;:&quot;usa-cualquier-modelo-del-hub-en-un-pipeline&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;la-api-de-inferencia&quot;,&quot;title&quot;:&quot;La API de Inferencia&quot;}],&quot;title&quot;:&quot;Usa cualquier modelo del Hub en un pipeline&quot;},{&quot;local&quot;:&quot;llenado-de-ocultos-mask-filling&quot;,&quot;title&quot;:&quot;Llenado de ocultos (*Mask filling*)&quot;},{&quot;local&quot;:&quot;reconocimiento-de-entidades-nombradas&quot;,&quot;title&quot;:&quot;Reconocimiento de entidades nombradas&quot;},{&quot;local&quot;:&quot;responder-preguntas&quot;,&quot;title&quot;:&quot;Responder preguntas&quot;},{&quot;local&quot;:&quot;resumir-summarization&quot;,&quot;title&quot;:&quot;Resumir (*Summarization*)&quot;},{&quot;local&quot;:&quot;traduccin&quot;,&quot;title&quot;:&quot;Traducción&quot;}],&quot;title&quot;:&quot;Transformadores, ¿qué pueden hacer?&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/assets/pages/__layout.svelte-048423b6.css">
-	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/start-c25ccf7a.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/start-c2a34a4f.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/pages/chapter1/3.mdx-123cf3ce.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/pages/chapter1/3.mdx-c4b41a60.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/chunks/Tip-62b14c6e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/chunks/Youtube-c2a8cc39.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/es/_app/chunks/IconCopyLink-483c28ba.js">
@@ -155,9 +155,7 @@ generator(<span class="hljs-string">&quot;In this course, we will teach you how 
 
 generator = pipeline(<span class="hljs-string">&quot;text-generation&quot;</span>, model=<span class="hljs-string">&quot;distilgpt2&quot;</span>)
 generator(
-    <span class="hljs-string">&quot;In this course, we will teach you how to&quot;</span>,
-    max_length=<span class="hljs-number">30</span>,
-    num_return_sequences=<span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;In this course, we will teach you how to&quot;</span>, max_length=<span class="hljs-number">30</span>, num_return_sequences=<span class="hljs-number">2</span>,
 )<!-- HTML_TAG_END --></pre></div>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -327,10 +325,10 @@ translator(<span class="hljs-string">&quot;Ce cours est produit par Hugging Face
 <p>Los pipelines vistos hasta el momento son principalmente para fines demostrativos. Fueron programados para tareas específicas y no pueden desarrollar variaciones de ellas. En el siguiente capítulo, aprenderás qué está detrás de una función <code>pipeline()</code> y cómo personalizar su comportamiento.</p>
 
 
-		<script type="module" data-hydrate="2hkqzd">
-		import { start } from "/docs/course/pr_145/es/_app/start-c25ccf7a.js";
+		<script type="module" data-hydrate="1g76xuh">
+		import { start } from "/docs/course/pr_145/es/_app/start-c2a34a4f.js";
 		start({
-			target: document.querySelector('[data-hydrate="2hkqzd"]').parentNode,
+			target: document.querySelector('[data-hydrate="1g76xuh"]').parentNode,
 			paths: {"base":"/docs/course/pr_145/es","assets":"/docs/course/pr_145/es"},
 			session: {},
 			route: false,
@@ -341,7 +339,7 @@ translator(<span class="hljs-string">&quot;Ce cours est produit par Hugging Face
 				error: null,
 				nodes: [
 					import("/docs/course/pr_145/es/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_145/es/_app/pages/chapter1/3.mdx-123cf3ce.js")
+						import("/docs/course/pr_145/es/_app/pages/chapter1/3.mdx-c4b41a60.js")
 				],
 				params: {}
 			}

@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پیش‌پردازش با توکِنایزر&quot;},{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;بردار‌های چند بعدی؟&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;سر مدل: درک اعداد درون مدل&quot;}],&quot;title&quot;:&quot;گذر از مدل&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;پس پردازش خروجی&quot;}],&quot;title&quot;:&quot;پشت صحنه خط‌تولید&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/assets/pages/__layout.svelte-048423b6.css">
-	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/start-a729d21c.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/start-c8ffcaa6.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/chunks/vendor-378cdcd7.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/pages/__layout.svelte-3c51a8cf.js">
-	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/pages/chapter2/2.mdx-96658a53.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/pages/chapter2/2.mdx-47c40ec6.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/chunks/Tip-f1830e12.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/chunks/Youtube-8def75c0.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fa/_app/chunks/CodeBlock-be794267.js">
@@ -37,10 +37,7 @@
 
 classifier = pipeline(<span class="hljs-string">&quot;sentiment-analysis&quot;</span>)
 classifier(
-    [
-        <span class="hljs-string">&quot;I&#x27;ve been waiting for a HuggingFace course my whole life.&quot;</span>,
-        <span class="hljs-string">&quot;I hate this so much!&quot;</span>,
-    ]
+    [<span class="hljs-string">&quot;I&#x27;ve been waiting for a HuggingFace course my whole life.&quot;</span>, <span class="hljs-string">&quot;I hate this so much!&quot;</span>,]
 )<!-- HTML_TAG_END --></pre></div></div>
 <p>این خروجی را دریافت کردیم:</p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -201,10 +198,10 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>خودتان امتحان کنید!</strong> دو(یا بیشتر) نوشته از خودتان را از خط‌تولید <code>sentiment-analysis</code> بگذرانید. سپس مراحلی که در اینجا دیدیم را تکرار کنید و مطمئن شوید همان نتایج را دریافت می کنید!</p></div></div>
 
 
-		<script type="module" data-hydrate="ufqqs4">
-		import { start } from "/docs/course/pr_145/fa/_app/start-a729d21c.js";
+		<script type="module" data-hydrate="1cetpy6">
+		import { start } from "/docs/course/pr_145/fa/_app/start-c8ffcaa6.js";
 		start({
-			target: document.querySelector('[data-hydrate="ufqqs4"]').parentNode,
+			target: document.querySelector('[data-hydrate="1cetpy6"]').parentNode,
 			paths: {"base":"/docs/course/pr_145/fa","assets":"/docs/course/pr_145/fa"},
 			session: {},
 			route: false,
@@ -215,7 +212,7 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 				error: null,
 				nodes: [
 					import("/docs/course/pr_145/fa/_app/pages/__layout.svelte-3c51a8cf.js"),
-						import("/docs/course/pr_145/fa/_app/pages/chapter2/2.mdx-96658a53.js")
+						import("/docs/course/pr_145/fa/_app/pages/chapter2/2.mdx-47c40ec6.js")
 				],
 				params: {}
 			}
