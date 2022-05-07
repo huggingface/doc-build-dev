@@ -1,10 +1,10 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;demander-de-laide-sur-les-forums&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;rdiger-un-bon-message-sur-le-forum&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;choisir-un-titre-descriptif&quot;,&quot;title&quot;:&quot;Choisir un titre descriptif&quot;},{&quot;local&quot;:&quot;formatage-de-vos-extraits-de-code&quot;,&quot;title&quot;:&quot;Formatage de vos extraits de code&quot;},{&quot;local&quot;:&quot;inclure-le-traceback-complet&quot;,&quot;title&quot;:&quot;Inclure le *traceback* complet&quot;},{&quot;local&quot;:&quot;fournir-un-exemple-reproductible&quot;,&quot;title&quot;:&quot;Fournir un exemple reproductible&quot;}],&quot;title&quot;:&quot;Rédiger un bon message sur le forum&quot;}],&quot;title&quot;:&quot;Demander de l&#39;aide sur les forums&quot;}" data-svelte="svelte-1phssyn">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;demander-de-laide-sur-les-forums&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;rdiger-un-bon-message-sur-le-forum&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;choisir-un-titre-descriptif&quot;,&quot;title&quot;:&quot;Choisir un titre descriptif&quot;},{&quot;local&quot;:&quot;formatage-de-vos-extraits-de-code&quot;,&quot;title&quot;:&quot;Formatage de vos extraits de code&quot;},{&quot;local&quot;:&quot;inclure-le-itracebacki-complet&quot;,&quot;title&quot;:&quot;Inclure le &lt;i&gt;traceback&lt;/i&gt; complet&quot;},{&quot;local&quot;:&quot;fournir-un-exemple-reproductible&quot;,&quot;title&quot;:&quot;Fournir un exemple reproductible&quot;}],&quot;title&quot;:&quot;Rédiger un bon message sur le forum&quot;}],&quot;title&quot;:&quot;Demander de l&#39;aide sur les forums&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/assets/pages/__layout.svelte-0ba3497a.css">
-	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/start-760fba6e.js">
+	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/start-07163e04.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/pages/chapter8/3.mdx-51a10070.js">
+	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/pages/chapter8/3.mdx-3c55d8ac.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/Youtube-c2a8cc39.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/IconCopyLink-483c28ba.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/CodeBlock-e5764662.js">
@@ -169,11 +169,11 @@ logits = model(**inputs).logits<!-- HTML_TAG_END --></pre></div>
 <p>La lecture du code source est déjà difficile dans un IDE, mais c’est encore plus difficile lorsque le code est copié et collé en texte brut ! Heureusement, le forum d’Hugging Face supporte l’utilisation de Markdown donc vous devriez toujours entourer vos blocs de code avec trois <em>backticks</em> (```) pour qu’ils soient plus facilement lisibles. Faisons cela pour embellir le message d’erreur et pendant que nous y sommes, rendons le corps un peu plus poli que notre version originale :</p>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter8/forum-topic03.png" alt="Our revised forum topic, with proper code formatting." width="100%"></div>
 <p>Comme vous pouvez le voir dans la capture d’écran, le fait d’entourer les blocs de code de <em>backticks</em> convertit le texte brut en code formaté, avec un style de couleur ! Notez également que des <em>backticks</em> simples peuvent être utilisés pour formater des variables en ligne comme nous l’avons fait pour <code>distilbert-base-uncased</code>. Ce sujet a l’air bien meilleur, et avec un peu de chance, nous pourrions trouver quelqu’un dans la communauté qui pourrait deviner à quoi correspond l’erreur. Cependant, au lieu de compter sur la chance, rendons la vie plus facile en incluant le <em>traceback</em> dans ses moindres détails !</p>
-<h3 class="relative group"><a id="inclure-le-traceback-complet" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#inclure-le-traceback-complet"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span>Inclure le *traceback* complet
+<h3 class="relative group"><a id="inclure-le-itracebacki-complet" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#inclure-le-itracebacki-complet"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Inclure le <i>traceback</i> complet
 	</span></h3>
 
-<p>Puisque la dernière ligne de la <em>traceback</em> est souvent suffisante pour déboguer votre propre code, il peut être tentant de ne fournir que cela dans votre sujet pour “gagner de la place”. Bien que bien intentionné, cela rend en fait le débogage du problème <em>plus difficile</em> pour les autres, car les informations situées plus haut dans la <em>traceback</em> peuvent également être très utiles. Une bonne pratique consiste donc à copier et coller la <em>traceback</em> <em>entière</em>, en veillant à ce qu’elle soit bien formatée. Comme ces tracebacks peuvent être assez longs, certaines personnes préfèrent les montrer après avoir expliqué le code source. C’est ce que nous allons faire. Maintenant, notre sujet de forum ressemble à ce qui suit :</p>
+<p>Puisque la dernière ligne de le <em>traceback</em> est souvent suffisante pour déboguer votre propre code, il peut être tentant de ne fournir que cela dans votre sujet pour “gagner de la place”. Bien que bien intentionné, cela rend en fait le débogage du problème <em>plus difficile</em> pour les autres, car les informations situées plus haut dans le <em>traceback</em> peuvent également être très utiles. Une bonne pratique consiste donc à copier et coller le <em>traceback</em> <em>entier</em>, en veillant à ce qu’elle soit bien formatée. Comme ces tracebacks peuvent être assez longs, certaines personnes préfèrent les montrer après avoir expliqué le code source. C’est ce que nous allons faire. Maintenant, notre sujet de forum ressemble à ce qui suit :</p>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter8/forum-topic04.png" alt="Our example forum topic, with the complete traceback." width="100%"></div>
 <p>Ceci est beaucoup plus informatif et un lecteur attentif pourrait être en mesure d’indiquer que le problème semble être dû à la transmission d’une longue entrée en raison de cette ligne dans le <em>traceback</em> :</p>
 <blockquote><p>Token indices sequence length is longer than the specified maximum sequence length for this model (583 &gt; 512).</p></blockquote>
@@ -187,10 +187,10 @@ logits = model(**inputs).logits<!-- HTML_TAG_END --></pre></div>
 <p>Ce sujet contient maintenant un bon lot d’informations et il est rédigé d’une manière qui a beaucoup plus de chances d’attirer l’attention de la communauté et d’obtenir une réponse utile. Avec ces directives de base, vous pouvez maintenant créer de superbes sujets pour trouver les réponses à vos questions sur 🤗 <em>Transformers</em> !</p>
 
 
-		<script type="module" data-hydrate="f6hq7s">
-		import { start } from "/docs/course/pr_167/fr/_app/start-760fba6e.js";
+		<script type="module" data-hydrate="172jfaz">
+		import { start } from "/docs/course/pr_167/fr/_app/start-07163e04.js";
 		start({
-			target: document.querySelector('[data-hydrate="f6hq7s"]').parentNode,
+			target: document.querySelector('[data-hydrate="172jfaz"]').parentNode,
 			paths: {"base":"/docs/course/pr_167/fr","assets":"/docs/course/pr_167/fr"},
 			session: {},
 			route: false,
@@ -201,7 +201,7 @@ logits = model(**inputs).logits<!-- HTML_TAG_END --></pre></div>
 				error: null,
 				nodes: [
 					import("/docs/course/pr_167/fr/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_167/fr/_app/pages/chapter8/3.mdx-51a10070.js")
+						import("/docs/course/pr_167/fr/_app/pages/chapter8/3.mdx-3c55d8ac.js")
 				],
 				params: {}
 			}

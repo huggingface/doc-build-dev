@@ -109,16 +109,17 @@ frameworks, so you can use your favourite tools for a wide variety of tasks!
 
 context_fr = r"""
 La r\xE9ponse \xE0 des questions consiste \xE0 extraire une r\xE9ponse d'un texte
-\xE0 partir d'une question. Un exemple de jeu de donn\xE9es de r\xE9ponse aux questions est le jeu de donn\xE9es SQuAD
-qui est enti\xE8rement bas\xE9 sur cette t\xE2che. Si vous souhaitez affiner un mod\xE8le
-mod\xE8le sur une t\xE2che SQuAD, vous pouvez utiliser le fichier
+\xE0 partir d'une question. Un exemple de jeu de donn\xE9es de r\xE9ponse aux questions est le 
+jeu de donn\xE9es SQuAD qui est enti\xE8rement bas\xE9 sur cette t\xE2che. Si vous souhaitez finetuner
+un mod\xE8le sur une t\xE2che SQuAD, vous pouvez utiliser le fichier
 exemples/pytorch/question-answering/run_squad.py.
 
 \u{1F917} Transformers est interop\xE9rable avec les frameworks PyTorch, TensorFlow et JAX.
 de sorte que vous pouvez utiliser vos outils pr\xE9f\xE9r\xE9s pour une grande vari\xE9t\xE9 de t\xE2ches !
 """
 
-question = "What is extractive question answering?"  # Qu'est-ce que la r\xE9ponse extractive aux questions ?
+question = "What is extractive question answering?"
+# Qu'est-ce que la r\xE9ponse extractive aux questions ?
 reader(question=question, context=context)`,highlighted:`reader = pipeline(<span class="hljs-string">&quot;question-answering&quot;</span>, model=model_checkpoint, revision=<span class="hljs-string">&quot;main&quot;</span>)
 
 context = <span class="hljs-string">r&quot;&quot;&quot;
@@ -134,16 +135,17 @@ frameworks, so you can use your favourite tools for a wide variety of tasks!
 
 context_fr = <span class="hljs-string">r&quot;&quot;&quot;
 La r\xE9ponse \xE0 des questions consiste \xE0 extraire une r\xE9ponse d&#x27;un texte
-\xE0 partir d&#x27;une question. Un exemple de jeu de donn\xE9es de r\xE9ponse aux questions est le jeu de donn\xE9es SQuAD
-qui est enti\xE8rement bas\xE9 sur cette t\xE2che. Si vous souhaitez affiner un mod\xE8le
-mod\xE8le sur une t\xE2che SQuAD, vous pouvez utiliser le fichier
+\xE0 partir d&#x27;une question. Un exemple de jeu de donn\xE9es de r\xE9ponse aux questions est le 
+jeu de donn\xE9es SQuAD qui est enti\xE8rement bas\xE9 sur cette t\xE2che. Si vous souhaitez finetuner
+un mod\xE8le sur une t\xE2che SQuAD, vous pouvez utiliser le fichier
 exemples/pytorch/question-answering/run_squad.py.
 
 \u{1F917} Transformers est interop\xE9rable avec les frameworks PyTorch, TensorFlow et JAX.
 de sorte que vous pouvez utiliser vos outils pr\xE9f\xE9r\xE9s pour une grande vari\xE9t\xE9 de t\xE2ches !
 &quot;&quot;&quot;</span>
 
-question = <span class="hljs-string">&quot;What is extractive question answering?&quot;</span>  <span class="hljs-comment"># Qu&#x27;est-ce que la r\xE9ponse extractive aux questions ?</span>
+question = <span class="hljs-string">&quot;What is extractive question answering?&quot;</span>
+<span class="hljs-comment"># Qu&#x27;est-ce que la r\xE9ponse extractive aux questions ?</span>
 reader(question=question, context=context)`}}),rs=new k({props:{code:`{'score': 0.38669535517692566,
  'start': 34,
  'end': 95,

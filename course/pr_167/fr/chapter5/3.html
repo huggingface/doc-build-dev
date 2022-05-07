@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;il-est-temps-de-trancher-et-de-dcouper&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;trancher-et-dcouper-nos-donnes&quot;,&quot;title&quot;:&quot;Trancher et découper nos données&quot;},{&quot;local&quot;:&quot;cration-de-nouvelles-colonnes&quot;,&quot;title&quot;:&quot;Création de nouvelles colonnes&quot;},{&quot;local&quot;:&quot;les-superpouvoirs-de-la-mthode-map&quot;,&quot;title&quot;:&quot;Les superpouvoirs de la méthode `map()`&quot;},{&quot;local&quot;:&quot;de-dataset-dataframe-et-vice-versa&quot;,&quot;title&quot;:&quot;De `Dataset` à `DataFrame` et vice versa&quot;},{&quot;local&quot;:&quot;cration-dun-ensemble-de-validation&quot;,&quot;title&quot;:&quot;Création d&#39;un ensemble de validation&quot;},{&quot;local&quot;:&quot;enregistrer-un-jeu-de-donnes&quot;,&quot;title&quot;:&quot;Enregistrer un jeu de données&quot;}],&quot;title&quot;:&quot;Il est temps de trancher et de découper&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/assets/pages/__layout.svelte-0ba3497a.css">
-	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/start-760fba6e.js">
+	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/start-07163e04.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/pages/chapter5/3.mdx-277f5442.js">
+	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/pages/chapter5/3.mdx-ae2d7a06.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/Tip-62b14c6e.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/Youtube-c2a8cc39.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/IconCopyLink-483c28ba.js">
@@ -62,12 +62,17 @@ drug_sample[:<span class="hljs-number">3</span>]<!-- HTML_TAG_END --></pre></div
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->{<span class="hljs-string">&#x27;Unnamed: 0&#x27;</span>: [<span class="hljs-number">87571</span>, <span class="hljs-number">178045</span>, <span class="hljs-number">80482</span>],
  <span class="hljs-string">&#x27;drugName&#x27;</span>: [<span class="hljs-string">&#x27;Naproxen&#x27;</span>, <span class="hljs-string">&#x27;Duloxetine&#x27;</span>, <span class="hljs-string">&#x27;Mobic&#x27;</span>],
- <span class="hljs-string">&#x27;condition&#x27;</span>: [<span class="hljs-string">&#x27;Gout, Acute&#x27;</span>, <span class="hljs-string">&#x27;ibromyalgia&#x27;</span>, <span class="hljs-string">&#x27;Inflammatory Conditions&#x27;</span>], <span class="hljs-comment">#[&#x27;Goutte aiguë&#x27;, &#x27;ibromyalgie&#x27;, &#x27;Affections inflammatoires&#x27;]</span>
- <span class="hljs-string">&#x27;review&#x27;</span>: [<span class="hljs-string">&#x27;&quot;like the previous person mention, I&amp;#039;m a strong believer of aleve, it works faster for my gout than the prescription meds I take. No more going to the doctor for refills.....Aleve works!&quot;&#x27;</span>, <span class="hljs-comment"># comme la personne précédente l&#x27;a mentionné, je suis un fervent partisan de l&#x27;aleve, il fonctionne plus rapidement pour ma goutte que les médicaments sur ordonnance que je prends. Je n&#x27;ai plus besoin d&#x27;aller chez le médecin pour des renouvellements.....Aleve fonctionne !&quot;</span>
-  <span class="hljs-string">&#x27;&quot;I have taken Cymbalta for about a year and a half for fibromyalgia pain. It is great\r\nas a pain reducer and an anti-depressant, however, the side effects outweighed \r\nany benefit I got from it. I had trouble with restlessness, being tired constantly,\r\ndizziness, dry mouth, numbness and tingling in my feet, and horrible sweating. I am\r\nbeing weaned off of it now. Went from 60 mg to 30mg and now to 15 mg. I will be\r\noff completely in about a week. The fibro pain is coming back, but I would rather deal with it than the side effects.&quot;&#x27;</span>, <span class="hljs-comment"># J&#x27;ai pris du Cymbalta pendant environ un an et demi pour des douleurs de la fibromyalgie. C&#x27;est un excellent analgésique et un antidépresseur, mais les effets secondaires l&#x27;ont emporté sur tous les avantages que j&#x27;en ai tirés. J&#x27;ai eu des problèmes d&#x27;agitation, de fatigue constante, de vertiges, de bouche sèche, d&#x27;engourdissement, de picotements dans les pieds, et de transpiration horrible. Je suis en train de m&#x27;en sevrer maintenant. Je suis passée de 60 mg à 30 mg et maintenant à 15 mg. Je l&#x27;arrêterai complètement dans environ une semaine. La douleur de la fibrose revient, mais je préfère la supporter plutôt que les effets secondaires.</span>
-  <span class="hljs-string">&#x27;&quot;I have been taking Mobic for over a year with no side effects other than an elevated blood pressure.  I had severe knee and ankle pain which completely went away after taking Mobic.  I attempted to stop the medication however pain returned after a few days.&quot;&#x27;</span>], <span class="hljs-comment"># J&#x27;ai pris Mobic pendant plus d&#x27;un an sans effets secondaires autres qu&#x27;une pression sanguine élevée.  J&#x27;avais de fortes douleurs au genou et à la cheville qui ont complètement disparu après avoir pris Mobic. J&#x27;ai essayé d&#x27;arrêter le médicament mais la douleur est revenue après quelques jours.&quot;</span>
+ <span class="hljs-string">&#x27;condition&#x27;</span>: [<span class="hljs-string">&#x27;Gout, Acute&#x27;</span>, <span class="hljs-string">&#x27;ibromyalgia&#x27;</span>, <span class="hljs-string">&#x27;Inflammatory Conditions&#x27;</span>], 
+ <span class="hljs-comment">#[&#x27;Goutte aiguë&#x27;, &#x27;ibromyalgie&#x27;, &#x27;Affections inflammatoires&#x27;]</span>
+ <span class="hljs-string">&#x27;review&#x27;</span>: [<span class="hljs-string">&#x27;&quot;like the previous person mention, I&amp;#039;m a strong believer of aleve, it works faster for my gout than the prescription meds I take. No more going to the doctor for refills.....Aleve works!&quot;&#x27;</span>, 
+ <span class="hljs-comment"># comme la personne précédente l&#x27;a mentionné, je suis un fervent partisan de l&#x27;aleve, il fonctionne plus rapidement pour ma goutte que les médicaments sur ordonnance que je prends. Je n&#x27;ai plus besoin d&#x27;aller chez le médecin pour des renouvellements.....Aleve fonctionne !&quot;</span>
+  <span class="hljs-string">&#x27;&quot;I have taken Cymbalta for about a year and a half for fibromyalgia pain. It is great\r\nas a pain reducer and an anti-depressant, however, the side effects outweighed \r\nany benefit I got from it. I had trouble with restlessness, being tired constantly,\r\ndizziness, dry mouth, numbness and tingling in my feet, and horrible sweating. I am\r\nbeing weaned off of it now. Went from 60 mg to 30mg and now to 15 mg. I will be\r\noff completely in about a week. The fibro pain is coming back, but I would rather deal with it than the side effects.&quot;&#x27;</span>, 
+  <span class="hljs-comment"># J&#x27;ai pris du Cymbalta pendant environ un an et demi pour des douleurs de la fibromyalgie. C&#x27;est un excellent analgésique et un antidépresseur, mais les effets secondaires l&#x27;ont emporté sur tous les avantages que j&#x27;en ai tirés. J&#x27;ai eu des problèmes d&#x27;agitation, de fatigue constante, de vertiges, de bouche sèche, d&#x27;engourdissement, de picotements dans les pieds, et de transpiration horrible. Je suis en train de m&#x27;en sevrer maintenant. Je suis passée de 60 mg à 30 mg et maintenant à 15 mg. Je l&#x27;arrêterai complètement dans environ une semaine. La douleur de la fibrose revient, mais je préfère la supporter plutôt que les effets secondaires.</span>
+  <span class="hljs-string">&#x27;&quot;I have been taking Mobic for over a year with no side effects other than an elevated blood pressure.  I had severe knee and ankle pain which completely went away after taking Mobic.  I attempted to stop the medication however pain returned after a few days.&quot;&#x27;</span>], 
+  <span class="hljs-comment"># J&#x27;ai pris Mobic pendant plus d&#x27;un an sans effets secondaires autres qu&#x27;une pression sanguine élevée.  J&#x27;avais de fortes douleurs au genou et à la cheville qui ont complètement disparu après avoir pris Mobic. J&#x27;ai essayé d&#x27;arrêter le médicament mais la douleur est revenue après quelques jours.&quot;</span>
  <span class="hljs-string">&#x27;rating&#x27;</span>: [<span class="hljs-number">9.0</span>, <span class="hljs-number">3.0</span>, <span class="hljs-number">10.0</span>],
- <span class="hljs-string">&#x27;date&#x27;</span>: [<span class="hljs-string">&#x27;September 2, 2015&#x27;</span>, <span class="hljs-string">&#x27;November 7, 2011&#x27;</span>, <span class="hljs-string">&#x27;June 5, 2013&#x27;</span>], <span class="hljs-comment">#[&#x27;2 septembre 2015&#x27;, &#x27;7 novembre 2011&#x27;, &#x27;5 juin 2013&#x27;]</span>
+ <span class="hljs-string">&#x27;date&#x27;</span>: [<span class="hljs-string">&#x27;September 2, 2015&#x27;</span>, <span class="hljs-string">&#x27;November 7, 2011&#x27;</span>, <span class="hljs-string">&#x27;June 5, 2013&#x27;</span>], 
+        <span class="hljs-comment">#[&#x27;2 septembre 2015&#x27;, &#x27;7 novembre 2011&#x27;, &#x27;5 juin 2013&#x27;]</span>
  <span class="hljs-string">&#x27;usefulCount&#x27;</span>: [<span class="hljs-number">36</span>, <span class="hljs-number">13</span>, <span class="hljs-number">128</span>]}<!-- HTML_TAG_END --></pre></div>
 <p>Notez que nous avons corrigé la graine dans <code>Dataset.shuffle()</code> à des fins de reproductibilité. <code>Dataset.select()</code> attend un itérable d’indices, nous avons donc passé <code>range(1000)</code> pour récupérer les 1 000 premiers exemples du jeu de données mélangé. À partir de cet échantillon, nous pouvons déjà voir quelques bizarreries dans notre jeu de données :</p>
 <ul><li>la colonne <code>Unnamed: 0</code> ressemble étrangement à un identifiant anonyme pour chaque patient,</li>
@@ -209,7 +214,8 @@ drug_dataset[<span class="hljs-string">&quot;train&quot;</span>][<span class="hl
 	<pre><!-- HTML_TAG_START -->{<span class="hljs-string">&#x27;patient_id&#x27;</span>: <span class="hljs-number">206461</span>,
  <span class="hljs-string">&#x27;drugName&#x27;</span>: <span class="hljs-string">&#x27;Valsartan&#x27;</span>,
  <span class="hljs-string">&#x27;condition&#x27;</span>: <span class="hljs-string">&#x27;left ventricular dysfunction&#x27;</span>, <span class="hljs-comment"># dysfonctionnement du ventricule gauche</span>
- <span class="hljs-string">&#x27;review&#x27;</span>: <span class="hljs-string">&#x27;&quot;It has no side effect, I take it in combination of Bystolic 5 Mg and Fish Oil&quot;&#x27;</span>, <span class="hljs-comment"># Il n&#x27;a aucun effet secondaire, je le prends en combinaison avec Bystolic 5 mg et de l&#x27;huile de poisson.</span>
+ <span class="hljs-string">&#x27;review&#x27;</span>: <span class="hljs-string">&#x27;&quot;It has no side effect, I take it in combination of Bystolic 5 Mg and Fish Oil&quot;&#x27;</span>, 
+           <span class="hljs-comment"># Il n&#x27;a aucun effet secondaire, je le prends en combinaison avec Bystolic 5 mg et de l&#x27;huile de poisson.</span>
  <span class="hljs-string">&#x27;rating&#x27;</span>: <span class="hljs-number">9.0</span>,
  <span class="hljs-string">&#x27;date&#x27;</span>: <span class="hljs-string">&#x27;May 20, 2012&#x27;</span>, <span class="hljs-comment"># 20 mai 2012</span>
  <span class="hljs-string">&#x27;usefulCount&#x27;</span>: <span class="hljs-number">27</span>,
@@ -226,10 +232,12 @@ drug_dataset[<span class="hljs-string">&quot;train&quot;</span>][<span class="hl
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->{<span class="hljs-string">&#x27;patient_id&#x27;</span>: [<span class="hljs-number">103488</span>, <span class="hljs-number">23627</span>, <span class="hljs-number">20558</span>],
  <span class="hljs-string">&#x27;drugName&#x27;</span>: [<span class="hljs-string">&#x27;Loestrin 21 1 / 20&#x27;</span>, <span class="hljs-string">&#x27;Chlorzoxazone&#x27;</span>, <span class="hljs-string">&#x27;Nucynta&#x27;</span>],
- <span class="hljs-string">&#x27;condition&#x27;</span>: [<span class="hljs-string">&#x27;birth control&#x27;</span>, <span class="hljs-string">&#x27;muscle spasm&#x27;</span>, <span class="hljs-string">&#x27;pain&#x27;</span>], <span class="hljs-comment"># contraception, spasme musculaire, douleur.</span>
+ <span class="hljs-string">&#x27;condition&#x27;</span>: [<span class="hljs-string">&#x27;birth control&#x27;</span>, <span class="hljs-string">&#x27;muscle spasm&#x27;</span>, <span class="hljs-string">&#x27;pain&#x27;</span>], 
+              <span class="hljs-comment"># contraception, spasme musculaire, douleur.</span>
  <span class="hljs-string">&#x27;review&#x27;</span>: [<span class="hljs-string">&#x27;&quot;Excellent.&quot;&#x27;</span>, <span class="hljs-string">&#x27;&quot;useless&quot;&#x27;</span>, <span class="hljs-string">&#x27;&quot;ok&quot;&#x27;</span>], <span class="hljs-comment"># Excellent, inutile, ok </span>
  <span class="hljs-string">&#x27;rating&#x27;</span>: [<span class="hljs-number">10.0</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">6.0</span>],
- <span class="hljs-string">&#x27;date&#x27;</span>: [<span class="hljs-string">&#x27;November 4, 2008&#x27;</span>, <span class="hljs-string">&#x27;March 24, 2017&#x27;</span>, <span class="hljs-string">&#x27;August 20, 2016&#x27;</span>], <span class="hljs-comment"># 4 novembre 2008, 24 mars 2017, 20 août 2016</span>
+ <span class="hljs-string">&#x27;date&#x27;</span>: [<span class="hljs-string">&#x27;November 4, 2008&#x27;</span>, <span class="hljs-string">&#x27;March 24, 2017&#x27;</span>, <span class="hljs-string">&#x27;August 20, 2016&#x27;</span>], 
+         <span class="hljs-comment"># 4 novembre 2008, 24 mars 2017, 20 août 2016</span>
  <span class="hljs-string">&#x27;usefulCount&#x27;</span>: [<span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>],
  <span class="hljs-string">&#x27;review_length&#x27;</span>: [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]}<!-- HTML_TAG_END --></pre></div>
 <p>Comme nous le soupçonnions, certaines critiques ne contiennent qu’un seul mot, ce qui, bien que cela puisse convenir à l’analyse des sentiments, n’est pas informatif si nous voulons prédire la condition.</p>
@@ -711,10 +719,10 @@ drug_dataset_reloaded = load_dataset(<span class="hljs-string">&quot;json&quot;<
 <p>Ensuite, nous verrons comment 🤗 <em>Datasets</em> peut vous permettre de travailler avec d’énormes jeux de données sans faire exploser votre ordinateur portable !</p>
 
 
-		<script type="module" data-hydrate="g7nxyy">
-		import { start } from "/docs/course/pr_167/fr/_app/start-760fba6e.js";
+		<script type="module" data-hydrate="oacabe">
+		import { start } from "/docs/course/pr_167/fr/_app/start-07163e04.js";
 		start({
-			target: document.querySelector('[data-hydrate="g7nxyy"]').parentNode,
+			target: document.querySelector('[data-hydrate="oacabe"]').parentNode,
 			paths: {"base":"/docs/course/pr_167/fr","assets":"/docs/course/pr_167/fr"},
 			session: {},
 			route: false,
@@ -725,7 +733,7 @@ drug_dataset_reloaded = load_dataset(<span class="hljs-string">&quot;json&quot;<
 				error: null,
 				nodes: [
 					import("/docs/course/pr_167/fr/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_167/fr/_app/pages/chapter5/3.mdx-277f5442.js")
+						import("/docs/course/pr_167/fr/_app/pages/chapter5/3.mdx-ae2d7a06.js")
 				],
 				params: {}
 			}

@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;que-faire-lorsque-vous-obtenez-une-erreur&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;dboguer-le-pipeline-partir-de-itransformersi&quot;,&quot;title&quot;:&quot;Déboguer le pipeline à partir de 🤗 &lt;i&gt;Transformers&lt;/i&gt;&quot;},{&quot;local&quot;:&quot;dboguer-la-passe-avant-de-votre-modle&quot;,&quot;title&quot;:&quot;Déboguer la passe avant de votre modèle&quot;}],&quot;title&quot;:&quot;Que faire lorsque vous obtenez une erreur&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/assets/pages/__layout.svelte-0ba3497a.css">
-	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/start-760fba6e.js">
+	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/start-07163e04.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/pages/chapter8/2.mdx-eae6c690.js">
+	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/pages/chapter8/2.mdx-8228c9a3.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/Tip-62b14c6e.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/Youtube-c2a8cc39.js">
 	<link rel="modulepreload" href="/docs/course/pr_167/fr/_app/chunks/IconCopyLink-483c28ba.js">
@@ -184,16 +184,17 @@ frameworks, so you can use your favourite tools for a wide variety of tasks!
 
 context_fr = <span class="hljs-string">r&quot;&quot;&quot;
 La réponse à des questions consiste à extraire une réponse d&#x27;un texte
-à partir d&#x27;une question. Un exemple de jeu de données de réponse aux questions est le jeu de données SQuAD
-qui est entièrement basé sur cette tâche. Si vous souhaitez affiner un modèle
-modèle sur une tâche SQuAD, vous pouvez utiliser le fichier
+à partir d&#x27;une question. Un exemple de jeu de données de réponse aux questions est le 
+jeu de données SQuAD qui est entièrement basé sur cette tâche. Si vous souhaitez finetuner
+un modèle sur une tâche SQuAD, vous pouvez utiliser le fichier
 exemples/pytorch/question-answering/run_squad.py.
 
 🤗 Transformers est interopérable avec les frameworks PyTorch, TensorFlow et JAX.
 de sorte que vous pouvez utiliser vos outils préférés pour une grande variété de tâches !
 &quot;&quot;&quot;</span>
 
-question = <span class="hljs-string">&quot;What is extractive question answering?&quot;</span>  <span class="hljs-comment"># Qu&#x27;est-ce que la réponse extractive aux questions ?</span>
+question = <span class="hljs-string">&quot;What is extractive question answering?&quot;</span>
+<span class="hljs-comment"># Qu&#x27;est-ce que la réponse extractive aux questions ?</span>
 reader(question=question, context=context)<!-- HTML_TAG_END --></pre></div>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -363,10 +364,10 @@ Answer: pytorch, tensorflow, and jax # pytorch, tensorflow et jax
 <p>Super, ça a marché ! Voilà un excellent exemple de l’utilité de Stack Overflow : en identifiant un problème similaire, nous avons pu bénéficier de l’expérience d’autres membres de la communauté. Cependant, une recherche de ce type ne donne pas toujours une réponse pertinente. Que faire alors dans ce cas ? Heureusement, il existe une communauté accueillante de développeurs sur le <a href="https://discuss.huggingface.co/" rel="nofollow">forum d’Hugging Face</a> qui peut vous aider ! Dans la prochaine section, nous verrons comment rédiger de bonnes questions sur les forums pour avoir de bonnes chances d’obtenir une réponse.</p>
 
 
-		<script type="module" data-hydrate="5xbnlr">
-		import { start } from "/docs/course/pr_167/fr/_app/start-760fba6e.js";
+		<script type="module" data-hydrate="1x6189r">
+		import { start } from "/docs/course/pr_167/fr/_app/start-07163e04.js";
 		start({
-			target: document.querySelector('[data-hydrate="5xbnlr"]').parentNode,
+			target: document.querySelector('[data-hydrate="1x6189r"]').parentNode,
 			paths: {"base":"/docs/course/pr_167/fr","assets":"/docs/course/pr_167/fr"},
 			session: {},
 			route: false,
@@ -377,7 +378,7 @@ Answer: pytorch, tensorflow, and jax # pytorch, tensorflow et jax
 				error: null,
 				nodes: [
 					import("/docs/course/pr_167/fr/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_167/fr/_app/pages/chapter8/2.mdx-eae6c690.js")
+						import("/docs/course/pr_167/fr/_app/pages/chapter8/2.mdx-8228c9a3.js")
 				],
 				params: {}
 			}
