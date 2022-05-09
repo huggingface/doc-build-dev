@@ -320,8 +320,8 @@ Random seed that will be set at the beginning of training. To ensure reproducibi
 Random seed to be used with data samplers. If not set, random generators for data sampling will use the
 same seed as <code>seed</code>. This can be used to ensure reproducibility of data sampling, independent of the model
 seed.`,name:"data_seed"},{anchor:"transformers.TrainingArguments.use_ipex",description:`<strong>use_ipex</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
-Use Intel extension for PyTorch when it is available.
-<a href="https://github.com/intel/intel-extension-for-pytorch" rel="nofollow">IPEX installation</a>.`,name:"use_ipex"},{anchor:"transformers.TrainingArguments.jit_mode(bool,",description:`<strong>jit_mode(<code>bool</code>,</strong> <em>optional</em>, defaults to <code>False</code>) &#x2014;
+Use Intel extension for PyTorch when it is available. <a href="https://github.com/intel/intel-extension-for-pytorch" rel="nofollow">IPEX
+installation</a>.`,name:"use_ipex"},{anchor:"transformers.TrainingArguments.jit_mode(bool,",description:`<strong>jit_mode(<code>bool</code>,</strong> <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Try to use PyTorch jit trace for inference.`,name:"jit_mode(bool,"},{anchor:"transformers.TrainingArguments.bf16",description:`<strong>bf16</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to use bf16 16-bit (mixed) precision training instead of 32-bit training. Requires Ampere or higher
 NVIDIA architecture or using CPU (no_cuda). This is an experimental API and it may change.`,name:"bf16"},{anchor:"transformers.TrainingArguments.fp16",description:`<strong>fp16</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
@@ -329,9 +329,9 @@ Whether to use fp16 16-bit (mixed) precision training instead of 32-bit training
 For <code>fp16</code> training, Apex AMP optimization level selected in [&#x2018;O0&#x2019;, &#x2018;O1&#x2019;, &#x2018;O2&#x2019;, and &#x2018;O3&#x2019;]. See details on
 the <a href="https://nvidia.github.io/apex/amp" rel="nofollow">Apex documentation</a>.`,name:"fp16_opt_level"},{anchor:"transformers.TrainingArguments.fp16_backend",description:`<strong>fp16_backend</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;auto&quot;</code>) &#x2014;
 This argument is deprecated. Use <code>half_precision_backend</code> instead.`,name:"fp16_backend"},{anchor:"transformers.TrainingArguments.half_precision_backend",description:`<strong>half_precision_backend</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;auto&quot;</code>) &#x2014;
-The backend to use for mixed precision training. Must be one of <code>&quot;auto&quot;, &quot;cuda_amp&quot;, &quot;apex&quot;, &quot;cpu_amp&quot;</code>. <code>&quot;auto&quot;</code>
-will use CPU/CUDA AMP or APEX depending on the PyTorch version detected, while the other choices will force the
-requested backend.`,name:"half_precision_backend"},{anchor:"transformers.TrainingArguments.bf16_full_eval",description:`<strong>bf16_full_eval</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
+The backend to use for mixed precision training. Must be one of <code>&quot;auto&quot;, &quot;cuda_amp&quot;, &quot;apex&quot;, &quot;cpu_amp&quot;</code>.
+<code>&quot;auto&quot;</code> will use CPU/CUDA AMP or APEX depending on the PyTorch version detected, while the other choices
+will force the requested backend.`,name:"half_precision_backend"},{anchor:"transformers.TrainingArguments.bf16_full_eval",description:`<strong>bf16_full_eval</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to use full bfloat16 evaluation instead of 32-bit. This will be faster and save memory but can harm
 metric values. This is an experimental API and it may change.`,name:"bf16_full_eval"},{anchor:"transformers.TrainingArguments.fp16_full_eval",description:`<strong>fp16_full_eval</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to use full float16 evaluation instead of 32-bit. This will be faster and save memory but can harm
@@ -564,8 +564,8 @@ Random seed that will be set at the beginning of training. To ensure reproducibi
 Random seed to be used with data samplers. If not set, random generators for data sampling will use the
 same seed as <code>seed</code>. This can be used to ensure reproducibility of data sampling, independent of the model
 seed.`,name:"data_seed"},{anchor:"transformers.Seq2SeqTrainingArguments.use_ipex",description:`<strong>use_ipex</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
-Use Intel extension for PyTorch when it is available.
-<a href="https://github.com/intel/intel-extension-for-pytorch" rel="nofollow">IPEX installation</a>.`,name:"use_ipex"},{anchor:"transformers.Seq2SeqTrainingArguments.jit_mode(bool,",description:`<strong>jit_mode(<code>bool</code>,</strong> <em>optional</em>, defaults to <code>False</code>) &#x2014;
+Use Intel extension for PyTorch when it is available. <a href="https://github.com/intel/intel-extension-for-pytorch" rel="nofollow">IPEX
+installation</a>.`,name:"use_ipex"},{anchor:"transformers.Seq2SeqTrainingArguments.jit_mode(bool,",description:`<strong>jit_mode(<code>bool</code>,</strong> <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Try to use PyTorch jit trace for inference.`,name:"jit_mode(bool,"},{anchor:"transformers.Seq2SeqTrainingArguments.bf16",description:`<strong>bf16</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to use bf16 16-bit (mixed) precision training instead of 32-bit training. Requires Ampere or higher
 NVIDIA architecture or using CPU (no_cuda). This is an experimental API and it may change.`,name:"bf16"},{anchor:"transformers.Seq2SeqTrainingArguments.fp16",description:`<strong>fp16</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
@@ -573,9 +573,9 @@ Whether to use fp16 16-bit (mixed) precision training instead of 32-bit training
 For <code>fp16</code> training, Apex AMP optimization level selected in [&#x2018;O0&#x2019;, &#x2018;O1&#x2019;, &#x2018;O2&#x2019;, and &#x2018;O3&#x2019;]. See details on
 the <a href="https://nvidia.github.io/apex/amp" rel="nofollow">Apex documentation</a>.`,name:"fp16_opt_level"},{anchor:"transformers.Seq2SeqTrainingArguments.fp16_backend",description:`<strong>fp16_backend</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;auto&quot;</code>) &#x2014;
 This argument is deprecated. Use <code>half_precision_backend</code> instead.`,name:"fp16_backend"},{anchor:"transformers.Seq2SeqTrainingArguments.half_precision_backend",description:`<strong>half_precision_backend</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot;auto&quot;</code>) &#x2014;
-The backend to use for mixed precision training. Must be one of <code>&quot;auto&quot;, &quot;cuda_amp&quot;, &quot;apex&quot;, &quot;cpu_amp&quot;</code>. <code>&quot;auto&quot;</code>
-will use CPU/CUDA AMP or APEX depending on the PyTorch version detected, while the other choices will force the
-requested backend.`,name:"half_precision_backend"},{anchor:"transformers.Seq2SeqTrainingArguments.bf16_full_eval",description:`<strong>bf16_full_eval</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
+The backend to use for mixed precision training. Must be one of <code>&quot;auto&quot;, &quot;cuda_amp&quot;, &quot;apex&quot;, &quot;cpu_amp&quot;</code>.
+<code>&quot;auto&quot;</code> will use CPU/CUDA AMP or APEX depending on the PyTorch version detected, while the other choices
+will force the requested backend.`,name:"half_precision_backend"},{anchor:"transformers.Seq2SeqTrainingArguments.bf16_full_eval",description:`<strong>bf16_full_eval</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to use full bfloat16 evaluation instead of 32-bit. This will be faster and save memory but can harm
 metric values. This is an experimental API and it may change.`,name:"bf16_full_eval"},{anchor:"transformers.Seq2SeqTrainingArguments.fp16_full_eval",description:`<strong>fp16_full_eval</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether to use full float16 evaluation instead of 32-bit. This will be faster and save memory but can harm
