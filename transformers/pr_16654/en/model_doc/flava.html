@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;flava&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.FlavaConfig&quot;,&quot;title&quot;:&quot;FlavaConfig&quot;},{&quot;local&quot;:&quot;transformers.FlavaTextConfig&quot;,&quot;title&quot;:&quot;FlavaTextConfig&quot;},{&quot;local&quot;:&quot;transformers.FlavaImageConfig&quot;,&quot;title&quot;:&quot;FlavaImageConfig&quot;},{&quot;local&quot;:&quot;transformers.FlavaMultimodalConfig&quot;,&quot;title&quot;:&quot;FlavaMultimodalConfig&quot;},{&quot;local&quot;:&quot;transformers.FlavaImageCodebookConfig&quot;,&quot;title&quot;:&quot;FlavaImageCodebookConfig&quot;},{&quot;local&quot;:&quot;transformers.FlavaProcessor&quot;,&quot;title&quot;:&quot;FlavaProcessor&quot;},{&quot;local&quot;:&quot;transformers.FlavaFeatureExtractor&quot;,&quot;title&quot;:&quot;FlavaFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.FlavaForPreTraining&quot;,&quot;title&quot;:&quot;FlavaForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.FlavaModel&quot;,&quot;title&quot;:&quot;FlavaModel&quot;},{&quot;local&quot;:&quot;transformers.FlavaImageCodebook&quot;,&quot;title&quot;:&quot;FlavaImageCodebook&quot;},{&quot;local&quot;:&quot;transformers.FlavaTextModel&quot;,&quot;title&quot;:&quot;FlavaTextModel&quot;},{&quot;local&quot;:&quot;transformers.FlavaImageModel&quot;,&quot;title&quot;:&quot;FlavaImageModel&quot;},{&quot;local&quot;:&quot;transformers.FlavaMultimodalModel&quot;,&quot;title&quot;:&quot;FlavaMultimodalModel&quot;}],&quot;title&quot;:&quot;FLAVA&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/start-0a017fc1.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/start-fcd185d9.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/pages/model_doc/flava.mdx-071d5e27.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/pages/model_doc/flava.mdx-8333375b.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16654/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -733,8 +733,8 @@ the docstring of this method for more information.</p></div></div>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_center_crop<span class="opacity-60">: bool = True</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">crop_size<span class="opacity-60">: typing.Union[int, typing.Tuple[int, int]] = 224</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">do_normalize<span class="opacity-60">: bool = True</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_mean<span class="opacity-60">: typing.Tuple[float, float, float] = (0.48145466, 0.4578275, 0.40821073)</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_std<span class="opacity-60">: typing.Tuple[float, float, float] = (0.26862954, 0.26130258, 0.27577711)</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_mean<span class="opacity-60">: typing.Tuple[float, float, float] = [0.48145466, 0.4578275, 0.40821073]</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">image_std<span class="opacity-60">: typing.Tuple[float, float, float] = [0.26862954, 0.26130258, 0.27577711]</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_size_patches<span class="opacity-60">: int = 14</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">total_mask_patches<span class="opacity-60">: int = 75</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">mask_group_min_patches<span class="opacity-60">: int = 16</span></span>
@@ -748,8 +748,8 @@ the docstring of this method for more information.</p></div></div>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">codebook_crop_size<span class="opacity-60">: int = 112</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">codebook_do_map_pixels<span class="opacity-60">: bool = True</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">codebook_do_normalize<span class="opacity-60">: bool = True</span></span>
-				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">codebook_image_mean<span class="opacity-60">: typing.Tuple[float, float, float] = (0.0, 0.0, 0.0)</span></span>
-				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">codebook_image_std<span class="opacity-60">: typing.Tuple[float, float, float] = (1.0, 1.0, 1.0)</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">codebook_image_mean<span class="opacity-60">: typing.Tuple[float, float, float] = [0.0, 0.0, 0.0]</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">codebook_image_std<span class="opacity-60">: typing.Tuple[float, float, float] = [1.0, 1.0, 1.0]</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60">: typing.Any</span></span>
 				</span>
 			<span>)</span>
@@ -2013,10 +2013,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>last_hidden_states = outputs.last_hidden_state<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="k33yto">
-		import { start } from "/docs/transformers/pr_16654/en/_app/start-0a017fc1.js";
+		<script type="module" data-hydrate="1wep2ss">
+		import { start } from "/docs/transformers/pr_16654/en/_app/start-fcd185d9.js";
 		start({
-			target: document.querySelector('[data-hydrate="k33yto"]').parentNode,
+			target: document.querySelector('[data-hydrate="1wep2ss"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16654/en","assets":"/docs/transformers/pr_16654/en"},
 			session: {},
 			route: false,
@@ -2027,7 +2027,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16654/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16654/en/_app/pages/model_doc/flava.mdx-071d5e27.js")
+						import("/docs/transformers/pr_16654/en/_app/pages/model_doc/flava.mdx-8333375b.js")
 				],
 				params: {}
 			}
