@@ -1,10 +1,10 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;introduction-to-gradio-blocks&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;why-blocks&quot;,&quot;title&quot;:&quot;Why Blocks 🧱?&quot;},{&quot;local&quot;:&quot;lets-start-by-creating-a-simple-example-using-blocks&quot;,&quot;title&quot;:&quot;Let&#39;s start by creating a simple example using Blocks:&quot;},{&quot;local&quot;:&quot;lets-explore-layouts&quot;,&quot;title&quot;:&quot;Let&#39;s explore layouts:&quot;},{&quot;local&quot;:&quot;lets-explore-events&quot;,&quot;title&quot;:&quot;Let&#39;s explore events:&quot;},{&quot;local&quot;:&quot;multistep-demos&quot;,&quot;title&quot;:&quot;Multistep Demos:&quot;},{&quot;local&quot;:&quot;updating-component-properties&quot;,&quot;title&quot;:&quot;Updating Component Properties:&quot;}],&quot;title&quot;:&quot;Introduction to Gradio Blocks&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/assets/pages/__layout.svelte-46aa648f.css">
-	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/start-1dddc955.js">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;introduction-to-gradio-blocks&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;why-blocks&quot;,&quot;title&quot;:&quot;Why Blocks 🧱?&quot;},{&quot;local&quot;:&quot;lets-start-by-creating-a-simple-example-using-blocks&quot;,&quot;title&quot;:&quot;Let&#39;s start by creating a simple example using Blocks:&quot;},{&quot;local&quot;:&quot;lets-explore-layouts&quot;,&quot;title&quot;:&quot;Let&#39;s explore layouts:&quot;},{&quot;local&quot;:&quot;lets-explore-events&quot;,&quot;title&quot;:&quot;Let&#39;s explore events:&quot;},{&quot;local&quot;:&quot;multistep-demos&quot;,&quot;title&quot;:&quot;Multistep Demos:&quot;},{&quot;local&quot;:&quot;updating-component-properties&quot;,&quot;title&quot;:&quot;Updating Component Properties&quot;}],&quot;title&quot;:&quot;Introduction to Gradio Blocks&quot;}" data-svelte="svelte-1phssyn">
+	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/assets/pages/__layout.svelte-9b9c9c55.css">
+	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/start-fcf1ff7d.js">
 	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/pages/chapter9/7.mdx-ce10c752.js">
+	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/pages/chapter9/7.mdx-26c30e14.js">
 	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/chunks/IconCopyLink-483c28ba.js">
 	<link rel="modulepreload" href="/docs/course/pr_172/en/_app/chunks/CodeBlock-e5764662.js"> 
 
@@ -16,15 +16,15 @@
 	<span>Introduction to Gradio Blocks
 	</span></h1>
 
-<p>So far, in the previous sections we have explored and created demos using <code>gradio.Interface</code>. In this section we will introduce our <strong>newly developed</strong> low-level API called <code>gradio.Blocks</code>.</p>
-<p>What’s the difference between <code>Interface</code> and <code>Blocks</code>?</p>
-<ul><li><p>⚡ <code>gradio.Interface</code>: a high-level API that allows you to create a full machine learning demo simply by providing a list of inputs and outputs.</p></li>
-<li><p>🧱 <code>gradio.Blocks</code>: a low-level API that allows you to have full control over the data flows and layout of your application. You can build very complex, multi-step applications using Blocks (as in “building blocks”).</p></li></ul>
+<p>In the previous sections we have explored and created demos using the <code>Interface</code> class. In this section we will introduce our <strong>newly developed</strong> low-level API called <code>gradio.Blocks</code>.</p>
+<p>Now, what’s the difference between <code>Interface</code> and <code>Blocks</code>?</p>
+<ul><li><p>⚡ <code>Interface</code>: a high-level API that allows you to create a full machine learning demo simply by providing a list of inputs and outputs.</p></li>
+<li><p>🧱 <code>Blocks</code>: a low-level API that allows you to have full control over the data flows and layout of your application. You can build very complex, multi-step applications using <code>Blocks</code> (as in “building blocks”).</p></li></ul>
 <h3 class="relative group"><a id="why-blocks" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#why-blocks"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Why Blocks 🧱?
 	</span></h3>
 
-<p>As shown in previous sections, by using gradio.Interface, you can easily create full-fledged machine learning demos with just a few lines of code. The Interface API is extremely easy to use but lacks the flexibility the Blocks API provides. For example, you might want to:</p>
+<p>As we saw in the previous sections, the <code>Interface</code> class allows you to easily create full-fledged machine learning demos with just a few lines of code. The <code>Interface</code> API is extremely easy to use but lacks the flexibility that the <code>Blocks</code> API provides. For example, you might want to:</p>
 <ul><li>Group together related demos as multiple tabs in one web app</li>
 <li>Change the layout of your demo instead of having all of the inputs on the left and outputs on the right</li>
 <li>Have multi-step interfaces, in which the output of one model becomes the input to the next model, or have more flexible data flows in general</li>
@@ -189,11 +189,11 @@ demo = gr.Blocks()
 demo.launch()<!-- HTML_TAG_END --></pre></div>
 <iframe src="https://hf.space/gradioiframe/course-demos/blocks_multi_step/+" frameborder="0" height="550" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
 <h3 class="relative group"><a id="updating-component-properties" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#updating-component-properties"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span>Updating Component Properties:
+	<span>Updating Component Properties
 	</span></h3>
 
-<p>So far, we have seen how to create events to update the value of another component. But if you want to change other properties of a component (like the visibility of a textbox or the choices in a radio button group)? You can do this by returning a component class’s update() method instead of a regular return value from your function.</p>
-<p>This is perhaps most easily illustrated with an example:</p>
+<p>So far, we have seen how to create events to update the value of another component. But what happens if you want to change other properties of a component, like the visibility of a textbox or the choices in a radio button group? You can do this by returning a component class’s <code>update()</code> method instead of a regular return value from your function.</p>
+<p>This is most easily illustrated with an example:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -219,13 +219,13 @@ demo.launch()<!-- HTML_TAG_END --></pre></div>
     radio.change(fn=change_textbox, inputs=radio, outputs=text)
     block.launch()<!-- HTML_TAG_END --></pre></div>
 <iframe src="https://hf.space/gradioiframe/course-demos/blocks_update_component_properties/+" frameborder="0" height="300" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
-<p>We just explored all the core concepts of Blocks! Just like with Interfaces, you can create cool demos that can be shared by using <code>share=True</code> in the <code>launch()</code> method or deployed on <a href="https://huggingface.co/spaces" rel="nofollow">Hugging Face Spaces</a>.</p>
+<p>We just explored all the core concepts of <code>Blocks</code>! Just like with <code>Interfaces</code>, you can create cool demos that can be shared by using <code>share=True</code> in the <code>launch()</code> method or deployed on <a href="https://huggingface.co/spaces" rel="nofollow">Hugging Face Spaces</a>.</p>
 
 
-		<script type="module" data-hydrate="c2y04p">
-		import { start } from "/docs/course/pr_172/en/_app/start-1dddc955.js";
+		<script type="module" data-hydrate="oolfum">
+		import { start } from "/docs/course/pr_172/en/_app/start-fcf1ff7d.js";
 		start({
-			target: document.querySelector('[data-hydrate="c2y04p"]').parentNode,
+			target: document.querySelector('[data-hydrate="oolfum"]').parentNode,
 			paths: {"base":"/docs/course/pr_172/en","assets":"/docs/course/pr_172/en"},
 			session: {},
 			route: false,
@@ -236,7 +236,7 @@ demo.launch()<!-- HTML_TAG_END --></pre></div>
 				error: null,
 				nodes: [
 					import("/docs/course/pr_172/en/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_172/en/_app/pages/chapter9/7.mdx-ce10c752.js")
+						import("/docs/course/pr_172/en/_app/pages/chapter9/7.mdx-26c30e14.js")
 				],
 				params: {}
 			}
