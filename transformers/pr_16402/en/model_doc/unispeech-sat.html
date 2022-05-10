@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;unispeechsat&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatConfig&quot;,&quot;title&quot;:&quot;UniSpeechSatConfig&quot;},{&quot;local&quot;:&quot;transformers.models.unispeech_sat.modeling_unispeech_sat.UniSpeechSatBaseModelOutput&quot;,&quot;title&quot;:&quot;UniSpeechSat specific outputs&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatModel&quot;,&quot;title&quot;:&quot;UniSpeechSatModel&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatForCTC&quot;,&quot;title&quot;:&quot;UniSpeechSatForCTC&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatForSequenceClassification&quot;,&quot;title&quot;:&quot;UniSpeechSatForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatForAudioFrameClassification&quot;,&quot;title&quot;:&quot;UniSpeechSatForAudioFrameClassification&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatForXVector&quot;,&quot;title&quot;:&quot;UniSpeechSatForXVector&quot;},{&quot;local&quot;:&quot;transformers.UniSpeechSatForPreTraining&quot;,&quot;title&quot;:&quot;UniSpeechSatForPreTraining&quot;}],&quot;title&quot;:&quot;UniSpeech-SAT&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/start-1e0b2945.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/start-69bb79b0.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/pages/model_doc/unispeech-sat.mdx-74068cc8.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/pages/model_doc/unispeech-sat.mdx-c1bfb2d3.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16402/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -44,7 +44,7 @@ dataset to 94 thousand hours public audio data and achieve further performance i
 <ul><li>UniSpeechSat is a speech model that accepts a float array corresponding to the raw waveform of the speech signal.
 Please use <a href="/docs/transformers/pr_16402/en/model_doc/wav2vec2#transformers.Wav2Vec2Processor">Wav2Vec2Processor</a> for the feature extraction.</li>
 <li>UniSpeechSat model can be fine-tuned using connectionist temporal classification (CTC) so the model output has to be
-decoded using <a href="/docs/transformers/pr_16402/en/model_doc/wav2vec2#transformers.Wav2Vec2CTCTokenizer">Wav2Vec2CTCTokenizer</a>.</li>
+decoded using <a href="/docs/transformers/pr_16402/en/model_doc/mctct#transformers.Wav2Vec2CTCTokenizer">Wav2Vec2CTCTokenizer</a>.</li>
 <li>UniSpeechSat performs especially well on speaker verification, speaker identification, and speaker diarization tasks.</li></ul>
 <p>This model was contributed by <a href="https://huggingface.co/patrickvonplaten" rel="nofollow">patrickvonplaten</a>. The Authors’ code can be
 found <a href="https://github.com/microsoft/UniSpeech/tree/main/UniSpeech-SAT" rel="nofollow">here</a>.</p>
@@ -1538,10 +1538,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># <span class="hljs-doctag">TODO:</span> Add full pretraining example</span><!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="1s5a46u">
-		import { start } from "/docs/transformers/pr_16402/en/_app/start-1e0b2945.js";
+		<script type="module" data-hydrate="1hwk9d7">
+		import { start } from "/docs/transformers/pr_16402/en/_app/start-69bb79b0.js";
 		start({
-			target: document.querySelector('[data-hydrate="1s5a46u"]').parentNode,
+			target: document.querySelector('[data-hydrate="1hwk9d7"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16402/en","assets":"/docs/transformers/pr_16402/en"},
 			session: {},
 			route: false,
@@ -1552,7 +1552,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16402/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16402/en/_app/pages/model_doc/unispeech-sat.mdx-74068cc8.js")
+						import("/docs/transformers/pr_16402/en/_app/pages/model_doc/unispeech-sat.mdx-c1bfb2d3.js")
 				],
 				params: {}
 			}
