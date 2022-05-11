@@ -1,10 +1,10 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;understanding-the-interface-class&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;how-to-create-an-interface&quot;,&quot;title&quot;:&quot;How to create an `Interface`&quot;},{&quot;local&quot;:&quot;a-simple-example-with-audio&quot;,&quot;title&quot;:&quot;A simple example with audio&quot;},{&quot;local&quot;:&quot;multiple-inputs-and-outputs&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;the-launch-method&quot;,&quot;title&quot;:&quot;The `launch()` method&quot;}],&quot;title&quot;:&quot;Multiple inputs and outputs:&quot;},{&quot;local&quot;:&quot;lets-apply-it&quot;,&quot;title&quot;:&quot;✏️ Let&#39;s apply it!&quot;}],&quot;title&quot;:&quot;Understanding the Interface class&quot;}" data-svelte="svelte-1phssyn">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;understanding-the-interface-class&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;how-to-create-an-interface&quot;,&quot;title&quot;:&quot;How to create an Interface&quot;},{&quot;local&quot;:&quot;a-simple-example-with-audio&quot;,&quot;title&quot;:&quot;A simple example with audio&quot;},{&quot;local&quot;:&quot;handling-multiple-inputs-and-outputs&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;the-launch-method&quot;,&quot;title&quot;:&quot;The `launch()` method&quot;}],&quot;title&quot;:&quot;Handling multiple inputs and outputs&quot;},{&quot;local&quot;:&quot;lets-apply-it&quot;,&quot;title&quot;:&quot;✏️ Let&#39;s apply it!&quot;}],&quot;title&quot;:&quot;Understanding the Interface class&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/assets/pages/__layout.svelte-9b9c9c55.css">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-6f047715.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-26a53844.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/3.mdx-066f67e4.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/3.mdx-04f2a813.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/IconCopyLink-483c28ba.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/CodeBlock-e5764662.js"> 
 
@@ -16,29 +16,29 @@
 	<span>Understanding the Interface class
 	</span></h1>
 
-<p>In this section, we will take a closer look at the <code>gradio.Interface</code> class, and understand the
-main parameters used to create an <code>Interface</code>.</p>
+<p>In this section, we will take a closer look at the <code>Interface</code> class, and understand the
+main parameters used to create one.</p>
 <h2 class="relative group"><a id="how-to-create-an-interface" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#how-to-create-an-interface"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span>How to create an <code>Interface</code></span></h2>
+	<span>How to create an Interface
+	</span></h2>
 
 <p>You’ll notice that the <code>Interface</code> class has 3 required parameters:  </p>
-<p><code>gradio.Interface(fn, inputs, outputs, ...)</code></p>
+<p><code>Interface(fn, inputs, outputs, ...)</code></p>
 <p>These parameters are:</p>
-<ul><li><code>fn</code>: the core prediction function that is wrapped by the gradio interface. This function can take one or more parameters and return one or more values</li>
-<li><code>inputs</code>: the input component type(s) (<code>gradio</code> provides many pre-built components e.g. <code>&quot;image&quot;</code> or <code>&quot;mic&quot;</code>). </li>
-<li><code>outputs</code>: the output component type(s)  (again, <code>gradio</code> provides many pre-built components e.g. <code>&quot;image&quot;</code> or <code>&quot;label&quot;</code>).</li></ul>
-<p>For a complete list of components, <a href="https://gradio.app/docs" rel="nofollow">see the docs </a>. Each pre-built
-can be customized by instantiating the class corresponding to the component. </p>
+<ul><li><code>fn</code>: the prediction function that is wrapped by the Gradio interface. This function can take one or more parameters and return one or more values</li>
+<li><code>inputs</code>: the input component type(s). Gradio provides many pre-built components such as<code>&quot;image&quot;</code> or <code>&quot;mic&quot;</code>. </li>
+<li><code>outputs</code>: the output component type(s). Again, <code>gradio</code> provides many pre-built components e.g. <code>&quot;image&quot;</code> or <code>&quot;label&quot;</code>.</li></ul>
+<p>For a complete list of components, <a href="https://gradio.app/docs" rel="nofollow">see the Gradio docs </a>. Each pre-built component can be customized by instantiating the class corresponding to the component. </p>
 <p>For example, as we saw in the <a href="/course/chapter9/2">previous section</a>,
-instead of passing in <code>&quot;textbox&quot;</code> to the <code>inputs</code> parameter, you can pass in <code>gradio.inputs.Textbox(lines=7, label=&quot;Prompt&quot;)</code> to create a textbox with 7 lines and a label.</p>
+instead of passing in <code>&quot;textbox&quot;</code> to the <code>inputs</code> parameter, you can pass in a <code>Textbox(lines=7, label=&quot;Prompt&quot;)</code> component to create a textbox with 7 lines and a label.</p>
 <p>Let’s take a look at another example, this time with an <code>Audio</code> component.</p>
 <h2 class="relative group"><a id="a-simple-example-with-audio" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#a-simple-example-with-audio"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>A simple example with audio
 	</span></h2>
 
-<p>As mentioned earlier, <code>gradio</code> provides many different inputs and outputs.
+<p>As mentioned earlier, Gradio provides many different inputs and outputs.
 So let’s build an <code>Interface</code> that works with audio.</p>
-<p>In this example, we’re building an audio-to-audio function that takes an
+<p>In this example, we’ll build an audio-to-audio function that takes an
 audio file and simply reverses it.</p>
 <p>We will use for the input the <code>Audio</code> component. When using the <code>Audio</code> component,
 you can specify whether you want the <code>source</code> of the audio to be a file that the user
@@ -71,8 +71,9 @@ gr.Interface(reverse_audio, mic, <span class="hljs-string">&quot;audio&quot;</sp
 <p>The code above will produce an interface like the one below (if your browser doesn’t
 ask you for microphone permissions, <a href="https://huggingface.co/spaces/course-demos/audio-reverse" target="_blank">open the demo in  a separate tab</a>.)</p>
 <iframe src="https://hf.space/gradioiframe/course-demos/audio-reverse/+" frameborder="0" height="250" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
-<h2 class="relative group"><a id="multiple-inputs-and-outputs" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#multiple-inputs-and-outputs"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span>Multiple inputs and outputs:
+<p>You should now be able to record your voice and hear yourself speaking in reverse - spooky 👻!</p>
+<h2 class="relative group"><a id="handling-multiple-inputs-and-outputs" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#handling-multiple-inputs-and-outputs"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Handling multiple inputs and outputs
 	</span></h2>
 
 <p>Let’s say we had a more complicated function, with multiple inputs and outputs.
@@ -80,9 +81,10 @@ In the example below, we have a function that takes a dropdown index, a slider v
 and returns an audio sample of a musical tone. </p>
 <p>Take a look how we pass a list of input and output components,
 and see if you can follow along what’s happening.</p>
-<p>The key here is that when:</p>
-<ul><li>you pass in a list of input components, each component corresponds to a parameter in order.</li>
-<li>you pass in a list of output coponents, each component corresponds to a returned value.</li></ul>
+<p>The key here is that when you pass:</p>
+<ul><li>a list of input components, each component corresponds to a parameter in order.</li>
+<li>a list of output coponents, each component corresponds to a returned value.</li></ul>
+<p>The code snippet below shows how three input components line up with the three arguments of the <code>generate_tone()</code> function:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -120,10 +122,10 @@ gr.Interface(
 <p>So far, we have used the <code>launch()</code> method to launch the interface, but we
 haven’t really discussed what it does. </p>
 <p>By default, the <code>launch()</code> method will launch the demo in a web server that
-is running locally. If you are running your code in a Jupyter or colab notebook, then
-<code>gradio</code> will embed the demo GUI in the notebook so you can easily use it.</p>
-<p>You can customize the behavior of <code>launch()</code> through different parameters</p>
-<ul><li><code>inline</code> - whether to display in the interface inline on python notebooks.</li>
+is running locally. If you are running your code in a Jupyter or Colab notebook, then
+Gradio will embed the demo GUI in the notebook so you can easily use it.</p>
+<p>You can customize the behavior of <code>launch()</code> through different parameters:</p>
+<ul><li><code>inline</code> - whether to display the interface inline on Python notebooks.</li>
 <li><code>inbrowser</code> - whether to automatically launch the interface in a new tab on the default browser.</li>
 <li><code>share</code> - whether to create a publicly shareable link from your computer for the interface. Kind of like a Google Drive link!</li></ul>
 <p>We’ll cover the <code>share</code> parameter in a lot more detail in the next section!</p>
@@ -131,10 +133,10 @@ is running locally. If you are running your code in a Jupyter or colab notebook,
 	<span>✏️ Let&#39;s apply it!
 	</span></h2>
 
-<p>We’ll build an interface that allows you to demo a <strong>speech-recognition</strong> model.
+<p>Let’s build an interface that allows you to demo a <strong>speech-recognition</strong> model.
 To make it interesting, we will accept <em>either</em> a mic input or an uploaded file.</p>
-<p>We’ll load our speech recognition model using the the <code>pipeline</code> abstraction from the <code>transformers</code> library.
-If you need a quick refresher, you can go back to <a href="/course/chapter1/section3">that section in Chapter 1</a>.   </p>
+<p>As usual, we’ll load our speech recognition model using the the <code>pipeline()</code> function 🤗 Transformers.
+If you need a quick refresher, you can go back to <a href="/course/chapter1/3">that section in Chapter 1</a>.   Next, we’ll implement a <code>transcribe_audio()</code> function that processes the audio and returns the transcription. Finally, we’ll wrap this function in an <code>Interface</code> with the <code>Audio</code> components for the inputs and just text for the output. Altogether, the code for this application is the following:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -172,10 +174,10 @@ provide a microphone or an audio file (or neither, but that will return an error
 <p>Keep going to see how to share your interface with others!</p>
 
 
-		<script type="module" data-hydrate="14tiyrv">
-		import { start } from "/docs/course/pr_34/en/_app/start-6f047715.js";
+		<script type="module" data-hydrate="1mzhs7c">
+		import { start } from "/docs/course/pr_34/en/_app/start-26a53844.js";
 		start({
-			target: document.querySelector('[data-hydrate="14tiyrv"]').parentNode,
+			target: document.querySelector('[data-hydrate="1mzhs7c"]').parentNode,
 			paths: {"base":"/docs/course/pr_34/en","assets":"/docs/course/pr_34/en"},
 			session: {},
 			route: false,
@@ -186,7 +188,7 @@ provide a microphone or an audio file (or neither, but that will return an error
 				error: null,
 				nodes: [
 					import("/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_34/en/_app/pages/chapter9/3.mdx-066f67e4.js")
+						import("/docs/course/pr_34/en/_app/pages/chapter9/3.mdx-04f2a813.js")
 				],
 				params: {}
 			}
