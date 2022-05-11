@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;longformer&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;longformer-self-attention&quot;,&quot;title&quot;:&quot;Longformer Self Attention&quot;},{&quot;local&quot;:&quot;training&quot;,&quot;title&quot;:&quot;Training&quot;},{&quot;local&quot;:&quot;transformers.LongformerConfig&quot;,&quot;title&quot;:&quot;LongformerConfig&quot;},{&quot;local&quot;:&quot;transformers.LongformerTokenizer&quot;,&quot;title&quot;:&quot;LongformerTokenizer&quot;},{&quot;local&quot;:&quot;transformers.LongformerTokenizerFast&quot;,&quot;title&quot;:&quot;LongformerTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.models.longformer.modeling_longformer.LongformerBaseModelOutput&quot;,&quot;title&quot;:&quot;Longformer specific outputs&quot;},{&quot;local&quot;:&quot;transformers.LongformerModel&quot;,&quot;title&quot;:&quot;LongformerModel&quot;},{&quot;local&quot;:&quot;transformers.LongformerForMaskedLM&quot;,&quot;title&quot;:&quot;LongformerForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.LongformerForSequenceClassification&quot;,&quot;title&quot;:&quot;LongformerForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.LongformerForMultipleChoice&quot;,&quot;title&quot;:&quot;LongformerForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.LongformerForTokenClassification&quot;,&quot;title&quot;:&quot;LongformerForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.LongformerForQuestionAnswering&quot;,&quot;title&quot;:&quot;LongformerForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFLongformerModel&quot;,&quot;title&quot;:&quot;TFLongformerModel&quot;},{&quot;local&quot;:&quot;transformers.TFLongformerForMaskedLM&quot;,&quot;title&quot;:&quot;TFLongformerForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.TFLongformerForQuestionAnswering&quot;,&quot;title&quot;:&quot;TFLongformerForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFLongformerForSequenceClassification&quot;,&quot;title&quot;:&quot;TFLongformerForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.TFLongformerForTokenClassification&quot;,&quot;title&quot;:&quot;TFLongformerForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.TFLongformerForMultipleChoice&quot;,&quot;title&quot;:&quot;TFLongformerForMultipleChoice&quot;}],&quot;title&quot;:&quot;Longformer&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/start-b2866a56.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/start-38916bff.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/pages/model_doc/longformer.mdx-8e443d36.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/pages/model_doc/longformer.mdx-8d61d1c9.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16441/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -2873,8 +2873,8 @@ the latter silently ignores them.</p></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> LongformerTokenizer, TFLongformerForMaskedLM
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = LongformerTokenizer.from_pretrained(<span class="hljs-string">&quot;saibo/legal-longformer-base-4096&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFLongformerForMaskedLM.from_pretrained(<span class="hljs-string">&quot;saibo/legal-longformer-base-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = LongformerTokenizer.from_pretrained(<span class="hljs-string">&quot;allenai/longformer-base-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFLongformerForMaskedLM.from_pretrained(<span class="hljs-string">&quot;allenai/longformer-base-4096&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;The capital of France is &lt;mask&gt;.&quot;</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = model(**inputs).logits
@@ -3391,8 +3391,8 @@ the latter silently ignores them.</p></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> LongformerTokenizer, TFLongformerForSequenceClassification
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = LongformerTokenizer.from_pretrained(<span class="hljs-string">&quot;allenai/longformer-base-4096&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFLongformerForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;allenai/longformer-base-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = LongformerTokenizer.from_pretrained(<span class="hljs-string">&quot;hf-internal-testing/tiny-random-longformer&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFLongformerForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;hf-internal-testing/tiny-random-longformer&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
 
@@ -3409,7 +3409,7 @@ LABEL_0<!-- HTML_TAG_END --></pre></div></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># To train a model on `num_labels` classes, you can pass `num_labels=num_labels` to `.from_pretrained(...)`</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>num_labels = <span class="hljs-built_in">len</span>(model.config.id2label)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFLongformerForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;allenai/longformer-base-4096&quot;</span>, num_labels=num_labels)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFLongformerForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;hf-internal-testing/tiny-random-longformer&quot;</span>, num_labels=num_labels)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>labels = tf.constant(<span class="hljs-number">1</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(**inputs, labels=labels).loss
@@ -3643,8 +3643,8 @@ the latter silently ignores them.</p></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> LongformerTokenizer, TFLongformerForTokenClassification
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = LongformerTokenizer.from_pretrained(<span class="hljs-string">&quot;allenai/longformer-base-4096&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFLongformerForTokenClassification.from_pretrained(<span class="hljs-string">&quot;allenai/longformer-base-4096&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = LongformerTokenizer.from_pretrained(<span class="hljs-string">&quot;hf-internal-testing/tiny-random-longformer&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFLongformerForTokenClassification.from_pretrained(<span class="hljs-string">&quot;hf-internal-testing/tiny-random-longformer&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(
 <span class="hljs-meta">... </span>    <span class="hljs-string">&quot;HuggingFace is a company based in Paris and New York&quot;</span>, add_special_tokens=<span class="hljs-literal">False</span>, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>
@@ -3914,10 +3914,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="1tzxc84">
-		import { start } from "/docs/transformers/pr_16441/en/_app/start-b2866a56.js";
+		<script type="module" data-hydrate="1k318xi">
+		import { start } from "/docs/transformers/pr_16441/en/_app/start-38916bff.js";
 		start({
-			target: document.querySelector('[data-hydrate="1tzxc84"]').parentNode,
+			target: document.querySelector('[data-hydrate="1k318xi"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16441/en","assets":"/docs/transformers/pr_16441/en"},
 			session: {},
 			route: false,
@@ -3928,7 +3928,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_16441/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16441/en/_app/pages/model_doc/longformer.mdx-8e443d36.js")
+						import("/docs/transformers/pr_16441/en/_app/pages/model_doc/longformer.mdx-8d61d1c9.js")
 				],
 				params: {}
 			}
