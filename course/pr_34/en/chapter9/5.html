@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;integrations-with-the-hugging-face-hub&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;loading-models-from-the-hugging-face-hub&quot;,&quot;title&quot;:&quot;Loading models from the Hugging Face Hub&quot;},{&quot;local&quot;:&quot;loading-from-hugging-face-spaces&quot;,&quot;title&quot;:&quot;Loading from Hugging Face Spaces&quot;}],&quot;title&quot;:&quot;Integrations with the Hugging Face Hub&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/assets/pages/__layout.svelte-9b9c9c55.css">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-5c7342eb.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-2cad0bb7.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/5.mdx-fb093211.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/5.mdx-1dba2098.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/IconCopyLink-483c28ba.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/CodeBlock-e5764662.js"> 
 
@@ -42,7 +42,7 @@ examples = [
 ]
 gr.Interface.load(
     <span class="hljs-string">&quot;huggingface/EleutherAI/gpt-j-6B&quot;</span>,
-    inputs=gr.inputs.Textbox(lines=<span class="hljs-number">5</span>, label=<span class="hljs-string">&quot;Input Text&quot;</span>),
+    inputs=gr.Textbox(lines=<span class="hljs-number">5</span>, label=<span class="hljs-string">&quot;Input Text&quot;</span>),
     title=title,
     description=description,
     article=article,
@@ -80,10 +80,10 @@ parameters. Here, we add a title and get it to work with a webcam instead:</p>
 <p>Now that we’ve explored a few ways to integrate Gradio with the Hugging Face Hub, let’s take a look at some advanced features of the <code>Interface</code> class. That’s the topic of the next section!</p>
 
 
-		<script type="module" data-hydrate="1rfwyzv">
-		import { start } from "/docs/course/pr_34/en/_app/start-5c7342eb.js";
+		<script type="module" data-hydrate="s9a6kg">
+		import { start } from "/docs/course/pr_34/en/_app/start-2cad0bb7.js";
 		start({
-			target: document.querySelector('[data-hydrate="1rfwyzv"]').parentNode,
+			target: document.querySelector('[data-hydrate="s9a6kg"]').parentNode,
 			paths: {"base":"/docs/course/pr_34/en","assets":"/docs/course/pr_34/en"},
 			session: {},
 			route: false,
@@ -94,7 +94,7 @@ parameters. Here, we add a title and get it to work with a webcam instead:</p>
 				error: null,
 				nodes: [
 					import("/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_34/en/_app/pages/chapter9/5.mdx-fb093211.js")
+						import("/docs/course/pr_34/en/_app/pages/chapter9/5.mdx-1dba2098.js")
 				],
 				params: {}
 			}

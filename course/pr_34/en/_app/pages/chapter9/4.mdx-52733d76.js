@@ -14,7 +14,6 @@ gr.Interface(
     title=title, 
     description=description, 
     article=article,
-    theme="dark-huggingface", 
     examples=[["What are you doing?"], ["Where should we time travel to?"]] 
 ).launch() `,highlighted:`title = <span class="hljs-string">&quot;Ask Rick a Question&quot;</span>
 description = 
@@ -32,7 +31,6 @@ gr.Interface(
     title=title, 
     description=description, 
     article=article,
-    theme=<span class="hljs-string">&quot;dark-huggingface&quot;</span>, 
     examples=[[<span class="hljs-string">&quot;What are you doing?&quot;</span>], [<span class="hljs-string">&quot;Where should we time travel to?&quot;</span>]] 
 ).launch() `}}),se=new yt({}),ne=new so({props:{code:'gr.Interface(classify_image, "image", "label").launch(share=True)',highlighted:'gr.Interface(classify_image, <span class="hljs-string">&quot;image&quot;</span>, <span class="hljs-string">&quot;label&quot;</span>).launch(share=<span class="hljs-literal">True</span>)'}}),re=new yt({}),ie=new dn({props:{id:"LS9Y2wDVI0k"}}),ce=new yt({}),ue=new so({props:{code:`from pathlib import Path
 import torch

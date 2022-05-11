@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;understanding-the-interface-class&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;how-to-create-an-interface&quot;,&quot;title&quot;:&quot;How to create an Interface&quot;},{&quot;local&quot;:&quot;a-simple-example-with-audio&quot;,&quot;title&quot;:&quot;A simple example with audio&quot;},{&quot;local&quot;:&quot;handling-multiple-inputs-and-outputs&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;the-launch-method&quot;,&quot;title&quot;:&quot;The `launch()` method&quot;}],&quot;title&quot;:&quot;Handling multiple inputs and outputs&quot;},{&quot;local&quot;:&quot;lets-apply-it&quot;,&quot;title&quot;:&quot;✏️ Let&#39;s apply it!&quot;}],&quot;title&quot;:&quot;Understanding the Interface class&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/assets/pages/__layout.svelte-9b9c9c55.css">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-5c7342eb.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-2cad0bb7.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/3.mdx-04f2a813.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/3.mdx-af068f82.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/IconCopyLink-483c28ba.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/CodeBlock-e5764662.js"> 
 
@@ -66,7 +66,7 @@ shortcut <code>&quot;audio&quot;</code>.</p>
     <span class="hljs-keyword">return</span> reversed_audio
 
 
-mic = gr.inputs.Audio(source=<span class="hljs-string">&quot;microphone&quot;</span>, <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;numpy&quot;</span>, label=<span class="hljs-string">&quot;Speak here...&quot;</span>)
+mic = gr.Audio(source=<span class="hljs-string">&quot;microphone&quot;</span>, <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;numpy&quot;</span>, label=<span class="hljs-string">&quot;Speak here...&quot;</span>)
 gr.Interface(reverse_audio, mic, <span class="hljs-string">&quot;audio&quot;</span>).launch()<!-- HTML_TAG_END --></pre></div>
 <p>The code above will produce an interface like the one below (if your browser doesn’t
 ask you for microphone permissions, <a href="https://huggingface.co/spaces/course-demos/audio-reverse" target="_blank">open the demo in  a separate tab</a>.)</p>
@@ -108,9 +108,9 @@ notes = [<span class="hljs-string">&quot;C&quot;</span>, <span class="hljs-strin
 gr.Interface(
     generate_tone,
     [
-        gr.inputs.Dropdown(notes, <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;index&quot;</span>),
-        gr.inputs.Slider(<span class="hljs-number">4</span>, <span class="hljs-number">6</span>, step=<span class="hljs-number">1</span>),
-        gr.inputs.Textbox(<span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;number&quot;</span>, default=<span class="hljs-number">1</span>, label=<span class="hljs-string">&quot;Duration in seconds&quot;</span>),
+        gr.Dropdown(notes, <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;index&quot;</span>),
+        gr.Slider(minimum=<span class="hljs-number">4</span>, maximum=<span class="hljs-number">6</span>, step=<span class="hljs-number">1</span>),
+        gr.Textbox(<span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;number&quot;</span>, value=<span class="hljs-number">1</span>, label=<span class="hljs-string">&quot;Duration in seconds&quot;</span>),
     ],
     <span class="hljs-string">&quot;audio&quot;</span>,
 ).launch()<!-- HTML_TAG_END --></pre></div>
@@ -161,8 +161,8 @@ model = pipeline(<span class="hljs-string">&quot;automatic-speech-recognition&qu
 gr.Interface(
     fn=transcribe_audio,
     inputs=[
-        gr.inputs.Audio(source=<span class="hljs-string">&quot;microphone&quot;</span>, <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;filepath&quot;</span>, optional=<span class="hljs-literal">True</span>),
-        gr.inputs.Audio(source=<span class="hljs-string">&quot;upload&quot;</span>, <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;filepath&quot;</span>, optional=<span class="hljs-literal">True</span>),
+        gr.Audio(source=<span class="hljs-string">&quot;microphone&quot;</span>, <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;filepath&quot;</span>, optional=<span class="hljs-literal">True</span>),
+        gr.Audio(source=<span class="hljs-string">&quot;upload&quot;</span>, <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;filepath&quot;</span>, optional=<span class="hljs-literal">True</span>),
     ],
     outputs=<span class="hljs-string">&quot;text&quot;</span>,
 ).launch()<!-- HTML_TAG_END --></pre></div>
@@ -174,10 +174,10 @@ provide a microphone or an audio file (or neither, but that will return an error
 <p>Keep going to see how to share your interface with others!</p>
 
 
-		<script type="module" data-hydrate="1mzhs7c">
-		import { start } from "/docs/course/pr_34/en/_app/start-5c7342eb.js";
+		<script type="module" data-hydrate="1yi0bjq">
+		import { start } from "/docs/course/pr_34/en/_app/start-2cad0bb7.js";
 		start({
-			target: document.querySelector('[data-hydrate="1mzhs7c"]').parentNode,
+			target: document.querySelector('[data-hydrate="1yi0bjq"]').parentNode,
 			paths: {"base":"/docs/course/pr_34/en","assets":"/docs/course/pr_34/en"},
 			session: {},
 			route: false,
@@ -188,7 +188,7 @@ provide a microphone or an audio file (or neither, but that will return an error
 				error: null,
 				nodes: [
 					import("/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_34/en/_app/pages/chapter9/3.mdx-04f2a813.js")
+						import("/docs/course/pr_34/en/_app/pages/chapter9/3.mdx-af068f82.js")
 				],
 				params: {}
 			}

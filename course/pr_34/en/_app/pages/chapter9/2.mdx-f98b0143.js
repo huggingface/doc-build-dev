@@ -24,7 +24,7 @@ def greet(name):
 
 
 # We instantiate the Textbox class
-textbox = gr.inputs.Textbox(label="Type your name here:", placeholder="John Doe", lines=2)
+textbox = gr.Textbox(label="Type your name here:", placeholder="John Doe", lines=2)
 
 gr.Interface(fn=greet, inputs=textbox, outputs="text").launch()`,highlighted:`<span class="hljs-keyword">import</span> gradio <span class="hljs-keyword">as</span> gr
 
@@ -34,7 +34,7 @@ gr.Interface(fn=greet, inputs=textbox, outputs="text").launch()`,highlighted:`<s
 
 
 <span class="hljs-comment"># We instantiate the Textbox class</span>
-textbox = gr.inputs.Textbox(label=<span class="hljs-string">&quot;Type your name here:&quot;</span>, placeholder=<span class="hljs-string">&quot;John Doe&quot;</span>, lines=<span class="hljs-number">2</span>)
+textbox = gr.Textbox(label=<span class="hljs-string">&quot;Type your name here:&quot;</span>, placeholder=<span class="hljs-string">&quot;John Doe&quot;</span>, lines=<span class="hljs-number">2</span>)
 
 gr.Interface(fn=greet, inputs=textbox, outputs=<span class="hljs-string">&quot;text&quot;</span>).launch()`}}),W=new ro({}),Y=new ue({props:{code:`from transformers import pipeline
 

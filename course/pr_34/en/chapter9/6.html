@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;advanced-interface-features&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;using-state-to-persist-data&quot;,&quot;title&quot;:&quot;Using state to persist data&quot;},{&quot;local&quot;:&quot;using-interpretation-to-understand-predictions&quot;,&quot;title&quot;:&quot;Using interpretation to understand predictions&quot;},{&quot;local&quot;:&quot;adding-authentication&quot;,&quot;title&quot;:&quot;Adding authentication&quot;}],&quot;title&quot;:&quot;Advanced Interface features&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/assets/pages/__layout.svelte-9b9c9c55.css">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-5c7342eb.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-2cad0bb7.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/6.mdx-fac11e4c.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/6.mdx-82893f75.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/IconCopyLink-483c28ba.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/CodeBlock-e5764662.js"> 
 
@@ -92,8 +92,8 @@ labels = response.text.split(<span class="hljs-string">&quot;\n&quot;</span>)
     <span class="hljs-keyword">return</span> {labels[i]: <span class="hljs-built_in">float</span>(prediction[i]) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1000</span>)}
 
 
-image = gr.inputs.Image(shape=(<span class="hljs-number">224</span>, <span class="hljs-number">224</span>))
-label = gr.outputs.Label(num_top_classes=<span class="hljs-number">3</span>)
+image = gr.Image(shape=(<span class="hljs-number">224</span>, <span class="hljs-number">224</span>))
+label = gr.Label(num_top_classes=<span class="hljs-number">3</span>)
 
 title = <span class="hljs-string">&quot;Gradio Image Classifiction + Interpretation Example&quot;</span>
 gr.Interface(
@@ -133,8 +133,8 @@ labels = response.text.split(<span class="hljs-string">&quot;\n&quot;</span>)
     <span class="hljs-keyword">return</span> {labels[i]: <span class="hljs-built_in">float</span>(prediction[i]) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1000</span>)}
 
 
-image = gr.inputs.Image(shape=(<span class="hljs-number">224</span>, <span class="hljs-number">224</span>))
-label = gr.outputs.Label(num_top_classes=<span class="hljs-number">3</span>)
+image = gr.Image(shape=(<span class="hljs-number">224</span>, <span class="hljs-number">224</span>))
+label = gr.Label(num_top_classes=<span class="hljs-number">3</span>)
 
 title = <span class="hljs-string">&quot;Gradio Image Classifiction + Interpretation Example&quot;</span>
 gr.Interface(
@@ -144,10 +144,10 @@ gr.Interface(
 <p>This wraps up our deep dive into the <code>Interface</code> class of Gradio. As we’ve seen, this class makes it simple to create machine learning demos in a few lines of Python code. However, sometimes you’ll want to customise your demo by changing the layout or chaining multiple prediction functions together. Wouldn’t it be nice if we could somehow split the <code>Interface</code> into customizable “blocks”? Fortunately, there is! That’s the topic of the final section.</p>
 
 
-		<script type="module" data-hydrate="1gop0if">
-		import { start } from "/docs/course/pr_34/en/_app/start-5c7342eb.js";
+		<script type="module" data-hydrate="1yj7qtz">
+		import { start } from "/docs/course/pr_34/en/_app/start-2cad0bb7.js";
 		start({
-			target: document.querySelector('[data-hydrate="1gop0if"]').parentNode,
+			target: document.querySelector('[data-hydrate="1yj7qtz"]').parentNode,
 			paths: {"base":"/docs/course/pr_34/en","assets":"/docs/course/pr_34/en"},
 			session: {},
 			route: false,
@@ -158,7 +158,7 @@ gr.Interface(
 				error: null,
 				nodes: [
 					import("/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_34/en/_app/pages/chapter9/6.mdx-fac11e4c.js")
+						import("/docs/course/pr_34/en/_app/pages/chapter9/6.mdx-82893f75.js")
 				],
 				params: {}
 			}

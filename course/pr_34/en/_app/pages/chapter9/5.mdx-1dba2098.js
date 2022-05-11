@@ -10,7 +10,7 @@ examples = [
 ]
 gr.Interface.load(
     "huggingface/EleutherAI/gpt-j-6B",
-    inputs=gr.inputs.Textbox(lines=5, label="Input Text"),
+    inputs=gr.Textbox(lines=5, label="Input Text"),
     title=title,
     description=description,
     article=article,
@@ -28,7 +28,7 @@ examples = [
 ]
 gr.Interface.load(
     <span class="hljs-string">&quot;huggingface/EleutherAI/gpt-j-6B&quot;</span>,
-    inputs=gr.inputs.Textbox(lines=<span class="hljs-number">5</span>, label=<span class="hljs-string">&quot;Input Text&quot;</span>),
+    inputs=gr.Textbox(lines=<span class="hljs-number">5</span>, label=<span class="hljs-string">&quot;Input Text&quot;</span>),
     title=title,
     description=description,
     article=article,

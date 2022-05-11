@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;building-your-first-demo&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;including-model-predictions&quot;,&quot;title&quot;:&quot;🤖 Including model predictions&quot;}],&quot;title&quot;:&quot;Building your first demo&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/assets/pages/__layout.svelte-9b9c9c55.css">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-5c7342eb.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-2cad0bb7.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/2.mdx-b621be5a.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/2.mdx-f98b0143.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/IconCopyLink-483c28ba.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/CodeBlock-e5764662.js"> 
 
@@ -59,7 +59,7 @@ instantiate a class object representing the input component. </p>
 
 
 <span class="hljs-comment"># We instantiate the Textbox class</span>
-textbox = gr.inputs.Textbox(label=<span class="hljs-string">&quot;Type your name here:&quot;</span>, placeholder=<span class="hljs-string">&quot;John Doe&quot;</span>, lines=<span class="hljs-number">2</span>)
+textbox = gr.Textbox(label=<span class="hljs-string">&quot;Type your name here:&quot;</span>, placeholder=<span class="hljs-string">&quot;John Doe&quot;</span>, lines=<span class="hljs-number">2</span>)
 
 gr.Interface(fn=greet, inputs=textbox, outputs=<span class="hljs-string">&quot;text&quot;</span>).launch()<!-- HTML_TAG_END --></pre></div>
 <iframe src="https://hf.space/gradioiframe/course-demos/hello-world-custom/+" frameborder="0" height="300" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
@@ -112,10 +112,10 @@ gr.Interface(fn=predict, inputs=<span class="hljs-string">&quot;text&quot;</span
 <p>Keep reading to see how to build other kinds of demos with Gradio!</p>
 
 
-		<script type="module" data-hydrate="1336nfh">
-		import { start } from "/docs/course/pr_34/en/_app/start-5c7342eb.js";
+		<script type="module" data-hydrate="1shxjyu">
+		import { start } from "/docs/course/pr_34/en/_app/start-2cad0bb7.js";
 		start({
-			target: document.querySelector('[data-hydrate="1336nfh"]').parentNode,
+			target: document.querySelector('[data-hydrate="1shxjyu"]').parentNode,
 			paths: {"base":"/docs/course/pr_34/en","assets":"/docs/course/pr_34/en"},
 			session: {},
 			route: false,
@@ -126,7 +126,7 @@ gr.Interface(fn=predict, inputs=<span class="hljs-string">&quot;text&quot;</span
 				error: null,
 				nodes: [
 					import("/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_34/en/_app/pages/chapter9/2.mdx-b621be5a.js")
+						import("/docs/course/pr_34/en/_app/pages/chapter9/2.mdx-f98b0143.js")
 				],
 				params: {}
 			}
