@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;introduction-to-gradio-blocks&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;why-blocks&quot;,&quot;title&quot;:&quot;Why Blocks 🧱?&quot;},{&quot;local&quot;:&quot;creating-a-simple-demo-using-blocks&quot;,&quot;title&quot;:&quot;Creating a simple demo using Blocks&quot;},{&quot;local&quot;:&quot;customizing-the-layout-of-your-demo&quot;,&quot;title&quot;:&quot;Customizing the layout of your demo&quot;},{&quot;local&quot;:&quot;exploring-events-and-state&quot;,&quot;title&quot;:&quot;Exploring events and state&quot;},{&quot;local&quot;:&quot;creating-multistep-demos&quot;,&quot;title&quot;:&quot;Creating multi-step demos&quot;},{&quot;local&quot;:&quot;updating-component-properties&quot;,&quot;title&quot;:&quot;Updating Component Properties&quot;}],&quot;title&quot;:&quot;Introduction to Gradio Blocks&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/assets/pages/__layout.svelte-9b9c9c55.css">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-26a53844.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/start-5c7342eb.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/7.mdx-8b6fb069.js">
+	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/pages/chapter9/7.mdx-b7d6b598.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/Tip-62b14c6e.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/IconCopyLink-483c28ba.js">
 	<link rel="modulepreload" href="/docs/course/pr_34/en/_app/chunks/CodeBlock-e5764662.js"> 
@@ -208,7 +208,6 @@ demo.launch()<!-- HTML_TAG_END --></pre></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">import</span> gradio <span class="hljs-keyword">as</span> gr
 
-
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">change_textbox</span>(<span class="hljs-params">choice</span>):
     <span class="hljs-keyword">if</span> choice == <span class="hljs-string">&quot;short&quot;</span>:
         <span class="hljs-keyword">return</span> gr.Textbox.update(lines=<span class="hljs-number">2</span>, visible=<span class="hljs-literal">True</span>)
@@ -219,9 +218,8 @@ demo.launch()<!-- HTML_TAG_END --></pre></div>
 
 
 <span class="hljs-keyword">with</span> gr.Blocks() <span class="hljs-keyword">as</span> block:
-    radio = gr.Radio(
-        [<span class="hljs-string">&quot;short&quot;</span>, <span class="hljs-string">&quot;long&quot;</span>, <span class="hljs-string">&quot;none&quot;</span>], label=<span class="hljs-string">&quot;What kind of essay would you like to write?&quot;</span>
-    )
+    radio = gr.Radio([<span class="hljs-string">&quot;short&quot;</span>, <span class="hljs-string">&quot;long&quot;</span>, <span class="hljs-string">&quot;none&quot;</span>], 
+                     label=<span class="hljs-string">&quot;What kind of essay would you like to write?&quot;</span>)
     text = gr.Textbox(lines=<span class="hljs-number">2</span>, interactive=<span class="hljs-literal">True</span>)
 
     radio.change(fn=change_textbox, inputs=radio, outputs=text)
@@ -230,10 +228,10 @@ demo.launch()<!-- HTML_TAG_END --></pre></div>
 <p>We just explored all the core concepts of <code>Blocks</code>! Just like with <code>Interfaces</code>, you can create cool demos that can be shared by using <code>share=True</code> in the <code>launch()</code> method or deployed on <a href="https://huggingface.co/spaces" rel="nofollow">Hugging Face Spaces</a>.</p>
 
 
-		<script type="module" data-hydrate="p2a8jz">
-		import { start } from "/docs/course/pr_34/en/_app/start-26a53844.js";
+		<script type="module" data-hydrate="veckbz">
+		import { start } from "/docs/course/pr_34/en/_app/start-5c7342eb.js";
 		start({
-			target: document.querySelector('[data-hydrate="p2a8jz"]').parentNode,
+			target: document.querySelector('[data-hydrate="veckbz"]').parentNode,
 			paths: {"base":"/docs/course/pr_34/en","assets":"/docs/course/pr_34/en"},
 			session: {},
 			route: false,
@@ -244,7 +242,7 @@ demo.launch()<!-- HTML_TAG_END --></pre></div>
 				error: null,
 				nodes: [
 					import("/docs/course/pr_34/en/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_34/en/_app/pages/chapter9/7.mdx-8b6fb069.js")
+						import("/docs/course/pr_34/en/_app/pages/chapter9/7.mdx-b7d6b598.js")
 				],
 				params: {}
 			}

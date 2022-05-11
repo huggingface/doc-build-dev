@@ -196,7 +196,6 @@ demo = gr.Blocks()
 
 demo.launch()`}}),Le=new ze({}),Re=new Bo({props:{code:`import gradio as gr
 
-
 def change_textbox(choice):
     if choice == "short":
         return gr.Textbox.update(lines=2, visible=True)
@@ -207,14 +206,12 @@ def change_textbox(choice):
 
 
 with gr.Blocks() as block:
-    radio = gr.Radio(
-        ["short", "long", "none"], label="What kind of essay would you like to write?"
-    )
+    radio = gr.Radio(["short", "long", "none"], 
+                     label="What kind of essay would you like to write?")
     text = gr.Textbox(lines=2, interactive=True)
 
     radio.change(fn=change_textbox, inputs=radio, outputs=text)
     block.launch()`,highlighted:`<span class="hljs-keyword">import</span> gradio <span class="hljs-keyword">as</span> gr
-
 
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">change_textbox</span>(<span class="hljs-params">choice</span>):
     <span class="hljs-keyword">if</span> choice == <span class="hljs-string">&quot;short&quot;</span>:
@@ -226,9 +223,8 @@ with gr.Blocks() as block:
 
 
 <span class="hljs-keyword">with</span> gr.Blocks() <span class="hljs-keyword">as</span> block:
-    radio = gr.Radio(
-        [<span class="hljs-string">&quot;short&quot;</span>, <span class="hljs-string">&quot;long&quot;</span>, <span class="hljs-string">&quot;none&quot;</span>], label=<span class="hljs-string">&quot;What kind of essay would you like to write?&quot;</span>
-    )
+    radio = gr.Radio([<span class="hljs-string">&quot;short&quot;</span>, <span class="hljs-string">&quot;long&quot;</span>, <span class="hljs-string">&quot;none&quot;</span>], 
+                     label=<span class="hljs-string">&quot;What kind of essay would you like to write?&quot;</span>)
     text = gr.Textbox(lines=<span class="hljs-number">2</span>, interactive=<span class="hljs-literal">True</span>)
 
     radio.change(fn=change_textbox, inputs=radio, outputs=text)
