@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;construction-dun-tokenizer-bloc-par-bloc&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;acquisition-dun-corpus&quot;,&quot;title&quot;:&quot;Acquisition d&#39;un corpus&quot;},{&quot;local&quot;:&quot;construire-un-tokenizer-wordpiece-partir-de-zro&quot;,&quot;title&quot;:&quot;Construire un tokenizer *WordPiece* à partir de zéro&quot;},{&quot;local&quot;:&quot;construire-un-tokenizer-bpe-partir-de-zro&quot;,&quot;title&quot;:&quot;Construire un *tokenizer* BPE à partir de zéro&quot;},{&quot;local&quot;:&quot;construire-un-tokenizer-unigram-partir-de-rien&quot;,&quot;title&quot;:&quot;Construire un *tokenizer* *Unigram* à partir de rien.&quot;}],&quot;title&quot;:&quot;Construction d&#39;un *tokenizer*, bloc par bloc&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/assets/pages/__layout.svelte-0ba3497a.css">
-	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/start-7a44bdd1.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/start-7d30feb3.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/pages/chapter6/8.mdx-485fb94f.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/pages/chapter6/8.mdx-70e29282.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/Tip-62b14c6e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/Youtube-c2a8cc39.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/IconCopyLink-483c28ba.js">
@@ -413,7 +413,9 @@ sentence[start:end]<!-- HTML_TAG_END --></pre></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PreTrainedTokenizerFast
 
 wrapped_tokenizer = PreTrainedTokenizerFast(
-    tokenizer_object=tokenizer, bos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>, eos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
+    tokenizer_object=tokenizer,
+    bos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
+    eos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
 )<!-- HTML_TAG_END --></pre></div>
 <p>ou :</p>
 
@@ -572,10 +574,10 @@ wrapped_tokenizer = XLNetTokenizerFast(tokenizer_object=tokenizer)<!-- HTML_TAG_
 <p>Maintenant que vous avez vu comment les différentes briques sont utilisées pour construire des <em>tokenizers</em> existants, vous devriez être capable d’écrire n’importe quel <em>tokenizer</em> que vous voulez avec la bibliothèque 🤗 <em>Tokenizers</em> et pouvoir l’utiliser dans 🤗 <em>Transformers</em>.</p>
 
 
-		<script type="module" data-hydrate="1sgh13">
-		import { start } from "/docs/course/pr_145/fr/_app/start-7a44bdd1.js";
+		<script type="module" data-hydrate="1qddbav">
+		import { start } from "/docs/course/pr_145/fr/_app/start-7d30feb3.js";
 		start({
-			target: document.querySelector('[data-hydrate="1sgh13"]').parentNode,
+			target: document.querySelector('[data-hydrate="1qddbav"]').parentNode,
 			paths: {"base":"/docs/course/pr_145/fr","assets":"/docs/course/pr_145/fr"},
 			session: {},
 			route: false,
@@ -586,7 +588,7 @@ wrapped_tokenizer = XLNetTokenizerFast(tokenizer_object=tokenizer)<!-- HTML_TAG_
 				error: null,
 				nodes: [
 					import("/docs/course/pr_145/fr/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_145/fr/_app/pages/chapter6/8.mdx-485fb94f.js")
+						import("/docs/course/pr_145/fr/_app/pages/chapter6/8.mdx-70e29282.js")
 				],
 				params: {}
 			}

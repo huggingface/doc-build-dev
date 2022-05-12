@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;por-dentro-da-funo-pipeline&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;prprocessamento-com-o-tokenizer&quot;,&quot;title&quot;:&quot;Pré-processamento com o tokenizer&quot;},{&quot;local&quot;:&quot;indo-adianta-pelo-modelo&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;um-vetor-de-alta-dimensionalidade&quot;,&quot;title&quot;:&quot;Um vetor de alta dimensionalidade?&quot;},{&quot;local&quot;:&quot;cabea-do-modelo-model-heads-fazendo-sentido-a-partir-dos-nmeros&quot;,&quot;title&quot;:&quot;Cabeça do modelo (model heads): Fazendo sentido a partir dos números&quot;}],&quot;title&quot;:&quot;Indo adianta pelo modelo&quot;},{&quot;local&quot;:&quot;psprocessamento-da-sada&quot;,&quot;title&quot;:&quot;Pós-processamento da saída&quot;}],&quot;title&quot;:&quot;Por dentro da função pipeline&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/assets/pages/__layout.svelte-048423b6.css">
-	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/start-b1d360c4.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/start-1b3f6b13.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/chunks/vendor-e6c5d93e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/pages/__layout.svelte-20ef27ff.js">
-	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/pages/chapter2/2.mdx-d6e21cf4.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/pages/chapter2/2.mdx-1bb57bc3.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/chunks/Tip-8acb45f0.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/chunks/Youtube-58bb6821.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/pt/_app/chunks/IconCopyLink-7b8d27fe.js">
@@ -43,7 +43,10 @@
 
 classifier = pipeline(<span class="hljs-string">&quot;sentiment-analysis&quot;</span>)
 classifier(
-    [<span class="hljs-string">&quot;I&#x27;ve been waiting for a HuggingFace course my whole life.&quot;</span>, <span class="hljs-string">&quot;I hate this so much!&quot;</span>,]
+    [
+        <span class="hljs-string">&quot;I&#x27;ve been waiting for a HuggingFace course my whole life.&quot;</span>,
+        <span class="hljs-string">&quot;I hate this so much!&quot;</span>,
+    ]
 )<!-- HTML_TAG_END --></pre></div>
 <p>tendo o resultado:</p>
 
@@ -229,10 +232,10 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>Experimente!</strong> Escolha duas (ou mais) textos próprios e passe-os através do pipeline <code>sentiment-analysis</code>. Em seguida, replique as etapas que você mesmo viu aqui e verifique se você obtém os mesmos resultados!</p></div>
 
 
-		<script type="module" data-hydrate="9248yq">
-		import { start } from "/docs/course/pr_145/pt/_app/start-b1d360c4.js";
+		<script type="module" data-hydrate="zpgkh4">
+		import { start } from "/docs/course/pr_145/pt/_app/start-1b3f6b13.js";
 		start({
-			target: document.querySelector('[data-hydrate="9248yq"]').parentNode,
+			target: document.querySelector('[data-hydrate="zpgkh4"]').parentNode,
 			paths: {"base":"/docs/course/pr_145/pt","assets":"/docs/course/pr_145/pt"},
 			session: {},
 			route: false,
@@ -243,7 +246,7 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 				error: null,
 				nodes: [
 					import("/docs/course/pr_145/pt/_app/pages/__layout.svelte-20ef27ff.js"),
-						import("/docs/course/pr_145/pt/_app/pages/chapter2/2.mdx-d6e21cf4.js")
+						import("/docs/course/pr_145/pt/_app/pages/chapter2/2.mdx-1bb57bc3.js")
 				],
 				params: {}
 			}

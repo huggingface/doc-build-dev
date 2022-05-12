@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;transformers&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers-transformers&quot;,&quot;title&quot;:&quot;Transformers, Transformers เต็มไปหมดเลย!&quot;},{&quot;local&quot;:&quot;pipelines&quot;,&quot;title&quot;:&quot;การใช้งานคำสั่ง pipelines&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;แยกแยะหมวดหมู่โดยไม่ต้องสอน&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;การสร้างข้อความ&quot;},{&quot;local&quot;:&quot;hub-pipeline&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;the-inference-api&quot;,&quot;title&quot;:&quot;The Inference API&quot;}],&quot;title&quot;:&quot;การใช้งานโมเดลใด ๆ จาก Hub ใน pipeline&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;เติมคำในช่องว่าง&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;การระบุชื่อเฉพาะ&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;ถาม-ตอบคำถาม&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;การสรุปความ&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;การแปลภาษา&quot;}],&quot;title&quot;:&quot;Transformers ชื่อนี้มีดียังไง?&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/assets/pages/__layout.svelte-c94721b3.css">
-	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/start-6de06d75.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/start-2ad5826a.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/pages/chapter1/3.mdx-7d4959f5.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/pages/chapter1/3.mdx-bedc536f.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/chunks/Tip-62b14c6e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/chunks/Youtube-c2a8cc39.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/th/_app/chunks/IconCopyLink-483c28ba.js">
@@ -150,7 +150,9 @@ generator(<span class="hljs-string">&quot;In this course, we will teach you how 
 
 generator = pipeline(<span class="hljs-string">&quot;text-generation&quot;</span>, model=<span class="hljs-string">&quot;distilgpt2&quot;</span>)
 generator(
-    <span class="hljs-string">&quot;In this course, we will teach you how to&quot;</span>, max_length=<span class="hljs-number">30</span>, num_return_sequences=<span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;In this course, we will teach you how to&quot;</span>,
+    max_length=<span class="hljs-number">30</span>,
+    num_return_sequences=<span class="hljs-number">2</span>,
 )<!-- HTML_TAG_END --></pre></div>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -305,10 +307,10 @@ translator(<span class="hljs-string">&quot;Ce cours est produit par Hugging Face
 <p>คำสั่ง pipeline ที่แสดงด้านบนเป็นเพียงตัวอย่างเบื้องต้นเท่านั้น การใช้งานของคำสั่งนี้ค่อนข้างเฉพาะเจาะจงและไม่สามารถแก้ไขอะไรเบื้องหลังได้มากนัก ในบทหลัง ๆ คุณจะได้เรียนรู้หลักการทำงานเบื้องหลังของฟังก์ชัน <code>pipeline()</code> และวิธีการปรับแต่งการทำงาน</p>
 
 
-		<script type="module" data-hydrate="fehwb">
-		import { start } from "/docs/course/pr_145/th/_app/start-6de06d75.js";
+		<script type="module" data-hydrate="a0i6hn">
+		import { start } from "/docs/course/pr_145/th/_app/start-2ad5826a.js";
 		start({
-			target: document.querySelector('[data-hydrate="fehwb"]').parentNode,
+			target: document.querySelector('[data-hydrate="a0i6hn"]').parentNode,
 			paths: {"base":"/docs/course/pr_145/th","assets":"/docs/course/pr_145/th"},
 			session: {},
 			route: false,
@@ -319,7 +321,7 @@ translator(<span class="hljs-string">&quot;Ce cours est produit par Hugging Face
 				error: null,
 				nodes: [
 					import("/docs/course/pr_145/th/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_145/th/_app/pages/chapter1/3.mdx-7d4959f5.js")
+						import("/docs/course/pr_145/th/_app/pages/chapter1/3.mdx-bedc536f.js")
 				],
 				params: {}
 			}

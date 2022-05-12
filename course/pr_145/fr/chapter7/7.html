@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;rponse-aux-questions&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;prparation-des-donnes&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;le-jeu-de-donnes-squad&quot;,&quot;title&quot;:&quot;Le jeu de données SQuAD&quot;},{&quot;local&quot;:&quot;traitement-des-donnes-dentranement&quot;,&quot;title&quot;:&quot;Traitement des données d&#39;entraînement&quot;},{&quot;local&quot;:&quot;traitement-des-donnes-de-validation&quot;,&quot;title&quot;:&quot;Traitement des données de validation&quot;}],&quot;title&quot;:&quot;Préparation des données&quot;},{&quot;local&quot;:&quot;finetuner-le-modle-avec-lapi-trainer&quot;,&quot;title&quot;:&quot;*Finetuner* le modèle avec l&#39;API `Trainer`&quot;},{&quot;local&quot;:&quot;finetuner-fin-du-modle-avec-keras&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;posttraitement&quot;,&quot;title&quot;:&quot;Post-traitement&quot;},{&quot;local&quot;:&quot;finetuning-du-modle&quot;,&quot;title&quot;:&quot;*Finetuning* du modèle&quot;}],&quot;title&quot;:&quot;*Finetuner* fin du modèle avec Keras&quot;},{&quot;local&quot;:&quot;une-boucle-dentranement-personnalise&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;prparer-tout-pour-lentranement&quot;,&quot;title&quot;:&quot;Préparer tout pour l&#39;entraînement&quot;}],&quot;title&quot;:&quot;Une boucle d&#39;entraînement personnalisée&quot;},{&quot;local&quot;:&quot;boucle-dentranement&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;utilisation-du-modle-finetun&quot;,&quot;title&quot;:&quot;Utilisation du modèle *finetuné*&quot;}],&quot;title&quot;:&quot;Boucle d&#39;entraînement&quot;}],&quot;title&quot;:&quot;Réponse aux questions&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/assets/pages/__layout.svelte-0ba3497a.css">
-	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/start-7a44bdd1.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/start-7d30feb3.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/pages/chapter7/7.mdx-089954f5.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/pages/chapter7/7.mdx-02d06347.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/Tip-62b14c6e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/Youtube-c2a8cc39.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/IconCopyLink-483c28ba.js">
@@ -867,7 +867,10 @@ validation_set = validation_dataset.remove_columns([<span class="hljs-string">&q
 validation_set.set_format(<span class="hljs-string">&quot;torch&quot;</span>)
 
 train_dataloader = DataLoader(
-    train_dataset, shuffle=<span class="hljs-literal">True</span>, collate_fn=default_data_collator, batch_size=<span class="hljs-number">8</span>,
+    train_dataset,
+    shuffle=<span class="hljs-literal">True</span>,
+    collate_fn=default_data_collator,
+    batch_size=<span class="hljs-number">8</span>,
 )
 eval_dataloader = DataLoader(
     validation_set, collate_fn=default_data_collator, batch_size=<span class="hljs-number">8</span>
@@ -1041,10 +1044,10 @@ question_answerer(question=question, context=context)<!-- HTML_TAG_END --></pre>
 <p>Super ! Notre modèle fonctionne aussi bien que le modèle par défaut pour ce pipeline !</p>
 
 
-		<script type="module" data-hydrate="ov80rs">
-		import { start } from "/docs/course/pr_145/fr/_app/start-7a44bdd1.js";
+		<script type="module" data-hydrate="472fnm">
+		import { start } from "/docs/course/pr_145/fr/_app/start-7d30feb3.js";
 		start({
-			target: document.querySelector('[data-hydrate="ov80rs"]').parentNode,
+			target: document.querySelector('[data-hydrate="472fnm"]').parentNode,
 			paths: {"base":"/docs/course/pr_145/fr","assets":"/docs/course/pr_145/fr"},
 			session: {},
 			route: false,
@@ -1055,7 +1058,7 @@ question_answerer(question=question, context=context)<!-- HTML_TAG_END --></pre>
 				error: null,
 				nodes: [
 					import("/docs/course/pr_145/fr/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_145/fr/_app/pages/chapter7/7.mdx-089954f5.js")
+						import("/docs/course/pr_145/fr/_app/pages/chapter7/7.mdx-02d06347.js")
 				],
 				params: {}
 			}

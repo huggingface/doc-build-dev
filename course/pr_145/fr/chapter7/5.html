@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;rsum-de-textes&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;prparation-dun-corpus-multilingue&quot;,&quot;title&quot;:&quot;Préparation d&#39;un corpus multilingue&quot;},{&quot;local&quot;:&quot;modles-pour-le-rsum-de-texte&quot;,&quot;title&quot;:&quot;Modèles pour le résumé de texte&quot;},{&quot;local&quot;:&quot;prtraitement-des-donnes&quot;,&quot;title&quot;:&quot;Prétraitement des données&quot;},{&quot;local&quot;:&quot;mtriques-pour-le-rsum-de-texte&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;cration-dune-base-de-rfrence-solide&quot;,&quot;title&quot;:&quot;Création d&#39;une base de référence solide&quot;}],&quot;title&quot;:&quot;Métriques pour le résumé de texte&quot;},{&quot;local&quot;:&quot;finetuning-de-mt5-avec-lapi-trainer&quot;,&quot;title&quot;:&quot;*Finetuning* de mT5 avec l&#39;API `Trainer`.&quot;},{&quot;local&quot;:&quot;finetuning-de-mt5-avec-keras&quot;,&quot;title&quot;:&quot;*Finetuning* de mT5 avec  Keras&quot;},{&quot;local&quot;:&quot;finetuning-de-mt5-avec-accelerate&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;prparer-tout-pour-lentranement&quot;,&quot;title&quot;:&quot;Préparer tout pour l&#39;entraînement&quot;},{&quot;local&quot;:&quot;boucle-dentranement&quot;,&quot;title&quot;:&quot;Boucle d&#39;entraînement&quot;}],&quot;title&quot;:&quot;*Finetuning* de mT5 avec 🤗 *Accelerate*&quot;},{&quot;local&quot;:&quot;utilisation-de-votre-modle-finetun&quot;,&quot;title&quot;:&quot;Utilisation de votre modèle *finetuné*&quot;}],&quot;title&quot;:&quot;Résumé de textes&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/assets/pages/__layout.svelte-0ba3497a.css">
-	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/start-7a44bdd1.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/start-7d30feb3.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/pages/chapter7/5.mdx-8c7b9cc9.js">
+	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/pages/chapter7/5.mdx-0ace643a.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/Tip-62b14c6e.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/Youtube-c2a8cc39.js">
 	<link rel="modulepreload" href="/docs/course/pr_145/fr/_app/chunks/IconCopyLink-483c28ba.js">
@@ -790,7 +790,8 @@ progress_bar = tqdm(<span class="hljs-built_in">range</span>(num_training_steps)
     <span class="hljs-keyword">for</span> step, batch <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(eval_dataloader):
         <span class="hljs-keyword">with</span> torch.no_grad():
             generated_tokens = accelerator.unwrap_model(model).generate(
-                batch[<span class="hljs-string">&quot;input_ids&quot;</span>], attention_mask=batch[<span class="hljs-string">&quot;attention_mask&quot;</span>],
+                batch[<span class="hljs-string">&quot;input_ids&quot;</span>],
+                attention_mask=batch[<span class="hljs-string">&quot;attention_mask&quot;</span>],
             )
 
             generated_tokens = accelerator.pad_across_processes(
@@ -912,10 +913,10 @@ summarizer = pipeline(<span class="hljs-string">&quot;summarization&quot;</span>
 <p>Ensuite, nous allons nous intéresser à une tâche un peu plus complexe : entraîner un modèle de langue à partir de zéro.</p>
 
 
-		<script type="module" data-hydrate="1pp89dn">
-		import { start } from "/docs/course/pr_145/fr/_app/start-7a44bdd1.js";
+		<script type="module" data-hydrate="1d2qs0h">
+		import { start } from "/docs/course/pr_145/fr/_app/start-7d30feb3.js";
 		start({
-			target: document.querySelector('[data-hydrate="1pp89dn"]').parentNode,
+			target: document.querySelector('[data-hydrate="1d2qs0h"]').parentNode,
 			paths: {"base":"/docs/course/pr_145/fr","assets":"/docs/course/pr_145/fr"},
 			session: {},
 			route: false,
@@ -926,7 +927,7 @@ summarizer = pipeline(<span class="hljs-string">&quot;summarization&quot;</span>
 				error: null,
 				nodes: [
 					import("/docs/course/pr_145/fr/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_145/fr/_app/pages/chapter7/5.mdx-8c7b9cc9.js")
+						import("/docs/course/pr_145/fr/_app/pages/chapter7/5.mdx-0ace643a.js")
 				],
 				params: {}
 			}
