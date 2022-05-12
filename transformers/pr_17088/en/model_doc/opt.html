@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;opt&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.OPTConfig&quot;,&quot;title&quot;:&quot;OPTConfig&quot;},{&quot;local&quot;:&quot;transformers.OPTModel&quot;,&quot;title&quot;:&quot;OPTModel&quot;},{&quot;local&quot;:&quot;transformers.OPTForCausalLM&quot;,&quot;title&quot;:&quot;OPTForCausalLM&quot;}],&quot;title&quot;:&quot;OPT&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/start-fac6305a.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/start-e7c38290.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/pages/model_doc/opt.mdx-056c7320.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/pages/model_doc/opt.mdx-b7922ef0.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17088/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -29,6 +29,8 @@ OPT is a series of open-sourced large causal language models which perform simil
 <p>The abstract from the paper is the following:</p>
 <p><em>Large language models, which are often trained for hundreds of thousands of compute days, have shown remarkable capabilities for zero- and few-shot learning. Given their computational cost, these models are difficult to replicate without significant capital. For the few that are available through APIs, no access is granted to the full model weights, making them difficult to study. We present Open Pre-trained Transformers (OPT), a suite of decoder-only pre-trained transformers ranging from 125M to 175B parameters, which we aim to fully and responsibly share with interested researchers. We show that OPT-175B is comparable to GPT-3, while requiring only 1/7th the carbon footprint to develop. We are also releasing our logbook detailing the infrastructure challenges we faced, along with code for experimenting with all of the released models.</em></p>
 <p>Tips:</p>
+<ul><li>OPT has the same architecture as <code>BartDecoder</code>.</li>
+<li>Contrary to GPT2, OPT adds the EOS token <code>&lt;/s&gt;</code> to the beginning of every prompt. <strong>Note</strong>: Make sure to pass <code>use_fast=False</code> when loading OPT’s tokenizer with <a href="/docs/transformers/pr_17088/en/model_doc/auto#transformers.AutoTokenizer">AutoTokenizer</a> to get the correct tokenizer.</li></ul>
 <p>This model was contributed by <a href="https://huggingface.co/ArthurZ" rel="nofollow">Arthur Zucker</a>, <a href="https://huggingface.co/ybelkada" rel="nofollow">Younes Belkada</a>, and <a href="https://huggingface.co/patrickvonplaten" rel="nofollow">Patrick Von Platen</a>.
 The original code can be found <a href="https://github.com/facebookresearch/metaseq" rel="nofollow">here</a>.</p>
 <h2 class="relative group"><a id="transformers.OPTConfig" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.OPTConfig"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
@@ -538,10 +540,10 @@ heads.</p>
 <span class="hljs-literal">True</span><!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="1o1wupo">
-		import { start } from "/docs/transformers/pr_17088/en/_app/start-fac6305a.js";
+		<script type="module" data-hydrate="1k8vz0r">
+		import { start } from "/docs/transformers/pr_17088/en/_app/start-e7c38290.js";
 		start({
-			target: document.querySelector('[data-hydrate="1o1wupo"]').parentNode,
+			target: document.querySelector('[data-hydrate="1k8vz0r"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17088/en","assets":"/docs/transformers/pr_17088/en"},
 			session: {},
 			route: false,
@@ -552,7 +554,7 @@ heads.</p>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_17088/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_17088/en/_app/pages/model_doc/opt.mdx-056c7320.js")
+						import("/docs/transformers/pr_17088/en/_app/pages/model_doc/opt.mdx-b7922ef0.js")
 				],
 				params: {}
 			}
