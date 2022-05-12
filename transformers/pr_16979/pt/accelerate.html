@@ -1,11 +1,11 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;treinamento-distribudo-com-o-accelerate&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;configurao&quot;,&quot;title&quot;:&quot;Configuração&quot;},{&quot;local&quot;:&quot;preparando-a-acelerao&quot;,&quot;title&quot;:&quot;Preparando a aceleração&quot;},{&quot;local&quot;:&quot;backward&quot;,&quot;title&quot;:&quot;Backward&quot;},{&quot;local&quot;:&quot;treinamento&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;treinamento-em-um-script&quot;,&quot;title&quot;:&quot;Treinamento em um Script&quot;},{&quot;local&quot;:&quot;treinamento-em-um-notebook&quot;,&quot;title&quot;:&quot;Treinamento em um Notebook&quot;}],&quot;title&quot;:&quot;Treinamento&quot;}],&quot;title&quot;:&quot;Treinamento distribuído com o 🤗 Accelerate&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/assets/pages/__layout.svelte-fa8104a9.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/start-1fa349d8.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/chunks/vendor-aeea7ff3.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/assets/pages/__layout.svelte-427394d4.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/start-f3271086.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/chunks/vendor-5fc3b424.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/pages/__layout.svelte-441d2ca6.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/pages/accelerate.mdx-45d20043.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/chunks/CodeBlock-35f79fb9.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/pages/__layout.svelte-b1c3b1bf.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/pages/accelerate.mdx-7b6413bb.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16979/pt/_app/chunks/CodeBlock-f0535003.js"> 
 
 
 
@@ -32,7 +32,7 @@ personalizar seu laço de treinamento de PyTorch nativo para poder treinar em am
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->pip install accelerate<!-- HTML_TAG_END --></pre></div>
 <p>Logo, devemos importar e criar um objeto <a href="https://huggingface.co/docs/accelerate/accelerator.html#accelerate.Accelerator" rel="nofollow"><code>Accelerator</code></a>.
-<code>Accelerator</code> detectará automáticamente o tipo de configuração distribuída que está disponível e inicializará todos os
+O <code>Accelerator</code> detectará automáticamente a configuração distribuída disponível e inicializará todos os
 componentes necessários para o treinamento. Não há necessidade portanto de especificar o dispositivo onde deve colocar seu modelo.</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -45,7 +45,7 @@ componentes necessários para o treinamento. Não há necessidade portanto de es
 	<span>Preparando a aceleração
 	</span></h2>
 
-<p>Passe todos os objetos relevantes para o treinamento ao método <a href="https://huggingface.co/docs/accelerate/accelerator.html#accelerate.Accelerator.prepare" rel="nofollow"><code>prepare</code></a>.
+<p>Passe todos os objetos relevantes ao treinamento para o método <a href="https://huggingface.co/docs/accelerate/accelerator.html#accelerate.Accelerator.prepare" rel="nofollow"><code>prepare</code></a>.
 Isto inclui os DataLoaders de treino e evaluação, um modelo e um otimizador:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -58,7 +58,7 @@ Isto inclui os DataLoaders de treino e evaluação, um modelo e um otimizador:</
 	<span>Backward
 	</span></h2>
 
-<p>Por último, substitua o <code>loss.backward()</code> padrão em teu laço de treinamento com o método <a href="https://huggingface.co/docs/accelerate/accelerator.html#accelerate.Accelerator.backward" rel="nofollow"><code>backward</code></a> do 🤗 Accelerate:</p>
+<p>Por último, substitua o <code>loss.backward()</code> padrão em seu laço de treinamento com o método <a href="https://huggingface.co/docs/accelerate/accelerator.html#accelerate.Accelerator.backward" rel="nofollow"><code>backward</code></a> do 🤗 Accelerate:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -133,7 +133,7 @@ para habilitar o treinamento distribuído!</p>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->accelerate config<!-- HTML_TAG_END --></pre></div>
-<p>Comece seu treinamento com:</p>
+<p>Comece o treinamento com:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -155,10 +155,10 @@ Encapsule o código responsável pelo treinamento de uma função e passe-o ao <
 <p>Para obter mais informações sobre o 🤗 Accelerate e suas numerosas funções, consulte a <a href="https://huggingface.co/docs/accelerate/index.html" rel="nofollow">documentación</a>.</p>
 
 
-		<script type="module" data-hydrate="1qmk7nl">
-		import { start } from "/docs/transformers/pr_16979/pt/_app/start-1fa349d8.js";
+		<script type="module" data-hydrate="h9xgay">
+		import { start } from "/docs/transformers/pr_16979/pt/_app/start-f3271086.js";
 		start({
-			target: document.querySelector('[data-hydrate="1qmk7nl"]').parentNode,
+			target: document.querySelector('[data-hydrate="h9xgay"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16979/pt","assets":"/docs/transformers/pr_16979/pt"},
 			session: {},
 			route: false,
@@ -168,8 +168,8 @@ Encapsule o código responsável pelo treinamento de uma função e passe-o ao <
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_16979/pt/_app/pages/__layout.svelte-441d2ca6.js"),
-						import("/docs/transformers/pr_16979/pt/_app/pages/accelerate.mdx-45d20043.js")
+					import("/docs/transformers/pr_16979/pt/_app/pages/__layout.svelte-b1c3b1bf.js"),
+						import("/docs/transformers/pr_16979/pt/_app/pages/accelerate.mdx-7b6413bb.js")
 				],
 				params: {}
 			}
