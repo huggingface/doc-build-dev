@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;data2vec&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextConfig&quot;,&quot;title&quot;:&quot;Data2VecTextConfig&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioConfig&quot;,&quot;title&quot;:&quot;Data2VecAudioConfig&quot;},{&quot;local&quot;:&quot;transformers.Data2VecVisionConfig&quot;,&quot;title&quot;:&quot;Data2VecVisionConfig&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioModel&quot;,&quot;title&quot;:&quot;Data2VecAudioModel&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForAudioFrameClassification&quot;,&quot;title&quot;:&quot;Data2VecAudioForAudioFrameClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForCTC&quot;,&quot;title&quot;:&quot;Data2VecAudioForCTC&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForSequenceClassification&quot;,&quot;title&quot;:&quot;Data2VecAudioForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecAudioForXVector&quot;,&quot;title&quot;:&quot;Data2VecAudioForXVector&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextModel&quot;,&quot;title&quot;:&quot;Data2VecTextModel&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForCausalLM&quot;,&quot;title&quot;:&quot;Data2VecTextForCausalLM&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForMaskedLM&quot;,&quot;title&quot;:&quot;Data2VecTextForMaskedLM&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForSequenceClassification&quot;,&quot;title&quot;:&quot;Data2VecTextForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForMultipleChoice&quot;,&quot;title&quot;:&quot;Data2VecTextForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForTokenClassification&quot;,&quot;title&quot;:&quot;Data2VecTextForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecTextForQuestionAnswering&quot;,&quot;title&quot;:&quot;Data2VecTextForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.Data2VecVisionModel&quot;,&quot;title&quot;:&quot;Data2VecVisionModel&quot;},{&quot;local&quot;:&quot;transformers.Data2VecVisionForImageClassification&quot;,&quot;title&quot;:&quot;Data2VecVisionForImageClassification&quot;},{&quot;local&quot;:&quot;transformers.Data2VecVisionForSemanticSegmentation&quot;,&quot;title&quot;:&quot;Data2VecVisionForSemanticSegmentation&quot;},{&quot;local&quot;:&quot;transformers.TFData2VecVisionModel&quot;,&quot;title&quot;:&quot;TFData2VecVisionModel&quot;},{&quot;local&quot;:&quot;transformers.TFData2VecVisionForImageClassification&quot;,&quot;title&quot;:&quot;TFData2VecVisionForImageClassification&quot;}],&quot;title&quot;:&quot;Data2Vec&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/start-e45e7a19.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/start-e211d48a.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/pages/model_doc/data2vec.mdx-7498adf3.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/pages/model_doc/data2vec.mdx-6fa0c856.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17194/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -42,11 +42,11 @@ Models and code are available at <a href="http://www.github.com/pytorch/fairseq/
 <ul><li>Data2VecAudio, Data2VecText, and Data2VecVision have all been trained using the same self-supervised learning method.</li>
 <li>For Data2VecAudio, preprocessing is identical to <a href="/docs/transformers/pr_17194/en/model_doc/wav2vec2#transformers.Wav2Vec2Model">Wav2Vec2Model</a>, including feature extraction</li>
 <li>For Data2VecText, preprocessing is identical to <a href="/docs/transformers/pr_17194/en/model_doc/roberta#transformers.RobertaModel">RobertaModel</a>, including tokenization.</li>
-<li>For Data2VecVision, preprocessing is identical to <a href="/docs/transformers/pr_17194/en/model_doc/beit#transformers.BeitModel">BeitModel</a>, including feature extraction.</li></ul>
+<li>For Data2VecVision, preprocessing is identical to <a href="/docs/transformers/pr_17194/en/model_doc/beit#transformers.BeitModel">BeitModel</a>, including feature extraction.</li>
+<li>To know how a pre-trained Data2Vec vision model can be fine-tuned on the task of image classification, you can check out
+<a href="https://colab.research.google.com/github/sayakpaul/TF-2.0-Hacks/blob/master/data2vec_vision_image_classification.ipynb" rel="nofollow">this notebook</a>.</li></ul>
 <p>This model was contributed by <a href="https://huggingface.co/edugp" rel="nofollow">edugp</a> and <a href="https://huggingface.co/patrickvonplaten" rel="nofollow">patrickvonplaten</a>.
-<a href="https://github.com/sayakpaul" rel="nofollow">sayakpaul</a> contributed Data2Vec for vision in TensorFlow. To know how a pre-trained Data2Vec vision
-model can be fine-tuned on the task of image classification, you can check out
-<a href="https://colab.research.google.com/github/sayakpaul/TF-2.0-Hacks/blob/master/data2vec_vision_image_classification.ipynb" rel="nofollow">this notebook</a>.</p>
+<a href="https://github.com/sayakpaul" rel="nofollow">sayakpaul</a> contributed Data2Vec for vision in TensorFlow. </p>
 <p>The original code (for NLP and Speech) can be found <a href="https://github.com/pytorch/fairseq/tree/main/examples/data2vec" rel="nofollow">here</a>.
 The original code for vision can be found <a href="https://github.com/facebookresearch/data2vec_vision/tree/main/beit" rel="nofollow">here</a>.</p>
 <h2 class="relative group"><a id="transformers.Data2VecTextConfig" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.Data2VecTextConfig"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
@@ -3892,10 +3892,10 @@ the latter silently ignores them.</p></div>
 remote control, remote<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="1g7x1si">
-		import { start } from "/docs/transformers/pr_17194/en/_app/start-e45e7a19.js";
+		<script type="module" data-hydrate="1udygrh">
+		import { start } from "/docs/transformers/pr_17194/en/_app/start-e211d48a.js";
 		start({
-			target: document.querySelector('[data-hydrate="1g7x1si"]').parentNode,
+			target: document.querySelector('[data-hydrate="1udygrh"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17194/en","assets":"/docs/transformers/pr_17194/en"},
 			session: {},
 			route: false,
@@ -3906,7 +3906,7 @@ remote control, remote<!-- HTML_TAG_END --></pre></div></div></div></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_17194/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_17194/en/_app/pages/model_doc/data2vec.mdx-7498adf3.js")
+						import("/docs/transformers/pr_17194/en/_app/pages/model_doc/data2vec.mdx-6fa0c856.js")
 				],
 				params: {}
 			}
