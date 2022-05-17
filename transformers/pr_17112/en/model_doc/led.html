@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;led&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.LEDConfig&quot;,&quot;title&quot;:&quot;LEDConfig&quot;},{&quot;local&quot;:&quot;transformers.LEDTokenizer&quot;,&quot;title&quot;:&quot;LEDTokenizer&quot;},{&quot;local&quot;:&quot;transformers.LEDTokenizerFast&quot;,&quot;title&quot;:&quot;LEDTokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.models.led.modeling_led.LEDEncoderBaseModelOutput&quot;,&quot;title&quot;:&quot;LED specific outputs&quot;},{&quot;local&quot;:&quot;transformers.LEDModel&quot;,&quot;title&quot;:&quot;LEDModel&quot;},{&quot;local&quot;:&quot;transformers.LEDForConditionalGeneration&quot;,&quot;title&quot;:&quot;LEDForConditionalGeneration&quot;},{&quot;local&quot;:&quot;transformers.LEDForSequenceClassification&quot;,&quot;title&quot;:&quot;LEDForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.LEDForQuestionAnswering&quot;,&quot;title&quot;:&quot;LEDForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.TFLEDModel&quot;,&quot;title&quot;:&quot;TFLEDModel&quot;},{&quot;local&quot;:&quot;transformers.TFLEDForConditionalGeneration&quot;,&quot;title&quot;:&quot;TFLEDForConditionalGeneration&quot;}],&quot;title&quot;:&quot;LED&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/start-33797343.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/start-0f3d26a6.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/pages/model_doc/led.mdx-a99303cf.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/pages/model_doc/led.mdx-dad2bc11.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17112/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -51,8 +51,8 @@ gained, when <a href="/docs/transformers/pr_17112/en/model_doc/led#transformers.
 <a href="/docs/transformers/pr_17112/en/model_doc/longformer#transformers.LongformerModel">LongformerModel</a>). For summarization, it is advised to put <em>global attention</em> only on the first
 <code>&lt;s&gt;</code> token. For question answering, it is advised to put <em>global attention</em> on all tokens of the question.</li>
 <li>To fine-tune LED on all 16384, <em>gradient checkpointing</em> can be enabled in case training leads to out-of-memory (OOM)
-errors. This can be done by either executing <code>model.gradient_checkpointing_enable()</code>.
-. Moreover, the <code>use_cache=False</code>
+errors. This can be done by executing <code>model.gradient_checkpointing_enable()</code>.
+Moreover, the <code>use_cache=False</code>
 flag can be used to disable the caching mechanism to save memory.</li>
 <li>A notebook showing how to evaluate LED, can be accessed <a href="https://colab.research.google.com/drive/12INTTR6n64TzS4RrXZxMSXfrOd9Xzamo?usp=sharing" rel="nofollow">here</a>.</li>
 <li>A notebook showing how to fine-tune LED, can be accessed <a href="https://colab.research.google.com/drive/12LjJazBl7Gam0XBPy_y0CTOJZeZ34c2v?usp=sharing" rel="nofollow">here</a>.</li></ul>
@@ -2800,10 +2800,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># probs[5] is associated with the mask token</span><!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="9d5hlw">
-		import { start } from "/docs/transformers/pr_17112/en/_app/start-33797343.js";
+		<script type="module" data-hydrate="rn4oh9">
+		import { start } from "/docs/transformers/pr_17112/en/_app/start-0f3d26a6.js";
 		start({
-			target: document.querySelector('[data-hydrate="9d5hlw"]').parentNode,
+			target: document.querySelector('[data-hydrate="rn4oh9"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17112/en","assets":"/docs/transformers/pr_17112/en"},
 			session: {},
 			route: false,
@@ -2814,7 +2814,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_17112/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_17112/en/_app/pages/model_doc/led.mdx-a99303cf.js")
+						import("/docs/transformers/pr_17112/en/_app/pages/model_doc/led.mdx-dad2bc11.js")
 				],
 				params: {}
 			}
