@@ -838,7 +838,7 @@ where penalty starts and <code>decay_factor</code> represents the factor of expo
 <p>model<em>kwargs &#x2014;
 Additional model specific kwargs will be forwarded to the <code>forward</code> function of the model. If the model
 is an encoder-decoder model, encoder specific kwargs should not be prefixed and decoder specific kwargs
-should be prefixed with *decoder</em>*.`,name:"exponential_decay_length_penalty"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L844",returnDescription:`
+should be prefixed with *decoder</em>*.`,name:"exponential_decay_length_penalty"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L843",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17311/en/main_classes/output#transformers.utils.ModelOutput"
 >ModelOutput</a> (if <code>return_dict_in_generate=True</code>
@@ -902,7 +902,7 @@ Whether or not to return a <a href="/docs/transformers/pr_17311/en/main_classes/
 Whether to continue running the while loop until max_length (needed for ZeRO stage 3)
 model_kwargs &#x2014;
 Additional model specific keyword arguments will be forwarded to the <code>forward</code> function of the model.
-If model is an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L1525",returnDescription:`
+If model is an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L1524",returnDescription:`
 <p><a
   href="/docs/transformers/pr_17311/en/internal/generation_utils#transformers.generation_utils.GreedySearchDecoderOnlyOutput"
 >GreedySearchDecoderOnlyOutput</a>, <a
@@ -938,7 +938,7 @@ Whether or not to return a <a href="/docs/transformers/pr_17311/en/main_classes/
 Whether to continue running the while loop until max_length (needed for ZeRO stage 3)
 model_kwargs &#x2014;
 Additional model specific kwargs will be forwarded to the <code>forward</code> function of the model. If model is
-an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L1758",returnDescription:`
+an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L1757",returnDescription:`
 <p><a
   href="/docs/transformers/pr_17311/en/internal/generation_utils#transformers.generation_utils.SampleDecoderOnlyOutput"
 >SampleDecoderOnlyOutput</a>, <a
@@ -973,7 +973,7 @@ Whether or not to return a <a href="/docs/transformers/pr_17311/en/main_classes/
 Whether to continue running the while loop until max_length (needed for ZeRO stage 3)
 model_kwargs &#x2014;
 Additional model specific kwargs will be forwarded to the <code>forward</code> function of the model. If model is
-an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L2015",returnDescription:`
+an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L2014",returnDescription:`
 <p><code>generation_utilsBeamSearchDecoderOnlyOutput</code>, <a
   href="/docs/transformers/pr_17311/en/internal/generation_utils#transformers.generation_utils.BeamSearchEncoderDecoderOutput"
 >BeamSearchEncoderDecoderOutput</a> or
@@ -1009,7 +1009,7 @@ Whether or not to return a <a href="/docs/transformers/pr_17311/en/main_classes/
 Whether to continue running the while loop until max_length (needed for ZeRO stage 3)
 model_kwargs &#x2014;
 Additional model specific kwargs will be forwarded to the <code>forward</code> function of the model. If model is
-an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L2334",returnDescription:`
+an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L2332",returnDescription:`
 <p><a
   href="/docs/transformers/pr_17311/en/internal/generation_utils#transformers.generation_utils.BeamSampleDecoderOnlyOutput"
 >BeamSampleDecoderOnlyOutput</a>, <a
@@ -1044,7 +1044,7 @@ Whether or not to return a <a href="/docs/transformers/pr_17311/en/main_classes/
 Whether to continue running the while loop until max_length (needed for ZeRO stage 3)</p>
 <p>model_kwargs &#x2014;
 Additional model specific kwargs that will be forwarded to the <code>forward</code> function of the model. If
-model is an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L2657",returnDescription:`
+model is an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L2655",returnDescription:`
 <p><a
   href="/docs/transformers/pr_17311/en/internal/generation_utils#transformers.generation_utils.BeamSearchDecoderOnlyOutput"
 >BeamSearchDecoderOnlyOutput</a>, <a
@@ -1085,7 +1085,7 @@ Whether or not to return a <a href="/docs/transformers/pr_17311/en/main_classes/
 Whether to continue running the while loop until max_length (needed for ZeRO stage 3)
 model_kwargs &#x2014;
 Additional model specific kwargs will be forwarded to the <code>forward</code> function of the model. If model is
-an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L3023",returnDescription:`
+an encoder-decoder model the kwargs should include <code>encoder_outputs</code>.`,name:"synced_gpus"}],source:"https://github.com/huggingface/transformers/blob/vr_17311/src/transformers/generation_utils.py#L3021",returnDescription:`
 <p><code>generation_utilsBeamSearchDecoderOnlyOutput</code>, <a
   href="/docs/transformers/pr_17311/en/internal/generation_utils#transformers.generation_utils.BeamSearchEncoderDecoderOutput"
 >BeamSearchEncoderDecoderOutput</a> or
