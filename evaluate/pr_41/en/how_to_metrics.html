@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;metrics&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;add-predictions-and-references&quot;,&quot;title&quot;:&quot;Add predictions and references&quot;},{&quot;local&quot;:&quot;compute-scores&quot;,&quot;title&quot;:&quot;Compute scores&quot;},{&quot;local&quot;:&quot;custom-metric-loading-script&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;add-metric-attributes&quot;,&quot;title&quot;:&quot;Add metric attributes&quot;},{&quot;local&quot;:&quot;download-metric-files&quot;,&quot;title&quot;:&quot;Download metric files&quot;},{&quot;local&quot;:&quot;compute-score&quot;,&quot;title&quot;:&quot;Compute score&quot;},{&quot;local&quot;:&quot;test&quot;,&quot;title&quot;:&quot;Test&quot;}],&quot;title&quot;:&quot;Custom metric loading script&quot;}],&quot;title&quot;:&quot;Metrics&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/evaluate/pr_41/en/_app/assets/pages/__layout.svelte-7fcec71d.css">
-	<link rel="modulepreload" href="/docs/evaluate/pr_41/en/_app/start-4ecbf78f.js">
+	<link rel="modulepreload" href="/docs/evaluate/pr_41/en/_app/start-a523d82f.js">
 	<link rel="modulepreload" href="/docs/evaluate/pr_41/en/_app/chunks/vendor-e830fc9c.js">
 	<link rel="modulepreload" href="/docs/evaluate/pr_41/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/evaluate/pr_41/en/_app/pages/__layout.svelte-2159ccac.js">
-	<link rel="modulepreload" href="/docs/evaluate/pr_41/en/_app/pages/how_to_metrics.mdx-6e29bab0.js">
+	<link rel="modulepreload" href="/docs/evaluate/pr_41/en/_app/pages/how_to_metrics.mdx-f20f8e94.js">
 	<link rel="modulepreload" href="/docs/evaluate/pr_41/en/_app/chunks/CodeBlock-7b28e4e9.js">
 	<link rel="modulepreload" href="/docs/evaluate/pr_41/en/_app/chunks/IconCopyLink-af4c5c5b.js"> 
 
@@ -34,7 +34,7 @@
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> datasets
-<span class="hljs-meta">&gt;&gt;&gt; </span>metric = evaluate.load_metric(<span class="hljs-string">&#x27;my_metric&#x27;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>metric = evaluate.load(<span class="hljs-string">&#x27;my_metric&#x27;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> model_input, gold_references <span class="hljs-keyword">in</span> evaluation_dataset:
 <span class="hljs-meta">... </span>    model_predictions = model(model_inputs)
 <span class="hljs-meta">... </span>    metric.add_batch(predictions=model_predictions, references=gold_references)
@@ -54,7 +54,7 @@
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> datasets
-<span class="hljs-meta">&gt;&gt;&gt; </span>metric = evaluate.load_metric(<span class="hljs-string">&#x27;sacrebleu&#x27;</span>)<!-- HTML_TAG_END --></pre></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>metric = evaluate.load(<span class="hljs-string">&#x27;sacrebleu&#x27;</span>)<!-- HTML_TAG_END --></pre></div>
 <ol start="2"><li>Inspect the different argument methods for computing the metric:</li></ol>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -84,7 +84,7 @@ Args:
 	<span>Custom metric loading script
 	</span></h2>
 
-<p>Write a metric loading script to use your own custom metric (or one that is not on the Hub). Then you can load it as usual with <a href="/docs/evaluate/pr_41/en/package_reference/loading_methods#evaluate.load_metric">load_metric()</a>.</p>
+<p>Write a metric loading script to use your own custom metric (or one that is not on the Hub). Then you can load it as usual with <a href="/docs/evaluate/pr_41/en/package_reference/loading_methods#evaluate.load">load()</a>.</p>
 <p>To help you get started, open the <a href="https://github.com/huggingface/datasets/blob/master/metrics/squad/squad.py" rel="nofollow">SQuAD metric loading script</a> and follow along.</p>
 
 
@@ -158,7 +158,7 @@ Args:
     <span class="hljs-keyword">if</span> self.config_name == <span class="hljs-string">&quot;default&quot;</span>:
         logger.warning(
             <span class="hljs-string">&quot;Using default BLEURT-Base checkpoint for sequence maximum length 128. &quot;</span>
-            <span class="hljs-string">&quot;You can use a bigger model for better results with e.g.: evaluate.load_metric(&#x27;bleurt&#x27;, &#x27;bleurt-large-512&#x27;).&quot;</span>
+            <span class="hljs-string">&quot;You can use a bigger model for better results with e.g.: evaluate.load(&#x27;bleurt&#x27;, &#x27;bleurt-large-512&#x27;).&quot;</span>
         )
         self.config_name = <span class="hljs-string">&quot;bleurt-base-128&quot;</span>
     <span class="hljs-keyword">if</span> self.config_name <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> CHECKPOINT_URLS.keys():
@@ -226,14 +226,14 @@ Args:
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> evaluate <span class="hljs-keyword">import</span> load_metric
-<span class="hljs-meta">&gt;&gt;&gt; </span>metric = load_metric(<span class="hljs-string">&#x27;PATH/TO/MY/SCRIPT.py&#x27;</span>)<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> evaluate <span class="hljs-keyword">import</span> load
+<span class="hljs-meta">&gt;&gt;&gt; </span>metric = load(<span class="hljs-string">&#x27;PATH/TO/MY/SCRIPT.py&#x27;</span>)<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="lr5rmu">
-		import { start } from "/docs/evaluate/pr_41/en/_app/start-4ecbf78f.js";
+		<script type="module" data-hydrate="199u5nh">
+		import { start } from "/docs/evaluate/pr_41/en/_app/start-a523d82f.js";
 		start({
-			target: document.querySelector('[data-hydrate="lr5rmu"]').parentNode,
+			target: document.querySelector('[data-hydrate="199u5nh"]').parentNode,
 			paths: {"base":"/docs/evaluate/pr_41/en","assets":"/docs/evaluate/pr_41/en"},
 			session: {},
 			route: false,
@@ -244,7 +244,7 @@ Args:
 				error: null,
 				nodes: [
 					import("/docs/evaluate/pr_41/en/_app/pages/__layout.svelte-2159ccac.js"),
-						import("/docs/evaluate/pr_41/en/_app/pages/how_to_metrics.mdx-6e29bab0.js")
+						import("/docs/evaluate/pr_41/en/_app/pages/how_to_metrics.mdx-f20f8e94.js")
 				],
 				params: {}
 			}
