@@ -1,10 +1,10 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;comprendre-la-classe-iinterfacei&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;comment-crer-une-interface&quot;,&quot;title&quot;:&quot;Comment créer une interface&quot;},{&quot;local&quot;:&quot;un-exemple-simple-avec-audio&quot;,&quot;title&quot;:&quot;Un exemple simple avec audio&quot;},{&quot;local&quot;:&quot;grer-les-entres-et-sorties-multiples&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;la-mthode-launch&quot;,&quot;title&quot;:&quot;La méthode `launch()`.&quot;}],&quot;title&quot;:&quot;Gérer les entrées et sorties multiples&quot;},{&quot;local&quot;:&quot;appliquons-a&quot;,&quot;title&quot;:&quot;✏️ Appliquons ça !&quot;}],&quot;title&quot;:&quot;Comprendre la classe &lt;i&gt;Interface&lt;/i&gt;&quot;}" data-svelte="svelte-1phssyn">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;comprendre-la-classe-iinterfacei&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;comment-crer-une-interface&quot;,&quot;title&quot;:&quot;Comment créer une interface&quot;},{&quot;local&quot;:&quot;un-exemple-simple-avec-audio&quot;,&quot;title&quot;:&quot;Un exemple simple avec audio&quot;},{&quot;local&quot;:&quot;grer-les-entres-et-sorties-multiples&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;la-mthode-launch&quot;,&quot;title&quot;:&quot;La méthode `launch()`&quot;}],&quot;title&quot;:&quot;Gérer les entrées et sorties multiples&quot;},{&quot;local&quot;:&quot;appliquons-a&quot;,&quot;title&quot;:&quot;✏️ Appliquons ça !&quot;}],&quot;title&quot;:&quot;Comprendre la classe &lt;i&gt;Interface&lt;/i&gt;&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_190/fr/_app/assets/pages/__layout.svelte-86c37201.css">
-	<link rel="modulepreload" href="/docs/course/pr_190/fr/_app/start-cb8ca12b.js">
+	<link rel="modulepreload" href="/docs/course/pr_190/fr/_app/start-037b2bbb.js">
 	<link rel="modulepreload" href="/docs/course/pr_190/fr/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_190/fr/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_190/fr/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_190/fr/_app/pages/chapter9/3.mdx-9d59f522.js">
+	<link rel="modulepreload" href="/docs/course/pr_190/fr/_app/pages/chapter9/3.mdx-1c945ee3.js">
 	<link rel="modulepreload" href="/docs/course/pr_190/fr/_app/chunks/IconCopyLink-483c28ba.js">
 	<link rel="modulepreload" href="/docs/course/pr_190/fr/_app/chunks/CodeBlock-e5764662.js"> 
 
@@ -101,8 +101,7 @@ gr.Interface(
 ).launch()<!-- HTML_TAG_END --></pre></div>
 <iframe src="https://hf.space/gradioiframe/course-demos/generate-tone/+" frameborder="0" height="450" title="Gradio app" class="container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
 <h3 class="relative group"><a id="la-mthode-launch" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#la-mthode-launch"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span>La méthode <code>launch()</code>.
-	</span></h3>
+	<span>La méthode <code>launch()</code></span></h3>
 
 <p>Jusqu’à présent, nous avons utilisé la méthode <code>launch()</code> pour lancer l’interface, mais nous n’avons pas vraiment discuté de ce qu’elle fait. </p>
 <p>Par défaut, la méthode <code>launch()</code> lancera la démo dans un serveur web qui tourne localement. Si vous exécutez votre code dans un <em>notebook</em> Jupyter ou Colab, <em>Gradio</em> va intégrer l’interface graphique de la démo dans le <em>notebook</em> afin que vous puissiez l’utiliser facilement.</p>
@@ -154,10 +153,10 @@ gr.Interface(
 <p>Continuez pour voir comment partager votre interface avec d’autres !</p>
 
 
-		<script type="module" data-hydrate="kmtjxy">
-		import { start } from "/docs/course/pr_190/fr/_app/start-cb8ca12b.js";
+		<script type="module" data-hydrate="3sh15n">
+		import { start } from "/docs/course/pr_190/fr/_app/start-037b2bbb.js";
 		start({
-			target: document.querySelector('[data-hydrate="kmtjxy"]').parentNode,
+			target: document.querySelector('[data-hydrate="3sh15n"]').parentNode,
 			paths: {"base":"/docs/course/pr_190/fr","assets":"/docs/course/pr_190/fr"},
 			session: {},
 			route: false,
@@ -168,7 +167,7 @@ gr.Interface(
 				error: null,
 				nodes: [
 					import("/docs/course/pr_190/fr/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_190/fr/_app/pages/chapter9/3.mdx-9d59f522.js")
+						import("/docs/course/pr_190/fr/_app/pages/chapter9/3.mdx-1c945ee3.js")
 				],
 				params: {}
 			}
