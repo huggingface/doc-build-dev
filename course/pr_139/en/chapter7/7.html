@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;question-answering&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;preparing-the-data&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;the-squad-dataset&quot;,&quot;title&quot;:&quot;The SQuAD dataset&quot;},{&quot;local&quot;:&quot;processing-the-training-data&quot;,&quot;title&quot;:&quot;Processing the training data&quot;},{&quot;local&quot;:&quot;processing-the-validation-data&quot;,&quot;title&quot;:&quot;Processing the validation data&quot;}],&quot;title&quot;:&quot;Preparing the data&quot;},{&quot;local&quot;:&quot;finetuning-the-model-with-the-trainer-api&quot;,&quot;title&quot;:&quot;Fine-tuning the model with the `Trainer` API&quot;},{&quot;local&quot;:&quot;finetuning-the-model-with-keras&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;postprocessing&quot;,&quot;title&quot;:&quot;Post-processing&quot;},{&quot;local&quot;:&quot;finetuning-the-model&quot;,&quot;title&quot;:&quot;Fine-tuning the model&quot;}],&quot;title&quot;:&quot;Fine-tuning the model with Keras&quot;},{&quot;local&quot;:&quot;a-custom-training-loop&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;preparing-everything-for-training&quot;,&quot;title&quot;:&quot;Preparing everything for training&quot;}],&quot;title&quot;:&quot;A custom training loop&quot;},{&quot;local&quot;:&quot;training-loop&quot;,&quot;title&quot;:&quot;Training loop&quot;},{&quot;local&quot;:&quot;using-the-finetuned-model&quot;,&quot;title&quot;:&quot;Using the fine-tuned model&quot;}],&quot;title&quot;:&quot;Question answering&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/assets/pages/__layout.svelte-4547f5cf.css">
-	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/start-75f45656.js">
+	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/assets/pages/__layout.svelte-9b9c9c55.css">
+	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/start-ccfc81f0.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/chunks/vendor-1e8b365d.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/pages/chapter7/7.mdx-64138ad9.js">
+	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/pages/chapter7/7.mdx-12c8a040.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/chunks/Tip-62b14c6e.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/chunks/Youtube-c2a8cc39.js">
 	<link rel="modulepreload" href="/docs/course/pr_139/en/_app/chunks/IconCopyLink-483c28ba.js">
@@ -33,7 +33,6 @@
 <iframe class="w-full xl:w-4/6 h-80" src="https://www.youtube-nocookie.com/embed/ajPx5LwJD-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>We will fine-tune a BERT model on the <a href="https://rajpurkar.github.io/SQuAD-explorer/" rel="nofollow">SQuAD dataset</a>, which consists of questions posed by crowdworkers on a set of Wikipedia articles. This will give us a model able to compute predictions like this one:</p>
 <iframe src="https://hf.space/gradioiframe/course-demos/bert-finetuned-squad/+" frameborder="0" height="450" title="Gradio app" class="block dark:hidden container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
-<iframe src="https://hf.space/gradioiframe/course-demos/bert-finetuned-squad-darkmode/+" frameborder="0" height="450" title="Gradio app" class="hidden dark:block container p-0 flex-grow space-iframe" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; document-domain; encrypted-media; fullscreen; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; oversized-images; payment; picture-in-picture; publickey-credentials-get; sync-xhr; usb; vr ; wake-lock; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-downloads"></iframe>
 <p>This is actually showcasing the model that was trained and uploaded to the Hub using the code shown in this section. You can find it and double-check the predictions <a href="https://huggingface.co/huggingface-course/bert-finetuned-squad?context=%F0%9F%A4%97+Transformers+is+backed+by+the+three+most+popular+deep+learning+libraries+%E2%80%94+Jax%2C+PyTorch+and+TensorFlow+%E2%80%94+with+a+seamless+integration+between+them.+It%27s+straightforward+to+train+your+models+with+one+before+loading+them+for+inference+with+the+other.&question=Which+deep+learning+libraries+back+%F0%9F%A4%97+Transformers%3F" rel="nofollow">here</a>.</p>
 
 
@@ -512,7 +511,7 @@ stride = <span class="hljs-number">128</span>
 	</span></h3>
 
 <iframe class="w-full xl:w-4/6 h-80" src="https://www.youtube-nocookie.com/embed/BNy08iIWVJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p>The model will output logits for the start and end positions of the answer in the input IDs, as we saw during our exploration of the <a href="/course/chapter6/4"><code>question-answering</code> pipeline</a>. The post-processing step will be similar to what we did there, so here’s a quick reminder of the actions we took:</p>
+<p>The model will output logits for the start and end positions of the answer in the input IDs, as we saw during our exploration of the <a href="/course/chapter6/3b"><code>question-answering</code> pipeline</a>. The post-processing step will be similar to what we did there, so here’s a quick reminder of the actions we took:</p>
 <ul><li>We masked the start and end logits corresponding to tokens outside of the context.</li>
 <li>We then converted the start and end logits into probabilities using a softmax.</li>
 <li>We attributed a score to each <code>(start_token, end_token)</code> pair by taking the product of the corresponding two probabilities.</li>
@@ -801,7 +800,7 @@ trainer.train()<!-- HTML_TAG_END --></pre></div>
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->predictions, _ = trainer.predict(validation_dataset)
+	<pre><!-- HTML_TAG_START -->predictions, _, _ = trainer.predict(validation_dataset)
 start_logits, end_logits = predictions
 compute_metrics(start_logits, end_logits, validation_dataset, raw_datasets[<span class="hljs-string">&quot;validation&quot;</span>])<!-- HTML_TAG_END --></pre></div>
 
@@ -1027,10 +1026,10 @@ question_answerer(question=question, context=context)<!-- HTML_TAG_END --></pre>
 <p>Great! Our model is working as well as the default one for this pipeline!</p>
 
 
-		<script type="module" data-hydrate="1lv80p6">
-		import { start } from "/docs/course/pr_139/en/_app/start-75f45656.js";
+		<script type="module" data-hydrate="15b1euc">
+		import { start } from "/docs/course/pr_139/en/_app/start-ccfc81f0.js";
 		start({
-			target: document.querySelector('[data-hydrate="1lv80p6"]').parentNode,
+			target: document.querySelector('[data-hydrate="15b1euc"]').parentNode,
 			paths: {"base":"/docs/course/pr_139/en","assets":"/docs/course/pr_139/en"},
 			session: {},
 			route: false,
@@ -1041,7 +1040,7 @@ question_answerer(question=question, context=context)<!-- HTML_TAG_END --></pre>
 				error: null,
 				nodes: [
 					import("/docs/course/pr_139/en/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_139/en/_app/pages/chapter7/7.mdx-64138ad9.js")
+						import("/docs/course/pr_139/en/_app/pages/chapter7/7.mdx-12c8a040.js")
 				],
 				params: {}
 			}
