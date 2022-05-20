@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;pipelines&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers.pipeline&quot;,&quot;title&quot;:&quot;The pipeline abstraction&quot;},{&quot;local&quot;:&quot;pipeline-batching&quot;,&quot;title&quot;:&quot;Pipeline batching&quot;},{&quot;local&quot;:&quot;pipeline-chunk-batching&quot;,&quot;title&quot;:&quot;Pipeline chunk batching&quot;},{&quot;local&quot;:&quot;pipeline-custom-code&quot;,&quot;title&quot;:&quot;Pipeline custom code&quot;},{&quot;local&quot;:&quot;implementing-a-pipeline&quot;,&quot;title&quot;:&quot;Implementing a pipeline&quot;},{&quot;local&quot;:&quot;the-task-specific-pipelines&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers.AudioClassificationPipeline&quot;,&quot;title&quot;:&quot;AudioClassificationPipeline&quot;},{&quot;local&quot;:&quot;transformers.AutomaticSpeechRecognitionPipeline&quot;,&quot;title&quot;:&quot;AutomaticSpeechRecognitionPipeline&quot;},{&quot;local&quot;:&quot;transformers.Conversation&quot;,&quot;title&quot;:&quot;ConversationalPipeline&quot;},{&quot;local&quot;:&quot;transformers.FeatureExtractionPipeline&quot;,&quot;title&quot;:&quot;FeatureExtractionPipeline&quot;},{&quot;local&quot;:&quot;transformers.FillMaskPipeline&quot;,&quot;title&quot;:&quot;FillMaskPipeline&quot;},{&quot;local&quot;:&quot;transformers.ImageClassificationPipeline&quot;,&quot;title&quot;:&quot;ImageClassificationPipeline&quot;},{&quot;local&quot;:&quot;transformers.ImageSegmentationPipeline&quot;,&quot;title&quot;:&quot;ImageSegmentationPipeline&quot;},{&quot;local&quot;:&quot;transformers.TokenClassificationPipeline&quot;,&quot;title&quot;:&quot;NerPipeline&quot;},{&quot;local&quot;:&quot;transformers.ObjectDetectionPipeline&quot;,&quot;title&quot;:&quot;ObjectDetectionPipeline&quot;},{&quot;local&quot;:&quot;transformers.QuestionAnsweringPipeline&quot;,&quot;title&quot;:&quot;QuestionAnsweringPipeline&quot;},{&quot;local&quot;:&quot;transformers.SummarizationPipeline&quot;,&quot;title&quot;:&quot;SummarizationPipeline&quot;},{&quot;local&quot;:&quot;transformers.TableQuestionAnsweringPipeline&quot;,&quot;title&quot;:&quot;TableQuestionAnsweringPipeline&quot;},{&quot;local&quot;:&quot;transformers.TextClassificationPipeline&quot;,&quot;title&quot;:&quot;TextClassificationPipeline&quot;},{&quot;local&quot;:&quot;transformers.TextGenerationPipeline&quot;,&quot;title&quot;:&quot;TextGenerationPipeline&quot;},{&quot;local&quot;:&quot;transformers.Text2TextGenerationPipeline&quot;,&quot;title&quot;:&quot;Text2TextGenerationPipeline&quot;},{&quot;local&quot;:&quot;transformers.TokenClassificationPipeline&quot;,&quot;title&quot;:&quot;TokenClassificationPipeline&quot;},{&quot;local&quot;:&quot;transformers.TranslationPipeline&quot;,&quot;title&quot;:&quot;TranslationPipeline&quot;},{&quot;local&quot;:&quot;transformers.VisualQuestionAnsweringPipeline&quot;,&quot;title&quot;:&quot;VisualQuestionAnsweringPipeline&quot;},{&quot;local&quot;:&quot;transformers.ZeroShotClassificationPipeline&quot;,&quot;title&quot;:&quot;ZeroShotClassificationPipeline&quot;},{&quot;local&quot;:&quot;transformers.ZeroShotImageClassificationPipeline&quot;,&quot;title&quot;:&quot;ZeroShotImageClassificationPipeline&quot;}],&quot;title&quot;:&quot;The task specific pipelines&quot;},{&quot;local&quot;:&quot;transformers.Pipeline&quot;,&quot;title&quot;:&quot;Parent class: `Pipeline`&quot;}],&quot;title&quot;:&quot;Pipelines&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/start-257470d4.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/start-c1332d46.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/pages/main_classes/pipelines.mdx-725b672a.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/pages/main_classes/pipelines.mdx-1d9393f4.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17286/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -1560,7 +1560,7 @@ Threshold to use when turning the predicted masks into binary values.<!-- HTML_T
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">args_parser<span class="opacity-60"> = &lt;transformers.pipelines.token_classification.TokenClassificationArgumentHandler object at 0x7fdba9b5f820&gt;</span></span>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">args_parser<span class="opacity-60"> = &lt;transformers.pipelines.token_classification.TokenClassificationArgumentHandler object at 0x7f9f35f77520&gt;</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">*args<span class="opacity-60"></span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 				</span>
@@ -2320,7 +2320,7 @@ ids of the summary.</li>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">args_parser<span class="opacity-60"> = &lt;transformers.pipelines.table_question_answering.TableQuestionAnsweringArgumentHandler object at 0x7fdba9bbd580&gt;</span></span>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">args_parser<span class="opacity-60"> = &lt;transformers.pipelines.table_question_answering.TableQuestionAnsweringArgumentHandler object at 0x7f9f35fd7cd0&gt;</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">*args<span class="opacity-60"></span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 				</span>
@@ -2993,7 +2993,7 @@ ids of the generated text.</li>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">args_parser<span class="opacity-60"> = &lt;transformers.pipelines.token_classification.TokenClassificationArgumentHandler object at 0x7fdba9b5f820&gt;</span></span>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">args_parser<span class="opacity-60"> = &lt;transformers.pipelines.token_classification.TokenClassificationArgumentHandler object at 0x7f9f35f77520&gt;</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">*args<span class="opacity-60"></span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 				</span>
@@ -3463,7 +3463,7 @@ Flag indicating if the output the pipeline should happen in a binary format (i.e
 <p>Visual Question Answering pipeline using a <code>AutoModelForVisualQuestionAnswering</code>. This pipeline is currently only
 available in PyTorch.</p>
 <p>This visual question answering pipeline can currently be loaded from <a href="/docs/transformers/pr_17286/en/main_classes/pipelines#transformers.pipeline">pipeline()</a> using the following task
-identifier: <code>&quot;visual-question-answering&quot;</code>.</p>
+identifiers: <code>&quot;visual-question-answering&quot;, &quot;vqa&quot;</code>.</p>
 <p>The models that this pipeline can use are models that have been fine-tuned on a visual question answering task.
 TODO: point to <a href="https://huggingface.co/models?filter=table-question-answering" rel="nofollow">huggingface.co/models</a> after the
 pipeline is added</p>
@@ -3537,7 +3537,7 @@ below:</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">args_parser<span class="opacity-60"> = &lt;transformers.pipelines.zero_shot_classification.ZeroShotClassificationArgumentHandler object at 0x7fdba9b6c610&gt;</span></span>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">args_parser<span class="opacity-60"> = &lt;transformers.pipelines.zero_shot_classification.ZeroShotClassificationArgumentHandler object at 0x7f9f35f83310&gt;</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">*args<span class="opacity-60"></span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 				</span>
@@ -4077,10 +4077,10 @@ A path to the directory where to saved. It will be created if it doesn&#x2019;t 
 <p>Scikit / Keras interface to transformers’ pipelines. This method will forward to <strong>call</strong>().</p></div></div>
 
 
-		<script type="module" data-hydrate="1erumcp">
-		import { start } from "/docs/transformers/pr_17286/en/_app/start-257470d4.js";
+		<script type="module" data-hydrate="1gu2gt0">
+		import { start } from "/docs/transformers/pr_17286/en/_app/start-c1332d46.js";
 		start({
-			target: document.querySelector('[data-hydrate="1erumcp"]').parentNode,
+			target: document.querySelector('[data-hydrate="1gu2gt0"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17286/en","assets":"/docs/transformers/pr_17286/en"},
 			session: {},
 			route: false,
@@ -4091,7 +4091,7 @@ A path to the directory where to saved. It will be created if it doesn&#x2019;t 
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_17286/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_17286/en/_app/pages/main_classes/pipelines.mdx-725b672a.js")
+						import("/docs/transformers/pr_17286/en/_app/pages/main_classes/pipelines.mdx-1d9393f4.js")
 				],
 				params: {}
 			}
