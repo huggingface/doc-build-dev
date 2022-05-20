@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;layoutlmv3&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv3Config&quot;,&quot;title&quot;:&quot;LayoutLMv3Config&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv3FeatureExtractor&quot;,&quot;title&quot;:&quot;LayoutLMv3FeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv3Tokenizer&quot;,&quot;title&quot;:&quot;LayoutLMv3Tokenizer&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv3TokenizerFast&quot;,&quot;title&quot;:&quot;LayoutLMv3TokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv3Processor&quot;,&quot;title&quot;:&quot;LayoutLMv3Processor&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv3Model&quot;,&quot;title&quot;:&quot;LayoutLMv3Model&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv3ForSequenceClassification&quot;,&quot;title&quot;:&quot;LayoutLMv3ForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv3ForTokenClassification&quot;,&quot;title&quot;:&quot;LayoutLMv3ForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv3ForQuestionAnswering&quot;,&quot;title&quot;:&quot;LayoutLMv3ForQuestionAnswering&quot;}],&quot;title&quot;:&quot;LayoutLMv3&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/start-1c883969.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/start-c77b3837.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/pages/model_doc/layoutlmv3.mdx-b9d3c0f6.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/pages/model_doc/layoutlmv3.mdx-74e08f10.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17060/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -31,7 +31,8 @@ and word-patch alignment (WPA).</p>
 <p><em>Self-supervised pre-training techniques have achieved remarkable progress in Document AI. Most multimodal pre-trained models use a masked language modeling objective to learn bidirectional representations on the text modality, but they differ in pre-training objectives for the image modality. This discrepancy adds difficulty to multimodal representation learning. In this paper, we propose LayoutLMv3 to pre-train multimodal Transformers for Document AI with unified text and image masking. Additionally, LayoutLMv3 is pre-trained with a word-patch alignment objective to learn cross-modal alignment by predicting whether the corresponding image patch of a text word is masked. The simple unified architecture and training objectives make LayoutLMv3 a general-purpose pre-trained model for both text-centric and image-centric Document AI tasks. Experimental results show that LayoutLMv3 achieves state-of-the-art performance not only in text-centric tasks, including form understanding, receipt understanding, and document visual question answering, but also in image-centric tasks such as document image classification and document layout analysis.</em></p>
 <p>Tips:</p>
 <ul><li>In terms of data processing, LayoutLMv3 is identical to LayoutLMv2, except that you need to make sure images are resized and normalized and in regular RGB format. LayoutLMv2 on the other hand normalizes the images internally and expects the channels in BGR format.</li>
-<li>We refer to the docs of <a href="/docs/transformers/pr_17060/en/model_doc/layoutlmv2#transformers.LayoutLMv2Processor">LayoutLMv2Processor</a> regarding data preparation. Just make sure to use <a href="/docs/transformers/pr_17060/en/model_doc/layoutlmv3#transformers.LayoutLMv3Processor">LayoutLMv3Processor</a> instead.</li></ul>
+<li>We refer to the docs of <a href="/docs/transformers/pr_17060/en/model_doc/layoutlmv2#transformers.LayoutLMv2Processor">LayoutLMv2Processor</a> regarding data preparation. Just make sure to use <a href="/docs/transformers/pr_17060/en/model_doc/layoutlmv3#transformers.LayoutLMv3Processor">LayoutLMv3Processor</a> instead.</li>
+<li>Demo notebooks for LayoutLMv3 can be found <a href="https://github.com/NielsRogge/Transformers-Tutorials/tree/master/LayoutLMv3" rel="nofollow">here</a>.</li></ul>
 <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/layoutlmv3_architecture.png" alt="drawing" width="600">
 <small>LayoutLMv3 architecture. Taken from the <a href="https://arxiv.org/abs/2204.08387">original paper</a>. </small>
 <p>This model was contributed by <a href="https://huggingface.co/nielsr" rel="nofollow">nielsr</a>. The original code can be found <a href="https://github.com/microsoft/unilm/tree/master/layoutlmv3" rel="nofollow">here</a>.</p>
@@ -1936,10 +1937,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>end_scores = outputs.end_logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="1pt9w2n">
-		import { start } from "/docs/transformers/pr_17060/en/_app/start-1c883969.js";
+		<script type="module" data-hydrate="12ag5u5">
+		import { start } from "/docs/transformers/pr_17060/en/_app/start-c77b3837.js";
 		start({
-			target: document.querySelector('[data-hydrate="1pt9w2n"]').parentNode,
+			target: document.querySelector('[data-hydrate="12ag5u5"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17060/en","assets":"/docs/transformers/pr_17060/en"},
 			session: {},
 			route: false,
@@ -1950,7 +1951,7 @@ the latter silently ignores them.</p></div>
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_17060/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_17060/en/_app/pages/model_doc/layoutlmv3.mdx-b9d3c0f6.js")
+						import("/docs/transformers/pr_17060/en/_app/pages/model_doc/layoutlmv3.mdx-74e08f10.js")
 				],
 				params: {}
 			}
