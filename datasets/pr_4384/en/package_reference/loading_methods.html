@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;loading-methods&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;datasets.list_datasets&quot;,&quot;title&quot;:&quot;Datasets&quot;},{&quot;local&quot;:&quot;datasets.list_metrics&quot;,&quot;title&quot;:&quot;Metrics&quot;},{&quot;local&quot;:&quot;from-files&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;datasets.packaged_modules.text.TextConfig&quot;,&quot;title&quot;:&quot;Text&quot;},{&quot;local&quot;:&quot;datasets.packaged_modules.csv.CsvConfig&quot;,&quot;title&quot;:&quot;CSV&quot;},{&quot;local&quot;:&quot;datasets.packaged_modules.json.JsonConfig&quot;,&quot;title&quot;:&quot;JSON&quot;},{&quot;local&quot;:&quot;datasets.packaged_modules.parquet.ParquetConfig&quot;,&quot;title&quot;:&quot;Parquet&quot;},{&quot;local&quot;:&quot;datasets.packaged_modules.imagefolder.ImageFolderConfig&quot;,&quot;title&quot;:&quot;Images&quot;}],&quot;title&quot;:&quot;From files&quot;}],&quot;title&quot;:&quot;Loading methods&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/assets/pages/__layout.svelte-efc77dbd.css">
-	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/start-a579fd3c.js">
+	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/start-c639ad8b.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/chunks/vendor-8138ceec.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/pages/__layout.svelte-efb8e839.js">
-	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/pages/package_reference/loading_methods.mdx-805a9da3.js">
+	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/pages/package_reference/loading_methods.mdx-f33b18d7.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/chunks/Docstring-6fa3bd37.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/chunks/IconCopyLink-2dd3a6ac.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4384/en/_app/chunks/CodeBlock-fc89709f.js"> 
@@ -64,13 +64,13 @@
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">split<span class="opacity-60">: typing.Union[str, datasets.splits.Split, NoneType] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">cache_dir<span class="opacity-60">: typing.Optional[str] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">features<span class="opacity-60">: typing.Optional[datasets.features.features.Features] = None</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.utils.file_utils.DownloadConfig] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.download.download_config.DownloadConfig] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_mode<span class="opacity-60">: typing.Optional[datasets.download.download_manager.DownloadMode] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">ignore_verifications<span class="opacity-60">: bool = False</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">keep_in_memory<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">save_infos<span class="opacity-60">: bool = False</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Union[str, datasets.utils.version.Version, NoneType] = None</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[str, bool, NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">task<span class="opacity-60">: typing.Union[str, datasets.tasks.base.TaskTemplate, NoneType] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">streaming<span class="opacity-60">: bool = False</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**config_kwargs<span class="opacity-60"></span></span>
@@ -131,7 +131,7 @@ Splits can be combined and specified like in tensorflow-datasets.<!-- HTML_TAG_E
 							<span><!-- HTML_TAG_START --><strong>features</strong> (<a href="/docs/datasets/pr_4384/en/package_reference/main_classes#datasets.Features">Features</a>, optional) &#x2014; Set the features type to use for this dataset.<!-- HTML_TAG_END -->
 							</span></span>
 					</li><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="datasets.load_dataset.download_config" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#datasets.load_dataset.download_config"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-							<span><!-- HTML_TAG_START --><strong>download_config</strong> (<a href="/docs/datasets/pr_4384/en/package_reference/builder_classes#datasets.DownloadConfig">DownloadConfig</a>, optional) &#x2014; Specific download configuration parameters.<!-- HTML_TAG_END -->
+							<span><!-- HTML_TAG_START --><strong>download_config</strong> (<code>DownloadConfig</code>, optional) &#x2014; Specific download configuration parameters.<!-- HTML_TAG_END -->
 							</span></span>
 					</li><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="datasets.load_dataset.download_mode" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#datasets.load_dataset.download_mode"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 							<span><!-- HTML_TAG_START --><strong>download_mode</strong> (<a href="/docs/datasets/pr_4384/en/package_reference/builder_classes#datasets.DownloadMode">DownloadMode</a>, default <code>REUSE_DATASET_IF_EXISTS</code>) &#x2014; Download/generate mode.<!-- HTML_TAG_END -->
@@ -289,10 +289,10 @@ from a filesystem using either <a href="/docs/datasets/pr_4384/en/package_refere
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">data_files<span class="opacity-60">: typing.Union[str, typing.Sequence[str], typing.Mapping[str, typing.Union[str, typing.Sequence[str]]], NoneType] = None</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">cache_dir<span class="opacity-60">: typing.Optional[str] = None</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">features<span class="opacity-60">: typing.Optional[datasets.features.features.Features] = None</span></span>
-				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.utils.file_utils.DownloadConfig] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.download.download_config.DownloadConfig] = None</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_mode<span class="opacity-60">: typing.Optional[datasets.download.download_manager.DownloadMode] = None</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Union[str, datasets.utils.version.Version, NoneType] = None</span></span>
-				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[str, bool, NoneType] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**config_kwargs<span class="opacity-60"></span></span>
 				</span>
 			<span>)</span>
@@ -353,7 +353,7 @@ without downloading the dataset itself.</p>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
 			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">path<span class="opacity-60">: str</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Union[str, datasets.utils.version.Version, NoneType] = None</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.utils.file_utils.DownloadConfig] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.download.download_config.DownloadConfig] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_mode<span class="opacity-60">: typing.Optional[datasets.download.download_manager.DownloadMode] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">force_local_path<span class="opacity-60">: typing.Optional[str] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">dynamic_modules_path<span class="opacity-60">: typing.Optional[str] = None</span></span>
@@ -419,10 +419,10 @@ for example <code>use_auth_token</code><!-- HTML_TAG_END -->
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
 			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">path<span class="opacity-60">: str</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">data_files<span class="opacity-60">: typing.Union[str, typing.List, typing.Dict, NoneType] = None</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.utils.file_utils.DownloadConfig] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.download.download_config.DownloadConfig] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_mode<span class="opacity-60">: typing.Optional[datasets.download.download_manager.DownloadMode] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Union[str, datasets.utils.version.Version, NoneType] = None</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[str, bool, NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**config_kwargs<span class="opacity-60"></span></span>
 				</span>
 			<span>)</span>
@@ -479,10 +479,10 @@ config_kwargs &#x2014; optional attributes for builder class which will override
 			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">path<span class="opacity-60">: str</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">config_name<span class="opacity-60">: typing.Optional[str] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">data_files<span class="opacity-60">: typing.Union[str, typing.Sequence[str], typing.Mapping[str, typing.Union[str, typing.Sequence[str]]], NoneType] = None</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.utils.file_utils.DownloadConfig] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.download.download_config.DownloadConfig] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_mode<span class="opacity-60">: typing.Optional[datasets.download.download_manager.DownloadMode] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Union[str, datasets.utils.version.Version, NoneType] = None</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[str, bool, NoneType] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**config_kwargs<span class="opacity-60"></span></span>
 				</span>
 			<span>)</span>
@@ -540,7 +540,7 @@ config_kwargs &#x2014; optional attributes for builder class which will override
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
 			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">path<span class="opacity-60">: str</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">local_path<span class="opacity-60">: str</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.utils.file_utils.DownloadConfig] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.download.download_config.DownloadConfig] = None</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**download_kwargs<span class="opacity-60"></span></span>
 				</span>
 			<span>)</span>
@@ -615,7 +615,7 @@ e.g. <code>&apos;squad&apos;</code>, <code>&apos;glue&apos;</code> or <code>&apo
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">cache_dir<span class="opacity-60">: typing.Optional[str] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">experiment_id<span class="opacity-60">: typing.Optional[str] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">keep_in_memory<span class="opacity-60">: bool = False</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.utils.file_utils.DownloadConfig] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.download.download_config.DownloadConfig] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_mode<span class="opacity-60">: typing.Optional[datasets.download.download_manager.DownloadMode] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">revision<span class="opacity-60">: typing.Union[str, datasets.utils.version.Version, NoneType] = None</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**metric_init_kwargs<span class="opacity-60"></span></span>
@@ -679,7 +679,7 @@ your local version of the lib might cause compatibility issues.<!-- HTML_TAG_END
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
 			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">path<span class="opacity-60">: str</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">local_path<span class="opacity-60">: str</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.utils.file_utils.DownloadConfig] = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">download_config<span class="opacity-60">: typing.Optional[datasets.download.download_config.DownloadConfig] = None</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**download_kwargs<span class="opacity-60"></span></span>
 				</span>
 			<span>)</span>
@@ -916,10 +916,10 @@ For example you can specify the <code>sep</code> parameter to define the <a href
 <p>BuilderConfig for ImageFolder.</p></div>
 
 
-		<script type="module" data-hydrate="13jc5ec">
-		import { start } from "/docs/datasets/pr_4384/en/_app/start-a579fd3c.js";
+		<script type="module" data-hydrate="1walqb1">
+		import { start } from "/docs/datasets/pr_4384/en/_app/start-c639ad8b.js";
 		start({
-			target: document.querySelector('[data-hydrate="13jc5ec"]').parentNode,
+			target: document.querySelector('[data-hydrate="1walqb1"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_4384/en","assets":"/docs/datasets/pr_4384/en"},
 			session: {},
 			route: false,
@@ -930,7 +930,7 @@ For example you can specify the <code>sep</code> parameter to define the <a href
 				error: null,
 				nodes: [
 					import("/docs/datasets/pr_4384/en/_app/pages/__layout.svelte-efb8e839.js"),
-						import("/docs/datasets/pr_4384/en/_app/pages/package_reference/loading_methods.mdx-805a9da3.js")
+						import("/docs/datasets/pr_4384/en/_app/pages/package_reference/loading_methods.mdx-f33b18d7.js")
 				],
 				params: {}
 			}
