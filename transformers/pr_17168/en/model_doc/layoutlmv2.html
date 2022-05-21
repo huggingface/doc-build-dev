@@ -1,10 +1,10 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;layoutlmv2&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;usage-layoutlmv2processor&quot;,&quot;title&quot;:&quot;Usage: LayoutLMv2Processor&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2Config&quot;,&quot;title&quot;:&quot;LayoutLMv2Config&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2FeatureExtractor&quot;,&quot;title&quot;:&quot;LayoutLMv2FeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2Tokenizer&quot;,&quot;title&quot;:&quot;LayoutLMv2Tokenizer&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2TokenizerFast&quot;,&quot;title&quot;:&quot;LayoutLMv2TokenizerFast&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2Processor&quot;,&quot;title&quot;:&quot;LayoutLMv2Processor&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2Model&quot;,&quot;title&quot;:&quot;LayoutLMv2Model&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2ForSequenceClassification&quot;,&quot;title&quot;:&quot;LayoutLMv2ForSequenceClassification&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2ForTokenClassification&quot;,&quot;title&quot;:&quot;LayoutLMv2ForTokenClassification&quot;},{&quot;local&quot;:&quot;transformers.LayoutLMv2ForQuestionAnswering&quot;,&quot;title&quot;:&quot;LayoutLMv2ForQuestionAnswering&quot;}],&quot;title&quot;:&quot;LayoutLMV2&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/start-6333da38.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/start-c1931719.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/chunks/vendor-6b77c823.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/chunks/paths-4b3c6e7e.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/pages/model_doc/layoutlmv2.mdx-f99213d2.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/pages/model_doc/layoutlmv2.mdx-e7a79375.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/chunks/Tip-39098574.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/chunks/Docstring-1088f2fb.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17168/en/_app/chunks/IconCopyLink-7a11ce68.js">
@@ -51,10 +51,14 @@ including FUNSD (0.7895 -&gt; 0.8420), CORD (0.9493 -&gt; 0.9601), SROIE (0.9524
 RVL-CDIP (0.9443 -&gt; 0.9564), and DocVQA (0.7295 -&gt; 0.8672). The pre-trained LayoutLMv2 model is publicly available at
 this https URL.</em></p>
 <p>LayoutLMv2 depends on <code>detectron2</code>, <code>torchvision</code> and <code>tesseract</code>. Run the
-following to install them:
-<code>python -m pip install &#39;git+https://github.com/facebookresearch/detectron2.git&#39;</code>
-<code>python -m pip install torchvision tesseract</code>
-(If you are developing for LayoutLMv2, note that passing the doctests also requires the installation of these packages.)</p>
+following to install them: </p>
+
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">python</span> -m pip install <span class="hljs-string">&#x27;git+https://github.com/facebookresearch/detectron2.git&#x27;</span>
+<span class="hljs-keyword">python</span> -m pip install torchvision tesseract<!-- HTML_TAG_END --></pre></div>
+<p>(If you are developing for LayoutLMv2, note that passing the doctests also requires the installation of these packages.)</p>
 <p>Tips:</p>
 <ul><li>The main difference between LayoutLMv1 and LayoutLMv2 is that the latter incorporates visual embeddings during
 pre-training (while LayoutLMv1 only adds visual embeddings during fine-tuning).</li>
@@ -2082,10 +2086,10 @@ a prediction of what it thinks the answer is (the span of the answer within the 
 (<span class="hljs-number">154</span>, <span class="hljs-number">287</span>)<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="ppp92g">
-		import { start } from "/docs/transformers/pr_17168/en/_app/start-6333da38.js";
+		<script type="module" data-hydrate="1xrgv7d">
+		import { start } from "/docs/transformers/pr_17168/en/_app/start-c1931719.js";
 		start({
-			target: document.querySelector('[data-hydrate="ppp92g"]').parentNode,
+			target: document.querySelector('[data-hydrate="1xrgv7d"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17168/en","assets":"/docs/transformers/pr_17168/en"},
 			session: {},
 			route: false,
@@ -2096,7 +2100,7 @@ a prediction of what it thinks the answer is (the span of the answer within the 
 				error: null,
 				nodes: [
 					import("/docs/transformers/pr_17168/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_17168/en/_app/pages/model_doc/layoutlmv2.mdx-f99213d2.js")
+						import("/docs/transformers/pr_17168/en/_app/pages/model_doc/layoutlmv2.mdx-e7a79375.js")
 				],
 				params: {}
 			}
