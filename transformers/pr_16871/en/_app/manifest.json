@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-e224b3a7.js",
+    "file": "start-253a2030.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
+      "_vendor-316217a5.js",
       "_paths-4b3c6e7e.js"
     ],
     "dynamicImports": [
@@ -12,7 +12,9 @@
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/index.mdx",
       "src/routes/converting_tensorflow_models.mdx",
+      "src/routes/perf_train_gpu_many.mdx",
       "src/routes/autoclass_tutorial.mdx",
+      "src/routes/perf_train_gpu_one.mdx",
       "src/routes/pipeline_tutorial.mdx",
       "src/routes/tokenizer_summary.mdx",
       "src/routes/add_new_pipeline.mdx",
@@ -24,6 +26,7 @@
       "src/routes/custom_models.mdx",
       "src/routes/model_sharing.mdx",
       "src/routes/model_summary.mdx",
+      "src/routes/perf_hardware.mdx",
       "src/routes/preprocessing.mdx",
       "src/routes/serialization.mdx",
       "src/routes/contributing.mdx",
@@ -46,11 +49,11 @@
       "src/routes/main_classes/onnx.mdx",
       "src/routes/multilingual.mdx",
       "src/routes/task_summary.mdx",
-      "src/routes/parallelism.mdx",
       "src/routes/performance.mdx",
       "src/routes/run_scripts.mdx",
       "src/routes/accelerate.mdx",
       "src/routes/benchmarks.mdx",
+      "src/routes/big_models.mdx",
       "src/routes/perplexity.mdx",
       "src/routes/philosophy.mdx",
       "src/routes/bertology.mdx",
@@ -59,8 +62,10 @@
       "src/routes/migration.mdx",
       "src/routes/model_doc/vision-text-dual-encoder.mdx",
       "src/routes/model_doc/speech-encoder-decoder.mdx",
+      "src/routes/model_doc/trajectory_transformer.mdx",
       "src/routes/model_doc/vision-encoder-decoder.mdx",
       "src/routes/model_doc/decision_transformer.mdx",
+      "src/routes/model_doc/wav2vec2-conformer.mdx",
       "src/routes/model_doc/blenderbot-small.mdx",
       "src/routes/model_doc/speech_to_text_2.mdx",
       "src/routes/model_doc/wav2vec2_phoneme.mdx",
@@ -132,6 +137,7 @@
       "src/routes/model_doc/regnet.mdx",
       "src/routes/model_doc/resnet.mdx",
       "src/routes/model_doc/t5v1.1.mdx",
+      "src/routes/model_doc/flava.mdx",
       "src/routes/model_doc/ibert.mdx",
       "src/routes/model_doc/mbart.mdx",
       "src/routes/model_doc/mluke.mdx",
@@ -144,6 +150,7 @@
       "src/routes/model_doc/wavlm.mdx",
       "src/routes/model_doc/xlnet.mdx",
       "src/routes/model_doc/xls_r.mdx",
+      "src/routes/model_doc/yolos.mdx",
       "src/routes/model_doc/auto.mdx",
       "src/routes/model_doc/bart.mdx",
       "src/routes/model_doc/beit.mdx",
@@ -165,11 +172,13 @@
       "src/routes/model_doc/xglm.mdx",
       "src/routes/model_doc/yoso.mdx",
       "src/routes/model_doc/cpm.mdx",
+      "src/routes/model_doc/cvt.mdx",
       "src/routes/model_doc/dit.mdx",
       "src/routes/model_doc/dpr.mdx",
       "src/routes/model_doc/dpt.mdx",
       "src/routes/model_doc/led.mdx",
       "src/routes/model_doc/mt5.mdx",
+      "src/routes/model_doc/opt.mdx",
       "src/routes/model_doc/rag.mdx",
       "src/routes/model_doc/sew.mdx",
       "src/routes/model_doc/van.mdx",
@@ -202,2454 +211,2692 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-3f22c1e5.js",
+    "file": "pages/__layout.svelte-aa435e1e.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
+      "_vendor-316217a5.js",
       "_paths-4b3c6e7e.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-efd23bfe.css"
+      "assets/pages/__layout.svelte-514a944c.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-64794591.js",
+    "file": "error.svelte-c1a0e2f0.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js"
+      "_vendor-316217a5.js"
     ]
   },
   "src/routes/index.mdx": {
-    "file": "pages/index.mdx-cad3776a.js",
+    "file": "pages/index.mdx-2ab446b8.js",
     "src": "src/routes/index.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/converting_tensorflow_models.mdx": {
-    "file": "pages/converting_tensorflow_models.mdx-0cb41929.js",
+    "file": "pages/converting_tensorflow_models.mdx-71da84d7.js",
     "src": "src/routes/converting_tensorflow_models.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
+    ]
+  },
+  "src/routes/perf_train_gpu_many.mdx": {
+    "file": "pages/perf_train_gpu_many.mdx-568c344d.js",
+    "src": "src/routes/perf_train_gpu_many.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/autoclass_tutorial.mdx": {
-    "file": "pages/autoclass_tutorial.mdx-ab28d8e0.js",
+    "file": "pages/autoclass_tutorial.mdx-101b59ab.js",
     "src": "src/routes/autoclass_tutorial.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
+    ]
+  },
+  "src/routes/perf_train_gpu_one.mdx": {
+    "file": "pages/perf_train_gpu_one.mdx-ce63cb12.js",
+    "src": "src/routes/perf_train_gpu_one.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/pipeline_tutorial.mdx": {
-    "file": "pages/pipeline_tutorial.mdx-c511ee83.js",
+    "file": "pages/pipeline_tutorial.mdx-58161222.js",
     "src": "src/routes/pipeline_tutorial.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/tokenizer_summary.mdx": {
-    "file": "pages/tokenizer_summary.mdx-b8138adc.js",
+    "file": "pages/tokenizer_summary.mdx-eb23bec4.js",
     "src": "src/routes/tokenizer_summary.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_DocNotebookDropdown-f2b55cd8.js"
+      "_vendor-316217a5.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_DocNotebookDropdown-fbc0eb22.js"
     ]
   },
   "src/routes/add_new_pipeline.mdx": {
-    "file": "pages/add_new_pipeline.mdx-7a404ab7.js",
+    "file": "pages/add_new_pipeline.mdx-8e152a60.js",
     "src": "src/routes/add_new_pipeline.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/fast_tokenizers.mdx": {
-    "file": "pages/fast_tokenizers.mdx-af5ece03.js",
+    "file": "pages/fast_tokenizers.mdx-d3fdf9f2.js",
     "src": "src/routes/fast_tokenizers.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/troubleshooting.mdx": {
-    "file": "pages/troubleshooting.mdx-0101347c.js",
+    "file": "pages/troubleshooting.mdx-0341d3b5.js",
     "src": "src/routes/troubleshooting.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/create_a_model.mdx": {
-    "file": "pages/create_a_model.mdx-ae0744e7.js",
+    "file": "pages/create_a_model.mdx-dd613775.js",
     "src": "src/routes/create_a_model.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/pad_truncation.mdx": {
-    "file": "pages/pad_truncation.mdx-a414e425.js",
+    "file": "pages/pad_truncation.mdx-97558139.js",
     "src": "src/routes/pad_truncation.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/add_new_model.mdx": {
-    "file": "pages/add_new_model.mdx-87663219.js",
+    "file": "pages/add_new_model.mdx-f874dbd2.js",
     "src": "src/routes/add_new_model.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/custom_models.mdx": {
-    "file": "pages/custom_models.mdx-18168cac.js",
+    "file": "pages/custom_models.mdx-47142cad.js",
     "src": "src/routes/custom_models.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/model_sharing.mdx": {
-    "file": "pages/model_sharing.mdx-688b07bc.js",
+    "file": "pages/model_sharing.mdx-11aad07b.js",
     "src": "src/routes/model_sharing.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/model_summary.mdx": {
-    "file": "pages/model_summary.mdx-77f6172a.js",
+    "file": "pages/model_summary.mdx-c1059cff.js",
     "src": "src/routes/model_summary.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js"
+    ]
+  },
+  "src/routes/perf_hardware.mdx": {
+    "file": "pages/perf_hardware.mdx-1e267ff3.js",
+    "src": "src/routes/perf_hardware.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/preprocessing.mdx": {
-    "file": "pages/preprocessing.mdx-a74caa55.js",
+    "file": "pages/preprocessing.mdx-64973a00.js",
     "src": "src/routes/preprocessing.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_DocNotebookDropdown-f2b55cd8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_DocNotebookDropdown-fbc0eb22.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/serialization.mdx": {
-    "file": "pages/serialization.mdx-ae06b9d7.js",
+    "file": "pages/serialization.mdx-8a2d1b33.js",
     "src": "src/routes/serialization.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/contributing.mdx": {
-    "file": "pages/contributing.mdx-8bd3a3de.js",
+    "file": "pages/contributing.mdx-b5f59503.js",
     "src": "src/routes/contributing.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/installation.mdx": {
-    "file": "pages/installation.mdx-93afaff4.js",
+    "file": "pages/installation.mdx-162dcf2f.js",
     "src": "src/routes/installation.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/main_classes/optimizer_schedules.mdx": {
-    "file": "pages/main_classes/optimizer_schedules.mdx-81c9cb40.js",
+    "file": "pages/main_classes/optimizer_schedules.mdx-644410cd.js",
     "src": "src/routes/main_classes/optimizer_schedules.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/feature_extractor.mdx": {
-    "file": "pages/main_classes/feature_extractor.mdx-cd980121.js",
+    "file": "pages/main_classes/feature_extractor.mdx-b8c31868.js",
     "src": "src/routes/main_classes/feature_extractor.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/keras_callbacks.mdx": {
-    "file": "pages/main_classes/keras_callbacks.mdx-cf228357.js",
+    "file": "pages/main_classes/keras_callbacks.mdx-c3212a83.js",
     "src": "src/routes/main_classes/keras_callbacks.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/text_generation.mdx": {
-    "file": "pages/main_classes/text_generation.mdx-65330e19.js",
+    "file": "pages/main_classes/text_generation.mdx-cec4d531.js",
     "src": "src/routes/main_classes/text_generation.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/configuration.mdx": {
-    "file": "pages/main_classes/configuration.mdx-4843e988.js",
+    "file": "pages/main_classes/configuration.mdx-1d8fc174.js",
     "src": "src/routes/main_classes/configuration.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/data_collator.mdx": {
-    "file": "pages/main_classes/data_collator.mdx-9574c65d.js",
+    "file": "pages/main_classes/data_collator.mdx-5863cc60.js",
     "src": "src/routes/main_classes/data_collator.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/main_classes/processors.mdx": {
-    "file": "pages/main_classes/processors.mdx-148761ee.js",
+    "file": "pages/main_classes/processors.mdx-521024f5.js",
     "src": "src/routes/main_classes/processors.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/deepspeed.mdx": {
-    "file": "pages/main_classes/deepspeed.mdx-64aa5b60.js",
+    "file": "pages/main_classes/deepspeed.mdx-6ec17315.js",
     "src": "src/routes/main_classes/deepspeed.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/main_classes/pipelines.mdx": {
-    "file": "pages/main_classes/pipelines.mdx-992561b1.js",
+    "file": "pages/main_classes/pipelines.mdx-f62b7b74.js",
     "src": "src/routes/main_classes/pipelines.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/tokenizer.mdx": {
-    "file": "pages/main_classes/tokenizer.mdx-a582e74a.js",
+    "file": "pages/main_classes/tokenizer.mdx-2246954e.js",
     "src": "src/routes/main_classes/tokenizer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/callback.mdx": {
-    "file": "pages/main_classes/callback.mdx-f9f38591.js",
+    "file": "pages/main_classes/callback.mdx-0a4c1838.js",
     "src": "src/routes/main_classes/callback.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/logging.mdx": {
-    "file": "pages/main_classes/logging.mdx-5bca3a81.js",
+    "file": "pages/main_classes/logging.mdx-fc3906a8.js",
     "src": "src/routes/main_classes/logging.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/trainer.mdx": {
-    "file": "pages/main_classes/trainer.mdx-05a26e0f.js",
+    "file": "pages/main_classes/trainer.mdx-58a41097.js",
     "src": "src/routes/main_classes/trainer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/output.mdx": {
-    "file": "pages/main_classes/output.mdx-95fc1466.js",
+    "file": "pages/main_classes/output.mdx-096de0b6.js",
     "src": "src/routes/main_classes/output.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/main_classes/model.mdx": {
-    "file": "pages/main_classes/model.mdx-96f9e1b1.js",
+    "file": "pages/main_classes/model.mdx-81b4bef7.js",
     "src": "src/routes/main_classes/model.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/main_classes/onnx.mdx": {
-    "file": "pages/main_classes/onnx.mdx-ae8262d9.js",
+    "file": "pages/main_classes/onnx.mdx-965a6988.js",
     "src": "src/routes/main_classes/onnx.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/multilingual.mdx": {
-    "file": "pages/multilingual.mdx-6610ba56.js",
+    "file": "pages/multilingual.mdx-6d3bc8e5.js",
     "src": "src/routes/multilingual.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_DocNotebookDropdown-f2b55cd8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_DocNotebookDropdown-fbc0eb22.js"
     ]
   },
   "src/routes/task_summary.mdx": {
-    "file": "pages/task_summary.mdx-97ade926.js",
+    "file": "pages/task_summary.mdx-9ee313ad.js",
     "src": "src/routes/task_summary.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_DocNotebookDropdown-f2b55cd8.js",
-      "_Markdown-9acf6d91.js"
-    ]
-  },
-  "src/routes/parallelism.mdx": {
-    "file": "pages/parallelism.mdx-5b5bd539.js",
-    "src": "src/routes/parallelism.mdx",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_DocNotebookDropdown-fbc0eb22.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/performance.mdx": {
-    "file": "pages/performance.mdx-c075b56e.js",
+    "file": "pages/performance.mdx-ef8c1fde.js",
     "src": "src/routes/performance.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_DocNotebookDropdown-f2b55cd8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/run_scripts.mdx": {
-    "file": "pages/run_scripts.mdx-db320600.js",
+    "file": "pages/run_scripts.mdx-b7ec6ecd.js",
     "src": "src/routes/run_scripts.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/accelerate.mdx": {
-    "file": "pages/accelerate.mdx-fe1ab18d.js",
+    "file": "pages/accelerate.mdx-a726cdad.js",
     "src": "src/routes/accelerate.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/benchmarks.mdx": {
-    "file": "pages/benchmarks.mdx-759a4e4d.js",
+    "file": "pages/benchmarks.mdx-a0a91e4e.js",
     "src": "src/routes/benchmarks.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_DocNotebookDropdown-f2b55cd8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_DocNotebookDropdown-fbc0eb22.js",
+      "_Markdown-57fe20b0.js"
+    ]
+  },
+  "src/routes/big_models.mdx": {
+    "file": "pages/big_models.mdx-dc435348.js",
+    "src": "src/routes/big_models.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/perplexity.mdx": {
-    "file": "pages/perplexity.mdx-ced47459.js",
+    "file": "pages/perplexity.mdx-42ba023f.js",
     "src": "src/routes/perplexity.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_DocNotebookDropdown-f2b55cd8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_DocNotebookDropdown-fbc0eb22.js"
     ]
   },
   "src/routes/philosophy.mdx": {
-    "file": "pages/philosophy.mdx-c7000081.js",
+    "file": "pages/philosophy.mdx-4abcab77.js",
     "src": "src/routes/philosophy.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/bertology.mdx": {
-    "file": "pages/bertology.mdx-91681772.js",
+    "file": "pages/bertology.mdx-3345ad8d.js",
     "src": "src/routes/bertology.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/community.mdx": {
-    "file": "pages/community.mdx-964f5665.js",
+    "file": "pages/community.mdx-1cbb9f9e.js",
     "src": "src/routes/community.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/debugging.mdx": {
-    "file": "pages/debugging.mdx-c61e8356.js",
+    "file": "pages/debugging.mdx-693c67f8.js",
     "src": "src/routes/debugging.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/migration.mdx": {
-    "file": "pages/migration.mdx-d2197df6.js",
+    "file": "pages/migration.mdx-1ebf77db.js",
     "src": "src/routes/migration.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/model_doc/vision-text-dual-encoder.mdx": {
-    "file": "pages/model_doc/vision-text-dual-encoder.mdx-d95b3abc.js",
+    "file": "pages/model_doc/vision-text-dual-encoder.mdx-bceb3efb.js",
     "src": "src/routes/model_doc/vision-text-dual-encoder.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/speech-encoder-decoder.mdx": {
-    "file": "pages/model_doc/speech-encoder-decoder.mdx-fb245326.js",
+    "file": "pages/model_doc/speech-encoder-decoder.mdx-14639e01.js",
     "src": "src/routes/model_doc/speech-encoder-decoder.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
+    ]
+  },
+  "src/routes/model_doc/trajectory_transformer.mdx": {
+    "file": "pages/model_doc/trajectory_transformer.mdx-ad9b82d5.js",
+    "src": "src/routes/model_doc/trajectory_transformer.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/vision-encoder-decoder.mdx": {
-    "file": "pages/model_doc/vision-encoder-decoder.mdx-f80051f9.js",
+    "file": "pages/model_doc/vision-encoder-decoder.mdx-3b0d035f.js",
     "src": "src/routes/model_doc/vision-encoder-decoder.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/decision_transformer.mdx": {
-    "file": "pages/model_doc/decision_transformer.mdx-30c43c98.js",
+    "file": "pages/model_doc/decision_transformer.mdx-0a7303f2.js",
     "src": "src/routes/model_doc/decision_transformer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
+    ]
+  },
+  "src/routes/model_doc/wav2vec2-conformer.mdx": {
+    "file": "pages/model_doc/wav2vec2-conformer.mdx-24212dfe.js",
+    "src": "src/routes/model_doc/wav2vec2-conformer.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/blenderbot-small.mdx": {
-    "file": "pages/model_doc/blenderbot-small.mdx-4187bec5.js",
+    "file": "pages/model_doc/blenderbot-small.mdx-a32eaebc.js",
     "src": "src/routes/model_doc/blenderbot-small.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/speech_to_text_2.mdx": {
-    "file": "pages/model_doc/speech_to_text_2.mdx-b409015b.js",
+    "file": "pages/model_doc/speech_to_text_2.mdx-70a4ecd9.js",
     "src": "src/routes/model_doc/speech_to_text_2.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/wav2vec2_phoneme.mdx": {
-    "file": "pages/model_doc/wav2vec2_phoneme.mdx-799f7a1a.js",
+    "file": "pages/model_doc/wav2vec2_phoneme.mdx-b9d9a191.js",
     "src": "src/routes/model_doc/wav2vec2_phoneme.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/bert-generation.mdx": {
-    "file": "pages/model_doc/bert-generation.mdx-25329b0a.js",
+    "file": "pages/model_doc/bert-generation.mdx-524bec11.js",
     "src": "src/routes/model_doc/bert-generation.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/bigbird_pegasus.mdx": {
-    "file": "pages/model_doc/bigbird_pegasus.mdx-b455c16e.js",
+    "file": "pages/model_doc/bigbird_pegasus.mdx-4f77f7a5.js",
     "src": "src/routes/model_doc/bigbird_pegasus.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/encoder-decoder.mdx": {
-    "file": "pages/model_doc/encoder-decoder.mdx-67ed12c1.js",
+    "file": "pages/model_doc/encoder-decoder.mdx-2415aa66.js",
     "src": "src/routes/model_doc/encoder-decoder.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/speech_to_text.mdx": {
-    "file": "pages/model_doc/speech_to_text.mdx-c8b20d07.js",
+    "file": "pages/model_doc/speech_to_text.mdx-2605761d.js",
     "src": "src/routes/model_doc/speech_to_text.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/xlm-prophetnet.mdx": {
-    "file": "pages/model_doc/xlm-prophetnet.mdx-17eab1db.js",
+    "file": "pages/model_doc/xlm-prophetnet.mdx-32d4bd8f.js",
     "src": "src/routes/model_doc/xlm-prophetnet.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/xlm-roberta-xl.mdx": {
-    "file": "pages/model_doc/xlm-roberta-xl.mdx-f0d1c03b.js",
+    "file": "pages/model_doc/xlm-roberta-xl.mdx-6894d1e5.js",
     "src": "src/routes/model_doc/xlm-roberta-xl.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/bert-japanese.mdx": {
-    "file": "pages/model_doc/bert-japanese.mdx-9c28d747.js",
+    "file": "pages/model_doc/bert-japanese.mdx-5ef90aee.js",
     "src": "src/routes/model_doc/bert-japanese.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/megatron-bert.mdx": {
-    "file": "pages/model_doc/megatron-bert.mdx-8af5a05c.js",
+    "file": "pages/model_doc/megatron-bert.mdx-ca603421.js",
     "src": "src/routes/model_doc/megatron-bert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/megatron_gpt2.mdx": {
-    "file": "pages/model_doc/megatron_gpt2.mdx-ba560867.js",
+    "file": "pages/model_doc/megatron_gpt2.mdx-e61e1aed.js",
     "src": "src/routes/model_doc/megatron_gpt2.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/model_doc/nystromformer.mdx": {
-    "file": "pages/model_doc/nystromformer.mdx-12fde04a.js",
+    "file": "pages/model_doc/nystromformer.mdx-e1b93df5.js",
     "src": "src/routes/model_doc/nystromformer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/unispeech-sat.mdx": {
-    "file": "pages/model_doc/unispeech-sat.mdx-16c9e721.js",
+    "file": "pages/model_doc/unispeech-sat.mdx-9e5869ab.js",
     "src": "src/routes/model_doc/unispeech-sat.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/xlsr_wav2vec2.mdx": {
-    "file": "pages/model_doc/xlsr_wav2vec2.mdx-24725fae.js",
+    "file": "pages/model_doc/xlsr_wav2vec2.mdx-df059a9c.js",
     "src": "src/routes/model_doc/xlsr_wav2vec2.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/squeezebert.mdx": {
-    "file": "pages/model_doc/squeezebert.mdx-6adf83d4.js",
+    "file": "pages/model_doc/squeezebert.mdx-ec8b6e95.js",
     "src": "src/routes/model_doc/squeezebert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/visual_bert.mdx": {
-    "file": "pages/model_doc/visual_bert.mdx-4d22ccd9.js",
+    "file": "pages/model_doc/visual_bert.mdx-16bb20a3.js",
     "src": "src/routes/model_doc/visual_bert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/xlm-roberta.mdx": {
-    "file": "pages/model_doc/xlm-roberta.mdx-2a40d2df.js",
+    "file": "pages/model_doc/xlm-roberta.mdx-c8b0a37c.js",
     "src": "src/routes/model_doc/xlm-roberta.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/blenderbot.mdx": {
-    "file": "pages/model_doc/blenderbot.mdx-b2fc1a83.js",
+    "file": "pages/model_doc/blenderbot.mdx-96a51f53.js",
     "src": "src/routes/model_doc/blenderbot.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/deberta-v2.mdx": {
-    "file": "pages/model_doc/deberta-v2.mdx-0946bef9.js",
+    "file": "pages/model_doc/deberta-v2.mdx-704c2954.js",
     "src": "src/routes/model_doc/deberta-v2.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/distilbert.mdx": {
-    "file": "pages/model_doc/distilbert.mdx-3af4aac4.js",
+    "file": "pages/model_doc/distilbert.mdx-12729605.js",
     "src": "src/routes/model_doc/distilbert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/layoutlmv2.mdx": {
-    "file": "pages/model_doc/layoutlmv2.mdx-f017fc31.js",
+    "file": "pages/model_doc/layoutlmv2.mdx-f9688adb.js",
     "src": "src/routes/model_doc/layoutlmv2.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/longformer.mdx": {
-    "file": "pages/model_doc/longformer.mdx-bb935421.js",
+    "file": "pages/model_doc/longformer.mdx-4e52ac3a.js",
     "src": "src/routes/model_doc/longformer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/maskformer.mdx": {
-    "file": "pages/model_doc/maskformer.mdx-7723cbe3.js",
+    "file": "pages/model_doc/maskformer.mdx-76ca3618.js",
     "src": "src/routes/model_doc/maskformer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/mobilebert.mdx": {
-    "file": "pages/model_doc/mobilebert.mdx-1c46708a.js",
+    "file": "pages/model_doc/mobilebert.mdx-9efc6cb7.js",
     "src": "src/routes/model_doc/mobilebert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/openai-gpt.mdx": {
-    "file": "pages/model_doc/openai-gpt.mdx-1e4d0182.js",
+    "file": "pages/model_doc/openai-gpt.mdx-43e739a8.js",
     "src": "src/routes/model_doc/openai-gpt.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/poolformer.mdx": {
-    "file": "pages/model_doc/poolformer.mdx-664f5523.js",
+    "file": "pages/model_doc/poolformer.mdx-54db7539.js",
     "src": "src/routes/model_doc/poolformer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/prophetnet.mdx": {
-    "file": "pages/model_doc/prophetnet.mdx-e2e7eceb.js",
+    "file": "pages/model_doc/prophetnet.mdx-f6690aba.js",
     "src": "src/routes/model_doc/prophetnet.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/transfo-xl.mdx": {
-    "file": "pages/model_doc/transfo-xl.mdx-ec79ea98.js",
+    "file": "pages/model_doc/transfo-xl.mdx-5cd86cb8.js",
     "src": "src/routes/model_doc/transfo-xl.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/camembert.mdx": {
-    "file": "pages/model_doc/camembert.mdx-b3c71cc8.js",
+    "file": "pages/model_doc/camembert.mdx-eb7e3122.js",
     "src": "src/routes/model_doc/camembert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/layoutxlm.mdx": {
-    "file": "pages/model_doc/layoutxlm.mdx-dd3f6e1f.js",
+    "file": "pages/model_doc/layoutxlm.mdx-262b48a3.js",
     "src": "src/routes/model_doc/layoutxlm.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/perceiver.mdx": {
-    "file": "pages/model_doc/perceiver.mdx-97df3266.js",
+    "file": "pages/model_doc/perceiver.mdx-ab033bd3.js",
     "src": "src/routes/model_doc/perceiver.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/retribert.mdx": {
-    "file": "pages/model_doc/retribert.mdx-939d9ccf.js",
+    "file": "pages/model_doc/retribert.mdx-8341bf5c.js",
     "src": "src/routes/model_doc/retribert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/segformer.mdx": {
-    "file": "pages/model_doc/segformer.mdx-90b71ce8.js",
+    "file": "pages/model_doc/segformer.mdx-36fa3b6c.js",
     "src": "src/routes/model_doc/segformer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/unispeech.mdx": {
-    "file": "pages/model_doc/unispeech.mdx-18a796ac.js",
+    "file": "pages/model_doc/unispeech.mdx-6f3b091c.js",
     "src": "src/routes/model_doc/unispeech.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/bertweet.mdx": {
-    "file": "pages/model_doc/bertweet.mdx-41aecaf4.js",
+    "file": "pages/model_doc/bertweet.mdx-0885d8ec.js",
     "src": "src/routes/model_doc/bertweet.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/big_bird.mdx": {
-    "file": "pages/model_doc/big_bird.mdx-4044379c.js",
+    "file": "pages/model_doc/big_bird.mdx-5baf647e.js",
     "src": "src/routes/model_doc/big_bird.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/convbert.mdx": {
-    "file": "pages/model_doc/convbert.mdx-c84905bb.js",
+    "file": "pages/model_doc/convbert.mdx-589c23ee.js",
     "src": "src/routes/model_doc/convbert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/convnext.mdx": {
-    "file": "pages/model_doc/convnext.mdx-9764ae02.js",
+    "file": "pages/model_doc/convnext.mdx-7e79aeb5.js",
     "src": "src/routes/model_doc/convnext.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/data2vec.mdx": {
-    "file": "pages/model_doc/data2vec.mdx-5754902c.js",
+    "file": "pages/model_doc/data2vec.mdx-8f78951e.js",
     "src": "src/routes/model_doc/data2vec.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/dialogpt.mdx": {
-    "file": "pages/model_doc/dialogpt.mdx-b9b8316f.js",
+    "file": "pages/model_doc/dialogpt.mdx-9a9caa6f.js",
     "src": "src/routes/model_doc/dialogpt.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/flaubert.mdx": {
-    "file": "pages/model_doc/flaubert.mdx-8a4f0460.js",
+    "file": "pages/model_doc/flaubert.mdx-0f58a6a4.js",
     "src": "src/routes/model_doc/flaubert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/imagegpt.mdx": {
-    "file": "pages/model_doc/imagegpt.mdx-017b3b23.js",
+    "file": "pages/model_doc/imagegpt.mdx-11a1fa28.js",
     "src": "src/routes/model_doc/imagegpt.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/layoutlm.mdx": {
-    "file": "pages/model_doc/layoutlm.mdx-aadb5d5c.js",
+    "file": "pages/model_doc/layoutlm.mdx-c79d0f5c.js",
     "src": "src/routes/model_doc/layoutlm.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/reformer.mdx": {
-    "file": "pages/model_doc/reformer.mdx-d557cd7a.js",
+    "file": "pages/model_doc/reformer.mdx-b7eca610.js",
     "src": "src/routes/model_doc/reformer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/roformer.mdx": {
-    "file": "pages/model_doc/roformer.mdx-704070fd.js",
+    "file": "pages/model_doc/roformer.mdx-5245ccdf.js",
     "src": "src/routes/model_doc/roformer.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/splinter.mdx": {
-    "file": "pages/model_doc/splinter.mdx-f856d283.js",
+    "file": "pages/model_doc/splinter.mdx-d7b2c9be.js",
     "src": "src/routes/model_doc/splinter.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/wav2vec2.mdx": {
-    "file": "pages/model_doc/wav2vec2.mdx-a35ec089.js",
+    "file": "pages/model_doc/wav2vec2.mdx-aa536a26.js",
     "src": "src/routes/model_doc/wav2vec2.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/barthez.mdx": {
-    "file": "pages/model_doc/barthez.mdx-9feede97.js",
+    "file": "pages/model_doc/barthez.mdx-696fe22a.js",
     "src": "src/routes/model_doc/barthez.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/bartpho.mdx": {
-    "file": "pages/model_doc/bartpho.mdx-19c8aedc.js",
+    "file": "pages/model_doc/bartpho.mdx-37a13663.js",
     "src": "src/routes/model_doc/bartpho.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/deberta.mdx": {
-    "file": "pages/model_doc/deberta.mdx-690319f6.js",
+    "file": "pages/model_doc/deberta.mdx-3738f1aa.js",
     "src": "src/routes/model_doc/deberta.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/electra.mdx": {
-    "file": "pages/model_doc/electra.mdx-e6337292.js",
+    "file": "pages/model_doc/electra.mdx-85a7f1b1.js",
     "src": "src/routes/model_doc/electra.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/gpt_neo.mdx": {
-    "file": "pages/model_doc/gpt_neo.mdx-a216e5fe.js",
+    "file": "pages/model_doc/gpt_neo.mdx-00f04eaa.js",
     "src": "src/routes/model_doc/gpt_neo.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/herbert.mdx": {
-    "file": "pages/model_doc/herbert.mdx-7e2b3b74.js",
+    "file": "pages/model_doc/herbert.mdx-85dfb841.js",
     "src": "src/routes/model_doc/herbert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/m2m_100.mdx": {
-    "file": "pages/model_doc/m2m_100.mdx-7fa7518a.js",
+    "file": "pages/model_doc/m2m_100.mdx-c8092d66.js",
     "src": "src/routes/model_doc/m2m_100.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/pegasus.mdx": {
-    "file": "pages/model_doc/pegasus.mdx-aec54a55.js",
+    "file": "pages/model_doc/pegasus.mdx-57346b57.js",
     "src": "src/routes/model_doc/pegasus.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/phobert.mdx": {
-    "file": "pages/model_doc/phobert.mdx-552aac72.js",
+    "file": "pages/model_doc/phobert.mdx-0a4593a5.js",
     "src": "src/routes/model_doc/phobert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/qdqbert.mdx": {
-    "file": "pages/model_doc/qdqbert.mdx-db55e214.js",
+    "file": "pages/model_doc/qdqbert.mdx-cc59f164.js",
     "src": "src/routes/model_doc/qdqbert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/rembert.mdx": {
-    "file": "pages/model_doc/rembert.mdx-72898855.js",
+    "file": "pages/model_doc/rembert.mdx-65d76edf.js",
     "src": "src/routes/model_doc/rembert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/roberta.mdx": {
-    "file": "pages/model_doc/roberta.mdx-017d3a41.js",
+    "file": "pages/model_doc/roberta.mdx-ed290477.js",
     "src": "src/routes/model_doc/roberta.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/vit_mae.mdx": {
-    "file": "pages/model_doc/vit_mae.mdx-c36afcde.js",
+    "file": "pages/model_doc/vit_mae.mdx-46a91a93.js",
     "src": "src/routes/model_doc/vit_mae.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/albert.mdx": {
-    "file": "pages/model_doc/albert.mdx-05158359.js",
+    "file": "pages/model_doc/albert.mdx-31036142.js",
     "src": "src/routes/model_doc/albert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/canine.mdx": {
-    "file": "pages/model_doc/canine.mdx-7df553af.js",
+    "file": "pages/model_doc/canine.mdx-3bbedf4b.js",
     "src": "src/routes/model_doc/canine.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/funnel.mdx": {
-    "file": "pages/model_doc/funnel.mdx-a8ab3254.js",
+    "file": "pages/model_doc/funnel.mdx-64f4a437.js",
     "src": "src/routes/model_doc/funnel.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/hubert.mdx": {
-    "file": "pages/model_doc/hubert.mdx-8694dba1.js",
+    "file": "pages/model_doc/hubert.mdx-581e54d4.js",
     "src": "src/routes/model_doc/hubert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/lxmert.mdx": {
-    "file": "pages/model_doc/lxmert.mdx-7e6a8e3d.js",
+    "file": "pages/model_doc/lxmert.mdx-71bcf9a4.js",
     "src": "src/routes/model_doc/lxmert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/marian.mdx": {
-    "file": "pages/model_doc/marian.mdx-16e47a97.js",
+    "file": "pages/model_doc/marian.mdx-e70745d5.js",
     "src": "src/routes/model_doc/marian.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/plbart.mdx": {
-    "file": "pages/model_doc/plbart.mdx-0dbd6fdc.js",
+    "file": "pages/model_doc/plbart.mdx-858ba541.js",
     "src": "src/routes/model_doc/plbart.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/regnet.mdx": {
-    "file": "pages/model_doc/regnet.mdx-d2c194d7.js",
+    "file": "pages/model_doc/regnet.mdx-75bbdcb0.js",
     "src": "src/routes/model_doc/regnet.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/resnet.mdx": {
-    "file": "pages/model_doc/resnet.mdx-f1c937a2.js",
+    "file": "pages/model_doc/resnet.mdx-baf60ecc.js",
     "src": "src/routes/model_doc/resnet.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/t5v1.1.mdx": {
-    "file": "pages/model_doc/t5v1.1.mdx-44ecd2cf.js",
+    "file": "pages/model_doc/t5v1.1.mdx-6a032b91.js",
     "src": "src/routes/model_doc/t5v1.1.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
+    ]
+  },
+  "src/routes/model_doc/flava.mdx": {
+    "file": "pages/model_doc/flava.mdx-a1368247.js",
+    "src": "src/routes/model_doc/flava.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/ibert.mdx": {
-    "file": "pages/model_doc/ibert.mdx-616d06c1.js",
+    "file": "pages/model_doc/ibert.mdx-17ec7c23.js",
     "src": "src/routes/model_doc/ibert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/mbart.mdx": {
-    "file": "pages/model_doc/mbart.mdx-6d03523c.js",
+    "file": "pages/model_doc/mbart.mdx-5e66bcd8.js",
     "src": "src/routes/model_doc/mbart.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/mluke.mdx": {
-    "file": "pages/model_doc/mluke.mdx-7675b81c.js",
+    "file": "pages/model_doc/mluke.mdx-af512e4b.js",
     "src": "src/routes/model_doc/mluke.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/mpnet.mdx": {
-    "file": "pages/model_doc/mpnet.mdx-9b3ae612.js",
+    "file": "pages/model_doc/mpnet.mdx-c95b5853.js",
     "src": "src/routes/model_doc/mpnet.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/realm.mdx": {
-    "file": "pages/model_doc/realm.mdx-5584b371.js",
+    "file": "pages/model_doc/realm.mdx-84f8400a.js",
     "src": "src/routes/model_doc/realm.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/sew-d.mdx": {
-    "file": "pages/model_doc/sew-d.mdx-25db6451.js",
+    "file": "pages/model_doc/sew-d.mdx-bcb0d851.js",
     "src": "src/routes/model_doc/sew-d.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/tapas.mdx": {
-    "file": "pages/model_doc/tapas.mdx-f87f38e0.js",
+    "file": "pages/model_doc/tapas.mdx-5e987254.js",
     "src": "src/routes/model_doc/tapas.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_Markdown-57fe20b0.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/tapex.mdx": {
-    "file": "pages/model_doc/tapex.mdx-5d2bf016.js",
+    "file": "pages/model_doc/tapex.mdx-01feba25.js",
     "src": "src/routes/model_doc/tapex.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/trocr.mdx": {
-    "file": "pages/model_doc/trocr.mdx-6f2d628e.js",
+    "file": "pages/model_doc/trocr.mdx-a595dc90.js",
     "src": "src/routes/model_doc/trocr.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/wavlm.mdx": {
-    "file": "pages/model_doc/wavlm.mdx-3712ccbd.js",
+    "file": "pages/model_doc/wavlm.mdx-8c691c74.js",
     "src": "src/routes/model_doc/wavlm.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/xlnet.mdx": {
-    "file": "pages/model_doc/xlnet.mdx-ef1d2944.js",
+    "file": "pages/model_doc/xlnet.mdx-764059d9.js",
     "src": "src/routes/model_doc/xlnet.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/xls_r.mdx": {
-    "file": "pages/model_doc/xls_r.mdx-3bfcc393.js",
+    "file": "pages/model_doc/xls_r.mdx-bf0c28a0.js",
     "src": "src/routes/model_doc/xls_r.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
+    ]
+  },
+  "src/routes/model_doc/yolos.mdx": {
+    "file": "pages/model_doc/yolos.mdx-c51d4ce7.js",
+    "src": "src/routes/model_doc/yolos.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/auto.mdx": {
-    "file": "pages/model_doc/auto.mdx-5559ca2d.js",
+    "file": "pages/model_doc/auto.mdx-8a104e64.js",
     "src": "src/routes/model_doc/auto.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/bart.mdx": {
-    "file": "pages/model_doc/bart.mdx-4b804cfc.js",
+    "file": "pages/model_doc/bart.mdx-541813ca.js",
     "src": "src/routes/model_doc/bart.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/beit.mdx": {
-    "file": "pages/model_doc/beit.mdx-fb5b457b.js",
+    "file": "pages/model_doc/beit.mdx-eeed7976.js",
     "src": "src/routes/model_doc/beit.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/bert.mdx": {
-    "file": "pages/model_doc/bert.mdx-09a61729.js",
+    "file": "pages/model_doc/bert.mdx-69babb51.js",
     "src": "src/routes/model_doc/bert.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/bort.mdx": {
-    "file": "pages/model_doc/bort.mdx-b6375ab4.js",
+    "file": "pages/model_doc/bort.mdx-6f579fac.js",
     "src": "src/routes/model_doc/bort.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/byt5.mdx": {
-    "file": "pages/model_doc/byt5.mdx-7e02995f.js",
+    "file": "pages/model_doc/byt5.mdx-19405035.js",
     "src": "src/routes/model_doc/byt5.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/model_doc/clip.mdx": {
-    "file": "pages/model_doc/clip.mdx-2e8fbdc9.js",
+    "file": "pages/model_doc/clip.mdx-51758c6b.js",
     "src": "src/routes/model_doc/clip.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/ctrl.mdx": {
-    "file": "pages/model_doc/ctrl.mdx-ee390e96.js",
+    "file": "pages/model_doc/ctrl.mdx-3b860bd8.js",
     "src": "src/routes/model_doc/ctrl.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/deit.mdx": {
-    "file": "pages/model_doc/deit.mdx-d76f6bcb.js",
+    "file": "pages/model_doc/deit.mdx-aac5cb84.js",
     "src": "src/routes/model_doc/deit.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/detr.mdx": {
-    "file": "pages/model_doc/detr.mdx-d4d12e1b.js",
+    "file": "pages/model_doc/detr.mdx-44281dab.js",
     "src": "src/routes/model_doc/detr.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/fnet.mdx": {
-    "file": "pages/model_doc/fnet.mdx-08203593.js",
+    "file": "pages/model_doc/fnet.mdx-70b80de7.js",
     "src": "src/routes/model_doc/fnet.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/fsmt.mdx": {
-    "file": "pages/model_doc/fsmt.mdx-98e3b55a.js",
+    "file": "pages/model_doc/fsmt.mdx-74617bcc.js",
     "src": "src/routes/model_doc/fsmt.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/glpn.mdx": {
-    "file": "pages/model_doc/glpn.mdx-ec87cdb1.js",
+    "file": "pages/model_doc/glpn.mdx-21c2e422.js",
     "src": "src/routes/model_doc/glpn.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/gpt2.mdx": {
-    "file": "pages/model_doc/gpt2.mdx-32750ecc.js",
+    "file": "pages/model_doc/gpt2.mdx-ad7069a3.js",
     "src": "src/routes/model_doc/gpt2.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/gptj.mdx": {
-    "file": "pages/model_doc/gptj.mdx-f0ea5325.js",
+    "file": "pages/model_doc/gptj.mdx-d08adb03.js",
     "src": "src/routes/model_doc/gptj.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/luke.mdx": {
-    "file": "pages/model_doc/luke.mdx-bb1c29c7.js",
+    "file": "pages/model_doc/luke.mdx-5526bfd2.js",
     "src": "src/routes/model_doc/luke.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/swin.mdx": {
-    "file": "pages/model_doc/swin.mdx-4f91227e.js",
+    "file": "pages/model_doc/swin.mdx-5e1636ff.js",
     "src": "src/routes/model_doc/swin.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/vilt.mdx": {
-    "file": "pages/model_doc/vilt.mdx-2d203d6c.js",
+    "file": "pages/model_doc/vilt.mdx-1ece42e9.js",
     "src": "src/routes/model_doc/vilt.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/xglm.mdx": {
-    "file": "pages/model_doc/xglm.mdx-9be60822.js",
+    "file": "pages/model_doc/xglm.mdx-573a7daf.js",
     "src": "src/routes/model_doc/xglm.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/yoso.mdx": {
-    "file": "pages/model_doc/yoso.mdx-01f66704.js",
+    "file": "pages/model_doc/yoso.mdx-983beac1.js",
     "src": "src/routes/model_doc/yoso.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/cpm.mdx": {
-    "file": "pages/model_doc/cpm.mdx-67673ec1.js",
+    "file": "pages/model_doc/cpm.mdx-f7c2ad1e.js",
     "src": "src/routes/model_doc/cpm.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_IconCopyLink-40460835.js"
+    ]
+  },
+  "src/routes/model_doc/cvt.mdx": {
+    "file": "pages/model_doc/cvt.mdx-b51fde75.js",
+    "src": "src/routes/model_doc/cvt.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/dit.mdx": {
-    "file": "pages/model_doc/dit.mdx-f102d25a.js",
+    "file": "pages/model_doc/dit.mdx-51b9ebfe.js",
     "src": "src/routes/model_doc/dit.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/model_doc/dpr.mdx": {
-    "file": "pages/model_doc/dpr.mdx-5288d985.js",
+    "file": "pages/model_doc/dpr.mdx-6ffac150.js",
     "src": "src/routes/model_doc/dpr.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/dpt.mdx": {
-    "file": "pages/model_doc/dpt.mdx-a4131eb2.js",
+    "file": "pages/model_doc/dpt.mdx-b13c7636.js",
     "src": "src/routes/model_doc/dpt.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/led.mdx": {
-    "file": "pages/model_doc/led.mdx-c02e538e.js",
+    "file": "pages/model_doc/led.mdx-add6f6d6.js",
     "src": "src/routes/model_doc/led.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/mt5.mdx": {
-    "file": "pages/model_doc/mt5.mdx-f5177d1e.js",
+    "file": "pages/model_doc/mt5.mdx-a9fb8a93.js",
     "src": "src/routes/model_doc/mt5.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
+    ]
+  },
+  "src/routes/model_doc/opt.mdx": {
+    "file": "pages/model_doc/opt.mdx-ab8c443c.js",
+    "src": "src/routes/model_doc/opt.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/rag.mdx": {
-    "file": "pages/model_doc/rag.mdx-5955009e.js",
+    "file": "pages/model_doc/rag.mdx-8f1e294b.js",
     "src": "src/routes/model_doc/rag.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/sew.mdx": {
-    "file": "pages/model_doc/sew.mdx-07931378.js",
+    "file": "pages/model_doc/sew.mdx-9fb47686.js",
     "src": "src/routes/model_doc/sew.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/van.mdx": {
-    "file": "pages/model_doc/van.mdx-5753e884.js",
+    "file": "pages/model_doc/van.mdx-54b606e0.js",
     "src": "src/routes/model_doc/van.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/vit.mdx": {
-    "file": "pages/model_doc/vit.mdx-c33ccedf.js",
+    "file": "pages/model_doc/vit.mdx-650e3b52.js",
     "src": "src/routes/model_doc/vit.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/xlm.mdx": {
-    "file": "pages/model_doc/xlm.mdx-1982d0da.js",
+    "file": "pages/model_doc/xlm.mdx-40172f61.js",
     "src": "src/routes/model_doc/xlm.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/model_doc/t5.mdx": {
-    "file": "pages/model_doc/t5.mdx-63eb9d91.js",
+    "file": "pages/model_doc/t5.mdx-915ac71a.js",
     "src": "src/routes/model_doc/t5.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/notebooks.mdx": {
-    "file": "pages/notebooks.mdx-7a85a9b8.js",
+    "file": "pages/notebooks.mdx-a3829e6c.js",
     "src": "src/routes/notebooks.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/pr_checks.mdx": {
-    "file": "pages/pr_checks.mdx-e8e45938.js",
+    "file": "pages/pr_checks.mdx-4d38d5ef.js",
     "src": "src/routes/pr_checks.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/quicktour.mdx": {
-    "file": "pages/quicktour.mdx-36f89277.js",
+    "file": "pages/quicktour.mdx-138b3beb.js",
     "src": "src/routes/quicktour.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_DocNotebookDropdown-f2b55cd8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_DocNotebookDropdown-fbc0eb22.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/sagemaker.mdx": {
-    "file": "pages/sagemaker.mdx-9ae07843.js",
+    "file": "pages/sagemaker.mdx-17329cf4.js",
     "src": "src/routes/sagemaker.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/glossary.mdx": {
-    "file": "pages/glossary.mdx-0ae57846.js",
+    "file": "pages/glossary.mdx-d77357bf.js",
     "src": "src/routes/glossary.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/internal/tokenization_utils.mdx": {
-    "file": "pages/internal/tokenization_utils.mdx-3854264b.js",
+    "file": "pages/internal/tokenization_utils.mdx-415daf97.js",
     "src": "src/routes/internal/tokenization_utils.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/internal/generation_utils.mdx": {
-    "file": "pages/internal/generation_utils.mdx-25d7aaf2.js",
+    "file": "pages/internal/generation_utils.mdx-4d0b5277.js",
     "src": "src/routes/internal/generation_utils.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/internal/pipelines_utils.mdx": {
-    "file": "pages/internal/pipelines_utils.mdx-f3969778.js",
+    "file": "pages/internal/pipelines_utils.mdx-06fa51d2.js",
     "src": "src/routes/internal/pipelines_utils.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/internal/modeling_utils.mdx": {
-    "file": "pages/internal/modeling_utils.mdx-adb3f60d.js",
+    "file": "pages/internal/modeling_utils.mdx-23e743dd.js",
     "src": "src/routes/internal/modeling_utils.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/internal/trainer_utils.mdx": {
-    "file": "pages/internal/trainer_utils.mdx-0dc181f9.js",
+    "file": "pages/internal/trainer_utils.mdx-1ef8d853.js",
     "src": "src/routes/internal/trainer_utils.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_CodeBlock-8418a95e.js",
+      "_IconCopyLink-40460835.js",
+      "_ExampleCodeBlock-32fc0037.js"
     ]
   },
   "src/routes/internal/file_utils.mdx": {
-    "file": "pages/internal/file_utils.mdx-75e1a8c7.js",
+    "file": "pages/internal/file_utils.mdx-6aeaff45.js",
     "src": "src/routes/internal/file_utils.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Docstring-1088f2fb.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_Docstring-1fe4a33a.js",
+      "_IconCopyLink-40460835.js"
     ]
   },
   "src/routes/training.mdx": {
-    "file": "pages/training.mdx-e55f5a5d.js",
+    "file": "pages/training.mdx-e1d7b94e.js",
     "src": "src/routes/training.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_DocNotebookDropdown-f2b55cd8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_DocNotebookDropdown-fbc0eb22.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/testing.mdx": {
-    "file": "pages/testing.mdx-cf803b8d.js",
+    "file": "pages/testing.mdx-5b89f0f9.js",
     "src": "src/routes/testing.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js"
     ]
   },
   "src/routes/tasks/sequence_classification.mdx": {
-    "file": "pages/tasks/sequence_classification.mdx-fbc7274c.js",
+    "file": "pages/tasks/sequence_classification.mdx-9804e22b.js",
     "src": "src/routes/tasks/sequence_classification.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/tasks/audio_classification.mdx": {
-    "file": "pages/tasks/audio_classification.mdx-793684de.js",
+    "file": "pages/tasks/audio_classification.mdx-ad90da71.js",
     "src": "src/routes/tasks/audio_classification.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/tasks/image_classification.mdx": {
-    "file": "pages/tasks/image_classification.mdx-f5b94f76.js",
+    "file": "pages/tasks/image_classification.mdx-5a8e5b8d.js",
     "src": "src/routes/tasks/image_classification.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/tasks/token_classification.mdx": {
-    "file": "pages/tasks/token_classification.mdx-ab60ff5d.js",
+    "file": "pages/tasks/token_classification.mdx-4664bb77.js",
     "src": "src/routes/tasks/token_classification.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/tasks/question_answering.mdx": {
-    "file": "pages/tasks/question_answering.mdx-f48f4248.js",
+    "file": "pages/tasks/question_answering.mdx-cab2a946.js",
     "src": "src/routes/tasks/question_answering.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/tasks/language_modeling.mdx": {
-    "file": "pages/tasks/language_modeling.mdx-d4899aed.js",
+    "file": "pages/tasks/language_modeling.mdx-dae33643.js",
     "src": "src/routes/tasks/language_modeling.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/tasks/multiple_choice.mdx": {
-    "file": "pages/tasks/multiple_choice.mdx-8a735020.js",
+    "file": "pages/tasks/multiple_choice.mdx-fbf29480.js",
     "src": "src/routes/tasks/multiple_choice.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/tasks/summarization.mdx": {
-    "file": "pages/tasks/summarization.mdx-d23cd037.js",
+    "file": "pages/tasks/summarization.mdx-7c9d75cb.js",
     "src": "src/routes/tasks/summarization.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/tasks/translation.mdx": {
-    "file": "pages/tasks/translation.mdx-af20fe88.js",
+    "file": "pages/tasks/translation.mdx-f8fa0397.js",
     "src": "src/routes/tasks/translation.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
   "src/routes/tasks/asr.mdx": {
-    "file": "pages/tasks/asr.mdx-6ec9aa03.js",
+    "file": "pages/tasks/asr.mdx-a6de6249.js",
     "src": "src/routes/tasks/asr.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-6b77c823.js",
-      "_Tip-39098574.js",
-      "_Youtube-5c6e11e6.js",
-      "_IconCopyLink-7a11ce68.js",
-      "_CodeBlock-3a8b25a8.js",
-      "_Markdown-9acf6d91.js"
+      "_vendor-316217a5.js",
+      "_Tip-27e9fea0.js",
+      "_Youtube-ce8d689b.js",
+      "_IconCopyLink-40460835.js",
+      "_CodeBlock-8418a95e.js",
+      "_Markdown-57fe20b0.js"
     ]
   },
-  "_vendor-6b77c823.js": {
-    "file": "chunks/vendor-6b77c823.js"
+  "_vendor-316217a5.js": {
+    "file": "chunks/vendor-316217a5.js"
   },
   "_paths-4b3c6e7e.js": {
     "file": "chunks/paths-4b3c6e7e.js"
   },
-  "_IconCopyLink-7a11ce68.js": {
-    "file": "chunks/IconCopyLink-7a11ce68.js",
+  "_IconCopyLink-40460835.js": {
+    "file": "chunks/IconCopyLink-40460835.js",
     "imports": [
-      "_vendor-6b77c823.js"
+      "_vendor-316217a5.js"
     ]
   },
-  "_Tip-39098574.js": {
-    "file": "chunks/Tip-39098574.js",
+  "_Tip-27e9fea0.js": {
+    "file": "chunks/Tip-27e9fea0.js",
     "imports": [
-      "_vendor-6b77c823.js"
+      "_vendor-316217a5.js"
     ]
   },
-  "_CodeBlock-3a8b25a8.js": {
-    "file": "chunks/CodeBlock-3a8b25a8.js",
+  "_CodeBlock-8418a95e.js": {
+    "file": "chunks/CodeBlock-8418a95e.js",
     "imports": [
-      "_vendor-6b77c823.js"
+      "_vendor-316217a5.js"
     ]
   },
-  "_Markdown-9acf6d91.js": {
-    "file": "chunks/Markdown-9acf6d91.js",
+  "_Markdown-57fe20b0.js": {
+    "file": "chunks/Markdown-57fe20b0.js",
     "imports": [
-      "_vendor-6b77c823.js"
+      "_vendor-316217a5.js"
     ]
   },
-  "_Youtube-5c6e11e6.js": {
-    "file": "chunks/Youtube-5c6e11e6.js",
+  "_Youtube-ce8d689b.js": {
+    "file": "chunks/Youtube-ce8d689b.js",
     "imports": [
-      "_vendor-6b77c823.js"
+      "_vendor-316217a5.js"
     ]
   },
-  "_DocNotebookDropdown-f2b55cd8.js": {
-    "file": "chunks/DocNotebookDropdown-f2b55cd8.js",
+  "_DocNotebookDropdown-fbc0eb22.js": {
+    "file": "chunks/DocNotebookDropdown-fbc0eb22.js",
     "imports": [
-      "_vendor-6b77c823.js"
+      "_vendor-316217a5.js"
     ]
   },
-  "_Docstring-1088f2fb.js": {
-    "file": "chunks/Docstring-1088f2fb.js",
+  "_Docstring-1fe4a33a.js": {
+    "file": "chunks/Docstring-1fe4a33a.js",
     "imports": [
-      "_vendor-6b77c823.js",
-      "_IconCopyLink-7a11ce68.js"
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
+    ]
+  },
+  "_ExampleCodeBlock-32fc0037.js": {
+    "file": "chunks/ExampleCodeBlock-32fc0037.js",
+    "imports": [
+      "_vendor-316217a5.js",
+      "_IconCopyLink-40460835.js"
     ]
   }
 }
