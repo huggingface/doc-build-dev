@@ -15,7 +15,8 @@
       "src/routes/chapter1/2.mdx",
       "src/routes/chapter1/5.mdx",
       "src/routes/chapter1/6.mdx",
-      "src/routes/chapter2/1.mdx"
+      "src/routes/chapter2/1.mdx",
+      "src/routes/chapter3/1.mdx"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -96,6 +97,16 @@
   "src/routes/chapter2/1.mdx": {
     "file": "pages/chapter2/1.mdx-hf-doc-builder.js",
     "src": "src/routes/chapter2/1.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/chapter3/1.mdx": {
+    "file": "pages/chapter3/1.mdx-hf-doc-builder.js",
+    "src": "src/routes/chapter3/1.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
