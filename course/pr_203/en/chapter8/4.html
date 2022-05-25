@@ -1,16 +1,16 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;debugging-the-training-pipeline&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;debugging-the-training-pipeline&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;check-your-data&quot;,&quot;title&quot;:&quot;Check your data&quot;},{&quot;local&quot;:&quot;from-datasets-to-dataloaders&quot;,&quot;title&quot;:&quot;From datasets to dataloaders&quot;},{&quot;local&quot;:&quot;going-through-the-model&quot;,&quot;title&quot;:&quot;Going through the model&quot;},{&quot;local&quot;:&quot;performing-one-optimization-step&quot;,&quot;title&quot;:&quot;Performing one optimization step&quot;},{&quot;local&quot;:&quot;dealing-with-cuda-outofmemory-errors&quot;,&quot;title&quot;:&quot;Dealing with CUDA out-of-memory errors&quot;},{&quot;local&quot;:&quot;evaluating-the-model&quot;,&quot;title&quot;:&quot;Evaluating the model&quot;}],&quot;title&quot;:&quot;Debugging the training pipeline&quot;},{&quot;local&quot;:&quot;debugging-silent-errors-during-training&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;check-your-data-again&quot;,&quot;title&quot;:&quot;Check your data (again!)&quot;},{&quot;local&quot;:&quot;overfit-your-model-on-one-batch&quot;,&quot;title&quot;:&quot;Overfit your model on one batch&quot;},{&quot;local&quot;:&quot;dont-tune-anything-until-you-have-a-first-baseline&quot;,&quot;title&quot;:&quot;Don&#39;t tune anything until you have a first baseline&quot;},{&quot;local&quot;:&quot;ask-for-help&quot;,&quot;title&quot;:&quot;Ask for help&quot;}],&quot;title&quot;:&quot;Debugging silent errors during training&quot;}],&quot;title&quot;:&quot;Debugging the training pipeline&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/assets/pages/__layout.svelte-9b9c9c55.css">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/start-3c8692e0.js">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/vendor-1e8b365d.js">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/pages/__layout.svelte-05c2fb0c.js">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/pages/chapter8/4.mdx-0d7fa69f.js">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/Tip-62b14c6e.js">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/Youtube-c2a8cc39.js">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/IconCopyLink-483c28ba.js">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/CodeBlock-e5764662.js">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/DocNotebookDropdown-37d928d3.js">
-	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/FrameworkSwitchCourse-7f8f0f31.js"> 
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/pages/chapter8/4.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/Tip-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/Youtube-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/CodeBlock-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/DocNotebookDropdown-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/course/pr_203/en/_app/chunks/FrameworkSwitchCourse-hf-doc-builder.js"> 
 
 
 
@@ -205,7 +205,7 @@ trainer.train()<!-- HTML_TAG_END --></pre></div>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->dict_keys([<span class="hljs-string">&#x27;attention_mask&#x27;</span>, <span class="hljs-string">&#x27;hypothesis&#x27;</span>, <span class="hljs-string">&#x27;idx&#x27;</span>, <span class="hljs-string">&#x27;input_ids&#x27;</span>, <span class="hljs-string">&#x27;label&#x27;</span>, <span class="hljs-string">&#x27;premise&#x27;</span>])<!-- HTML_TAG_END --></pre></div>
-<p>Note that the keys that don’t correspond to inputs accepted by the model as some will be automatically discarded, so here we will only keep <code>input_ids</code>, <code>attention_mask</code>, and <code>label</code> (which will be renamed <code>labels</code>). To double-check the model signature, you can print the class of your model, then go check its documentation:</p>
+<p>Note that the keys that don’t correspond to inputs accepted by the model will be automatically discarded, so here we will only keep <code>input_ids</code>, <code>attention_mask</code>, and <code>label</code> (which will be renamed <code>labels</code>). To double-check the model signature, you can print the class of your model, then go check its documentation:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -784,10 +784,10 @@ compute_metrics((preds.cpu().numpy(), labels.cpu().numpy()))<!-- HTML_TAG_END --
 <p>Of course, not every problem you encounter when training neural nets is your own fault! If you encounter something in the 🤗 Transformers or 🤗 Datasets library that does not seem right, you may have encountered a bug. You should definitely tell us all about it, and in the next section we’ll explain exactly how to do that.</p>
 
 
-		<script type="module" data-hydrate="1fcug90">
-		import { start } from "/docs/course/pr_203/en/_app/start-3c8692e0.js";
+		<script type="module" data-hydrate="92fmn6">
+		import { start } from "/docs/course/pr_203/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1fcug90"]').parentNode,
+			target: document.querySelector('[data-hydrate="92fmn6"]').parentNode,
 			paths: {"base":"/docs/course/pr_203/en","assets":"/docs/course/pr_203/en"},
 			session: {},
 			route: false,
@@ -797,8 +797,8 @@ compute_metrics((preds.cpu().numpy(), labels.cpu().numpy()))<!-- HTML_TAG_END --
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/course/pr_203/en/_app/pages/__layout.svelte-05c2fb0c.js"),
-						import("/docs/course/pr_203/en/_app/pages/chapter8/4.mdx-0d7fa69f.js")
+					import("/docs/course/pr_203/en/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/course/pr_203/en/_app/pages/chapter8/4.mdx-hf-doc-builder.js")
 				],
 				params: {}
 			}
