@@ -21,7 +21,8 @@
 	</span></h2>
 
 <p>User Access Tokens are the preferred way to authenticate an application or notebook to Hugging Face services. You can manage your access tokens in your <a href="https://huggingface.co/settings/tokens" rel="nofollow">settings</a>.</p>
-<p><img src="/docs/assets/hub/access-tokens.png" alt="/docs/assets/hub/access-tokens.png"></p>
+<div class="flex justify-center"><img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/access-tokens.png">
+<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/access-tokens-dark.png"></div>
 <p>Access tokens allow applications and notebooks to perform specific actions specified by the scope of the roles shown in the following:</p>
 <ul><li><p><code>read</code>: tokens with this role can only be used to provide read access to repositories you could read. That includes public and private repositories that you, or an organization you’re a member of, own. Use this role if you only need to read content from the Hugging Face Hub (e.g. when downloading private models or doing inference).</p></li>
 <li><p><code>write</code>: tokens with this role additionally grant write access to the repositories you have write access to. Use this token if you need to create or push content to a repository (e.g., when training a model or modifying a model card).</p></li></ul>
@@ -30,10 +31,12 @@
 	</span></h2>
 
 <p>To create an access token, go to your settings, then click on the <a href="https://huggingface.co/settings/tokens" rel="nofollow">Access Tokens tab</a>. Click on the <strong>New token</strong> button to create a new User Access Token.</p>
-<p><img src="/docs/assets/hub/new-token.png" alt="/docs/assets/hub/new-token.png"></p>
+<div class="flex justify-center"><img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/new-token.png">
+<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/new-token-dark.png"></div>
 <p>Select a role and a name for your token and voilà - you’re ready to go!</p>
 <p>You can delete and refresh User Access Tokens by clicking on the <strong>Manage</strong> button.</p>
-<p><img src="/docs/assets/hub/delete-token.png" alt="/docs/assets/hub/delete-token.png"></p>
+<div class="flex justify-center"><img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/delete-token.png">
+<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/delete-token-dark.png"></div>
 <h2 class="relative group"><a id="how-to-use-user-access-tokens" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#how-to-use-user-access-tokens"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>How to use User Access Tokens?
 	</span></h2>
@@ -65,10 +68,10 @@ model = AutoModel.from_pretrained(<span class="hljs-string">&quot;private/model&
 <p>We also recommend only giving the appropriate role to each token you create. If you only need read access (i.e., loading a dataset with the <code>datasets</code> library or retrieving the weights of a model), only give your access token the <code>read</code> role.</p>
 
 
-		<script type="module" data-hydrate="1vmxwm6">
+		<script type="module" data-hydrate="1b56ekz">
 		import { start } from "/docs/hub-docs/pr_156/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1vmxwm6"]').parentNode,
+			target: document.querySelector('[data-hydrate="1b56ekz"]').parentNode,
 			paths: {"base":"/docs/hub-docs/pr_156/en","assets":"/docs/hub-docs/pr_156/en"},
 			session: {},
 			route: false,

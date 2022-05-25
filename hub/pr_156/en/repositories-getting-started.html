@@ -37,12 +37,14 @@ huggingface-cli login<!-- HTML_TAG_END --></pre></div>
 
 <p>Using the Hub’s web interface you can easily create repositories, add files (even large ones!), explore models, visualize diffs, and much more. There are three kinds of repositories on the Hub, and in this guide we’ll be creating a <strong>model repository</strong> for demonstration purposes. For information on creating and managing models, datasets, and Spaces, refer to their respective documentation.</p>
 <ol><li>To create a new repository, visit <a href="http://huggingface.co/new" rel="nofollow">huggingface.co/new</a>:</li></ol>
-<p><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/new_repo.png" alt="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/new_repo.png"></p>
+<div class="flex justify-center"><img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/new_repo.png">
+<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/new_repo-dark.png"></div>
 <ol start="2"><li><p>First, specify the owner of the repository: this can be either you or any of the organizations you’re affiliated with. </p></li>
 <li><p>Next, enter your model’s name. This will also be the name of the repository. Finally, you can specify whether you want your model to be public or private.</p></li></ol>
 <p>You can leave the <em>License</em> field blank for now. To learn about licenses, visit the <a href="repositories-licenses"><strong>Licenses</strong></a> section of this documentation.</p>
 <p>After creating your model repository, you should see a page like this:</p>
-<p><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/empty_repo.png" alt="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/empty_repo.png"></p>
+<div class="flex justify-center"><img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/empty_repo.png">
+<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/empty_repo-dark.png"></div>
 <p>Note that the Hub prompts you to create a <em>Model Card</em>, which you can learn about in the <a href="./models-cards"><strong>Model Cards documentation</strong></a>. Including a Model Card in your model repo is best practice, but since we’re only making a test repo at the moment we can skip this.</p>
 <h2 class="relative group"><a id="cloning-repositories" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#cloning-repositories"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Cloning repositories
@@ -83,21 +85,23 @@ git add .
 git commit -m <span class="hljs-string">&quot;First model version&quot;</span>  <span class="hljs-comment"># You can choose any descriptive message</span>
 git push<!-- HTML_TAG_END --></pre></div>
 <p>And we’re done! You can check your repository on Hugging Face with all the recently added files. For example, in the screenshot below the user added a number of files. Note that one of the files in this example has a size of <code>413 MB</code>, so the repo uses Git LFS to track it.</p>
-<p><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/repo_with_files.png" alt="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/repo_with_files.png"></p>
+<div class="flex justify-center"><img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/repo_with_files.png">
+<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/repo_with_files-dark.png"></div>
 <h2 class="relative group"><a id="viewing-a-repos-history" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#viewing-a-repos-history"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Viewing a repo&#39;s history
 	</span></h2>
 
 Every time you go through the `add`-`commit`-`push` cycle, the repo will keep track of every change you&#39;ve made to your files. The UI allows you to explore the model files and commits and to see the difference (also known as *diff*) introduced by each commit. To see the history, you can click on the **History: X commits** link.
-<p><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/repo_history.png" alt="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/repo_history.png"></p>
+<div class="flex justify-center"><img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/repo_history.png">
+<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/repo_history-dark.png"></div>
 <p>You can click on an individual commit to see what changes that commit introduced:</p>
-<p><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/explore_history.gif" alt="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/explore_history.gif"></p>
+<div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/hub/explore_history.gif"></div>
 
 
-		<script type="module" data-hydrate="17vgg38">
+		<script type="module" data-hydrate="1x5gkmg">
 		import { start } from "/docs/hub-docs/pr_156/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="17vgg38"]').parentNode,
+			target: document.querySelector('[data-hydrate="1x5gkmg"]').parentNode,
 			paths: {"base":"/docs/hub-docs/pr_156/en","assets":"/docs/hub-docs/pr_156/en"},
 			session: {},
 			route: false,
