@@ -29,12 +29,10 @@
       "src/routes/spaces-dependencies.mdx",
       "src/routes/spaces-using-opencv.mdx",
       "src/routes/models-interacting.mdx",
-      "src/routes/organizations-main.mdx",
       "src/routes/spaces-sdks-gradio.mdx",
       "src/routes/spaces-sdks-python.mdx",
       "src/routes/spaces-sdks-static.mdx",
       "src/routes/datasets-overview.mdx",
-      "src/routes/repositories-main.mdx",
       "src/routes/models-cards-co2.mdx",
       "src/routes/models-inference.mdx",
       "src/routes/models-libraries.mdx",
@@ -50,16 +48,18 @@
       "src/routes/datasets-usage.mdx",
       "src/routes/models-the-hub.mdx",
       "src/routes/models-widgets.mdx",
-      "src/routes/datasets-main.mdx",
-      "src/routes/security-main.mdx",
+      "src/routes/organizations.mdx",
       "src/routes/models-cards.mdx",
       "src/routes/models-tasks.mdx",
+      "src/routes/repositories.mdx",
       "src/routes/security-gpg.mdx",
       "src/routes/api-webhook.mdx",
-      "src/routes/models-main.mdx",
-      "src/routes/spaces-main.mdx",
-      "src/routes/other-main.mdx",
-      "src/routes/api-main.mdx"
+      "src/routes/datasets.mdx",
+      "src/routes/security.mdx",
+      "src/routes/models.mdx",
+      "src/routes/spaces.mdx",
+      "src/routes/other.mdx",
+      "src/routes/api.mdx"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -282,16 +282,6 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
-  "src/routes/organizations-main.mdx": {
-    "file": "pages/organizations-main.mdx-hf-doc-builder.js",
-    "src": "src/routes/organizations-main.mdx",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
-    ]
-  },
   "src/routes/spaces-sdks-gradio.mdx": {
     "file": "pages/spaces-sdks-gradio.mdx-hf-doc-builder.js",
     "src": "src/routes/spaces-sdks-gradio.mdx",
@@ -327,16 +317,6 @@
   "src/routes/datasets-overview.mdx": {
     "file": "pages/datasets-overview.mdx-hf-doc-builder.js",
     "src": "src/routes/datasets-overview.mdx",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
-    ]
-  },
-  "src/routes/repositories-main.mdx": {
-    "file": "pages/repositories-main.mdx-hf-doc-builder.js",
-    "src": "src/routes/repositories-main.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -499,19 +479,9 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
-  "src/routes/datasets-main.mdx": {
-    "file": "pages/datasets-main.mdx-hf-doc-builder.js",
-    "src": "src/routes/datasets-main.mdx",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
-    ]
-  },
-  "src/routes/security-main.mdx": {
-    "file": "pages/security-main.mdx-hf-doc-builder.js",
-    "src": "src/routes/security-main.mdx",
+  "src/routes/organizations.mdx": {
+    "file": "pages/organizations.mdx-hf-doc-builder.js",
+    "src": "src/routes/organizations.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -533,6 +503,16 @@
   "src/routes/models-tasks.mdx": {
     "file": "pages/models-tasks.mdx-hf-doc-builder.js",
     "src": "src/routes/models-tasks.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/repositories.mdx": {
+    "file": "pages/repositories.mdx-hf-doc-builder.js",
+    "src": "src/routes/repositories.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -562,9 +542,9 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
-  "src/routes/models-main.mdx": {
-    "file": "pages/models-main.mdx-hf-doc-builder.js",
-    "src": "src/routes/models-main.mdx",
+  "src/routes/datasets.mdx": {
+    "file": "pages/datasets.mdx-hf-doc-builder.js",
+    "src": "src/routes/datasets.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -572,9 +552,9 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
-  "src/routes/spaces-main.mdx": {
-    "file": "pages/spaces-main.mdx-hf-doc-builder.js",
-    "src": "src/routes/spaces-main.mdx",
+  "src/routes/security.mdx": {
+    "file": "pages/security.mdx-hf-doc-builder.js",
+    "src": "src/routes/security.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -582,9 +562,9 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
-  "src/routes/other-main.mdx": {
-    "file": "pages/other-main.mdx-hf-doc-builder.js",
-    "src": "src/routes/other-main.mdx",
+  "src/routes/models.mdx": {
+    "file": "pages/models.mdx-hf-doc-builder.js",
+    "src": "src/routes/models.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -592,9 +572,29 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
-  "src/routes/api-main.mdx": {
-    "file": "pages/api-main.mdx-hf-doc-builder.js",
-    "src": "src/routes/api-main.mdx",
+  "src/routes/spaces.mdx": {
+    "file": "pages/spaces.mdx-hf-doc-builder.js",
+    "src": "src/routes/spaces.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/other.mdx": {
+    "file": "pages/other.mdx-hf-doc-builder.js",
+    "src": "src/routes/other.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/api.mdx": {
+    "file": "pages/api.mdx-hf-doc-builder.js",
+    "src": "src/routes/api.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
