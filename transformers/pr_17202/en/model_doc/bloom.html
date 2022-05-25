@@ -172,7 +172,7 @@ issue</a><!-- HTML_TAG_END -->
 					</li></ul>
 		
 		</div></div>
-<p>This is the configuration class to store the configuration of a <a href="/docs/transformers/pr_17202/en/model_doc/bloom#transformers.BloomModel">BloomModel</a>. It is used to instantiate a GPT-2
+<p>This is the configuration class to store the configuration of a <a href="/docs/transformers/pr_17202/en/model_doc/bloom#transformers.BloomModel">BloomModel</a>. It is used to instantiate a Bloom
 model according to the specified arguments, defining the model architecture. Instantiating a configuration with the
 defaults will yield a similar configuration to the Bloom architecture
 <a href="https://huggingface.co/bigscience/bloom" rel="nofollow">bigscience/bloom</a>.</p>
@@ -483,7 +483,7 @@ Byte-Pair-Encoding.</p>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt;</span> <span class="language-python"><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> BloomTokenizerFast</span>
-<span class="hljs-meta">&gt;&gt;&gt;</span> <span class="language-python">tokenizer = BloomTokenizerFast.from_pretrained(<span class="hljs-string">&quot;bloom&quot;</span>)</span>
+<span class="hljs-meta">&gt;&gt;&gt;</span> <span class="language-python">tokenizer = BloomTokenizerFast.from_pretrained(<span class="hljs-string">&quot;bigscience/bloom&quot;</span>)</span>
 <span class="hljs-meta">&gt;&gt;&gt;</span> <span class="language-python">tokenizer(<span class="hljs-string">&quot;Hello world&quot;</span>)[<span class="hljs-string">&#x27;input_ids&#x27;</span>]</span>
 [15496, 995]
 <span class="hljs-meta">&gt;&gt;&gt;</span> <span class="language-python">tokenizer(<span class="hljs-string">&quot; Hello world&quot;</span>)[<span class="hljs-string">&#x27;input_ids&#x27;</span>]</span>
@@ -715,10 +715,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="63fqx2">
+		<script type="module" data-hydrate="sx6zce">
 		import { start } from "/docs/transformers/pr_17202/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="63fqx2"]').parentNode,
+			target: document.querySelector('[data-hydrate="sx6zce"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17202/en","assets":"/docs/transformers/pr_17202/en"},
 			session: {},
 			route: false,
