@@ -431,7 +431,7 @@ Whether or not to return the attentions tensors of all attention layers. See <co
 returned tensors for more detail.`,name:"output_attentions"},{anchor:"transformers.TFOPTForCausalLM.call.output_hidden_states",description:`<strong>output_hidden_states</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
 Whether or not to return the hidden states of all layers. See <code>hidden_states</code> under returned tensors
 for more detail.`,name:"output_hidden_states"},{anchor:"transformers.TFOPTForCausalLM.call.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
-Whether or not to return a <a href="/docs/transformers/pr_17388/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17388/src/transformers/models/opt/modeling_tf_opt.py#L969",returnDescription:`
+Whether or not to return a <a href="/docs/transformers/pr_17388/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17388/src/transformers/models/opt/modeling_tf_opt.py#L970",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17388/en/main_classes/output#transformers.modeling_tf_outputs.TFCausalLMOutputWithPast"
 >transformers.modeling_tf_outputs.TFCausalLMOutputWithPast</a> or a tuple of <code>tf.Tensor</code> (if
