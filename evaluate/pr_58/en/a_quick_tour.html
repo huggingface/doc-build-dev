@@ -38,7 +38,7 @@
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> evaluate
 <span class="hljs-meta">&gt;&gt;&gt; </span>accuracy = evaluate.load(<span class="hljs-string">&quot;accuracy&quot;</span>)<!-- HTML_TAG_END --></pre></div>
-<p>If you want to make sure you are loading the right type of module especially if there are name clashes you can explicitely pass the type:</p>
+<p>If you want to make sure you are loading the right type of module (especially if there are name clashes) you can explicitely pass the type:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -64,7 +64,7 @@
 <tbody><tr><td><code>description</code></td>
 <td>A short description of the evaluation module.</td></tr>
 <tr><td><code>citation</code></td>
-<td>A BibTex string for citation.</td></tr>
+<td>A BibTex string for citation when available.</td></tr>
 <tr><td><code>features</code></td>
 <td>A <code>Features</code> object defining the input format.</td></tr>
 <tr><td><code>inputs_description</code></td>
@@ -152,7 +152,7 @@ The simplest way to calculate the score of an evaluation module is by calling `c
 <span class="hljs-meta">&gt;&gt;&gt; </span>    accuracy.add(references=ref, predictions=pred)
 <span class="hljs-meta">&gt;&gt;&gt; </span>accuracy.compute()
 {<span class="hljs-string">&#x27;accuracy&#x27;</span>: <span class="hljs-number">0.5</span>}<!-- HTML_TAG_END --></pre></div>
-<p>Once you have gathered all predictions you can call<code>compute</code> to compute the score based on all stored values. When getting predictions and references in batches you can use <code>add_batch</code> which adds a list elements for later processing. The rest works as with <code>add</code>:</p>
+<p>Once you have gathered all predictions you can call <code>compute</code> to compute the score based on all stored values. When getting predictions and references in batches you can use <code>add_batch</code> which adds a list elements for later processing. The rest works as with <code>add</code>:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -185,10 +185,10 @@ The simplest way to calculate the score of an evaluation module is by calling `c
 <p><strong>TODO</strong>: add references to save and push_to_hub.</p>
 
 
-		<script type="module" data-hydrate="11hwvn0">
+		<script type="module" data-hydrate="1qe4i4g">
 		import { start } from "/docs/evaluate/pr_58/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="11hwvn0"]').parentNode,
+			target: document.querySelector('[data-hydrate="1qe4i4g"]').parentNode,
 			paths: {"base":"/docs/evaluate/pr_58/en","assets":"/docs/evaluate/pr_58/en"},
 			session: {},
 			route: false,
