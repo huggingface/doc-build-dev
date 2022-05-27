@@ -749,8 +749,8 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = dataset.sort(<span class="hljs-string">&quot;id&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>sampling_rate = dataset.features[<span class="hljs-string">&quot;audio&quot;</span>].sampling_rate
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTProcessor.from_pretrained(<span class="hljs-string">&quot;cwkeam/mctct-large&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTModel.from_pretrained(<span class="hljs-string">&quot;cwkeam/mctct-large&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTProcessor.from_pretrained(<span class="hljs-string">&quot;speechbrain/m-ctc-t-large&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTModel.from_pretrained(<span class="hljs-string">&quot;speechbrain/m-ctc-t-large&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># audio file is decoded on the fly</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = processor(dataset[<span class="hljs-number">0</span>][<span class="hljs-string">&quot;audio&quot;</span>][<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=sampling_rate, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -934,8 +934,8 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = dataset.sort(<span class="hljs-string">&quot;id&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>sampling_rate = dataset.features[<span class="hljs-string">&quot;audio&quot;</span>].sampling_rate
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTProcessor.from_pretrained(<span class="hljs-string">&quot;cwkeam/mctct-large&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForCTC.from_pretrained(<span class="hljs-string">&quot;cwkeam/mctct-large&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTProcessor.from_pretrained(<span class="hljs-string">&quot;speechbrain/m-ctc-t-large&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForCTC.from_pretrained(<span class="hljs-string">&quot;speechbrain/m-ctc-t-large&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># audio file is decoded on the fly</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = processor(dataset[<span class="hljs-number">0</span>][<span class="hljs-string">&quot;audio&quot;</span>][<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=sampling_rate, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -962,10 +962,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-number">1885.65</span><!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="5o7ktt">
+		<script type="module" data-hydrate="eqy8xd">
 		import { start } from "/docs/transformers/pr_16402/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="5o7ktt"]').parentNode,
+			target: document.querySelector('[data-hydrate="eqy8xd"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16402/en","assets":"/docs/transformers/pr_16402/en"},
 			session: {},
 			route: false,
