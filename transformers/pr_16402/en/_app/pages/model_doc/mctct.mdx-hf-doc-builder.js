@@ -38,8 +38,8 @@ dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", spli
 dataset = dataset.sort("id")
 sampling_rate = dataset.features["audio"].sampling_rate
 
-processor = MCTCTProcessor.from_pretrained("cwkeam/mctct-large")
-model = MCTCTModel.from_pretrained("cwkeam/mctct-large")
+processor = MCTCTProcessor.from_pretrained("speechbrain/m-ctc-t-large")
+model = MCTCTModel.from_pretrained("speechbrain/m-ctc-t-large")
 
 # audio file is decoded on the fly
 inputs = processor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
@@ -57,8 +57,8 @@ transcription[0]`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = dataset.sort(<span class="hljs-string">&quot;id&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>sampling_rate = dataset.features[<span class="hljs-string">&quot;audio&quot;</span>].sampling_rate
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTProcessor.from_pretrained(<span class="hljs-string">&quot;cwkeam/mctct-large&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTModel.from_pretrained(<span class="hljs-string">&quot;cwkeam/mctct-large&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTProcessor.from_pretrained(<span class="hljs-string">&quot;speechbrain/m-ctc-t-large&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTModel.from_pretrained(<span class="hljs-string">&quot;speechbrain/m-ctc-t-large&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># audio file is decoded on the fly</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = processor(dataset[<span class="hljs-number">0</span>][<span class="hljs-string">&quot;audio&quot;</span>][<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=sampling_rate, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -93,8 +93,8 @@ dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", spli
 dataset = dataset.sort("id")
 sampling_rate = dataset.features["audio"].sampling_rate
 
-processor = MCTCTProcessor.from_pretrained("cwkeam/mctct-large")
-model = MCTCTForCTC.from_pretrained("cwkeam/mctct-large")
+processor = MCTCTProcessor.from_pretrained("speechbrain/m-ctc-t-large")
+model = MCTCTForCTC.from_pretrained("speechbrain/m-ctc-t-large")
 
 # audio file is decoded on the fly
 inputs = processor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
@@ -112,8 +112,8 @@ transcription[0]`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = dataset.sort(<span class="hljs-string">&quot;id&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>sampling_rate = dataset.features[<span class="hljs-string">&quot;audio&quot;</span>].sampling_rate
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTProcessor.from_pretrained(<span class="hljs-string">&quot;cwkeam/mctct-large&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForCTC.from_pretrained(<span class="hljs-string">&quot;cwkeam/mctct-large&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTProcessor.from_pretrained(<span class="hljs-string">&quot;speechbrain/m-ctc-t-large&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForCTC.from_pretrained(<span class="hljs-string">&quot;speechbrain/m-ctc-t-large&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># audio file is decoded on the fly</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = processor(dataset[<span class="hljs-number">0</span>][<span class="hljs-string">&quot;audio&quot;</span>][<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=sampling_rate, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
