@@ -42,9 +42,9 @@
 <p>Having an imbalanced dataset can skew the results of your metrics. Imagine a dataset with 99 “non-fraud” cases and 1 “fraud” case. A simple model that always predicts “non-fraud” cases would give yield a 99% accuracy which might sound good at first until you realize that you will never catch a fraud case.</p>
 <p>Often, using more than one metric can help get a better idea of your model’s performance from different points of view. For instance, metrics like <strong><a href="https://huggingface.co/metrics/recall" rel="nofollow">recall</a></strong> and <strong><a href="https://huggingface.co/metrics/precision" rel="nofollow">precision</a></strong> can be used together, and the <strong><a href="https://huggingface.co/metrics/f1" rel="nofollow">f1 score</a></strong> is actually the harmonic mean of the two.</p>
 <p>In cases where a dataset is balanced, using <a href="https://huggingface.co/metrics/accuracy" rel="nofollow">accuracy</a> can be reflect the overall model performance:</p>
-<p><img src="https://huggingface.co/datasets/evaluate/media/blob/main/balanced-classes.png" alt="Balanced Labels"></p>
+<p><img src="https://huggingface.co/datasets/evaluate/media/resolve/main/balanced-classes.png" alt="Balanced Labels"></p>
 <p>In cases where there is an imbalance, using <a href="https://huggingface.co/metrics/f1" rel="nofollow">F1 score</a>can be a better representation of performance, given that it encompasses both precision and recall.</p>
-<p><img src="https://huggingface.co/datasets/evaluate/media/blob/main/imbalanced-classes.png" alt="Imbalanced Labels"></p>
+<p><img src="https://huggingface.co/datasets/evaluate/media/resolve/main/imbalanced-classes.png" alt="Imbalanced Labels"></p>
 <p>Using accuracy in an imbalanced setting is less ideal, since it is not sensitive to minority classes and will not faithfully reflect model performance on them.</p>
 <h2 class="relative group"><a id="offline-vs-online-model-evaluation" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#offline-vs-online-model-evaluation"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Offline vs. online model evaluation
@@ -85,10 +85,10 @@
 <p>We are currently working on additional measurements that can be used to quantify different dimensions of bias in both models and datasets — stay tuned for more documentation on this topic!</p>
 
 
-		<script type="module" data-hydrate="asj2c3">
+		<script type="module" data-hydrate="q03zir">
 		import { start } from "/docs/evaluate/pr_63/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="asj2c3"]').parentNode,
+			target: document.querySelector('[data-hydrate="q03zir"]').parentNode,
 			paths: {"base":"/docs/evaluate/pr_63/en","assets":"/docs/evaluate/pr_63/en"},
 			session: {},
 			route: false,
