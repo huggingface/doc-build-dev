@@ -100,8 +100,7 @@ model.<span class="hljs-built_in">compile</span>(
     metrics=[<span class="hljs-string">&quot;accuracy&quot;</span>],
 )
 model.fit(
-    tf_train_dataset,
-    validation_data=tf_validation_dataset,
+    tf_train_dataset, validation_data=tf_validation_dataset,
 )<!-- HTML_TAG_END --></pre></div>
 
 
@@ -194,10 +193,10 @@ metric.compute(predictions=class_preds, references=raw_datasets[<span class="hlj
 <p>Ceci conclut l’introduction à le <em>finetuning</em> en utilisant l’API Keras. Un exemple d’application de cette méthode aux tâches les plus courantes du traitement automatique des langues sera présenté au <a href="/course/fr/chapter7">Chapitre 7</a>. Si vous souhaitez affiner vos connaissances de l’API Keras, essayez <em>finetuner</em> un modèle sur le jeu de données GLUE SST-2, en utilisant le traitement des données que vous avez effectué dans la section 2.</p>
 
 
-		<script type="module" data-hydrate="11k2cul">
+		<script type="module" data-hydrate="12suwbr">
 		import { start } from "/docs/course/pr_219/fr/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="11k2cul"]').parentNode,
+			target: document.querySelector('[data-hydrate="12suwbr"]').parentNode,
 			paths: {"base":"/docs/course/pr_219/fr","assets":"/docs/course/pr_219/fr"},
 			session: {},
 			route: false,

@@ -356,8 +356,7 @@ for epoch in range(num_train_epochs):
     for step, batch in enumerate(eval_dataloader):
         with torch.no_grad():
             generated_tokens = accelerator.unwrap_model(model).generate(
-                batch["input_ids"],
-                attention_mask=batch["attention_mask"],
+                batch["input_ids"], attention_mask=batch["attention_mask"],
             )
 
             generated_tokens = accelerator.pad_across_processes(
@@ -427,8 +426,7 @@ progress_bar = tqdm(<span class="hljs-built_in">range</span>(num_training_steps)
     <span class="hljs-keyword">for</span> step, batch <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(eval_dataloader):
         <span class="hljs-keyword">with</span> torch.no_grad():
             generated_tokens = accelerator.unwrap_model(model).generate(
-                batch[<span class="hljs-string">&quot;input_ids&quot;</span>],
-                attention_mask=batch[<span class="hljs-string">&quot;attention_mask&quot;</span>],
+                batch[<span class="hljs-string">&quot;input_ids&quot;</span>], attention_mask=batch[<span class="hljs-string">&quot;attention_mask&quot;</span>],
             )
 
             generated_tokens = accelerator.pad_across_processes(

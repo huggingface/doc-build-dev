@@ -194,10 +194,7 @@ validation_set = validation_dataset.remove_columns(["example_id", "offset_mappin
 validation_set.set_format("torch")
 
 train_dataloader = DataLoader(
-    train_dataset,
-    shuffle=True,
-    collate_fn=default_data_collator,
-    batch_size=8,
+    train_dataset, shuffle=True, collate_fn=default_data_collator, batch_size=8,
 )
 eval_dataloader = DataLoader(
     validation_set, collate_fn=default_data_collator, batch_size=8
@@ -209,10 +206,7 @@ validation_set = validation_dataset.remove_columns([<span class="hljs-string">&q
 validation_set.set_format(<span class="hljs-string">&quot;torch&quot;</span>)
 
 train_dataloader = DataLoader(
-    train_dataset,
-    shuffle=<span class="hljs-literal">True</span>,
-    collate_fn=default_data_collator,
-    batch_size=<span class="hljs-number">8</span>,
+    train_dataset, shuffle=<span class="hljs-literal">True</span>, collate_fn=default_data_collator, batch_size=<span class="hljs-number">8</span>,
 )
 eval_dataloader = DataLoader(
     validation_set, collate_fn=default_data_collator, batch_size=<span class="hljs-number">8</span>

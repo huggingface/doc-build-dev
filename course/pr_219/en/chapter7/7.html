@@ -849,10 +849,7 @@ validation_set = validation_dataset.remove_columns([<span class="hljs-string">&q
 validation_set.set_format(<span class="hljs-string">&quot;torch&quot;</span>)
 
 train_dataloader = DataLoader(
-    train_dataset,
-    shuffle=<span class="hljs-literal">True</span>,
-    collate_fn=default_data_collator,
-    batch_size=<span class="hljs-number">8</span>,
+    train_dataset, shuffle=<span class="hljs-literal">True</span>, collate_fn=default_data_collator, batch_size=<span class="hljs-number">8</span>,
 )
 eval_dataloader = DataLoader(
     validation_set, collate_fn=default_data_collator, batch_size=<span class="hljs-number">8</span>
@@ -1026,10 +1023,10 @@ question_answerer(question=question, context=context)<!-- HTML_TAG_END --></pre>
 <p>Great! Our model is working as well as the default one for this pipeline!</p>
 
 
-		<script type="module" data-hydrate="15b1euc">
+		<script type="module" data-hydrate="1mn8z4e">
 		import { start } from "/docs/course/pr_219/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="15b1euc"]').parentNode,
+			target: document.querySelector('[data-hydrate="1mn8z4e"]').parentNode,
 			paths: {"base":"/docs/course/pr_219/en","assets":"/docs/course/pr_219/en"},
 			session: {},
 			route: false,
