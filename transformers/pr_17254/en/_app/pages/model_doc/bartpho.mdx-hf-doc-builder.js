@@ -152,13 +152,13 @@ The token used for masking values. This is the token used when training this mod
 modeling. This is the token which the model will try to predict.`,name:"mask_token"},{anchor:"transformers.BartphoTokenizerFast.additional_special_tokens",description:`<strong>additional_special_tokens</strong> (<code>List[str]</code>, <em>optional</em>, defaults to <code>[&quot;&lt;s&gt;NOTUSED&quot;, &quot;&lt;/s&gt;NOTUSED&quot;]</code>) &#x2014;
 Additional special tokens used by the tokenizer.`,name:"additional_special_tokens"}],source:"https://github.com/huggingface/transformers/blob/vr_17254/src/transformers/models/bartpho/tokenization_bartpho_fast.py#L59"}}),me=new P({props:{name:"build_inputs_with_special_tokens",anchor:"transformers.BartphoTokenizerFast.build_inputs_with_special_tokens",parameters:[{name:"token_ids_0",val:": typing.List[int]"},{name:"token_ids_1",val:": typing.Optional[typing.List[int]] = None"}],parametersDescription:[{anchor:"transformers.BartphoTokenizerFast.build_inputs_with_special_tokens.token_ids_0",description:`<strong>token_ids_0</strong> (<code>List[int]</code>) &#x2014;
 List of IDs to which the special tokens will be added.`,name:"token_ids_0"},{anchor:"transformers.BartphoTokenizerFast.build_inputs_with_special_tokens.token_ids_1",description:`<strong>token_ids_1</strong> (<code>List[int]</code>, <em>optional</em>) &#x2014;
-Optional second list of IDs for sequence pairs.`,name:"token_ids_1"}],source:"https://github.com/huggingface/transformers/blob/vr_17254/src/transformers/models/bartpho/tokenization_bartpho_fast.py#L260",returnDescription:`
+Optional second list of IDs for sequence pairs.`,name:"token_ids_1"}],source:"https://github.com/huggingface/transformers/blob/vr_17254/src/transformers/models/bartpho/tokenization_bartpho_fast.py#L258",returnDescription:`
 <p>List of <a href="../glossary#input-ids">input IDs</a> with the appropriate special tokens.</p>
 `,returnType:`
 <p><code>List[int]</code></p>
 `}}),fe=new P({props:{name:"create_token_type_ids_from_sequences",anchor:"transformers.BartphoTokenizerFast.create_token_type_ids_from_sequences",parameters:[{name:"token_ids_0",val:": typing.List[int]"},{name:"token_ids_1",val:": typing.Optional[typing.List[int]] = None"}],parametersDescription:[{anchor:"transformers.BartphoTokenizerFast.create_token_type_ids_from_sequences.token_ids_0",description:`<strong>token_ids_0</strong> (<code>List[int]</code>) &#x2014;
 List of IDs.`,name:"token_ids_0"},{anchor:"transformers.BartphoTokenizerFast.create_token_type_ids_from_sequences.token_ids_1",description:`<strong>token_ids_1</strong> (<code>List[int]</code>, <em>optional</em>) &#x2014;
-Optional second list of IDs for sequence pairs.`,name:"token_ids_1"}],source:"https://github.com/huggingface/transformers/blob/vr_17254/src/transformers/models/bartpho/tokenization_bartpho_fast.py#L286",returnDescription:`
+Optional second list of IDs for sequence pairs.`,name:"token_ids_1"}],source:"https://github.com/huggingface/transformers/blob/vr_17254/src/transformers/models/bartpho/tokenization_bartpho_fast.py#L284",returnDescription:`
 <p>List of zeros.</p>
 `,returnType:`
 <p><code>List[int]</code></p>
