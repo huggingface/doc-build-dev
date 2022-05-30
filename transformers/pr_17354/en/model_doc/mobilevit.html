@@ -1,15 +1,15 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;mobilevit&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;transformers.MobileViTConfig&quot;,&quot;title&quot;:&quot;MobileViTConfig&quot;},{&quot;local&quot;:&quot;transformers.MobileViTFeatureExtractor&quot;,&quot;title&quot;:&quot;MobileViTFeatureExtractor&quot;},{&quot;local&quot;:&quot;transformers.MobileViTModel&quot;,&quot;title&quot;:&quot;MobileViTModel&quot;},{&quot;local&quot;:&quot;transformers.MobileViTForImageClassification&quot;,&quot;title&quot;:&quot;MobileViTForImageClassification&quot;},{&quot;local&quot;:&quot;transformers.MobileViTForSemanticSegmentation&quot;,&quot;title&quot;:&quot;MobileViTForSemanticSegmentation&quot;}],&quot;title&quot;:&quot;MobileViT&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/assets/pages/__layout.svelte-514a944c.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/start-79ff44a5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/vendor-316217a5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/pages/__layout.svelte-aa435e1e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/pages/model_doc/mobilevit.mdx-9635847c.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/Tip-27e9fea0.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/Docstring-1fe4a33a.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/IconCopyLink-40460835.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/CodeBlock-8418a95e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/ExampleCodeBlock-32fc0037.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/pages/model_doc/mobilevit.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/Tip-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/Docstring-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/CodeBlock-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17354/en/_app/chunks/ExampleCodeBlock-hf-doc-builder.js"> 
 
 
 
@@ -165,7 +165,7 @@ The index that is ignored by the loss function of the semantic segmentation mode
 <p>This is the configuration class to store the configuration of a <a href="/docs/transformers/pr_17354/en/model_doc/mobilevit#transformers.MobileViTModel">MobileViTModel</a>. It is used to instantiate a
 MobileViT model according to the specified arguments, defining the model architecture. Instantiating a
 configuration with the defaults will yield a similar configuration to that of the MobileViT
-<a href="https://huggingface.co/Matthijs/mobilevit-small" rel="nofollow">Matthijs/mobilevit-small</a> architecture.</p>
+<a href="https://huggingface.co/apple/mobilevit-small" rel="nofollow">apple/mobilevit-small</a> architecture.</p>
 <p>Configuration objects inherit from <a href="/docs/transformers/pr_17354/en/main_classes/configuration#transformers.PretrainedConfig">PretrainedConfig</a> and can be used to control the model outputs. Read the
 documentation from <a href="/docs/transformers/pr_17354/en/main_classes/configuration#transformers.PretrainedConfig">PretrainedConfig</a> for more information.</p>
 
@@ -421,8 +421,8 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = load_dataset(<span class="hljs-string">&quot;huggingface/cats-image&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>image = dataset[<span class="hljs-string">&quot;test&quot;</span>][<span class="hljs-string">&quot;image&quot;</span>][<span class="hljs-number">0</span>]
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = MobileViTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;Matthijs/mobilevit-small&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MobileViTModel.from_pretrained(<span class="hljs-string">&quot;Matthijs/mobilevit-small&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = MobileViTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;apple/mobilevit-small&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MobileViTModel.from_pretrained(<span class="hljs-string">&quot;apple/mobilevit-small&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = feature_extractor(image, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 
@@ -552,8 +552,8 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = load_dataset(<span class="hljs-string">&quot;huggingface/cats-image&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>image = dataset[<span class="hljs-string">&quot;test&quot;</span>][<span class="hljs-string">&quot;image&quot;</span>][<span class="hljs-number">0</span>]
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = MobileViTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;Matthijs/mobilevit-small&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MobileViTForImageClassification.from_pretrained(<span class="hljs-string">&quot;Matthijs/mobilevit-small&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = MobileViTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;apple/mobilevit-small&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MobileViTForImageClassification.from_pretrained(<span class="hljs-string">&quot;apple/mobilevit-small&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = feature_extractor(image, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 
@@ -698,8 +698,8 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>url = <span class="hljs-string">&quot;http://images.cocodataset.org/val2017/000000039769.jpg&quot;</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>image = Image.<span class="hljs-built_in">open</span>(requests.get(url, stream=<span class="hljs-literal">True</span>).raw)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = MobileViTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;Matthijs/deeplabv3-mobilevit-small&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MobileViTForSemanticSegmentation.from_pretrained(<span class="hljs-string">&quot;Matthijs/deeplabv3-mobilevit-small&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = MobileViTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;apple/deeplabv3-mobilevit-small&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MobileViTForSemanticSegmentation.from_pretrained(<span class="hljs-string">&quot;apple/deeplabv3-mobilevit-small&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = feature_extractor(images=image, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 
@@ -710,10 +710,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="14jmb47">
-		import { start } from "/docs/transformers/pr_17354/en/_app/start-79ff44a5.js";
+		<script type="module" data-hydrate="hfy287">
+		import { start } from "/docs/transformers/pr_17354/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="14jmb47"]').parentNode,
+			target: document.querySelector('[data-hydrate="hfy287"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17354/en","assets":"/docs/transformers/pr_17354/en"},
 			session: {},
 			route: false,
@@ -723,8 +723,8 @@ the latter silently ignores them.</p></div>
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_17354/en/_app/pages/__layout.svelte-aa435e1e.js"),
-						import("/docs/transformers/pr_17354/en/_app/pages/model_doc/mobilevit.mdx-9635847c.js")
+					import("/docs/transformers/pr_17354/en/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/transformers/pr_17354/en/_app/pages/model_doc/mobilevit.mdx-hf-doc-builder.js")
 				],
 				params: {}
 			}
