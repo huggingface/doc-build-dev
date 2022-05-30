@@ -98,7 +98,8 @@ model.<span class="hljs-built_in">compile</span>(
     metrics=[<span class="hljs-string">&quot;accuracy&quot;</span>],
 )
 model.fit(
-    tf_train_dataset, validation_data=tf_validation_dataset,
+    tf_train_dataset,
+    validation_data=tf_validation_dataset,
 )<!-- HTML_TAG_END --></pre></div>
 
 
@@ -194,10 +195,10 @@ metric.compute(predictions=class_preds, references=raw_datasets[<span class="hlj
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>Probier es aus!</strong> Fein-tune ein Modell mit dem GLUE SST-2 Datensatz, indem du die Datenverarbeitung aus Abschnitt 2 verwendest.</p></div>
 
 
-		<script type="module" data-hydrate="294btd">
+		<script type="module" data-hydrate="y8g75n">
 		import { start } from "/docs/course/pr_219/de/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="294btd"]').parentNode,
+			target: document.querySelector('[data-hydrate="y8g75n"]').parentNode,
 			paths: {"base":"/docs/course/pr_219/de","assets":"/docs/course/pr_219/de"},
 			session: {},
 			route: false,

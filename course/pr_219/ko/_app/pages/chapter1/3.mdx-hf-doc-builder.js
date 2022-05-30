@@ -46,12 +46,16 @@ generator(<span class="hljs-string">&quot;In this course, we will teach you how 
 
 generator = pipeline("text-generation", model="distilgpt2")
 generator(
-    "In this course, we will teach you how to", max_length=30, num_return_sequences=2,
+    "In this course, we will teach you how to",
+    max_length=30,
+    num_return_sequences=2,
 )`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> pipeline
 
 generator = pipeline(<span class="hljs-string">&quot;text-generation&quot;</span>, model=<span class="hljs-string">&quot;distilgpt2&quot;</span>)
 generator(
-    <span class="hljs-string">&quot;In this course, we will teach you how to&quot;</span>, max_length=<span class="hljs-number">30</span>, num_return_sequences=<span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;In this course, we will teach you how to&quot;</span>,
+    max_length=<span class="hljs-number">30</span>,
+    num_return_sequences=<span class="hljs-number">2</span>,
 )`}}),es=new O({props:{code:`[{'generated_text': 'In this course, we will teach you how to manipulate the world and '
                     'move your mental and physical capabilities to your advantage.'},
  {'generated_text': 'In this course, we will teach you how to become an expert and '

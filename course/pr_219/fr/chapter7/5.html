@@ -790,7 +790,8 @@ progress_bar = tqdm(<span class="hljs-built_in">range</span>(num_training_steps)
     <span class="hljs-keyword">for</span> step, batch <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(eval_dataloader):
         <span class="hljs-keyword">with</span> torch.no_grad():
             generated_tokens = accelerator.unwrap_model(model).generate(
-                batch[<span class="hljs-string">&quot;input_ids&quot;</span>], attention_mask=batch[<span class="hljs-string">&quot;attention_mask&quot;</span>],
+                batch[<span class="hljs-string">&quot;input_ids&quot;</span>],
+                attention_mask=batch[<span class="hljs-string">&quot;attention_mask&quot;</span>],
             )
 
             generated_tokens = accelerator.pad_across_processes(
@@ -912,10 +913,10 @@ summarizer = pipeline(<span class="hljs-string">&quot;summarization&quot;</span>
 <p>Ensuite, nous allons nous intéresser à une tâche un peu plus complexe : entraîner un modèle de langue à partir de zéro.</p>
 
 
-		<script type="module" data-hydrate="1pp89dn">
+		<script type="module" data-hydrate="1d2qs0h">
 		import { start } from "/docs/course/pr_219/fr/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1pp89dn"]').parentNode,
+			target: document.querySelector('[data-hydrate="1d2qs0h"]').parentNode,
 			paths: {"base":"/docs/course/pr_219/fr","assets":"/docs/course/pr_219/fr"},
 			session: {},
 			route: false,

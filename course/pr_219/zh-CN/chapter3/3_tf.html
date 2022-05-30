@@ -97,7 +97,8 @@ model.<span class="hljs-built_in">compile</span>(
     metrics=[<span class="hljs-string">&quot;accuracy&quot;</span>],
 )
 model.fit(
-    tf_train_dataset, validation_data=tf_validation_dataset,
+    tf_train_dataset,
+    validation_data=tf_validation_dataset,
 )<!-- HTML_TAG_END --></pre></div>
 
 
@@ -184,10 +185,10 @@ metric.compute(predictions=class_preds, references=raw_datasets[<span class="hlj
 <p>使用 Keras API 进行微调的介绍到此结束。 第 7 章将给出对大多数常见 NLP 任务执行此操作的示例。如果您想在 Keras API 上磨练自己的技能，请尝试使第二节所使用的的数据处理在 GLUE SST-2 数据集上微调模型。</p>
 
 
-		<script type="module" data-hydrate="4npcda">
+		<script type="module" data-hydrate="1468tmc">
 		import { start } from "/docs/course/pr_219/zh-CN/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="4npcda"]').parentNode,
+			target: document.querySelector('[data-hydrate="1468tmc"]').parentNode,
 			paths: {"base":"/docs/course/pr_219/zh-CN","assets":"/docs/course/pr_219/zh-CN"},
 			session: {},
 			route: false,

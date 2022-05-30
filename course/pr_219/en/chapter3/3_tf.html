@@ -100,7 +100,8 @@ model.<span class="hljs-built_in">compile</span>(
     metrics=[<span class="hljs-string">&quot;accuracy&quot;</span>],
 )
 model.fit(
-    tf_train_dataset, validation_data=tf_validation_dataset,
+    tf_train_dataset,
+    validation_data=tf_validation_dataset,
 )<!-- HTML_TAG_END --></pre></div>
 
 
@@ -202,10 +203,10 @@ metric.compute(predictions=class_preds, references=raw_datasets[<span class="hlj
 <p>This concludes the introduction to fine-tuning using the Keras API. An example of doing this for most common NLP tasks will be given in <a href="/course/chapter7">Chapter 7</a>. If you would like to hone your skills on the Keras API, try to fine-tune a model on the GLUE SST-2 dataset, using the data processing you did in section 2.</p>
 
 
-		<script type="module" data-hydrate="pp6zth">
+		<script type="module" data-hydrate="via7z">
 		import { start } from "/docs/course/pr_219/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="pp6zth"]').parentNode,
+			target: document.querySelector('[data-hydrate="via7z"]').parentNode,
 			paths: {"base":"/docs/course/pr_219/en","assets":"/docs/course/pr_219/en"},
 			session: {},
 			route: false,

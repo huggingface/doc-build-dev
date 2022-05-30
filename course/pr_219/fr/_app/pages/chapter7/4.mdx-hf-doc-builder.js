@@ -264,7 +264,10 @@ model.fit(
 
 tokenized_datasets.set_format("torch")
 train_dataloader = DataLoader(
-    tokenized_datasets["train"], shuffle=True, collate_fn=data_collator, batch_size=8,
+    tokenized_datasets["train"],
+    shuffle=True,
+    collate_fn=data_collator,
+    batch_size=8,
 )
 eval_dataloader = DataLoader(
     tokenized_datasets["validation"], collate_fn=data_collator, batch_size=8
@@ -272,7 +275,10 @@ eval_dataloader = DataLoader(
 
 tokenized_datasets.set_format(<span class="hljs-string">&quot;torch&quot;</span>)
 train_dataloader = DataLoader(
-    tokenized_datasets[<span class="hljs-string">&quot;train&quot;</span>], shuffle=<span class="hljs-literal">True</span>, collate_fn=data_collator, batch_size=<span class="hljs-number">8</span>,
+    tokenized_datasets[<span class="hljs-string">&quot;train&quot;</span>],
+    shuffle=<span class="hljs-literal">True</span>,
+    collate_fn=data_collator,
+    batch_size=<span class="hljs-number">8</span>,
 )
 eval_dataloader = DataLoader(
     tokenized_datasets[<span class="hljs-string">&quot;validation&quot;</span>], collate_fn=data_collator, batch_size=<span class="hljs-number">8</span>

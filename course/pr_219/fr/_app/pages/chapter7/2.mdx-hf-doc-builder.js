@@ -39,11 +39,15 @@ label2id = {v: k for k, v in id2label.items()}`,highlighted:`id2label = {<span c
 label2id = {v: k <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> id2label.items()}`}}),Ee=new M({props:{code:`from transformers import TFAutoModelForTokenClassification
 
 model = TFAutoModelForTokenClassification.from_pretrained(
-    model_checkpoint, id2label=id2label, label2id=label2id,
+    model_checkpoint,
+    id2label=id2label,
+    label2id=label2id,
 )`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> TFAutoModelForTokenClassification
 
 model = TFAutoModelForTokenClassification.from_pretrained(
-    model_checkpoint, id2label=id2label, label2id=label2id,
+    model_checkpoint,
+    id2label=id2label,
+    label2id=label2id,
 )`}}),Je=new M({props:{code:"model.config.num_labels",highlighted:"model.config.num_labels"}}),Qe=new M({props:{code:"9",highlighted:'<span class="hljs-number">9</span>'}}),Re=new Io({props:{warning:!0,$$slots:{default:[wh]},$$scope:{ctx:V}}}),He=new ot({}),Nt=new M({props:{code:`from huggingface_hub import notebook_login
 
 notebook_login()`,highlighted:`<span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> notebook_login
@@ -189,11 +193,15 @@ label2id = {v: k for k, v in id2label.items()}`,highlighted:`id2label = {<span c
 label2id = {v: k <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> id2label.items()}`}}),Ee=new M({props:{code:`from transformers import AutoModelForTokenClassification
 
 model = AutoModelForTokenClassification.from_pretrained(
-    model_checkpoint, id2label=id2label, label2id=label2id,
+    model_checkpoint,
+    id2label=id2label,
+    label2id=label2id,
 )`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoModelForTokenClassification
 
 model = AutoModelForTokenClassification.from_pretrained(
-    model_checkpoint, id2label=id2label, label2id=label2id,
+    model_checkpoint,
+    id2label=id2label,
+    label2id=label2id,
 )`}}),Je=new M({props:{code:"model.config.num_labels",highlighted:"model.config.num_labels"}}),Qe=new M({props:{code:"9",highlighted:'<span class="hljs-number">9</span>'}}),Re=new Io({props:{warning:!0,$$slots:{default:[Ph]},$$scope:{ctx:V}}}),He=new ot({}),ss=new M({props:{code:`from huggingface_hub import notebook_login
 
 notebook_login()`,highlighted:`<span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> notebook_login
@@ -243,21 +251,31 @@ trainer = Trainer(
 trainer.train()`}}),vs=new M({props:{code:'trainer.push_to_hub(commit_message="Training complete")',highlighted:'trainer.push_to_hub(commit_message=<span class="hljs-string">&quot;Training complete&quot;</span>)'}}),zs=new M({props:{code:"'https://huggingface.co/sgugger/bert-finetuned-ner/commit/26ab21e5b1568f9afeccdaed2d8715f571d786ed'",highlighted:'<span class="hljs-string">&#x27;https://huggingface.co/sgugger/bert-finetuned-ner/commit/26ab21e5b1568f9afeccdaed2d8715f571d786ed&#x27;</span>'}}),fe=new ot({}),Qs=new ot({}),ne=new M({props:{code:`from torch.utils.data import DataLoader
 
 train_dataloader = DataLoader(
-    tokenized_datasets["train"], shuffle=True, collate_fn=data_collator, batch_size=8,
+    tokenized_datasets["train"],
+    shuffle=True,
+    collate_fn=data_collator,
+    batch_size=8,
 )
 eval_dataloader = DataLoader(
     tokenized_datasets["validation"], collate_fn=data_collator, batch_size=8
 )`,highlighted:`<span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader
 
 train_dataloader = DataLoader(
-    tokenized_datasets[<span class="hljs-string">&quot;train&quot;</span>], shuffle=<span class="hljs-literal">True</span>, collate_fn=data_collator, batch_size=<span class="hljs-number">8</span>,
+    tokenized_datasets[<span class="hljs-string">&quot;train&quot;</span>],
+    shuffle=<span class="hljs-literal">True</span>,
+    collate_fn=data_collator,
+    batch_size=<span class="hljs-number">8</span>,
 )
 eval_dataloader = DataLoader(
     tokenized_datasets[<span class="hljs-string">&quot;validation&quot;</span>], collate_fn=data_collator, batch_size=<span class="hljs-number">8</span>
 )`}}),Qt=new M({props:{code:`model = AutoModelForTokenClassification.from_pretrained(
-    model_checkpoint, id2label=id2label, label2id=label2id,
+    model_checkpoint,
+    id2label=id2label,
+    label2id=label2id,
 )`,highlighted:`model = AutoModelForTokenClassification.from_pretrained(
-    model_checkpoint, id2label=id2label, label2id=label2id,
+    model_checkpoint,
+    id2label=id2label,
+    label2id=label2id,
 )`}}),sn=new M({props:{code:`from torch.optim import AdamW
 
 optimizer = AdamW(model.parameters(), lr=2e-5)`,highlighted:`<span class="hljs-keyword">from</span> torch.optim <span class="hljs-keyword">import</span> AdamW

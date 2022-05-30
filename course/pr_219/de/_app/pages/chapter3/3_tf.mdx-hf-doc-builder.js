@@ -72,7 +72,8 @@ model.compile(
     metrics=["accuracy"],
 )
 model.fit(
-    tf_train_dataset, validation_data=tf_validation_dataset,
+    tf_train_dataset,
+    validation_data=tf_validation_dataset,
 )`,highlighted:`<span class="hljs-keyword">from</span> tensorflow.keras.losses <span class="hljs-keyword">import</span> SparseCategoricalCrossentropy
 
 model.<span class="hljs-built_in">compile</span>(
@@ -81,7 +82,8 @@ model.<span class="hljs-built_in">compile</span>(
     metrics=[<span class="hljs-string">&quot;accuracy&quot;</span>],
 )
 model.fit(
-    tf_train_dataset, validation_data=tf_validation_dataset,
+    tf_train_dataset,
+    validation_data=tf_validation_dataset,
 )`}}),R=new pn({props:{warning:!0,$$slots:{default:[ar]},$$scope:{ctx:P}}}),me=new it({}),ce=new at({props:{id:"cpzq6ESSM5c"}}),he=new F({props:{code:`from tensorflow.keras.optimizers.schedules import PolynomialDecay
 
 batch_size = 8
