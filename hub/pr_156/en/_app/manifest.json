@@ -23,8 +23,10 @@
       "src/routes/organizations-security.mdx",
       "src/routes/repositories-licenses.mdx",
       "src/routes/repositories-settings.mdx",
+      "src/routes/sentence-transformers.mdx",
       "src/routes/spaces-github-actions.mdx",
       "src/routes/spaces-sdks-streamlit.mdx",
+      "src/routes/adapter-transformers.mdx",
       "src/routes/organizations-cards.mdx",
       "src/routes/spaces-dependencies.mdx",
       "src/routes/spaces-using-opencv.mdx",
@@ -53,13 +55,23 @@
       "src/routes/models-tasks.mdx",
       "src/routes/repositories.mdx",
       "src/routes/security-gpg.mdx",
+      "src/routes/transformers.mdx",
       "src/routes/api-webhook.mdx",
+      "src/routes/speechbrain.mdx",
+      "src/routes/tensorboard.mdx",
       "src/routes/models-faq.mdx",
+      "src/routes/allennlp.mdx",
+      "src/routes/asteroid.mdx",
       "src/routes/datasets.mdx",
       "src/routes/security.mdx",
+      "src/routes/espnet.mdx",
+      "src/routes/fastai.mdx",
       "src/routes/models.mdx",
       "src/routes/spaces.mdx",
+      "src/routes/stanza.mdx",
+      "src/routes/keras.mdx",
       "src/routes/other.mdx",
+      "src/routes/spacy.mdx",
       "src/routes/api.mdx"
     ]
   },
@@ -219,6 +231,17 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
+  "src/routes/sentence-transformers.mdx": {
+    "file": "pages/sentence-transformers.mdx-hf-doc-builder.js",
+    "src": "src/routes/sentence-transformers.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/spaces-github-actions.mdx": {
     "file": "pages/spaces-github-actions.mdx-hf-doc-builder.js",
     "src": "src/routes/spaces-github-actions.mdx",
@@ -233,6 +256,17 @@
   "src/routes/spaces-sdks-streamlit.mdx": {
     "file": "pages/spaces-sdks-streamlit.mdx-hf-doc-builder.js",
     "src": "src/routes/spaces-sdks-streamlit.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/adapter-transformers.mdx": {
+    "file": "pages/adapter-transformers.mdx-hf-doc-builder.js",
+    "src": "src/routes/adapter-transformers.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -534,6 +568,17 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/transformers.mdx": {
+    "file": "pages/transformers.mdx-hf-doc-builder.js",
+    "src": "src/routes/transformers.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/api-webhook.mdx": {
     "file": "pages/api-webhook.mdx-hf-doc-builder.js",
     "src": "src/routes/api-webhook.mdx",
@@ -545,6 +590,27 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/speechbrain.mdx": {
+    "file": "pages/speechbrain.mdx-hf-doc-builder.js",
+    "src": "src/routes/speechbrain.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/tensorboard.mdx": {
+    "file": "pages/tensorboard.mdx-hf-doc-builder.js",
+    "src": "src/routes/tensorboard.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
   "src/routes/models-faq.mdx": {
     "file": "pages/models-faq.mdx-hf-doc-builder.js",
     "src": "src/routes/models-faq.mdx",
@@ -553,6 +619,28 @@
     "imports": [
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/allennlp.mdx": {
+    "file": "pages/allennlp.mdx-hf-doc-builder.js",
+    "src": "src/routes/allennlp.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/asteroid.mdx": {
+    "file": "pages/asteroid.mdx-hf-doc-builder.js",
+    "src": "src/routes/asteroid.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/datasets.mdx": {
@@ -575,6 +663,28 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
+  "src/routes/espnet.mdx": {
+    "file": "pages/espnet.mdx-hf-doc-builder.js",
+    "src": "src/routes/espnet.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/fastai.mdx": {
+    "file": "pages/fastai.mdx-hf-doc-builder.js",
+    "src": "src/routes/fastai.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/models.mdx": {
     "file": "pages/models.mdx-hf-doc-builder.js",
     "src": "src/routes/models.mdx",
@@ -595,6 +705,28 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
+  "src/routes/stanza.mdx": {
+    "file": "pages/stanza.mdx-hf-doc-builder.js",
+    "src": "src/routes/stanza.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/keras.mdx": {
+    "file": "pages/keras.mdx-hf-doc-builder.js",
+    "src": "src/routes/keras.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/other.mdx": {
     "file": "pages/other.mdx-hf-doc-builder.js",
     "src": "src/routes/other.mdx",
@@ -603,6 +735,17 @@
     "imports": [
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/spacy.mdx": {
+    "file": "pages/spacy.mdx-hf-doc-builder.js",
+    "src": "src/routes/spacy.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/api.mdx": {
