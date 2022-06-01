@@ -29,7 +29,7 @@
       "src/routes/organizations-cards.mdx",
       "src/routes/spaces-dependencies.mdx",
       "src/routes/spaces-using-opencv.mdx",
-      "src/routes/models-interacting.mdx",
+      "src/routes/models-downloading.mdx",
       "src/routes/spaces-sdks-gradio.mdx",
       "src/routes/spaces-sdks-python.mdx",
       "src/routes/spaces-sdks-static.mdx",
@@ -37,6 +37,7 @@
       "src/routes/models-cards-co2.mdx",
       "src/routes/models-inference.mdx",
       "src/routes/models-libraries.mdx",
+      "src/routes/models-uploading.mdx",
       "src/routes/security-malware.mdx",
       "src/routes/spaces-changelog.mdx",
       "src/routes/datasets-adding.mdx",
@@ -295,9 +296,9 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
-  "src/routes/models-interacting.mdx": {
-    "file": "pages/models-interacting.mdx-hf-doc-builder.js",
-    "src": "src/routes/models-interacting.mdx",
+  "src/routes/models-downloading.mdx": {
+    "file": "pages/models-downloading.mdx-hf-doc-builder.js",
+    "src": "src/routes/models-downloading.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -372,6 +373,16 @@
   "src/routes/models-libraries.mdx": {
     "file": "pages/models-libraries.mdx-hf-doc-builder.js",
     "src": "src/routes/models-libraries.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/models-uploading.mdx": {
+    "file": "pages/models-uploading.mdx-hf-doc-builder.js",
+    "src": "src/routes/models-uploading.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
