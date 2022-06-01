@@ -1,15 +1,15 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;speech-encoder-decoder-models&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers.SpeechEncoderDecoderConfig&quot;,&quot;title&quot;:&quot;SpeechEncoderDecoderConfig&quot;},{&quot;local&quot;:&quot;transformers.SpeechEncoderDecoderModel&quot;,&quot;title&quot;:&quot;SpeechEncoderDecoderModel&quot;},{&quot;local&quot;:&quot;transformers.FlaxSpeechEncoderDecoderModel&quot;,&quot;title&quot;:&quot;FlaxSpeechEncoderDecoderModel&quot;}],&quot;title&quot;:&quot;Speech Encoder Decoder Models&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/start-973d006b.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/vendor-6b77c823.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/pages/model_doc/speech-encoder-decoder.mdx-971d3d3c.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/Tip-39098574.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/Docstring-1088f2fb.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/IconCopyLink-7a11ce68.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/CodeBlock-3a8b25a8.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/ExampleCodeBlock-5212b321.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/pages/model_doc/speech-encoder-decoder.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/Tip-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/Docstring-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/CodeBlock-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16756/en/_app/chunks/ExampleCodeBlock-hf-doc-builder.js"> 
 
 
 
@@ -266,7 +266,7 @@ Mask to avoid performing attention on padding token indices. Mask values selecte
 							<span><!-- HTML_TAG_START --><strong>decoder_input_ids</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, target_sequence_length)</code>, <em>optional</em>) &#x2014;
 Indices of decoder input sequence tokens in the vocabulary.</p>
 <p>Indices can be obtained using <a href="/docs/transformers/pr_16756/en/main_classes/tokenizer#transformers.PreTrainedTokenizer">PreTrainedTokenizer</a>. See <a href="/docs/transformers/pr_16756/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_16756/en/model_doc/wav2vec2_phoneme#transformers.Wav2Vec2PhonemeCTCTokenizer.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<a href="/docs/transformers/pr_16756/en/model_doc/wav2vec2#transformers.Wav2Vec2CTCTokenizer.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a></p>
 <p>If <code>past_key_values</code> is used, optionally only the last <code>decoder_input_ids</code> have to be input (see
 <code>past_key_values</code>).</p>
@@ -653,7 +653,7 @@ Mask to avoid performing attention on padding token indices. Mask values selecte
 							<span><!-- HTML_TAG_START --><strong>decoder_input_ids</strong> (<code>jnp.ndarray</code> of shape <code>(batch_size, target_sequence_length)</code>, <em>optional</em>) &#x2014;
 Indices of decoder input sequence tokens in the vocabulary.</p>
 <p>Indices can be obtained using <a href="/docs/transformers/pr_16756/en/main_classes/tokenizer#transformers.PreTrainedTokenizer">PreTrainedTokenizer</a>. See <a href="/docs/transformers/pr_16756/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_16756/en/model_doc/wav2vec2_phoneme#transformers.Wav2Vec2PhonemeCTCTokenizer.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<a href="/docs/transformers/pr_16756/en/model_doc/wav2vec2#transformers.Wav2Vec2CTCTokenizer.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a></p>
 <p>If <code>past_key_values</code> is used, optionally only the last <code>decoder_input_ids</code> have to be input (see
 <code>past_key_values</code>).</p>
@@ -849,10 +849,10 @@ checkpoints.</p>
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = FlaxSpeechEncoderDecoderModel.from_pretrained(<span class="hljs-string">&quot;./wav2vec2-2-bart-large&quot;</span>)<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="1algtka">
-		import { start } from "/docs/transformers/pr_16756/en/_app/start-973d006b.js";
+		<script type="module" data-hydrate="vvv33e">
+		import { start } from "/docs/transformers/pr_16756/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1algtka"]').parentNode,
+			target: document.querySelector('[data-hydrate="vvv33e"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16756/en","assets":"/docs/transformers/pr_16756/en"},
 			session: {},
 			route: false,
@@ -862,8 +862,8 @@ checkpoints.</p>
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_16756/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16756/en/_app/pages/model_doc/speech-encoder-decoder.mdx-971d3d3c.js")
+					import("/docs/transformers/pr_16756/en/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/transformers/pr_16756/en/_app/pages/model_doc/speech-encoder-decoder.mdx-hf-doc-builder.js")
 				],
 				params: {}
 			}
