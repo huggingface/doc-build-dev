@@ -30,7 +30,7 @@
 <p>Tips:</p>
 <ul><li>MobileViT is more like a CNN than a Transformer model. It does not work on sequence data but on batches of images. Unlike ViT, there are no embeddings. The backbone model outputs a feature map.</li>
 <li>One can use <a href="/docs/transformers/pr_17354/en/model_doc/mobilevit#transformers.MobileViTFeatureExtractor">MobileViTFeatureExtractor</a> to prepare images for the model. Note that if you do your own preprocessing, the pretrained checkpoints expect images to be in BGR pixel order (not RGB).</li>
-<li>The available image classification checkpoints are pre-trained on <a href="http://www.image-net.org/challenges/LSVRC/2012/" rel="nofollow">ImageNet</a> (also referred to as ILSVRC 2012, a collection of 1.3 million images and 1,000 classes).</li>
+<li>The available image classification checkpoints are pre-trained on <a href="https://huggingface.co/datasets/imagenet-1k" rel="nofollow">ImageNet-1k</a> (also referred to as ILSVRC 2012, a collection of 1.3 million images and 1,000 classes).</li>
 <li>The segmentation model uses a <a href="https://arxiv.org/abs/1706.05587" rel="nofollow">DeepLabV3</a> head. The available semantic segmentation checkpoints are pre-trained on <a href="http://host.robots.ox.ac.uk/pascal/VOC/" rel="nofollow">PASCAL VOC</a>. </li></ul>
 <p>This model was contributed by <a href="https://huggingface.co/Matthijs" rel="nofollow">matthijs</a>. The original code and weights can be found <a href="https://github.com/apple/ml-cvnets" rel="nofollow">here</a>.</p>
 <h2 class="relative group"><a id="transformers.MobileViTConfig" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.MobileViTConfig"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
@@ -62,7 +62,6 @@
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">initializer_range<span class="opacity-60"> = 0.02</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">layer_norm_eps<span class="opacity-60"> = 1e-05</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">qkv_bias<span class="opacity-60"> = True</span></span>
-				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">is_encoder_decoder<span class="opacity-60"> = False</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">aspp_out_channels<span class="opacity-60"> = 256</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">atrous_rates<span class="opacity-60"> = [6, 12, 18]</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">aspp_dropout_prob<span class="opacity-60"> = 0.1</span></span>
@@ -176,7 +175,7 @@ documentation from <a href="/docs/transformers/pr_17354/en/main_classes/configur
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> MobileViTModel, MobileViTConfig
+	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> MobileViTConfig, MobileViTModel
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a mobilevit-small style configuration</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>configuration = MobileViTConfig()
@@ -710,10 +709,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="17k2xt2">
+		<script type="module" data-hydrate="d6rdp1">
 		import { start } from "/docs/transformers/pr_17354/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="17k2xt2"]').parentNode,
+			target: document.querySelector('[data-hydrate="d6rdp1"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17354/en","assets":"/docs/transformers/pr_17354/en"},
 			session: {},
 			route: false,
