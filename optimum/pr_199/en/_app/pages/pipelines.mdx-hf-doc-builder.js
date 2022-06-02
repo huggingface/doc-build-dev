@@ -143,10 +143,7 @@ print(pred)
 
 tokenizer.save_pretrained("new_path_for_directory")
 model.save_pretrained("new_path_for_directory")
-model.push_to_hub(
-    "new_path_for_directory",
-    repository_id="my-onnx-repo",
-    use_auth_token=True`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> pathlib <span class="hljs-keyword">import</span> Path
+model.push_to_hub("new_path_for_directory",`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> pathlib <span class="hljs-keyword">import</span> Path
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> optimum.onnxruntime <span class="hljs-keyword">import</span> ORTModelForSequenceClassification, ORTOptimizer
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> optimum.onnxruntime.configuration <span class="hljs-keyword">import</span> OptimizationConfig
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> optimum.pipelines <span class="hljs-keyword">import</span> pipeline
@@ -181,11 +178,9 @@ model.push_to_hub(
 <span class="hljs-comment"># save model &amp; push model to the hub</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer.save_pretrained(<span class="hljs-string">&quot;new_path_for_directory&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model.save_pretrained(<span class="hljs-string">&quot;new_path_for_directory&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model.push_to_hub(
-<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;new_path_for_directory&quot;</span>,
-<span class="hljs-meta">... </span>    repository_id=<span class="hljs-string">&quot;my-onnx-repo&quot;</span>,
-<span class="hljs-meta">... </span>    use_auth_token=<span class="hljs-literal">True</span>
-...)`}}),qe=new te({}),ke=new je({props:{code:`from transformers import AutoTokenizer, pipeline
+<span class="hljs-meta">&gt;&gt;&gt; </span>model.push_to_hub(<span class="hljs-string">&quot;new_path_for_directory&quot;</span>,
+                  repository_id=<span class="hljs-string">&quot;my-onnx-repo&quot;</span>,
+                  use_auth_token=<span class="hljs-literal">True</span>)`}}),qe=new te({}),ke=new je({props:{code:`from transformers import AutoTokenizer, pipeline
 -from transformers import AutoModelForQuestionAnswering
 +from optimum.onnxruntime import ORTModelForQuestionAnswering
 
