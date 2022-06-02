@@ -11,6 +11,7 @@
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/chapter0/1.mdx",
+      "src/routes/chapter1/10.mdx",
       "src/routes/chapter1/1.mdx",
       "src/routes/chapter1/2.mdx",
       "src/routes/chapter1/3.mdx",
@@ -61,6 +62,18 @@
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/chapter1/10.mdx": {
+    "file": "pages/chapter1/10.mdx-hf-doc-builder.js",
+    "src": "src/routes/chapter1/10.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_Question-hf-doc-builder.js"
     ]
   },
   "src/routes/chapter1/1.mdx": {
@@ -251,6 +264,7 @@
     "imports": [
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
+      "_Question-hf-doc-builder.js",
       "_FrameworkSwitchCourse-hf-doc-builder.js"
     ]
   },
@@ -268,6 +282,12 @@
   },
   "_CodeBlock-hf-doc-builder.js": {
     "file": "chunks/CodeBlock-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "_Question-hf-doc-builder.js": {
+    "file": "chunks/Question-hf-doc-builder.js",
     "imports": [
       "_vendor-hf-doc-builder.js"
     ]
