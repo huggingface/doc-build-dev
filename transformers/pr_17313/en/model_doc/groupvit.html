@@ -29,7 +29,8 @@ Inspired by <a href="clip">CLIP</a>, GroupViT is a vision-language model that ca
 <p>The abstract from the paper is the following:</p>
 <p><em>Grouping and recognition are important components of visual scene understanding, e.g., for object detection and semantic segmentation. With end-to-end deep learning systems, grouping of image regions usually happens implicitly via top-down supervision from pixel-level recognition labels. Instead, in this paper, we propose to bring back the grouping mechanism into deep networks, which allows semantic segments to emerge automatically with only text supervision. We propose a hierarchical Grouping Vision Transformer (GroupViT), which goes beyond the regular grid structure representation and learns to group image regions into progressively larger arbitrary-shaped segments. We train GroupViT jointly with a text encoder on a large-scale image-text dataset via contrastive losses. With only text supervision and without any pixel-level annotations, GroupViT learns to group together semantic regions and successfully transfers to the task of semantic segmentation in a zero-shot manner, i.e., without any further fine-tuning. It achieves a zero-shot accuracy of 52.3% mIoU on the PASCAL VOC 2012 and 22.4% mIoU on PASCAL Context datasets, and performs competitively to state-of-the-art transfer-learning methods requiring greater levels of supervision.</em></p>
 <p>Tips:</p>
-<ul><li>You may specify <code>output_segmentation=True</code> to get the segmentation logits of input texts. </li></ul>
+<ul><li>You may specify <code>output_segmentation=True</code> to get the segmentation logits of input texts. </li>
+<li>The quickest way to get started with GroupViT is by checking the <a href="https://github.com/xvjiarui/GroupViT/blob/main/demo/GroupViT_hf_inference_notebook.ipynb" rel="nofollow">example notebooks</a> (which showcase zero-shot segmentation inference). One can also check out the <a href="https://huggingface.co/spaces/xvjiarui/GroupViT" rel="nofollow">huggingface space demo</a> to play with GroupViT. </li></ul>
 <p>This model was contributed by <a href="https://huggingface.co/xvjiarui" rel="nofollow">xvjiarui</a>.
 The original code can be found <a href="https://github.com/NVlabs/GroupViT" rel="nofollow">here</a>.</p>
 <h2 class="relative group"><a id="transformers.GroupViTConfig" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.GroupViTConfig"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
@@ -1002,10 +1003,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>pooled_output = outputs.pooler_output  <span class="hljs-comment"># pooled CLS states</span><!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="cko6za">
+		<script type="module" data-hydrate="7lweil">
 		import { start } from "/docs/transformers/pr_17313/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="cko6za"]').parentNode,
+			target: document.querySelector('[data-hydrate="7lweil"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17313/en","assets":"/docs/transformers/pr_17313/en"},
 			session: {},
 			route: false,
