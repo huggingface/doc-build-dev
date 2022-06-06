@@ -18,12 +18,18 @@
 	<span>DeepSpeed 
 	</span></h1>
 
-<p>Training advanced deep learning models is challenging.
-Beyond model design, model scientists also need to set up the state-of-the-art training techniques such as
-distributed training, mixed precision, gradient accumulation, and checkpointing.
-Yet still, scientists may not achieve the desired system performance and convergence rate.
-Large model sizes are even more challenging: a large model easily runs out of memory with pure data parallelism and it is difficult to use model parallelism.
-<a href="https://www.deepspeed.ai/" rel="nofollow">DeepSpeed</a> addresses these challenges to accelerate model development and training.</p>
+<p><a href="https://github.com/microsoft/DeepSpeed" rel="nofollow">DeepSpeed</a> implements everything described in the <a href="https://arxiv.org/abs/1910.02054" rel="nofollow">ZeRO paper</a>. Currently it provides full support for:</p>
+<ol><li>Optimizer state partitioning (ZeRO stage 1)</li>
+<li>Gradient partitioning (ZeRO stage 2)</li>
+<li>Parameter partitioning (ZeRO stage 3)</li>
+<li>Custom mixed precision training handling</li>
+<li>A range of fast CUDA-extension-based optimizers</li>
+<li>ZeRO-Offload to CPU and Disk/NVMe</li></ol>
+<p>ZeRO-Offload has its own dedicated paper: <a href="https://arxiv.org/abs/2101.06840" rel="nofollow">ZeRO-Offload: Democratizing Billion-Scale Model Training</a>. And NVMe-support is described in the paper <a href="https://arxiv.org/abs/2104.07857" rel="nofollow">ZeRO-Infinity: Breaking the GPU
+Memory Wall for Extreme Scale Deep Learning</a>.</p>
+<p>DeepSpeed ZeRO-2 is primarily used only for training, as its features are of no use to inference.</p>
+<p>DeepSpeed ZeRO-3 can be used for inference as well, since it allows huge models to be loaded on multiple GPUs, which
+won’t be possible on a single GPU.</p>
 <p>🤗 Accelerate integrates <a href="https://github.com/microsoft/DeepSpeed" rel="nofollow">DeepSpeed</a> via 2 options:</p>
 <ol><li>Integration of the DeepSpeed features via <code>deepspeed config file</code> specification in <code>accelerate config</code> . You just supply your custom config file or use our template. Most of
 this document is focused on this feature. This supports all the core features of DeepSpeed and gives user a lot of flexibility.
@@ -35,7 +41,16 @@ User need not change any code and is good for those who are fine with most of th
 	</span></h2>
 
 <p>Training:</p>
-<ol><li>DeepSpeed ZeRO training supports the full ZeRO stages 1, 2 and 3 with ZeRO-Infinity (CPU and NVME offload).</li></ol>
+<ol><li>DeepSpeed ZeRO training supports the full ZeRO stages 1, 2 and 3 as well as CPU/Disk offload of optimizer states, gradients and parameters.
+Below is a short description of Data Parallelism using ZeRO - Zero Redundancy Optimizer along with diagram from this <a href="https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/" rel="nofollow">blog post</a>
+<img src="./imgs/parallelism-zero.png" alt="ZeRO Data Parallelism"></li></ol>
+<p>(Source: <a href="https://www.microsoft.com/en-us/research/blog/zero-deepspeed-new-system-optimizations-enable-training-models-with-over-100-billion-parameters/" rel="nofollow">link</a>)</p>
+<p>a. <strong>Stage 1</strong> : Shards optimizer states across data parallel workers/GPUs</p>
+<p>b. <strong>Stage 2</strong> : Shards optimizer states + gradients across data parallel workers/GPUs</p>
+<p>c. <strong>Stage 3</strong>: Shards optimizer states + gradients + model parameters across data parallel workers/GPUs</p>
+<p>d. <strong>Optimizer Offload</strong>: Offloads the gradients + optimizer states to CPU/Disk building on top of ZERO Stage 2</p>
+<p>e. <strong>Param Offload</strong>: Offloads the model parameters to CPU/Disk building on top of ZERO Stage 3</p>
+<u>Note</u>: With respect to Disk Offload, the disk should be an NVME for decent speed but it technically work on any Disk
 <p>Inference:</p>
 <ol><li>DeepSpeed ZeRO Inference supports ZeRO stage 3 with ZeRO-Infinity. It uses the same ZeRO protocol as training, but
 it doesn’t use an optimizer and a lr scheduler and only stage 3 is relevant. For more details see:
@@ -66,7 +81,7 @@ default options when doing</p>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->accelerate launch my_script.py --args_to_my_script<!-- HTML_TAG_END --></pre></div>
-<p>For instance, here is how you would run the NLP example <code>examples/by_feature/deepspeed_with_config_support.py</code> (from the root of the repo) with DeepSpeed Plugin:</p>
+<p>For instance, here is how you would run the NLP example <code>examples/nlp_example.py</code> (from the root of the repo) with DeepSpeed Plugin:</p>
 <p><strong>ZeRO Stage-2 DeepSpeed Plugin Example</strong></p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -94,19 +109,7 @@ use_cpu: <span class="hljs-literal">false</span><!-- HTML_TAG_END --></pre></div
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->accelerate launch examples/by_feature/deepspeed_with_config_support.py \
---config_name <span class="hljs-string">&quot;gpt2-large&quot;</span> \
---tokenizer_name <span class="hljs-string">&quot;gpt2-large&quot;</span> \
---dataset_name <span class="hljs-string">&quot;wikitext&quot;</span> \
---dataset_config_name <span class="hljs-string">&quot;wikitext-2-raw-v1&quot;</span> \
---block_size 128 \
---output_dir <span class="hljs-string">&quot;./clm/clm_deepspeed_stage2_accelerate&quot;</span> \
---learning_rate 5e-4 \
---per_device_train_batch_size 24 \
---per_device_eval_batch_size 24 \
---num_train_epochs 3 \
---with_tracking \
---report_to <span class="hljs-string">&quot;wandb&quot;</span>\<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START -->accelerate launch examples/nlp_example.py --mixed_precision fp16<!-- HTML_TAG_END --></pre></div>
 <p><strong>ZeRO Stage-3 with CPU Offload DeepSpeed Plugin Example</strong></p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -135,19 +138,7 @@ use_cpu: <span class="hljs-literal">false</span><!-- HTML_TAG_END --></pre></div
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->accelerate launch examples/by_feature/deepspeed_with_config_support.py \
---config_name <span class="hljs-string">&quot;gpt2-large&quot;</span> \
---tokenizer_name <span class="hljs-string">&quot;gpt2-large&quot;</span> \
---dataset_name <span class="hljs-string">&quot;wikitext&quot;</span> \
---dataset_config_name <span class="hljs-string">&quot;wikitext-2-raw-v1&quot;</span> \
---block_size 128 \
---output_dir <span class="hljs-string">&quot;./clm/clm_deepspeed_stage3_offload_accelerate&quot;</span> \
---learning_rate 5e-4 \
---per_device_train_batch_size 32 \
---per_device_eval_batch_size 32 \
---num_train_epochs 3 \
---with_tracking \
---report_to <span class="hljs-string">&quot;wandb&quot;</span>\<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START -->accelerate launch examples/nlp_example.py --mixed_precision fp16<!-- HTML_TAG_END --></pre></div>
 <p>Currently, <code>Accelerate</code> supports following config through the CLI:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -161,6 +152,7 @@ use_cpu: <span class="hljs-literal">false</span><!-- HTML_TAG_END --></pre></div
 `zero3_init_flag`: Decides whether to <span class="hljs-built_in">enable</span> `deepspeed.zero.Init` <span class="hljs-keyword">for</span> constructing massive models. Only applicable with ZeRO Stage-3.
 `zero3_save_16bit_model`: Decides whether to save 16-bit model weights when using ZeRO Stage-3.
 `mixed_precision`: `no` <span class="hljs-keyword">for</span> FP32 training, `fp16` <span class="hljs-keyword">for</span> FP16 mixed-precision training and `bf16` <span class="hljs-keyword">for</span> BF16 mixed-precision training. <!-- HTML_TAG_END --></pre></div>
+<p>To be able to tweak more options, you will need to use a DeepSpeed config file.</p>
 <h3 class="relative group"><a id="deepspeed-config-file" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#deepspeed-config-file"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>DeepSpeed Config File
 	</span></h3>
@@ -207,7 +199,7 @@ use_cpu: <span class="hljs-literal">false</span><!-- HTML_TAG_END --></pre></div
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-punctuation">{</span>
     <span class="hljs-attr">&quot;fp16&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
-        <span class="hljs-attr">&quot;enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;auto&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><span class="hljs-punctuation">,</span>
         <span class="hljs-attr">&quot;loss_scale&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span>
         <span class="hljs-attr">&quot;loss_scale_window&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1000</span><span class="hljs-punctuation">,</span>
         <span class="hljs-attr">&quot;initial_scale_power&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">16</span><span class="hljs-punctuation">,</span>
@@ -241,7 +233,7 @@ use_cpu: <span class="hljs-literal">false</span><!-- HTML_TAG_END --></pre></div
         <span class="hljs-attr">&quot;reduce_bucket_size&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;auto&quot;</span><span class="hljs-punctuation">,</span>
         <span class="hljs-attr">&quot;contiguous_gradients&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
     <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
-    <span class="hljs-attr">&quot;gradient_accumulation_steps&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;auto&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;gradient_accumulation_steps&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
     <span class="hljs-attr">&quot;gradient_clipping&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;auto&quot;</span><span class="hljs-punctuation">,</span>
     <span class="hljs-attr">&quot;steps_per_print&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2000</span><span class="hljs-punctuation">,</span>
     <span class="hljs-attr">&quot;train_batch_size&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;auto&quot;</span><span class="hljs-punctuation">,</span>
@@ -291,7 +283,7 @@ use_cpu: <span class="hljs-literal">false</span><!-- HTML_TAG_END --></pre></div
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-punctuation">{</span>
     <span class="hljs-attr">&quot;fp16&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
-        <span class="hljs-attr">&quot;enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;auto&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><span class="hljs-punctuation">,</span>
         <span class="hljs-attr">&quot;loss_scale&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span>
         <span class="hljs-attr">&quot;loss_scale_window&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1000</span><span class="hljs-punctuation">,</span>
         <span class="hljs-attr">&quot;initial_scale_power&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">16</span><span class="hljs-punctuation">,</span>
@@ -334,7 +326,7 @@ use_cpu: <span class="hljs-literal">false</span><!-- HTML_TAG_END --></pre></div
         <span class="hljs-attr">&quot;stage3_max_reuse_distance&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1e9</span><span class="hljs-punctuation">,</span>
         <span class="hljs-attr">&quot;stage3_gather_16bit_weights_on_model_save&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;auto&quot;</span>
     <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
-    <span class="hljs-attr">&quot;gradient_accumulation_steps&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;auto&quot;</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">&quot;gradient_accumulation_steps&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
     <span class="hljs-attr">&quot;gradient_clipping&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;auto&quot;</span><span class="hljs-punctuation">,</span>
     <span class="hljs-attr">&quot;steps_per_print&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2000</span><span class="hljs-punctuation">,</span>
     <span class="hljs-attr">&quot;train_batch_size&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;auto&quot;</span><span class="hljs-punctuation">,</span>
@@ -369,22 +361,30 @@ Below is the snippet from <code>examples/by_feature/deepspeed_with_config_suppor
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START --><span class="hljs-comment"># Creates Dummy Optimizer if `optimizer` was spcified in the config file else creates Adam Optimizer</span>
-<span class="hljs-keyword">if</span> <span class="hljs-string">&quot;optimizer&quot;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> accelerator.state.deepspeed_plugin.deepspeed_config:
-    optimizer = torch.optim.AdamW(optimizer_grouped_parameters, lr=args.learning_rate)
-<span class="hljs-keyword">else</span>:
-    optimizer = DummyOptim(param_groups=optimizer_grouped_parameters)
+	<pre><!-- HTML_TAG_START --> <span class="hljs-comment"># Creates Dummy Optimizer if `optimizer` was spcified in the config file else creates Adam Optimizer</span>
+ optimizer_cls = (
+     torch.optim.AdamW
+     <span class="hljs-keyword">if</span> accelerator.state.deepspeed_plugin <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>
+     <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;optimizer&quot;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> accelerator.state.deepspeed_plugin.deepspeed_config
+     <span class="hljs-keyword">else</span> DummyOptim
+ )
+ optimizer = optimizer_cls(optimizer_grouped_parameters, lr=args.learning_rate)
 
-<span class="hljs-comment"># Creates Dummy Optimizer if `optimizer` was specified in the config file else creates Adam Optimizer</span>
-<span class="hljs-keyword">if</span> <span class="hljs-string">&quot;scheduler&quot;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> accelerator.state.deepspeed_plugin.deepspeed_config:
-    lr_scheduler = get_scheduler(
-        name=args.lr_scheduler_type,
-        optimizer=optimizer,
-        num_warmup_steps=args.num_warmup_steps,
-        num_training_steps=args.max_train_steps,
-    )
-<span class="hljs-keyword">else</span>:
-    lr_scheduler = DummyScheduler()<!-- HTML_TAG_END --></pre></div>
+ <span class="hljs-comment"># Creates Dummy Scheduler if `scheduler` was spcified in the config file else creates `args.lr_scheduler_type` Scheduler</span>
+ <span class="hljs-keyword">if</span> (
+     accelerator.state.deepspeed_plugin <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>
+     <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;scheduler&quot;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> accelerator.state.deepspeed_plugin.deepspeed_config
+ ):
+     lr_scheduler = get_scheduler(
+         name=args.lr_scheduler_type,
+         optimizer=optimizer,
+         num_warmup_steps=args.num_warmup_steps,
+         num_training_steps=args.max_train_steps,
+     )
+ <span class="hljs-keyword">else</span>:
+     lr_scheduler = DummyScheduler(
+         optimizer, total_num_steps=args.max_train_steps, warmup_num_steps=args.num_warmup_steps
+     )<!-- HTML_TAG_END --></pre></div>
 <p>b. Custom Optim + Custom Scheduler: The case when both <code>optimizer</code> and <code>scheduler</code> keys are absent in the DeepSpeed config file.
 In this situation, no code changes are needed from the user and this is the case when using integration via DeepSpeed Plugin.
 In the above example we can see that the code reamins unchanged if the <code>optimizer</code> and <code>scheduler</code> keys are absent in the DeepSpeed config file.</p>
@@ -392,54 +392,9 @@ In the above example we can see that the code reamins unchanged if the <code>opt
 In this situation, user has to use <code>accelerate.utils.DummyScheduler</code> to replace the PyTorch/Custom scheduler in their code. </p>
 <p>d. DS Optim + Custom Scheduler: The case when only <code>optimizer</code> key is present in the DeepSpeed config file.
 This will result in an error because one can only use DS Scheduler when using DS Optim.</p></li>
-<li><p>Notice the <code>auto</code> values in the above example DeepSpeed config files.
-These have to specified by the user in the code by running <code>accelerator.state.deepspeed_plugin.deepspeed_config_process(**kwargs)</code>.
-This allows user more flexibilty to fill these fields based on the code instead of hardcoding them.
-Below is the snippet from <code>examples/by_feature/deepspeed_with_config_support.py</code> showing how to fill these: </p></li></ol>
-
-	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
-	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
-	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START --><span class="hljs-comment"># Processing all the fields with `auto` values in the DeepSpeed Config file</span>
-<span class="hljs-keyword">if</span> accelerator.state.deepspeed_plugin.config_file != <span class="hljs-string">&quot;none&quot;</span>:
-    kwargs = <span class="hljs-built_in">vars</span>(args)
-    kwargs[<span class="hljs-string">&quot;fp16.enabled&quot;</span>] = <span class="hljs-literal">True</span>
-    kwargs[<span class="hljs-string">&quot;optimizer.params.lr&quot;</span>] = args.learning_rate
-    kwargs[<span class="hljs-string">&quot;optimizer.params.weight_decay&quot;</span>] = <span class="hljs-number">0.0</span>
-    kwargs[<span class="hljs-string">&quot;scheduler.params.warmup_min_lr&quot;</span>] = <span class="hljs-number">0</span>
-    kwargs[<span class="hljs-string">&quot;scheduler.params.warmup_max_lr&quot;</span>] = args.learning_rate
-    kwargs[<span class="hljs-string">&quot;scheduler.params.warmup_num_steps&quot;</span>] = args.num_warmup_steps
-    kwargs[<span class="hljs-string">&quot;scheduler.params.total_num_steps&quot;</span>] = (
-        math.ceil(args.max_train_steps // accelerator.num_processes)
-        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> accelerator.split_batches
-        <span class="hljs-keyword">else</span> args.max_train_steps
-    )
-    kwargs[<span class="hljs-string">&quot;gradient_accumulation_steps&quot;</span>] = args.gradient_accumulation_steps
-    kwargs[<span class="hljs-string">&quot;train_micro_batch_size_per_gpu&quot;</span>] = (
-        args.per_device_train_batch_size // accelerator.num_processes
-        <span class="hljs-keyword">if</span> accelerator.split_batches
-        <span class="hljs-keyword">else</span> args.per_device_train_batch_size
-    )
-    kwargs[<span class="hljs-string">&quot;gradient_clipping&quot;</span>] = <span class="hljs-number">1.0</span>
-    kwargs[<span class="hljs-string">&quot;train_batch_size&quot;</span>] = (
-        args.per_device_train_batch_size * accelerator.num_processes * args.gradient_accumulation_steps
-    )
-    hidden_size = model.config.hidden_size
-    kwargs[<span class="hljs-string">&quot;zero_optimization.reduce_bucket_size&quot;</span>] = hidden_size * hidden_size
-    kwargs[<span class="hljs-string">&quot;zero_optimization.stage3_prefetch_bucket_size&quot;</span>] = <span class="hljs-number">0.9</span> * hidden_size * hidden_size
-    kwargs[<span class="hljs-string">&quot;zero_optimization.stage3_param_persistence_threshold&quot;</span>] = <span class="hljs-number">10</span> * hidden_size
-    kwargs[<span class="hljs-string">&quot;zero_optimization.stage3_gather_16bit_weights_on_model_save&quot;</span>] = <span class="hljs-literal">True</span>
-
-    accelerator.state.deepspeed_plugin.deepspeed_config_process(**kwargs)
-
-    <span class="hljs-comment"># Prepare everything with our `accelerator`.</span>
-    model, optimizer, train_dataloader, eval_dataloader, lr_scheduler = accelerator.prepare(
-        model, optimizer, train_dataloader, eval_dataloader, lr_scheduler
-    )<!-- HTML_TAG_END --></pre></div>
-<p>a. Note that this needs to be done before call to <code>accelerator.prepare</code>.</p>
-<p>b. If there are mismatches between the values given in the DeepSpeed config file and the values given in the code, an error will be thrown.</p>
-<p>c. If there are fields with <code>auto</code> value whose value isn’t provided to <code>accelerator.state.deepspeed_plugin.deepspeed_config_process</code>, an error will be thrown.
-So, make sure to fill all the <code>auto</code> fields in the DeepSpeed config file before calling <code>accelerator.prepare</code>.</p>
+<li><p>Notice the <code>auto</code> values in the above example DeepSpeed config files. These are automatically handled by <code>prepare</code> method
+based on model, dataloaders, dummy optimizer and dummy schedulers provided to <code>prepare</code> method.
+Only the <code>auto</code> fields specified in above examples are handled by <code>prepare</code> method and the rest have to be explicitly specified by the user.</p></li></ol>
 <h2 class="relative group"><a id="saving-and-loading" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#saving-and-loading"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Saving and loading
 	</span></h2>
@@ -633,7 +588,7 @@ loop when optimizer config is specified in the deepspeed config file.</p></div>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
 			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">optimizer<span class="opacity-60"></span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">total_num_steps<span class="opacity-60"> = None</span></span>
-				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">warmup_num_steps<span class="opacity-60"> = None</span></span>
+				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">warmup_num_steps<span class="opacity-60"> = 0</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**kwargs<span class="opacity-60"></span></span>
 				</span>
 			<span>)</span>
@@ -752,10 +707,10 @@ The scheduler to wrap.<!-- HTML_TAG_END -->
 have any problems or questions with regards to DeepSpeed usage, please, file an issue with <a href="https://github.com/microsoft/DeepSpeed/issues" rel="nofollow">DeepSpeed GitHub</a>.</p>
 
 
-		<script type="module" data-hydrate="inst0m">
+		<script type="module" data-hydrate="1oowsbf">
 		import { start } from "/docs/accelerate/pr_405/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="inst0m"]').parentNode,
+			target: document.querySelector('[data-hydrate="1oowsbf"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_405/en","assets":"/docs/accelerate/pr_405/en"},
 			session: {},
 			route: false,
