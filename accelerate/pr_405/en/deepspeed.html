@@ -46,7 +46,7 @@ it doesn’t use an optimizer and a lr scheduler and only stage 3 is relevant. F
 
 <p><strong>Pre-Requisites</strong>: Install DeepSpeed version &gt;=0.6.5. Please refer to the <a href="https://github.com/microsoft/DeepSpeed#installation" rel="nofollow">DeepSpeed Insallation details</a>
 for more information.</p>
-<p>We will first look at easy to use integration via <code>deepspeed_plugin</code>.
+<p>We will first look at easy to use integration via <code>accelerate config</code>.
 Followed by more flexible and feature rich <code>deepspeed config file</code> integration. </p>
 <h3 class="relative group"><a id="accelerate-deepspeed-plugin" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#accelerate-deepspeed-plugin"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Accelerate DeepSpeed Plugin
@@ -58,7 +58,7 @@ On your machine(s) just run:
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->accelerate config<!-- HTML_TAG_END --></pre></div>
-<p>and answer the questions asked. It will ask whether you want to use a config file for deepspeed to which you answer no and answer the following questions.
+<p>and answer the questions asked. It will ask whether you want to use a config file for DeepSpeed to which you should answer no. Then answer the following questions to generate a basic DeepSpeed config.
 This will generate a config file that will be used automatically to properly set the
 default options when doing</p>
 
@@ -375,7 +375,7 @@ Below is the snippet from <code>examples/by_feature/deepspeed_with_config_suppor
 <span class="hljs-keyword">else</span>:
     optimizer = DummyOptim(param_groups=optimizer_grouped_parameters)
 
-<span class="hljs-comment"># Creates Dummy Optimizer if `optimizer` was spcified in the config file else creates Adam Optimizer</span>
+<span class="hljs-comment"># Creates Dummy Optimizer if `optimizer` was specified in the config file else creates Adam Optimizer</span>
 <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;scheduler&quot;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> accelerator.state.deepspeed_plugin.deepspeed_config:
     lr_scheduler = get_scheduler(
         name=args.lr_scheduler_type,
@@ -724,10 +724,10 @@ The scheduler to wrap.<!-- HTML_TAG_END -->
 have any problems or questions with regards to DeepSpeed usage, please, file an issue with <a href="https://github.com/microsoft/DeepSpeed/issues" rel="nofollow">DeepSpeed GitHub</a>.</p>
 
 
-		<script type="module" data-hydrate="z3ymue">
+		<script type="module" data-hydrate="3zwu0a">
 		import { start } from "/docs/accelerate/pr_405/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="z3ymue"]').parentNode,
+			target: document.querySelector('[data-hydrate="3zwu0a"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_405/en","assets":"/docs/accelerate/pr_405/en"},
 			session: {},
 			route: false,

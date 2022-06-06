@@ -408,7 +408,7 @@ if "optimizer" not in accelerator.state.deepspeed_plugin.deepspeed_config:
 else:
     optimizer = DummyOptim(param_groups=optimizer_grouped_parameters)
 
-# Creates Dummy Optimizer if \`optimizer\` was spcified in the config file else creates Adam Optimizer
+# Creates Dummy Optimizer if \`optimizer\` was specified in the config file else creates Adam Optimizer
 if "scheduler" not in accelerator.state.deepspeed_plugin.deepspeed_config:
     lr_scheduler = get_scheduler(
         name=args.lr_scheduler_type,
@@ -423,7 +423,7 @@ else:
 <span class="hljs-keyword">else</span>:
     optimizer = DummyOptim(param_groups=optimizer_grouped_parameters)
 
-<span class="hljs-comment"># Creates Dummy Optimizer if \`optimizer\` was spcified in the config file else creates Adam Optimizer</span>
+<span class="hljs-comment"># Creates Dummy Optimizer if \`optimizer\` was specified in the config file else creates Adam Optimizer</span>
 <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;scheduler&quot;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> accelerator.state.deepspeed_plugin.deepspeed_config:
     lr_scheduler = get_scheduler(
         name=args.lr_scheduler_type,
@@ -571,12 +571,12 @@ User may have to change few lines of code depending on the config.`),Jo=c(),Ae=a
 User need not change any code and is good for those who are fine with most of the default settings of DeepSpeed.`),Ya=c(),H=a("h2"),de=a("a"),ht=a("span"),h(Te.$$.fragment),el=c(),_t=a("span"),sl=l("What is integrated?"),Ja=c(),Ls=a("p"),tl=l("Training:"),Ka=c(),Ns=a("ol"),ft=a("li"),al=l("DeepSpeed ZeRO training supports the full ZeRO stages 1, 2 and 3 with ZeRO-Infinity (CPU and NVME offload)."),Qa=c(),Zs=a("p"),nl=l("Inference:"),Xa=c(),Fs=a("ol"),Re=a("li"),ol=l(`DeepSpeed ZeRO Inference supports ZeRO stage 3 with ZeRO-Infinity. It uses the same ZeRO protocol as training, but
 it doesn\u2019t use an optimizer and a lr scheduler and only stage 3 is relevant. For more details see:
 `),Ms=a("a"),ll=l("deepspeed-zero-inference"),pl=l("."),en=c(),W=a("h2"),he=a("a"),mt=a("span"),h(Le.$$.fragment),rl=c(),gt=a("span"),il=l("How it works?"),sn=c(),U=a("p"),wt=a("strong"),cl=l("Pre-Requisites"),ul=l(": Install DeepSpeed version >=0.6.5. Please refer to the "),Ne=a("a"),dl=l("DeepSpeed Insallation details"),hl=l(`
-for more information.`),tn=c(),C=a("p"),_l=l("We will first look at easy to use integration via "),vt=a("code"),fl=l("deepspeed_plugin"),ml=l(`.
+for more information.`),tn=c(),C=a("p"),_l=l("We will first look at easy to use integration via "),vt=a("code"),fl=l("accelerate config"),ml=l(`.
 Followed by more flexible and feature rich `),jt=a("code"),gl=l("deepspeed config file"),wl=l(" integration."),an=c(),B=a("h3"),_e=a("a"),bt=a("span"),h(Ze.$$.fragment),vl=c(),yt=a("span"),jl=l("Accelerate DeepSpeed Plugin"),nn=l(`
 
 On your machine(s) just run:
 
-	`),h(Fe.$$.fragment),on=c(),Hs=a("p"),bl=l(`and answer the questions asked. It will ask whether you want to use a config file for deepspeed to which you answer no and answer the following questions.
+	`),h(Fe.$$.fragment),on=c(),Hs=a("p"),bl=l(`and answer the questions asked. It will ask whether you want to use a config file for DeepSpeed to which you should answer no. Then answer the following questions to generate a basic DeepSpeed config.
 This will generate a config file that will be used automatically to properly set the
 default options when doing`),ln=c(),h(Me.$$.fragment),pn=c(),fe=a("p"),yl=l("For instance, here is how you would run the NLP example "),qt=a("code"),ql=l("examples/by_feature/deepspeed_with_config_support.py"),$l=l(" (from the root of the repo) with DeepSpeed Plugin:"),rn=c(),Ws=a("p"),$t=a("strong"),El=l("ZeRO Stage-2 DeepSpeed Plugin Example"),cn=c(),h(He.$$.fragment),un=c(),h(We.$$.fragment),dn=c(),Us=a("p"),Et=a("strong"),zl=l("ZeRO Stage-3 with CPU Offload DeepSpeed Plugin Example"),hn=c(),h(Ue.$$.fragment),_n=c(),h(Be.$$.fragment),fn=c(),me=a("p"),kl=l("Currently, "),zt=a("code"),Sl=l("Accelerate"),Dl=l(" supports following config through the CLI:"),mn=c(),h(Ge.$$.fragment),gn=c(),G=a("h3"),ge=a("a"),kt=a("span"),h(Ve.$$.fragment),Ol=c(),St=a("span"),Pl=l("DeepSpeed Config File"),wn=l(`
 
@@ -625,12 +625,12 @@ User may have to change few lines of code depending on the config.`),Qs.forEach(
 User need not change any code and is good for those who are fine with most of the default settings of DeepSpeed.`),po.forEach(t),lo.forEach(t),Ya=u(e),H=n(e,"H2",{class:!0});var ro=o(H);de=n(ro,"A",{id:!0,class:!0,href:!0});var Hi=o(de);ht=n(Hi,"SPAN",{});var Wi=o(ht);_(Te.$$.fragment,Wi),Wi.forEach(t),Hi.forEach(t),el=u(ro),_t=n(ro,"SPAN",{});var Ui=o(_t);sl=p(Ui,"What is integrated?"),Ui.forEach(t),ro.forEach(t),Ja=u(e),Ls=n(e,"P",{});var Bi=o(Ls);tl=p(Bi,"Training:"),Bi.forEach(t),Ka=u(e),Ns=n(e,"OL",{});var Gi=o(Ns);ft=n(Gi,"LI",{});var Vi=o(ft);al=p(Vi,"DeepSpeed ZeRO training supports the full ZeRO stages 1, 2 and 3 with ZeRO-Infinity (CPU and NVME offload)."),Vi.forEach(t),Gi.forEach(t),Qa=u(e),Zs=n(e,"P",{});var Yi=o(Zs);nl=p(Yi,"Inference:"),Yi.forEach(t),Xa=u(e),Fs=n(e,"OL",{});var Ji=o(Fs);Re=n(Ji,"LI",{});var io=o(Re);ol=p(io,`DeepSpeed ZeRO Inference supports ZeRO stage 3 with ZeRO-Infinity. It uses the same ZeRO protocol as training, but
 it doesn\u2019t use an optimizer and a lr scheduler and only stage 3 is relevant. For more details see:
 `),Ms=n(io,"A",{href:!0});var Ki=o(Ms);ll=p(Ki,"deepspeed-zero-inference"),Ki.forEach(t),pl=p(io,"."),io.forEach(t),Ji.forEach(t),en=u(e),W=n(e,"H2",{class:!0});var co=o(W);he=n(co,"A",{id:!0,class:!0,href:!0});var Qi=o(he);mt=n(Qi,"SPAN",{});var Xi=o(mt);_(Le.$$.fragment,Xi),Xi.forEach(t),Qi.forEach(t),rl=u(co),gt=n(co,"SPAN",{});var ec=o(gt);il=p(ec,"How it works?"),ec.forEach(t),co.forEach(t),sn=u(e),U=n(e,"P",{});var Wa=o(U);wt=n(Wa,"STRONG",{});var sc=o(wt);cl=p(sc,"Pre-Requisites"),sc.forEach(t),ul=p(Wa,": Install DeepSpeed version >=0.6.5. Please refer to the "),Ne=n(Wa,"A",{href:!0,rel:!0});var tc=o(Ne);dl=p(tc,"DeepSpeed Insallation details"),tc.forEach(t),hl=p(Wa,`
-for more information.`),Wa.forEach(t),tn=u(e),C=n(e,"P",{});var Xs=o(C);_l=p(Xs,"We will first look at easy to use integration via "),vt=n(Xs,"CODE",{});var ac=o(vt);fl=p(ac,"deepspeed_plugin"),ac.forEach(t),ml=p(Xs,`.
+for more information.`),Wa.forEach(t),tn=u(e),C=n(e,"P",{});var Xs=o(C);_l=p(Xs,"We will first look at easy to use integration via "),vt=n(Xs,"CODE",{});var ac=o(vt);fl=p(ac,"accelerate config"),ac.forEach(t),ml=p(Xs,`.
 Followed by more flexible and feature rich `),jt=n(Xs,"CODE",{});var nc=o(jt);gl=p(nc,"deepspeed config file"),nc.forEach(t),wl=p(Xs," integration."),Xs.forEach(t),an=u(e),B=n(e,"H3",{class:!0});var uo=o(B);_e=n(uo,"A",{id:!0,class:!0,href:!0});var oc=o(_e);bt=n(oc,"SPAN",{});var lc=o(bt);_(Ze.$$.fragment,lc),lc.forEach(t),oc.forEach(t),vl=u(uo),yt=n(uo,"SPAN",{});var pc=o(yt);jl=p(pc,"Accelerate DeepSpeed Plugin"),pc.forEach(t),uo.forEach(t),nn=p(e,`
 
 On your machine(s) just run:
 
-	`),_(Fe.$$.fragment,e),on=u(e),Hs=n(e,"P",{});var rc=o(Hs);bl=p(rc,`and answer the questions asked. It will ask whether you want to use a config file for deepspeed to which you answer no and answer the following questions.
+	`),_(Fe.$$.fragment,e),on=u(e),Hs=n(e,"P",{});var rc=o(Hs);bl=p(rc,`and answer the questions asked. It will ask whether you want to use a config file for DeepSpeed to which you should answer no. Then answer the following questions to generate a basic DeepSpeed config.
 This will generate a config file that will be used automatically to properly set the
 default options when doing`),rc.forEach(t),ln=u(e),_(Me.$$.fragment,e),pn=u(e),fe=n(e,"P",{});var ho=o(fe);yl=p(ho,"For instance, here is how you would run the NLP example "),qt=n(ho,"CODE",{});var ic=o(qt);ql=p(ic,"examples/by_feature/deepspeed_with_config_support.py"),ic.forEach(t),$l=p(ho," (from the root of the repo) with DeepSpeed Plugin:"),ho.forEach(t),rn=u(e),Ws=n(e,"P",{});var cc=o(Ws);$t=n(cc,"STRONG",{});var uc=o($t);El=p(uc,"ZeRO Stage-2 DeepSpeed Plugin Example"),uc.forEach(t),cc.forEach(t),cn=u(e),_(He.$$.fragment,e),un=u(e),_(We.$$.fragment,e),dn=u(e),Us=n(e,"P",{});var dc=o(Us);Et=n(dc,"STRONG",{});var hc=o(Et);zl=p(hc,"ZeRO Stage-3 with CPU Offload DeepSpeed Plugin Example"),hc.forEach(t),dc.forEach(t),hn=u(e),_(Ue.$$.fragment,e),_n=u(e),_(Be.$$.fragment,e),fn=u(e),me=n(e,"P",{});var _o=o(me);kl=p(_o,"Currently, "),zt=n(_o,"CODE",{});var _c=o(zt);Sl=p(_c,"Accelerate"),_c.forEach(t),Dl=p(_o," supports following config through the CLI:"),_o.forEach(t),mn=u(e),_(Ge.$$.fragment,e),gn=u(e),G=n(e,"H3",{class:!0});var fo=o(G);ge=n(fo,"A",{id:!0,class:!0,href:!0});var fc=o(ge);kt=n(fc,"SPAN",{});var mc=o(kt);_(Ve.$$.fragment,mc),mc.forEach(t),fc.forEach(t),Ol=u(fo),St=n(fo,"SPAN",{});var gc=o(St);Pl=p(gc,"DeepSpeed Config File"),gc.forEach(t),fo.forEach(t),wn=p(e,`
 
