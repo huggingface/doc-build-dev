@@ -4080,14 +4080,14 @@ the latter silently ignores them.</p></div>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = feature_extractor(images=image, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs)
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># logits are of shape (batch_size, height, width, num_labels)</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># logits are of shape (batch_size, num_labels, height, width)</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="gw3vz5">
+		<script type="module" data-hydrate="ck00bl">
 		import { start } from "/docs/transformers/pr_17271/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="gw3vz5"]').parentNode,
+			target: document.querySelector('[data-hydrate="ck00bl"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17271/en","assets":"/docs/transformers/pr_17271/en"},
 			session: {},
 			route: false,
