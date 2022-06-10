@@ -133,7 +133,7 @@ An optional value corresponding to a folder inside the repo.`,name:"subfolder"},
 Set to <code>&quot;dataset&quot;</code> or <code>&quot;space&quot;</code> if uploading to a dataset or space,
 <code>None</code> or <code>&quot;model&quot;</code> if uploading to a model. Default is <code>None</code>.`,name:"repo_type"},{anchor:"huggingface_hub.hf_hub_url.revision",description:`<strong>revision</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 An optional Git revision id which can be a branch name, a tag, or a
-commit hash.`,name:"revision"}],source:"https://github.com/huggingface/huggingface_hub/blob/vr_888/src/huggingface_hub/utils/endpoint_helpers.py#L31"}}),ke=new nl({props:{anchor:"huggingface_hub.hf_hub_url.example",$$slots:{default:[il]},$$scope:{ctx:se}}}),Te=new Ga({props:{$$slots:{default:[cl]},$$scope:{ctx:se}}}),Ve=new fo({}),ze=new po({props:{code:`<CACHE_DIR>
+commit hash.`,name:"revision"}],source:"https://github.com/huggingface/huggingface_hub/blob/vr_888/src/huggingface_hub/utils/endpoint_helpers.py#L32"}}),ke=new nl({props:{anchor:"huggingface_hub.hf_hub_url.example",$$slots:{default:[il]},$$scope:{ctx:se}}}),Te=new Ga({props:{$$slots:{default:[cl]},$$scope:{ctx:se}}}),Ve=new fo({}),ze=new po({props:{code:`<CACHE_DIR>
 \u251C\u2500 <MODELS>
 \u251C\u2500 <DATASETS>
 \u251C\u2500 <SPACES>`,highlighted:`<span class="hljs-tag">&lt;<span class="hljs-name">CACHE_DIR</span>&gt;</span>
