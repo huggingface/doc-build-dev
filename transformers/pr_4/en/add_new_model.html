@@ -1,13 +1,13 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;how-to-add-a-model-to-transformers&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;general-overview-of-transformers&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview-of-models&quot;,&quot;title&quot;:&quot;Overview of models&quot;},{&quot;local&quot;:&quot;overview-of-tokenizers&quot;,&quot;title&quot;:&quot;Overview of tokenizers&quot;}],&quot;title&quot;:&quot;General overview of 🤗 Transformers&quot;},{&quot;local&quot;:&quot;stepbystep-recipe-to-add-a-model-to-transformers&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;1-optional-theoretical-aspects-of-brandnewbert&quot;,&quot;title&quot;:&quot;1. (Optional) Theoretical aspects of BrandNewBert&quot;},{&quot;local&quot;:&quot;2-next-prepare-your-environment&quot;,&quot;title&quot;:&quot;2. Next prepare your environment&quot;},{&quot;local&quot;:&quot;34-run-a-pretrained-checkpoint-using-the-original-repository&quot;,&quot;title&quot;:&quot;3.-4. Run a pretrained checkpoint using the original repository&quot;},{&quot;local&quot;:&quot;514-port-brandnewbert-to-transformers&quot;,&quot;title&quot;:&quot;5.-14. Port BrandNewBert to 🤗 Transformers&quot;},{&quot;local&quot;:&quot;share-your-work&quot;,&quot;title&quot;:&quot;Share your work!!&quot;}],&quot;title&quot;:&quot;Step-by-step recipe to add a model to 🤗 Transformers&quot;}],&quot;title&quot;:&quot;How to add a model to 🤗 Transformers?&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/transformers/pr_4/en/_app/assets/pages/__layout.svelte-02e8282d.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/start-10350b2b.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/chunks/vendor-6b77c823.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/pages/add_new_model.mdx-a8c800e0.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/chunks/Tip-39098574.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/chunks/IconCopyLink-7a11ce68.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/chunks/CodeBlock-3a8b25a8.js"> 
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;how-to-add-a-model-to-transformers&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;general-overview-of-transformers&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview-of-models&quot;,&quot;title&quot;:&quot;Overview of models&quot;},{&quot;local&quot;:&quot;code-style&quot;,&quot;title&quot;:&quot;Code style&quot;},{&quot;local&quot;:&quot;overview-of-tokenizers&quot;,&quot;title&quot;:&quot;Overview of tokenizers&quot;}],&quot;title&quot;:&quot;General overview of 🤗 Transformers&quot;},{&quot;local&quot;:&quot;stepbystep-recipe-to-add-a-model-to-transformers&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;1-optional-theoretical-aspects-of-brandnewbert&quot;,&quot;title&quot;:&quot;1. (Optional) Theoretical aspects of BrandNewBert&quot;},{&quot;local&quot;:&quot;2-next-prepare-your-environment&quot;,&quot;title&quot;:&quot;2. Next prepare your environment&quot;},{&quot;local&quot;:&quot;34-run-a-pretrained-checkpoint-using-the-original-repository&quot;,&quot;title&quot;:&quot;3.-4. Run a pretrained checkpoint using the original repository&quot;},{&quot;local&quot;:&quot;514-port-brandnewbert-to-transformers&quot;,&quot;title&quot;:&quot;5.-14. Port BrandNewBert to 🤗 Transformers&quot;},{&quot;local&quot;:&quot;share-your-work&quot;,&quot;title&quot;:&quot;Share your work!!&quot;}],&quot;title&quot;:&quot;Step-by-step recipe to add a model to 🤗 Transformers&quot;}],&quot;title&quot;:&quot;How to add a model to 🤗 Transformers?&quot;}" data-svelte="svelte-1phssyn">
+	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/pages/add_new_model.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/chunks/Tip-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_4/en/_app/chunks/CodeBlock-hf-doc-builder.js"> 
 
 
 
@@ -25,7 +25,7 @@ independently. Thus, for some new models that the community wants to be added to
 <em>call-for-model-addition</em>, we want to teach a motivated and experienced contributor of the community how to port a
 model to 🤗 Transformers.</p>
 <p>If this sounds like something you would be interested in, feel free to check out the currently open
-“calls-for-model-addition” <a href="https://github.com/huggingface/transformers/tree/master/templates/adding_a_new_model/open_model_proposals/README.md" rel="nofollow">here</a>
+“calls-for-model-addition” <a href="https://github.com/huggingface/transformers/tree/main/templates/adding_a_new_model/open_model_proposals/README.md" rel="nofollow">here</a>
 and to contact us.</p>
 <p>If selected, you will then work closely with one member of the Hugging Face team to integrate the model into 🤗
 Transformers. By doing so, you will both gain a theoretical and deep practical understanding of the proposed model. But
@@ -90,6 +90,24 @@ model.config  <span class="hljs-comment"># model has access to its config</span>
 different formats - the model to a <em>pytorch_model.bin</em> file and the configuration to a <em>config.json</em> file. Calling
 <a href="/docs/transformers/pr_4/en/main_classes/model#transformers.PreTrainedModel.save_pretrained">save_pretrained()</a> will automatically call
 <a href="/docs/transformers/pr_4/en/main_classes/configuration#transformers.PretrainedConfig.save_pretrained">save_pretrained()</a>, so that both model and configuration are saved.</p>
+<h3 class="relative group"><a id="code-style" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#code-style"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Code style
+	</span></h3>
+
+<p>When coding your new model, keep in mind that Transformers is an opinionated library and we have a few quirks of our
+own regarding how code should be written :-)</p>
+<ol><li>The forward pass of your model should be fully written in the modeling file while being fully independent of other
+models in the library. If you want to reuse a block from another model, copy the code and paste it with a
+<code># Copied from</code> comment on top (see <a href="https://github.com/huggingface/transformers/blob/v4.17.0/src/transformers/models/roberta/modeling_roberta.py#L160" rel="nofollow">here</a>
+for a good example).</li>
+<li>The code should be fully understandable, even by a non-native English speaker. This means you should pick
+descriptive variable names and avoid abbreviations. As an example, <code>activation</code> is preferred to <code>act</code>.
+One-letter variable names are strongly discouraged unless it’s an index in a for loop. </li>
+<li>More generally we prefer longer explicit code to short magical one.</li>
+<li>Avoid subclassing <code>nn.Sequential</code> in PyTorch but subclass <code>nn.Module</code> and write the forward pass, so that anyone
+using your code can quickly debug it by adding print statements or breaking points.</li>
+<li>Your function signature should be type-annotated. For the rest, good variable names are way more readable and
+understandable than type annotations.</li></ol>
 <h3 class="relative group"><a id="overview-of-tokenizers" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#overview-of-tokenizers"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Overview of tokenizers
 	</span></h3>
@@ -330,7 +348,7 @@ and start from this point. This might mean that you have to possibly write a sma
 original code so that you can directly input the ids instead of an input string.</li>
 <li>Make sure that the model in your debugging setup is <strong>not</strong> in training mode, which often causes the model to yield
 random outputs due to multiple dropout layers in the model. Make sure that the forward pass in your debugging
-environment is <strong>deterministic</strong> so that the dropout layers are not used. Or use <em>transformers.file_utils.set_seed</em>
+environment is <strong>deterministic</strong> so that the dropout layers are not used. Or use <em>transformers.utils.set_seed</em>
 if the old and new implementations are in the same framework.</li></ul>
 <p>The following section gives you more specific details/tips on how you can do this for <em>brand_new_bert</em>.</p>
 <h3 class="relative group"><a id="514-port-brandnewbert-to-transformers" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#514-port-brandnewbert-to-transformers"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
@@ -346,19 +364,16 @@ if the old and new implementations are in the same framework.</li></ul>
 <p>In the special case that you are adding a model whose architecture exactly matches the model architecture of an
 existing model you only have to add a conversion script as described in <a href="#write-a-conversion-script">this section</a>.
 In this case, you can just re-use the whole model architecture of the already existing model.</p>
-<p>Otherwise, let’s start generating a new model with the amazing Cookiecutter!</p>
-<p><strong>Use the Cookiecutter to automatically generate the model’s code</strong></p>
-<p>To begin with head over to the <a href="https://github.com/huggingface/transformers/tree/master/templates/adding_a_new_model" rel="nofollow">🤗 Transformers templates</a> to make use of our
-<code>cookiecutter</code> implementation to automatically generate all the relevant files for your model. Again, we recommend
-only adding the PyTorch version of the model at first. Make sure you follow the instructions of the <code>README.md</code> on
-the <a href="https://github.com/huggingface/transformers/tree/master/templates/adding_a_new_model" rel="nofollow">🤗 Transformers templates</a>
-carefully.</p>
+<p>Otherwise, let’s start generating a new model. You have two choices here:</p>
+<ul><li><code>transformers-cli add-new-model-like</code> to add a new model like an existing one</li>
+<li><code>transformers-cli add-new-model</code> to add a new model from our template (will look like BERT or Bart depending on the type of model you select)</li></ul>
+<p>In both cases, you will be prompted with a questionnaire to fill the basic information of your model. The second command requires to install <code>cookiecutter</code>, you can find more information on it <a href="https://github.com/huggingface/transformers/tree/main/templates/adding_a_new_model" rel="nofollow">here</a>.</p>
 <p><strong>Open a Pull Request on the main huggingface/transformers repo</strong></p>
 <p>Before starting to adapt the automatically generated code, now is the time to open a “Work in progress (WIP)” pull
 request, <em>e.g.</em> “[WIP] Add <em>brand_new_bert</em>”, in 🤗 Transformers so that you and the Hugging Face team can work
 side-by-side on integrating the model into 🤗 Transformers.</p>
 <p>You should do the following:</p>
-<ol><li>Create a branch with a descriptive name from your master branch</li></ol>
+<ol><li>Create a branch with a descriptive name from your main branch</li></ol>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -371,13 +386,13 @@ side-by-side on integrating the model into 🤗 Transformers.</p>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->git add .
 git commit<!-- HTML_TAG_END --></pre></div>
-<ol start="3"><li>Fetch and rebase to current master</li></ol>
+<ol start="3"><li>Fetch and rebase to current main</li></ol>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->git fetch upstream
-git rebase upstream/master<!-- HTML_TAG_END --></pre></div>
+git rebase upstream/main<!-- HTML_TAG_END --></pre></div>
 <ol start="4"><li>Push the changes to your account using:</li></ol>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -389,14 +404,14 @@ GitHub handle of some members of the Hugging Face team as reviewers, so that the
 future changes.</p></li>
 <li><p>Change the PR into a draft by clicking on “Convert to draft” on the right of the GitHub pull request web page.</p></li></ol>
 <p>In the following, whenever you have done some progress, don’t forget to commit your work and push it to your account so
-that it shows in the pull request. Additionally, you should make sure to update your work with the current master from
+that it shows in the pull request. Additionally, you should make sure to update your work with the current main from
 time to time by doing:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->git fetch upstream
-git merge upstream/master<!-- HTML_TAG_END --></pre></div>
+git merge upstream/main<!-- HTML_TAG_END --></pre></div>
 <p>In general, all questions you might have regarding the model or your implementation should be asked in your PR and
 discussed/solved in the PR. This way, the Hugging Face team will always be notified when you are committing new code or
 if you have a question. It is often very helpful to point the Hugging Face team to your added code so that the Hugging
@@ -443,7 +458,7 @@ the same framework as <em>brand_new_bert</em>. Usually, it is enough to copy an 
 slightly adapt it for your use case. Don’t hesitate to ask the Hugging Face team to point you to a similar already
 existing conversion script for your model.</p>
 <ul><li>If you are porting a model from TensorFlow to PyTorch, a good starting point might be BERT’s conversion script <a href="https://github.com/huggingface/transformers/blob/7acfa95afb8194f8f9c1f4d2c6028224dbed35a2/src/transformers/models/bert/modeling_bert.py#L91" rel="nofollow">here</a></li>
-<li>If you are porting a model from PyTorch to PyTorch, a good starting point might be BART’s conversion script <a href="https://github.com/huggingface/transformers/blob/master/src/transformers/models/bart/convert_bart_original_pytorch_checkpoint_to_pytorch.py" rel="nofollow">here</a></li></ul>
+<li>If you are porting a model from PyTorch to PyTorch, a good starting point might be BART’s conversion script <a href="https://github.com/huggingface/transformers/blob/main/src/transformers/models/bart/convert_bart_original_pytorch_checkpoint_to_pytorch.py" rel="nofollow">here</a></li></ul>
 <p>In the following, we’ll quickly explain how PyTorch models store layer weights and define layer names. In PyTorch, the
 name of a layer is defined by the name of the class attribute you give the layer. Let’s define a dummy model in
 PyTorch, called <code>SimpleModel</code> as follows:</p>
@@ -730,7 +745,7 @@ correctly use the model.</p>
 <p>It is very helpful to add a notebook that showcases in-detail how <em>brand_new_bert</em> can be used for inference and/or
 fine-tuned on a downstream task. This is not mandatory to merge your PR, but very useful for the community.</p>
 <p><strong>14. Submit your finished PR</strong></p>
-<p>You’re done programming now and can move to the last step, which is getting your PR merged into master. Usually, the
+<p>You’re done programming now and can move to the last step, which is getting your PR merged into main. Usually, the
 Hugging Face team should have helped you already at this point, but it is worth taking some time to give your finished
 PR a nice description and eventually add comments to your code, if you want to point out certain design choices to your
 reviewer.</p>
@@ -745,10 +760,10 @@ your achievement with the community.</p>
 <p><strong>You have made another model that is super easy to access for everyone in the community! 🤯</strong></p>
 
 
-		<script type="module" data-hydrate="1ife1dy">
-		import { start } from "/docs/transformers/pr_4/en/_app/start-10350b2b.js";
+		<script type="module" data-hydrate="e30no3">
+		import { start } from "/docs/transformers/pr_4/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1ife1dy"]').parentNode,
+			target: document.querySelector('[data-hydrate="e30no3"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_4/en","assets":"/docs/transformers/pr_4/en"},
 			session: {},
 			route: false,
@@ -758,8 +773,8 @@ your achievement with the community.</p>
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_4/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_4/en/_app/pages/add_new_model.mdx-a8c800e0.js")
+					import("/docs/transformers/pr_4/en/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/transformers/pr_4/en/_app/pages/add_new_model.mdx-hf-doc-builder.js")
 				],
 				params: {}
 			}
