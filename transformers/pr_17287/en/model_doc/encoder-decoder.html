@@ -115,9 +115,6 @@ target sequence).</p>
 <span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = BertTokenizer.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = EncoderDecoderModel.from_encoder_decoder_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>, <span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>model.config.decoder_start_token_id = tokenizer.cls_token_id
-<span class="hljs-meta">&gt;&gt;&gt; </span>model.config.pad_token_id = tokenizer.pad_token_id
-
 <span class="hljs-meta">&gt;&gt;&gt; </span>input_ids = tokenizer(
 <span class="hljs-meta">... </span>    <span class="hljs-string">&quot;The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, and the tallest structure in Paris. Its base is square, measuring 125 metres (410 ft) on each side.During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world, a title it held for 41 years until the Chrysler Building in New York City was  finished in 1930. It was the first structure to reach a height of 300 metres. Due to the addition of a broadcasting aerial at the top of the tower in 1957, it is now taller than the Chrysler Building by 5.2 metres (17 ft).Excluding transmitters, the Eiffel Tower is the second tallest free-standing structure in France after the Millau Viaduct.&quot;</span>,
 <span class="hljs-meta">... </span>    return_tensors=<span class="hljs-string">&quot;pt&quot;</span>,
@@ -129,7 +126,9 @@ target sequence).</p>
 <span class="hljs-meta">... </span>).input_ids
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># the forward function automatically creates the correct decoder_input_ids</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(input_ids=input_ids, labels=labels).loss<!-- HTML_TAG_END --></pre></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(input_ids=input_ids, labels=labels).loss
+<span class="hljs-meta">&gt;&gt;&gt; </span>loss.item()
+<span class="hljs-number">0.72</span><!-- HTML_TAG_END --></pre></div>
 <p>Detailed <a href="https://colab.research.google.com/drive/1WIk2bxglElfZewOHboPFNj8H44_VAyKE?usp=sharing#scrollTo=ZwQIEhKOrJpl" rel="nofollow">colab</a> for training.</p>
 <p>This model was contributed by <a href="https://github.com/thomwolf" rel="nofollow">thomwolf</a>. This model’s TensorFlow and Flax versions
 were contributed by <a href="https://github.com/ydshieh" rel="nofollow">ydshieh</a>.</p>
@@ -1295,10 +1294,10 @@ checkpoints.</p>
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = FlaxEncoderDecoderModel.from_pretrained(<span class="hljs-string">&quot;./bert2gpt2&quot;</span>)<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="1yu462z">
+		<script type="module" data-hydrate="80mxfy">
 		import { start } from "/docs/transformers/pr_17287/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1yu462z"]').parentNode,
+			target: document.querySelector('[data-hydrate="80mxfy"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17287/en","assets":"/docs/transformers/pr_17287/en"},
 			session: {},
 			route: false,
