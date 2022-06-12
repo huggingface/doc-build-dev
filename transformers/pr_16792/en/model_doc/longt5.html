@@ -39,7 +39,55 @@ attention ideas from long-input transformers (ETC), and adopted pre-training str
 able to achieve state-of-the-art results on several summarization tasks and outperform the original T5 models on
 question answering tasks.</em></p>
 <p>Tips:</p>
-<p>&lt;INSERT TIPS ABOUT MODEL HERE&gt;</p>
+<ul><li><a href="/docs/transformers/pr_16792/en/model_doc/longt5#transformers.LongT5ForConditionalGeneration">LongT5ForConditionalGeneration</a> is an extension of <a href="/docs/transformers/pr_16792/en/model_doc/t5#transformers.T5ForConditionalGeneration">T5ForConditionalGeneration</a> exchanging the traditional
+encoder <em>self-attention</em> layer with efficient either <em>local</em> attention or <em>transient-global</em> (<em>tglobal</em>) attention.</li>
+<li>Unlike the T5 model, LongT5 does not use a task prefix. Furthermore, it uses a different pre-training objective
+inspired by the pre-training of <code>[PegasusForConditionalGeneration]</code>.</li>
+<li>LongT5 model is designed to work efficiently and very well on long-range <em>sequence-to-sequence</em> tasks where the
+input sequence exceeds commonly used 512 tokens. It is capable of handling input sequences of a length up to 16,384 tokens.</li>
+<li>For <em>Local Attention</em>, the sparse sliding-window local attention operation allows a given token to attend only <code>r</code>
+tokens to the left and right of it (with <code>r=127</code> by default). <em>Local Attention</em> does not introduce any new parameters
+to the model. The complexity of the mechanism is linear in input sequence length <code>l</code>: <code>O(l*r)</code>.</li>
+<li><em>Transient Global Attention</em> is an extension of the <em>Local Attention</em>. It, furthermore, allows each input token to
+interact with all other tokens in the layer. This is achieved via splitting an input sequence into blocks of a fixed
+length <code>k</code> (with a default <code>k=16</code>). Then, a global token for such a block is obtained via summing and normalizing the embeddings of every token
+in the block. Thanks to this, the attention allows each token to attend to both nearby tokens like in Local attention, and
+also every global token like in the case of standard global attention (<em>transient</em> represents the fact the global tokens
+are constructed dynamically within each attention operation).  As a consequence, <em>TGlobal</em> attention introduces
+a few new parameters — global relative position biases and a layer normalization for global token’s embedding.
+The complexity of this mechanism is <code>O(l(r + l/k))</code>.</li>
+<li>An example showing how to evaluate a fine-tuned LongT5 model on the <a href="https://huggingface.co/datasets/scientific_papers" rel="nofollow">pubmed dataset</a> is below.</li></ul>
+
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> evaluate
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, LongT5ForConditionalGeneration
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>dataset = load_dataset(<span class="hljs-string">&quot;scientific_papers&quot;</span>, <span class="hljs-string">&quot;pubmed&quot;</span>, split=<span class="hljs-string">&quot;validation&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = (
+<span class="hljs-meta">... </span>    LongT5ForConditionalGeneration.from_pretrained(<span class="hljs-string">&quot;Stancld/longt5-tglobal-large-16384-pubmed-3k_steps&quot;</span>)
+<span class="hljs-meta">... </span>    .to(<span class="hljs-string">&quot;cuda&quot;</span>)
+<span class="hljs-meta">... </span>    .half()
+<span class="hljs-meta">... </span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;Stancld/longt5-tglobal-large-16384-pubmed-3k_steps&quot;</span>)
+
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_answers</span>(<span class="hljs-params">batch</span>):
+<span class="hljs-meta">... </span>    inputs_dict = tokenizer(
+<span class="hljs-meta">... </span>        batch[<span class="hljs-string">&quot;article&quot;</span>], max_length=<span class="hljs-number">16384</span>, padding=<span class="hljs-string">&quot;max_length&quot;</span>, truncation=<span class="hljs-literal">True</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>
+<span class="hljs-meta">... </span>    )
+<span class="hljs-meta">... </span>    input_ids = inputs_dict.input_ids.to(<span class="hljs-string">&quot;cuda&quot;</span>)
+<span class="hljs-meta">... </span>    attention_mask = inputs_dict.attention_mask.to(<span class="hljs-string">&quot;cuda&quot;</span>)
+<span class="hljs-meta">... </span>    output_ids = model.generate(input_ids, attention_mask=attention_mask, max_length=<span class="hljs-number">512</span>, num_beams=<span class="hljs-number">2</span>)
+<span class="hljs-meta">... </span>    batch[<span class="hljs-string">&quot;predicted_abstract&quot;</span>] = tokenizer.batch_decode(output_ids, skip_special_tokens=<span class="hljs-literal">True</span>)
+<span class="hljs-meta">... </span>    <span class="hljs-keyword">return</span> batch
+
+
+<span class="hljs-meta">&gt;&gt;&gt; </span>result = dataset.<span class="hljs-built_in">map</span>(generate_answer, batched=<span class="hljs-literal">True</span>, batch_size=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>rouge = evaluate.load(<span class="hljs-string">&quot;rouge&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>rouge.compute(predictions=result[<span class="hljs-string">&quot;predicted_abstract&quot;</span>], references=result[<span class="hljs-string">&quot;abstract&quot;</span>])<!-- HTML_TAG_END --></pre></div>
 <p>This model was contributed by <a href="https://huggingface.co/stancld" rel="nofollow">stancld</a>.
 The original code can be found <a href="https://github.com/google-research/longt5" rel="nofollow">here</a>.</p>
 <h2 class="relative group"><a id="transformers.LongT5Config" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.LongT5Config"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
@@ -1757,10 +1805,10 @@ Only relevant if <code>config.is_decoder = True</code>.</p>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="kj2f0a">
+		<script type="module" data-hydrate="1olvhp6">
 		import { start } from "/docs/transformers/pr_16792/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="kj2f0a"]').parentNode,
+			target: document.querySelector('[data-hydrate="1olvhp6"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16792/en","assets":"/docs/transformers/pr_16792/en"},
 			session: {},
 			route: false,
