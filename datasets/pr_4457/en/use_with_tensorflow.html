@@ -17,6 +17,9 @@
 	<span>Using Datasets with TensorFlow
 	</span></h1>
 
+<p>This document is a quick introduction to using <code>datasets</code> with TensorFlow, with a particular focus on how to get
+<code>tf.Tensor</code> objects out of our datasets, and how to stream data from Hugging Face <code>Dataset</code> objects to Keras methods
+like <code>model.fit()</code>.</p>
 <h3 class="relative group"><a id="dataset-format" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#dataset-format"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Dataset format
 	</span></h3>
@@ -171,7 +174,7 @@ that you set the batch size when creating the dataset, and so you don’t need t
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>model.fit(tf_ds, epochs=<span class="hljs-number">2</span>)<!-- HTML_TAG_END --></pre></div>
-<p>For a full description of the arguments, please see the <a href="/docs/datasets/pr_4457/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset">to_tf_dataset()</a>. In many cases,
+<p>For a full description of the arguments, please see the <a href="/docs/datasets/pr_4457/en/package_reference/main_classes#datasets.Dataset.to_tf_dataset">to_tf_dataset()</a> documentation. In many cases,
 you will also need to add a <code>collate_fn</code> to your call. This is a function that takes multiple elements of the dataset
 and combines them into a single batch. When all elements have the same length, the built-in default collator will
 suffice, but for more complex tasks a custom collator may be necessary. In particular, many tasks have samples
@@ -209,10 +212,10 @@ entire dataset!</em> This can result in huge amounts of padding, which wastes me
 <p>Right now, <code>to_tf_dataset()</code> always return a batched dataset - we will add support for unbatched datasets soon!</p>
 
 
-		<script type="module" data-hydrate="1g0w7tu">
+		<script type="module" data-hydrate="111gjt7">
 		import { start } from "/docs/datasets/pr_4457/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1g0w7tu"]').parentNode,
+			target: document.querySelector('[data-hydrate="111gjt7"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_4457/en","assets":"/docs/datasets/pr_4457/en"},
 			session: {},
 			route: false,
