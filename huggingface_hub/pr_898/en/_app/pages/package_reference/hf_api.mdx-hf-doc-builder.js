@@ -564,7 +564,7 @@ space, <code>None</code> or <code>&quot;model&quot;</code> if uploading to a mod
 <code>None</code>.`,name:"repo_type"},{anchor:"huggingface_hub.HfApi.upload_file.revision",description:`<strong>revision</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 The git revision to commit from. Defaults to the head of the
 <code>&quot;main&quot;</code> branch.`,name:"revision"},{anchor:"huggingface_hub.HfApi.upload_file.identical_ok",description:`<strong>identical_ok</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
-Deprecated: will be removed in 0.10.0.
+Deprecated: will be removed in 0.11.0.
 Changing this value has no effect.`,name:"identical_ok"}],source:"https://github.com/huggingface/huggingface_hub/blob/vr_898/src/huggingface_hub/hf_api.py#L1809",returnDescription:`
 <p>The URL to visualize the uploaded file on the hub</p>
 `,returnType:`
