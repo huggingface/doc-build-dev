@@ -208,15 +208,23 @@ Set the format of a streaming dataset to “pytorch”, and it inherits from <co
 <span class="hljs-meta">&gt;&gt;&gt; </span>data = np.random.rand(<span class="hljs-number">10_000</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>Dataset.from_dict({<span class="hljs-string">&quot;data&quot;</span>: data}).push_to_hub(<span class="hljs-string">&quot;&lt;username&gt;/my_dataset&quot;</span>)  <span class="hljs-comment"># Upload to the Hugging Face Hub</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>ds = load_dataset(<span class="hljs-string">&quot;&lt;username&gt;/my_dataset&quot;</span>, streaming=<span class="hljs-literal">True</span>, split=<span class="hljs-string">&quot;train&quot;</span>).with_format(<span class="hljs-string">&quot;torch&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>dataloader = DataLoader(ds, batch_size=<span class="hljs-number">32</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> batch <span class="hljs-keyword">in</span> dataloader: 
-<span class="hljs-meta">... </span>    <span class="hljs-keyword">pass</span><!-- HTML_TAG_END --></pre></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>dataloader = DataLoader(ds, batch_size=<span class="hljs-number">32</span>)<!-- HTML_TAG_END --></pre></div>
+<p>If the dataset is split in several shards (i.e. if the dataset consists of multiple data files), then you can stream in parallel using <code>num_workers</code>:</p>
+
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>ds = load_dataset(<span class="hljs-string">&quot;c4&quot;</span>, <span class="hljs-string">&quot;en&quot;</span>, streaming=<span class="hljs-literal">True</span>, split=<span class="hljs-string">&quot;train&quot;</span>).with_format(<span class="hljs-string">&quot;torch&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>ds.n_shards
+<span class="hljs-number">1024</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>dataloader = DataLoader(ds, batch_size=<span class="hljs-number">32</span>, num_workers=<span class="hljs-number">4</span>)<!-- HTML_TAG_END --></pre></div>
+<p>In this case each worker will be given a subset of the list of shards to stream from.</p>
 
 
-		<script type="module" data-hydrate="emtbtk">
+		<script type="module" data-hydrate="ftt63i">
 		import { start } from "/docs/datasets/pr_4474/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="emtbtk"]').parentNode,
+			target: document.querySelector('[data-hydrate="ftt63i"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_4474/en","assets":"/docs/datasets/pr_4474/en"},
 			session: {},
 			route: false,
