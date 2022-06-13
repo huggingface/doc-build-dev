@@ -49,6 +49,7 @@ To enable jit mode in Trainer, users should add `jit_mode_eval` in Trainer comma
 --max_seq_length 384 \
 --doc_stride 128 \
 --output_dir /tmp/ \
+--no_cuda \
 <b> --jit_mode_eval </b></pre></li>
 <li><p>Inference with IPEX using jit mode on CPU:</p>
 <pre> python run_qa.py \
@@ -58,14 +59,15 @@ To enable jit mode in Trainer, users should add `jit_mode_eval` in Trainer comma
 --max_seq_length 384 \
 --doc_stride 128 \
 --output_dir /tmp/ \
+--no_cuda \
 <b> --use_ipex \ </b>
 <b> --jit_mode_eval </b></pre></li></ul>
 
 
-		<script type="module" data-hydrate="8awcuh">
+		<script type="module" data-hydrate="vsyl9l">
 		import { start } from "/docs/transformers/pr_17153/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="8awcuh"]').parentNode,
+			target: document.querySelector('[data-hydrate="vsyl9l"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17153/en","assets":"/docs/transformers/pr_17153/en"},
 			session: {},
 			route: false,
