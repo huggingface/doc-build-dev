@@ -40,7 +40,7 @@ results = e.compute(
 The task defining which evaluator will be returned. Currently accepted tasks are:</p>
 <ul>
 <li><code>&quot;text-classification&quot;</code> (alias <code>&quot;sentiment-analysis&quot;</code> available): will return a <a href="/docs/evaluate/pr_135/en/package_reference/evaluator_classes#evaluate.TextClassificationEvaluator">TextClassificationEvaluator</a>.</li>
-</ul>`,name:"task"}],source:"https://github.com/huggingface/evaluate/blob/vr_135/src/evaluate/evaluator.py#L337",returnDescription:`
+</ul>`,name:"task"}],source:"https://github.com/huggingface/evaluate/blob/vr_135/src/evaluate/evaluator.py#L340",returnDescription:`
 <p>An evaluator suitable for the task.</p>
 `,returnType:`
 <p><a
