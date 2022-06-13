@@ -23,7 +23,7 @@
 
 <div class="flex space-x-1 absolute z-10 right-0 top-0"><a href="https://colab.research.google.com/github/huggingface/notebooks/blob/master/course/chapter4/section2_pt.ipynb" target="_blank"><img alt="Open In Colab" class="!m-0" src="https://colab.research.google.com/assets/colab-badge.svg"></a>
 	<a href="https://studiolab.sagemaker.aws/import/github/huggingface/notebooks/blob/master/course/chapter4/section2_pt.ipynb" target="_blank"><img alt="Open In Studio Lab" class="!m-0" src="https://studiolab.sagemaker.aws/studiolab.svg"></a></div>
-<p>モデルHubは適切なモデルを簡単に選択できるようにし、どのライブラリからでも数行のコードで使用できるようにします。では、実際にこれらのモデルをどのように使用し、どのようにコミュニティに貢献するかを見ていきましょう。</p>
+<p>モデルハブは適切なモデルを簡単に選択できるようにし、どのライブラリからでも数行のコードで使用できるようにします。では、実際にこれらのモデルをどのように使用し、どのようにコミュニティに貢献するかを見ていきましょう。</p>
 <p>例えば、マスクフィルを行えるフランス語のモデルを探しているとします。</p>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter4/camembert.gif" alt="Selecting the Camembert model." width="80%"></div>
 <p>試しに<code>camembert-base</code>チェックポイントを選択してみましょう。camembert-base<code>という識別子があれば、すぐに使い始めることができます。これまでの章で見てきたように、 </code>pipeline()` 関数を使用してインスタンスを作成することができます：</p>
@@ -46,7 +46,7 @@ results = camembert_fill_mask(<span class="hljs-string">&quot;Le camembert est &
   {<span class="hljs-string">&#x27;sequence&#x27;</span>: <span class="hljs-string">&#x27;Le camembert est meilleur :)&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.0330314114689827</span>, <span class="hljs-string">&#x27;token&#x27;</span>: <span class="hljs-number">528</span>, <span class="hljs-string">&#x27;token_str&#x27;</span>: <span class="hljs-string">&#x27;meilleur&#x27;</span>}, 
   {<span class="hljs-string">&#x27;sequence&#x27;</span>: <span class="hljs-string">&#x27;Le camembert est parfait :)&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.03007650189101696</span>, <span class="hljs-string">&#x27;token&#x27;</span>: <span class="hljs-number">1654</span>, <span class="hljs-string">&#x27;token_str&#x27;</span>: <span class="hljs-string">&#x27;parfait&#x27;</span>}
 ]<!-- HTML_TAG_END --></pre></div>
-<p>ご覧の通り、パイプライン内でのモデルのロードは非常に簡単です。唯一気をつけなければならないのは、選択したチェックポイントが使用するタスクに適しているかということです。例えば、ここでは<code>camembert-base</code>というチェックポイントを<code>fill-mask</code>というパイプラインでロードしていますが、これは全く問題ありません。しかし、このチェックポイントを<code>text-classification</code>パイプラインでロードしたとすると、<code>camembert-base</code>の「ヘッド」がこのタスクに適していないため、結果が意味をなさないことになります！適切なチェックポイントを選択するために、Hugging Face Hub インタフェースにあるタスクセレクタを使用することをお勧めします：</p>
+<p>ご覧の通り、パイプライン内でのモデルのロードは非常に簡単です。唯一気をつけなければならないのは、選択したチェックポイントが使用するタスクに適しているかということです。例えば、ここでは<code>camembert-base</code>というチェックポイントを<code>fill-mask</code>というパイプラインでロードしていますが、これは全く問題ありません。しかし、このチェックポイントを<code>text-classification</code>パイプラインでロードしたとすると、<code>camembert-base</code>の「ヘッド」がこのタスクに適していないため、結果が意味をなさないことになります！適切なチェックポイントを選択するために、ハギングフェイスハブインタフェースにあるタスクセレクタを使用することをお勧めします：</p>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter4/tasks.png" alt="The task selector on the web interface." width="80%"></div>
 <p>また、モデル・アーキテクチャを直接使用して、チェックポイントをインスタンス化することもできます：</p>
 <div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -71,10 +71,10 @@ model = AutoModelForMaskedLM.from_pretrained(<span class="hljs-string">&quot;cam
 </div>
 
 
-		<script type="module" data-hydrate="i93ugx">
+		<script type="module" data-hydrate="103pyls">
 		import { start } from "/docs/course/pr_244/ja/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="i93ugx"]').parentNode,
+			target: document.querySelector('[data-hydrate="103pyls"]').parentNode,
 			paths: {"base":"/docs/course/pr_244/ja","assets":"/docs/course/pr_244/ja"},
 			session: {},
 			route: false,
