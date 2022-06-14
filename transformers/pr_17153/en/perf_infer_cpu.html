@@ -42,7 +42,7 @@ Intel® Extension for PyTorch provides further optimizations in jit mode for Tra
 To enable jit mode in Trainer, users should add `jit_mode_eval` in Trainer command arguments.
 <p>Take an example of the use cases on <a href="https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering" rel="nofollow">Transformers question-answering</a></p>
 <ul><li><p>Inference using jit mode on CPU:</p>
-<pre> python run_qa.py \
+<pre>python run_qa.py \
 --model_name_or_path csarron/bert-base-uncased-squad-v1 \
 --dataset_name squad \
 --do_eval \
@@ -50,9 +50,9 @@ To enable jit mode in Trainer, users should add `jit_mode_eval` in Trainer comma
 --doc_stride 128 \
 --output_dir /tmp/ \
 --no_cuda \
-<b> --jit_mode_eval </b></pre></li>
+<b>--jit_mode_eval </b></pre></li>
 <li><p>Inference with IPEX using jit mode on CPU:</p>
-<pre> python run_qa.py \
+<pre>python run_qa.py \
 --model_name_or_path csarron/bert-base-uncased-squad-v1 \
 --dataset_name squad \
 --do_eval \
@@ -60,14 +60,14 @@ To enable jit mode in Trainer, users should add `jit_mode_eval` in Trainer comma
 --doc_stride 128 \
 --output_dir /tmp/ \
 --no_cuda \
-<b> --use_ipex \ </b>
-<b> --jit_mode_eval </b></pre></li></ul>
+<b>--use_ipex \</b>
+<b>--jit_mode_eval</b></pre></li></ul>
 
 
-		<script type="module" data-hydrate="2y807k">
+		<script type="module" data-hydrate="1ae47v4">
 		import { start } from "/docs/transformers/pr_17153/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="2y807k"]').parentNode,
+			target: document.querySelector('[data-hydrate="1ae47v4"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17153/en","assets":"/docs/transformers/pr_17153/en"},
 			session: {},
 			route: false,
