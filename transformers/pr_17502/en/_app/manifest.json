@@ -22,6 +22,8 @@
       "src/routes/troubleshooting.mdx",
       "src/routes/create_a_model.mdx",
       "src/routes/pad_truncation.mdx",
+      "src/routes/perf_infer_cpu.mdx",
+      "src/routes/perf_train_cpu.mdx",
       "src/routes/add_new_model.mdx",
       "src/routes/custom_models.mdx",
       "src/routes/model_sharing.mdx",
@@ -133,16 +135,19 @@
       "src/routes/model_doc/canine.mdx",
       "src/routes/model_doc/funnel.mdx",
       "src/routes/model_doc/hubert.mdx",
+      "src/routes/model_doc/longt5.mdx",
       "src/routes/model_doc/lxmert.mdx",
       "src/routes/model_doc/marian.mdx",
       "src/routes/model_doc/plbart.mdx",
       "src/routes/model_doc/regnet.mdx",
       "src/routes/model_doc/resnet.mdx",
       "src/routes/model_doc/t5v1.1.mdx",
+      "src/routes/model_doc/bloom.mdx",
       "src/routes/model_doc/flava.mdx",
       "src/routes/model_doc/ibert.mdx",
       "src/routes/model_doc/levit.mdx",
       "src/routes/model_doc/mbart.mdx",
+      "src/routes/model_doc/mctct.mdx",
       "src/routes/model_doc/mluke.mdx",
       "src/routes/model_doc/mpnet.mdx",
       "src/routes/model_doc/realm.mdx",
@@ -374,6 +379,27 @@
     "imports": [
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_infer_cpu.mdx": {
+    "file": "pages/perf_infer_cpu.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_cpu.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_train_cpu.mdx": {
+    "file": "pages/perf_train_cpu.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_train_cpu.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/add_new_model.mdx": {
@@ -1841,6 +1867,20 @@
       "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/longt5.mdx": {
+    "file": "pages/model_doc/longt5.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/longt5.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/lxmert.mdx": {
     "file": "pages/model_doc/lxmert.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/lxmert.mdx",
@@ -1922,6 +1962,20 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/bloom.mdx": {
+    "file": "pages/model_doc/bloom.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/bloom.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/flava.mdx": {
     "file": "pages/model_doc/flava.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/flava.mdx",
@@ -1967,6 +2021,20 @@
   "src/routes/model_doc/mbart.mdx": {
     "file": "pages/model_doc/mbart.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/mbart.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/model_doc/mctct.mdx": {
+    "file": "pages/model_doc/mctct.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/mctct.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
