@@ -24,10 +24,14 @@
 	<span>Overview
 	</span></h2>
 
+<p>The Wav2Vec2-Conformer was added to an updated version of <a href="https://arxiv.org/abs/2010.05171" rel="nofollow">fairseq S2T: Fast Speech-to-Text Modeling with fairseq</a> by Changhan Wang, Yun Tang, Xutai Ma, Anne Wu, Sravya Popuri, Dmytro Okhonko, Juan Pino.</p>
+<p>The official results of the model can be found in Table 3 and Table 4 of the paper.</p>
 <p>The Wav2Vec2-Conformer weights were released by the Meta AI team within the <a href="https://github.com/pytorch/fairseq/blob/main/examples/wav2vec/README.md#pre-trained-models" rel="nofollow">Fairseq library</a>.</p>
 <p>Tips:</p>
 <ul><li>Wav2Vec2-Conformer follows the same architecture as Wav2Vec2, but replaces the <em>Attention</em>-block with a <em>Conformer</em>-block
 as introduced in <a href="https://arxiv.org/abs/2005.08100" rel="nofollow">Conformer: Convolution-augmented Transformer for Speech Recognition</a>.</li>
+<li>For the same number of layers, Wav2Vec2-Conformer requires more parameters than Wav2Vec2, but also yields
+an improved word error rate.</li>
 <li>Wav2Vec2-Conformer uses the same tokenizer and feature extractor as Wav2Vec2.</li>
 <li>Wav2Vec2-Conformer can use either no relative position embeddings, Transformer-XL-like position embeddings, or
 rotary position embeddings by setting the correct <code>config.position_embeddings_type</code>.</li></ul>
@@ -1578,10 +1582,10 @@ tensor(<span class="hljs-literal">True</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(input_values, mask_time_indices=mask_time_indices).loss<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="491oes">
+		<script type="module" data-hydrate="n4ctky">
 		import { start } from "/docs/transformers/pr_17640/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="491oes"]').parentNode,
+			target: document.querySelector('[data-hydrate="n4ctky"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17640/en","assets":"/docs/transformers/pr_17640/en"},
 			session: {},
 			route: false,
