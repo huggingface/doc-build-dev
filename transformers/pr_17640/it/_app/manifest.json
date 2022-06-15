@@ -14,6 +14,7 @@
       "src/routes/autoclass_tutorial.mdx",
       "src/routes/pipeline_tutorial.mdx",
       "src/routes/create_a_model.mdx",
+      "src/routes/serialization.mdx",
       "src/routes/installation.mdx",
       "src/routes/quicktour.mdx"
     ]
@@ -76,6 +77,18 @@
   "src/routes/create_a_model.mdx": {
     "file": "pages/create_a_model.mdx-hf-doc-builder.js",
     "src": "src/routes/create_a_model.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/serialization.mdx": {
+    "file": "pages/serialization.mdx-hf-doc-builder.js",
+    "src": "src/routes/serialization.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
