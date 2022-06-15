@@ -1,13 +1,13 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;sharing-custom-models&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;writing-a-custom-configuration&quot;,&quot;title&quot;:&quot;Writing a custom configuration&quot;},{&quot;local&quot;:&quot;writing-a-custom-model&quot;,&quot;title&quot;:&quot;Writing a custom model&quot;},{&quot;local&quot;:&quot;sending-the-code-to-the-hub&quot;,&quot;title&quot;:&quot;Sending the code to the Hub&quot;},{&quot;local&quot;:&quot;using-a-model-with-custom-code&quot;,&quot;title&quot;:&quot;Using a model with custom code&quot;},{&quot;local&quot;:&quot;registering-a-model-with-custom-code-to-the-auto-classes&quot;,&quot;title&quot;:&quot;Registering a model with custom code to the auto classes&quot;}],&quot;title&quot;:&quot;Sharing custom models&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="stylesheet" href="/docs/transformers/pr_16737/en/_app/assets/pages/__layout.svelte-8068c90a.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/start-a5d7fb94.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/chunks/vendor-6b77c823.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/pages/custom_models.mdx-2a2749d5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/chunks/Tip-39098574.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/chunks/IconCopyLink-7a11ce68.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/chunks/CodeBlock-3a8b25a8.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/pages/custom_models.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/chunks/Tip-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_16737/en/_app/chunks/CodeBlock-hf-doc-builder.js"> 
 
 
 
@@ -108,7 +108,7 @@ directly upload your config to the Hub.</p>
 
 <p>Now that we have our ResNet configuration, we can go on writing the model. We will actually write two: one that
 extracts the hidden features from a batch of images (like <a href="/docs/transformers/pr_16737/en/model_doc/bert#transformers.BertModel">BertModel</a>) and one that is suitable for image
-classification (like <code>BertModelForSequenceClassification</code>).</p>
+classification (like <a href="/docs/transformers/pr_16737/en/model_doc/bert#transformers.BertForSequenceClassification">BertForSequenceClassification</a>).</p>
 <p>As we mentioned before, we’ll only write a loose wrapper of the model to keep it simple for this example. The only
 thing we need to do before writing this class is a map between the block types and actual block classes. Then the
 model is defined from the configuration by passing everything to the <code>ResNet</code> class:</p>
@@ -336,10 +336,10 @@ of your custom config, and the first argument used when registering your custom 
 to match the <code>config_class</code> of those models.</p>
 
 
-		<script type="module" data-hydrate="od4ifj">
-		import { start } from "/docs/transformers/pr_16737/en/_app/start-a5d7fb94.js";
+		<script type="module" data-hydrate="1hdrse2">
+		import { start } from "/docs/transformers/pr_16737/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="od4ifj"]').parentNode,
+			target: document.querySelector('[data-hydrate="1hdrse2"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_16737/en","assets":"/docs/transformers/pr_16737/en"},
 			session: {},
 			route: false,
@@ -349,8 +349,8 @@ to match the <code>config_class</code> of those models.</p>
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_16737/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_16737/en/_app/pages/custom_models.mdx-2a2749d5.js")
+					import("/docs/transformers/pr_16737/en/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/transformers/pr_16737/en/_app/pages/custom_models.mdx-hf-doc-builder.js")
 				],
 				params: {}
 			}
