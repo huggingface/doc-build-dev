@@ -479,7 +479,8 @@ if <code>do_resize</code> is set to <code>True</code>.`,name:"resample"},{anchor
 Whether to apply the Tesseract OCR engine to get words + normalized bounding boxes.`,name:"apply_ocr"},{anchor:"transformers.LayoutLMv2FeatureExtractor.ocr_lang",description:`<strong>ocr_lang</strong> (<code>Optional[str]</code>, <em>optional</em>) &#x2014;
 The language, specified by its ISO code, to be used by the Tesseract OCR engine. By default, English is
 used.`,name:"ocr_lang"},{anchor:"transformers.LayoutLMv2FeatureExtractor.tesseract_config",description:`<strong>tesseract_config</strong> (<code>Optional[str]</code>, <em>optional</em>) &#x2014;
-Any additional custom configuration flags that are forwarded to the <code>config</code> parameter when calling Tesseract. For example: &#x2018;&#x2014;psm 6&#x2019;.</p>
+Any additional custom configuration flags that are forwarded to the <code>config</code> parameter when calling
+Tesseract. For example: &#x2018;&#x2014;psm 6&#x2019;.</p>
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400">
 						
 <p>LayoutLMv2FeatureExtractor uses Google&#x2019;s Tesseract OCR engine under the hood.</p>
@@ -494,7 +495,7 @@ If set, will return tensors of a particular framework. Acceptable values are:</p
 <li><code>&apos;pt&apos;</code>: Return PyTorch <code>torch.Tensor</code> objects.</li>
 <li><code>&apos;np&apos;</code>: Return NumPy <code>np.ndarray</code> objects.</li>
 <li><code>&apos;jax&apos;</code>: Return JAX <code>jnp.ndarray</code> objects.</li>
-</ul>`,name:"return_tensors"}],source:"https://github.com/huggingface/transformers/blob/vr_17733/src/transformers/models/layoutlmv2/feature_extraction_layoutlmv2.py#L135",returnDescription:`
+</ul>`,name:"return_tensors"}],source:"https://github.com/huggingface/transformers/blob/vr_17733/src/transformers/models/layoutlmv2/feature_extraction_layoutlmv2.py#L136",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17733/en/main_classes/feature_extractor#transformers.BatchFeature"
 >BatchFeature</a> with the following fields:</p>
