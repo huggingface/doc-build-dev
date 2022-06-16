@@ -215,7 +215,7 @@ elements depending on the configuration (<a
 >ViTMAEConfig</a>) and inputs.</p>
 <ul>
 <li><strong>loss</strong> (<code>torch.FloatTensor</code> of shape <code>(1,)</code>) \u2014 Pixel reconstruction loss.</li>
-<li><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, patch_size ** 2 * num_channels)</code>) \u2014 Pixel reconstruction logits.</li>
+<li><strong>logits</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length, patch_size ** 2 * num_channels)</code>) \u2014 Pixel reconstruction logits.</li>
 <li><strong>mask</strong> (<code>torch.FloatTensor</code> of shape <code>(batch_size, sequence_length)</code>) \u2014 Tensor indicating which patches are masked (1) and which are not (0).</li>
 <li><strong>ids_restore</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, sequence_length)</code>) \u2014 Tensor containing the original index of the (shuffled) masked patches.</li>
 <li><strong>hidden_states</strong> (<code>tuple(torch.FloatTensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>torch.FloatTensor</code> (one for the output of the embeddings + one for the output of each layer) of
@@ -290,7 +290,7 @@ configuration (<a
 >ViTMAEConfig</a>) and inputs.</p>
 <ul>
 <li><strong>loss</strong> (<code>tf.Tensor</code> of shape <code>(1,)</code>) \u2014 Pixel reconstruction loss.</li>
-<li><strong>logits</strong> (<code>tf.Tensor</code> of shape <code>(batch_size, patch_size ** 2 * num_channels)</code>) \u2014 Pixel reconstruction logits.</li>
+<li><strong>logits</strong> (<code>tf.Tensor</code> of shape <code>(batch_size, sequence_length, patch_size ** 2 * num_channels)</code>) \u2014 Pixel reconstruction logits.</li>
 <li><strong>mask</strong> (<code>tf.Tensor</code> of shape <code>(batch_size, sequence_length)</code>) \u2014 Tensor indicating which patches are masked (1) and which are not (0).</li>
 <li><strong>ids_restore</strong> (<code>tf.Tensor</code> of shape <code>(batch_size, sequence_length)</code>) \u2014 Tensor containing the original index of the (shuffled) masked patches.</li>
 <li><strong>hidden_states</strong> (<code>tuple(tf.Tensor)</code>, <em>optional</em>, returned when <code>output_hidden_states=True</code> is passed or when <code>config.output_hidden_states=True</code>) \u2014 Tuple of <code>tf.Tensor</code> (one for the output of the embeddings + one for the output of each layer) of shape
