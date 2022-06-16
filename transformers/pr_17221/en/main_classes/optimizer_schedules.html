@@ -1,14 +1,14 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;optimization&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers.AdamW&quot;,&quot;title&quot;:&quot;AdamW (PyTorch)&quot;},{&quot;local&quot;:&quot;transformers.Adafactor&quot;,&quot;title&quot;:&quot;AdaFactor (PyTorch)&quot;},{&quot;local&quot;:&quot;transformers.AdamWeightDecay&quot;,&quot;title&quot;:&quot;AdamWeightDecay (TensorFlow)&quot;},{&quot;local&quot;:&quot;schedules&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers.SchedulerType&quot;,&quot;title&quot;:&quot;Learning Rate Schedules (Pytorch)&quot;},{&quot;local&quot;:&quot;transformers.WarmUp&quot;,&quot;title&quot;:&quot;Warmup (TensorFlow)&quot;}],&quot;title&quot;:&quot;Schedules&quot;},{&quot;local&quot;:&quot;gradient-strategies&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers.GradientAccumulator&quot;,&quot;title&quot;:&quot;GradientAccumulator (TensorFlow)&quot;}],&quot;title&quot;:&quot;Gradient Strategies&quot;}],&quot;title&quot;:&quot;Optimization&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/start-47b70690.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/vendor-6b77c823.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/pages/main_classes/optimizer_schedules.mdx-2a9afe80.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/Docstring-1088f2fb.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/IconCopyLink-7a11ce68.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/CodeBlock-3a8b25a8.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/ExampleCodeBlock-5212b321.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/pages/main_classes/optimizer_schedules.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/Docstring-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/CodeBlock-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17221/en/_app/chunks/ExampleCodeBlock-hf-doc-builder.js"> 
 
 
 
@@ -280,7 +280,7 @@ and returns the loss.<!-- HTML_TAG_END -->
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">learning_rate<span class="opacity-60">: typing.Union[float, keras.optimizer_v2.learning_rate_schedule.LearningRateSchedule] = 0.001</span></span>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">learning_rate<span class="opacity-60">: typing.Union[float, keras.optimizers.schedules.learning_rate_schedule.LearningRateSchedule] = 0.001</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">beta_1<span class="opacity-60">: float = 0.9</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">beta_2<span class="opacity-60">: float = 0.999</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">epsilon<span class="opacity-60">: float = 1e-07</span></span>
@@ -864,10 +864,10 @@ then call <code>.gradients</code>, scale the gradients if required, and pass the
 <p>Resets the accumulated gradients on the current replica.</p></div></div>
 
 
-		<script type="module" data-hydrate="25sskv">
-		import { start } from "/docs/transformers/pr_17221/en/_app/start-47b70690.js";
+		<script type="module" data-hydrate="tqyh5r">
+		import { start } from "/docs/transformers/pr_17221/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="25sskv"]').parentNode,
+			target: document.querySelector('[data-hydrate="tqyh5r"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17221/en","assets":"/docs/transformers/pr_17221/en"},
 			session: {},
 			route: false,
@@ -877,8 +877,8 @@ then call <code>.gradients</code>, scale the gradients if required, and pass the
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_17221/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_17221/en/_app/pages/main_classes/optimizer_schedules.mdx-2a9afe80.js")
+					import("/docs/transformers/pr_17221/en/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/transformers/pr_17221/en/_app/pages/main_classes/optimizer_schedules.mdx-hf-doc-builder.js")
 				],
 				params: {}
 			}
