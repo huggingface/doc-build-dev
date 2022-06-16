@@ -159,7 +159,7 @@ Whether or not to return <code>(char_start, char_end)</code> for each token.</p>
 Python&#x2019;s tokenizer, this method will raise <code>NotImplementedError</code>.`,name:"return_offsets_mapping"},{anchor:"transformers.PreTrainedTokenizer.__call__.return_length",description:`<strong>return_length</strong>  (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to return the lengths of the encoded inputs.`,name:"return_length"},{anchor:"transformers.PreTrainedTokenizer.__call__.verbose",description:`<strong>verbose</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
 Whether or not to print more information and warnings.
-**kwargs &#x2014; passed to the <code>self.tokenize()</code> method`,name:"verbose"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L2393",returnDescription:`
+**kwargs &#x2014; passed to the <code>self.tokenize()</code> method`,name:"verbose"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L2409",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17054/en/main_classes/tokenizer#transformers.BatchEncoding"
 >BatchEncoding</a> with the following fields:</p>
@@ -202,7 +202,7 @@ regular sequence tokens (when <code>add_special_tokens=True</code> and <code>ret
 List of tokenized input ids. Can be obtained using the <code>__call__</code> method.`,name:"sequences"},{anchor:"transformers.PreTrainedTokenizer.batch_decode.skip_special_tokens",description:`<strong>skip_special_tokens</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to remove special tokens in the decoding.`,name:"skip_special_tokens"},{anchor:"transformers.PreTrainedTokenizer.batch_decode.clean_up_tokenization_spaces",description:`<strong>clean_up_tokenization_spaces</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
 Whether or not to clean up the tokenization spaces.`,name:"clean_up_tokenization_spaces"},{anchor:"transformers.PreTrainedTokenizer.batch_decode.kwargs",description:`<strong>kwargs</strong> (additional keyword arguments, <em>optional</em>) &#x2014;
-Will be passed to the underlying model specific decode method.`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L3267",returnDescription:`
+Will be passed to the underlying model specific decode method.`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L3283",returnDescription:`
 <p>The list of decoded sentences.</p>
 `,returnType:`
 <p><code>List[str]</code></p>
@@ -210,7 +210,7 @@ Will be passed to the underlying model specific decode method.`,name:"kwargs"}],
 List of tokenized input ids. Can be obtained using the <code>__call__</code> method.`,name:"token_ids"},{anchor:"transformers.PreTrainedTokenizer.decode.skip_special_tokens",description:`<strong>skip_special_tokens</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to remove special tokens in the decoding.`,name:"skip_special_tokens"},{anchor:"transformers.PreTrainedTokenizer.decode.clean_up_tokenization_spaces",description:`<strong>clean_up_tokenization_spaces</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
 Whether or not to clean up the tokenization spaces.`,name:"clean_up_tokenization_spaces"},{anchor:"transformers.PreTrainedTokenizer.decode.kwargs",description:`<strong>kwargs</strong> (additional keyword arguments, <em>optional</em>) &#x2014;
-Will be passed to the underlying model specific decode method.`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L3300",returnDescription:`
+Will be passed to the underlying model specific decode method.`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L3316",returnDescription:`
 <p>The decoded sentence.</p>
 `,returnType:`
 <p><code>str</code></p>
@@ -265,7 +265,7 @@ If set, will return tensors instead of list of python integers. Acceptable value
 <li><code>&apos;pt&apos;</code>: Return PyTorch <code>torch.Tensor</code> objects.</li>
 <li><code>&apos;np&apos;</code>: Return Numpy <code>np.ndarray</code> objects.</li>
 </ul>
-<p>**kwargs &#x2014; Passed along to the <code>.tokenize()</code> method.`,name:"return_tensors"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L2203",returnDescription:`
+<p>**kwargs &#x2014; Passed along to the <code>.tokenize()</code> method.`,name:"return_tensors"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L2219",returnDescription:`
 <p>The tokenized ids of the text.</p>
 `,returnType:`
 <p><code>List[int]</code>, <code>torch.Tensor</code>, <code>tf.Tensor</code> or <code>np.ndarray</code></p>
@@ -283,7 +283,7 @@ Organization in which you want to push your tokenizer (you must be a member of t
 Whether or not the repository created should be private (requires a paying subscription).`,name:"private"},{anchor:"transformers.PreTrainedTokenizer.push_to_hub.use_auth_token",description:`<strong>use_auth_token</strong> (<code>bool</code> or <code>str</code>, <em>optional</em>) &#x2014;
 The token to use as HTTP bearer authorization for remote files. If <code>True</code>, will use the token generated
 when running <code>transformers-cli login</code> (stored in <code>~/.huggingface</code>). Will default to <code>True</code> if
-<code>repo_url</code> is not specified.`,name:"use_auth_token"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/utils/hub.py#L846",returnDescription:`
+<code>repo_url</code> is not specified.`,name:"use_auth_token"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/utils/hub.py#L855",returnDescription:`
 <p>The url of the commit of your tokenizer in the given repository.</p>
 `,returnType:`
 <p><code>str</code></p>
@@ -354,7 +354,7 @@ tokenization process. Will be associated to <code>self.additional_special_tokens
 A <code>tokenizers.Tokenizer</code> object from &#x1F917; tokenizers to instantiate from. See <a href="../fast_tokenizers">Using tokenizers from &#x1F917;
 tokenizers</a> for more information.`,name:"tokenizer_object"},{anchor:"transformers.PreTrainedTokenizerFast.tokenizer_file",description:`<strong>tokenizer_file</strong> (<code>str</code>) &#x2014;
 A path to a local JSON file representing a previously serialized <code>tokenizers.Tokenizer</code> object from &#x1F917;
-tokenizers.`,name:"tokenizer_file"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L76"}}),Vt=new y({props:{name:"__call__",anchor:"transformers.PreTrainedTokenizerFast.__call__",parameters:[{name:"text",val:": typing.Union[str, typing.List[str], typing.List[typing.List[str]]]"},{name:"text_pair",val:": typing.Union[str, typing.List[str], typing.List[typing.List[str]], NoneType] = None"},{name:"add_special_tokens",val:": bool = True"},{name:"padding",val:": typing.Union[bool, str, transformers.utils.generic.PaddingStrategy] = False"},{name:"truncation",val:": typing.Union[bool, str, transformers.tokenization_utils_base.TruncationStrategy] = False"},{name:"max_length",val:": typing.Optional[int] = None"},{name:"stride",val:": int = 0"},{name:"is_split_into_words",val:": bool = False"},{name:"pad_to_multiple_of",val:": typing.Optional[int] = None"},{name:"return_tensors",val:": typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None"},{name:"return_token_type_ids",val:": typing.Optional[bool] = None"},{name:"return_attention_mask",val:": typing.Optional[bool] = None"},{name:"return_overflowing_tokens",val:": bool = False"},{name:"return_special_tokens_mask",val:": bool = False"},{name:"return_offsets_mapping",val:": bool = False"},{name:"return_length",val:": bool = False"},{name:"verbose",val:": bool = True"},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.PreTrainedTokenizerFast.__call__.text",description:`<strong>text</strong> (<code>str</code>, <code>List[str]</code>, <code>List[List[str]]</code>) &#x2014;
+tokenizers.`,name:"tokenizer_file"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L77"}}),Vt=new y({props:{name:"__call__",anchor:"transformers.PreTrainedTokenizerFast.__call__",parameters:[{name:"text",val:": typing.Union[str, typing.List[str], typing.List[typing.List[str]]]"},{name:"text_pair",val:": typing.Union[str, typing.List[str], typing.List[typing.List[str]], NoneType] = None"},{name:"add_special_tokens",val:": bool = True"},{name:"padding",val:": typing.Union[bool, str, transformers.utils.generic.PaddingStrategy] = False"},{name:"truncation",val:": typing.Union[bool, str, transformers.tokenization_utils_base.TruncationStrategy] = False"},{name:"max_length",val:": typing.Optional[int] = None"},{name:"stride",val:": int = 0"},{name:"is_split_into_words",val:": bool = False"},{name:"pad_to_multiple_of",val:": typing.Optional[int] = None"},{name:"return_tensors",val:": typing.Union[str, transformers.utils.generic.TensorType, NoneType] = None"},{name:"return_token_type_ids",val:": typing.Optional[bool] = None"},{name:"return_attention_mask",val:": typing.Optional[bool] = None"},{name:"return_overflowing_tokens",val:": bool = False"},{name:"return_special_tokens_mask",val:": bool = False"},{name:"return_offsets_mapping",val:": bool = False"},{name:"return_length",val:": bool = False"},{name:"verbose",val:": bool = True"},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.PreTrainedTokenizerFast.__call__.text",description:`<strong>text</strong> (<code>str</code>, <code>List[str]</code>, <code>List[List[str]]</code>) &#x2014;
 The sequence or batch of sequences to be encoded. Each sequence can be a string or a list of strings
 (pretokenized string). If the sequences are provided as list of strings (pretokenized), you must set
 <code>is_split_into_words=True</code> (to lift the ambiguity with a batch of sequences).`,name:"text"},{anchor:"transformers.PreTrainedTokenizerFast.__call__.text_pair",description:`<strong>text_pair</strong> (<code>str</code>, <code>List[str]</code>, <code>List[List[str]]</code>) &#x2014;
@@ -420,7 +420,7 @@ Whether or not to return <code>(char_start, char_end)</code> for each token.</p>
 Python&#x2019;s tokenizer, this method will raise <code>NotImplementedError</code>.`,name:"return_offsets_mapping"},{anchor:"transformers.PreTrainedTokenizerFast.__call__.return_length",description:`<strong>return_length</strong>  (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to return the lengths of the encoded inputs.`,name:"return_length"},{anchor:"transformers.PreTrainedTokenizerFast.__call__.verbose",description:`<strong>verbose</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
 Whether or not to print more information and warnings.
-**kwargs &#x2014; passed to the <code>self.tokenize()</code> method`,name:"verbose"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L2393",returnDescription:`
+**kwargs &#x2014; passed to the <code>self.tokenize()</code> method`,name:"verbose"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L2409",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17054/en/main_classes/tokenizer#transformers.BatchEncoding"
 >BatchEncoding</a> with the following fields:</p>
@@ -463,7 +463,7 @@ regular sequence tokens (when <code>add_special_tokens=True</code> and <code>ret
 List of tokenized input ids. Can be obtained using the <code>__call__</code> method.`,name:"sequences"},{anchor:"transformers.PreTrainedTokenizerFast.batch_decode.skip_special_tokens",description:`<strong>skip_special_tokens</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to remove special tokens in the decoding.`,name:"skip_special_tokens"},{anchor:"transformers.PreTrainedTokenizerFast.batch_decode.clean_up_tokenization_spaces",description:`<strong>clean_up_tokenization_spaces</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
 Whether or not to clean up the tokenization spaces.`,name:"clean_up_tokenization_spaces"},{anchor:"transformers.PreTrainedTokenizerFast.batch_decode.kwargs",description:`<strong>kwargs</strong> (additional keyword arguments, <em>optional</em>) &#x2014;
-Will be passed to the underlying model specific decode method.`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L3267",returnDescription:`
+Will be passed to the underlying model specific decode method.`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L3283",returnDescription:`
 <p>The list of decoded sentences.</p>
 `,returnType:`
 <p><code>List[str]</code></p>
@@ -471,7 +471,7 @@ Will be passed to the underlying model specific decode method.`,name:"kwargs"}],
 List of tokenized input ids. Can be obtained using the <code>__call__</code> method.`,name:"token_ids"},{anchor:"transformers.PreTrainedTokenizerFast.decode.skip_special_tokens",description:`<strong>skip_special_tokens</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to remove special tokens in the decoding.`,name:"skip_special_tokens"},{anchor:"transformers.PreTrainedTokenizerFast.decode.clean_up_tokenization_spaces",description:`<strong>clean_up_tokenization_spaces</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
 Whether or not to clean up the tokenization spaces.`,name:"clean_up_tokenization_spaces"},{anchor:"transformers.PreTrainedTokenizerFast.decode.kwargs",description:`<strong>kwargs</strong> (additional keyword arguments, <em>optional</em>) &#x2014;
-Will be passed to the underlying model specific decode method.`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L3300",returnDescription:`
+Will be passed to the underlying model specific decode method.`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L3316",returnDescription:`
 <p>The decoded sentence.</p>
 `,returnType:`
 <p><code>str</code></p>
@@ -526,7 +526,7 @@ If set, will return tensors instead of list of python integers. Acceptable value
 <li><code>&apos;pt&apos;</code>: Return PyTorch <code>torch.Tensor</code> objects.</li>
 <li><code>&apos;np&apos;</code>: Return Numpy <code>np.ndarray</code> objects.</li>
 </ul>
-<p>**kwargs &#x2014; Passed along to the <code>.tokenize()</code> method.`,name:"return_tensors"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L2203",returnDescription:`
+<p>**kwargs &#x2014; Passed along to the <code>.tokenize()</code> method.`,name:"return_tensors"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_base.py#L2219",returnDescription:`
 <p>The tokenized ids of the text.</p>
 `,returnType:`
 <p><code>List[int]</code>, <code>torch.Tensor</code>, <code>tf.Tensor</code> or <code>np.ndarray</code></p>
@@ -544,27 +544,27 @@ Organization in which you want to push your tokenizer (you must be a member of t
 Whether or not the repository created should be private (requires a paying subscription).`,name:"private"},{anchor:"transformers.PreTrainedTokenizerFast.push_to_hub.use_auth_token",description:`<strong>use_auth_token</strong> (<code>bool</code> or <code>str</code>, <em>optional</em>) &#x2014;
 The token to use as HTTP bearer authorization for remote files. If <code>True</code>, will use the token generated
 when running <code>transformers-cli login</code> (stored in <code>~/.huggingface</code>). Will default to <code>True</code> if
-<code>repo_url</code> is not specified.`,name:"use_auth_token"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/utils/hub.py#L846",returnDescription:`
+<code>repo_url</code> is not specified.`,name:"use_auth_token"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/utils/hub.py#L855",returnDescription:`
 <p>The url of the commit of your tokenizer in the given repository.</p>
 `,returnType:`
 <p><code>str</code></p>
 `}}),it=new sv({props:{anchor:"transformers.PreTrainedTokenizerFast.push_to_hub.example",$$slots:{default:[_v]},$$scope:{ctx:pe}}}),Qt=new y({props:{name:"convert_ids_to_tokens",anchor:"transformers.PreTrainedTokenizerFast.convert_ids_to_tokens",parameters:[{name:"ids",val:": typing.Union[int, typing.List[int]]"},{name:"skip_special_tokens",val:": bool = False"}],parametersDescription:[{anchor:"transformers.PreTrainedTokenizerFast.convert_ids_to_tokens.ids",description:`<strong>ids</strong> (<code>int</code> or <code>List[int]</code>) &#x2014;
 The token id (or token ids) to convert to tokens.`,name:"ids"},{anchor:"transformers.PreTrainedTokenizerFast.convert_ids_to_tokens.skip_special_tokens",description:`<strong>skip_special_tokens</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
-Whether or not to remove special tokens in the decoding.`,name:"skip_special_tokens"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L291",returnDescription:`
+Whether or not to remove special tokens in the decoding.`,name:"skip_special_tokens"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L292",returnDescription:`
 <p>The decoded token(s).</p>
 `,returnType:`
 <p><code>str</code> or <code>List[str]</code></p>
-`}}),Zt=new y({props:{name:"convert_tokens_to_ids",anchor:"transformers.PreTrainedTokenizerFast.convert_tokens_to_ids",parameters:[{name:"tokens",val:": typing.Union[str, typing.List[str]]"}],parametersDescription:[{anchor:"transformers.PreTrainedTokenizerFast.convert_tokens_to_ids.tokens",description:"<strong>tokens</strong> (<code>str</code> or <code>List[str]</code>) &#x2014; One or several token(s) to convert to token id(s).",name:"tokens"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L233",returnDescription:`
+`}}),Zt=new y({props:{name:"convert_tokens_to_ids",anchor:"transformers.PreTrainedTokenizerFast.convert_tokens_to_ids",parameters:[{name:"tokens",val:": typing.Union[str, typing.List[str]]"}],parametersDescription:[{anchor:"transformers.PreTrainedTokenizerFast.convert_tokens_to_ids.tokens",description:"<strong>tokens</strong> (<code>str</code> or <code>List[str]</code>) &#x2014; One or several token(s) to convert to token id(s).",name:"tokens"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L234",returnDescription:`
 <p>The token id or list of token ids.</p>
 `,returnType:`
 <p><code>int</code> or <code>List[int]</code></p>
-`}}),en=new y({props:{name:"get_added_vocab",anchor:"transformers.PreTrainedTokenizerFast.get_added_vocab",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L154",returnDescription:`
+`}}),en=new y({props:{name:"get_added_vocab",anchor:"transformers.PreTrainedTokenizerFast.get_added_vocab",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L155",returnDescription:`
 <p>The added tokens.</p>
 `,returnType:`
 <p><code>Dict[str, int]</code></p>
 `}}),tn=new y({props:{name:"num_special_tokens_to_add",anchor:"transformers.PreTrainedTokenizerFast.num_special_tokens_to_add",parameters:[{name:"pair",val:": bool = False"}],parametersDescription:[{anchor:"transformers.PreTrainedTokenizerFast.num_special_tokens_to_add.pair",description:`<strong>pair</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether the number of added tokens should be computed in the case of a sequence pair or a single
-sequence.`,name:"pair"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L270",returnDescription:`
+sequence.`,name:"pair"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L271",returnDescription:`
 <p>Number of special tokens added to sequences.</p>
 `,returnType:`
 <p><code>int</code></p>
@@ -574,7 +574,7 @@ The kind of truncation that will be applied to the input`,name:"truncation_strat
 The maximum size of a sequence.`,name:"max_length"},{anchor:"transformers.PreTrainedTokenizerFast.set_truncation_and_padding.stride",description:`<strong>stride</strong> (<code>int</code>) &#x2014;
 The stride to use when handling overflow.`,name:"stride"},{anchor:"transformers.PreTrainedTokenizerFast.set_truncation_and_padding.pad_to_multiple_of",description:`<strong>pad_to_multiple_of</strong> (<code>int</code>, <em>optional</em>) &#x2014;
 If set will pad the sequence to a multiple of the provided value. This is especially useful to enable
-the use of Tensor Cores on NVIDIA hardware with compute capability &gt;= 7.5 (Volta).`,name:"pad_to_multiple_of"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L320"}}),on=new y({props:{name:"train_new_from_iterator",anchor:"transformers.PreTrainedTokenizerFast.train_new_from_iterator",parameters:[{name:"text_iterator",val:""},{name:"vocab_size",val:""},{name:"length",val:" = None"},{name:"new_special_tokens",val:" = None"},{name:"special_tokens_map",val:" = None"},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.PreTrainedTokenizerFast.train_new_from_iterator.text_iterator",description:`<strong>text_iterator</strong> (generator of <code>List[str]</code>) &#x2014;
+the use of Tensor Cores on NVIDIA hardware with compute capability &gt;= 7.5 (Volta).`,name:"pad_to_multiple_of"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L321"}}),on=new y({props:{name:"train_new_from_iterator",anchor:"transformers.PreTrainedTokenizerFast.train_new_from_iterator",parameters:[{name:"text_iterator",val:""},{name:"vocab_size",val:""},{name:"length",val:" = None"},{name:"new_special_tokens",val:" = None"},{name:"special_tokens_map",val:" = None"},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.PreTrainedTokenizerFast.train_new_from_iterator.text_iterator",description:`<strong>text_iterator</strong> (generator of <code>List[str]</code>) &#x2014;
 The training corpus. Should be a generator of batches of texts, for instance a list of lists of texts
 if you have everything in memory.`,name:"text_iterator"},{anchor:"transformers.PreTrainedTokenizerFast.train_new_from_iterator.vocab_size",description:`<strong>vocab_size</strong> (<code>int</code>) &#x2014;
 The size of the vocabulary you want for your tokenizer.`,name:"vocab_size"},{anchor:"transformers.PreTrainedTokenizerFast.train_new_from_iterator.length",description:`<strong>length</strong> (<code>int</code>, <em>optional</em>) &#x2014;
@@ -583,7 +583,7 @@ A list of new special tokens to add to the tokenizer you are training.`,name:"ne
 If you want to rename some of the special tokens this tokenizer uses, pass along a mapping old special
 token name to new special token name in this argument.
 kwargs &#x2014;
-Additional keyword arguments passed along to the trainer from the &#x1F917; Tokenizers library.`,name:"special_tokens_map"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L603",returnDescription:`
+Additional keyword arguments passed along to the trainer from the &#x1F917; Tokenizers library.`,name:"special_tokens_map"}],source:"https://github.com/huggingface/transformers/blob/vr_17054/src/transformers/tokenization_utils_fast.py#L604",returnDescription:`
 <p>A new tokenizer of the same type as the original one, trained on
 <code>text_iterator</code>.</p>
 `,returnType:`
