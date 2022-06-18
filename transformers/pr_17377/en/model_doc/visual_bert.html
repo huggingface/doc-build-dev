@@ -1,15 +1,15 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;visualbert&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;overview&quot;,&quot;title&quot;:&quot;Overview&quot;},{&quot;local&quot;:&quot;usage&quot;,&quot;title&quot;:&quot;Usage&quot;},{&quot;local&quot;:&quot;transformers.VisualBertConfig&quot;,&quot;title&quot;:&quot;VisualBertConfig&quot;},{&quot;local&quot;:&quot;transformers.VisualBertModel&quot;,&quot;title&quot;:&quot;VisualBertModel&quot;},{&quot;local&quot;:&quot;transformers.VisualBertForPreTraining&quot;,&quot;title&quot;:&quot;VisualBertForPreTraining&quot;},{&quot;local&quot;:&quot;transformers.VisualBertForQuestionAnswering&quot;,&quot;title&quot;:&quot;VisualBertForQuestionAnswering&quot;},{&quot;local&quot;:&quot;transformers.VisualBertForMultipleChoice&quot;,&quot;title&quot;:&quot;VisualBertForMultipleChoice&quot;},{&quot;local&quot;:&quot;transformers.VisualBertForVisualReasoning&quot;,&quot;title&quot;:&quot;VisualBertForVisualReasoning&quot;},{&quot;local&quot;:&quot;transformers.VisualBertForRegionToPhraseAlignment&quot;,&quot;title&quot;:&quot;VisualBertForRegionToPhraseAlignment&quot;}],&quot;title&quot;:&quot;VisualBERT&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/start-fc4bbc1a.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/vendor-6b77c823.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/pages/model_doc/visual_bert.mdx-d95e42bb.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/Tip-39098574.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/Docstring-1088f2fb.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/IconCopyLink-7a11ce68.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/CodeBlock-3a8b25a8.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/ExampleCodeBlock-5212b321.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/pages/model_doc/visual_bert.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/Tip-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/Docstring-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/CodeBlock-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17377/en/_app/chunks/ExampleCodeBlock-hf-doc-builder.js"> 
 
 
 
@@ -670,7 +670,7 @@ the latter silently ignores them.</p></div>
 tokenizer = BertTokenizer.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>)
 model = VisualBertForPreTraining.from_pretrained(<span class="hljs-string">&quot;uclanlp/visualbert-vqa-coco-pre&quot;</span>)
 
-inputs = tokenizer(<span class="hljs-string">&quot;The capital of France is {mask}.&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
+inputs = tokenizer(<span class="hljs-string">&quot;The capital of France is [MASK].&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 visual_embeds = get_visual_embeddings(image).unsqueeze(<span class="hljs-number">0</span>)
 visual_token_type_ids = torch.ones(visual_embeds.shape[:-<span class="hljs-number">1</span>], dtype=torch.long)
 visual_attention_mask = torch.ones(visual_embeds.shape[:-<span class="hljs-number">1</span>], dtype=torch.<span class="hljs-built_in">float</span>)
@@ -1631,10 +1631,10 @@ loss = outputs.loss
 scores = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="11vplau">
-		import { start } from "/docs/transformers/pr_17377/en/_app/start-fc4bbc1a.js";
+		<script type="module" data-hydrate="8bpv12">
+		import { start } from "/docs/transformers/pr_17377/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="11vplau"]').parentNode,
+			target: document.querySelector('[data-hydrate="8bpv12"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17377/en","assets":"/docs/transformers/pr_17377/en"},
 			session: {},
 			route: false,
@@ -1644,8 +1644,8 @@ scores = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_17377/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_17377/en/_app/pages/model_doc/visual_bert.mdx-d95e42bb.js")
+					import("/docs/transformers/pr_17377/en/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/transformers/pr_17377/en/_app/pages/model_doc/visual_bert.mdx-hf-doc-builder.js")
 				],
 				params: {}
 			}
