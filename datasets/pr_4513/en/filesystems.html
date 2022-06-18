@@ -70,10 +70,10 @@
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets.filesystems <span class="hljs-keyword">import</span> S3FileSystem
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># create S3FileSystem instance</span>
+<span class="hljs-comment"># create S3FileSystem instance</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>s3 = S3FileSystem(anon=<span class="hljs-literal">True</span>)  
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># saves encoded_dataset to your s3 bucket</span>
+<span class="hljs-comment"># saves encoded_dataset to your s3 bucket</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>encoded_dataset.save_to_disk(<span class="hljs-string">&#x27;s3://my-private-datasets/imdb/train&#x27;</span>, fs=s3)<!-- HTML_TAG_END --></pre></div>
 
 
@@ -86,13 +86,13 @@
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> botocore
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets.filesystems <span class="hljs-keyword">import</span> S3FileSystem
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># creates a botocore session with the provided AWS profile</span>
+<span class="hljs-comment"># creates a botocore session with the provided AWS profile</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>s3_session = botocore.session.Session(profile=<span class="hljs-string">&#x27;my_profile_name&#x27;</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># create S3FileSystem instance with s3_session</span>
+<span class="hljs-comment"># create S3FileSystem instance with s3_session</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>s3 = S3FileSystem(session=s3_session)  
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># saves encoded_dataset to your s3 bucket</span>
+<span class="hljs-comment"># saves encoded_dataset to your s3 bucket</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>encoded_dataset.save_to_disk(<span class="hljs-string">&#x27;s3://my-private-datasets/imdb/train&#x27;</span>,fs=s3)<!-- HTML_TAG_END --></pre></div>
 <h2 class="relative group"><a id="loading-datasets" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#loading-datasets"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Loading datasets
@@ -106,10 +106,10 @@
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_from_disk
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets.filesystems <span class="hljs-keyword">import</span> S3FileSystem
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># create S3FileSystem without credentials</span>
+<span class="hljs-comment"># create S3FileSystem without credentials</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>s3 = S3FileSystem(anon=<span class="hljs-literal">True</span>)  
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># load encoded_dataset to from s3 bucket</span>
+<span class="hljs-comment"># load encoded_dataset to from s3 bucket</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = load_from_disk(<span class="hljs-string">&#x27;s3://a-public-datasets/imdb/train&#x27;</span>,fs=s3)  
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(dataset))
@@ -122,13 +122,13 @@
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> botocore
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets.filesystems <span class="hljs-keyword">import</span> S3FileSystem
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># create S3FileSystem instance with aws_access_key_id and aws_secret_access_key</span>
+<span class="hljs-comment"># create S3FileSystem instance with aws_access_key_id and aws_secret_access_key</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>s3_session = botocore.session.Session(profile=<span class="hljs-string">&#x27;my_profile_name&#x27;</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># create S3FileSystem instance with s3_session</span>
+<span class="hljs-comment"># create S3FileSystem instance with s3_session</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>s3 = S3FileSystem(session=s3_session)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># load encoded_dataset to from s3 bucket</span>
+<span class="hljs-comment"># load encoded_dataset to from s3 bucket</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = load_from_disk(<span class="hljs-string">&#x27;s3://my-private-datasets/imdb/train&#x27;</span>,fs=s3)  
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(dataset))
@@ -157,10 +157,10 @@
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> gcsfs
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># create GCSFileSystem instance using default gcloud credentials with project</span>
+<span class="hljs-comment"># create GCSFileSystem instance using default gcloud credentials with project</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>gcs = gcsfs.GCSFileSystem(project=<span class="hljs-string">&#x27;my-google-project&#x27;</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># saves encoded_dataset to your gcs bucket</span>
+<span class="hljs-comment"># saves encoded_dataset to your gcs bucket</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>encoded_dataset.save_to_disk(<span class="hljs-string">&#x27;gcs://my-private-datasets/imdb/train&#x27;</span>, fs=gcs)<!-- HTML_TAG_END --></pre></div>
 <ol start="3"><li>Load your dataset:</li></ol>
 
@@ -170,10 +170,10 @@
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> gcsfs
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_from_disk
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># create GCSFileSystem instance using default gcloud credentials with project</span>
+<span class="hljs-comment"># create GCSFileSystem instance using default gcloud credentials with project</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>gcs = gcsfs.GCSFileSystem(project=<span class="hljs-string">&#x27;my-google-project&#x27;</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># loads encoded_dataset from your gcs bucket</span>
+<span class="hljs-comment"># loads encoded_dataset from your gcs bucket</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = load_from_disk(<span class="hljs-string">&#x27;gcs://my-private-datasets/imdb/train&#x27;</span>, fs=gcs)<!-- HTML_TAG_END --></pre></div>
 <h3 class="relative group"><a id="azure-blob-storage" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#azure-blob-storage"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Azure Blob Storage
@@ -194,10 +194,10 @@
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> adlfs
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># create AzureBlobFileSystem instance with account_name and account_key</span>
+<span class="hljs-comment"># create AzureBlobFileSystem instance with account_name and account_key</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>abfs = adlfs.AzureBlobFileSystem(account_name=<span class="hljs-string">&quot;XXXX&quot;</span>, account_key=<span class="hljs-string">&quot;XXXX&quot;</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># saves encoded_dataset to your azure container</span>
+<span class="hljs-comment"># saves encoded_dataset to your azure container</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>encoded_dataset.save_to_disk(<span class="hljs-string">&#x27;abfs://my-private-datasets/imdb/train&#x27;</span>, fs=abfs)<!-- HTML_TAG_END --></pre></div>
 <ol start="3"><li>Load your dataset:</li></ol>
 
@@ -207,17 +207,17 @@
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> adlfs
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_from_disk
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># create AzureBlobFileSystem instance with account_name and account_key</span>
+<span class="hljs-comment"># create AzureBlobFileSystem instance with account_name and account_key</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>abfs = adlfs.AzureBlobFileSystem(account_name=<span class="hljs-string">&quot;XXXX&quot;</span>, account_key=<span class="hljs-string">&quot;XXXX&quot;</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># loads encoded_dataset from your azure container</span>
+<span class="hljs-comment"># loads encoded_dataset from your azure container</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = load_from_disk(<span class="hljs-string">&#x27;abfs://my-private-datasets/imdb/train&#x27;</span>, fs=abfs)<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="stke4q">
+		<script type="module" data-hydrate="rwcxgq">
 		import { start } from "/docs/datasets/pr_4513/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="stke4q"]').parentNode,
+			target: document.querySelector('[data-hydrate="rwcxgq"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_4513/en","assets":"/docs/datasets/pr_4513/en"},
 			session: {},
 			route: false,
