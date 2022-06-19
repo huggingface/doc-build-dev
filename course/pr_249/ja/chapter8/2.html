@@ -1,4 +1,4 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;get-the-most-likely-end-of-answer-with-the-argmax-of-the-score&quot;,&quot;title&quot;:&quot;Get the most likely end of answer with the argmax of the score&quot;}" data-svelte="svelte-1phssyn">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;transformers&quot;,&quot;title&quot;:&quot;🤗 Transformers　パイプラインのデバグ&quot;},{&quot;local&quot;:&quot;&quot;,&quot;title&quot;:&quot;モデルのフォワードパスをデバッグ&quot;}],&quot;title&quot;:&quot;エラーを見つけた時に最初にすること&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/course/pr_249/ja/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
 	<link rel="modulepreload" href="/docs/course/pr_249/ja/_app/start-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/course/pr_249/ja/_app/chunks/vendor-hf-doc-builder.js">
@@ -7,7 +7,6 @@
 	<link rel="modulepreload" href="/docs/course/pr_249/ja/_app/pages/chapter8/2.mdx-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/course/pr_249/ja/_app/chunks/Tip-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/course/pr_249/ja/_app/chunks/Youtube-hf-doc-builder.js">
-	<link rel="modulepreload" href="/docs/course/pr_249/ja/_app/chunks/IconCopyLink-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/course/pr_249/ja/_app/chunks/CodeBlock-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/course/pr_249/ja/_app/chunks/DocNotebookDropdown-hf-doc-builder.js"> 
 
@@ -61,12 +60,12 @@ notebook_login()<!-- HTML_TAG_END --></pre></div>
     copy_tree(template_repo_dir, new_repo_dir)
     <span class="hljs-comment"># Push to Hub</span>
     repo.push_to_hub()<!-- HTML_TAG_END --></pre></div>
-<p><code>copy_repository_template()</code>機能はテンプレートレポジトリーをアカンウトにコピーします。</p>
+<p><code>copy_repository_template()</code>機能はテンプレートレポジトリーをアカウントにコピーします。</p>
 <h2 class="relative group"><a id="transformers" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>🤗 Transformers　パイプラインのデバグ
 	</span></h2>
 
-<p>Transformerモデルとパイプラインのデバグという素晴らしい世界への旅を始めるにあたり、次のようなシナリオを考えてみましょう。あなたは同僚と一緒に、あるeコマースサイトに関するお客さんの答えを見つけられるように、‘Question Answering’のプロジェクトに取り組んでいます。あなたの同僚はこんなメッセージを送りました。</p>
+<p>Transformerモデルとパイプラインのデバッグという素晴らしい世界への旅を始めるにあたり、次のようなシナリオを考えてみましょう。あなたは同僚と一緒に、あるeコマースサイトに関するお客さんの答えを見つけられるように、‘Question Answering’のプロジェクトに取り組んでいます。あなたの同僚はこんなメッセージを送りました。</p>
 <blockquote><p>どうも! 先ほど、【第7章】(/course/chapter7/7)　のテクニックを使って実験をしたところ、SQuADデータセットで素晴らしい結果が得られました!Hub上のモデルIDは”lewtun/distilbert-base-uncased-finetuned-squad-d5716d28”です。このモデルをぜひテストしてみましょう!</p></blockquote>
 <p>さて、🤗 Transformers でモデルをロードするために　 <code>pipeline</code> を使いましょう！</p>
 
@@ -111,7 +110,7 @@ Make sure that:
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>💡 理解しがたいエラーメッセージが表示された場合は、そのメッセージをコピーしてGoogle または <a href="https://stackoverflow.com/" rel="nofollow">Stack Overflow</a> の検索バーに貼り付けてください！　そのエラーに遭遇したのはあなたが初めてではない可能性が高いですし、コミュニティの他の人が投稿した解決策を見つける良い方法です。例えば、<code>OSError: Can&#39;t load config for</code> を Stack Overflow で検索すると、いくつかの <a href="https://stackoverflow.com/search?q=OSError%3A+Can%27t+load+config+for+" rel="nofollow">ヒント</a> が見付けられます。これは、問題解決の出発点として使うことができます。</p></div>
 <p>最初の提案は、モデルIDが実際に正しいかどうかを確認するよう求めているので、まず、識別子をコピーしてHubの検索バーに貼り付けましょう。</p>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter8/wrong-model-id.png" alt="The wrong model name." width="100%"></div>
-<p>うーん、確かに同僚のモデルはHubにないようだ…しかし、モデルの名前にタイプミスがある! DistilBERTの名前には「l」が1つしかないので、それを直して、代わりに「lewtun/distilbert-base-uncased-finetuned-squad-d5716d28」を探そう！</p>
+<p>うーん、確かに同僚のモデルはハブにないようだ…しかし、モデルの名前にタイプミスがある! DistilBERTの名前には「l」が1つしかないので、それを直して、代わりに「lewtun/distilbert-base-uncased-finetuned-squad-d5716d28」を探そう！</p>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter8/true-model-id.png" alt="The right model name." width="100%"></div>
 <p>さて、これでヒットしました。では、正しいモデルIDで再度ダウンロードをしてみましょう。</p>
 
@@ -161,9 +160,7 @@ config = AutoConfig.from_pretrained(pretrained_checkpoint)<!-- HTML_TAG_END --><
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->
-```python
-config.push_to_hub(model_checkpoint, commit_message=<span class="hljs-string">&quot;Add config.json&quot;</span>)<!-- HTML_TAG_END --></pre></div>
+	<pre><!-- HTML_TAG_START -->config.push_to_hub(model_checkpoint, commit_message=<span class="hljs-string">&quot;Add config.json&quot;</span>)<!-- HTML_TAG_END --></pre></div>
 <p>そしては、最新のコミットを <code>main</code> ブランチから読み込こんでみましょう。</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -198,10 +195,7 @@ reader(question=question, context=context)<!-- HTML_TAG_END --></pre></div>
 <li>その場合でもデバグすることができないなら、インターネット上にを検索してみましょう。</li>
 <li><code>huggingface_hub</code> ライブラリは、Hubのリポジトリを使用するため一連のツールを提供します。デバッグするために使用できるのツールも含めています。</li></ul>
 <p>パイプラインのデバッグ方法がわかったところで、モデルのフォワードパスで難しい例を見てみましょう。</p>
-<h2 class="relative group"><a id="モデルのフォワードパスをデバッグ" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#モデルのフォワードパスをデバッグ"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span>モデルのフォワードパスをデバッグ
-	</span></h2>
-
+<h2 id="">モデルのフォワードパスをデバッグ</h2>
 <p>時にはモデルのロジットにアクセスする必要があります（例えば、カスタムなパイプラインを使いたい場合で）。このような場合、何が問題になるかを知るために、まず <code>pipeline</code> からモデルとトークナイザーを取得してみましょう。</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -227,9 +221,9 @@ input_ids = inputs[<span class="hljs-string">&quot;input_ids&quot;</span>][<span
 outputs = model(**inputs)
 answer_start_scores = outputs.start_logits
 answer_end_scores = outputs.end_logits
-&lt;h1 <span class="hljs-built_in">id</span>=<span class="hljs-string">&quot;get-the-most-likely-beginning-of-answer-with-the-argmax-of-the-score&quot;</span>&gt;Get the most likely beginning of answer <span class="hljs-keyword">with</span> the argmax of the score&lt;/h1&gt;
+<span class="hljs-comment"># Get the most likely beginning of answer with the argmax of the score</span>
 answer_start = torch.argmax(answer_start_scores)
-&lt;h1 <span class="hljs-built_in">id</span>=<span class="hljs-string">&quot;get-the-most-likely-end-of-answer-with-the-argmax-of-the-score&quot;</span>&gt;Get the most likely end of answer <span class="hljs-keyword">with</span> the argmax of the score&lt;/h1&gt;
+<span class="hljs-comment"># Get the most likely end of answer with the argmax of the score</span>
 answer_end = torch.argmax(answer_end_scores) + <span class="hljs-number">1</span>
 answer = tokenizer.convert_tokens_to_string(
     tokenizer.convert_ids_to_tokens(input_ids[answer_start:answer_end])
@@ -331,9 +325,9 @@ input_ids = inputs[<span class="hljs-string">&quot;input_ids&quot;</span>][<span
 outputs = model(**inputs)
 answer_start_scores = outputs.start_logits
 answer_end_scores = outputs.end_logits
-&lt;h1 <span class="hljs-built_in">id</span>=<span class="hljs-string">&quot;get-the-most-likely-beginning-of-answer-with-the-argmax-of-the-score&quot;</span>&gt;Get the most likely beginning of answer <span class="hljs-keyword">with</span> the argmax of the score&lt;/h1&gt;
+<span class="hljs-comment"># Get the most likely beginning of answer with the argmax of the score</span>
 answer_start = torch.argmax(answer_start_scores)
-&lt;h1 <span class="hljs-built_in">id</span>=<span class="hljs-string">&quot;get-the-most-likely-end-of-answer-with-the-argmax-of-the-score&quot;</span>&gt;Get the most likely end of answer <span class="hljs-keyword">with</span> the argmax of the score&lt;/h1&gt;
+<span class="hljs-comment"># Get the most likely end of answer with the argmax of the score</span>
 answer_end = torch.argmax(answer_end_scores) + <span class="hljs-number">1</span>
 answer = tokenizer.convert_tokens_to_string(
     tokenizer.convert_ids_to_tokens(input_ids[answer_start:answer_end])
@@ -351,10 +345,10 @@ Answer: pytorch, tensorflow, and jax
 <p>Stack Overflowがいかに有用であるかを示す素晴らしい例です。同様の問題を特定することで、コミュニティの他の人々の経験から恩恵を受けることができました。しかし、このような検索では、常に適切な回答が得られるとは限りません。では、このような場合、どうすればいいのでしょうか？幸い、<a href="https://discuss.huggingface.co/" rel="nofollow">ハギングフェイスフォーラム（Hugging Face forums）</a>には、開発者たちの歓迎するコミュニティがあり、あなたを助けてくれるでしょう。次のセクションでは、回答が得られる可能性の高い、良いフォーラムの質問を作成する方法を見ていきます。</p>
 
 
-		<script type="module" data-hydrate="dv6g6z">
+		<script type="module" data-hydrate="1j3j5dn">
 		import { start } from "/docs/course/pr_249/ja/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="dv6g6z"]').parentNode,
+			target: document.querySelector('[data-hydrate="1j3j5dn"]').parentNode,
 			paths: {"base":"/docs/course/pr_249/ja","assets":"/docs/course/pr_249/ja"},
 			session: {},
 			route: false,
