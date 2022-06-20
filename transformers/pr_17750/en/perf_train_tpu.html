@@ -5,6 +5,7 @@
 	<link rel="modulepreload" href="/docs/transformers/pr_17750/en/_app/chunks/paths-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17750/en/_app/pages/__layout.svelte-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17750/en/_app/pages/perf_train_tpu.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17750/en/_app/chunks/Tip-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/transformers/pr_17750/en/_app/chunks/IconCopyLink-hf-doc-builder.js"> 
 
 
@@ -16,13 +17,16 @@
 	<span>Training on TPUs
 	</span></h1>
 
-<p><em>Coming soon</em></p>
 
 
-		<script type="module" data-hydrate="ddgno">
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>Note: Most of the strategies introduced in the <a href="perf_train_gpu_one">single GPU section</a> (such as mixed precision training or gradient accumulation) and <a href="perf_train_gpu_many">mutli-GPU section</a> are generic and apply to training models in general so make sure to have a look at it before diving into this section.</p></div>
+<p>This document will be completed soon with information on how to train on TPUs.</p>
+
+
+		<script type="module" data-hydrate="3p4uq8">
 		import { start } from "/docs/transformers/pr_17750/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="ddgno"]').parentNode,
+			target: document.querySelector('[data-hydrate="3p4uq8"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17750/en","assets":"/docs/transformers/pr_17750/en"},
 			session: {},
 			route: false,
