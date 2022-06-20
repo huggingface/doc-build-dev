@@ -17,7 +17,8 @@
       "src/routes/chapter4/3.mdx",
       "src/routes/chapter4/4.mdx",
       "src/routes/chapter4/5.mdx",
-      "src/routes/chapter4/6.mdx"
+      "src/routes/chapter4/6.mdx",
+      "src/routes/event/1.mdx"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -115,7 +116,8 @@
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-hf-doc-builder.js"
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
     ]
   },
   "src/routes/chapter4/6.mdx": {
@@ -127,6 +129,17 @@
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_FrameworkSwitchCourse-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/event/1.mdx": {
+    "file": "pages/event/1.mdx-hf-doc-builder.js",
+    "src": "src/routes/event/1.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Youtube-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
     ]
   },
   "_vendor-hf-doc-builder.js": {

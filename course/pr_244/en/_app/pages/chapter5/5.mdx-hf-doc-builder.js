@@ -317,10 +317,10 @@ repo_url = create_repo(name=<span class="hljs-string">&quot;github-issues&quot;<
 repo_url`}}),Le=new P({props:{code:"'https://huggingface.co/datasets/lewtun/github-issues'",highlighted:'<span class="hljs-string">&#x27;https://huggingface.co/datasets/lewtun/github-issues&#x27;</span>'}}),Is=new lt({props:{$$slots:{default:[Lh]},$$scope:{ctx:F}}}),Ue=new P({props:{code:`from huggingface_hub import Repository
 
 repo = Repository(local_dir="github-issues", clone_from=repo_url)
-!cp datasets-issues-with-hf-doc-builder.jsonl github-issues/`,highlighted:`<span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> Repository
+!cp issues-datasets-with-hf-doc-builder.jsonl github-issues/`,highlighted:`<span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> Repository
 
 repo = Repository(local_dir=<span class="hljs-string">&quot;github-issues&quot;</span>, clone_from=repo_url)
-!cp datasets-issues-<span class="hljs-keyword">with</span>-hf-doc-builder.jsonl github-issues/`}}),Me=new P({props:{code:'repo.lfs_track("*.jsonl")',highlighted:'repo.lfs_track(<span class="hljs-string">&quot;*.jsonl&quot;</span>)'}}),ze=new P({props:{code:"repo.push_to_hub()",highlighted:"repo.push_to_hub()"}}),Ye=new P({props:{code:`remote_dataset = load_dataset("lewtun/github-issues", split="train")
+!cp issues-datasets-<span class="hljs-keyword">with</span>-hf-doc-builder.jsonl github-issues/`}}),Me=new P({props:{code:'repo.lfs_track("*.jsonl")',highlighted:'repo.lfs_track(<span class="hljs-string">&quot;*.jsonl&quot;</span>)'}}),ze=new P({props:{code:"repo.push_to_hub()",highlighted:"repo.push_to_hub()"}}),Ye=new P({props:{code:`remote_dataset = load_dataset("lewtun/github-issues", split="train")
 remote_dataset`,highlighted:`remote_dataset = load_dataset(<span class="hljs-string">&quot;lewtun/github-issues&quot;</span>, split=<span class="hljs-string">&quot;train&quot;</span>)
 remote_dataset`}}),Qe=new P({props:{code:`Dataset({
     features: ['url', 'repository_url', 'labels_url', 'comments_url', 'events_url', 'html_url', 'id', 'node_id', 'number', 'title', 'user', 'labels', 'state', 'locked', 'assignee', 'assignees', 'milestone', 'comments', 'created_at', 'updated_at', 'closed_at', 'author_association', 'active_lock_reason', 'pull_request', 'body', 'performed_via_github_app', 'is_pull_request'],
