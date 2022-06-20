@@ -11,6 +11,9 @@
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/index.mdx",
+      "src/routes/autoclass_tutorial.mdx",
+      "src/routes/pipeline_tutorial.mdx",
+      "src/routes/installation.mdx",
       "src/routes/quicktour.mdx"
     ]
   },
@@ -46,6 +49,40 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
+  "src/routes/autoclass_tutorial.mdx": {
+    "file": "pages/autoclass_tutorial.mdx-hf-doc-builder.js",
+    "src": "src/routes/autoclass_tutorial.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/pipeline_tutorial.mdx": {
+    "file": "pages/pipeline_tutorial.mdx-hf-doc-builder.js",
+    "src": "src/routes/pipeline_tutorial.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/installation.mdx": {
+    "file": "pages/installation.mdx-hf-doc-builder.js",
+    "src": "src/routes/installation.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
   "src/routes/quicktour.mdx": {
     "file": "pages/quicktour.mdx-hf-doc-builder.js",
     "src": "src/routes/quicktour.mdx",
@@ -53,7 +90,9 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js"
     ]
   },
   "_vendor-hf-doc-builder.js": {
@@ -64,6 +103,18 @@
   },
   "_IconCopyLink-hf-doc-builder.js": {
     "file": "chunks/IconCopyLink-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "_CodeBlock-hf-doc-builder.js": {
+    "file": "chunks/CodeBlock-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "_Markdown-hf-doc-builder.js": {
+    "file": "chunks/Markdown-hf-doc-builder.js",
     "imports": [
       "_vendor-hf-doc-builder.js"
     ]
