@@ -10,13 +10,16 @@
     "dynamicImports": [
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/index.mdx",
       "src/routes/pipeline_tutorial.mdx",
       "src/routes/fast_tokenizers.mdx",
       "src/routes/installation.mdx",
       "src/routes/multilingual.mdx",
       "src/routes/accelerate.mdx",
+      "src/routes/quicktour.mdx",
       "src/routes/training.mdx",
-      "src/routes/tasks/sequence_classification.mdx"
+      "src/routes/tasks/sequence_classification.mdx",
+      "src/routes/tasks/token_classification.mdx"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -41,6 +44,16 @@
       "_vendor-hf-doc-builder.js"
     ]
   },
+  "src/routes/index.mdx": {
+    "file": "pages/index.mdx-hf-doc-builder.js",
+    "src": "src/routes/index.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
   "src/routes/pipeline_tutorial.mdx": {
     "file": "pages/pipeline_tutorial.mdx-hf-doc-builder.js",
     "src": "src/routes/pipeline_tutorial.mdx",
@@ -49,6 +62,7 @@
     "imports": [
       "_vendor-hf-doc-builder.js",
       "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
@@ -59,6 +73,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
@@ -70,6 +85,7 @@
     "imports": [
       "_vendor-hf-doc-builder.js",
       "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
@@ -80,6 +96,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
       "_DocNotebookDropdown-hf-doc-builder.js"
     ]
@@ -91,7 +108,23 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/quicktour.mdx": {
+    "file": "pages/quicktour.mdx-hf-doc-builder.js",
+    "src": "src/routes/quicktour.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Youtube-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_DocNotebookDropdown-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js"
     ]
   },
   "src/routes/training.mdx": {
@@ -103,6 +136,7 @@
       "_vendor-hf-doc-builder.js",
       "_Tip-hf-doc-builder.js",
       "_Youtube-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
       "_DocNotebookDropdown-hf-doc-builder.js"
     ]
@@ -116,7 +150,23 @@
       "_vendor-hf-doc-builder.js",
       "_Tip-hf-doc-builder.js",
       "_Youtube-hf-doc-builder.js",
-      "_CodeBlock-hf-doc-builder.js"
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/tasks/token_classification.mdx": {
+    "file": "pages/tasks/token_classification.mdx-hf-doc-builder.js",
+    "src": "src/routes/tasks/token_classification.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Youtube-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js"
     ]
   },
   "_vendor-hf-doc-builder.js": {
@@ -124,6 +174,12 @@
   },
   "_paths-hf-doc-builder.js": {
     "file": "chunks/paths-hf-doc-builder.js"
+  },
+  "_IconCopyLink-hf-doc-builder.js": {
+    "file": "chunks/IconCopyLink-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
   },
   "_Tip-hf-doc-builder.js": {
     "file": "chunks/Tip-hf-doc-builder.js",
@@ -145,6 +201,12 @@
   },
   "_Youtube-hf-doc-builder.js": {
     "file": "chunks/Youtube-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "_Markdown-hf-doc-builder.js": {
+    "file": "chunks/Markdown-hf-doc-builder.js",
     "imports": [
       "_vendor-hf-doc-builder.js"
     ]
