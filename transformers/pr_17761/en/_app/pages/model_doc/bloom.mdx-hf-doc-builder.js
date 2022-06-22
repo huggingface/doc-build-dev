@@ -287,8 +287,8 @@ configuration. Check out the <a href="/docs/transformers/pr_17761/en/main_classe
 sequence tokens in the vocabulary.</p>
 <p>If <code>past_key_values</code> is used, only <code>input_ids</code> that do not have their past calculated should be passed as
 <code>input_ids</code>.</p>
-<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.BloomModel.forward.past_key_values",description:`<strong>past_key_values</strong> (<code>Tuple[Tuple[torch.Tensor]]</code> of length <code>config.n_layers</code>) &#x2014;
 Contains precomputed hidden-states (key and values in the attention blocks) as computed by the model (see
 <code>past_key_values</code> output below). Can be used to speed up sequential decoding. The <code>input_ids</code> which have
@@ -377,8 +377,8 @@ configuration. Check out the <a href="/docs/transformers/pr_17761/en/main_classe
 sequence tokens in the vocabulary.</p>
 <p>If <code>past_key_values</code> is used, only <code>input_ids</code> that do not have their past calculated should be passed as
 <code>input_ids</code>.</p>
-<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.BloomForCausalLM.forward.past_key_values",description:`<strong>past_key_values</strong> (<code>Tuple[Tuple[torch.Tensor]]</code> of length <code>config.n_layers</code>) &#x2014;
 Contains precomputed hidden-states (key and values in the attention blocks) as computed by the model (see
 <code>past_key_values</code> output below). Can be used to speed up sequential decoding. The <code>input_ids</code> which have
@@ -460,8 +460,8 @@ configuration. Check out the <a href="/docs/transformers/pr_17761/en/main_classe
 sequence tokens in the vocabulary.</p>
 <p>If <code>past_key_values</code> is used, only <code>input_ids</code> that do not have their past calculated should be passed as
 <code>input_ids</code>.</p>
-<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.BloomForSequenceClassification.forward.past_key_values",description:`<strong>past_key_values</strong> (<code>Tuple[Tuple[torch.Tensor]]</code> of length <code>config.n_layers</code>) &#x2014;
 Contains precomputed hidden-states (key and values in the attention blocks) as computed by the model (see
 <code>past_key_values</code> output below). Can be used to speed up sequential decoding. The <code>input_ids</code> which have
@@ -532,8 +532,8 @@ configuration. Check out the <a href="/docs/transformers/pr_17761/en/main_classe
 sequence tokens in the vocabulary.</p>
 <p>If <code>past_key_values</code> is used, only <code>input_ids</code> that do not have their past calculated should be passed as
 <code>input_ids</code>.</p>
-<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.BloomForTokenClassification.forward.past_key_values",description:`<strong>past_key_values</strong> (<code>Tuple[Tuple[torch.Tensor]]</code> of length <code>config.n_layers</code>) &#x2014;
 Contains precomputed hidden-states (key and values in the attention blocks) as computed by the model (see
 <code>past_key_values</code> output below). Can be used to speed up sequential decoding. The <code>input_ids</code> which have
@@ -604,10 +604,10 @@ specified all the computation will be performed with the given <code>dtype</code
 <p><strong>Note that this only specifies the dtype of the computation and does not influence the dtype of model
 parameters.</strong></p>
 <p>If you wish to change the dtype of the model parameters, see <a href="/docs/transformers/pr_17761/en/main_classes/model#transformers.FlaxPreTrainedModel.to_fp16">to_fp16()</a> and
-<a href="/docs/transformers/pr_17761/en/main_classes/model#transformers.FlaxPreTrainedModel.to_bf16">to_bf16()</a>.`,name:"dtype"}],source:"https://github.com/huggingface/transformers/blob/vr_17761/src/transformers/models/bloom/modeling_flax_bloom.py#L670"}}),at=new U({props:{name:"__call__",anchor:"transformers.FlaxBloomModel.__call__",parameters:[{name:"input_ids",val:""},{name:"past_key_values",val:": dict = None"},{name:"attention_mask",val:" = None"},{name:"head_mask",val:" = None"},{name:"inputs_embeds",val:" = None"},{name:"params",val:": dict = None"},{name:"dropout_rng",val:": PRNGKey = None"},{name:"train",val:": bool = False"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"}],parametersDescription:[{anchor:"transformers.FlaxBloomModel.__call__.input_ids",description:`<strong>input_ids</strong> (<code>numpy.ndarray</code> of shape <code>(batch_size, input_ids_length)</code>) &#x2014;
+<a href="/docs/transformers/pr_17761/en/main_classes/model#transformers.FlaxPreTrainedModel.to_bf16">to_bf16()</a>.`,name:"dtype"}],source:"https://github.com/huggingface/transformers/blob/vr_17761/src/transformers/models/bloom/modeling_flax_bloom.py#L667"}}),at=new U({props:{name:"__call__",anchor:"transformers.FlaxBloomModel.__call__",parameters:[{name:"input_ids",val:""},{name:"past_key_values",val:": dict = None"},{name:"attention_mask",val:" = None"},{name:"head_mask",val:" = None"},{name:"inputs_embeds",val:" = None"},{name:"params",val:": dict = None"},{name:"dropout_rng",val:": PRNGKey = None"},{name:"train",val:": bool = False"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"}],parametersDescription:[{anchor:"transformers.FlaxBloomModel.__call__.input_ids",description:`<strong>input_ids</strong> (<code>numpy.ndarray</code> of shape <code>(batch_size, input_ids_length)</code>) &#x2014;
 <code>input_ids_length</code> = <code>sequence_length</code>. Indices of input sequence tokens in the vocabulary.</p>
-<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.FlaxBloomModel.__call__.attention_mask",description:`<strong>attention_mask</strong> (<code>numpy.ndarray</code> of shape <code>(batch_size, sequence_length)</code>, <em>optional</em>) &#x2014;
 Mask to avoid performing attention on padding token indices. Mask values selected in <code>[0, 1]</code>:</p>
 <ul>
@@ -622,7 +622,7 @@ Whether or not to return the attentions tensors of all attention layers. See <co
 tensors for more detail.`,name:"output_attentions"},{anchor:"transformers.FlaxBloomModel.__call__.output_hidden_states",description:`<strong>output_hidden_states</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
 Whether or not to return the hidden states of all layers. See <code>hidden_states</code> under returned tensors for
 more detail.`,name:"output_hidden_states"},{anchor:"transformers.FlaxBloomModel.__call__.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
-Whether or not to return a <a href="/docs/transformers/pr_17761/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17761/src/transformers/models/bloom/modeling_flax_bloom.py#L470",returnDescription:`
+Whether or not to return a <a href="/docs/transformers/pr_17761/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17761/src/transformers/models/bloom/modeling_flax_bloom.py#L467",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17761/en/main_classes/output#transformers.modeling_flax_outputs.FlaxBaseModelOutput"
 >transformers.modeling_flax_outputs.FlaxBaseModelOutput</a> or a tuple of
@@ -659,10 +659,10 @@ specified all the computation will be performed with the given <code>dtype</code
 <p><strong>Note that this only specifies the dtype of the computation and does not influence the dtype of model
 parameters.</strong></p>
 <p>If you wish to change the dtype of the model parameters, see <a href="/docs/transformers/pr_17761/en/main_classes/model#transformers.FlaxPreTrainedModel.to_fp16">to_fp16()</a> and
-<a href="/docs/transformers/pr_17761/en/main_classes/model#transformers.FlaxPreTrainedModel.to_bf16">to_bf16()</a>.`,name:"dtype"}],source:"https://github.com/huggingface/transformers/blob/vr_17761/src/transformers/models/bloom/modeling_flax_bloom.py#L737"}}),ft=new U({props:{name:"__call__",anchor:"transformers.FlaxBloomForCausalLM.__call__",parameters:[{name:"input_ids",val:""},{name:"past_key_values",val:": dict = None"},{name:"attention_mask",val:" = None"},{name:"head_mask",val:" = None"},{name:"inputs_embeds",val:" = None"},{name:"params",val:": dict = None"},{name:"dropout_rng",val:": PRNGKey = None"},{name:"train",val:": bool = False"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"}],parametersDescription:[{anchor:"transformers.FlaxBloomForCausalLM.__call__.input_ids",description:`<strong>input_ids</strong> (<code>numpy.ndarray</code> of shape <code>(batch_size, input_ids_length)</code>) &#x2014;
+<a href="/docs/transformers/pr_17761/en/main_classes/model#transformers.FlaxPreTrainedModel.to_bf16">to_bf16()</a>.`,name:"dtype"}],source:"https://github.com/huggingface/transformers/blob/vr_17761/src/transformers/models/bloom/modeling_flax_bloom.py#L734"}}),ft=new U({props:{name:"__call__",anchor:"transformers.FlaxBloomForCausalLM.__call__",parameters:[{name:"input_ids",val:""},{name:"past_key_values",val:": dict = None"},{name:"attention_mask",val:" = None"},{name:"head_mask",val:" = None"},{name:"inputs_embeds",val:" = None"},{name:"params",val:": dict = None"},{name:"dropout_rng",val:": PRNGKey = None"},{name:"train",val:": bool = False"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"}],parametersDescription:[{anchor:"transformers.FlaxBloomForCausalLM.__call__.input_ids",description:`<strong>input_ids</strong> (<code>numpy.ndarray</code> of shape <code>(batch_size, input_ids_length)</code>) &#x2014;
 <code>input_ids_length</code> = <code>sequence_length</code>. Indices of input sequence tokens in the vocabulary.</p>
-<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_17761/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_17761/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.FlaxBloomForCausalLM.__call__.attention_mask",description:`<strong>attention_mask</strong> (<code>numpy.ndarray</code> of shape <code>(batch_size, sequence_length)</code>, <em>optional</em>) &#x2014;
 Mask to avoid performing attention on padding token indices. Mask values selected in <code>[0, 1]</code>:</p>
 <ul>
@@ -677,7 +677,7 @@ Whether or not to return the attentions tensors of all attention layers. See <co
 tensors for more detail.`,name:"output_attentions"},{anchor:"transformers.FlaxBloomForCausalLM.__call__.output_hidden_states",description:`<strong>output_hidden_states</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
 Whether or not to return the hidden states of all layers. See <code>hidden_states</code> under returned tensors for
 more detail.`,name:"output_hidden_states"},{anchor:"transformers.FlaxBloomForCausalLM.__call__.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
-Whether or not to return a <a href="/docs/transformers/pr_17761/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17761/src/transformers/models/bloom/modeling_flax_bloom.py#L470",returnDescription:`
+Whether or not to return a <a href="/docs/transformers/pr_17761/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17761/src/transformers/models/bloom/modeling_flax_bloom.py#L467",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17761/en/main_classes/output#transformers.modeling_flax_outputs.FlaxMaskedLMOutput"
 >transformers.modeling_flax_outputs.FlaxMaskedLMOutput</a> or a tuple of
