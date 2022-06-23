@@ -12,9 +12,13 @@
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/index.mdx",
       "src/routes/converting_tensorflow_models.mdx",
+      "src/routes/perf_infer_gpu_many.mdx",
       "src/routes/perf_train_gpu_many.mdx",
       "src/routes/autoclass_tutorial.mdx",
+      "src/routes/perf_infer_gpu_one.mdx",
+      "src/routes/perf_infer_special.mdx",
       "src/routes/perf_train_gpu_one.mdx",
+      "src/routes/perf_train_special.mdx",
       "src/routes/pipeline_tutorial.mdx",
       "src/routes/tokenizer_summary.mdx",
       "src/routes/add_new_pipeline.mdx",
@@ -22,7 +26,9 @@
       "src/routes/troubleshooting.mdx",
       "src/routes/create_a_model.mdx",
       "src/routes/pad_truncation.mdx",
+      "src/routes/perf_infer_cpu.mdx",
       "src/routes/perf_train_cpu.mdx",
+      "src/routes/perf_train_tpu.mdx",
       "src/routes/add_new_model.mdx",
       "src/routes/custom_models.mdx",
       "src/routes/model_sharing.mdx",
@@ -134,6 +140,7 @@
       "src/routes/model_doc/canine.mdx",
       "src/routes/model_doc/funnel.mdx",
       "src/routes/model_doc/hubert.mdx",
+      "src/routes/model_doc/longt5.mdx",
       "src/routes/model_doc/lxmert.mdx",
       "src/routes/model_doc/marian.mdx",
       "src/routes/model_doc/plbart.mdx",
@@ -187,6 +194,7 @@
       "src/routes/model_doc/opt.mdx",
       "src/routes/model_doc/rag.mdx",
       "src/routes/model_doc/sew.mdx",
+      "src/routes/model_doc/ul2.mdx",
       "src/routes/model_doc/van.mdx",
       "src/routes/model_doc/vit.mdx",
       "src/routes/model_doc/xlm.mdx",
@@ -260,6 +268,16 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/perf_infer_gpu_many.mdx": {
+    "file": "pages/perf_infer_gpu_many.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_gpu_many.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
   "src/routes/perf_train_gpu_many.mdx": {
     "file": "pages/perf_train_gpu_many.mdx-hf-doc-builder.js",
     "src": "src/routes/perf_train_gpu_many.mdx",
@@ -267,6 +285,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
     ]
@@ -284,6 +303,26 @@
       "_Markdown-hf-doc-builder.js"
     ]
   },
+  "src/routes/perf_infer_gpu_one.mdx": {
+    "file": "pages/perf_infer_gpu_one.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_gpu_one.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_infer_special.mdx": {
+    "file": "pages/perf_infer_special.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_special.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
   "src/routes/perf_train_gpu_one.mdx": {
     "file": "pages/perf_train_gpu_one.mdx-hf-doc-builder.js",
     "src": "src/routes/perf_train_gpu_one.mdx",
@@ -294,6 +333,17 @@
       "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_train_special.mdx": {
+    "file": "pages/perf_train_special.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_train_special.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
     ]
   },
   "src/routes/pipeline_tutorial.mdx": {
@@ -379,6 +429,16 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
+  "src/routes/perf_infer_cpu.mdx": {
+    "file": "pages/perf_infer_cpu.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_cpu.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
   "src/routes/perf_train_cpu.mdx": {
     "file": "pages/perf_train_cpu.mdx-hf-doc-builder.js",
     "src": "src/routes/perf_train_cpu.mdx",
@@ -388,6 +448,17 @@
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_train_tpu.mdx": {
+    "file": "pages/perf_train_tpu.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_train_tpu.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
     ]
   },
   "src/routes/add_new_model.mdx": {
@@ -750,6 +821,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
@@ -1855,6 +1927,20 @@
       "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/longt5.mdx": {
+    "file": "pages/model_doc/longt5.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/longt5.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/lxmert.mdx": {
     "file": "pages/model_doc/lxmert.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/lxmert.mdx",
@@ -2572,6 +2658,16 @@
       "_CodeBlock-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/model_doc/ul2.mdx": {
+    "file": "pages/model_doc/ul2.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/ul2.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
     ]
   },
   "src/routes/model_doc/van.mdx": {
