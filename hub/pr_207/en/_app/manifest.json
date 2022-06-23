@@ -63,6 +63,7 @@
       "src/routes/speechbrain.mdx",
       "src/routes/tensorboard.mdx",
       "src/routes/models-faq.mdx",
+      "src/routes/ml-agents.mdx",
       "src/routes/allennlp.mdx",
       "src/routes/asteroid.mdx",
       "src/routes/datasets.mdx",
@@ -654,6 +655,17 @@
     "imports": [
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/ml-agents.mdx": {
+    "file": "pages/ml-agents.mdx-hf-doc-builder.js",
+    "src": "src/routes/ml-agents.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/allennlp.mdx": {
