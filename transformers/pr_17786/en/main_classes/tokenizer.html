@@ -589,6 +589,7 @@ If set, will return tensors instead of list of python integers. Acceptable value
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">organization<span class="opacity-60">: typing.Optional[str] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_shard_size<span class="opacity-60">: typing.Union[int, str, NoneType] = &#39;10GB&#39;</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**model_card_kwargs<span class="opacity-60"></span></span>
 				</span>
 			<span>)</span>
@@ -1440,6 +1441,7 @@ If set, will return tensors instead of list of python integers. Acceptable value
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">organization<span class="opacity-60">: typing.Optional[str] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">private<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">use_auth_token<span class="opacity-60">: typing.Union[bool, str, NoneType] = None</span></span>
+				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">max_shard_size<span class="opacity-60">: typing.Union[int, str, NoneType] = &#39;10GB&#39;</span></span>
 				</span><span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">**model_card_kwargs<span class="opacity-60"></span></span>
 				</span>
 			<span>)</span>
@@ -1818,7 +1820,7 @@ initialization.<!-- HTML_TAG_END -->
 					</li></ul>
 		
 		</div></div>
-<p>Holds the output of the <a href="/docs/transformers/pr_17786/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__"><strong>call</strong>()</a>,
+<p>Holds the output of the <a href="/docs/transformers/pr_17786/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__"><strong>call</strong>()</a>,
 <a href="/docs/transformers/pr_17786/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode_plus">encode_plus()</a> and
 <a href="/docs/transformers/pr_17786/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.batch_encode_plus">batch_encode_plus()</a> methods (tokens, attention_masks, etc).</p>
 <p>This class is derived from a python dictionary and can be used as a dictionary. In addition, this class exposes
@@ -2375,10 +2377,10 @@ tokenizer are mapped to <code>None</code> and other tokens are mapped to the ind
 <p>Return a list mapping the tokens to their actual word in the initial sentence for a fast tokenizer.</p></div></div>
 
 
-		<script type="module" data-hydrate="1v9095b">
+		<script type="module" data-hydrate="13qrqib">
 		import { start } from "/docs/transformers/pr_17786/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1v9095b"]').parentNode,
+			target: document.querySelector('[data-hydrate="13qrqib"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17786/en","assets":"/docs/transformers/pr_17786/en"},
 			session: {},
 			route: false,
