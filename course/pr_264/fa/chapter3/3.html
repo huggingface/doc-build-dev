@@ -31,9 +31,7 @@
 <iframe class="w-full xl:w-4/6 h-80" src="https://www.youtube-nocookie.com/embed/nvBXf7s7vTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>ترنسفورمرهای هاگینگ‌فِیس کلاسی به نام <code>Trainer</code> دارند که برای کمک به کوک کردن هر مدل از پیش تعلیم دیده‌ای که روی داده شما ارائه می‌دهد به کار می‌رود. به محض اینکه همه کارهای پیش‌پردازش داده در بخش آخر را انجام دادید، فقط چند مرحله باقی‌مانده تا تعریف <code>Trainer</code> دارید. سخت ترین قسمت، احتمالا آماده‌سازی محیط جهت اجراي <span dir="ltr"><code>Trainer.train()</code></span> می‌باشد، چرا که این تابع روی CPU بسیار کند اجرا می‌شود. اگر GPU ندارید، می‌توانید از GPU یا TPUهای مجانی روی <a href="https://colab.research.google.com/" rel="nofollow">گوگل کولَب</a> استفاده کنید.</p>
 <p>نمونه کدهای زیر فرض می‌کنند که شما مثال‌های بخش قبل را از پیش اجرا کرده‌اید. این یک خلاصه کوتاه است جهت یادآوری آنچه نیاز دارید:</p>
-<p>&lt;div dir=“ltr”&gt;</p>
-
-	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+<div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
@@ -161,13 +159,13 @@ trainer = Trainer(
 <p>این پایان مقدمه‌ای بر کوک کردن با استفاده از <code>Trainer</code> API می‌باشد. در <a href="/course/chapter7">فصل ۷</a> مثالی برای نشان دادن چگونگی انجام این کار برای معمول‌ترین مسئله‌های NLP ارائه خواهیم کرد، اما اکنون اجازه دهید ببینیم چگونه همین کار را صرفا با استفاده از PyTorch انجام دهیم. </p>
 
 
-<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>اتحان کنید!</strong> با استفاده از پردازش داده‌ای که در بخش ۲ انجام دادید، مدلی را روی دیتاسِت GLUE SST-2 کوک کنید.</p></div>
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>اتحان کنید!</strong> با استفاده از پردازش داده‌ای که در بخش ۲ انجام دادید، مدلی را روی دیتاسِت GLUE SST-2 کوک کنید.</p></div></div>
 
 
-		<script type="module" data-hydrate="3glx1a">
+		<script type="module" data-hydrate="j7mw06">
 		import { start } from "/docs/course/pr_264/fa/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="3glx1a"]').parentNode,
+			target: document.querySelector('[data-hydrate="j7mw06"]').parentNode,
 			paths: {"base":"/docs/course/pr_264/fa","assets":"/docs/course/pr_264/fa"},
 			session: {},
 			route: false,
