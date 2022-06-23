@@ -16,7 +16,7 @@
 	<span>Using ML-Agents at Hugging Face
 	</span></h1>
 
-<p><code>ml-agents</code> is an open-source toolkit that enables games and simulations made with Unity <strong>to serve as environments for training intelligent agents.</strong></p>
+<p><code>ml-agents</code> is an open-source toolkit that enables games and simulations made with Unity to serve as environments for training intelligent agents.</p>
 <h2 class="relative group"><a id="exploring-mlagents-in-the-hub" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#exploring-mlagents-in-the-hub"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Exploring ML-Agents in the Hub
 	</span></h2>
@@ -27,71 +27,72 @@
 <li>Metadata tags that help for discoverability.</li>
 <li>Tensorboard summary files to visualize the training metrics.</li>
 <li>A link to the Spaces web demo where you can visualize your agent playing in your browser.</li></ol>
-<img src="./assets/ml-agents/ml-agents-demo.gif" alt="ML-Agents demo on Spaces">
+<img src="../assets/ml-agents/ml-agents-demo.gif" alt="ML-Agents demo on Spaces">
 <h2 class="relative group"><a id="install-the-library" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#install-the-library"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Install the library
 	</span></h2>
 
 To install the `ml-agents` library, you need to clone the repo:
-```
-# Clone the repository
-git clone https://github.com/huggingface/ml-agents/
-<h1 class="relative group"><a id="go-inside-the-repository-and-install-the-package" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#go-inside-the-repository-and-install-the-package"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span>Go inside the repository and install the package
-	</span></h1>
 
-<p>cd ml-agents
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-comment"># Clone the repository</span>
+git <span class="hljs-built_in">clone</span> https://github.com/huggingface/ml-agents/
+
+<span class="hljs-comment"># Go inside the repository and install the package</span>
+<span class="hljs-built_in">cd</span> ml-agents
 pip3 install -e ./ml-agents-envs
-pip3 install -e ./ml-agents</p>
+pip3 install -e ./ml-agents<!-- HTML_TAG_END --></pre></div>
+<h2 class="relative group"><a id="using-existing-models" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#using-existing-models"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Using existing models
+	</span></h2>
+
+You can simply download a model from the Hub using `mlagents-load-from-hf`
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->
-&lt;h2 id=<span class="hljs-string">&quot;using-existing-models&quot;</span>&gt;Using existing models&lt;/h2&gt;
-You can simply download <span class="hljs-keyword">a</span> model <span class="hljs-built_in">from</span> <span class="hljs-keyword">the</span> Hub <span class="hljs-keyword">using</span> `mlagents-<span class="hljs-built_in">load</span>-<span class="hljs-built_in">from</span>-hf`
-<!-- HTML_TAG_END --></pre></div>
-<p>mlagents-load-from-hf —repo-id=“ThomasSimonini/MLAgents-Pyramids —local-dir=“./downloads”</p>
+	<pre><!-- HTML_TAG_START -->mlagents-load-from-hf <span class="hljs-params">--repo-id=</span><span class="hljs-string">&quot;ThomasSimonini/MLAgents-Pyramids --local-dir=&quot;</span><span class="hljs-string">./downloads</span><span class="hljs-string">&quot;</span><!-- HTML_TAG_END --></pre></div>
+<p>You need to define two parameters:</p>
+<ul><li><code>--repo-id</code>: the name of the Hugging Face repo you want to download.</li>
+<li><code>--local-dir</code>: the path to download the model.</li></ul>
+<h2 class="relative group"><a id="visualize-an-agent-playing" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#visualize-an-agent-playing"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Visualize an agent playing
+	</span></h2>
+
+You can easily watch any `ml-agent` playing directly in your browser:
+<ol><li>Go to your model repo.</li>
+<li>In the <code>Watch Your Agent Play</code> section, click on the link.</li>
+<li>In the demo, on step 1, choose your model repository, which is the model id.</li>
+<li>In step 2, choose what model you want to replay.</li></ol>
+<h2 class="relative group"><a id="sharing-your-models" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#sharing-your-models"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Sharing your models
+	</span></h2>
+
+You can easily upload your models using `mlagents-push-to-hf`:
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->You need <span class="hljs-built_in">to</span> define <span class="hljs-literal">two</span> parameters:
-- `<span class="hljs-comment">-- repo-id`: the name of the Hugging Face repo you want to download.</span>
-- `<span class="hljs-comment">--local-dir`: the path to download the model.</span>
+	<pre><!-- HTML_TAG_START -->mlagents-push-to-hf --run-id<span class="hljs-operator">=</span><span class="hljs-string">&quot;First Training&quot;</span> --local-dir<span class="hljs-operator">=</span><span class="hljs-string">&quot;results/First Training&quot;</span> --repo-id<span class="hljs-operator">=</span><span class="hljs-string">&quot;ThomasSimonini/MLAgents-Pyramids&quot;</span> --commit-message<span class="hljs-operator">=</span><span class="hljs-string">&quot;Pyramids&quot;</span><!-- HTML_TAG_END --></pre></div>
+<p>You need to define four parameters:</p>
+<ul><li><code>--run-id</code>: the name of the training run id.</li>
+<li><code>--local-dir</code>: where the model was saved.</li>
+<li><code>--repo-id</code>: the name of the Hugging Face repo you want to create or update. It’s <code>&lt;your huggingface username&gt;/&lt;the repo name&gt;</code>.</li>
+<li><code>--commit-message</code>.</li></ul>
+<h2 class="relative group"><a id="additional-resources" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#additional-resources"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Additional resources
+	</span></h2>
 
-&lt;h2 id=<span class="hljs-string">&quot;visualize-an-agent-playing&quot;</span>&gt;Visualize <span class="hljs-keyword">an</span> agent playing&lt;/h2&gt;
-You can easily watch <span class="hljs-keyword">any</span> `ml-agent` playing directly <span class="hljs-keyword">in</span> your browser:
-
-<span class="hljs-number">1.</span> Go <span class="hljs-built_in">to</span> your model repo.
-<span class="hljs-number">2.</span> In <span class="hljs-keyword">the</span> `Watch Your Agent Play` section, click <span class="hljs-keyword">on</span> <span class="hljs-title">the</span> <span class="hljs-title">link</span>.
-<span class="hljs-number">3.</span> In <span class="hljs-keyword">the</span> demo, <span class="hljs-keyword">on</span> <span class="hljs-title">step</span> <span class="hljs-title">1</span>, <span class="hljs-title">choose</span> <span class="hljs-title">your</span> <span class="hljs-title">model</span> <span class="hljs-title">repository</span>, <span class="hljs-title">which</span> <span class="hljs-title">is</span> <span class="hljs-title">the</span> <span class="hljs-title">model</span> <span class="hljs-title">id</span>.
-<span class="hljs-number">4.</span> In step <span class="hljs-number">2</span>, choose what model you want <span class="hljs-built_in">to</span> replay.
-
-&lt;h2 id=<span class="hljs-string">&quot;sharing-your-models&quot;</span>&gt;Sharing your models&lt;/h2&gt;
-You can easily upload your models <span class="hljs-keyword">using</span> `mlagents-push-<span class="hljs-built_in">to</span>-hf`<!-- HTML_TAG_END --></pre></div>
-<p>mlagents-push-to-hf —run-id=“First Training” —local-dir=“results/First Training” —repo-id=“ThomasSimonini/MLAgents-Pyramids” —commit-message=“Pyramids”</p>
-
-	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
-	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
-	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->You need to define four parameters:
-<span class="hljs-bullet">-</span> <span class="hljs-code">`--run-id`</span>: the name of the training run id.
-<span class="hljs-bullet">-</span> <span class="hljs-code">`--local-dir`</span>: where the model was saved.
-<span class="hljs-bullet">-</span> <span class="hljs-code">`-- repo-id`</span>: the name of the Hugging Face repo you want to create or update. It’s <span class="hljs-code">`&lt;your huggingface username&gt;/&lt;the repo name&gt;`</span>
-<span class="hljs-bullet">-</span> <span class="hljs-code">`--commit-message`</span>
+- Hugging Face ML-Agents [documentation](https://github.com/huggingface/ml-agents)
+- Official Unity ML-Agents Spaces [demos](https://huggingface.co/unity)
 
 
-<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;additional-resources&quot;</span>&gt;</span></span>Additional resources<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span>
-<span class="hljs-bullet">-</span> Hugging Face ML-Agents [<span class="hljs-string">documentation</span>](<span class="hljs-link">https://github.com/huggingface/ml-agents</span>)
-<span class="hljs-bullet">-</span> Official Unity ML-Agents Spaces [<span class="hljs-string">demos</span>](<span class="hljs-link">https://huggingface.co/unity</span>)
-<!-- HTML_TAG_END --></pre></div>
-
-
-		<script type="module" data-hydrate="1avt44">
+		<script type="module" data-hydrate="pyhxnl">
 		import { start } from "/docs/hub/pr_207/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1avt44"]').parentNode,
+			target: document.querySelector('[data-hydrate="pyhxnl"]').parentNode,
 			paths: {"base":"/docs/hub/pr_207/en","assets":"/docs/hub/pr_207/en"},
 			session: {},
 			route: false,
