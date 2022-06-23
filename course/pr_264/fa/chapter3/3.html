@@ -103,7 +103,7 @@ trainer = Trainer(
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->(<span class="hljs-number">408</span>, <span class="hljs-number">2</span>) (<span class="hljs-number">408</span>,)<!-- HTML_TAG_END --></pre></div></div>
 <p>خروجی تابع <span dir="ltr"><code>predict()</code></span> تاپل نام گذاری شده دیگری شامل سه فیلد: <code>predictions</code>، <code>label_ids</code> و <code>metrics</code> می‌باشد. فیلد <code>metrics</code> فقط شامل هزینه داده عبور کرده و برخی معیارهای زمان (پیش‌بینی‌، در مجموع و به طور میانگین، چقدر طول کشیده) می‌باشد. به محض این که تابع <span dir="ltr"><code>compute_metrics()</code></span> را کامل کرده و آن را به <code>Trainer</code> ارسال کنیم، آن فیلد متریک‌های بازگشتی از <span dir="ltr"><code>compute_metrics()</code></span> را نیز در بر خواهد داشت.</p>
-<p>همانطور که می‌بینید، <code>predictions</code> آرایه‌ای دو بعدی است با شکل <span dir="ltr">۴۰۸ x ۲</span> (که ۴۰۸ تعداد عناصر در دیتاسِت مورد استفاده‌ ما می‌باشد). این ها لاجیت‌های هریک از عناصر دیتاسِتی هستند که ما به تابع <span dir="ltr"><code>predict()</code></span> ارسال کردیم (همانطور که در <a href="/course/chapter2">فصل قبل</a> دیدید، همه مدل‌های ترَنسفورمِر لاجیت‌ها را باز می‌گردانند). برای تبدیل لاجیت‌ها به پیش‌بینی‌‌هایی که بتوانیم با برچسب‌هایمان مقایسه کنیم، نیاز داریم اندیس مقدار بیشینه روی بعد دوم را برداریم: </p>
+<p>همانطور که می‌بینید، <code>predictions</code> آرایه‌ای دو بعدی است با شکل <span dir="ltr">۴۰۸ x ۲</span> (که ۴۰۸ تعداد عناصر در دیتاسِت مورد استفاده‌ ما می‌باشد). این ها logits مربوط به هریک از عناصر دیتاسِتی هستند که ما به تابع <span dir="ltr"><code>predict()</code></span> ارسال کردیم (همانطور که در <a href="/course/chapter2">فصل قبل</a> دیدید، همه مدل‌های ترَنسفورمِر logits را باز می‌گردانند). برای تبدیل logits به پیش‌بینی‌‌هایی که بتوانیم با برچسب‌هایمان مقایسه کنیم، نیاز داریم اندیس مقدار بیشینه روی بعد دوم را برداریم: </p>
 <div dir="ltr"><div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
@@ -162,10 +162,10 @@ trainer = Trainer(
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>اتحان کنید!</strong> با استفاده از پردازش داده‌ای که در بخش ۲ انجام دادید، مدلی را روی دیتاسِت GLUE SST-2 کوک کنید.</p></div></div>
 
 
-		<script type="module" data-hydrate="j7mw06">
+		<script type="module" data-hydrate="ja2a7d">
 		import { start } from "/docs/course/pr_264/fa/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="j7mw06"]').parentNode,
+			target: document.querySelector('[data-hydrate="ja2a7d"]').parentNode,
 			paths: {"base":"/docs/course/pr_264/fa","assets":"/docs/course/pr_264/fa"},
 			session: {},
 			route: false,
