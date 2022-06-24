@@ -12,9 +12,13 @@
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/index.mdx",
       "src/routes/converting_tensorflow_models.mdx",
+      "src/routes/perf_infer_gpu_many.mdx",
       "src/routes/perf_train_gpu_many.mdx",
       "src/routes/autoclass_tutorial.mdx",
+      "src/routes/perf_infer_gpu_one.mdx",
+      "src/routes/perf_infer_special.mdx",
       "src/routes/perf_train_gpu_one.mdx",
+      "src/routes/perf_train_special.mdx",
       "src/routes/pipeline_tutorial.mdx",
       "src/routes/tokenizer_summary.mdx",
       "src/routes/add_new_pipeline.mdx",
@@ -24,6 +28,7 @@
       "src/routes/pad_truncation.mdx",
       "src/routes/perf_infer_cpu.mdx",
       "src/routes/perf_train_cpu.mdx",
+      "src/routes/perf_train_tpu.mdx",
       "src/routes/add_new_model.mdx",
       "src/routes/custom_models.mdx",
       "src/routes/model_sharing.mdx",
@@ -120,6 +125,7 @@
       "src/routes/model_doc/wav2vec2.mdx",
       "src/routes/model_doc/barthez.mdx",
       "src/routes/model_doc/bartpho.mdx",
+      "src/routes/model_doc/codegen.mdx",
       "src/routes/model_doc/deberta.mdx",
       "src/routes/model_doc/electra.mdx",
       "src/routes/model_doc/gpt_neo.mdx",
@@ -150,6 +156,7 @@
       "src/routes/model_doc/mctct.mdx",
       "src/routes/model_doc/mluke.mdx",
       "src/routes/model_doc/mpnet.mdx",
+      "src/routes/model_doc/nezha.mdx",
       "src/routes/model_doc/realm.mdx",
       "src/routes/model_doc/sew-d.mdx",
       "src/routes/model_doc/tapas.mdx",
@@ -263,6 +270,16 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/perf_infer_gpu_many.mdx": {
+    "file": "pages/perf_infer_gpu_many.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_gpu_many.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
   "src/routes/perf_train_gpu_many.mdx": {
     "file": "pages/perf_train_gpu_many.mdx-hf-doc-builder.js",
     "src": "src/routes/perf_train_gpu_many.mdx",
@@ -270,6 +287,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
     ]
@@ -287,6 +305,26 @@
       "_Markdown-hf-doc-builder.js"
     ]
   },
+  "src/routes/perf_infer_gpu_one.mdx": {
+    "file": "pages/perf_infer_gpu_one.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_gpu_one.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_infer_special.mdx": {
+    "file": "pages/perf_infer_special.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_special.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
   "src/routes/perf_train_gpu_one.mdx": {
     "file": "pages/perf_train_gpu_one.mdx-hf-doc-builder.js",
     "src": "src/routes/perf_train_gpu_one.mdx",
@@ -297,6 +335,17 @@
       "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_train_special.mdx": {
+    "file": "pages/perf_train_special.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_train_special.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
     ]
   },
   "src/routes/pipeline_tutorial.mdx": {
@@ -401,6 +450,17 @@
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_train_tpu.mdx": {
+    "file": "pages/perf_train_tpu.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_train_tpu.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
     ]
   },
   "src/routes/add_new_model.mdx": {
@@ -763,6 +823,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
@@ -1661,6 +1722,20 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/codegen.mdx": {
+    "file": "pages/model_doc/codegen.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/codegen.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/deberta.mdx": {
     "file": "pages/model_doc/deberta.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/deberta.mdx",
@@ -2062,6 +2137,20 @@
   "src/routes/model_doc/mpnet.mdx": {
     "file": "pages/model_doc/mpnet.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/mpnet.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/model_doc/nezha.mdx": {
+    "file": "pages/model_doc/nezha.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/nezha.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
