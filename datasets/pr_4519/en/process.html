@@ -25,8 +25,8 @@
 <li>Concatenate datasets.</li>
 <li>Apply a custom formatting transform.</li>
 <li>Save and export processed datasets.</li></ul>
-<p>For more details specific to processing other dataset modalities, take a look at the <a href="./audio_process">process audio dataset guide</a>, the <a href="./image_process">process image dataset guide</a> or the <a href="./nlp_process">process text dataset guide</a>.</p>
-<p>The examples use the MRPC dataset, but feel free to load any dataset of your choice and following along!</p>
+<p>For more details specific to processing other dataset modalities, take a look at the <a href="./audio_process">process audio dataset guide</a>, the <a href="./image_process">process image dataset guide</a>, or the <a href="./nlp_process">process text dataset guide</a>.</p>
+<p>The examples in this guide use the MRPC dataset, but feel free to load any dataset of your choice and follow along!</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -112,7 +112,7 @@
 	<span>Split
 	</span></h3>
 
-<p>The <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.train_test_split">train_test_split()</a> function creates train and test splits, if your dataset doesn’t already have them. This allows you to adjust the relative proportions or absolute number of samples in each split. In the example below, use the <code>test_size</code> parameter to create a test split that is 10% of the original dataset:</p>
+<p>The <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.train_test_split">train_test_split()</a> function creates train and test splits if your dataset doesn’t already have them. This allows you to adjust the relative proportions or an absolute number of samples in each split. In the example below, use the <code>test_size</code> parameter to create a test split that is 10% of the original dataset:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -140,7 +140,7 @@ Dataset({
     features: [<span class="hljs-string">&#x27;text&#x27;</span>, <span class="hljs-string">&#x27;label&#x27;</span>],
     num_rows: <span class="hljs-number">25000</span>
 })<!-- HTML_TAG_END --></pre></div>
-<p>After sharding the dataset into four chunks, the first shard only has 6250 examples:</p>
+<p>After sharding the dataset into four chunks, the first shard will only have 6250 examples:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -183,7 +183,7 @@ Dataset({
 	<span>Remove
 	</span></h3>
 
-<p>When you need to remove one or more columns, provide the name of the column to remove to the <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.remove_columns">remove_columns()</a> function. Remove more than one column by providing a list of column names:</p>
+<p>When you need to remove one or more columns, provide the column name to remove to the <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.remove_columns">remove_columns()</a> function. Remove more than one column by providing a list of column names:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -243,7 +243,7 @@ Dataset({
 	<span>Flatten
 	</span></h3>
 
-<p>Sometimes a column can be a nested structure of several types. Use the <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.flatten">flatten()</a> function to extract the subfields into their own separate columns. Take a look at the nested structure below from the SQuAD dataset:</p>
+<p>Sometimes a column can be a nested structure of several types. Take a look at the nested structure below from the SQuAD dataset:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -256,7 +256,7 @@ Dataset({
 <span class="hljs-string">&#x27;id&#x27;</span>: Value(dtype=<span class="hljs-string">&#x27;string&#x27;</span>, <span class="hljs-built_in">id</span>=<span class="hljs-literal">None</span>),
 <span class="hljs-string">&#x27;question&#x27;</span>: Value(dtype=<span class="hljs-string">&#x27;string&#x27;</span>, <span class="hljs-built_in">id</span>=<span class="hljs-literal">None</span>),
 <span class="hljs-string">&#x27;title&#x27;</span>: Value(dtype=<span class="hljs-string">&#x27;string&#x27;</span>, <span class="hljs-built_in">id</span>=<span class="hljs-literal">None</span>)}<!-- HTML_TAG_END --></pre></div>
-<p>The <code>answers</code> field contains two subfields: <code>text</code> and <code>answer_start</code>. Flatten them with the <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.flatten">flatten()</a> function:</p>
+<p>The <code>answers</code> field contains two subfields: <code>text</code> and <code>answer_start</code>. Use the <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.flatten">flatten()</a> function to extract the subfields into their own separate columns:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -356,7 +356,7 @@ Dataset({
 	<span>Batch processing
 	</span></h3>
 
-<p>The <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.map">map()</a> function also supports working with batches of examples. Operate on batches by setting <code>batched=True</code>. The default batch size is 1000, but you can adjust it with the <code>batch_size</code> parameter. Batch processing enables interesting applications such as splitting long sentences into shorter chunks and data augmentation.</p>
+<p>The <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.map">map()</a> function supports working with batches of examples. Operate on batches by setting <code>batched=True</code>. The default batch size is 1000, but you can adjust it with the <code>batch_size</code> parameter. Batch processing enables interesting applications such as splitting long sentences into shorter chunks and data augmentation.</p>
 <h4 class="relative group"><a id="split-long-examples" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#split-long-examples"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Split long examples
 	</span></h4>
@@ -406,7 +406,7 @@ Dataset(schema: {<span class="hljs-string">&#x27;chunks&#x27;</span>: <span clas
 	<span>Data augmentation
 	</span></h4>
 
-<p>Another application is data augmentation. The following example generates additional words for a masked token in a sentence.</p>
+<p>The <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.map">map()</a> function could also be used for data augmentation. The following example generates additional words for a masked token in a sentence.</p>
 <p>Load and use the <a href="https://huggingface.co/roberta-base" rel="nofollow">RoBERTA</a> model in 🤗 Transformer’s <a href="https://huggingface.co/transformers/main_classes/pipelines#transformers.FillMaskPipeline" rel="nofollow">FillMaskPipeline</a>:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -450,7 +450,7 @@ Dataset(schema: {<span class="hljs-string">&#x27;chunks&#x27;</span>: <span clas
  <span class="hljs-string">&quot;Yucaipa owned Dominick&#x27;s before selling the chain to Safeway in 1998 for $ 2.5 billion.&quot;</span>,
  <span class="hljs-string">&#x27;Yucaipa owned Dominick Pizza before selling the chain to Safeway in 1998 for $ 2.5 billion.&#x27;</span>
 ]<!-- HTML_TAG_END --></pre></div>
-<p>For each original sentence, RoBERTA augmented a random word with three alternatives. In the first sentence, the word <code>distorting</code> is supplemented by <code>withholding</code>, <code>suppressing</code>, and <code>destroying</code>.</p>
+<p>For each original sentence, RoBERTA augmented a random word with three alternatives. The original word <code>distorting</code> is supplemented by <code>withholding</code>, <code>suppressing</code>, and <code>destroying</code>.</p>
 <h3 class="relative group"><a id="process-multiple-splits" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#process-multiple-splits"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Process multiple splits
 	</span></h3>
@@ -618,10 +618,10 @@ Dataset(schema: {<span class="hljs-string">&#x27;chunks&#x27;</span>: <span clas
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>encoded_dataset.to_csv(<span class="hljs-string">&quot;path/of/my/dataset.csv&quot;</span>)<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="ulfr0c">
+		<script type="module" data-hydrate="15o9w6n">
 		import { start } from "/docs/datasets/pr_4519/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="ulfr0c"]').parentNode,
+			target: document.querySelector('[data-hydrate="15o9w6n"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_4519/en","assets":"/docs/datasets/pr_4519/en"},
 			session: {},
 			route: false,
