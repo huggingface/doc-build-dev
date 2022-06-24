@@ -1,4 +1,4 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;utilities&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;huggingface_hub.utils.logging.get_verbosity&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;huggingface_hub.utils.logging.get_logger&quot;,&quot;title&quot;:&quot;Repo-specific helper methods&quot;},{&quot;local&quot;:&quot;huggingface_hub.Pagination&quot;,&quot;title&quot;:&quot;Pagintaion utilities&quot;}],&quot;title&quot;:&quot;Controlling the logging of `huggingface_hub`&quot;},{&quot;local&quot;:&quot;huggingface_hub.utils.RepositoryNotFoundError&quot;,&quot;title&quot;:&quot;Custom errors&quot;}],&quot;title&quot;:&quot;Utilities&quot;}" data-svelte="svelte-1phssyn">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;utilities&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;huggingface_hub.utils.logging.get_verbosity&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;huggingface_hub.utils.logging.get_logger&quot;,&quot;title&quot;:&quot;Repo-specific helper methods&quot;}],&quot;title&quot;:&quot;Controlling the logging of `huggingface_hub`&quot;},{&quot;local&quot;:&quot;huggingface_hub.Pagination&quot;,&quot;title&quot;:&quot;Pagination utilities&quot;},{&quot;local&quot;:&quot;huggingface_hub.utils.RepositoryNotFoundError&quot;,&quot;title&quot;:&quot;Custom errors&quot;}],&quot;title&quot;:&quot;Utilities&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_930/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_930/en/_app/start-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/huggingface_hub/pr_930/en/_app/chunks/vendor-hf-doc-builder.js">
@@ -256,9 +256,9 @@ to be directly accessed by library users.</p>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>logger = get_logger(__file__)
 <span class="hljs-meta">&gt;&gt;&gt; </span>logger.set_verbosity_info()<!-- HTML_TAG_END --></pre></div></div></div>
-<h3 class="relative group"><a id="huggingface_hub.Pagination" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#huggingface_hub.Pagination"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span>Pagintaion utilities
-	</span></h3>
+<h2 class="relative group"><a id="huggingface_hub.Pagination" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#huggingface_hub.Pagination"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Pagination utilities
+	</span></h2>
 
 <div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
 
@@ -276,7 +276,24 @@ to be directly accessed by library users.</p>
 
 	
 	<div class="!mb-10 relative docstring-details ">
-		
+		<p class="flex items-center font-semibold !mt-2 !mb-2 text-gray-800">Parameters <span class="flex-auto border-t-2 border-gray-100 dark:border-gray-700 ml-3"></span></p>
+			<ul class="px-2"><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="huggingface_hub.Pagination.value" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#huggingface_hub.Pagination.value"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+							<span><!-- HTML_TAG_START --><strong>value</strong> (<code>list</code>) &#x2014;
+The list of resources retrieved from the Hub API.<!-- HTML_TAG_END -->
+							</span></span>
+					</li><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="huggingface_hub.Pagination.total" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#huggingface_hub.Pagination.total"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+							<span><!-- HTML_TAG_START --><strong>total</strong> (<code>int</code>) &#x2014;
+The total number of resources available.<!-- HTML_TAG_END -->
+							</span></span>
+					</li><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="huggingface_hub.Pagination.page_num" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#huggingface_hub.Pagination.page_num"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+							<span><!-- HTML_TAG_START --><strong>page_num</strong> (<code>int</code>) &#x2014;
+The page index.<!-- HTML_TAG_END -->
+							</span></span>
+					</li><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="huggingface_hub.Pagination.next_page" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#huggingface_hub.Pagination.next_page"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+							<span><!-- HTML_TAG_START --><strong>next_page</strong> (<code>function</code>) &#x2014;
+A callable returning the next page of resources.<!-- HTML_TAG_END -->
+							</span></span>
+					</li></ul>
 		
 		</div></div>
 <p>Utility to manage pagination on the Hub APIs</p></div>
@@ -383,10 +400,10 @@ but an invalid filename.</p>
 huggingface_hub.utils._errors.EntryNotFoundError: <span class="hljs-number">404</span> Client Error: Entry Not Found <span class="hljs-keyword">for</span> url: &lt;url&gt;<!-- HTML_TAG_END --></pre></div></div></div>
 
 
-		<script type="module" data-hydrate="mz1tiu">
+		<script type="module" data-hydrate="14l6rce">
 		import { start } from "/docs/huggingface_hub/pr_930/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="mz1tiu"]').parentNode,
+			target: document.querySelector('[data-hydrate="14l6rce"]').parentNode,
 			paths: {"base":"/docs/huggingface_hub/pr_930/en","assets":"/docs/huggingface_hub/pr_930/en"},
 			session: {},
 			route: false,
