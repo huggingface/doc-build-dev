@@ -1422,7 +1422,7 @@ eager mode, in graph mode the value will always be set to True.`,name:"return_di
 Whether or not to use the model in training mode (some modules like dropout modules have different
 behaviors between training and evaluation).`,name:"training"},{anchor:"transformers.TFFlaubertForSequenceClassification.call.labels",description:`<strong>labels</strong> (<code>tf.Tensor</code> of shape <code>(batch_size,)</code>, <em>optional</em>) &#x2014;
 Labels for computing the sequence classification/regression loss. Indices should be in <code>[0, ..., config.num_labels - 1]</code>. If <code>config.num_labels == 1</code> a regression loss is computed (Mean-Square loss), If
-<code>config.num_labels &gt; 1</code> a classification loss is computed (Cross-Entropy).`,name:"labels"}],source:"https://github.com/huggingface/transformers/blob/vr_17857/src/transformers/models/xlm/modeling_tf_xlm.py#L897",returnDescription:`
+<code>config.num_labels &gt; 1</code> a classification loss is computed (Cross-Entropy).`,name:"labels"}],source:"https://github.com/huggingface/transformers/blob/vr_17857/src/transformers/models/xlm/modeling_tf_xlm.py#L896",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17857/en/main_classes/output#transformers.modeling_tf_outputs.TFSequenceClassifierOutput"
 >transformers.modeling_tf_outputs.TFSequenceClassifierOutput</a> or a tuple of <code>tf.Tensor</code> (if
@@ -1504,7 +1504,7 @@ used instead.`,name:"output_hidden_states"},{anchor:"transformers.TFFlaubertForM
 Whether or not to return a <a href="/docs/transformers/pr_17857/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple. This argument can be used in
 eager mode, in graph mode the value will always be set to True.`,name:"return_dict"},{anchor:"transformers.TFFlaubertForMultipleChoice.call.training",description:`<strong>training</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to use the model in training mode (some modules like dropout modules have different
-behaviors between training and evaluation).`,name:"training"}],source:"https://github.com/huggingface/transformers/blob/vr_17857/src/transformers/models/xlm/modeling_tf_xlm.py#L1004",returnDescription:`
+behaviors between training and evaluation).`,name:"training"}],source:"https://github.com/huggingface/transformers/blob/vr_17857/src/transformers/models/xlm/modeling_tf_xlm.py#L1003",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17857/en/main_classes/output#transformers.modeling_tf_outputs.TFMultipleChoiceModelOutput"
 >transformers.modeling_tf_outputs.TFMultipleChoiceModelOutput</a> or a tuple of <code>tf.Tensor</code> (if
@@ -1588,7 +1588,7 @@ Whether or not to return a <a href="/docs/transformers/pr_17857/en/main_classes/
 eager mode, in graph mode the value will always be set to True.`,name:"return_dict"},{anchor:"transformers.TFFlaubertForTokenClassification.call.training",description:`<strong>training</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to use the model in training mode (some modules like dropout modules have different
 behaviors between training and evaluation).`,name:"training"},{anchor:"transformers.TFFlaubertForTokenClassification.call.labels",description:`<strong>labels</strong> (<code>tf.Tensor</code> of shape <code>(batch_size, sequence_length)</code>, <em>optional</em>) &#x2014;
-Labels for computing the token classification loss. Indices should be in <code>[0, ..., config.num_labels - 1]</code>.`,name:"labels"}],source:"https://github.com/huggingface/transformers/blob/vr_17857/src/transformers/models/xlm/modeling_tf_xlm.py#L1128",returnDescription:`
+Labels for computing the token classification loss. Indices should be in <code>[0, ..., config.num_labels - 1]</code>.`,name:"labels"}],source:"https://github.com/huggingface/transformers/blob/vr_17857/src/transformers/models/xlm/modeling_tf_xlm.py#L1127",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17857/en/main_classes/output#transformers.modeling_tf_outputs.TFTokenClassifierOutput"
 >transformers.modeling_tf_outputs.TFTokenClassifierOutput</a> or a tuple of <code>tf.Tensor</code> (if
@@ -1676,7 +1676,7 @@ Positions are clamped to the length of the sequence (<code>sequence_length</code
 are not taken into account for computing the loss.`,name:"start_positions"},{anchor:"transformers.TFFlaubertForQuestionAnsweringSimple.call.end_positions",description:`<strong>end_positions</strong> (<code>tf.Tensor</code> of shape <code>(batch_size,)</code>, <em>optional</em>) &#x2014;
 Labels for position (index) of the end of the labelled span for computing the token classification loss.
 Positions are clamped to the length of the sequence (<code>sequence_length</code>). Position outside of the sequence
-are not taken into account for computing the loss.`,name:"end_positions"}],source:"https://github.com/huggingface/transformers/blob/vr_17857/src/transformers/models/xlm/modeling_tf_xlm.py#L1213",returnDescription:`
+are not taken into account for computing the loss.`,name:"end_positions"}],source:"https://github.com/huggingface/transformers/blob/vr_17857/src/transformers/models/xlm/modeling_tf_xlm.py#L1212",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17857/en/main_classes/output#transformers.modeling_tf_outputs.TFQuestionAnsweringModelOutput"
 >transformers.modeling_tf_outputs.TFQuestionAnsweringModelOutput</a> or a tuple of <code>tf.Tensor</code> (if
