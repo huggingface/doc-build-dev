@@ -41,6 +41,7 @@
       "src/routes/quickstart.mdx",
       "src/routes/faiss_es.mdx",
       "src/routes/load_hub.mdx",
+      "src/routes/nlp_load.mdx",
       "src/routes/tutorial.mdx",
       "src/routes/loading.mdx",
       "src/routes/metrics.mdx",
@@ -416,6 +417,7 @@
       "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
+      "_CodeBlockFw-hf-doc-builder.js",
       "_Markdown-hf-doc-builder.js",
       "_IconTensorflow-hf-doc-builder.js"
     ]
@@ -434,6 +436,17 @@
   "src/routes/load_hub.mdx": {
     "file": "pages/load_hub.mdx-hf-doc-builder.js",
     "src": "src/routes/load_hub.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/nlp_load.mdx": {
+    "file": "pages/nlp_load.mdx-hf-doc-builder.js",
+    "src": "src/routes/nlp_load.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -463,6 +476,7 @@
       "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
+      "_CodeBlockFw-hf-doc-builder.js",
       "_IconTensorflow-hf-doc-builder.js"
     ]
   },
@@ -611,6 +625,14 @@
     "file": "chunks/IconTensorflow-hf-doc-builder.js",
     "imports": [
       "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "_CodeBlockFw-hf-doc-builder.js": {
+    "file": "chunks/CodeBlockFw-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
     ]
   }
 }

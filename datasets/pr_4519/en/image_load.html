@@ -1,4 +1,4 @@
-<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;load-image-data&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;path&quot;,&quot;title&quot;:&quot;Path&quot;},{&quot;local&quot;:&quot;imagefolder&quot;,&quot;title&quot;:&quot;ImageFolder&quot;},{&quot;local&quot;:&quot;imagefolder-with-metadata&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;image-captioning&quot;,&quot;title&quot;:&quot;Image captioning&quot;},{&quot;local&quot;:&quot;object-detection&quot;,&quot;title&quot;:&quot;Object detection&quot;}],&quot;title&quot;:&quot;ImageFolder with metadata&quot;}],&quot;title&quot;:&quot;Load image data&quot;}" data-svelte="svelte-1phssyn">
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;load-image-data&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;local-files&quot;,&quot;title&quot;:&quot;Local files&quot;},{&quot;local&quot;:&quot;imagefolder&quot;,&quot;title&quot;:&quot;ImageFolder&quot;},{&quot;local&quot;:&quot;imagefolder-with-metadata&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;image-captioning&quot;,&quot;title&quot;:&quot;Image captioning&quot;},{&quot;local&quot;:&quot;object-detection&quot;,&quot;title&quot;:&quot;Object detection&quot;}],&quot;title&quot;:&quot;ImageFolder with metadata&quot;}],&quot;title&quot;:&quot;Load image data&quot;}" data-svelte="svelte-1phssyn">
 	<link rel="modulepreload" href="/docs/datasets/pr_4519/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
 	<link rel="modulepreload" href="/docs/datasets/pr_4519/en/_app/start-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/datasets/pr_4519/en/_app/chunks/vendor-hf-doc-builder.js">
@@ -29,8 +29,8 @@
 
 
 <div class="course-tip course-tip-orange bg-gradient-to-br dark:bg-gradient-to-r before:border-orange-500 dark:before:border-orange-800 from-orange-50 dark:from-gray-900 to-white dark:to-gray-950 border border-orange-50 text-orange-700 dark:text-gray-400"><p>Index into an image dataset using the row index first and then the <code>image</code> column - <code>dataset[0][&quot;image&quot;]</code> - to avoid decoding and resampling all the image objects in the dataset. Otherwise, this can be a slow and time-consuming process if you have a large dataset.</p></div>
-<h2 class="relative group"><a id="path" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#path"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
-	<span>Path
+<h2 class="relative group"><a id="local-files" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#local-files"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Local files
 	</span></h2>
 
 <p>You can load a dataset from the image path. Use the <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Dataset.cast_column">cast_column()</a> function to accept a column of image file paths, and decode it into a PIL image with the <a href="/docs/datasets/pr_4519/en/package_reference/main_classes#datasets.Image">Image</a> feature:</p>
@@ -146,10 +146,10 @@ folder<span class="hljs-regexp">/train/</span><span class="hljs-number">0003</sp
 {<span class="hljs-string">&quot;bbox&quot;</span>: [[<span class="hljs-number">302.0</span>, <span class="hljs-number">109.0</span>, <span class="hljs-number">73.0</span>, <span class="hljs-number">52.0</span>]], <span class="hljs-string">&quot;categories&quot;</span>: [<span class="hljs-number">0</span>]}<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="inj5b0">
+		<script type="module" data-hydrate="1315fs9">
 		import { start } from "/docs/datasets/pr_4519/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="inj5b0"]').parentNode,
+			target: document.querySelector('[data-hydrate="1315fs9"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_4519/en","assets":"/docs/datasets/pr_4519/en"},
 			session: {},
 			route: false,
