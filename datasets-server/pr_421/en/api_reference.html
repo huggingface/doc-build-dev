@@ -1,0 +1,53 @@
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;api-reference&quot;,&quot;title&quot;:&quot;API reference&quot;}" data-svelte="svelte-1phssyn">
+	<link rel="modulepreload" href="/docs/datasets-server/pr_421/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/datasets-server/pr_421/en/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/datasets-server/pr_421/en/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/datasets-server/pr_421/en/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/datasets-server/pr_421/en/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/datasets-server/pr_421/en/_app/pages/api_reference.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/datasets-server/pr_421/en/_app/chunks/IconCopyLink-hf-doc-builder.js"> 
+
+
+
+
+
+<h1 class="relative group"><a id="api-reference" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#api-reference"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>API reference
+	</span></h1>
+
+<p>The base URL of the REST API is <a href="https://datasets-server.huggingface.co" rel="nofollow">https://datasets-server.huggingface.co</a>.</p>
+<p>It provides the following endpoints:</p>
+<table><thead><tr><th>Endpoint</th>
+<th>Description</th>
+<th>Query parameters</th></tr></thead>
+<tbody><tr><td>/splits GET</td>
+<td>Get the list of configurations and splits of a dataset.</td>
+<td>- <code>dataset</code>: name of the dataset</td></tr>
+<tr><td>/rows GET</td>
+<td>Get the first rows of a dataset split.</td>
+<td>- <code>dataset</code>: name of the dataset - <code>config</code>: name of the config - <code>split</code>: name of the split</td></tr>
+<tr><td>/valid GET</td>
+<td>Get the list of datasets hosted in the Hub and supported by the datasets server.</td>
+<td></td></tr></tbody></table>
+
+
+		<script type="module" data-hydrate="6rdruv">
+		import { start } from "/docs/datasets-server/pr_421/en/_app/start-hf-doc-builder.js";
+		start({
+			target: document.querySelector('[data-hydrate="6rdruv"]').parentNode,
+			paths: {"base":"/docs/datasets-server/pr_421/en","assets":"/docs/datasets-server/pr_421/en"},
+			session: {},
+			route: false,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/docs/datasets-server/pr_421/en/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/datasets-server/pr_421/en/_app/pages/api_reference.mdx-hf-doc-builder.js")
+				],
+				params: {}
+			}
+		});
+	</script>
