@@ -120,7 +120,7 @@
 	<span>Truncated responses
 	</span></h2>
 
-<p>When the size of the response for 100 rows would have been too big, the last rows are removed until reaching under the acceptable limit.</p>
+<p>When the response size for 100 rows is too big, the last rows are removed until the response size is under 1MB.</p>
 <p>If even the first rows generate a response that does not fit within the limit, the content of the cells themselves is truncated and converted to a string. In this case, the truncated cells are listed in the <code>truncated_cells</code> field.</p>
 <p>See for example the <a href="https://huggingface.co/datasets/ett/viewer/m2/test" rel="nofollow"><code>ett</code></a> dataset: <a href="https://datasets-server.huggingface.co/rows?dataset=ett&config=m2&split=test" rel="nofollow">https://datasets-server.huggingface.co/rows?dataset=ett&amp;config=m2&amp;split=test</a>. Only 10 rows are returned, and the content of two of the columns are truncated:</p>
 
@@ -158,13 +158,12 @@
       <span class="hljs-attr">&quot;truncated_cells&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;target&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;feat_dynamic_real&quot;</span><span class="hljs-punctuation">]</span>
     <span class="hljs-punctuation">}</span>
   ...<!-- HTML_TAG_END --></pre></div>
-<p>This limitation was introduced to ensure the response size is always under 1 MB.</p>
 
 
-		<script type="module" data-hydrate="upxov8">
+		<script type="module" data-hydrate="dfx0n7">
 		import { start } from "/docs/datasets-server/pr_421/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="upxov8"]').parentNode,
+			target: document.querySelector('[data-hydrate="dfx0n7"]').parentNode,
 			paths: {"base":"/docs/datasets-server/pr_421/en","assets":"/docs/datasets-server/pr_421/en"},
 			session: {},
 			route: false,
