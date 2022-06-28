@@ -59,7 +59,7 @@ from optimum.onnxruntime.configuration import AutoCalibrationConfig
 calibration_dataset = quantizer.get_calibration_dataset(
     "glue",
     dataset_config_name="sst2",
-    preprocess_function=partial(preprocess_fn, tokenizer=quantizer.tokenizer),
+    preprocess_function=partial(preprocess_fn, tokenizer=quantizer.preprocessor),
     num_samples=50,
     dataset_split="train",
 )
@@ -85,7 +85,7 @@ quantizer.export(
 <span class="hljs-meta">&gt;&gt;&gt; </span>calibration_dataset = quantizer.get_calibration_dataset(
 <span class="hljs-meta">... </span>    <span class="hljs-string">&quot;glue&quot;</span>,
 <span class="hljs-meta">... </span>    dataset_config_name=<span class="hljs-string">&quot;sst2&quot;</span>,
-<span class="hljs-meta">... </span>    preprocess_function=partial(preprocess_fn, tokenizer=quantizer.tokenizer),
+<span class="hljs-meta">... </span>    preprocess_function=partial(preprocess_fn, tokenizer=quantizer.preprocessor),
 <span class="hljs-meta">... </span>    num_samples=<span class="hljs-number">50</span>,
 <span class="hljs-meta">... </span>    dataset_split=<span class="hljs-string">&quot;train&quot;</span>,
 <span class="hljs-meta">... </span>)

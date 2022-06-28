@@ -81,7 +81,7 @@
 <span class="hljs-meta">&gt;&gt;&gt; </span>calibration_dataset = quantizer.get_calibration_dataset(
 <span class="hljs-meta">... </span>    <span class="hljs-string">&quot;glue&quot;</span>,
 <span class="hljs-meta">... </span>    dataset_config_name=<span class="hljs-string">&quot;sst2&quot;</span>,
-<span class="hljs-meta">... </span>    preprocess_function=partial(preprocess_fn, tokenizer=quantizer.tokenizer),
+<span class="hljs-meta">... </span>    preprocess_function=partial(preprocess_fn, tokenizer=quantizer.preprocessor),
 <span class="hljs-meta">... </span>    num_samples=<span class="hljs-number">50</span>,
 <span class="hljs-meta">... </span>    dataset_split=<span class="hljs-string">&quot;train&quot;</span>,
 <span class="hljs-meta">... </span>)
@@ -136,10 +136,10 @@
 <p>Happy optimising 🤗!</p>
 
 
-		<script type="module" data-hydrate="1dzzct5">
+		<script type="module" data-hydrate="ej079z">
 		import { start } from "/docs/optimum/pr_234/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1dzzct5"]').parentNode,
+			target: document.querySelector('[data-hydrate="ej079z"]').parentNode,
 			paths: {"base":"/docs/optimum/pr_234/en","assets":"/docs/optimum/pr_234/en"},
 			session: {},
 			route: false,
