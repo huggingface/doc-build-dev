@@ -17,17 +17,14 @@ ds = load_dataset('namespace/your_dataset_name', data_files=data_files)`,highlig
 
 <span class="hljs-comment"># Map data files to splits</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>data_files = {<span class="hljs-string">&#x27;train&#x27;</span>: <span class="hljs-string">&#x27;train.csv&#x27;</span>, <span class="hljs-string">&#x27;test&#x27;</span>: <span class="hljs-string">&#x27;test.csv&#x27;</span>}
-<span class="hljs-meta">&gt;&gt;&gt; </span>ds = load_dataset(<span class="hljs-string">&#x27;namespace/your_dataset_name&#x27;</span>, data_files=data_files)`}}),{c(){p=o("p"),y=d("Load a dataset from the Hugging Face Hub:"),u=i(),b(m.$$.fragment)},l(s){p=n(s,"P",{});var f=r(p);y=c(f,"Load a dataset from the Hugging Face Hub:"),f.forEach(a),u=l(s),$(m.$$.fragment,s)},m(s,f){h(s,p,f),t(p,y),h(s,u,f),w(m,s,f),v=!0},p:A,i(s){v||(x(m.$$.fragment,s),v=!0)},o(s){k(m.$$.fragment,s),v=!1},d(s){s&&a(p),s&&a(u),D(m,s)}}}function nl(C){let p,y,u,m,v;return m=new I({props:{code:`# Load a CSV file
->>> from datasets import load_dataset
->>> ds = load_dataset('csv', data_files='path/to/local/my_dataset.csv')
+<span class="hljs-meta">&gt;&gt;&gt; </span>ds = load_dataset(<span class="hljs-string">&#x27;namespace/your_dataset_name&#x27;</span>, data_files=data_files)`}}),{c(){p=o("p"),y=d("Load a dataset from the Hugging Face Hub:"),u=i(),b(m.$$.fragment)},l(s){p=n(s,"P",{});var f=r(p);y=c(f,"Load a dataset from the Hugging Face Hub:"),f.forEach(a),u=l(s),$(m.$$.fragment,s)},m(s,f){h(s,p,f),t(p,y),h(s,u,f),w(m,s,f),v=!0},p:A,i(s){v||(x(m.$$.fragment,s),v=!0)},o(s){k(m.$$.fragment,s),v=!1},d(s){s&&a(p),s&&a(u),D(m,s)}}}function nl(C){let p,y,u,m,v;return m=new I({props:{code:`from datasets import load_dataset
+ds = load_dataset('csv', data_files='path/to/local/my_dataset.csv')
 
-# Load a JSON file
->>> from datasets import load_dataset
->>> ds = load_dataset('json', data_files='path/to/local/my_dataset.json')
+from datasets import load_dataset
+ds = load_dataset('json', data_files='path/to/local/my_dataset.json')
 
-# Load from a local loading script
->>> from datasets import load_dataset
->>> ds = load_dataset('path/to/local/loading_script/loading_script.py', split='train')`,highlighted:`<span class="hljs-comment"># Load a CSV file</span>
+from datasets import load_dataset
+ds = load_dataset('path/to/local/loading_script/loading_script.py', split='train')`,highlighted:`<span class="hljs-comment"># Load a CSV file</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
 <span class="hljs-meta">&gt;&gt;&gt; </span>ds = load_dataset(<span class="hljs-string">&#x27;csv&#x27;</span>, data_files=<span class="hljs-string">&#x27;path/to/local/my_dataset.csv&#x27;</span>)
 
@@ -123,7 +120,7 @@ iterating on the dataset. An IterableDataset or IterableDatasetDict is returned 
 <p>Note that streaming works for datasets that use data formats that support being iterated over like txt, csv, jsonl for example.
 Json files may be downloaded completely. Also streaming from remote zip or gzip files is supported but other compressed formats
 like rar and xz are not yet supported. The tgz format doesn&#x2019;t allow streaming.`,name:"streaming"},{anchor:"datasets.load_dataset.*config_kwargs",description:`*<strong>*config_kwargs</strong> (additional keyword arguments) &#x2014; Keyword arguments to be passed to the <a href="/docs/datasets/pr_4516/en/package_reference/builder_classes#datasets.BuilderConfig">BuilderConfig</a>
-and used in the <a href="/docs/datasets/pr_4516/en/package_reference/builder_classes#datasets.DatasetBuilder">DatasetBuilder</a>.`,name:"*config_kwargs"}],source:"https://github.com/huggingface/datasets/blob/r_4516/src/datasets/load.py#L1480",returnDescription:`
+and used in the <a href="/docs/datasets/pr_4516/en/package_reference/builder_classes#datasets.DatasetBuilder">DatasetBuilder</a>.`,name:"*config_kwargs"}],source:"https://github.com/huggingface/datasets/blob/r_4516/src/datasets/load.py#L1483",returnDescription:`
 <ul>
 <li>if <em>split</em> is not None: the dataset requested,</li>
 <li>if <em>split</em> is None, a <code>datasets.DatasetDict</code> with each split.</li>
@@ -148,7 +145,7 @@ and used in the <a href="/docs/datasets/pr_4516/en/package_reference/builder_cla
 loaded from.`,name:"dataset_path"},{anchor:"datasets.load_from_disk.fs",description:`<strong>fs</strong> (<a href="/docs/datasets/pr_4516/en/package_reference/main_classes#datasets.filesystems.S3FileSystem">S3FileSystem</a> or <code>fsspec.spec.AbstractFileSystem</code>, optional, default <code>None</code>) &#x2014;
 Instance of of the remote filesystem used to download the files from.`,name:"fs"},{anchor:"datasets.load_from_disk.keep_in_memory",description:`<strong>keep_in_memory</strong> (<code>bool</code>, default <code>None</code>) &#x2014; Whether to copy the dataset in-memory. If <em>None</em>, the dataset
 will not be copied in-memory unless explicitly enabled by setting <em>datasets.config.IN_MEMORY_MAX_SIZE</em> to
-nonzero. See more details in the <a href="/docs/datasets/pr_4516/en/package_reference/loading_methods#load_dataset_enhancing_performance">load_dataset_enhancing_performance</a> section.`,name:"keep_in_memory"}],source:"https://github.com/huggingface/datasets/blob/r_4516/src/datasets/load.py#L1701",returnDescription:`
+nonzero. See more details in the <a href="/docs/datasets/pr_4516/en/package_reference/loading_methods#load_dataset_enhancing_performance">load_dataset_enhancing_performance</a> section.`,name:"keep_in_memory"}],source:"https://github.com/huggingface/datasets/blob/r_4516/src/datasets/load.py#L1704",returnDescription:`
 <ul>
 <li>If <em>dataset_path</em> is a path of a dataset directory: the dataset requested.</li>
 <li>If <em>dataset_path</em> is a path of a dataset dict directory: a <code>datasets.DatasetDict</code> with each split.</li>
@@ -187,7 +184,7 @@ You can specify a different version from your local version of the lib (e.g. &#x
 You can specify a different version that the default &#x201C;main&#x201D; by using a commit sha or a git tag of the dataset repository.</li>
 </ul>`,name:"revision"},{anchor:"datasets.load_dataset_builder.use_auth_token",description:`<strong>use_auth_token</strong> (<code>str</code> or <code>bool</code>, optional) &#x2014; Optional string or boolean to use as Bearer token for remote files on the Datasets Hub.
 If True, will get token from <em>&#x201D;~/.huggingface&#x201D;</em>.`,name:"use_auth_token"},{anchor:"datasets.load_dataset_builder.*config_kwargs",description:`*<strong>*config_kwargs</strong> (additional keyword arguments) &#x2014; Keyword arguments to be passed to the <a href="/docs/datasets/pr_4516/en/package_reference/builder_classes#datasets.BuilderConfig">BuilderConfig</a>
-and used in the <a href="/docs/datasets/pr_4516/en/package_reference/builder_classes#datasets.DatasetBuilder">DatasetBuilder</a>.`,name:"*config_kwargs"}],source:"https://github.com/huggingface/datasets/blob/r_4516/src/datasets/load.py#L1355",returnType:`
+and used in the <a href="/docs/datasets/pr_4516/en/package_reference/builder_classes#datasets.DatasetBuilder">DatasetBuilder</a>.`,name:"*config_kwargs"}],source:"https://github.com/huggingface/datasets/blob/r_4516/src/datasets/load.py#L1358",returnType:`
 <p><a
   href="/docs/datasets/pr_4516/en/package_reference/builder_classes#datasets.DatasetBuilder"
 >DatasetBuilder</a></p>
@@ -251,7 +248,7 @@ e.g. <code>&apos;rouge&apos;</code> or <code>&apos;bleu&apos;</code></li>
 </ul>`,name:"path"},{anchor:"datasets.load_metric.config_name",description:"<strong>config_name</strong> (<code>str</code>, optional) &#x2014; selecting a configuration for the metric (e.g. the GLUE metric has a configuration for each subset)",name:"config_name"},{anchor:"datasets.load_metric.process_id",description:"<strong>process_id</strong> (<code>int</code>, optional) &#x2014; for distributed evaluation: id of the process",name:"process_id"},{anchor:"datasets.load_metric.num_process",description:"<strong>num_process</strong> (<code>int</code>, optional) &#x2014; for distributed evaluation: total number of processes",name:"num_process"},{anchor:"datasets.load_metric.cache_dir",description:"<strong>cache_dir</strong> (Optional str) &#x2014; path to store the temporary predictions and references (default to <em>~/.cache/huggingface/metrics/</em>)",name:"cache_dir"},{anchor:"datasets.load_metric.experiment_id",description:`<strong>experiment_id</strong> (<code>str</code>) &#x2014; A specific experiment id. This is used if several distributed evaluations share the same file system.
 This is useful to compute metrics in distributed setups (in particular non-additive metrics like F1).`,name:"experiment_id"},{anchor:"datasets.load_metric.keep_in_memory",description:"<strong>keep_in_memory</strong> (bool) &#x2014; Whether to store the temporary results in memory (defaults to False)",name:"keep_in_memory"},{anchor:"datasets.load_metric.download_config",description:"<strong>download_config</strong> (Optional <code>datasets.DownloadConfig</code> &#x2014; specific download configuration parameters.",name:"download_config"},{anchor:"datasets.load_metric.download_mode",description:'<strong>download_mode</strong> (<a href="/docs/datasets/pr_4516/en/package_reference/builder_classes#datasets.DownloadMode">DownloadMode</a>, default <code>REUSE_DATASET_IF_EXISTS</code>) &#x2014; Download/generate mode.',name:"download_mode"},{anchor:"datasets.load_metric.revision",description:`<strong>revision</strong> (Optional <code>Union[str, datasets.Version]</code>) &#x2014; if specified, the module will be loaded from the datasets repository
 at this version. By default it is set to the local version of the lib. Specifying a version that is different from
-your local version of the lib might cause compatibility issues.`,name:"revision"}],source:"https://github.com/huggingface/datasets/blob/r_4516/src/datasets/load.py#L1286",returnDescription:`
+your local version of the lib might cause compatibility issues.`,name:"revision"}],source:"https://github.com/huggingface/datasets/blob/r_4516/src/datasets/load.py#L1289",returnDescription:`
 <p><em>datasets.Metric</em></p>
 `}}),Ce=new H({props:{anchor:"datasets.load_metric.example",$$slots:{default:[gl]},$$scope:{ctx:C}}}),ct=new q({props:{name:"datasets.inspect_metric",anchor:"datasets.inspect_metric",parameters:[{name:"path",val:": str"},{name:"local_path",val:": str"},{name:"download_config",val:": typing.Optional[datasets.download.download_config.DownloadConfig] = None"},{name:"**download_kwargs",val:""}],parametersDescription:[{anchor:"datasets.inspect_metric.path",description:`<strong>path</strong> (<code>str</code>) &#x2014; path to the dataset processing script with the dataset builder. Can be either:</p>
 <ul>
