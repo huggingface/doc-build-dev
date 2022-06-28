@@ -218,7 +218,7 @@ testing).<!-- HTML_TAG_END -->
 <p>This is the configuration class to store the configuration of a <a href="/docs/transformers/pr_17313/en/model_doc/groupvit#transformers.GroupViTTextModel">GroupViTTextModel</a>. It is used to instantiate an
 GroupViT model according to the specified arguments, defining the model architecture. Instantiating a configuration
 with the defaults will yield a similar configuration to that of the GroupViT
-<a href="https://huggingface.co/nvidia/groupvit-gccyfcc" rel="nofollow">nvidia/groupvit-gccyfcc</a> architecture.</p>
+<a href="https://huggingface.co/nvidia/groupvit-gcc-yfcc" rel="nofollow">nvidia/groupvit-gcc-yfcc</a> architecture.</p>
 <p>Configuration objects inherit from <a href="/docs/transformers/pr_17313/en/main_classes/configuration#transformers.PretrainedConfig">PretrainedConfig</a> and can be used to control the model outputs. Read the
 documentation from <a href="/docs/transformers/pr_17313/en/main_classes/configuration#transformers.PretrainedConfig">PretrainedConfig</a> for more information.</p>
 
@@ -231,7 +231,7 @@ documentation from <a href="/docs/transformers/pr_17313/en/main_classes/configur
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> GroupViTTextConfig, GroupViTTextModel
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a GroupViTTextModel with nvidia/groupvit-gccyfcc style configuration</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a GroupViTTextModel with nvidia/groupvit-gcc-yfcc style configuration</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>configuration = GroupViTTextConfig()
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTTextModel(configuration)
@@ -341,7 +341,7 @@ testing).<!-- HTML_TAG_END -->
 <p>This is the configuration class to store the configuration of a <a href="/docs/transformers/pr_17313/en/model_doc/groupvit#transformers.GroupViTVisionModel">GroupViTVisionModel</a>. It is used to instantiate
 an GroupViT model according to the specified arguments, defining the model architecture. Instantiating a
 configuration with the defaults will yield a similar configuration to that of the GroupViT
-<a href="https://huggingface.co/nvidia/groupvit-gccyfcc" rel="nofollow">nvidia/groupvit-gccyfcc</a> architecture.</p>
+<a href="https://huggingface.co/nvidia/groupvit-gcc-yfcc" rel="nofollow">nvidia/groupvit-gcc-yfcc</a> architecture.</p>
 <p>Configuration objects inherit from <a href="/docs/transformers/pr_17313/en/main_classes/configuration#transformers.PretrainedConfig">PretrainedConfig</a> and can be used to control the model outputs. Read the
 documentation from <a href="/docs/transformers/pr_17313/en/main_classes/configuration#transformers.PretrainedConfig">PretrainedConfig</a> for more information.</p>
 
@@ -354,7 +354,7 @@ documentation from <a href="/docs/transformers/pr_17313/en/main_classes/configur
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> GroupViTVisionConfig, GroupViTVisionModel
 
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a GroupViTVisionModel with nvidia/groupvit-gccyfcc style configuration</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Initializing a GroupViTVisionModel with nvidia/groupvit-gcc-yfcc style configuration</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>configuration = GroupViTVisionConfig()
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTVisionModel(configuration)
@@ -535,8 +535,8 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> requests
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoProcessor, GroupViTModel
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTModel.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gccyfcc&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>processor = AutoProcessor.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gccyfcc&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTModel.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gcc-yfcc&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>processor = AutoProcessor.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gcc-yfcc&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>url = <span class="hljs-string">&quot;http://images.cocodataset.org/val2017/000000039769.jpg&quot;</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>image = Image.<span class="hljs-built_in">open</span>(requests.get(url, stream=<span class="hljs-literal">True</span>).raw)
@@ -635,8 +635,8 @@ the latter silently ignores them.</p></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> CLIPTokenizer, GroupViTModel
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTModel.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gccyfcc&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = CLIPTokenizer.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gccyfcc&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTModel.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gcc-yfcc&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = CLIPTokenizer.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gcc-yfcc&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer([<span class="hljs-string">&quot;a photo of a cat&quot;</span>, <span class="hljs-string">&quot;a photo of a dog&quot;</span>], padding=<span class="hljs-literal">True</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>text_features = model.get_text_features(**inputs)<!-- HTML_TAG_END --></pre></div></div></div>
@@ -710,8 +710,8 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> requests
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoProcessor, GroupViTModel
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTModel.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gccyfcc&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>processor = AutoProcessor.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gccyfcc&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTModel.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gcc-yfcc&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>processor = AutoProcessor.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gcc-yfcc&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>url = <span class="hljs-string">&quot;http://images.cocodataset.org/val2017/000000039769.jpg&quot;</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>image = Image.<span class="hljs-built_in">open</span>(requests.get(url, stream=<span class="hljs-literal">True</span>).raw)
@@ -854,8 +854,8 @@ the latter silently ignores them.</p></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> CLIPTokenizer, GroupViTTextModel
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = CLIPTokenizer.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gccyfcc&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTTextModel.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gccyfcc&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = CLIPTokenizer.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gcc-yfcc&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTTextModel.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gcc-yfcc&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer([<span class="hljs-string">&quot;a photo of a cat&quot;</span>, <span class="hljs-string">&quot;a photo of a dog&quot;</span>], padding=<span class="hljs-literal">True</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 
@@ -980,8 +980,8 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> requests
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoProcessor, GroupViTVisionModel
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>processor = AutoPProcessor.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gccyfcc&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTVisionModel.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gccyfcc&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>processor = AutoPProcessor.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gcc-yfcc&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = GroupViTVisionModel.from_pretrained(<span class="hljs-string">&quot;nvidia/groupvit-gcc-yfcc&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>url = <span class="hljs-string">&quot;http://images.cocodataset.org/val2017/000000039769.jpg&quot;</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>image = Image.<span class="hljs-built_in">open</span>(requests.get(url, stream=<span class="hljs-literal">True</span>).raw)
@@ -993,10 +993,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>pooled_output = outputs.pooler_output  <span class="hljs-comment"># pooled CLS states</span><!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="83dumg">
+		<script type="module" data-hydrate="161mag8">
 		import { start } from "/docs/transformers/pr_17313/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="83dumg"]').parentNode,
+			target: document.querySelector('[data-hydrate="161mag8"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17313/en","assets":"/docs/transformers/pr_17313/en"},
 			session: {},
 			route: false,
