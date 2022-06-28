@@ -261,7 +261,7 @@ sum(p.numel() for p in model.parameters() if p.requires_grad)
 # lightweight tuning with task-specific prompts
 model = MvpForConditionalGeneration.from_pretrained("RUCAIBox/mtl-data-to-text")
 model.set_lightweight_tuning()
-# original Prefix-tuning
+# original lightweight Prefix-tuning
 model = MvpForConditionalGeneration.from_pretrained("facebook/bart-large", use_prompt=True)
 model.set_lightweight_tuning()`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> MvpForConditionalGeneration
 
@@ -279,7 +279,7 @@ model.set_lightweight_tuning()`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># lightweight tuning with task-specific prompts</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = MvpForConditionalGeneration.from_pretrained(<span class="hljs-string">&quot;RUCAIBox/mtl-data-to-text&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model.set_lightweight_tuning()
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># original Prefix-tuning</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># original lightweight Prefix-tuning</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = MvpForConditionalGeneration.from_pretrained(<span class="hljs-string">&quot;facebook/bart-large&quot;</span>, use_prompt=<span class="hljs-literal">True</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model.set_lightweight_tuning()`}}),yt=new Z({}),Tt=new I({props:{name:"class transformers.MvpConfig",anchor:"transformers.MvpConfig",parameters:[{name:"vocab_size",val:" = 50267"},{name:"max_position_embeddings",val:" = 1024"},{name:"encoder_layers",val:" = 12"},{name:"encoder_ffn_dim",val:" = 4096"},{name:"encoder_attention_heads",val:" = 16"},{name:"decoder_layers",val:" = 12"},{name:"decoder_ffn_dim",val:" = 4096"},{name:"decoder_attention_heads",val:" = 16"},{name:"encoder_layerdrop",val:" = 0.0"},{name:"decoder_layerdrop",val:" = 0.0"},{name:"activation_function",val:" = 'gelu'"},{name:"d_model",val:" = 1024"},{name:"dropout",val:" = 0.1"},{name:"attention_dropout",val:" = 0.0"},{name:"activation_dropout",val:" = 0.0"},{name:"init_std",val:" = 0.02"},{name:"classifier_dropout",val:" = 0.0"},{name:"scale_embedding",val:" = False"},{name:"use_cache",val:" = True"},{name:"pad_token_id",val:" = 1"},{name:"bos_token_id",val:" = 0"},{name:"eos_token_id",val:" = 2"},{name:"is_encoder_decoder",val:" = True"},{name:"decoder_start_token_id",val:" = 2"},{name:"forced_eos_token_id",val:" = 2"},{name:"use_prompt",val:" = False"},{name:"prompt_length",val:" = 100"},{name:"prompt_mid_dim",val:" = 800"},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.MvpConfig.vocab_size",description:`<strong>vocab_size</strong> (<code>int</code>, <em>optional</em>, defaults to 50267) &#x2014;
 Vocabulary size of the MVP model. Defines the number of different tokens that can be represented by the
