@@ -322,59 +322,33 @@ Whether or not to disable fast initialization.</p>
 <p>One should only disable <em>_fast_init</em> to ensure backwards compatibility with <code>transformers.__version__ &lt; 4.6.0</code> for seeded model initialization. This argument will be removed at the next major version. See
 <a href="https://github.com/huggingface/transformers/pull/11471" rel="nofollow">pull request 11471</a> for more information.</p>
 
-					</div>`,name:"_fast_init(bool,"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L1567",parameterGroups:[{title:"Parameters for big model inference",parametersDescription:`
-<ul>
-<li>
-<p><strong>low_cpu_mem_usage(<code>bool</code>,</strong> <em>optional</em>) \u2014
+					</div>`,name:"_fast_init(bool,"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L1567",parameterGroups:[{title:"Parameters for big model inference",parametersDescription:[{anchor:"transformers.PreTrainedModel.from_pretrained.low_cpu_mem_usage(bool,",description:`<strong>low_cpu_mem_usage(<code>bool</code>,</strong> <em>optional</em>) &#x2014;
 Tries to not use more than 1x model size in CPU memory (including peak memory) while loading the model.
-This is an experimental feature and a subject to change at any moment.</p>
-</li>
-<li>
-<p><strong>torch_dtype</strong> (<code>str</code> or <code>torch.dtype</code>, <em>optional</em>) \u2014
-Override the default <code>torch.dtype</code> and load the model under this dtype. If <code>"auto"</code> is passed the dtype
-will be automatically derived from the model\u2019s weights.</p>
-</li>
-<li>
-<p><strong>device_map</strong> (<code>str</code> or <code>Dict[str, Union[int, str, torch.device]]</code>, <em>optional</em>) \u2014
-A map that specifies where each submodule should go. It doesn\u2019t need to be refined to each
+This is an experimental feature and a subject to change at any moment.`,name:"low_cpu_mem_usage(bool,"},{anchor:"transformers.PreTrainedModel.from_pretrained.torch_dtype",description:`<strong>torch_dtype</strong> (<code>str</code> or <code>torch.dtype</code>, <em>optional</em>) &#x2014;
+Override the default <code>torch.dtype</code> and load the model under this dtype. If <code>&quot;auto&quot;</code> is passed the dtype
+will be automatically derived from the model&#x2019;s weights.`,name:"torch_dtype"},{anchor:"transformers.PreTrainedModel.from_pretrained.device_map",description:`<strong>device_map</strong> (<code>str</code> or <code>Dict[str, Union[int, str, torch.device]]</code>, <em>optional</em>) &#x2014;
+A map that specifies where each submodule should go. It doesn&#x2019;t need to be refined to each
 parameter/buffer name, once a given module name is inside, every submodule of it will be sent to the
 same device.</p>
-<p>To have Accelerate compute the most optimized <code>device_map</code> automatically, set <code>device_map="auto"</code>.</p>
-</li>
-<li>
-<p><strong>max_memory</strong> (<code>Dict</code>, <em>optional</em>) \u2014
+<p>To have Accelerate compute the most optimized <code>device_map</code> automatically, set <code>device_map=&quot;auto&quot;</code>.`,name:"device_map"},{anchor:"transformers.PreTrainedModel.from_pretrained.max_memory",description:`<strong>max_memory</strong> (<code>Dict</code>, <em>optional</em>) &#x2014;
 A dictionary device identifier to maximum memory. Will default to the maximum memory available for each
-GPU and the available CPU RAM if unset.</p>
-</li>
-<li>
-<p><strong>offload_folder</strong> (<code>str</code> or <code>os.PathLike</code>, <em>optional</em>) \u2014
-If the <code>device_map</code> contains any value <code>"disk"</code>, the folder where we will offload weights.</p>
-</li>
-<li>
-<p><strong>offload_state_dict</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) \u2014
+GPU and the available CPU RAM if unset.`,name:"max_memory"},{anchor:"transformers.PreTrainedModel.from_pretrained.offload_folder",description:`<strong>offload_folder</strong> (<code>str</code> or <code>os.PathLike</code>, <em>optional</em>) &#x2014;
+If the <code>device_map</code> contains any value <code>&quot;disk&quot;</code>, the folder where we will offload weights.`,name:"offload_folder"},{anchor:"transformers.PreTrainedModel.from_pretrained.offload_state_dict",description:`<strong>offload_state_dict</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 If <code>True</code>, will temporarily offload the CPU state dict to the hard drive to avoid getting out of CPU
-RAM if the weight of the CPU state dict + the biggest shard of the checkpoint does not fit.</p>
-</li>
-<li>
-<p><strong>kwargs</strong> (remaining dictionary of keyword arguments, <em>optional</em>) \u2014
+RAM if the weight of the CPU state dict + the biggest shard of the checkpoint does not fit.`,name:"offload_state_dict"},{anchor:"transformers.PreTrainedModel.from_pretrained.kwargs",description:`<strong>kwargs</strong> (remaining dictionary of keyword arguments, <em>optional</em>) &#x2014;
 Can be used to update the configuration object (after it being loaded) and initiate the model (e.g.,
 <code>output_attentions=True</code>). Behaves differently depending on whether a <code>config</code> is provided or
 automatically loaded:</p>
 <ul>
 <li>If a configuration is provided with <code>config</code>, <code>**kwargs</code> will be directly passed to the
-underlying model\u2019s <code>__init__</code> method (we assume all relevant updates to the configuration have
+underlying model&#x2019;s <code>__init__</code> method (we assume all relevant updates to the configuration have
 already been done)</li>
 <li>If a configuration is not provided, <code>kwargs</code> will be first passed to the configuration class
-initialization function (<a
-  href="/docs/transformers/pr_17765/en/main_classes/configuration#transformers.PretrainedConfig.from_pretrained"
->from_pretrained()</a>). Each key of <code>kwargs</code> that
+initialization function (<a href="/docs/transformers/pr_17765/en/main_classes/configuration#transformers.PretrainedConfig.from_pretrained">from_pretrained()</a>). Each key of <code>kwargs</code> that
 corresponds to a configuration attribute will be used to override said attribute with the
 supplied <code>kwargs</code> value. Remaining keys that do not correspond to any configuration attribute
-will be passed to the underlying model\u2019s <code>__init__</code> function.</li>
-</ul>
-</li>
-</ul>
-`}]}}),ht=new ud({props:{$$slots:{default:[Ex]},$$scope:{ctx:D}}}),ft=new ud({props:{$$slots:{default:[jx]},$$scope:{ctx:D}}}),ut=new Ne({props:{anchor:"transformers.PreTrainedModel.from_pretrained.example",$$slots:{default:[Fx]},$$scope:{ctx:D}}}),Lo=new P({props:{name:"get_input_embeddings",anchor:"transformers.PreTrainedModel.get_input_embeddings",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L1000",returnDescription:`
+will be passed to the underlying model&#x2019;s <code>__init__</code> function.</li>
+</ul>`,name:"kwargs"}]}]}}),ht=new ud({props:{$$slots:{default:[Ex]},$$scope:{ctx:D}}}),ft=new ud({props:{$$slots:{default:[jx]},$$scope:{ctx:D}}}),ut=new Ne({props:{anchor:"transformers.PreTrainedModel.from_pretrained.example",$$slots:{default:[Fx]},$$scope:{ctx:D}}}),Lo=new P({props:{name:"get_input_embeddings",anchor:"transformers.PreTrainedModel.get_input_embeddings",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L1000",returnDescription:`
 <p>A torch module mapping vocabulary to hidden states.</p>
 `,returnType:`
 <p><code>nn.Module</code></p>
@@ -393,7 +367,7 @@ returns a pointer to the input tokens <code>torch.nn.Embedding</code> module of 
 <p>Pointer to the input tokens Embeddings Module of the model.</p>
 `,returnType:`
 <p><code>torch.nn.Embedding</code></p>
-`}}),Ro=new P({props:{name:"save_pretrained",anchor:"transformers.PreTrainedModel.save_pretrained",parameters:[{name:"save_directory",val:": typing.Union[str, os.PathLike]"},{name:"is_main_process",val:": bool = True"},{name:"state_dict",val:": typing.Optional[dict] = None"},{name:"save_function",val:": typing.Callable = <function save at 0x7fda9a4d1ee0>"},{name:"push_to_hub",val:": bool = False"},{name:"max_shard_size",val:": typing.Union[int, str] = '10GB'"},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.PreTrainedModel.save_pretrained.save_directory",description:`<strong>save_directory</strong> (<code>str</code> or <code>os.PathLike</code>) &#x2014;
+`}}),Ro=new P({props:{name:"save_pretrained",anchor:"transformers.PreTrainedModel.save_pretrained",parameters:[{name:"save_directory",val:": typing.Union[str, os.PathLike]"},{name:"is_main_process",val:": bool = True"},{name:"state_dict",val:": typing.Optional[dict] = None"},{name:"save_function",val:": typing.Callable = <function save at 0x7ffa301a90d0>"},{name:"push_to_hub",val:": bool = False"},{name:"max_shard_size",val:": typing.Union[int, str] = '10GB'"},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.PreTrainedModel.save_pretrained.save_directory",description:`<strong>save_directory</strong> (<code>str</code> or <code>os.PathLike</code>) &#x2014;
 Directory to which to save. Will be created if it doesn&#x2019;t exist.`,name:"save_directory"},{anchor:"transformers.PreTrainedModel.save_pretrained.is_main_process",description:`<strong>is_main_process</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
 Whether the process calling this is the main process or not. Useful when in distributed training like
 TPUs and need to call this function on all processes. In this case, set <code>is_main_process=True</code> only on
@@ -495,7 +469,7 @@ Whether or not to count embedding and softmax operations.`,name:"exclude_embeddi
 <p>The number of floating-point operations.</p>
 `,returnType:`
 <p><code>int</code></p>
-`}}),_r=new P({props:{name:"get_extended_attention_mask",anchor:"transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask",parameters:[{name:"attention_mask",val:": Tensor"},{name:"input_shape",val:": typing.Tuple[int]"},{name:"device",val:": <property object at 0x7fda98e4b220> = None"},{name:"dtype",val:": torch.float32 = None"}],parametersDescription:[{anchor:"transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask.attention_mask",description:`<strong>attention_mask</strong> (<code>torch.Tensor</code>) &#x2014;
+`}}),_r=new P({props:{name:"get_extended_attention_mask",anchor:"transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask",parameters:[{name:"attention_mask",val:": Tensor"},{name:"input_shape",val:": typing.Tuple[int]"},{name:"device",val:": <property object at 0x7ffa2eb09130> = None"},{name:"dtype",val:": torch.float32 = None"}],parametersDescription:[{anchor:"transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask.attention_mask",description:`<strong>attention_mask</strong> (<code>torch.Tensor</code>) &#x2014;
 Mask with ones indicating tokens to attend to, zeros for tokens to ignore.`,name:"attention_mask"},{anchor:"transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask.input_shape",description:`<strong>input_shape</strong> (<code>Tuple[int]</code>) &#x2014;
 The shape of the input to the model.`,name:"input_shape"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L681",returnDescription:`
 <p><code>torch.Tensor</code> The extended attention mask, with a the same dtype as <code>attention_mask.dtype</code>.</p>
@@ -534,7 +508,7 @@ when running <code>transformers-cli login</code> (stored in <code>~/.huggingface
 <p>The url of the commit of your model in the given repository.</p>
 `,returnType:`
 <p><code>str</code></p>
-`}}),Bt=new Ne({props:{anchor:"transformers.TFPreTrainedModel.push_to_hub.example",$$slots:{default:[qx]},$$scope:{ctx:D}}}),Mr=new P({props:{name:"compile",anchor:"transformers.TFPreTrainedModel.compile",parameters:[{name:"optimizer",val:" = 'rmsprop'"},{name:"loss",val:" = 'passthrough'"},{name:"metrics",val:" = None"},{name:"loss_weights",val:" = None"},{name:"weighted_metrics",val:" = None"},{name:"run_eagerly",val:" = None"},{name:"steps_per_execution",val:" = None"},{name:"**kwargs",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1230"}}),Er=new P({props:{name:"from_pretrained",anchor:"transformers.TFPreTrainedModel.from_pretrained",parameters:[{name:"pretrained_model_name_or_path",val:""},{name:"*model_args",val:""},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.from_pretrained.pretrained_model_name_or_path",description:`<strong>pretrained_model_name_or_path</strong> (<code>str</code>, <em>optional</em>) &#x2014;
+`}}),Bt=new Ne({props:{anchor:"transformers.TFPreTrainedModel.push_to_hub.example",$$slots:{default:[qx]},$$scope:{ctx:D}}}),Mr=new P({props:{name:"compile",anchor:"transformers.TFPreTrainedModel.compile",parameters:[{name:"optimizer",val:" = 'rmsprop'"},{name:"loss",val:" = 'passthrough'"},{name:"metrics",val:" = None"},{name:"loss_weights",val:" = None"},{name:"weighted_metrics",val:" = None"},{name:"run_eagerly",val:" = None"},{name:"steps_per_execution",val:" = None"},{name:"**kwargs",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1233"}}),Er=new P({props:{name:"from_pretrained",anchor:"transformers.TFPreTrainedModel.from_pretrained",parameters:[{name:"pretrained_model_name_or_path",val:""},{name:"*model_args",val:""},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.from_pretrained.pretrained_model_name_or_path",description:`<strong>pretrained_model_name_or_path</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 Can be either:</p>
 <ul>
 <li>A string, the <em>model id</em> of a pretrained model hosted inside a model repo on huggingface.co.
@@ -601,7 +575,7 @@ initialization function (<a href="/docs/transformers/pr_17765/en/main_classes/co
 corresponds to a configuration attribute will be used to override said attribute with the
 supplied <code>kwargs</code> value. Remaining keys that do not correspond to any configuration attribute
 will be passed to the underlying model&#x2019;s <code>__init__</code> function.</li>
-</ul>`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1989"}}),Xt=new ud({props:{$$slots:{default:[zx]},$$scope:{ctx:D}}}),Wt=new Ne({props:{anchor:"transformers.TFPreTrainedModel.from_pretrained.example",$$slots:{default:[Ax]},$$scope:{ctx:D}}}),Dr=new P({props:{name:"get_bias",anchor:"transformers.TFPreTrainedModel.get_bias",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1614",returnDescription:`
+</ul>`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1992"}}),Xt=new ud({props:{$$slots:{default:[zx]},$$scope:{ctx:D}}}),Wt=new Ne({props:{anchor:"transformers.TFPreTrainedModel.from_pretrained.example",$$slots:{default:[Ax]},$$scope:{ctx:D}}}),Dr=new P({props:{name:"get_bias",anchor:"transformers.TFPreTrainedModel.get_bias",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1617",returnDescription:`
 <p>The weights representing the bias, None if not an LM model.</p>
 `,returnType:`
 <p><code>tf.Variable</code></p>
@@ -609,19 +583,19 @@ will be passed to the underlying model&#x2019;s <code>__init__</code> function.<
 <p>The embeddings layer mapping vocabulary to hidden states.</p>
 `,returnType:`
 <p><code>tf.Variable</code></p>
-`}}),zr=new P({props:{name:"get_lm_head",anchor:"transformers.TFPreTrainedModel.get_lm_head",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1647",returnDescription:`
+`}}),zr=new P({props:{name:"get_lm_head",anchor:"transformers.TFPreTrainedModel.get_lm_head",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1650",returnDescription:`
 <p>The LM head layer if the model has one, None if not.</p>
 `,returnType:`
 <p><code>tf.keras.layers.Layer</code></p>
-`}}),Ar=new P({props:{name:"get_output_embeddings",anchor:"transformers.TFPreTrainedModel.get_output_embeddings",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1554",returnDescription:`
+`}}),Ar=new P({props:{name:"get_output_embeddings",anchor:"transformers.TFPreTrainedModel.get_output_embeddings",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1557",returnDescription:`
 <p>The new weights mapping vocabulary to hidden states.</p>
 `,returnType:`
 <p><code>tf.Variable</code></p>
-`}}),Cr=new P({props:{name:"get_output_layer_with_bias",anchor:"transformers.TFPreTrainedModel.get_output_layer_with_bias",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1591",returnDescription:`
+`}}),Cr=new P({props:{name:"get_output_layer_with_bias",anchor:"transformers.TFPreTrainedModel.get_output_layer_with_bias",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1594",returnDescription:`
 <p>The layer that handles the bias, None if not an LM model.</p>
 `,returnType:`
 <p><code>tf.keras.layers.Layer</code></p>
-`}}),Ir=new P({props:{name:"get_prefix_bias_name",anchor:"transformers.TFPreTrainedModel.get_prefix_bias_name",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1604",returnDescription:`
+`}}),Ir=new P({props:{name:"get_prefix_bias_name",anchor:"transformers.TFPreTrainedModel.get_prefix_bias_name",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1607",returnDescription:`
 <p>The _prefix name of the bias.</p>
 `,returnType:`
 <p><code>str</code></p>
@@ -652,10 +626,10 @@ performance, but can be disabled in edge cases.`,name:"prefetch"}],source:"https
 `}}),Or=new P({props:{name:"prune_heads",anchor:"transformers.TFPreTrainedModel.prune_heads",parameters:[{name:"heads_to_prune",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.prune_heads.heads_to_prune",description:`<strong>heads_to_prune</strong> (<code>Dict[int, List[int]]</code>) &#x2014;
 Dictionary with keys being selected layer indices (<code>int</code>) and associated values being the list of heads
 to prune in said layer (list of <code>int</code>). For instance {1: [0, 2], 2: [2, 3]} will prune heads 0 and 2 on
-layer 1 and heads 2 and 3 on layer 2.`,name:"heads_to_prune"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1856"}}),Nr=new P({props:{name:"resize_token_embeddings",anchor:"transformers.TFPreTrainedModel.resize_token_embeddings",parameters:[{name:"new_num_tokens",val:" = None"}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.resize_token_embeddings.new_num_tokens",description:`<strong>new_num_tokens</strong> (<code>int</code>, <em>optional</em>) &#x2014;
+layer 1 and heads 2 and 3 on layer 2.`,name:"heads_to_prune"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1859"}}),Nr=new P({props:{name:"resize_token_embeddings",anchor:"transformers.TFPreTrainedModel.resize_token_embeddings",parameters:[{name:"new_num_tokens",val:" = None"}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.resize_token_embeddings.new_num_tokens",description:`<strong>new_num_tokens</strong> (<code>int</code>, <em>optional</em>) &#x2014;
 The number of new tokens in the embedding matrix. Increasing the size will add newly initialized
 vectors at the end. Reducing the size will remove vectors from the end. If not provided or <code>None</code>, just
-returns a pointer to the input tokens <code>tf.Variable</code> module of the model without doing anything.`,name:"new_num_tokens"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1656",returnDescription:`
+returns a pointer to the input tokens <code>tf.Variable</code> module of the model without doing anything.`,name:"new_num_tokens"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1659",returnDescription:`
 <p>Pointer to the input tokens Embeddings Module of the model.</p>
 `,returnType:`
 <p><code>tf.Variable</code></p>
@@ -682,12 +656,12 @@ which will be bigger than <code>max_shard_size</code>.</p>
 
 					</div>
 <p>kwargs &#x2014;
-Additional key word arguments passed along to the <a href="/docs/transformers/pr_17765/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.push_to_hub">push_to_hub()</a> method.`,name:"max_shard_size"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1868"}}),Vr=new P({props:{name:"serving",anchor:"transformers.TFPreTrainedModel.serving",parameters:[{name:"inputs",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.serving.inputs",description:`<strong>inputs</strong> (<code>Dict[str, tf.Tensor]</code>) &#x2014;
+Additional key word arguments passed along to the <a href="/docs/transformers/pr_17765/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.push_to_hub">push_to_hub()</a> method.`,name:"max_shard_size"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1871"}}),Vr=new P({props:{name:"serving",anchor:"transformers.TFPreTrainedModel.serving",parameters:[{name:"inputs",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.serving.inputs",description:`<strong>inputs</strong> (<code>Dict[str, tf.Tensor]</code>) &#x2014;
 The input of the saved model as a dictionary of tensors.`,name:"inputs"}]}}),Gr=new P({props:{name:"serving_output",anchor:"transformers.TFPreTrainedModel.serving_output",parameters:[{name:"output",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.serving_output.output",description:`<strong>output</strong> (<code>TFBaseModelOutput</code>) &#x2014;
 The output returned by the model.`,name:"output"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1051"}}),Hr=new P({props:{name:"set_bias",anchor:"transformers.TFPreTrainedModel.set_bias",parameters:[{name:"value",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.set_bias.value",description:`<strong>value</strong> (<code>Dict[tf.Variable]</code>) &#x2014;
-All the new bias attached to an LM head.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1631"}}),Rr=new P({props:{name:"set_input_embeddings",anchor:"transformers.TFPreTrainedModel.set_input_embeddings",parameters:[{name:"value",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.set_input_embeddings.value",description:`<strong>value</strong> (<code>tf.Variable</code>) &#x2014;
-The new weights mapping hidden states to vocabulary.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1534"}}),Yr=new P({props:{name:"set_output_embeddings",anchor:"transformers.TFPreTrainedModel.set_output_embeddings",parameters:[{name:"value",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.set_output_embeddings.value",description:`<strong>value</strong> (<code>tf.Variable</code>) &#x2014;
-The new weights mapping hidden states to vocabulary.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1574"}}),Kr=new P({props:{name:"test_step",anchor:"transformers.TFPreTrainedModel.test_step",parameters:[{name:"data",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1408"}}),Zr=new P({props:{name:"train_step",anchor:"transformers.TFPreTrainedModel.train_step",parameters:[{name:"data",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1310"}}),ea=new Oe({}),ta=new P({props:{name:"class transformers.modeling_tf_utils.TFModelUtilsMixin",anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L95"}}),ra=new P({props:{name:"num_parameters",anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin.num_parameters",parameters:[{name:"only_trainable",val:": bool = False"}],parametersDescription:[{anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin.num_parameters.only_trainable",description:`<strong>only_trainable</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
+All the new bias attached to an LM head.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1634"}}),Rr=new P({props:{name:"set_input_embeddings",anchor:"transformers.TFPreTrainedModel.set_input_embeddings",parameters:[{name:"value",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.set_input_embeddings.value",description:`<strong>value</strong> (<code>tf.Variable</code>) &#x2014;
+The new weights mapping hidden states to vocabulary.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1537"}}),Yr=new P({props:{name:"set_output_embeddings",anchor:"transformers.TFPreTrainedModel.set_output_embeddings",parameters:[{name:"value",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.set_output_embeddings.value",description:`<strong>value</strong> (<code>tf.Variable</code>) &#x2014;
+The new weights mapping hidden states to vocabulary.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1577"}}),Kr=new P({props:{name:"test_step",anchor:"transformers.TFPreTrainedModel.test_step",parameters:[{name:"data",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1411"}}),Zr=new P({props:{name:"train_step",anchor:"transformers.TFPreTrainedModel.train_step",parameters:[{name:"data",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1313"}}),ea=new Oe({}),ta=new P({props:{name:"class transformers.modeling_tf_utils.TFModelUtilsMixin",anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L95"}}),ra=new P({props:{name:"num_parameters",anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin.num_parameters",parameters:[{name:"only_trainable",val:": bool = False"}],parametersDescription:[{anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin.num_parameters.only_trainable",description:`<strong>only_trainable</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to return only the number of trainable parameters`,name:"only_trainable"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L100",returnDescription:`
 <p>The number of parameters.</p>
 `,returnType:`
