@@ -1001,7 +1001,7 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_values<span class="opacity-60">: typing.Optional[torch.Tensor]</span></span>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_features<span class="opacity-60">: typing.Optional[torch.Tensor]</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
@@ -1118,8 +1118,8 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = dataset.sort(<span class="hljs-string">&quot;id&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>sampling_rate = dataset.features[<span class="hljs-string">&quot;audio&quot;</span>].sampling_rate
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-frame-lid&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForAudioFrameClassification.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-frame-lid&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-lid&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForAudioFrameClassification.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-lid&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># audio file is decoded on the fly</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = processor(dataset[<span class="hljs-number">0</span>][<span class="hljs-string">&quot;audio&quot;</span>][<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=sampling_rate, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -1185,7 +1185,7 @@ behavior.</p>
 				<span class="hidden md:block mx-0.5 hover:!underline">source</span>
 				<span>&gt;</span></a></span>
 	<p class="font-mono text-xs md:text-sm !leading-relaxed !my-6"><span>(</span>
-			<span class="comma cursor-default"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_values<span class="opacity-60">: typing.Optional[torch.Tensor]</span></span>
+			<span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">input_features<span class="opacity-60">: typing.Optional[torch.Tensor]</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">attention_mask<span class="opacity-60">: typing.Optional[torch.Tensor] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_attentions<span class="opacity-60">: typing.Optional[bool] = None</span></span>
 				</span><span class="comma cursor-pointer"><span class="rounded hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">output_hidden_states<span class="opacity-60">: typing.Optional[bool] = None</span></span>
@@ -1302,8 +1302,8 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = dataset.sort(<span class="hljs-string">&quot;id&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>sampling_rate = dataset.features[<span class="hljs-string">&quot;audio&quot;</span>].sampling_rate
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = MCTCTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-sequence-lid&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-sequence-lid&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = MCTCTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-lid&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-lid&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># audio file is decoded on the fly</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = feature_extractor(dataset[<span class="hljs-number">0</span>][<span class="hljs-string">&quot;audio&quot;</span>][<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=sampling_rate, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -1329,10 +1329,10 @@ en<!-- HTML_TAG_END --></pre></div></div>
 <span class="hljs-number">6.54</span><!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="101crx">
+		<script type="module" data-hydrate="5znfzh">
 		import { start } from "/docs/transformers/pr_17671/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="101crx"]').parentNode,
+			target: document.querySelector('[data-hydrate="5znfzh"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17671/en","assets":"/docs/transformers/pr_17671/en"},
 			session: {},
 			route: false,

@@ -147,8 +147,8 @@ dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", spli
 dataset = dataset.sort("id")
 sampling_rate = dataset.features["audio"].sampling_rate
 
-processor = MCTCTFeatureExtractor.from_pretrained("cwkeam/m-ctc-t-large-frame-lid")
-model = MCTCTForAudioFrameClassification.from_pretrained("cwkeam/m-ctc-t-large-frame-lid")
+processor = MCTCTFeatureExtractor.from_pretrained("cwkeam/m-ctc-t-large-lid")
+model = MCTCTForAudioFrameClassification.from_pretrained("cwkeam/m-ctc-t-large-lid")
 
 # audio file is decoded on the fly
 inputs = processor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
@@ -166,8 +166,8 @@ transcription[0]`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = dataset.sort(<span class="hljs-string">&quot;id&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>sampling_rate = dataset.features[<span class="hljs-string">&quot;audio&quot;</span>].sampling_rate
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-frame-lid&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForAudioFrameClassification.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-frame-lid&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>processor = MCTCTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-lid&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForAudioFrameClassification.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-lid&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># audio file is decoded on the fly</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = processor(dataset[<span class="hljs-number">0</span>][<span class="hljs-string">&quot;audio&quot;</span>][<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=sampling_rate, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -202,8 +202,8 @@ dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", spli
 dataset = dataset.sort("id")
 sampling_rate = dataset.features["audio"].sampling_rate
 
-feature_extractor = MCTCTFeatureExtractor.from_pretrained("cwkeam/m-ctc-t-large-sequence-lid")
-model = MCTCTForSequenceClassification.from_pretrained("cwkeam/m-ctc-t-large-sequence-lid")
+feature_extractor = MCTCTFeatureExtractor.from_pretrained("cwkeam/m-ctc-t-large-lid")
+model = MCTCTForSequenceClassification.from_pretrained("cwkeam/m-ctc-t-large-lid")
 
 # audio file is decoded on the fly
 inputs = feature_extractor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
@@ -221,8 +221,8 @@ predicted_label`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span 
 <span class="hljs-meta">&gt;&gt;&gt; </span>dataset = dataset.sort(<span class="hljs-string">&quot;id&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>sampling_rate = dataset.features[<span class="hljs-string">&quot;audio&quot;</span>].sampling_rate
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = MCTCTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-sequence-lid&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-sequence-lid&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = MCTCTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-lid&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = MCTCTForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;cwkeam/m-ctc-t-large-lid&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># audio file is decoded on the fly</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = feature_extractor(dataset[<span class="hljs-number">0</span>][<span class="hljs-string">&quot;audio&quot;</span>][<span class="hljs-string">&quot;array&quot;</span>], sampling_rate=sampling_rate, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
@@ -452,7 +452,7 @@ heads.</p>
 >transformers.modeling_outputs.CausalLMOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
 `}}),Le=new wo({props:{$$slots:{default:[ml]},$$scope:{ctx:k}}}),Ne=new Te({props:{anchor:"transformers.MCTCTForCTC.forward.example",$$slots:{default:[hl]},$$scope:{ctx:k}}}),Oe=new Te({props:{anchor:"transformers.MCTCTForCTC.forward.example-2",$$slots:{default:[fl]},$$scope:{ctx:k}}}),zt=new _e({}),At=new q({props:{name:"class transformers.MCTCTForAudioFrameClassification",anchor:"transformers.MCTCTForAudioFrameClassification",parameters:[{name:"config",val:""}],parametersDescription:[{anchor:"transformers.MCTCTForAudioFrameClassification.config",description:`<strong>config</strong> (<a href="/docs/transformers/pr_17671/en/model_doc/mctct#transformers.MCTCTConfig">MCTCTConfig</a>) &#x2014; Model configuration class with all the parameters of the model.
 Initializing with a config file does not load the weights associated with the model, only the
-configuration. Check out the <a href="/docs/transformers/pr_17671/en/main_classes/model#transformers.PreTrainedModel.from_pretrained">from_pretrained()</a> method to load the model weights.`,name:"config"}],source:"https://github.com/huggingface/transformers/blob/vr_17671/src/transformers/models/mctct/modeling_mctct.py#L846"}}),Dt=new q({props:{name:"forward",anchor:"transformers.MCTCTForAudioFrameClassification.forward",parameters:[{name:"input_values",val:": typing.Optional[torch.Tensor]"},{name:"attention_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"},{name:"labels",val:": typing.Optional[torch.Tensor] = None"}],parametersDescription:[{anchor:"transformers.MCTCTForAudioFrameClassification.forward.input_features",description:`<strong>input_features</strong> (<code>torch.LongTensor</code> of shape <code>({0})</code>) &#x2014;
+configuration. Check out the <a href="/docs/transformers/pr_17671/en/main_classes/model#transformers.PreTrainedModel.from_pretrained">from_pretrained()</a> method to load the model weights.`,name:"config"}],source:"https://github.com/huggingface/transformers/blob/vr_17671/src/transformers/models/mctct/modeling_mctct.py#L846"}}),Dt=new q({props:{name:"forward",anchor:"transformers.MCTCTForAudioFrameClassification.forward",parameters:[{name:"input_features",val:": typing.Optional[torch.Tensor]"},{name:"attention_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"},{name:"labels",val:": typing.Optional[torch.Tensor] = None"}],parametersDescription:[{anchor:"transformers.MCTCTForAudioFrameClassification.forward.input_features",description:`<strong>input_features</strong> (<code>torch.LongTensor</code> of shape <code>({0})</code>) &#x2014;
 Indices of input sequence tokens in the vocabulary.</p>
 <p>Indices can be obtained using <a href="/docs/transformers/pr_17671/en/model_doc/wav2vec2#transformers.Wav2Vec2CTCTokenizer">Wav2Vec2CTCTokenizer</a>. See <a href="/docs/transformers/pr_17671/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
 <a href="/docs/transformers/pr_17671/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
@@ -506,7 +506,7 @@ heads.</p>
 >transformers.modeling_outputs.TokenClassifierOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
 `}}),We=new wo({props:{$$slots:{default:[ul]},$$scope:{ctx:k}}}),Be=new Te({props:{anchor:"transformers.MCTCTForAudioFrameClassification.forward.example",$$slots:{default:[gl]},$$scope:{ctx:k}}}),Ue=new Te({props:{anchor:"transformers.MCTCTForAudioFrameClassification.forward.example-2",$$slots:{default:[_l]},$$scope:{ctx:k}}}),Lt=new _e({}),Nt=new q({props:{name:"class transformers.MCTCTForSequenceClassification",anchor:"transformers.MCTCTForSequenceClassification",parameters:[{name:"config",val:""}],parametersDescription:[{anchor:"transformers.MCTCTForSequenceClassification.config",description:`<strong>config</strong> (<a href="/docs/transformers/pr_17671/en/model_doc/mctct#transformers.MCTCTConfig">MCTCTConfig</a>) &#x2014; Model configuration class with all the parameters of the model.
 Initializing with a config file does not load the weights associated with the model, only the
-configuration. Check out the <a href="/docs/transformers/pr_17671/en/main_classes/model#transformers.PreTrainedModel.from_pretrained">from_pretrained()</a> method to load the model weights.`,name:"config"}],source:"https://github.com/huggingface/transformers/blob/vr_17671/src/transformers/models/mctct/modeling_mctct.py#L947"}}),Wt=new q({props:{name:"forward",anchor:"transformers.MCTCTForSequenceClassification.forward",parameters:[{name:"input_values",val:": typing.Optional[torch.Tensor]"},{name:"attention_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"},{name:"labels",val:": typing.Optional[torch.Tensor] = None"}],parametersDescription:[{anchor:"transformers.MCTCTForSequenceClassification.forward.input_features",description:`<strong>input_features</strong> (<code>torch.LongTensor</code> of shape <code>({0})</code>) &#x2014;
+configuration. Check out the <a href="/docs/transformers/pr_17671/en/main_classes/model#transformers.PreTrainedModel.from_pretrained">from_pretrained()</a> method to load the model weights.`,name:"config"}],source:"https://github.com/huggingface/transformers/blob/vr_17671/src/transformers/models/mctct/modeling_mctct.py#L947"}}),Wt=new q({props:{name:"forward",anchor:"transformers.MCTCTForSequenceClassification.forward",parameters:[{name:"input_features",val:": typing.Optional[torch.Tensor]"},{name:"attention_mask",val:": typing.Optional[torch.Tensor] = None"},{name:"output_attentions",val:": typing.Optional[bool] = None"},{name:"output_hidden_states",val:": typing.Optional[bool] = None"},{name:"return_dict",val:": typing.Optional[bool] = None"},{name:"labels",val:": typing.Optional[torch.Tensor] = None"}],parametersDescription:[{anchor:"transformers.MCTCTForSequenceClassification.forward.input_features",description:`<strong>input_features</strong> (<code>torch.LongTensor</code> of shape <code>({0})</code>) &#x2014;
 Indices of input sequence tokens in the vocabulary.</p>
 <p>Indices can be obtained using <a href="/docs/transformers/pr_17671/en/model_doc/wav2vec2#transformers.Wav2Vec2CTCTokenizer">Wav2Vec2CTCTokenizer</a>. See <a href="/docs/transformers/pr_17671/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
 <a href="/docs/transformers/pr_17671/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
