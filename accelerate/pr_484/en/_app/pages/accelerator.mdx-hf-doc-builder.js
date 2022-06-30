@@ -10,7 +10,7 @@ default to the value in the environment variable <code>MIXED_PRECISION</code>, w
 accelerate config of the current system or the flag passed with the <code>accelerate.launch</code> command. &#x2018;fp16&#x2019;
 requires pytorch 1.6 or higher. &#x2018;bf16&#x2019; requires pytorch 1.10 or higher.`,name:"mixed_precision"},{anchor:"accelerate.Accelerator.gradient_accumulation_steps",description:`<strong>gradient_accumulation_steps</strong> (<code>int</code>, <em>optional</em>) &#x2014;
 The number of steps that should pass before gradients are accumulated. Should be combined with
-<code>Accelerator.accumulate</code>`,name:"gradient_accumulation_steps"},{anchor:"accelerate.Accelerator.cpu",description:`<strong>cpu</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
+<a href="/docs/accelerate/pr_484/en/accelerator#accelerate.Accelerator.accumulate">Accelerator.accumulate()</a>.`,name:"gradient_accumulation_steps"},{anchor:"accelerate.Accelerator.cpu",description:`<strong>cpu</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
 Whether or not to force the script to execute on CPU. Will ignore GPU available if set to <code>True</code> and force
 the execution on one process only.`,name:"cpu"},{anchor:"accelerate.Accelerator.deepspeed_plugin",description:`<strong>deepspeed_plugin</strong> (<code>DeepSpeedPlugin</code>, <em>optional</em>) &#x2014;
 Tweak your DeepSpeed related args using this argument. This argument is optional and can be configured
