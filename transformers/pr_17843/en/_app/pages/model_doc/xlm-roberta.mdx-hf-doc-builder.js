@@ -1813,7 +1813,7 @@ Indices of positions of each input sequence tokens in the position embeddings. S
 <li>1 indicates the head is <strong>not masked</strong>,</li>
 <li>0 indicates the head is <strong>masked</strong>.</li>
 </ul>`,name:"head_mask"},{anchor:"transformers.FlaxXLMRobertaModel.__call__.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
-Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L789",returnDescription:`
+Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L803",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17843/en/main_classes/output#transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling"
 >transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling</a> or a tuple of
@@ -1869,7 +1869,7 @@ Indices of positions of each input sequence tokens in the position embeddings. S
 <li>1 indicates the head is <strong>not masked</strong>,</li>
 <li>0 indicates the head is <strong>masked</strong>.</li>
 </ul>`,name:"head_mask"},{anchor:"transformers.FlaxXLMRobertaForMaskedLM.__call__.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
-Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L789",returnDescription:`
+Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L803",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17843/en/main_classes/output#transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling"
 >transformers.modeling_flax_outputs.FlaxBaseModelOutputWithPooling</a> or a tuple of
@@ -1925,7 +1925,7 @@ Indices of positions of each input sequence tokens in the position embeddings. S
 <li>1 indicates the head is <strong>not masked</strong>,</li>
 <li>0 indicates the head is <strong>masked</strong>.</li>
 </ul>`,name:"head_mask"},{anchor:"transformers.FlaxXLMRobertaForSequenceClassification.__call__.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
-Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L789",returnDescription:`
+Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L803",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17843/en/main_classes/output#transformers.modeling_flax_outputs.FlaxSequenceClassifierOutput"
 >transformers.modeling_flax_outputs.FlaxSequenceClassifierOutput</a> or a tuple of
@@ -1976,7 +1976,7 @@ Indices of positions of each input sequence tokens in the position embeddings. S
 <li>1 indicates the head is <strong>not masked</strong>,</li>
 <li>0 indicates the head is <strong>masked</strong>.</li>
 </ul>`,name:"head_mask"},{anchor:"transformers.FlaxXLMRobertaForMultipleChoice.__call__.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
-Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L789",returnDescription:`
+Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L803",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17843/en/main_classes/output#transformers.modeling_flax_outputs.FlaxMultipleChoiceModelOutput"
 >transformers.modeling_flax_outputs.FlaxMultipleChoiceModelOutput</a> or a tuple of
@@ -2028,7 +2028,7 @@ Indices of positions of each input sequence tokens in the position embeddings. S
 <li>1 indicates the head is <strong>not masked</strong>,</li>
 <li>0 indicates the head is <strong>masked</strong>.</li>
 </ul>`,name:"head_mask"},{anchor:"transformers.FlaxXLMRobertaForTokenClassification.__call__.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
-Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L789",returnDescription:`
+Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L803",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17843/en/main_classes/output#transformers.modeling_flax_outputs.FlaxTokenClassifierOutput"
 >transformers.modeling_flax_outputs.FlaxTokenClassifierOutput</a> or a tuple of
@@ -2079,7 +2079,7 @@ Indices of positions of each input sequence tokens in the position embeddings. S
 <li>1 indicates the head is <strong>not masked</strong>,</li>
 <li>0 indicates the head is <strong>masked</strong>.</li>
 </ul>`,name:"head_mask"},{anchor:"transformers.FlaxXLMRobertaForQuestionAnswering.__call__.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
-Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L789",returnDescription:`
+Whether or not to return a <a href="/docs/transformers/pr_17843/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17843/src/transformers/models/roberta/modeling_flax_roberta.py#L803",returnDescription:`
 <p>A <a
   href="/docs/transformers/pr_17843/en/main_classes/output#transformers.modeling_flax_outputs.FlaxQuestionAnsweringModelOutput"
 >transformers.modeling_flax_outputs.FlaxQuestionAnsweringModelOutput</a> or a tuple of
