@@ -1,12 +1,13 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;pipelines-para-inferencia&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;uso-del-pipeline&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;selecciona-un-modelo-y-un-tokenizador&quot;,&quot;title&quot;:&quot;Selecciona un modelo y un tokenizador&quot;}],&quot;title&quot;:&quot;Uso del pipeline&quot;},{&quot;local&quot;:&quot;pipeline-de-audio&quot;,&quot;title&quot;:&quot;Pipeline de audio&quot;},{&quot;local&quot;:&quot;pipeline-de-visin&quot;,&quot;title&quot;:&quot;Pipeline de visión&quot;}],&quot;title&quot;:&quot;Pipelines para inferencia&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/assets/pages/__layout.svelte-fa8104a9.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/start-7522b1f9.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/chunks/vendor-a50a4eac.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/pages/__layout.svelte-cc21f125.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/pages/pipeline_tutorial.mdx-0c184c20.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/chunks/Tip-52f026d5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/chunks/CodeBlock-7a5ed917.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/pages/pipeline_tutorial.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/chunks/Tip-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_17176/es/_app/chunks/CodeBlock-hf-doc-builder.js"> 
 
 
 
@@ -17,7 +18,7 @@
 	<span>Pipelines para inferencia
 	</span></h1>
 
-<p>Un [pipeline] simplifica el uso de cualquier modelo del <a href="https://huggingface.co/models" rel="nofollow">Model Hub</a> para la inferencia en una variedad de tareas como la generación de texto, la segmentación de imágenes y la clasificación de audio. Incluso si no tienes experiencia con una modalidad específica o no comprendes el código que alimenta los modelos, ¡aún puedes usarlos con el [pipeline]! Este tutorial te enseñará a:</p>
+<p>Un <code>pipeline()</code> simplifica el uso de cualquier modelo del <a href="https://huggingface.co/models" rel="nofollow">Model Hub</a> para la inferencia en una variedad de tareas como la generación de texto, la segmentación de imágenes y la clasificación de audio. Incluso si no tienes experiencia con una modalidad específica o no comprendes el código que alimenta los modelos, ¡aún puedes usarlos con el <code>pipeline()</code>! Este tutorial te enseñará a:</p>
 <ul><li>Utilizar un <code>pipeline()</code> para inferencia.</li>
 <li>Utilizar un tokenizador o modelo específico.</li>
 <li>Utilizar un <code>pipeline()</code> para tareas de audio y visión.</li></ul>
@@ -122,7 +123,7 @@
 	<span>Pipeline de visión
 	</span></h2>
 
-<p>Finalmente, utilizar un <code>pipeline()</code> para tareas de visión es prácticamente idéntico.</p>
+<p>Finalmente, utilizar un <code>pipeline()</code> para tareas de visión es prácticamente igual.</p>
 <p>Específica tu tarea de visión y pasa tu imagen al clasificador. La imagen puede ser un enlace o una ruta local a la imagen. Por ejemplo, ¿qué especie de gato se muestra a continuación?</p>
 <p><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg" alt="pipeline-cat-chonk"></p>
 
@@ -144,10 +145,10 @@
  {<span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;tiger cat&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.023034192621707916</span>}]<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="hvoywf">
-		import { start } from "/docs/transformers/pr_17176/es/_app/start-7522b1f9.js";
+		<script type="module" data-hydrate="1wtc682">
+		import { start } from "/docs/transformers/pr_17176/es/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="hvoywf"]').parentNode,
+			target: document.querySelector('[data-hydrate="1wtc682"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17176/es","assets":"/docs/transformers/pr_17176/es"},
 			session: {},
 			route: false,
@@ -157,8 +158,8 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_17176/es/_app/pages/__layout.svelte-cc21f125.js"),
-						import("/docs/transformers/pr_17176/es/_app/pages/pipeline_tutorial.mdx-0c184c20.js")
+					import("/docs/transformers/pr_17176/es/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/transformers/pr_17176/es/_app/pages/pipeline_tutorial.mdx-hf-doc-builder.js")
 				],
 				params: {}
 			}
