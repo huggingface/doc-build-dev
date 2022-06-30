@@ -245,8 +245,8 @@ configuration. Check out the <a href="/docs/transformers/pr_17667/en/main_classe
 sequence tokens in the vocabulary.</p>
 <p>If <code>past_key_values</code> is used, only <code>input_ids</code> that do not have their past calculated should be passed as
 <code>input_ids</code>.</p>
-<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17667/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_17667/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17667/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_17667/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.BloomModel.forward.past_key_values",description:`<strong>past_key_values</strong> (<code>Tuple[Tuple[torch.Tensor]]</code> of length <code>config.n_layers</code>) &#x2014;
 Contains precomputed hidden-states (key and values in the attention blocks) as computed by the model (see
 <code>past_key_values</code> output below). Can be used to speed up sequential decoding. The <code>input_ids</code> which have
@@ -327,7 +327,7 @@ The beginning of sequence token.`,name:"bos_token"},{anchor:"transformers.BloomT
 The end of sequence token.`,name:"eos_token"},{anchor:"transformers.BloomTokenizerFast.add_prefix_space",description:`<strong>add_prefix_space</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to add an initial space to the input. This allows to treat the leading word just as any
 other word. (Bloom tokenizer detect beginning of words by the preceding space).`,name:"add_prefix_space"},{anchor:"transformers.BloomTokenizerFast.trim_offsets",description:`<strong>trim_offsets</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
-Whether or not the post-processing step should trim offsets to avoid including whitespaces.`,name:"trim_offsets"}],source:"https://github.com/huggingface/transformers/blob/vr_17667/src/transformers/models/bloom/tokenization_bloom_fast.py#L59"}}),we=new Z({props:{anchor:"transformers.BloomTokenizerFast.example",$$slots:{default:[Ci]},$$scope:{ctx:C}}}),ye=new Ht({props:{$$slots:{default:[Fi]},$$scope:{ctx:C}}}),co=new Oe({}),po=new X({props:{name:"class transformers.BloomForCausalLM",anchor:"transformers.BloomForCausalLM",parameters:[{name:"config",val:""}],parametersDescription:[{anchor:"transformers.BloomForCausalLM.config",description:`<strong>config</strong> (<a href="/docs/transformers/pr_17667/en/model_doc/bloom#transformers.BloomConfig">BloomConfig</a>) &#x2014; Model configuration class with all the parameters of the model.
+Whether or not the post-processing step should trim offsets to avoid including whitespaces.`,name:"trim_offsets"}],source:"https://github.com/huggingface/transformers/blob/vr_17667/src/transformers/models/bloom/tokenization_bloom_fast.py#L49"}}),we=new Z({props:{anchor:"transformers.BloomTokenizerFast.example",$$slots:{default:[Ci]},$$scope:{ctx:C}}}),ye=new Ht({props:{$$slots:{default:[Fi]},$$scope:{ctx:C}}}),co=new Oe({}),po=new X({props:{name:"class transformers.BloomForCausalLM",anchor:"transformers.BloomForCausalLM",parameters:[{name:"config",val:""}],parametersDescription:[{anchor:"transformers.BloomForCausalLM.config",description:`<strong>config</strong> (<a href="/docs/transformers/pr_17667/en/model_doc/bloom#transformers.BloomConfig">BloomConfig</a>) &#x2014; Model configuration class with all the parameters of the model.
 Initializing with a config file does not load the weights associated with the model, only the
 configuration. Check out the <a href="/docs/transformers/pr_17667/en/main_classes/model#transformers.PreTrainedModel.from_pretrained">from_pretrained()</a> method to load the model weights.`,name:"config"}],source:"https://github.com/huggingface/transformers/blob/vr_17667/src/transformers/models/bloom/modeling_bloom.py#L849"}}),fo=new X({props:{name:"forward",anchor:"transformers.BloomForCausalLM.forward",parameters:[{name:"input_ids",val:" = None"},{name:"past_key_values",val:" = None"},{name:"attention_mask",val:" = None"},{name:"position_ids",val:" = None"},{name:"head_mask",val:" = None"},{name:"inputs_embeds",val:" = None"},{name:"labels",val:" = None"},{name:"use_cache",val:" = None"},{name:"output_attentions",val:" = None"},{name:"output_hidden_states",val:" = None"},{name:"return_dict",val:" = None"}],parametersDescription:[{anchor:"transformers.BloomForCausalLM.forward.input_ids",description:`<strong>input_ids</strong> (<code>torch.LongTensor</code> of shape <code>(batch_size, input_ids_length)</code>) &#x2014;
 <code>input_ids_length</code> = <code>sequence_length</code> if <code>past_key_values</code> is <code>None</code> else
@@ -335,8 +335,8 @@ configuration. Check out the <a href="/docs/transformers/pr_17667/en/main_classe
 sequence tokens in the vocabulary.</p>
 <p>If <code>past_key_values</code> is used, only <code>input_ids</code> that do not have their past calculated should be passed as
 <code>input_ids</code>.</p>
-<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17667/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_17667/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17667/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_17667/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.BloomForCausalLM.forward.past_key_values",description:`<strong>past_key_values</strong> (<code>Tuple[Tuple[torch.Tensor]]</code> of length <code>config.n_layers</code>) &#x2014;
 Contains precomputed hidden-states (key and values in the attention blocks) as computed by the model (see
 <code>past_key_values</code> output below). Can be used to speed up sequential decoding. The <code>input_ids</code> which have
@@ -418,8 +418,8 @@ configuration. Check out the <a href="/docs/transformers/pr_17667/en/main_classe
 sequence tokens in the vocabulary.</p>
 <p>If <code>past_key_values</code> is used, only <code>input_ids</code> that do not have their past calculated should be passed as
 <code>input_ids</code>.</p>
-<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17667/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_17667/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17667/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_17667/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.BloomForSequenceClassification.forward.past_key_values",description:`<strong>past_key_values</strong> (<code>Tuple[Tuple[torch.Tensor]]</code> of length <code>config.n_layers</code>) &#x2014;
 Contains precomputed hidden-states (key and values in the attention blocks) as computed by the model (see
 <code>past_key_values</code> output below). Can be used to speed up sequential decoding. The <code>input_ids</code> which have
@@ -490,8 +490,8 @@ configuration. Check out the <a href="/docs/transformers/pr_17667/en/main_classe
 sequence tokens in the vocabulary.</p>
 <p>If <code>past_key_values</code> is used, only <code>input_ids</code> that do not have their past calculated should be passed as
 <code>input_ids</code>.</p>
-<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17667/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.encode">PreTrainedTokenizer.encode()</a> and
-<a href="/docs/transformers/pr_17667/en/main_classes/tokenizer#transformers.PreTrainedTokenizerFast.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
+<p>Indices can be obtained using <code>BloomTokenizer</code>. See <a href="/docs/transformers/pr_17667/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.encode">PreTrainedTokenizer.encode()</a> and
+<a href="/docs/transformers/pr_17667/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.__call__">PreTrainedTokenizer.<strong>call</strong>()</a> for details.</p>
 <p><a href="../glossary#input-ids">What are input IDs?</a>`,name:"input_ids"},{anchor:"transformers.BloomForTokenClassification.forward.past_key_values",description:`<strong>past_key_values</strong> (<code>Tuple[Tuple[torch.Tensor]]</code> of length <code>config.n_layers</code>) &#x2014;
 Contains precomputed hidden-states (key and values in the attention blocks) as computed by the model (see
 <code>past_key_values</code> output below). Can be used to speed up sequential decoding. The <code>input_ids</code> which have
