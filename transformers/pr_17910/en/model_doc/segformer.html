@@ -1344,7 +1344,7 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>url = <span class="hljs-string">&quot;http://images.cocodataset.org/val2017/000000039769.jpg&quot;</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>image = Image.<span class="hljs-built_in">open</span>(requests.get(url, stream=<span class="hljs-literal">True</span>).raw)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = AutoFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;nvidia/segformer-b0-finetuned-ade-512-512&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = SegformerFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;nvidia/segformer-b0-finetuned-ade-512-512&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFSegformerForSemanticSegmentation.from_pretrained(<span class="hljs-string">&quot;nvidia/segformer-b0-finetuned-ade-512-512&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = feature_extractor(images=image, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
@@ -1353,10 +1353,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="1kfts3y">
+		<script type="module" data-hydrate="cspw4x">
 		import { start } from "/docs/transformers/pr_17910/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1kfts3y"]').parentNode,
+			target: document.querySelector('[data-hydrate="cspw4x"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17910/en","assets":"/docs/transformers/pr_17910/en"},
 			session: {},
 			route: false,
