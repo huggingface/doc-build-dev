@@ -199,7 +199,7 @@ import requests
 url = "http://images.cocodataset.org/val2017/000000039769.jpg"
 image = Image.open(requests.get(url, stream=True).raw)
 
-feature_extractor = AutoFeatureExtractor.from_pretrained("nvidia/segformer-b0-finetuned-ade-512-512")
+feature_extractor = SegformerFeatureExtractor.from_pretrained("nvidia/segformer-b0-finetuned-ade-512-512")
 model = TFSegformerForSemanticSegmentation.from_pretrained("nvidia/segformer-b0-finetuned-ade-512-512")
 
 inputs = feature_extractor(images=image, return_tensors="tf")
@@ -212,7 +212,7 @@ logits = outputs.logits`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </spa
 <span class="hljs-meta">&gt;&gt;&gt; </span>url = <span class="hljs-string">&quot;http://images.cocodataset.org/val2017/000000039769.jpg&quot;</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>image = Image.<span class="hljs-built_in">open</span>(requests.get(url, stream=<span class="hljs-literal">True</span>).raw)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = AutoFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;nvidia/segformer-b0-finetuned-ade-512-512&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = SegformerFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;nvidia/segformer-b0-finetuned-ade-512-512&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFSegformerForSemanticSegmentation.from_pretrained(<span class="hljs-string">&quot;nvidia/segformer-b0-finetuned-ade-512-512&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = feature_extractor(images=image, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
