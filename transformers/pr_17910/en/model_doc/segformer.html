@@ -69,7 +69,8 @@ background class (i.e. it replaces 0 in the annotated maps by 255, which is the 
 used by <a href="/docs/transformers/pr_17910/en/model_doc/segformer#transformers.SegformerForSemanticSegmentation">SegformerForSemanticSegmentation</a>). However, other datasets use the 0 index as
 background class and include this class as part of all labels. In that case, <code>reduce_labels</code> should be set to
 <code>False</code>, as loss should also be computed for the background class.</li>
-<li>As most models, SegFormer comes in different sizes, the details of which can be found in the table below.</li></ul>
+<li>As most models, SegFormer comes in different sizes, the details of which can be found in the table below
+(taken from Table 7 of the <a href="https://arxiv.org/abs/2105.15203" rel="nofollow">original paper</a>).</li></ul>
 <table><thead><tr><th align="center"><strong>Model variant</strong></th>
 <th><strong>Depths</strong></th>
 <th><strong>Hidden sizes</strong></th>
@@ -112,6 +113,8 @@ background class and include this class as part of all labels. In that case, <co
 <td align="center">768</td>
 <td align="center">82.0</td>
 <td align="center">83.8</td></tr></tbody></table>
+<p>Note that MiT in the above table refers to the Mix Transformer encoder backbone introduced in SegFormer. For
+SegFormer’s results on the segmentation datasets like ADE20k, refer to the <a href="https://arxiv.org/abs/2105.15203" rel="nofollow">paper</a>.</p>
 <h2 class="relative group"><a id="transformers.SegformerConfig" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#transformers.SegformerConfig"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>SegformerConfig
 	</span></h2>
@@ -1353,10 +1356,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="cspw4x">
+		<script type="module" data-hydrate="1lwbuwl">
 		import { start } from "/docs/transformers/pr_17910/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="cspw4x"]').parentNode,
+			target: document.querySelector('[data-hydrate="1lwbuwl"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17910/en","assets":"/docs/transformers/pr_17910/en"},
 			session: {},
 			route: false,
