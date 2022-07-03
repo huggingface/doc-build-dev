@@ -55,6 +55,8 @@ ADE20K, Cityscapes and COCO-stuff, which are important benchmarks for semantic s
 found on the <a href="https://huggingface.co/models?other=segformer" rel="nofollow">hub</a>.</li>
 <li>The quickest way to get started with SegFormer is by checking the <a href="https://github.com/NielsRogge/Transformers-Tutorials/tree/master/SegFormer" rel="nofollow">example notebooks</a> (which showcase both inference and
 fine-tuning on custom data). One can also check out the <a href="https://huggingface.co/blog/fine-tune-segformer" rel="nofollow">blog post</a> introducing SegFormer and illustrating how it can be fine-tuned on custom data.</li>
+<li>One can also check out <a href="https://huggingface.co/spaces/chansung/segformer-tf-transformers" rel="nofollow">this interactive demo on Hugging Face Spaces</a>
+to try out a SegFormer model on custom images.</li>
 <li>SegFormer works on any input size, as it pads the input to be divisible by <code>config.patch_sizes</code>. </li>
 <li>One can use <a href="/docs/transformers/pr_17910/en/model_doc/segformer#transformers.SegformerFeatureExtractor">SegformerFeatureExtractor</a> to prepare images and corresponding segmentation maps
 for the model. Note that this feature extractor is fairly basic and does not include all data augmentations used in
@@ -1356,10 +1358,10 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>logits = outputs.logits<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="1cv1keo">
+		<script type="module" data-hydrate="1uxb8m6">
 		import { start } from "/docs/transformers/pr_17910/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1cv1keo"]').parentNode,
+			target: document.querySelector('[data-hydrate="1uxb8m6"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17910/en","assets":"/docs/transformers/pr_17910/en"},
 			session: {},
 			route: false,
