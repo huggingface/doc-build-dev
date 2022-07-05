@@ -7,7 +7,8 @@
 	<link rel="modulepreload" href="/docs/accelerate/pr_484/en/_app/pages/accelerator.mdx-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_484/en/_app/chunks/Tip-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_484/en/_app/chunks/Docstring-hf-doc-builder.js">
-	<link rel="modulepreload" href="/docs/accelerate/pr_484/en/_app/chunks/IconCopyLink-hf-doc-builder.js"> 
+	<link rel="modulepreload" href="/docs/accelerate/pr_484/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/accelerate/pr_484/en/_app/chunks/CodeBlock-hf-doc-builder.js"> 
 
 
 
@@ -40,6 +41,24 @@ process.</li>
 <li>Use <a href="/docs/accelerate/pr_484/en/accelerator#accelerate.Accelerator.save">save()</a> instead of <code>torch.save</code>.</li>
 <li>Use <a href="/docs/accelerate/pr_484/en/accelerator#accelerate.Accelerator.clip_grad_norm_">clip<em>grad_norm</em>()</a> instead of <code>torch.nn.utils.clip_grad_norm_</code> and
 <a href="/docs/accelerate/pr_484/en/accelerator#accelerate.Accelerator.clip_grad_value_">clip<em>grad_value</em>()</a> instead of <code>torch.nn.utils.clip_grad_value_</code>.</li></ul>
+<p>To perform gradient accumulation use <a href="/docs/accelerate/pr_484/en/accelerator#accelerate.Accelerator.accumulate">accumulate()</a> and specify a <code>gradient_accumulation_steps</code>.
+This will also automatically ensure the gradients are synced or unsynced when on multi-node, check if the step should
+actually be performed, and auto-scale the loss:</p>
+
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START -->accelerator = Accelerator(gradient_accumulation_steps=<span class="hljs-number">2</span>)
+
+<span class="hljs-keyword">for</span> (<span class="hljs-built_in">input</span>, label) <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(training_dataloader):
+  <span class="hljs-keyword">with</span> accelerator.accumulate(model):
+    predictions = model(<span class="hljs-built_in">input</span>)
+    loss = loss_function(predictions, labels)
+    accelerator.backward(loss)
+    optimizer.step()
+    scheduler.step()
+    optimizer.zero_grad()<!-- HTML_TAG_END --></pre></div>
+<p><strong>Note</strong>: Using this with <code>dispatch_batches=True</code> is currently not supported.</p>
 <div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
 
 <div><span class="group flex space-x-1.5 items-center text-gray-800 bg-gradient-to-r rounded-tr-lg -mt-4 -ml-4 pt-3 px-2.5" id="accelerate.Accelerator"><!-- HTML_TAG_START --><h3 class="!m-0"><span class="flex-1 break-all md:text-lg bg-gradient-to-r px-2.5 py-1.5 rounded-xl from-indigo-50/70 to-white dark:from-gray-900 dark:to-gray-950 dark:text-indigo-300 text-indigo-700"><svg class="mr-1.5 text-indigo-500 inline-block -mt-0.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width=".8em" height=".8em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path class="uim-quaternary" d="M20.23 7.24L12 12L3.77 7.24a1.98 1.98 0 0 1 .7-.71L11 2.76c.62-.35 1.38-.35 2 0l6.53 3.77c.29.173.531.418.7.71z" opacity=".25" fill="currentColor"></path><path class="uim-tertiary" d="M12 12v9.5a2.09 2.09 0 0 1-.91-.21L4.5 17.48a2.003 2.003 0 0 1-1-1.73v-7.5a2.06 2.06 0 0 1 .27-1.01L12 12z" opacity=".5" fill="currentColor"></path><path class="uim-primary" d="M20.5 8.25v7.5a2.003 2.003 0 0 1-1 1.73l-6.62 3.82c-.275.13-.576.198-.88.2V12l8.23-4.76c.175.308.268.656.27 1.01z" fill="currentColor"></path></svg><span class="font-light">class</span> <span class="font-medium">accelerate.</span><span class="font-semibold">Accelerator</span></span></h3><!-- HTML_TAG_END -->
@@ -758,10 +777,10 @@ the model.</p></div>
 nothing when the script is only run in one process). Useful to do before saving a model.</p></div></div>
 
 
-		<script type="module" data-hydrate="1h66u4v">
+		<script type="module" data-hydrate="ijo8kl">
 		import { start } from "/docs/accelerate/pr_484/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1h66u4v"]').parentNode,
+			target: document.querySelector('[data-hydrate="ijo8kl"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_484/en","assets":"/docs/accelerate/pr_484/en"},
 			session: {},
 			route: false,
