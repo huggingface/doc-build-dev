@@ -105,6 +105,7 @@
       "src/routes/model_doc/transfo-xl.mdx",
       "src/routes/model_doc/camembert.mdx",
       "src/routes/model_doc/layoutxlm.mdx",
+      "src/routes/model_doc/mobilevit.mdx",
       "src/routes/model_doc/perceiver.mdx",
       "src/routes/model_doc/retribert.mdx",
       "src/routes/model_doc/segformer.mdx",
@@ -117,6 +118,7 @@
       "src/routes/model_doc/dialogpt.mdx",
       "src/routes/model_doc/flaubert.mdx",
       "src/routes/model_doc/gpt_neox.mdx",
+      "src/routes/model_doc/groupvit.mdx",
       "src/routes/model_doc/imagegpt.mdx",
       "src/routes/model_doc/layoutlm.mdx",
       "src/routes/model_doc/reformer.mdx",
@@ -125,6 +127,7 @@
       "src/routes/model_doc/wav2vec2.mdx",
       "src/routes/model_doc/barthez.mdx",
       "src/routes/model_doc/bartpho.mdx",
+      "src/routes/model_doc/codegen.mdx",
       "src/routes/model_doc/deberta.mdx",
       "src/routes/model_doc/electra.mdx",
       "src/routes/model_doc/gpt_neo.mdx",
@@ -192,6 +195,7 @@
       "src/routes/model_doc/dpt.mdx",
       "src/routes/model_doc/led.mdx",
       "src/routes/model_doc/mt5.mdx",
+      "src/routes/model_doc/mvp.mdx",
       "src/routes/model_doc/opt.mdx",
       "src/routes/model_doc/rag.mdx",
       "src/routes/model_doc/sew.mdx",
@@ -379,6 +383,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
     ]
@@ -1455,6 +1460,20 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/mobilevit.mdx": {
+    "file": "pages/model_doc/mobilevit.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/mobilevit.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/perceiver.mdx": {
     "file": "pages/model_doc/perceiver.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/perceiver.mdx",
@@ -1614,6 +1633,20 @@
       "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/groupvit.mdx": {
+    "file": "pages/model_doc/groupvit.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/groupvit.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/imagegpt.mdx": {
     "file": "pages/model_doc/imagegpt.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/imagegpt.mdx",
@@ -1719,6 +1752,20 @@
       "_Docstring-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/model_doc/codegen.mdx": {
+    "file": "pages/model_doc/codegen.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/codegen.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/model_doc/deberta.mdx": {
@@ -2627,6 +2674,20 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/model_doc/mvp.mdx": {
+    "file": "pages/model_doc/mvp.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/mvp.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_Docstring-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
