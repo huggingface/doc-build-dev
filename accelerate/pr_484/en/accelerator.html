@@ -51,13 +51,13 @@ actually be performed, and auto-scale the loss:</p>
 	<pre><!-- HTML_TAG_START -->accelerator = Accelerator(gradient_accumulation_steps=<span class="hljs-number">2</span>)
 
 <span class="hljs-keyword">for</span> (<span class="hljs-built_in">input</span>, label) <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(training_dataloader):
-  <span class="hljs-keyword">with</span> accelerator.accumulate(model):
-    predictions = model(<span class="hljs-built_in">input</span>)
-    loss = loss_function(predictions, labels)
-    accelerator.backward(loss)
-    optimizer.step()
-    scheduler.step()
-    optimizer.zero_grad()<!-- HTML_TAG_END --></pre></div>
+    <span class="hljs-keyword">with</span> accelerator.accumulate(model):
+        predictions = model(<span class="hljs-built_in">input</span>)
+        loss = loss_function(predictions, labels)
+        accelerator.backward(loss)
+        optimizer.step()
+        scheduler.step()
+        optimizer.zero_grad()<!-- HTML_TAG_END --></pre></div>
 <p><strong>Note</strong>: Using this with <code>dispatch_batches=True</code> is currently not supported.</p>
 <div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
 
@@ -777,10 +777,10 @@ the model.</p></div>
 nothing when the script is only run in one process). Useful to do before saving a model.</p></div></div>
 
 
-		<script type="module" data-hydrate="ijo8kl">
+		<script type="module" data-hydrate="1cu9s6d">
 		import { start } from "/docs/accelerate/pr_484/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="ijo8kl"]').parentNode,
+			target: document.querySelector('[data-hydrate="1cu9s6d"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_484/en","assets":"/docs/accelerate/pr_484/en"},
 			session: {},
 			route: false,
