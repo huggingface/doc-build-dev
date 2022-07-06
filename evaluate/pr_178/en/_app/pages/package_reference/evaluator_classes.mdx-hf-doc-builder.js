@@ -126,7 +126,7 @@ If the argument in not specified, we initialize the default pipeline for the tas
 is a model instance, we use it to initialize a new <code>Pipeline</code> with the given model. Otherwise we assume the
 argument specifies a pre-initialized pipeline.`,name:"model_or_pipeline"},{anchor:"evaluate.ImageClassificationEvaluator.compute.data",description:`<strong>data</strong> (<code>str</code> or <code>Dataset</code>, defaults to <code>None</code>) &#x2014;
 Specifies the dataset we will run evaluation on. If it is of type <code>str</code>, we treat it as the dataset
-name, and load it. Otherwise we assume it represents a pre-loaded dataset.`,name:"data"},{anchor:"evaluate.ImageClassificationEvaluator.compute.metric",description:`<strong>metric</strong> (<code>str</code> or <code>EvaluationModule</code>, defaults to <code>None</code> &#x2014;
+name, and load it. Otherwise we assume it represents a pre-loaded dataset.`,name:"data"},{anchor:"evaluate.ImageClassificationEvaluator.compute.metric",description:`<strong>metric</strong> (<code>str</code> or <code>EvaluationModule</code>, defaults to <code>None</code>) &#x2014;
 Specifies the metric we use in evaluator. If it is of type <code>str</code>, we treat it as the metric name, and
 load it. Otherwise we assume it represents a pre-loaded metric.
 feature_extractor &#x2014; (<code>str</code> or <code>FeatureExtractionMixin</code>, <em>optional</em>, defaults to <code>None</code>):
