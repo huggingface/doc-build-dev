@@ -22,7 +22,7 @@ other artifacts on huggingface.co, so <code>revision</code>
 can be any identifier allowed by git.</li>
 <li>A path to a <code>directory</code> containing model weights
 saved using
-<a href="https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.PreTrainedModel.save_pretrained" rel="nofollow">save_pretrained</a>,
+<code>save_pretrained</code>,
 e.g., <code>./my_model_directory/</code>.</li>
 <li><code>None</code> if you are both providing the configuration
 and state dictionary (resp. with keyword arguments
@@ -94,7 +94,7 @@ a tag name, or a commit id, since we use a git-based system
 for storing models and other artifacts on huggingface.co, so
 <code>revision</code> can be any identifier allowed by git.</li>
 <li>A path to a <code>directory</code> containing model weights saved using
-<a href="https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.PreTrainedModel.save_pretrained" rel="nofollow">save_pretrained</a>, e.g.,
+<code>save_pretrained</code>, e.g.,
 <code>./my_model_directory/</code>.</li>
 <li><code>None</code> if you are both providing the configuration and state
 dictionary (resp. with keyword arguments <code>config</code> and
