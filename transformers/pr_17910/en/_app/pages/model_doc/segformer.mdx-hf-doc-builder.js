@@ -495,7 +495,7 @@ eager mode, in graph mode the value will always be set to True.`,name:"return_di
 Whether or not to use the model in training mode (some modules like dropout modules have different
 behaviors between training and evaluation).`,name:"training"},{anchor:"transformers.TFSegformerForSemanticSegmentation.call.labels",description:`<strong>labels</strong> (<code>tf.Tensor</code> of shape <code>(batch_size, height, width)</code>, <em>optional</em>) &#x2014;
 Ground truth semantic segmentation maps for computing the loss. Indices should be in <code>[0, ..., config.num_labels - 1]</code>. If <code>config.num_labels &gt; 1</code>, a (per-pixel) classification loss is computed
-(Cross-Entropy).`,name:"labels"}],source:"https://github.com/huggingface/transformers/blob/vr_17910/src/transformers/models/segformer/modeling_tf_segformer.py#L806",returnDescription:`
+(Cross-Entropy).`,name:"labels"}],source:"https://github.com/huggingface/transformers/blob/vr_17910/src/transformers/models/segformer/modeling_tf_segformer.py#L803",returnDescription:`
 <p>A <code>transformers.modeling_tf_outputs.TFSemanticSegmenterOutput</code> or a tuple of <code>tf.Tensor</code> (if
 <code>return_dict=False</code> is passed or when <code>config.return_dict=False</code>) comprising various elements depending on the
 configuration (<a
