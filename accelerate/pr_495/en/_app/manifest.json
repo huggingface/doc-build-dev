@@ -1,0 +1,158 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-hf-doc-builder.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_paths-hf-doc-builder.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/package_reference/torch_wrappers.mdx",
+      "src/routes/package_reference/big_modeling.mdx",
+      "src/routes/package_reference/accelerator.mdx",
+      "src/routes/package_reference/launchers.mdx",
+      "src/routes/package_reference/utilities.mdx",
+      "src/routes/package_reference/tracking.mdx",
+      "src/routes/package_reference/logging.mdx",
+      "src/routes/package_reference/kwargs.mdx"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-hf-doc-builder.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_paths-hf-doc-builder.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-hf-doc-builder.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-hf-doc-builder.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/package_reference/torch_wrappers.mdx": {
+    "file": "pages/package_reference/torch_wrappers.mdx-hf-doc-builder.js",
+    "src": "src/routes/package_reference/torch_wrappers.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/package_reference/big_modeling.mdx": {
+    "file": "pages/package_reference/big_modeling.mdx-hf-doc-builder.js",
+    "src": "src/routes/package_reference/big_modeling.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/package_reference/accelerator.mdx": {
+    "file": "pages/package_reference/accelerator.mdx-hf-doc-builder.js",
+    "src": "src/routes/package_reference/accelerator.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/package_reference/launchers.mdx": {
+    "file": "pages/package_reference/launchers.mdx-hf-doc-builder.js",
+    "src": "src/routes/package_reference/launchers.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/package_reference/utilities.mdx": {
+    "file": "pages/package_reference/utilities.mdx-hf-doc-builder.js",
+    "src": "src/routes/package_reference/utilities.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/package_reference/tracking.mdx": {
+    "file": "pages/package_reference/tracking.mdx-hf-doc-builder.js",
+    "src": "src/routes/package_reference/tracking.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/package_reference/logging.mdx": {
+    "file": "pages/package_reference/logging.mdx-hf-doc-builder.js",
+    "src": "src/routes/package_reference/logging.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/package_reference/kwargs.mdx": {
+    "file": "pages/package_reference/kwargs.mdx-hf-doc-builder.js",
+    "src": "src/routes/package_reference/kwargs.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js"
+    ]
+  },
+  "_vendor-hf-doc-builder.js": {
+    "file": "chunks/vendor-hf-doc-builder.js"
+  },
+  "_paths-hf-doc-builder.js": {
+    "file": "chunks/paths-hf-doc-builder.js"
+  },
+  "_Tip-hf-doc-builder.js": {
+    "file": "chunks/Tip-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "_Docstring-hf-doc-builder.js": {
+    "file": "chunks/Docstring-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "_ExampleCodeBlock-hf-doc-builder.js": {
+    "file": "chunks/ExampleCodeBlock-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js"
+    ]
+  }
+}
