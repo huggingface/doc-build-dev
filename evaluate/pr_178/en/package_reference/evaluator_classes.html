@@ -318,7 +318,7 @@ tokenizer &#x2014; (<code>str</code> or <code>PreTrainedTokenizer</code>, <em>op
 Argument can be used to overwrite a default tokenizer if <code>model_or_pipeline</code> represents a model for
 which we build a pipeline. If <code>model_or_pipeline</code> is <code>None</code> or a pre-initialized pipeline, we ignore
 this argument.
-strategy &#x2014; (<code>Literal[&quot;simple&quot;, &quot;bootstrap&quot;, &quot;perf&quot;]</code> or <code>List[Literal[&quot;simple&quot;, &quot;bootstrap&quot;, &quot;perf&quot;]]</code>, defaults to &#x201C;simple&#x201D;):
+strategy &#x2014; (<code>Literal[&quot;simple&quot;, &quot;bootstrap&quot;]</code>, defaults to &#x201C;simple&#x201D;):
 specifies the evaluation strategy. Possible values are:<ul>
 <li><code>&quot;simple&quot;</code> - we evaluate the metric and return the scores.</li>
 <li><code>&quot;bootstrap&quot;</code> - on top of computing the metric scores, we calculate the confidence interval for each
@@ -448,7 +448,7 @@ feature_extractor &#x2014; (<code>str</code> or <code>FeatureExtractionMixin</co
 Argument can be used to overwrite a default feature extractor if <code>model_or_pipeline</code> represents a model for
 which we build a pipeline. If <code>model_or_pipeline</code> is <code>None</code> or a pre-initialized pipeline, we ignore
 this argument.
-strategy &#x2014; (<code>Literal[&quot;simple&quot;, &quot;bootstrap&quot;, &quot;perf&quot;]</code> or <code>List[Literal[&quot;simple&quot;, &quot;bootstrap&quot;, &quot;perf&quot;]]</code>, defaults to &#x201C;simple&#x201D;):
+strategy &#x2014; (<code>Literal[&quot;simple&quot;, &quot;bootstrap&quot;]</code>, defaults to &#x201C;simple&#x201D;):
 specifies the evaluation strategy. Possible values are:<ul>
 <li><code>&quot;simple&quot;</code> - we evaluate the metric and return the scores.</li>
 <li><code>&quot;bootstrap&quot;</code> - on top of computing the metric scores, we calculate the confidence interval for each
@@ -511,10 +511,10 @@ defined in the <code>label_column</code> of the <code>data</code> dataset.<!-- H
 <span class="hljs-meta">&gt;&gt;&gt; </span>)<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="uo5y59">
+		<script type="module" data-hydrate="7zq9b1">
 		import { start } from "/docs/evaluate/pr_178/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="uo5y59"]').parentNode,
+			target: document.querySelector('[data-hydrate="7zq9b1"]').parentNode,
 			paths: {"base":"/docs/evaluate/pr_178/en","assets":"/docs/evaluate/pr_178/en"},
 			session: {},
 			route: false,
