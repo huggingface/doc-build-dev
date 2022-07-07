@@ -29,45 +29,23 @@ for a deeper view of what Discussions and Pull Requests on the Hub are, and how 
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> get_repo_discussions
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> discussion <span class="hljs-keyword">in</span> get_repo_discussions(repo_id=<span class="hljs-string">&quot;bigscience/bloom-1b3&quot;</span>):
+<span class="hljs-meta">... </span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">{discussion.num}</span> - <span class="hljs-subst">{discussion.title}</span>, pr: <span class="hljs-subst">{discussion.is_pull_request}</span>&quot;</span>)
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>get_repo_discussions(repo_id=<span class="hljs-string">&quot;bigscience/bloom-1b3&quot;</span>)
-Pagination(
-    page=[
-        Discussion(
-            num=<span class="hljs-number">8</span>,
-            author=<span class="hljs-string">&#x27;ybelkada&#x27;</span>,
-            title=<span class="hljs-string">&#x27;Update tokenizer_config.json&#x27;</span>,
-            status=<span class="hljs-string">&#x27;merged&#x27;</span>,
-            is_pull_request=<span class="hljs-literal">True</span>,
-            ...
-        ),
-        Discussion(
-            num=<span class="hljs-number">7</span>,
-            author=<span class="hljs-string">&#x27;malteos&#x27;</span>,
-            title=<span class="hljs-string">&#x27;Slurm training script&#x27;</span>,
-            status=<span class="hljs-string">&#x27;closed&#x27;</span>,
-            is_pull_request=<span class="hljs-literal">False</span>,
-            ...
-        ),
-        ...
-    ],
-    total=<span class="hljs-number">8</span>,
-    page_num=<span class="hljs-number">0</span>,
-    next_page=<span class="hljs-literal">None</span>,
-)<!-- HTML_TAG_END --></pre></div>
-<p><code>HfApi.get_repo_discussions</code> returns a <a href="/docs/huggingface_hub/pr_930/en/package_reference/utilities#huggingface_hub.Pagination">Pagination</a> object, which is a convenience wrapper to manage pagination
-of the results. To get all the Discussions in a single list, run:</p>
+<span class="hljs-comment"># 11 - Add Flax weights, pr: True</span>
+<span class="hljs-comment"># 10 - Update README.md, pr: True</span>
+<span class="hljs-comment"># 9 - Training languages in the model card, pr: True</span>
+<span class="hljs-comment"># 8 - Update tokenizer_config.json, pr: True</span>
+<span class="hljs-comment"># 7 - Slurm training script, pr: False</span>
+[...]<!-- HTML_TAG_END --></pre></div>
+<p><code>HfApi.get_repo_discussions</code> returns a <a href="https://docs.python.org/3.7/howto/functional.html#generators" rel="nofollow">generator</a> that yields
+<a href="/docs/huggingface_hub/pr_930/en/package_reference/community#huggingface_hub.Discussion">Discussion</a> objects. To get all the Discussions in a single list, run:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> huggingface_hub <span class="hljs-keyword">import</span> get_repo_discussions
-
-<span class="hljs-meta">&gt;&gt;&gt; </span>pagination = get_repo_discussions(repo_id=<span class="hljs-string">&quot;dalle-mini/dalle-mini&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>all_discussions = pagination.page
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">while</span> pagination.has_next:
-<span class="hljs-meta">... </span>    pagination = pagination.next_page()
-<span class="hljs-meta">... </span>    all_discussions = all_discussions + pagination.page<!-- HTML_TAG_END --></pre></div>
+<span class="hljs-meta">&gt;&gt;&gt; </span>discussions_list = <span class="hljs-built_in">list</span>(get_repo_discussions(repo_id=<span class="hljs-string">&quot;bert-base-uncased&quot;</span>))<!-- HTML_TAG_END --></pre></div>
 <p>The <a href="/docs/huggingface_hub/pr_930/en/package_reference/community#huggingface_hub.Discussion">Discussion</a> object returned by <code>HfApi.get_repo_discussion</code> contains high-level overview of the
 Discussion or Pull Request. You can also get more detailed information using <a href="/docs/huggingface_hub/pr_930/en/package_reference/hf_api#huggingface_hub.HfApi.get_discussion_details">HfApi.get_discussion_details()</a>:</p>
 
@@ -164,10 +142,10 @@ DiscussionWithDetails(..., is_pull_request=<span class="hljs-literal">True</span
 <p>For a more detailed reference, visit the <a href="/source/package_reference/community">community</a> and the <a href="/source/package_reference/hf_api">hf_api</a> documentation page.</p>
 
 
-		<script type="module" data-hydrate="vhj51">
+		<script type="module" data-hydrate="1j4ka7v">
 		import { start } from "/docs/huggingface_hub/pr_930/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="vhj51"]').parentNode,
+			target: document.querySelector('[data-hydrate="1j4ka7v"]').parentNode,
 			paths: {"base":"/docs/huggingface_hub/pr_930/en","assets":"/docs/huggingface_hub/pr_930/en"},
 			session: {},
 			route: false,
