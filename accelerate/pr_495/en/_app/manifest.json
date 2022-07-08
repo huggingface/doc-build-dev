@@ -17,7 +17,8 @@
       "src/routes/package_reference/utilities.mdx",
       "src/routes/package_reference/tracking.mdx",
       "src/routes/package_reference/logging.mdx",
-      "src/routes/package_reference/kwargs.mdx"
+      "src/routes/package_reference/kwargs.mdx",
+      "src/routes/package_reference/state.mdx"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -127,6 +128,16 @@
     "imports": [
       "_vendor-hf-doc-builder.js",
       "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/package_reference/state.mdx": {
+    "file": "pages/package_reference/state.mdx-hf-doc-builder.js",
+    "src": "src/routes/package_reference/state.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
       "_Docstring-hf-doc-builder.js"
     ]
   },

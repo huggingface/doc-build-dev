@@ -2,8 +2,8 @@ import{S as co,i as no,s as lo,e as o,k as i,w as $,t as c,M as io,c as r,d as a
 The data loader to split across several devices.`,name:"dataloader"},{anchor:"accelerate.data_loader.prepare_data_loader.device",description:`<strong>device</strong> (<code>torch.device</code>) &#x2014;
 The target device for the returned <code>DataLoader</code>.`,name:"device"},{anchor:"accelerate.data_loader.prepare_data_loader.num_processes",description:`<strong>num_processes</strong> (<code>int</code>, <em>optional</em>) &#x2014;
 The number of processes running concurrently. Will default to the value given by
-<code>AcceleratorState</code>.`,name:"num_processes"},{anchor:"accelerate.data_loader.prepare_data_loader.process_index",description:`<strong>process_index</strong> (<code>int</code>, <em>optional</em>) &#x2014;
-The index of the current process. Will default to the value given by <code>AcceleratorState</code>.`,name:"process_index"},{anchor:"accelerate.data_loader.prepare_data_loader.split_batches",description:`<strong>split_batches</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
+<a href="/docs/accelerate/pr_495/en/package_reference/state#accelerate.state.AcceleratorState">AcceleratorState</a>.`,name:"num_processes"},{anchor:"accelerate.data_loader.prepare_data_loader.process_index",description:`<strong>process_index</strong> (<code>int</code>, <em>optional</em>) &#x2014;
+The index of the current process. Will default to the value given by <a href="/docs/accelerate/pr_495/en/package_reference/state#accelerate.state.AcceleratorState">AcceleratorState</a>.`,name:"process_index"},{anchor:"accelerate.data_loader.prepare_data_loader.split_batches",description:`<strong>split_batches</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether the resulting <code>DataLoader</code> should split the batches of the original data loader across devices or
 yield full batches (in which case it will yield batches starting at the <code>process_index</code>-th and advancing of
 <code>num_processes</code> batches at each iteration).</p>
