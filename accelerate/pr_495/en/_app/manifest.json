@@ -23,7 +23,8 @@
       "src/routes/basic_tutorials/migration.mdx",
       "src/routes/basic_tutorials/overview.mdx",
       "src/routes/basic_tutorials/install.mdx",
-      "src/routes/basic_tutorials/launch.mdx"
+      "src/routes/basic_tutorials/launch.mdx",
+      "src/routes/usage_guides/gradient_accumulation.mdx"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -203,6 +204,18 @@
   "src/routes/basic_tutorials/launch.mdx": {
     "file": "pages/basic_tutorials/launch.mdx-hf-doc-builder.js",
     "src": "src/routes/basic_tutorials/launch.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/usage_guides/gradient_accumulation.mdx": {
+    "file": "pages/usage_guides/gradient_accumulation.mdx-hf-doc-builder.js",
+    "src": "src/routes/usage_guides/gradient_accumulation.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
