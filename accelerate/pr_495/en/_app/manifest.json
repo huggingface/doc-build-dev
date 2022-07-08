@@ -19,7 +19,9 @@
       "src/routes/package_reference/tracking.mdx",
       "src/routes/package_reference/logging.mdx",
       "src/routes/package_reference/kwargs.mdx",
-      "src/routes/package_reference/state.mdx"
+      "src/routes/package_reference/state.mdx",
+      "src/routes/basic_tutorials/overview.mdx",
+      "src/routes/basic_tutorials/install.mdx"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -75,8 +77,9 @@
       "_vendor-hf-doc-builder.js",
       "_Tip-hf-doc-builder.js",
       "_Docstring-hf-doc-builder.js",
-      "_ExampleCodeBlock-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/package_reference/accelerator.mdx": {
@@ -134,8 +137,9 @@
     "imports": [
       "_vendor-hf-doc-builder.js",
       "_Docstring-hf-doc-builder.js",
-      "_ExampleCodeBlock-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/package_reference/kwargs.mdx": {
@@ -161,6 +165,27 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
+  "src/routes/basic_tutorials/overview.mdx": {
+    "file": "pages/basic_tutorials/overview.mdx-hf-doc-builder.js",
+    "src": "src/routes/basic_tutorials/overview.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/basic_tutorials/install.mdx": {
+    "file": "pages/basic_tutorials/install.mdx-hf-doc-builder.js",
+    "src": "src/routes/basic_tutorials/install.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
   "_vendor-hf-doc-builder.js": {
     "file": "chunks/vendor-hf-doc-builder.js"
   },
@@ -184,6 +209,12 @@
     "imports": [
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "_CodeBlock-hf-doc-builder.js": {
+    "file": "chunks/CodeBlock-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
     ]
   },
   "_ExampleCodeBlock-hf-doc-builder.js": {
