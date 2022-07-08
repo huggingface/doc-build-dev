@@ -20,7 +20,7 @@
 
 <p>Gradient accumulation is a technique where you can train on bigger batch sizes than
 your machine would normally be able to fit into memory. This is done by accumulating gradients over
-several batches, and only performing the backward pass after a certain number of batches have been performed.</p>
+several batches, and only performing the step through the optimizer after a certain number of batches have been performed.</p>
 <p>While technically standard gradient accumulation code would work fine in a distributed setup, it is not the most efficient
 method for doing so and you may experience considerable slowdowns!</p>
 <p>In this tutorial you will see how to quickly setup gradient accumulation and perform it with the utilties provided in 🤗 Accelerate,
@@ -116,10 +116,10 @@ and step through the prepared schedulers and optimizers. </p>
 </div>
 
 
-		<script type="module" data-hydrate="snvbnl">
+		<script type="module" data-hydrate="ga7yxs">
 		import { start } from "/docs/accelerate/pr_495/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="snvbnl"]').parentNode,
+			target: document.querySelector('[data-hydrate="ga7yxs"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_495/en","assets":"/docs/accelerate/pr_495/en"},
 			session: {},
 			route: false,
