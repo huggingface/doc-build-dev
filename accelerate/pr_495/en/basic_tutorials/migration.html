@@ -5,6 +5,7 @@
 	<link rel="modulepreload" href="/docs/accelerate/pr_495/en/_app/chunks/paths-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_495/en/_app/pages/__layout.svelte-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_495/en/_app/pages/basic_tutorials/migration.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/accelerate/pr_495/en/_app/chunks/Tip-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_495/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
 	<link rel="modulepreload" href="/docs/accelerate/pr_495/en/_app/chunks/CodeBlock-hf-doc-builder.js"> 
 
@@ -25,7 +26,10 @@ your way towards running your code on distributed systems with ease!</p>
 	</span></h2>
 
 <p>To begin, first write out a very basic PyTorch training loop. </p>
-<blockquote><p>Note: We are under the presumpiton that <code>training_dataloader</code>, <code>model</code>, <code>optimizer</code>, <code>scheduler</code>, and <code>loss_function</code> have been defined beforehand</p></blockquote>
+
+
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400">We are under the presumpiton that `training_dataloader`, `model`, `optimizer`, `scheduler`, and `loss_function` have been defined beforehand
+</div>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -84,7 +88,10 @@ then make sure that everything is setup for the environment you are currently in
 )<!-- HTML_TAG_END --></pre></div>
 <p>These objects are returned in the same order they were sent in as. If <code>device_placement=True</code> is passed into the <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator">Accelerator</a> object (the default),
 performing this action will also automatically move your model to the proper device as well.</p>
-<blockquote><p>Important: Accelerate will only prepare objects that inherit from their respective PyTorch classes (such as <code>torch.optim.Optimizer</code>)</p></blockquote>
+
+
+<div class="course-tip course-tip-orange bg-gradient-to-br dark:bg-gradient-to-r before:border-orange-500 dark:before:border-orange-800 from-orange-50 dark:from-gray-900 to-white dark:to-gray-950 border border-orange-50 text-orange-700 dark:text-gray-400">Accelerate will only prepare objects that inherit from their respective PyTorch classes (such as `torch.optim.Optimizer`)
+</div>
 <h3 class="relative group"><a id="modifying-the-training-loop" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#modifying-the-training-loop"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Modifying the training loop
 	</span></h3>
@@ -95,12 +102,12 @@ and the <code>accelerator</code> should be used for performing the backward pass
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START --><span class="hljs-deletion">-    inputs = inputs.to(device)</span>
-<span class="hljs-deletion">-    targets = targets.to(device)</span>
+	<pre><!-- HTML_TAG_START --><span class="hljs-deletion">-   inputs = inputs.to(device)</span>
+<span class="hljs-deletion">-   targets = targets.to(device)</span>
     outputs = model(inputs)
     loss = loss_function(outputs, targets)
-<span class="hljs-deletion">-    loss.backward()</span>
-<span class="hljs-addition">+    accelerator.backward(loss)</span><!-- HTML_TAG_END --></pre></div>
+<span class="hljs-deletion">-   loss.backward()</span>
+<span class="hljs-addition">+   accelerator.backward(loss)</span><!-- HTML_TAG_END --></pre></div>
 <p>And with that, your training loop is now ready to use 🤗 Accelerate!</p>
 <h2 class="relative group"><a id="summary-of-the-changes" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#summary-of-the-changes"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Summary of the changes
@@ -124,20 +131,20 @@ and the <code>accelerator</code> should be used for performing the backward pass
 for batch in training_dataloader:
     optimizer.zero_grad()
     inputs, targets = batch
-<span class="hljs-deletion">-    inputs = inputs.to(device)</span>
-<span class="hljs-deletion">-    targets = targets.to(device)</span>
+<span class="hljs-deletion">-   inputs = inputs.to(device)</span>
+<span class="hljs-deletion">-   targets = targets.to(device)</span>
     outputs = model(inputs)
     loss = loss_function(outputs, targets)
-<span class="hljs-deletion">-    loss.backward()</span>
-<span class="hljs-addition">+    accelerator.backward(loss)</span>
+<span class="hljs-deletion">-   loss.backward()</span>
+<span class="hljs-addition">+   accelerator.backward(loss)</span>
     optimizer.step()
     scheduler.step()<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="hhpgfg">
+		<script type="module" data-hydrate="v92xw1">
 		import { start } from "/docs/accelerate/pr_495/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="hhpgfg"]').parentNode,
+			target: document.querySelector('[data-hydrate="v92xw1"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_495/en","assets":"/docs/accelerate/pr_495/en"},
 			session: {},
 			route: false,
