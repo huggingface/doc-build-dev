@@ -1,8 +1,20 @@
-import{S as $x,i as xx,s as Tx,e as r,k as l,w as u,t as s,M as kx,c as a,d as t,m as d,a as n,x as g,h as i,b as m,G as e,g as w,y as _,q as b,o as v,B as y,v as Px,L as Be}from"../../chunks/vendor-hf-doc-builder.js";import{T as ud}from"../../chunks/Tip-hf-doc-builder.js";import{D as P}from"../../chunks/Docstring-hf-doc-builder.js";import{C as U}from"../../chunks/CodeBlock-hf-doc-builder.js";import{I as Oe}from"../../chunks/IconCopyLink-hf-doc-builder.js";import{E as Ne}from"../../chunks/ExampleCodeBlock-hf-doc-builder.js";function Mx(D){let p,T,$,f,k;return f=new U({props:{code:`
+import{S as $x,i as xx,s as Tx,e as r,k as l,w as u,t as s,M as kx,c as a,d as t,m as d,a as n,x as g,h as i,b as m,G as e,g as w,y as _,q as b,o as v,B as y,v as Px,L as Be}from"../../chunks/vendor-hf-doc-builder.js";import{T as ud}from"../../chunks/Tip-hf-doc-builder.js";import{D as P}from"../../chunks/Docstring-hf-doc-builder.js";import{C as U}from"../../chunks/CodeBlock-hf-doc-builder.js";import{I as Oe}from"../../chunks/IconCopyLink-hf-doc-builder.js";import{E as Ne}from"../../chunks/ExampleCodeBlock-hf-doc-builder.js";function Mx(D){let p,T,$,f,k;return f=new U({props:{code:`from transformers import AutoModel
 
+model = AutoModel.from_pretrained("bert-base-cased")
 
+# Push the model to your namespace with the name "my-finetuned-bert" and have a local clone in the
+# *my-finetuned-bert* folder.
+model.push_to_hub("my-finetuned-bert")
 
-`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoModel
+# Push the model to your namespace with the name "my-finetuned-bert" with no local clone.
+model.push_to_hub("my-finetuned-bert", use_temp_dir=True)
+
+# Push the model to an organization with the name "my-finetuned-bert" and have a local clone in the
+# *my-finetuned-bert* folder.
+model.push_to_hub("my-finetuned-bert", organization="huggingface")
+
+# Make a change to an existing repo that has been cloned locally in *my-finetuned-bert*.
+model.push_to_hub("my-finetuned-bert", repo_url="https://huggingface.co/sgugger/my-finetuned-bert")`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoModel
 
 model = AutoModel.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
 
@@ -46,11 +58,23 @@ model = BertModel.from_pretrained("bert-base-uncased", from_flax=True)`,highligh
 <span class="hljs-meta">&gt;&gt;&gt; </span>config = BertConfig.from_json_file(<span class="hljs-string">&quot;./tf_model/my_tf_model_config.json&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = BertModel.from_pretrained(<span class="hljs-string">&quot;./tf_model/my_tf_checkpoint.ckpt.index&quot;</span>, from_tf=<span class="hljs-literal">True</span>, config=config)
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Loading from a Flax checkpoint file instead of a PyTorch model (slower)</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = BertModel.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>, from_flax=<span class="hljs-literal">True</span>)`}}),{c(){p=r("p"),T=s("Examples:"),$=l(),u(f.$$.fragment)},l(c){p=a(c,"P",{});var x=n(p);T=i(x,"Examples:"),x.forEach(t),$=d(c),g(f.$$.fragment,c)},m(c,x){w(c,p,x),e(p,T),w(c,$,x),_(f,c,x),k=!0},p:Be,i(c){k||(b(f.$$.fragment,c),k=!0)},o(c){v(f.$$.fragment,c),k=!1},d(c){c&&t(p),c&&t($),y(f,c)}}}function Dx(D){let p,T;return{c(){p=r("p"),T=s("This API is experimental and may have some slight breaking changes in the next releases.")},l($){p=a($,"P",{});var f=n(p);T=i(f,"This API is experimental and may have some slight breaking changes in the next releases."),f.forEach(t)},m($,f){w($,p,f),e(p,T)},d($){$&&t(p)}}}function qx(D){let p,T,$,f,k;return f=new U({props:{code:`
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = BertModel.from_pretrained(<span class="hljs-string">&quot;bert-base-uncased&quot;</span>, from_flax=<span class="hljs-literal">True</span>)`}}),{c(){p=r("p"),T=s("Examples:"),$=l(),u(f.$$.fragment)},l(c){p=a(c,"P",{});var x=n(p);T=i(x,"Examples:"),x.forEach(t),$=d(c),g(f.$$.fragment,c)},m(c,x){w(c,p,x),e(p,T),w(c,$,x),_(f,c,x),k=!0},p:Be,i(c){k||(b(f.$$.fragment,c),k=!0)},o(c){v(f.$$.fragment,c),k=!1},d(c){c&&t(p),c&&t($),y(f,c)}}}function Dx(D){let p,T;return{c(){p=r("p"),T=s("This API is experimental and may have some slight breaking changes in the next releases.")},l($){p=a($,"P",{});var f=n(p);T=i(f,"This API is experimental and may have some slight breaking changes in the next releases."),f.forEach(t)},m($,f){w($,p,f),e(p,T)},d($){$&&t(p)}}}function qx(D){let p,T,$,f,k;return f=new U({props:{code:`from transformers import TFAutoModel
 
+model = TFAutoModel.from_pretrained("bert-base-cased")
 
+# Push the model to your namespace with the name "my-finetuned-bert" and have a local clone in the
+# *my-finetuned-bert* folder.
+model.push_to_hub("my-finetuned-bert")
 
-`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> TFAutoModel
+# Push the model to your namespace with the name "my-finetuned-bert" with no local clone.
+model.push_to_hub("my-finetuned-bert", use_temp_dir=True)
+
+# Push the model to an organization with the name "my-finetuned-bert" and have a local clone in the
+# *my-finetuned-bert* folder.
+model.push_to_hub("my-finetuned-bert", organization="huggingface")
+
+# Make a change to an existing repo that has been cloned locally in *my-finetuned-bert*.
+model.push_to_hub("my-finetuned-bert", repo_url="https://huggingface.co/sgugger/my-finetuned-bert")`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> TFAutoModel
 
 model = TFAutoModel.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
 
@@ -88,11 +112,23 @@ model = TFBertModel.from_pretrained("./pt_model/my_pytorch_model.bin", from_pt=T
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">assert</span> model.config.output_attentions == <span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Loading from a Pytorch model file instead of a TensorFlow checkpoint (slower, for example purposes, not runnable).</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>config = BertConfig.from_json_file(<span class="hljs-string">&quot;./pt_model/my_pt_model_config.json&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFBertModel.from_pretrained(<span class="hljs-string">&quot;./pt_model/my_pytorch_model.bin&quot;</span>, from_pt=<span class="hljs-literal">True</span>, config=config)`}}),{c(){p=r("p"),T=s("Examples:"),$=l(),u(f.$$.fragment)},l(c){p=a(c,"P",{});var x=n(p);T=i(x,"Examples:"),x.forEach(t),$=d(c),g(f.$$.fragment,c)},m(c,x){w(c,p,x),e(p,T),w(c,$,x),_(f,c,x),k=!0},p:Be,i(c){k||(b(f.$$.fragment,c),k=!0)},o(c){v(f.$$.fragment,c),k=!1},d(c){c&&t(p),c&&t($),y(f,c)}}}function Cx(D){let p,T,$,f,k;return f=new U({props:{code:`
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = TFBertModel.from_pretrained(<span class="hljs-string">&quot;./pt_model/my_pytorch_model.bin&quot;</span>, from_pt=<span class="hljs-literal">True</span>, config=config)`}}),{c(){p=r("p"),T=s("Examples:"),$=l(),u(f.$$.fragment)},l(c){p=a(c,"P",{});var x=n(p);T=i(x,"Examples:"),x.forEach(t),$=d(c),g(f.$$.fragment,c)},m(c,x){w(c,p,x),e(p,T),w(c,$,x),_(f,c,x),k=!0},p:Be,i(c){k||(b(f.$$.fragment,c),k=!0)},o(c){v(f.$$.fragment,c),k=!1},d(c){c&&t(p),c&&t($),y(f,c)}}}function Cx(D){let p,T,$,f,k;return f=new U({props:{code:`from transformers import FlaxAutoModel
 
+model = FlaxAutoModel.from_pretrained("bert-base-cased")
 
+# Push the model to your namespace with the name "my-finetuned-bert" and have a local clone in the
+# *my-finetuned-bert* folder.
+model.push_to_hub("my-finetuned-bert")
 
-`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> FlaxAutoModel
+# Push the model to your namespace with the name "my-finetuned-bert" with no local clone.
+model.push_to_hub("my-finetuned-bert", use_temp_dir=True)
+
+# Push the model to an organization with the name "my-finetuned-bert" and have a local clone in the
+# *my-finetuned-bert* folder.
+model.push_to_hub("my-finetuned-bert", organization="huggingface")
+
+# Make a change to an existing repo that has been cloned locally in *my-finetuned-bert*.
+model.push_to_hub("my-finetuned-bert", repo_url="https://huggingface.co/sgugger/my-finetuned-bert")`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> FlaxAutoModel
 
 model = FlaxAutoModel.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
 
@@ -208,11 +244,23 @@ model.params = model.to_fp32(model.params)`,highlighted:`<span class="hljs-meta"
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># we&#x27;ll first cast to fp16 and back to fp32</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>model.params = model.to_f16(model.params)
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># now cast back to fp32</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>model.params = model.to_fp32(model.params)`}}),{c(){p=r("p"),T=s("Examples:"),$=l(),u(f.$$.fragment)},l(c){p=a(c,"P",{});var x=n(p);T=i(x,"Examples:"),x.forEach(t),$=d(c),g(f.$$.fragment,c)},m(c,x){w(c,p,x),e(p,T),w(c,$,x),_(f,c,x),k=!0},p:Be,i(c){k||(b(f.$$.fragment,c),k=!0)},o(c){v(f.$$.fragment,c),k=!1},d(c){c&&t(p),c&&t($),y(f,c)}}}function Bx(D){let p,T,$,f,k;return f=new U({props:{code:`
+<span class="hljs-meta">&gt;&gt;&gt; </span>model.params = model.to_fp32(model.params)`}}),{c(){p=r("p"),T=s("Examples:"),$=l(),u(f.$$.fragment)},l(c){p=a(c,"P",{});var x=n(p);T=i(x,"Examples:"),x.forEach(t),$=d(c),g(f.$$.fragment,c)},m(c,x){w(c,p,x),e(p,T),w(c,$,x),_(f,c,x),k=!0},p:Be,i(c){k||(b(f.$$.fragment,c),k=!0)},o(c){v(f.$$.fragment,c),k=!1},d(c){c&&t(p),c&&t($),y(f,c)}}}function Bx(D){let p,T,$,f,k;return f=new U({props:{code:`from transformers import {object_class}
 
+{object} = {object_class}.from_pretrained("bert-base-cased")
 
+# Push the {object} to your namespace with the name "my-finetuned-bert" and have a local clone in the
+# *my-finetuned-bert* folder.
+{object}.push_to_hub("my-finetuned-bert")
 
-`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> {object_class}
+# Push the {object} to your namespace with the name "my-finetuned-bert" with no local clone.
+{object}.push_to_hub("my-finetuned-bert", use_temp_dir=True)
+
+# Push the {object} to an organization with the name "my-finetuned-bert" and have a local clone in the
+# *my-finetuned-bert* folder.
+{object}.push_to_hub("my-finetuned-bert", organization="huggingface")
+
+# Make a change to an existing repo that has been cloned locally in *my-finetuned-bert*.
+{object}.push_to_hub("my-finetuned-bert", repo_url="https://huggingface.co/sgugger/my-finetuned-bert")`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> {object_class}
 
 {<span class="hljs-built_in">object</span>} = {object_class}.from_pretrained(<span class="hljs-string">&quot;bert-base-cased&quot;</span>)
 
@@ -367,7 +415,7 @@ returns a pointer to the input tokens <code>torch.nn.Embedding</code> module of 
 <p>Pointer to the input tokens Embeddings Module of the model.</p>
 `,returnType:`
 <p><code>torch.nn.Embedding</code></p>
-`}}),Ro=new P({props:{name:"save_pretrained",anchor:"transformers.PreTrainedModel.save_pretrained",parameters:[{name:"save_directory",val:": typing.Union[str, os.PathLike]"},{name:"is_main_process",val:": bool = True"},{name:"state_dict",val:": typing.Optional[dict] = None"},{name:"save_function",val:": typing.Callable = <function save at 0x7fbef553aca0>"},{name:"push_to_hub",val:": bool = False"},{name:"max_shard_size",val:": typing.Union[int, str] = '10GB'"},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.PreTrainedModel.save_pretrained.save_directory",description:`<strong>save_directory</strong> (<code>str</code> or <code>os.PathLike</code>) &#x2014;
+`}}),Ro=new P({props:{name:"save_pretrained",anchor:"transformers.PreTrainedModel.save_pretrained",parameters:[{name:"save_directory",val:": typing.Union[str, os.PathLike]"},{name:"is_main_process",val:": bool = True"},{name:"state_dict",val:": typing.Optional[dict] = None"},{name:"save_function",val:": typing.Callable = <function save at 0x7f57d67c5ca0>"},{name:"push_to_hub",val:": bool = False"},{name:"max_shard_size",val:": typing.Union[int, str] = '10GB'"},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.PreTrainedModel.save_pretrained.save_directory",description:`<strong>save_directory</strong> (<code>str</code> or <code>os.PathLike</code>) &#x2014;
 Directory to which to save. Will be created if it doesn&#x2019;t exist.`,name:"save_directory"},{anchor:"transformers.PreTrainedModel.save_pretrained.is_main_process",description:`<strong>is_main_process</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>True</code>) &#x2014;
 Whether the process calling this is the main process or not. Useful when in distributed training like
 TPUs and need to call this function on all processes. In this case, set <code>is_main_process=True</code> only on
@@ -394,9 +442,13 @@ which will be bigger than <code>max_shard_size</code>.</p>
 
 					</div>
 <p>kwargs &#x2014;
-Additional key word arguments passed along to the <a href="/docs/transformers/pr_17765/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.push_to_hub">push_to_hub()</a> method.`,name:"max_shard_size"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L1430"}}),Ko=new P({props:{name:"set_input_embeddings",anchor:"transformers.PreTrainedModel.set_input_embeddings",parameters:[{name:"value",val:": Module"}],parametersDescription:[{anchor:"transformers.PreTrainedModel.set_input_embeddings.value",description:"<strong>value</strong> (<code>nn.Module</code>) &#x2014; A module mapping vocabulary to hidden states.",name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L1013"}}),Jo=new P({props:{name:"tie_weights",anchor:"transformers.PreTrainedModel.tie_weights",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L1041"}}),Qo=new Oe({}),tr=new U({props:{code:"",highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoModelForSeq2SeqLM
+Additional key word arguments passed along to the <a href="/docs/transformers/pr_17765/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.push_to_hub">push_to_hub()</a> method.`,name:"max_shard_size"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L1430"}}),Ko=new P({props:{name:"set_input_embeddings",anchor:"transformers.PreTrainedModel.set_input_embeddings",parameters:[{name:"value",val:": Module"}],parametersDescription:[{anchor:"transformers.PreTrainedModel.set_input_embeddings.value",description:"<strong>value</strong> (<code>nn.Module</code>) &#x2014; A module mapping vocabulary to hidden states.",name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L1013"}}),Jo=new P({props:{name:"tie_weights",anchor:"transformers.PreTrainedModel.tie_weights",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L1041"}}),Qo=new Oe({}),tr=new U({props:{code:`from transformers import AutoModelForSeq2SeqLM
 
-t0pp = AutoModelForSeq2SeqLM.from_pretrained(<span class="hljs-string">&quot;bigscience/T0pp&quot;</span>, low_cpu_mem_usage=<span class="hljs-literal">True</span>)`}}),or=new U({props:{code:"",highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoModelForSeq2SeqLM
+t0pp = AutoModelForSeq2SeqLM.from_pretrained("bigscience/T0pp", low_cpu_mem_usage=True)`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoModelForSeq2SeqLM
+
+t0pp = AutoModelForSeq2SeqLM.from_pretrained(<span class="hljs-string">&quot;bigscience/T0pp&quot;</span>, low_cpu_mem_usage=<span class="hljs-literal">True</span>)`}}),or=new U({props:{code:`from transformers import AutoModelForSeq2SeqLM
+
+t0pp = AutoModelForSeq2SeqLM.from_pretrained("bigscience/T0pp", device_map="auto")`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoModelForSeq2SeqLM
 
 t0pp = AutoModelForSeq2SeqLM.from_pretrained(<span class="hljs-string">&quot;bigscience/T0pp&quot;</span>, device_map=<span class="hljs-string">&quot;auto&quot;</span>)`}}),rr=new U({props:{code:"t0pp.hf_device_map",highlighted:"t0pp.hf_device_map"}}),ar=new U({props:{code:`{'shared': 0,
  'decoder.embed_tokens': 0,
@@ -469,7 +521,7 @@ Whether or not to count embedding and softmax operations.`,name:"exclude_embeddi
 <p>The number of floating-point operations.</p>
 `,returnType:`
 <p><code>int</code></p>
-`}}),_r=new P({props:{name:"get_extended_attention_mask",anchor:"transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask",parameters:[{name:"attention_mask",val:": Tensor"},{name:"input_shape",val:": typing.Tuple[int]"},{name:"device",val:": <property object at 0x7fbef3e8d2c0> = None"},{name:"dtype",val:": torch.float32 = None"}],parametersDescription:[{anchor:"transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask.attention_mask",description:`<strong>attention_mask</strong> (<code>torch.Tensor</code>) &#x2014;
+`}}),_r=new P({props:{name:"get_extended_attention_mask",anchor:"transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask",parameters:[{name:"attention_mask",val:": Tensor"},{name:"input_shape",val:": typing.Tuple[int]"},{name:"device",val:": <property object at 0x7f57d51bf310> = None"},{name:"dtype",val:": torch.float32 = None"}],parametersDescription:[{anchor:"transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask.attention_mask",description:`<strong>attention_mask</strong> (<code>torch.Tensor</code>) &#x2014;
 Mask with ones indicating tokens to attend to, zeros for tokens to ignore.`,name:"attention_mask"},{anchor:"transformers.modeling_utils.ModuleUtilsMixin.get_extended_attention_mask.input_shape",description:`<strong>input_shape</strong> (<code>Tuple[int]</code>) &#x2014;
 The shape of the input to the model.`,name:"input_shape"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_utils.py#L681",returnDescription:`
 <p><code>torch.Tensor</code> The extended attention mask, with a the same dtype as <code>attention_mask.dtype</code>.</p>
@@ -508,7 +560,7 @@ when running <code>transformers-cli login</code> (stored in <code>~/.huggingface
 <p>The url of the commit of your model in the given repository.</p>
 `,returnType:`
 <p><code>str</code></p>
-`}}),Bt=new Ne({props:{anchor:"transformers.TFPreTrainedModel.push_to_hub.example",$$slots:{default:[qx]},$$scope:{ctx:D}}}),Mr=new P({props:{name:"compile",anchor:"transformers.TFPreTrainedModel.compile",parameters:[{name:"optimizer",val:" = 'rmsprop'"},{name:"loss",val:" = 'passthrough'"},{name:"metrics",val:" = None"},{name:"loss_weights",val:" = None"},{name:"weighted_metrics",val:" = None"},{name:"run_eagerly",val:" = None"},{name:"steps_per_execution",val:" = None"},{name:"**kwargs",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1271"}}),Er=new P({props:{name:"from_pretrained",anchor:"transformers.TFPreTrainedModel.from_pretrained",parameters:[{name:"pretrained_model_name_or_path",val:""},{name:"*model_args",val:""},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.from_pretrained.pretrained_model_name_or_path",description:`<strong>pretrained_model_name_or_path</strong> (<code>str</code>, <em>optional</em>) &#x2014;
+`}}),Bt=new Ne({props:{anchor:"transformers.TFPreTrainedModel.push_to_hub.example",$$slots:{default:[qx]},$$scope:{ctx:D}}}),Mr=new P({props:{name:"compile",anchor:"transformers.TFPreTrainedModel.compile",parameters:[{name:"optimizer",val:" = 'rmsprop'"},{name:"loss",val:" = 'passthrough'"},{name:"metrics",val:" = None"},{name:"loss_weights",val:" = None"},{name:"weighted_metrics",val:" = None"},{name:"run_eagerly",val:" = None"},{name:"steps_per_execution",val:" = None"},{name:"**kwargs",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1279"}}),Er=new P({props:{name:"from_pretrained",anchor:"transformers.TFPreTrainedModel.from_pretrained",parameters:[{name:"pretrained_model_name_or_path",val:""},{name:"*model_args",val:""},{name:"**kwargs",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.from_pretrained.pretrained_model_name_or_path",description:`<strong>pretrained_model_name_or_path</strong> (<code>str</code>, <em>optional</em>) &#x2014;
 Can be either:</p>
 <ul>
 <li>A string, the <em>model id</em> of a pretrained model hosted inside a model repo on huggingface.co.
@@ -575,7 +627,7 @@ initialization function (<a href="/docs/transformers/pr_17765/en/main_classes/co
 corresponds to a configuration attribute will be used to override said attribute with the
 supplied <code>kwargs</code> value. Remaining keys that do not correspond to any configuration attribute
 will be passed to the underlying model&#x2019;s <code>__init__</code> function.</li>
-</ul>`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L2044"}}),Xt=new ud({props:{$$slots:{default:[zx]},$$scope:{ctx:D}}}),Wt=new Ne({props:{anchor:"transformers.TFPreTrainedModel.from_pretrained.example",$$slots:{default:[Ax]},$$scope:{ctx:D}}}),Dr=new P({props:{name:"get_bias",anchor:"transformers.TFPreTrainedModel.get_bias",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1669",returnDescription:`
+</ul>`,name:"kwargs"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L2052"}}),Xt=new ud({props:{$$slots:{default:[zx]},$$scope:{ctx:D}}}),Wt=new Ne({props:{anchor:"transformers.TFPreTrainedModel.from_pretrained.example",$$slots:{default:[Ax]},$$scope:{ctx:D}}}),Dr=new P({props:{name:"get_bias",anchor:"transformers.TFPreTrainedModel.get_bias",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1677",returnDescription:`
 <p>The weights representing the bias, None if not an LM model.</p>
 `,returnType:`
 <p><code>tf.Variable</code></p>
@@ -583,19 +635,19 @@ will be passed to the underlying model&#x2019;s <code>__init__</code> function.<
 <p>The embeddings layer mapping vocabulary to hidden states.</p>
 `,returnType:`
 <p><code>tf.Variable</code></p>
-`}}),zr=new P({props:{name:"get_lm_head",anchor:"transformers.TFPreTrainedModel.get_lm_head",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1702",returnDescription:`
+`}}),zr=new P({props:{name:"get_lm_head",anchor:"transformers.TFPreTrainedModel.get_lm_head",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1710",returnDescription:`
 <p>The LM head layer if the model has one, None if not.</p>
 `,returnType:`
 <p><code>tf.keras.layers.Layer</code></p>
-`}}),Ar=new P({props:{name:"get_output_embeddings",anchor:"transformers.TFPreTrainedModel.get_output_embeddings",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1609",returnDescription:`
+`}}),Ar=new P({props:{name:"get_output_embeddings",anchor:"transformers.TFPreTrainedModel.get_output_embeddings",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1617",returnDescription:`
 <p>The new weights mapping vocabulary to hidden states.</p>
 `,returnType:`
 <p><code>tf.Variable</code></p>
-`}}),Cr=new P({props:{name:"get_output_layer_with_bias",anchor:"transformers.TFPreTrainedModel.get_output_layer_with_bias",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1646",returnDescription:`
+`}}),Cr=new P({props:{name:"get_output_layer_with_bias",anchor:"transformers.TFPreTrainedModel.get_output_layer_with_bias",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1654",returnDescription:`
 <p>The layer that handles the bias, None if not an LM model.</p>
 `,returnType:`
 <p><code>tf.keras.layers.Layer</code></p>
-`}}),Ir=new P({props:{name:"get_prefix_bias_name",anchor:"transformers.TFPreTrainedModel.get_prefix_bias_name",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1659",returnDescription:`
+`}}),Ir=new P({props:{name:"get_prefix_bias_name",anchor:"transformers.TFPreTrainedModel.get_prefix_bias_name",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1667",returnDescription:`
 <p>The _prefix name of the bias.</p>
 `,returnType:`
 <p><code>str</code></p>
@@ -626,10 +678,10 @@ performance, but can be disabled in edge cases.`,name:"prefetch"}],source:"https
 `}}),Nr=new P({props:{name:"prune_heads",anchor:"transformers.TFPreTrainedModel.prune_heads",parameters:[{name:"heads_to_prune",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.prune_heads.heads_to_prune",description:`<strong>heads_to_prune</strong> (<code>Dict[int, List[int]]</code>) &#x2014;
 Dictionary with keys being selected layer indices (<code>int</code>) and associated values being the list of heads
 to prune in said layer (list of <code>int</code>). For instance {1: [0, 2], 2: [2, 3]} will prune heads 0 and 2 on
-layer 1 and heads 2 and 3 on layer 2.`,name:"heads_to_prune"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1911"}}),Br=new P({props:{name:"resize_token_embeddings",anchor:"transformers.TFPreTrainedModel.resize_token_embeddings",parameters:[{name:"new_num_tokens",val:" = None"}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.resize_token_embeddings.new_num_tokens",description:`<strong>new_num_tokens</strong> (<code>int</code>, <em>optional</em>) &#x2014;
+layer 1 and heads 2 and 3 on layer 2.`,name:"heads_to_prune"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1919"}}),Br=new P({props:{name:"resize_token_embeddings",anchor:"transformers.TFPreTrainedModel.resize_token_embeddings",parameters:[{name:"new_num_tokens",val:" = None"}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.resize_token_embeddings.new_num_tokens",description:`<strong>new_num_tokens</strong> (<code>int</code>, <em>optional</em>) &#x2014;
 The number of new tokens in the embedding matrix. Increasing the size will add newly initialized
 vectors at the end. Reducing the size will remove vectors from the end. If not provided or <code>None</code>, just
-returns a pointer to the input tokens <code>tf.Variable</code> module of the model without doing anything.`,name:"new_num_tokens"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1711",returnDescription:`
+returns a pointer to the input tokens <code>tf.Variable</code> module of the model without doing anything.`,name:"new_num_tokens"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1719",returnDescription:`
 <p>Pointer to the input tokens Embeddings Module of the model.</p>
 `,returnType:`
 <p><code>tf.Variable</code></p>
@@ -656,12 +708,12 @@ which will be bigger than <code>max_shard_size</code>.</p>
 
 					</div>
 <p>kwargs &#x2014;
-Additional key word arguments passed along to the <a href="/docs/transformers/pr_17765/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.push_to_hub">push_to_hub()</a> method.`,name:"max_shard_size"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1923"}}),Gr=new P({props:{name:"serving",anchor:"transformers.TFPreTrainedModel.serving",parameters:[{name:"inputs",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.serving.inputs",description:`<strong>inputs</strong> (<code>Dict[str, tf.Tensor]</code>) &#x2014;
+Additional key word arguments passed along to the <a href="/docs/transformers/pr_17765/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.push_to_hub">push_to_hub()</a> method.`,name:"max_shard_size"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1931"}}),Gr=new P({props:{name:"serving",anchor:"transformers.TFPreTrainedModel.serving",parameters:[{name:"inputs",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.serving.inputs",description:`<strong>inputs</strong> (<code>Dict[str, tf.Tensor]</code>) &#x2014;
 The input of the saved model as a dictionary of tensors.`,name:"inputs"}]}}),Hr=new P({props:{name:"serving_output",anchor:"transformers.TFPreTrainedModel.serving_output",parameters:[{name:"output",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.serving_output.output",description:`<strong>output</strong> (<code>TFBaseModelOutput</code>) &#x2014;
 The output returned by the model.`,name:"output"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1089"}}),Rr=new P({props:{name:"set_bias",anchor:"transformers.TFPreTrainedModel.set_bias",parameters:[{name:"value",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.set_bias.value",description:`<strong>value</strong> (<code>Dict[tf.Variable]</code>) &#x2014;
-All the new bias attached to an LM head.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1686"}}),Yr=new P({props:{name:"set_input_embeddings",anchor:"transformers.TFPreTrainedModel.set_input_embeddings",parameters:[{name:"value",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.set_input_embeddings.value",description:`<strong>value</strong> (<code>tf.Variable</code>) &#x2014;
-The new weights mapping hidden states to vocabulary.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1589"}}),Kr=new P({props:{name:"set_output_embeddings",anchor:"transformers.TFPreTrainedModel.set_output_embeddings",parameters:[{name:"value",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.set_output_embeddings.value",description:`<strong>value</strong> (<code>tf.Variable</code>) &#x2014;
-The new weights mapping hidden states to vocabulary.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1629"}}),Jr=new P({props:{name:"test_step",anchor:"transformers.TFPreTrainedModel.test_step",parameters:[{name:"data",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1456"}}),Qr=new P({props:{name:"train_step",anchor:"transformers.TFPreTrainedModel.train_step",parameters:[{name:"data",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1351"}}),ta=new Oe({}),oa=new P({props:{name:"class transformers.modeling_tf_utils.TFModelUtilsMixin",anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L96"}}),aa=new P({props:{name:"num_parameters",anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin.num_parameters",parameters:[{name:"only_trainable",val:": bool = False"}],parametersDescription:[{anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin.num_parameters.only_trainable",description:`<strong>only_trainable</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
+All the new bias attached to an LM head.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1694"}}),Yr=new P({props:{name:"set_input_embeddings",anchor:"transformers.TFPreTrainedModel.set_input_embeddings",parameters:[{name:"value",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.set_input_embeddings.value",description:`<strong>value</strong> (<code>tf.Variable</code>) &#x2014;
+The new weights mapping hidden states to vocabulary.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1597"}}),Kr=new P({props:{name:"set_output_embeddings",anchor:"transformers.TFPreTrainedModel.set_output_embeddings",parameters:[{name:"value",val:""}],parametersDescription:[{anchor:"transformers.TFPreTrainedModel.set_output_embeddings.value",description:`<strong>value</strong> (<code>tf.Variable</code>) &#x2014;
+The new weights mapping hidden states to vocabulary.`,name:"value"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1637"}}),Jr=new P({props:{name:"test_step",anchor:"transformers.TFPreTrainedModel.test_step",parameters:[{name:"data",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1464"}}),Qr=new P({props:{name:"train_step",anchor:"transformers.TFPreTrainedModel.train_step",parameters:[{name:"data",val:""}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L1359"}}),ta=new Oe({}),oa=new P({props:{name:"class transformers.modeling_tf_utils.TFModelUtilsMixin",anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L96"}}),aa=new P({props:{name:"num_parameters",anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin.num_parameters",parameters:[{name:"only_trainable",val:": bool = False"}],parametersDescription:[{anchor:"transformers.modeling_tf_utils.TFModelUtilsMixin.num_parameters.only_trainable",description:`<strong>only_trainable</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether or not to return only the number of trainable parameters`,name:"only_trainable"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/modeling_tf_utils.py#L101",returnDescription:`
 <p>The number of parameters.</p>
 `,returnType:`
