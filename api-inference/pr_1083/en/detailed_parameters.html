@@ -400,13 +400,12 @@ are all the options</p>
 	<span>Sentence Similarity task
 	</span></h3>
 
-<p>Calculate the semantic similarity for two different texts by comparing their embeddings.</p>
+<p>Calculate the semantic similarity between one text and a list of other sentences by comparing their embeddings.</p>
 
 
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p><strong>Recommended model</strong>:
 <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2" rel="nofollow">sentence-transformers/all-MiniLM-L6-v2</a>.</p></div>
-<p>Available with: <a href="https://github.com/huggingface/transformers" rel="nofollow">🤗Transformers</a> and
-<a href="https://www.sbert.net/index.html" rel="nofollow">Sentence Transformers</a></p>
+<p>Available with: <a href="https://www.sbert.net/index.html" rel="nofollow">Sentence Transformers</a></p>
 <p>Example:</p>
 <div class="flex space-x-2 items-center my-1.5 mr-8 h-7 !pl-0 -mx-3 md:mx-0"><div class="flex items-center border rounded-lg px-1.5 py-1 leading-none select-none text-smd border-gray-800 bg-black dark:bg-gray-700 text-white"><svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M15.84.5a16.4,16.4,0,0,0-3.57.32C9.1,1.39,8.53,2.53,8.53,4.64V7.48H16v1H5.77a4.73,4.73,0,0,0-4.7,3.74,14.82,14.82,0,0,0,0,7.54c.57,2.28,1.86,3.82,4,3.82h2.6V20.14a4.73,4.73,0,0,1,4.63-4.63h7.38a3.72,3.72,0,0,0,3.73-3.73V4.64A4.16,4.16,0,0,0,19.65.82,20.49,20.49,0,0,0,15.84.5ZM11.78,2.77a1.39,1.39,0,0,1,1.38,1.46,1.37,1.37,0,0,1-1.38,1.38A1.42,1.42,0,0,1,10.4,4.23,1.44,1.44,0,0,1,11.78,2.77Z" fill="#5a9fd4"></path><path d="M16.16,31.5a16.4,16.4,0,0,0,3.57-.32c3.17-.57,3.74-1.71,3.74-3.82V24.52H16v-1H26.23a4.73,4.73,0,0,0,4.7-3.74,14.82,14.82,0,0,0,0-7.54c-.57-2.28-1.86-3.82-4-3.82h-2.6v3.41a4.73,4.73,0,0,1-4.63,4.63H12.35a3.72,3.72,0,0,0-3.73,3.73v7.14a4.16,4.16,0,0,0,3.73,3.82A20.49,20.49,0,0,0,16.16,31.5Zm4.06-2.27a1.39,1.39,0,0,1-1.38-1.46,1.37,1.37,0,0,1,1.38-1.38,1.42,1.42,0,0,1,1.38,1.38A1.44,1.44,0,0,1,20.22,29.23Z" fill="#ffd43b"></path></svg>
 			Python
@@ -444,9 +443,9 @@ are all the options</p>
 <tbody><tr><td align="left"><strong>inputs</strong> (required)</td>
 <td align="left"></td></tr>
 <tr><td align="left">source_sentence (required)</td>
-<td align="left">The query in plain text that you want to ask the table</td></tr>
+<td align="left">The string that you wish to compare the other strings with. This can be a phrase, sentence, or longer passage, depending on the model being used.</td></tr>
 <tr><td align="left">sentences (required)</td>
-<td align="left">A table of data represented as a dict of list where entries are headers and the lists are all the values, all lists must have the same size.</td></tr>
+<td align="left">A list of strings which will be compared against the source_sentence.</td></tr>
 <tr><td align="left"><strong>options</strong></td>
 <td align="left">a dict containing the following keys:</td></tr>
 <tr><td align="left">use_gpu</td>
@@ -1458,10 +1457,10 @@ supports</a>.</p>
 <td align="left">A str (base64 str of a single channel black-and-white img) representing the mask of a segment.</td></tr></tbody></table>
 
 
-		<script type="module" data-hydrate="1pr9e82">
+		<script type="module" data-hydrate="11gk7kp">
 		import { start } from "/docs/api-inference/pr_1083/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1pr9e82"]').parentNode,
+			target: document.querySelector('[data-hydrate="11gk7kp"]').parentNode,
 			paths: {"base":"/docs/api-inference/pr_1083/en","assets":"/docs/api-inference/pr_1083/en"},
 			session: {},
 			route: false,
