@@ -10,7 +10,6 @@ for index, batch in enumerate(training_dataloader):
     targets = targets.to(device)
     outputs = model(inputs)
     loss = loss_function(outputs, targets)
-    loss = loss / gradient_accumulation_steps
     loss.backward()
     if (index+1) % gradient_accumulation_steps == 0:
         optimizer.step()
@@ -26,7 +25,6 @@ gradient_accumulation_steps = <span class="hljs-number">2</span>
     <span class="hljs-built_in">targets</span> = <span class="hljs-built_in">targets</span>.<span class="hljs-keyword">to</span>(device)
     outputs = model(inputs)
     loss = loss_function(outputs, <span class="hljs-built_in">targets</span>)
-    loss = loss / gradient_accumulation_steps
     loss.backward()
     <span class="hljs-keyword">if</span> (index+<span class="hljs-number">1</span>) % gradient_accumulation_steps == <span class="hljs-number">0</span>:
         optimizer.<span class="hljs-built_in">step</span>()
@@ -42,9 +40,8 @@ for index, batch in enumerate(training_dataloader):
     inputs, targets = batch
     outputs = model(inputs)
     loss = loss_function(outputs, targets)
-    loss = loss / gradient_accumulation_steps
-    accelerator.backward(loss)
     if (index+1) % gradient_accumulation_steps == 0:
+        accelerator.backward(loss)
         optimizer.step()
         scheduler.step()`,highlighted:`from accelerate <span class="hljs-built_in">import</span> Accelerator
 <span class="hljs-attr">accelerator</span> = Accelerator()
@@ -58,9 +55,8 @@ for index, batch <span class="hljs-keyword">in</span> enumerate(training_dataloa
     inputs, <span class="hljs-attr">targets</span> = batch
     <span class="hljs-attr">outputs</span> = model(inputs)
     <span class="hljs-attr">loss</span> = loss_function(outputs, targets)
-    <span class="hljs-attr">loss</span> = loss / gradient_accumulation_steps
-    accelerator.backward(loss)
     <span class="hljs-keyword">if</span> (index+<span class="hljs-number">1</span>) % <span class="hljs-attr">gradient_accumulation_steps</span> == <span class="hljs-number">0</span>:
+        accelerator.backward(loss)
         optimizer.step()
         scheduler.step()`}}),x=new Ot({props:{warning:!0,$$slots:{default:[Qt]},$$scope:{ctx:Y}}}),D=new Me({}),F=new se({props:{code:`from accelerate import Accelerator
 -accelerator = Accelerator()

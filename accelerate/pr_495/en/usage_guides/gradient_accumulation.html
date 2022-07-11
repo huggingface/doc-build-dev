@@ -42,7 +42,6 @@ gradient_accumulation_steps = <span class="hljs-number">2</span>
     <span class="hljs-built_in">targets</span> = <span class="hljs-built_in">targets</span>.<span class="hljs-keyword">to</span>(device)
     outputs = model(inputs)
     loss = loss_function(outputs, <span class="hljs-built_in">targets</span>)
-    loss = loss / gradient_accumulation_steps
     loss.backward()
     <span class="hljs-keyword">if</span> (index+<span class="hljs-number">1</span>) % gradient_accumulation_steps == <span class="hljs-number">0</span>:
         optimizer.<span class="hljs-built_in">step</span>()
@@ -68,9 +67,8 @@ for index, batch <span class="hljs-keyword">in</span> enumerate(training_dataloa
     inputs, <span class="hljs-attr">targets</span> = batch
     <span class="hljs-attr">outputs</span> = model(inputs)
     <span class="hljs-attr">loss</span> = loss_function(outputs, targets)
-    <span class="hljs-attr">loss</span> = loss / gradient_accumulation_steps
-    accelerator.backward(loss)
     <span class="hljs-keyword">if</span> (index+<span class="hljs-number">1</span>) % <span class="hljs-attr">gradient_accumulation_steps</span> == <span class="hljs-number">0</span>:
+        accelerator.backward(loss)
         optimizer.step()
         scheduler.step()<!-- HTML_TAG_END --></pre></div>
 
@@ -134,10 +132,10 @@ scheduler.step<span class="hljs-comment">()</span><!-- HTML_TAG_END --></pre></d
         scheduler.<span class="hljs-built_in">step</span>()<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="kntibj">
+		<script type="module" data-hydrate="1qr6vsw">
 		import { start } from "/docs/accelerate/pr_495/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="kntibj"]').parentNode,
+			target: document.querySelector('[data-hydrate="1qr6vsw"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_495/en","assets":"/docs/accelerate/pr_495/en"},
 			session: {},
 			route: false,
