@@ -82,7 +82,7 @@ for index, batch <span class="hljs-keyword">in</span> enumerate(training_dataloa
 	</span></h2>
 
 <p>All that is left now is to let 🤗 Accelerate handle the gradient accumulation for us. To do so you should pass in a <code>gradient_accumulation_steps</code> parameter to <code>Accelerator</code>, dictating the number
-of steps to perform before each call to <code>step()</code> and how to automatically adjust the loss during the call to <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.backward">Accelerator.backward()</a>:</p>
+of steps to perform before each call to <code>step()</code> and how to automatically adjust the loss during the call to <code>Accelerator.backward</code>:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -90,7 +90,7 @@ of steps to perform before each call to <code>step()</code> and how to automatic
 	<pre><!-- HTML_TAG_START -->from accelerate import Accelerator
 <span class="hljs-deletion">-accelerator = Accelerator()</span>
 <span class="hljs-addition">+accelerator = Accelerator(gradient_accumulation_steps=2)</span><!-- HTML_TAG_END --></pre></div>
-<p>From here you can use the <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.accumulate">Accelerator.accumulate()</a> context manager from inside your training loop to automatically perform the gradient accumulation for you!
+<p>From here you can use the <code>Accelerator.accumulate</code> context manager from inside your training loop to automatically perform the gradient accumulation for you!
 You just wrap it around the entire training part of our code: </p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -112,7 +112,7 @@ accelerator.backward(loss)
 <span class="hljs-deletion">-if (index+1) % gradient_accumulation_steps == 0:</span>
 optimizer.step()
 scheduler.step()<!-- HTML_TAG_END --></pre></div>
-<p>As you can see the <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator">Accelerator</a> is able to keep track of the batch number you are on and it will automatically know whether to step through the prepared optimizer and how to adjust the loss. </p>
+<p>As you can see the <code>Accelerator</code> is able to keep track of the batch number you are on and it will automatically know whether to step through the prepared optimizer and how to adjust the loss. </p>
 
 
 <div class="course-tip course-tip-orange bg-gradient-to-br dark:bg-gradient-to-r before:border-orange-500 dark:before:border-orange-800 from-orange-50 dark:from-gray-900 to-white dark:to-gray-950 border border-orange-50 text-orange-700 dark:text-gray-400">Currently this method only works with non-streaming datasets (`DataLoaders` that have a length). While support for this is being worked on, you can check out the Gradient Synchronization concept tutorial to see how to do this yourself!
@@ -137,10 +137,10 @@ scheduler.step()<!-- HTML_TAG_END --></pre></div>
         scheduler.<span class="hljs-built_in">step</span>()<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="g4yqjv">
+		<script type="module" data-hydrate="9ynww2">
 		import { start } from "/docs/accelerate/pr_495/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="g4yqjv"]').parentNode,
+			target: document.querySelector('[data-hydrate="9ynww2"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_495/en","assets":"/docs/accelerate/pr_495/en"},
 			session: {},
 			route: false,
