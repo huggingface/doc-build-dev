@@ -1,4 +1,5 @@
 import{S as mt,i as dt,s as $t,e as i,k as p,w,t as l,M as yt,c,d as t,m as h,a as n,x as _,h as s,b as $,G as r,g as o,y as g,q as v,o as E,B as b,v as wt}from"../../chunks/vendor-hf-doc-builder.js";import{T as ht}from"../../chunks/Tip-hf-doc-builder.js";import{I as ft}from"../../chunks/IconCopyLink-hf-doc-builder.js";import{C as re}from"../../chunks/CodeBlock-hf-doc-builder.js";function _t(j){let u;return{c(){u=l("If you are familiar with launching scripts in PyTorch yourself such as with `torchrun`, you can still do this. It is not required to use `accelerate launch`")},l(f){u=s(f,"If you are familiar with launching scripts in PyTorch yourself such as with `torchrun`, you can still do this. It is not required to use `accelerate launch`")},m(f,m){o(f,u,m)},d(f){f&&t(u)}}}function gt(j){let u;return{c(){u=l("Even if you are not using \u{1F917} Accelerate in your code, you can still use the launcher for starting your scripts!")},l(f){u=s(f,"Even if you are not using \u{1F917} Accelerate in your code, you can still use the launcher for starting your scripts!")},m(f,m){o(f,u,m)},d(f){f&&t(u)}}}function vt(j){let u,f,m,k,M,D,Ae,H,Pe,oe,G,xe,le,L,se,N,Ce,ie,y,A,R,U,Ie,V,Se,K,ze,ce,P,De,Q,Le,Ue,ne,x,ue,Y,qe,pe,q,he,C,Te,W,Oe,Be,fe,I,Fe,X,je,Ge,me,T,de,d,Ne,Z,Ve,Ye,ee,Je,Me,te,He,Re,$e,O,ye,J,Ke,we,B,_e,S,ge;return D=new ft({}),L=new re({props:{code:`from accelerate import Accelerator
+
 accelerator = Accelerator()
 
 model, optimizer, training_dataloader, scheduler = accelerator.prepare(
@@ -13,6 +14,7 @@ for batch in training_dataloader:
     accelerator.backward(loss)
     optimizer.step()
     scheduler.step()`,highlighted:`<span class="hljs-keyword">from</span> accelerate <span class="hljs-keyword">import</span> Accelerator
+
 accelerator = Accelerator()
 
 model, optimizer, training_dataloader, scheduler = accelerator.prepare(
