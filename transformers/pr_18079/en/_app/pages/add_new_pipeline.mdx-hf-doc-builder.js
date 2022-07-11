@@ -95,14 +95,14 @@ PIPELINE_REGISTRY.register_pipeline(
     "new-task",
     pipeline_class=MyPipeline,
     pt_model=AutoModelForSequenceClassification,
-    "default"={"pt": "user/awesome_model"},
-    "type"="text",  # current support type: text, audio, image, multimodal
+    default={"pt": "user/awesome_model"},
+    type="text",  # current support type: text, audio, image, multimodal
 )`,highlighted:`PIPELINE_REGISTRY.register_pipeline(
     <span class="hljs-string">&quot;new-task&quot;</span>,
     pipeline_class=MyPipeline,
     pt_model=AutoModelForSequenceClassification,
-    <span class="hljs-string">&quot;default&quot;</span>={<span class="hljs-string">&quot;pt&quot;</span>: <span class="hljs-string">&quot;user/awesome_model&quot;</span>},
-    <span class="hljs-string">&quot;type&quot;</span>=<span class="hljs-string">&quot;text&quot;</span>,  <span class="hljs-comment"># current support type: text, audio, image, multimodal</span>
+    default={<span class="hljs-string">&quot;pt&quot;</span>: <span class="hljs-string">&quot;user/awesome_model&quot;</span>},
+    <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;text&quot;</span>,  <span class="hljs-comment"># current support type: text, audio, image, multimodal</span>
 )`}}),me=new Gt({}),_e=new R({props:{code:`import numpy as np
 
 from transformers import Pipeline
