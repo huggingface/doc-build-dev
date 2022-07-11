@@ -408,11 +408,7 @@ data = query(
     {
         "inputs": {
             "source_sentence": "That is a happy person",
-            "sentences": [
-                "That is a happy dog",
-                "That is a very happy person",
-                "Today is a sunny day"
-            ]
+            "sentences": ["That is a happy dog", "That is a very happy person", "Today is a sunny day"],
         }
     }
 )`,highlighted:`<span class="hljs-keyword">import</span> json
@@ -427,11 +423,7 @@ data = query(
     {
         <span class="hljs-string">&quot;inputs&quot;</span>: {
             <span class="hljs-string">&quot;source_sentence&quot;</span>: <span class="hljs-string">&quot;That is a happy person&quot;</span>,
-            <span class="hljs-string">&quot;sentences&quot;</span>: [
-                <span class="hljs-string">&quot;That is a happy dog&quot;</span>,
-                <span class="hljs-string">&quot;That is a very happy person&quot;</span>,
-                <span class="hljs-string">&quot;Today is a sunny day&quot;</span>
-            ]
+            <span class="hljs-string">&quot;sentences&quot;</span>: [<span class="hljs-string">&quot;That is a happy dog&quot;</span>, <span class="hljs-string">&quot;That is a very happy person&quot;</span>, <span class="hljs-string">&quot;Today is a sunny day&quot;</span>],
         }
     }
 )`}}),{c(){_(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p:O,i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function zV(q){let n,c;return n=new P({props:{$$slots:{default:[UV]},$$scope:{ctx:q}}}),{c(){_(n.$$.fragment)},l(s){v(n.$$.fragment,s)},m(s,d){y(n,s,d),c=!0},p(s,d){const $={};d&2&&($.$$scope={dirty:d,ctx:s}),n.$set($)},i(s){c||(E(n.$$.fragment,s),c=!0)},o(s){w(n.$$.fragment,s),c=!1},d(s){b(n,s)}}}function KV(q){let n,c;return n=new R({props:{code:`import fetch from "node-fetch";
