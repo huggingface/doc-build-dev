@@ -163,7 +163,7 @@ Organization in which you want to push your config (you must be a member of this
 Whether or not the repository created should be private (requires a paying subscription).`,name:"private"},{anchor:"transformers.PretrainedConfig.push_to_hub.use_auth_token",description:`<strong>use_auth_token</strong> (<code>bool</code> or <code>str</code>, <em>optional</em>) &#x2014;
 The token to use as HTTP bearer authorization for remote files. If <code>True</code>, will use the token generated
 when running <code>transformers-cli login</code> (stored in <code>~/.huggingface</code>). Will default to <code>True</code> if
-<code>repo_url</code> is not specified.`,name:"use_auth_token"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/utils/hub.py#L855",returnDescription:`
+<code>repo_url</code> is not specified.`,name:"use_auth_token"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/utils/hub.py#L871",returnDescription:`
 <p>The url of the commit of your config in the given repository.</p>
 `,returnType:`
 <p><code>str</code></p>
@@ -234,7 +234,7 @@ folder. Pass along <code>temp_dir=True</code> to use a temporary directory inste
 
 					</div>
 <p>kwargs &#x2014;
-Additional key word arguments passed along to the <a href="/docs/transformers/pr_17765/en/internal/tokenization_utils#transformers.PreTrainedTokenizerBase.push_to_hub">push_to_hub()</a> method.`,name:"push_to_hub"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/configuration_utils.py#L411"}}),Le=new T({props:{name:"to_dict",anchor:"transformers.PretrainedConfig.to_dict",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/configuration_utils.py#L779",returnDescription:`
+Additional key word arguments passed along to the <a href="/docs/transformers/pr_17765/en/main_classes/model#transformers.utils.PushToHubMixin.push_to_hub">push_to_hub()</a> method.`,name:"push_to_hub"}],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/configuration_utils.py#L411"}}),Le=new T({props:{name:"to_dict",anchor:"transformers.PretrainedConfig.to_dict",parameters:[],source:"https://github.com/huggingface/transformers/blob/vr_17765/src/transformers/configuration_utils.py#L779",returnDescription:`
 <p>Dictionary of all the attributes that make up this configuration instance.</p>
 `,returnType:`
 <p><code>Dict[str, Any]</code></p>
