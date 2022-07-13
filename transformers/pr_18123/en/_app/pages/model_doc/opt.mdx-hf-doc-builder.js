@@ -66,8 +66,8 @@ instance afterwards instead of this since the former takes care of running the p
 the latter silently ignores them.`),f.forEach(t)},m(r,f){g(r,d,f),e(d,v),e(d,h),e(h,c),e(d,T)},d(r){r&&t(d)}}}function Rl(F){let d,v,h,c,T;return c=new Se({props:{code:`import torch
 from transformers import OPTTokenizer, OPTForSequenceClassification
 
-tokenizer = OPTTokenizer.from_pretrained("facebook/opt-350m")
-model = OPTForSequenceClassification.from_pretrained("facebook/opt-350m")
+tokenizer = OPTTokenizer.from_pretrained("None")
+model = OPTForSequenceClassification.from_pretrained("None")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 
@@ -78,8 +78,8 @@ predicted_class_id = logits.argmax().item()
 model.config.id2label[predicted_class_id]`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> OPTTokenizer, OPTForSequenceClassification
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = OPTTokenizer.from_pretrained(<span class="hljs-string">&quot;facebook/opt-350m&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = OPTForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;facebook/opt-350m&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = OPTTokenizer.from_pretrained(<span class="hljs-string">&quot;None&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = OPTForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;None&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 
@@ -88,9 +88,9 @@ model.config.id2label[predicted_class_id]`,highlighted:`<span class="hljs-meta">
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>predicted_class_id = logits.argmax().item()
 <span class="hljs-meta">&gt;&gt;&gt; </span>model.config.id2label[predicted_class_id]
-<span class="hljs-string">&#x27;LABEL_0&#x27;</span>`}}),{c(){d=n("p"),v=i("Example of single-label classification:"),h=p(),y(c.$$.fragment)},l(r){d=s(r,"P",{});var f=a(d);v=l(f,"Example of single-label classification:"),f.forEach(t),h=u(r),k(c.$$.fragment,r)},m(r,f){g(r,d,f),e(d,v),g(r,h,f),w(c,r,f),T=!0},p:Ie,i(r){T||($(c.$$.fragment,r),T=!0)},o(r){P(c.$$.fragment,r),T=!1},d(r){r&&t(d),r&&t(h),O(c,r)}}}function Kl(F){let d,v;return d=new Se({props:{code:'# To train a model on `num_labels` classes, you can pass `num_labels=num_labels` to `.from_pretrained(...)`\nnum_labels = len(model.config.id2label)\nmodel = OPTForSequenceClassification.from_pretrained("facebook/opt-350m", num_labels=num_labels)\n\nlabels = torch.tensor(1)\nloss = model(**inputs, labels=labels).loss\nround(loss.item(), 2)',highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># To train a model on \`num_labels\` classes, you can pass \`num_labels=num_labels\` to \`.from_pretrained(...)\`</span>
+<span class="hljs-string">&#x27;LABEL_0&#x27;</span>`}}),{c(){d=n("p"),v=i("Example of single-label classification:"),h=p(),y(c.$$.fragment)},l(r){d=s(r,"P",{});var f=a(d);v=l(f,"Example of single-label classification:"),f.forEach(t),h=u(r),k(c.$$.fragment,r)},m(r,f){g(r,d,f),e(d,v),g(r,h,f),w(c,r,f),T=!0},p:Ie,i(r){T||($(c.$$.fragment,r),T=!0)},o(r){P(c.$$.fragment,r),T=!1},d(r){r&&t(d),r&&t(h),O(c,r)}}}function Kl(F){let d,v;return d=new Se({props:{code:'# To train a model on `num_labels` classes, you can pass `num_labels=num_labels` to `.from_pretrained(...)`\nnum_labels = len(model.config.id2label)\nmodel = OPTForSequenceClassification.from_pretrained("None", num_labels=num_labels)\n\nlabels = torch.tensor(1)\nloss = model(**inputs, labels=labels).loss\nround(loss.item(), 2)',highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># To train a model on \`num_labels\` classes, you can pass \`num_labels=num_labels\` to \`.from_pretrained(...)\`</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>num_labels = <span class="hljs-built_in">len</span>(model.config.id2label)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = OPTForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;facebook/opt-350m&quot;</span>, num_labels=num_labels)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = OPTForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;None&quot;</span>, num_labels=num_labels)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>labels = torch.tensor(<span class="hljs-number">1</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>loss = model(**inputs, labels=labels).loss
@@ -98,8 +98,8 @@ model.config.id2label[predicted_class_id]`,highlighted:`<span class="hljs-meta">
 <span class="hljs-number">5.28</span>`}}),{c(){y(d.$$.fragment)},l(h){k(d.$$.fragment,h)},m(h,c){w(d,h,c),v=!0},p:Ie,i(h){v||($(d.$$.fragment,h),v=!0)},o(h){P(d.$$.fragment,h),v=!1},d(h){O(d,h)}}}function Jl(F){let d,v,h,c,T;return c=new Se({props:{code:`import torch
 from transformers import OPTTokenizer, OPTForSequenceClassification
 
-tokenizer = OPTTokenizer.from_pretrained("facebook/opt-350m")
-model = OPTForSequenceClassification.from_pretrained("facebook/opt-350m", problem_type="multi_label_classification")
+tokenizer = OPTTokenizer.from_pretrained("None")
+model = OPTForSequenceClassification.from_pretrained("None", problem_type="multi_label_classification")
 
 inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
 
@@ -110,8 +110,8 @@ predicted_class_id = logits.argmax().item()
 model.config.id2label[predicted_class_id]`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> OPTTokenizer, OPTForSequenceClassification
 
-<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = OPTTokenizer.from_pretrained(<span class="hljs-string">&quot;facebook/opt-350m&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>model = OPTForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;facebook/opt-350m&quot;</span>, problem_type=<span class="hljs-string">&quot;multi_label_classification&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>tokenizer = OPTTokenizer.from_pretrained(<span class="hljs-string">&quot;None&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>model = OPTForSequenceClassification.from_pretrained(<span class="hljs-string">&quot;None&quot;</span>, problem_type=<span class="hljs-string">&quot;multi_label_classification&quot;</span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = tokenizer(<span class="hljs-string">&quot;Hello, my dog is cute&quot;</span>, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)
 
@@ -123,7 +123,7 @@ model.config.id2label[predicted_class_id]`,highlighted:`<span class="hljs-meta">
 <span class="hljs-string">&#x27;LABEL_0&#x27;</span>`}}),{c(){d=n("p"),v=i("Example of multi-label classification:"),h=p(),y(c.$$.fragment)},l(r){d=s(r,"P",{});var f=a(d);v=l(f,"Example of multi-label classification:"),f.forEach(t),h=u(r),k(c.$$.fragment,r)},m(r,f){g(r,d,f),e(d,v),g(r,h,f),w(c,r,f),T=!0},p:Ie,i(r){T||($(c.$$.fragment,r),T=!0)},o(r){P(c.$$.fragment,r),T=!1},d(r){r&&t(d),r&&t(h),O(c,r)}}}function Zl(F){let d,v;return d=new Se({props:{code:`# To train a model on \`num_labels\` classes, you can pass \`num_labels=num_labels\` to \`.from_pretrained(...)\`
 num_labels = len(model.config.id2label)
 model = OPTForSequenceClassification.from_pretrained(
-    "facebook/opt-350m", num_labels=num_labels, problem_type="multi_label_classification"
+    "None", num_labels=num_labels, problem_type="multi_label_classification"
 )
 
 labels = torch.nn.functional.one_hot(torch.tensor([predicted_class_id]), num_classes=num_labels).to(
@@ -133,7 +133,7 @@ loss = model(**inputs, labels=labels).loss
 loss.backward()`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># To train a model on \`num_labels\` classes, you can pass \`num_labels=num_labels\` to \`.from_pretrained(...)\`</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>num_labels = <span class="hljs-built_in">len</span>(model.config.id2label)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = OPTForSequenceClassification.from_pretrained(
-<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;facebook/opt-350m&quot;</span>, num_labels=num_labels, problem_type=<span class="hljs-string">&quot;multi_label_classification&quot;</span>
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;None&quot;</span>, num_labels=num_labels, problem_type=<span class="hljs-string">&quot;multi_label_classification&quot;</span>
 <span class="hljs-meta">... </span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>labels = torch.nn.functional.one_hot(torch.tensor([predicted_class_id]), num_classes=num_labels).to(
