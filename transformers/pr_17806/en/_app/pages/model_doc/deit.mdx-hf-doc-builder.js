@@ -225,7 +225,7 @@ image = Image.open(requests.get(url, stream=True).raw)
 
 feature_extractor = DeiTFeatureExtractor.from_pretrained("facebook/deit-base-distilled-patch16-224")
 model = TFDeiTForMaskedImageModeling.from_pretrained(
-    "facebook/deit-base-distilled-patch16-224", from_pt=True
+    "facebook/deit-base-distilled-patch16-224"
 )
 
 num_patches = (model.config.image_size // model.config.patch_size) ** 2
@@ -245,7 +245,7 @@ list(reconstructed_pixel_values.shape)`,highlighted:`<span class="hljs-meta">&gt
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = DeiTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFDeiTForMaskedImageModeling.from_pretrained(
-<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>, from_pt=<span class="hljs-literal">True</span>
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>
 <span class="hljs-meta">... </span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>num_patches = (model.config.image_size // model.config.patch_size) ** <span class="hljs-number">2</span>
@@ -273,7 +273,7 @@ image = Image.open(requests.get(url, stream=True).raw)
 # so the head will be randomly initialized, hence the predictions will be random
 feature_extractor = DeiTFeatureExtractor.from_pretrained("facebook/deit-base-distilled-patch16-224")
 model = TFDeiTForImageClassification.from_pretrained(
-    "facebook/deit-base-distilled-patch16-224", from_pt=True
+    "facebook/deit-base-distilled-patch16-224"
 )
 
 inputs = feature_extractor(images=image, return_tensors="tf")
@@ -294,7 +294,7 @@ print("Predicted class:", model.config.id2label[predicted_class_idx])`,highlight
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># so the head will be randomly initialized, hence the predictions will be random</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = DeiTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFDeiTForImageClassification.from_pretrained(
-<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>, from_pt=<span class="hljs-literal">True</span>
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>
 <span class="hljs-meta">... </span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = feature_extractor(images=image, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
