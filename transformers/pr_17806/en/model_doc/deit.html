@@ -1242,7 +1242,7 @@ the latter silently ignores them.</p></div>
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = DeiTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFDeiTForMaskedImageModeling.from_pretrained(
-<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>, from_pt=<span class="hljs-literal">True</span>
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>
 <span class="hljs-meta">... </span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>num_patches = (model.config.image_size // model.config.patch_size) ** <span class="hljs-number">2</span>
@@ -1402,7 +1402,7 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># so the head will be randomly initialized, hence the predictions will be random</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>feature_extractor = DeiTFeatureExtractor.from_pretrained(<span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = TFDeiTForImageClassification.from_pretrained(
-<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>, from_pt=<span class="hljs-literal">True</span>
+<span class="hljs-meta">... </span>    <span class="hljs-string">&quot;facebook/deit-base-distilled-patch16-224&quot;</span>
 <span class="hljs-meta">... </span>)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>inputs = feature_extractor(images=image, return_tensors=<span class="hljs-string">&quot;tf&quot;</span>)
@@ -1557,10 +1557,10 @@ the latter silently ignores them.</p></div>
 tabby, tabby cat<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="1k2xa5l">
+		<script type="module" data-hydrate="1dpmond">
 		import { start } from "/docs/transformers/pr_17806/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1k2xa5l"]').parentNode,
+			target: document.querySelector('[data-hydrate="1dpmond"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_17806/en","assets":"/docs/transformers/pr_17806/en"},
 			session: {},
 			route: false,
