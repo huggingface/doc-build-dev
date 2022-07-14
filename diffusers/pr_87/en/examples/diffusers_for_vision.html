@@ -129,7 +129,7 @@ prompt = <span class="hljs-string">&quot;A painting of a squirrel eating a burge
 image = ldm([prompt], generator=generator, eta=<span class="hljs-number">0.3</span>, guidance_scale=<span class="hljs-number">6.0</span>, num_inference_steps=<span class="hljs-number">50</span>)
 
 image_processed = image.cpu().permute(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>)
-image_processed = image_processed  * <span class="hljs-number">255.</span>
+image_processed = image_processed * <span class="hljs-number">255.0</span>
 image_processed = image_processed.numpy().astype(np.uint8)
 image_pil = PIL.Image.fromarray(image_processed[<span class="hljs-number">0</span>])
 
@@ -163,14 +163,15 @@ audio = bddm(mel_spec, generator, torch_device=torch_device)
 
 <span class="hljs-comment"># save generated audio</span>
 <span class="hljs-keyword">from</span> scipy.io.wavfile <span class="hljs-keyword">import</span> write <span class="hljs-keyword">as</span> wavwrite
+
 sampling_rate = <span class="hljs-number">22050</span>
 wavwrite(<span class="hljs-string">&quot;generated_audio.wav&quot;</span>, sampling_rate, audio.squeeze().cpu().numpy())<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="xnu4h">
+		<script type="module" data-hydrate="tbe3q3">
 		import { start } from "/docs/diffusers/pr_87/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="xnu4h"]').parentNode,
+			target: document.querySelector('[data-hydrate="tbe3q3"]').parentNode,
 			paths: {"base":"/docs/diffusers/pr_87/en","assets":"/docs/diffusers/pr_87/en"},
 			session: {},
 			route: false,
