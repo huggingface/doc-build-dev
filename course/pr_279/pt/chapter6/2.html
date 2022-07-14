@@ -82,7 +82,7 @@ raw_datasets = load_dataset(<span class="hljs-string">&quot;code_search_net&quot
       OKAY packet&#x27;s message.
     &quot;&quot;&quot;</span>
     <span class="hljs-keyword">return</span> self._accept_responses(<span class="hljs-string">&#x27;OKAY&#x27;</span>, info_cb, timeout_ms=timeout_ms)<!-- HTML_TAG_END --></pre></div>
-<p>A primeira coisa que precisamos fazer é transformar o dataset em um _iterator) de listas de textos — por exemplo, uma lista de lista de textos. Usando lista de textos irá habilitar o nosso tokenizador para funcionar mais rapidamente (treinando em lotes de textos ao invés de processar individualmente os textos, um por vez), e deve ser um iterador se quisermos evitar ter tudo na memória de uma vez. Se o teu corpus for grande, você vai querer aproveitar o fato de que 🤗 Datasets não carrega tudo na memória RAM, mas armazena os elementos do dataset no disco.</p>
+<p>A primeira coisa que precisamos fazer é transformar o dataset em um iterador) de listas de textos — por exemplo, uma lista de lista de textos. Usando lista de textos irá habilitar o nosso tokenizador para funcionar mais rapidamente (treinando em lotes de textos ao invés de processar individualmente os textos, um por vez), e deve ser um iterador se quisermos evitar ter tudo na memória de uma vez. Se o teu corpus for grande, você vai querer aproveitar o fato de que 🤗 Datasets não carrega tudo na memória RAM, mas armazena os elementos do dataset no disco.</p>
 <p>Executar o trecho abaixo criaria uma lista de listas de 1000 textos cada, mas carregaria tudo na memória:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -269,10 +269,10 @@ tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;huggin
 <p>Agora você está pronto para treinar um modelo de linguagem do zero e ajustá-lo para sua tarefa! Chegaremos a isso no <a href="/course/chapter7">Chapter 7</a>, mas primeiro, no resto do capítulo daremos uma olhada sobre tokenizers rápidos e explorar em detalhes o que realmente acontece quando chamamos o método <code>train_new_from_iterator()</code>.</p>
 
 
-		<script type="module" data-hydrate="alv1jl">
+		<script type="module" data-hydrate="1bn1mvy">
 		import { start } from "/docs/course/pr_279/pt/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="alv1jl"]').parentNode,
+			target: document.querySelector('[data-hydrate="1bn1mvy"]').parentNode,
 			paths: {"base":"/docs/course/pr_279/pt","assets":"/docs/course/pr_279/pt"},
 			session: {},
 			route: false,

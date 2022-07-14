@@ -32,8 +32,8 @@
 <p>Nesta seção, examinaremos mais de perto os recursos dos tokenizadores em 🤗 Transformers. Até agora, só os usamos para tokenizar entradas ou decodificar IDs de volta em texto, mas tokenizadores - especialmente aqueles apoiados pela biblioteca 🤗 Tokenizers - podem fazer muito mais. Para ilustrar esses recursos adicionais, exploraremos como reproduzir os resultados dos pipelines <code>token-classification</code> (que chamamos de <code>ner</code>) e <code>question-answering</code> que encontramos pela primeira vez no <a href="/course/chapter1">Capítulo 1</a>.</p>
 <iframe class="w-full xl:w-4/6 h-80" src="https://www.youtube-nocookie.com/embed/g8quOxoqhHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>Na discussão a seguir, muitas vezes faremos a distinção entre tokenizadores “lentos” e “rápidos”. Tokenizadores lentos são aqueles escritos em Python dentro da biblioteca 🤗 Transformers, enquanto as versões rápidas são aquelas fornecidas por 🤗 Tokenizers, que são escritos em Rust. Se você se lembrar da tabela do <a href="/course/chapter5/3">Capítulo 5</a> que informava quanto tempo levou um tokenizador rápido e um lento para tokenizar o conjunto de dados de revisão de medicamentos, você deve ter uma ideia do motivo pelo qual os chamamos de rápido e lento:</p>
-<table><thead><tr><th align="center">Tokenizador rápido</th>
-<th align="center">Tokenizador lento</th>
+<table><thead><tr><th align="center">Fast tokenizer</th>
+<th align="center">Slow tokenizer</th>
 <th align="center"></th></tr></thead>
 <tbody><tr><td align="center"><code>batched=True</code></td>
 <td align="center">10.8s</td>
@@ -418,10 +418,10 @@ idx = <span class="hljs-number">0</span>
 <p>Outro exemplo de uma tarefa onde esses offsets são extremamente úteis é a resposta a perguntas. O conhecimento deste pipeline, que faremos na próxima seção, também nos permitirá dar uma olhada em um último recurso dos tokenizadores na biblioteca 🤗 Transformers: lidar com tokens em excesso quando truncamos uma entrada em um determinado comprimento.</p>
 
 
-		<script type="module" data-hydrate="13ak0uw">
+		<script type="module" data-hydrate="k1ao4i">
 		import { start } from "/docs/course/pr_279/pt/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="13ak0uw"]').parentNode,
+			target: document.querySelector('[data-hydrate="k1ao4i"]').parentNode,
 			paths: {"base":"/docs/course/pr_279/pt","assets":"/docs/course/pr_279/pt"},
 			session: {},
 			route: false,
