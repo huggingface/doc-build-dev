@@ -1,0 +1,189 @@
+---
+local: quantization
+sections:
+- local: optimum.onnxruntime.ORTQuantizer
+  title: ORTQuantizer
+title: Quantization
+---
+<script lang="ts">
+import {onMount} from "svelte";
+import Tip from "$lib/Tip.svelte";
+import Youtube from "$lib/Youtube.svelte";
+import Docstring from "$lib/Docstring.svelte";
+import CodeBlock from "$lib/CodeBlock.svelte";
+import CodeBlockFw from "$lib/CodeBlockFw.svelte";
+import DocNotebookDropdown from "$lib/DocNotebookDropdown.svelte";
+import IconCopyLink from "$lib/IconCopyLink.svelte";
+import FrameworkContent from "$lib/FrameworkContent.svelte";
+import Markdown from "$lib/Markdown.svelte";
+import Question from "$lib/Question.svelte";
+import FrameworkSwitchCourse from "$lib/FrameworkSwitchCourse.svelte";
+import InferenceApi from "$lib/InferenceApi.svelte";
+import TokenizersLanguageContent from "$lib/TokenizersLanguageContent.svelte";
+import ExampleCodeBlock from "$lib/ExampleCodeBlock.svelte";
+let fw: "pt" | "tf" = "pt";
+onMount(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    fw = urlParams.get("fw") || "pt";
+});
+</script>
+<svelte:head>
+  <meta name="hf:doc:metadata" content={JSON.stringify(metadata)} >
+</svelte:head>
+<!--Copyright 2022 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+-->
+
+<h1 id="quantization">Quantization</h1>
+
+🤗 Optimum provides an `optimum.onnxruntime` package that enables you to apply quantization on many model hosted on the 🤗 hub using the [ONNX Runtime](https://github.com/microsoft/onnxruntime/blob/master/onnxruntime/python/tools/quantization/README.md) quantization tool.
+
+<h2 id="optimum.onnxruntime.ORTQuantizer">ORTQuantizer</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.onnxruntime.ORTQuantizer</name><anchor>optimum.onnxruntime.ORTQuantizer</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/quantization.py#L80</source><parameters>[{"name": "preprocessor", "val": ": typing.Union[transformers.models.auto.tokenization_auto.AutoTokenizer, transformers.models.auto.feature_extraction_auto.AutoFeatureExtractor]"}, {"name": "model", "val": ": PreTrainedModel"}, {"name": "feature", "val": ": str = 'default'"}, {"name": "opset", "val": ": typing.Optional[int] = None"}]</parameters></docstring>
+
+Handles the ONNX Runtime quantization process for models shared on huggingface.co/models.
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>compute_ranges</name><anchor>optimum.onnxruntime.ORTQuantizer.compute_ranges</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/quantization.py#L268</source><parameters>[]</parameters><retdesc>The dictionary mapping the nodes name to their quantization ranges.</retdesc></docstring>
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>export</name><anchor>optimum.onnxruntime.ORTQuantizer.export</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/quantization.py#L281</source><parameters>[{"name": "onnx_model_path", "val": ": typing.Union[str, os.PathLike]"}, {"name": "onnx_quantized_model_output_path", "val": ": typing.Union[str, os.PathLike]"}, {"name": "quantization_config", "val": ": QuantizationConfig"}, {"name": "calibration_tensors_range", "val": ": typing.Union[typing.Dict[str, typing.Tuple[float, float]], NoneType] = None"}, {"name": "use_external_data_format", "val": ": bool = False"}, {"name": "preprocessor", "val": ": typing.Optional[optimum.onnxruntime.preprocessors.quantization.QuantizationPreprocessor] = None"}]</parameters><paramsdesc>- **onnx_model_path** (`Union[str, os.PathLike]`) --
+  The path used to save the model exported to an ONNX Intermediate Representation (IR).
+- **onnx_quantized_model_output_path** (`Union[str, os.PathLike]`) --
+  The path used to save the quantized model exported to an ONNX Intermediate Representation (IR).
+- **quantization_config** (`QuantizationConfig`) --
+  The configuration containing the parameters related to quantization.
+- **calibration_tensors_range** (`Dict[NodeName, Tuple[float, float]]`, *optional*) --
+  The dictionary mapping the nodes name to their quantization ranges, used and required only when applying
+  static quantization.
+- **use_external_data_format** (`bool`, defaults to `False`) --
+  Whether to use external data format to store model which size is >= 2Gb.
+- **preprocessor** (`QuantizationPreprocessor`, *optional*) --
+  The preprocessor to use to collect the nodes to include or exclude from quantization.</paramsdesc><paramgroups>0</paramgroups><retdesc>The path of the resulting quantized model.</retdesc></docstring>
+
+Quantize a model given the optimization specifications defined in `quantization_config`.
+
+
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>fit</name><anchor>optimum.onnxruntime.ORTQuantizer.fit</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/quantization.py#L145</source><parameters>[{"name": "dataset", "val": ": Dataset"}, {"name": "calibration_config", "val": ": CalibrationConfig"}, {"name": "onnx_model_path", "val": ": typing.Union[str, os.PathLike, pathlib.Path]"}, {"name": "onnx_augmented_model_name", "val": ": str = 'augmented_model.onnx'"}, {"name": "operators_to_quantize", "val": ": typing.Optional[typing.List[str]] = None"}, {"name": "batch_size", "val": ": int = 1"}, {"name": "use_external_data_format", "val": ": bool = False"}, {"name": "use_gpu", "val": ": bool = False"}, {"name": "force_symmetric_range", "val": ": bool = False"}]</parameters><paramsdesc>- **dataset** (`Dataset`) --
+  The dataset to use when performing the calibration step.
+- **calibration_config** (`CalibrationConfig`) --
+  The configuration containing the parameters related to the calibration step.
+- **onnx_model_path** (`Union[str, os.PathLike]`) --
+  The path used to save the model exported to an ONNX Intermediate Representation (IR).
+- **onnx_augmented_model_name** (`Union[str, os.PathLike]`) --
+  The path used to save the augmented model used to collect the quantization ranges.
+- **operators_to_quantize** (`list`, *optional*) --
+  List of the operators types to quantize.
+- **batch_size** (`int`, defaults to 1) --
+  The batch size to use when collecting the quantization ranges values.
+- **use_external_data_format** (`bool`, defaults to `False`) --
+  Whether uto se external data format to store model which size is >= 2Gb.
+- **use_gpu** (`bool`, defaults to `False`) --
+  Whether to use the GPU when collecting the quantization ranges values.
+- **force_symmetric_range** (`bool`, defaults to `False`) --
+  Whether to make the quantization ranges symmetric.</paramsdesc><paramgroups>0</paramgroups><retdesc>The dictionary mapping the nodes name to their quantization ranges.</retdesc></docstring>
+
+Perform the calibration step and collect the quantization ranges.
+
+
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>from_pretrained</name><anchor>optimum.onnxruntime.ORTQuantizer.from_pretrained</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/quantization.py#L85</source><parameters>[{"name": "model_name_or_path", "val": ": typing.Union[str, os.PathLike]"}, {"name": "feature", "val": ": str"}, {"name": "opset", "val": ": typing.Optional[int] = None"}]</parameters><paramsdesc>- **model_name_or_path** (`Union[str, os.PathLike]`) --
+  Repository name in the Hugging Face Hub or path to a local directory hosting the model.
+- **feature** (`str`) --
+  Feature to use when exporting the model.
+- **opset** (`int`, *optional*) --
+  ONNX opset version to export the model with.</paramsdesc><paramgroups>0</paramgroups><retdesc>An instance of `ORTQuantizer`.</retdesc></docstring>
+
+Instantiate a `ORTQuantizer` from a pretrained pytorch model and preprocessor.
+
+
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>get_calibration_dataset</name><anchor>optimum.onnxruntime.ORTQuantizer.get_calibration_dataset</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/quantization.py#L382</source><parameters>[{"name": "dataset_name", "val": ": str"}, {"name": "num_samples", "val": ": int = 100"}, {"name": "dataset_config_name", "val": ": typing.Optional[str] = None"}, {"name": "dataset_split", "val": ": typing.Optional[str] = None"}, {"name": "preprocess_function", "val": ": typing.Optional[typing.Callable] = None"}, {"name": "preprocess_batch", "val": ": bool = True"}, {"name": "seed", "val": ": int = 2016"}, {"name": "use_auth_token", "val": ": bool = False"}]</parameters><paramsdesc>- **dataset_name** (`str`) --
+  The dataset repository name on the Hugging Face Hub or path to a local directory containing data files
+  to load to use for the calibration step.
+- **num_samples** (`int`, defaults to 100) --
+  The maximum number of samples composing the calibration dataset.
+- **dataset_config_name** (`str`, *optional*) --
+  The name of the dataset configuration.
+- **dataset_split** (`str`, *optional*) --
+  Which split of the dataset to use to perform the calibration step.
+- **preprocess_function** (`Callable`, *optional*) --
+  Processing function to apply to each example after loading dataset.
+- **preprocess_batch** (`bool`, defaults to `True`) --
+  Whether the `preprocess_function` should be batched.
+- **seed** (`int`, defaults to 2016) --
+  The random seed to use when shuffling the calibration dataset.
+- **use_auth_token** (`bool`, defaults to `False`) --
+  Whether to use the token generated when running `transformers-cli login` (necessary for some datasets
+  like ImageNet).</paramsdesc><paramgroups>0</paramgroups><retdesc>The calibration `datasets.Dataset` to use for the post-training static quantization calibration
+step.</retdesc></docstring>
+
+Create the calibration `datasets.Dataset` to use for the post-training static quantization calibration step
+
+
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>partial_fit</name><anchor>optimum.onnxruntime.ORTQuantizer.partial_fit</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/quantization.py#L203</source><parameters>[{"name": "dataset", "val": ": Dataset"}, {"name": "calibration_config", "val": ": CalibrationConfig"}, {"name": "onnx_model_path", "val": ": typing.Union[str, os.PathLike]"}, {"name": "onnx_augmented_model_name", "val": ": str = 'augmented_model.onnx'"}, {"name": "operators_to_quantize", "val": ": typing.Optional[typing.List[str]] = None"}, {"name": "batch_size", "val": ": int = 1"}, {"name": "use_external_data_format", "val": ": bool = False"}, {"name": "use_gpu", "val": ": bool = False"}, {"name": "force_symmetric_range", "val": ": bool = False"}]</parameters><paramsdesc>- **dataset** (`Dataset`) --
+  The dataset to use when performing the calibration step.
+- **calibration_config** (`CalibrationConfig`) --
+  The configuration containing the parameters related to the calibration step.
+- **onnx_model_path** (`Union[str, os.PathLike]`) --
+  The path used to save the model exported to an ONNX Intermediate Representation (IR).
+- **onnx_augmented_model_name** (`Union[str, os.PathLike]`) --
+  The path used to save the augmented model used to collect the quantization ranges.
+- **operators_to_quantize** (`list`, *optional*) --
+  List of the operators types to quantize.
+- **batch_size** (`int`, defaults to 1) --
+  The batch size to use when collecting the quantization ranges values.
+- **use_external_data_format** (`bool`, defaults to `False`) --
+  Whether uto se external data format to store model which size is >= 2Gb.
+- **use_gpu** (`bool`, defaults to `False`) --
+  Whether to use the GPU when collecting the quantization ranges values.
+- **force_symmetric_range** (`bool`, defaults to `False`) --
+  Whether to make the quantization ranges symmetric.</paramsdesc><paramgroups>0</paramgroups><retdesc>The dictionary mapping the nodes name to their quantization ranges.</retdesc></docstring>
+
+Perform the calibration step and collect the quantization ranges.
+
+
+
+
+
+
+</div></div>

@@ -1,0 +1,817 @@
+---
+local: optimum-inference-with-onnx-runtime
+sections:
+- local: switching-from-transformers-to-optimum-inference
+  sections:
+  - local: working-with-the-hugging-face-model-hub
+    title: Working with the Hugging Face Model Hub
+  title: Switching from Transformers to Optimum Inference
+- local: export-and-inference-of-sequencetosequence-models
+  title: Export and inference of sequence-to-sequence models
+- local: optimum.onnxruntime.ORTModel
+  title: ORTModel
+- local: optimum.onnxruntime.ORTModelForFeatureExtraction
+  title: ORTModelForFeatureExtraction
+- local: optimum.onnxruntime.ORTModelForQuestionAnswering
+  title: ORTModelForQuestionAnswering
+- local: optimum.onnxruntime.ORTModelForSequenceClassification
+  title: ORTModelForSequenceClassification
+- local: optimum.onnxruntime.ORTModelForTokenClassification
+  title: ORTModelForTokenClassification
+- local: optimum.onnxruntime.ORTModelForCausalLM
+  title: ORTModelForCausalLM
+- local: optimum.onnxruntime.ORTModelForSeq2SeqLM
+  title: ORTModelForSeq2SeqLM
+- local: optimum.onnxruntime.ORTModelForImageClassification
+  title: ORTModelForImageClassification
+title: Optimum Inference with ONNX Runtime
+---
+<script lang="ts">
+import {onMount} from "svelte";
+import Tip from "$lib/Tip.svelte";
+import Youtube from "$lib/Youtube.svelte";
+import Docstring from "$lib/Docstring.svelte";
+import CodeBlock from "$lib/CodeBlock.svelte";
+import CodeBlockFw from "$lib/CodeBlockFw.svelte";
+import DocNotebookDropdown from "$lib/DocNotebookDropdown.svelte";
+import IconCopyLink from "$lib/IconCopyLink.svelte";
+import FrameworkContent from "$lib/FrameworkContent.svelte";
+import Markdown from "$lib/Markdown.svelte";
+import Question from "$lib/Question.svelte";
+import FrameworkSwitchCourse from "$lib/FrameworkSwitchCourse.svelte";
+import InferenceApi from "$lib/InferenceApi.svelte";
+import TokenizersLanguageContent from "$lib/TokenizersLanguageContent.svelte";
+import ExampleCodeBlock from "$lib/ExampleCodeBlock.svelte";
+let fw: "pt" | "tf" = "pt";
+onMount(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    fw = urlParams.get("fw") || "pt";
+});
+</script>
+<svelte:head>
+  <meta name="hf:doc:metadata" content={JSON.stringify(metadata)} >
+</svelte:head>
+<!--Copyright 2022 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+-->
+
+<h1 id="optimum-inference-with-onnx-runtime">Optimum Inference with ONNX Runtime</h1>
+
+Optimum is a utility package for building and running inference with accelerated runtime like ONNX Runtime.
+Optimum can be used to load optimized models from the [Hugging Face Hub](hf.co/models) and create pipelines
+to run accelerated inference without rewriting your APIs.
+
+<h2 id="switching-from-transformers-to-optimum-inference">Switching from Transformers to Optimum Inference</h2>
+
+The Optimum Inference models are API compatible with Hugging Face Transformers models. This means you can just replace your `AutoModelForXxx` class with the corresponding `ORTModelForXxx` class in `optimum`. For example, this is how you can use a question answering model in `optimum`:
+
+```diff
+from transformers import AutoTokenizer, pipeline
+-from transformers import AutoModelForQuestionAnswering
++from optimum.onnxruntime import ORTModelForQuestionAnswering
+
+-model = AutoModelForQuestionAnswering.from_pretrained("deepset/roberta-base-squad2") # pytorch checkpoint
++model = ORTModelForQuestionAnswering.from_pretrained("optimum/roberta-base-squad2") # onnx checkpoint
+tokenizer = AutoTokenizer.from_pretrained("deepset/roberta-base-squad2")
+
+onnx_qa = pipeline("question-answering",model=model,tokenizer=tokenizer)
+
+question = "What's my name?"
+context = "My name is Philipp and I live in Nuremberg."
+pred = onnx_qa(question, context)
+```
+
+Optimum Inference also includes methods to convert vanilla Transformers models to optimized ones. Simply pass `from_transformers=True` to the `from_pretrained()` method, and your model will be loaded and converted to ONNX on-the-fly:
+
+```python
+>>> from transformers import AutoTokenizer, pipeline
+>>> from optimum.onnxruntime import ORTModelForSequenceClassification
+
+# Load the model from the hub and export it to the ONNX format
+>>> model = ORTModelForSequenceClassification.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english", from_transformers=True)
+>>> tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
+
+# Create a pipeline
+>>> onnx_classifier = pipeline("text-classification", model=model, tokenizer=tokenizer)
+
+>>> result = onnx_classifier("This is a great model")
+[&amp;lcub;'label': 'POSITIVE', 'score': 0.9998838901519775}]
+```
+
+<h3 id="working-with-the-hugging-face-model-hub">Working with the Hugging Face Model Hub</h3>
+
+The Optimum model classes like [ORTModelForSequenceClassification](/docs/optimum/pr_299/en/onnxruntime/modeling_ort#optimum.onnxruntime.ORTModelForSequenceClassification) are integrated with the [Hugging Face Model Hub](https://hf.co/models), which means you can not only
+load model from the Hub, but also push your models to the Hub with `push_to_hub()` method. Below is an example which downloads a vanilla Transformers model
+from the Hub and converts it to an optimum onnxruntime model and pushes it back into a new repository.
+
+<!-- TODO: Add Quantizer into example when UX improved -->
+```python
+>>> from transformers import AutoTokenizer
+>>> from optimum.onnxruntime import ORTModelForSequenceClassification
+
+# Load the model from the hub and export it to the ONNX format
+>>> model = ORTModelForSequenceClassification.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english", from_transformers=True)
+>>> tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
+
+# Save the converted model
+>>> model.save_pretrained("a_local_path_for_convert_onnx_model")
+>>> tokenizer.save_pretrained("a_local_path_for_convert_onnx_model")
+
+# Push the onnx model to HF Hub
+>>> model.push_to_hub("a_local_path_for_convert_onnx_model", repository_id="my-onnx-repo", use_auth_token=True)
+```
+
+<h2 id="export-and-inference-of-sequencetosequence-models">Export and inference of sequence-to-sequence models</h2>
+
+Sequence-to-sequence (Seq2Seq) models, that generate a new sequence from an input, can also be used when running inference with ONNX Runtime. When Seq2Seq models are exported to the ONNX format, they are decomposed into three parts that are later combined during inference.
+Those three parts consist of the encoder, the "decoder" (which actually consists of the decoder with the language modeling head), and the "decoder" with pre-computed key/values as additional inputs.
+This specific export comes from the fact that during the first pass, the decoder has no pre-computed key/values hidden-states, while during the rest of the generation past key/values will be used to speed up sequential decoding.
+Here is an example on how you can export a T5 model to the ONNX format and run inference for a translation task:
+
+
+```python
+>>> from transformers import AutoTokenizer, pipeline
+>>> from optimum.onnxruntime import ORTModelForSeq2SeqLM
+
+# Load the model from the hub and export it to the ONNX format
+>>> model = ORTModelForSeq2SeqLM.from_pretrained("t5-small", from_transformers=True)
+>>> tokenizer = AutoTokenizer.from_pretrained("t5-small")
+
+# Create a pipeline
+>>> onnx_translation = pipeline("translation_en_to_fr", model=model, tokenizer=tokenizer)
+
+>>> result = onnx_translation("My name is Eustache")
+[&amp;lcub;'translation_text': 'Mon nom est Eustache'}]
+```
+
+<h2 id="optimum.onnxruntime.ORTModel">ORTModel</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.onnxruntime.ORTModel</name><anchor>optimum.onnxruntime.ORTModel</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L89</source><parameters>[{"name": "model", "val": " = None"}, {"name": "config", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+
+Base ORTModel class for implementing models using ONNX Runtime. The ORTModel implements generic methods for interacting
+with the Hugging Face Hub as well as exporting vanilla transformers models to ONNX using `transformers.onnx` toolchain.
+The ORTModel implements additionally generic methods for optimizing and quantizing Onnx models.
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>load_model</name><anchor>optimum.onnxruntime.ORTModel.load_model</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L129</source><parameters>[{"name": "path", "val": ": typing.Union[str, pathlib.Path]"}, {"name": "provider", "val": " = None"}]</parameters><paramsdesc>- **path** (`str` or `Path`) --
+  Directory from which to load the model.
+- **provider(`str`,** *optional*) --
+  ONNX Runtime provider to use for loading the model. Defaults to `CPUExecutionProvider`.</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Loads an ONNX Inference session with a given provider. Default provider is `CPUExecutionProvider` to match the default behaviour in PyTorch/TensorFlow/JAX.
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>to</name><anchor>optimum.onnxruntime.ORTModel.to</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L117</source><parameters>[{"name": "device", "val": ""}]</parameters></docstring>
+
+Changes the ONNX Runtime provider according to the device.
+
+
+</div></div>
+
+<h2 id="optimum.onnxruntime.ORTModelForFeatureExtraction">ORTModelForFeatureExtraction</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.onnxruntime.ORTModelForFeatureExtraction</name><anchor>optimum.onnxruntime.ORTModelForFeatureExtraction</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L327</source><parameters>[{"name": "model", "val": " = None"}, {"name": "config", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** (`transformers.PretrainedConfig`) -- [PretrainedConfig](https://huggingface.co/docs/transformers/main_classes/configuration#transformers.PretrainedConfig) is the Model configuration class with all the parameters of the model.
+  Initializing with a config file does not load the weights associated with the model, only the
+  configuration. Check out the `from_pretrained()` method to load the model weights.
+- **model** (`onnxruntime.InferenceSession`) -- [onnxruntime.InferenceSession](https://onnxruntime.ai/docs/api/python/api_summary.html#inferencesession) is the main class used to run a model. Check out the [load_model()](/docs/optimum/pr_299/en/onnxruntime/modeling_ort#optimum.onnxruntime.ORTModel.load_model) method for more information.</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Onnx Model with a MaskedLMOutput for feature-extraction tasks.
+
+This model inherits from [~`onnxruntime.modeling_ort.ORTModel`]. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving)
+
+
+Feature Extraction model for ONNX.
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>forward</name><anchor>optimum.onnxruntime.ORTModelForFeatureExtraction.forward</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L341</source><parameters>[{"name": "input_ids", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "attention_mask", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "token_type_ids", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.Tensor` of shape `(batch_size, sequence_length)`) --
+  Indices of input sequence tokens in the vocabulary.
+  Indices can be obtained using [`AutoTokenizer`](https://huggingface.co/docs/transformers/autoclass_tutorial#autotokenizer).
+  See [`PreTrainedTokenizer.encode`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizerBase.encode) and
+  [`PreTrainedTokenizer.__call__`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizerBase.__call__) for details.
+  [What are input IDs?](https://huggingface.co/docs/transformers/glossary#input-ids)
+- **attention_mask** (`torch.Tensor` of shape `(batch_size, sequence_length)`, *optional*) --
+  Mask to avoid performing attention on padding token indices. Mask values selected in `[0, 1]`:
+  - 1 for tokens that are **not masked**,
+  - 0 for tokens that are **masked**.
+  [What are attention masks?](https://huggingface.co/docs/transformers/glossary#attention-mask)
+- **token_type_ids** (`torch.Tensor` of shape `(batch_size, sequence_length)`, *optional*) --
+  Segment token indices to indicate first and second portions of the inputs. Indices are selected in `[0, 1]`:
+  - 1 for tokens that are **sentence A**,
+  - 0 for tokens that are **sentence B**.
+  [What are token type IDs?](https://huggingface.co/docs/transformers/glossary#token-type-ids)</paramsdesc><paramgroups>0</paramgroups></docstring>
+The `ORTModelForFeatureExtraction` forward method, overrides the `__call__` special method.
+
+<Tip>
+
+Although the recipe for forward pass needs to be defined within this function, one should call the `Module`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.
+
+</Tip>
+
+
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForFeatureExtraction.forward.example">
+
+Example of feature extraction:
+
+```python
+>>> from transformers import AutoTokenizer
+>>> from optimum.onnxruntime import ORTModelForFeatureExtraction
+>>> import torch
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/all-MiniLM-L6-v2")
+>>> model = ORTModelForFeatureExtraction.from_pretrained("optimum/all-MiniLM-L6-v2")
+
+>>> inputs = tokenizer("My name is Philipp and I live in Germany.", return_tensors="pt")
+
+>>> outputs = model(**inputs)
+>>> logits = outputs.logits
+>>> list(logits.shape)
+```
+
+</ExampleCodeBlock>
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForFeatureExtraction.forward.example-2">
+
+Example using `transformers.pipeline`:
+
+```python
+>>> from transformers import AutoTokenizer, pipeline
+>>> from optimum.onnxruntime import ORTModelForFeatureExtraction
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/all-MiniLM-L6-v2")
+>>> model = ORTModelForFeatureExtraction.from_pretrained("optimum/all-MiniLM-L6-v2")
+>>> onnx_extractor = pipeline("feature-extraction", model=model, tokenizer=tokenizer)
+
+>>> text = "My name is Philipp and I live in Germany."
+>>> pred = onnx_extractor(text)
+```
+
+</ExampleCodeBlock>
+
+
+</div></div>
+
+<h2 id="optimum.onnxruntime.ORTModelForQuestionAnswering">ORTModelForQuestionAnswering</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.onnxruntime.ORTModelForQuestionAnswering</name><anchor>optimum.onnxruntime.ORTModelForQuestionAnswering</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L412</source><parameters>[{"name": "model", "val": " = None"}, {"name": "config", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** (`transformers.PretrainedConfig`) -- [PretrainedConfig](https://huggingface.co/docs/transformers/main_classes/configuration#transformers.PretrainedConfig) is the Model configuration class with all the parameters of the model.
+  Initializing with a config file does not load the weights associated with the model, only the
+  configuration. Check out the `from_pretrained()` method to load the model weights.
+- **model** (`onnxruntime.InferenceSession`) -- [onnxruntime.InferenceSession](https://onnxruntime.ai/docs/api/python/api_summary.html#inferencesession) is the main class used to run a model. Check out the [load_model()](/docs/optimum/pr_299/en/onnxruntime/modeling_ort#optimum.onnxruntime.ORTModel.load_model) method for more information.</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Onnx Model with a QuestionAnsweringModelOutput for extractive question-answering tasks like SQuAD.
+
+This model inherits from [~`onnxruntime.modeling_ort.ORTModel`]. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving)
+
+
+Question Answering model for ONNX.
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>forward</name><anchor>optimum.onnxruntime.ORTModelForQuestionAnswering.forward</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L426</source><parameters>[{"name": "input_ids", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "attention_mask", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "token_type_ids", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.Tensor` of shape `(batch_size, sequence_length)`) --
+  Indices of input sequence tokens in the vocabulary.
+  Indices can be obtained using [`AutoTokenizer`](https://huggingface.co/docs/transformers/autoclass_tutorial#autotokenizer).
+  See [`PreTrainedTokenizer.encode`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizerBase.encode) and
+  [`PreTrainedTokenizer.__call__`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizerBase.__call__) for details.
+  [What are input IDs?](https://huggingface.co/docs/transformers/glossary#input-ids)
+- **attention_mask** (`torch.Tensor` of shape `(batch_size, sequence_length)`, *optional*) --
+  Mask to avoid performing attention on padding token indices. Mask values selected in `[0, 1]`:
+  - 1 for tokens that are **not masked**,
+  - 0 for tokens that are **masked**.
+  [What are attention masks?](https://huggingface.co/docs/transformers/glossary#attention-mask)
+- **token_type_ids** (`torch.Tensor` of shape `(batch_size, sequence_length)`, *optional*) --
+  Segment token indices to indicate first and second portions of the inputs. Indices are selected in `[0, 1]`:
+  - 1 for tokens that are **sentence A**,
+  - 0 for tokens that are **sentence B**.
+  [What are token type IDs?](https://huggingface.co/docs/transformers/glossary#token-type-ids)</paramsdesc><paramgroups>0</paramgroups></docstring>
+The `ORTModelForQuestionAnswering` forward method, overrides the `__call__` special method.
+
+<Tip>
+
+Although the recipe for forward pass needs to be defined within this function, one should call the `Module`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.
+
+</Tip>
+
+
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForQuestionAnswering.forward.example">
+
+Example of question answering:
+
+```python
+>>> from transformers import AutoTokenizer
+>>> from optimum.onnxruntime import ORTModelForQuestionAnswering
+>>> import torch
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/roberta-base-squad2")
+>>> model = ORTModelForQuestionAnswering.from_pretrained("optimum/roberta-base-squad2")
+
+>>> question, text = "Who was Jim Henson?", "Jim Henson was a nice puppet"
+>>> inputs = tokenizer(question, text, return_tensors="pt")
+>>> start_positions = torch.tensor([1])
+>>> end_positions = torch.tensor([3])
+
+>>> outputs = model(**inputs, start_positions=start_positions, end_positions=end_positions)
+>>> start_scores = outputs.start_logits
+>>> end_scores = outputs.end_logits
+```
+
+</ExampleCodeBlock>
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForQuestionAnswering.forward.example-2">
+
+Example using `transformers.pipeline`:
+
+```python
+>>> from transformers import AutoTokenizer, pipeline
+>>> from optimum.onnxruntime import ORTModelForQuestionAnswering
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/roberta-base-squad2")
+>>> model = ORTModelForQuestionAnswering.from_pretrained("optimum/roberta-base-squad2")
+>>> onnx_qa = pipeline("question-answering", model=model, tokenizer=tokenizer)
+
+>>> question, text = "Who was Jim Henson?", "Jim Henson was a nice puppet"
+>>> pred = onnx_qa(question, text)
+```
+
+</ExampleCodeBlock>
+
+
+</div></div>
+
+<h2 id="optimum.onnxruntime.ORTModelForSequenceClassification">ORTModelForSequenceClassification</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.onnxruntime.ORTModelForSequenceClassification</name><anchor>optimum.onnxruntime.ORTModelForSequenceClassification</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L512</source><parameters>[{"name": "model", "val": " = None"}, {"name": "config", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** (`transformers.PretrainedConfig`) -- [PretrainedConfig](https://huggingface.co/docs/transformers/main_classes/configuration#transformers.PretrainedConfig) is the Model configuration class with all the parameters of the model.
+  Initializing with a config file does not load the weights associated with the model, only the
+  configuration. Check out the `from_pretrained()` method to load the model weights.
+- **model** (`onnxruntime.InferenceSession`) -- [onnxruntime.InferenceSession](https://onnxruntime.ai/docs/api/python/api_summary.html#inferencesession) is the main class used to run a model. Check out the [load_model()](/docs/optimum/pr_299/en/onnxruntime/modeling_ort#optimum.onnxruntime.ORTModel.load_model) method for more information.</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Onnx Model with a sequence classification/regression head on top (a linear layer on top of the
+pooled output) e.g. for GLUE tasks.
+
+This model inherits from [~`onnxruntime.modeling_ort.ORTModel`]. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving)
+
+
+Sequence Classification model for ONNX.
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>forward</name><anchor>optimum.onnxruntime.ORTModelForSequenceClassification.forward</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L527</source><parameters>[{"name": "input_ids", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "attention_mask", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "token_type_ids", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.Tensor` of shape `(batch_size, sequence_length)`) --
+  Indices of input sequence tokens in the vocabulary.
+  Indices can be obtained using [`AutoTokenizer`](https://huggingface.co/docs/transformers/autoclass_tutorial#autotokenizer).
+  See [`PreTrainedTokenizer.encode`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizerBase.encode) and
+  [`PreTrainedTokenizer.__call__`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizerBase.__call__) for details.
+  [What are input IDs?](https://huggingface.co/docs/transformers/glossary#input-ids)
+- **attention_mask** (`torch.Tensor` of shape `(batch_size, sequence_length)`, *optional*) --
+  Mask to avoid performing attention on padding token indices. Mask values selected in `[0, 1]`:
+  - 1 for tokens that are **not masked**,
+  - 0 for tokens that are **masked**.
+  [What are attention masks?](https://huggingface.co/docs/transformers/glossary#attention-mask)
+- **token_type_ids** (`torch.Tensor` of shape `(batch_size, sequence_length)`, *optional*) --
+  Segment token indices to indicate first and second portions of the inputs. Indices are selected in `[0, 1]`:
+  - 1 for tokens that are **sentence A**,
+  - 0 for tokens that are **sentence B**.
+  [What are token type IDs?](https://huggingface.co/docs/transformers/glossary#token-type-ids)</paramsdesc><paramgroups>0</paramgroups></docstring>
+The `ORTModelForSequenceClassification` forward method, overrides the `__call__` special method.
+
+<Tip>
+
+Although the recipe for forward pass needs to be defined within this function, one should call the `Module`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.
+
+</Tip>
+
+
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForSequenceClassification.forward.example">
+
+Example of single-label classification:
+
+```python
+>>> from transformers import AutoTokenizer
+>>> from optimum.onnxruntime import ORTModelForSequenceClassification
+>>> import torch
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/distilbert-base-uncased-finetuned-sst-2-english")
+>>> model = ORTModelForSequenceClassification.from_pretrained("optimum/distilbert-base-uncased-finetuned-sst-2-english")
+
+>>> inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
+
+>>> outputs = model(**inputs)
+>>> logits = outputs.logits
+>>> list(logits.shape)
+```
+
+</ExampleCodeBlock>
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForSequenceClassification.forward.example-2">
+
+Example using `transformers.pipelines`:
+
+```python
+>>> from transformers import AutoTokenizer, pipeline
+>>> from optimum.onnxruntime import ORTModelForSequenceClassification
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/distilbert-base-uncased-finetuned-sst-2-english")
+>>> model = ORTModelForSequenceClassification.from_pretrained("optimum/distilbert-base-uncased-finetuned-sst-2-english")
+>>> onnx_classifier = pipeline("text-classification", model=model, tokenizer=tokenizer)
+
+>>> text = "Hello, my dog is cute"
+>>> pred = onnx_classifier(text)
+```
+
+</ExampleCodeBlock>
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForSequenceClassification.forward.example-3">
+
+Example using zero-shot-classification `transformers.pipelines`:
+
+```python
+>>> from transformers import AutoTokenizer, pipeline
+>>> from optimum.onnxruntime import ORTModelForSequenceClassification
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/distilbert-base-uncased-mnli")
+>>> model = ORTModelForSequenceClassification.from_pretrained("optimum/distilbert-base-uncased-mnli")
+>>> onnx_z0 = pipeline("zero-shot-classification", model=model, tokenizer=tokenizer)
+
+>>> sequence_to_classify = "Who are you voting for in 2020?"
+>>> candidate_labels = ["Europe", "public health", "politics", "elections"]
+>>> pred = onnx_z0(sequence_to_classify, candidate_labels, multi_class=True)
+```
+
+</ExampleCodeBlock>
+
+
+</div></div>
+
+<h2 id="optimum.onnxruntime.ORTModelForTokenClassification">ORTModelForTokenClassification</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.onnxruntime.ORTModelForTokenClassification</name><anchor>optimum.onnxruntime.ORTModelForTokenClassification</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L598</source><parameters>[{"name": "model", "val": " = None"}, {"name": "config", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** (`transformers.PretrainedConfig`) -- [PretrainedConfig](https://huggingface.co/docs/transformers/main_classes/configuration#transformers.PretrainedConfig) is the Model configuration class with all the parameters of the model.
+  Initializing with a config file does not load the weights associated with the model, only the
+  configuration. Check out the `from_pretrained()` method to load the model weights.
+- **model** (`onnxruntime.InferenceSession`) -- [onnxruntime.InferenceSession](https://onnxruntime.ai/docs/api/python/api_summary.html#inferencesession) is the main class used to run a model. Check out the [load_model()](/docs/optimum/pr_299/en/onnxruntime/modeling_ort#optimum.onnxruntime.ORTModel.load_model) method for more information.</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Onnx Model with a token classification head on top (a linear layer on top of the hidden-states output) e.g.
+for Named-Entity-Recognition (NER) tasks.
+
+This model inherits from [~`onnxruntime.modeling_ort.ORTModel`]. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving)
+
+
+Token Classification model for ONNX.
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>forward</name><anchor>optimum.onnxruntime.ORTModelForTokenClassification.forward</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L612</source><parameters>[{"name": "input_ids", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "attention_mask", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "token_type_ids", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.Tensor` of shape `(batch_size, sequence_length)`) --
+  Indices of input sequence tokens in the vocabulary.
+  Indices can be obtained using [`AutoTokenizer`](https://huggingface.co/docs/transformers/autoclass_tutorial#autotokenizer).
+  See [`PreTrainedTokenizer.encode`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizerBase.encode) and
+  [`PreTrainedTokenizer.__call__`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizerBase.__call__) for details.
+  [What are input IDs?](https://huggingface.co/docs/transformers/glossary#input-ids)
+- **attention_mask** (`torch.Tensor` of shape `(batch_size, sequence_length)`, *optional*) --
+  Mask to avoid performing attention on padding token indices. Mask values selected in `[0, 1]`:
+  - 1 for tokens that are **not masked**,
+  - 0 for tokens that are **masked**.
+  [What are attention masks?](https://huggingface.co/docs/transformers/glossary#attention-mask)
+- **token_type_ids** (`torch.Tensor` of shape `(batch_size, sequence_length)`, *optional*) --
+  Segment token indices to indicate first and second portions of the inputs. Indices are selected in `[0, 1]`:
+  - 1 for tokens that are **sentence A**,
+  - 0 for tokens that are **sentence B**.
+  [What are token type IDs?](https://huggingface.co/docs/transformers/glossary#token-type-ids)</paramsdesc><paramgroups>0</paramgroups></docstring>
+The `ORTModelForTokenClassification` forward method, overrides the `__call__` special method.
+
+<Tip>
+
+Although the recipe for forward pass needs to be defined within this function, one should call the `Module`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.
+
+</Tip>
+
+
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForTokenClassification.forward.example">
+
+Example of token classification:
+
+```python
+>>> from transformers import AutoTokenizer
+>>> from optimum.onnxruntime import ORTModelForTokenClassification
+>>> import torch
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/bert-base-NER")
+>>> model = ORTModelForTokenClassification.from_pretrained("optimum/bert-base-NER")
+
+>>> inputs = tokenizer("My name is Philipp and I live in Germany.", return_tensors="pt")
+
+>>> outputs = model(**inputs)
+>>> logits = outputs.logits
+>>> list(logits.shape)
+```
+
+</ExampleCodeBlock>
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForTokenClassification.forward.example-2">
+
+Example using `transformers.pipelines`:
+
+```python
+>>> from transformers import AutoTokenizer, pipeline
+>>> from optimum.onnxruntime import ORTModelForTokenClassification
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/bert-base-NER")
+>>> model = ORTModelForTokenClassification.from_pretrained("optimum/bert-base-NER")
+>>> onnx_ner = pipeline("token-classification", model=model, tokenizer=tokenizer)
+
+>>> text = "My name is Philipp and I live in Germany."
+>>> pred = onnx_ner(text)
+```
+
+</ExampleCodeBlock>
+
+
+</div></div>
+
+<h2 id="optimum.onnxruntime.ORTModelForCausalLM">ORTModelForCausalLM</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.onnxruntime.ORTModelForCausalLM</name><anchor>optimum.onnxruntime.ORTModelForCausalLM</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L681</source><parameters>[{"name": "model", "val": " = None"}, {"name": "config", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** (`transformers.PretrainedConfig`) -- [PretrainedConfig](https://huggingface.co/docs/transformers/main_classes/configuration#transformers.PretrainedConfig) is the Model configuration class with all the parameters of the model.
+  Initializing with a config file does not load the weights associated with the model, only the
+  configuration. Check out the `from_pretrained()` method to load the model weights.
+- **model** (`onnxruntime.InferenceSession`) -- [onnxruntime.InferenceSession](https://onnxruntime.ai/docs/api/python/api_summary.html#inferencesession) is the main class used to run a model. Check out the [load_model()](/docs/optimum/pr_299/en/onnxruntime/modeling_ort#optimum.onnxruntime.ORTModel.load_model) method for more information.</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Onnx Model with a causal language modeling head on top (linear layer with weights tied to the input
+embeddings).
+
+This model inherits from [~`onnxruntime.modeling_ort.ORTModel`]. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving)
+
+
+Causal LM model for ONNX.
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>forward</name><anchor>optimum.onnxruntime.ORTModelForCausalLM.forward</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L705</source><parameters>[{"name": "input_ids", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "attention_mask", "val": ": typing.Optional[torch.Tensor] = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.Tensor` of shape `(batch_size, sequence_length)`) --
+  Indices of input sequence tokens in the vocabulary.
+  Indices can be obtained using [`AutoTokenizer`](https://huggingface.co/docs/transformers/autoclass_tutorial#autotokenizer).
+  See [`PreTrainedTokenizer.encode`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizerBase.encode) and
+  [`PreTrainedTokenizer.__call__`](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizerBase.__call__) for details.
+  [What are input IDs?](https://huggingface.co/docs/transformers/glossary#input-ids)
+- **attention_mask** (`torch.Tensor` of shape `(batch_size, sequence_length)`, *optional*) --
+  Mask to avoid performing attention on padding token indices. Mask values selected in `[0, 1]`:
+  - 1 for tokens that are **not masked**,
+  - 0 for tokens that are **masked**.
+  [What are attention masks?](https://huggingface.co/docs/transformers/glossary#attention-mask)
+- **token_type_ids** (`torch.Tensor` of shape `(batch_size, sequence_length)`, *optional*) --
+  Segment token indices to indicate first and second portions of the inputs. Indices are selected in `[0, 1]`:
+  - 1 for tokens that are **sentence A**,
+  - 0 for tokens that are **sentence B**.
+  [What are token type IDs?](https://huggingface.co/docs/transformers/glossary#token-type-ids)</paramsdesc><paramgroups>0</paramgroups></docstring>
+The `ORTModelForCausalLM` forward method, overrides the `__call__` special method.
+
+<Tip>
+
+Although the recipe for forward pass needs to be defined within this function, one should call the `Module`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.
+
+</Tip>
+
+
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForCausalLM.forward.example">
+
+Example of text generation:
+
+```python
+>>> from transformers import AutoTokenizer
+>>> from optimum.onnxruntime import ORTModelForCausalLM
+>>> import torch
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/gpt2")
+>>> model = ORTModelForCausalLM.from_pretrained("optimum/gpt2")
+
+>>> inputs = tokenizer("My name is Philipp and I live in Germany.", return_tensors="pt")
+
+>>> gen_tokens = model.generate(**inputs,do_sample=True,temperature=0.9, min_length=20,max_length=20)
+>>> tokenizer.batch_decode(gen_tokens)
+```
+
+</ExampleCodeBlock>
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForCausalLM.forward.example-2">
+
+Example using `transformers.pipelines`:
+
+```python
+>>> from transformers import AutoTokenizer, pipeline
+>>> from optimum.onnxruntime import ORTModelForCausalLM
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/gpt2")
+>>> model = ORTModelForCausalLM.from_pretrained("optimum/gpt2")
+>>> onnx_gen = pipeline("text-generation", model=model, tokenizer=tokenizer)
+
+>>> text = "My name is Philipp and I live in Germany."
+>>> gen = onnx_gen(text)
+```
+
+</ExampleCodeBlock>
+
+
+</div></div>
+
+<h2 id="optimum.onnxruntime.ORTModelForSeq2SeqLM">ORTModelForSeq2SeqLM</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.onnxruntime.ORTModelForSeq2SeqLM</name><anchor>optimum.onnxruntime.ORTModelForSeq2SeqLM</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_seq2seq.py#L536</source><parameters>[{"name": "*args", "val": ""}, {"name": "**kwargs", "val": ""}]</parameters></docstring>
+
+Sequence-to-sequence model with a language modeling head for ONNX Runtime inference.
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>forward</name><anchor>optimum.onnxruntime.ORTModelForSeq2SeqLM.forward</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_seq2seq.py#L545</source><parameters>[{"name": "input_ids", "val": ": LongTensor = None"}, {"name": "attention_mask", "val": ": typing.Optional[torch.FloatTensor] = None"}, {"name": "decoder_input_ids", "val": ": typing.Optional[torch.LongTensor] = None"}, {"name": "encoder_outputs", "val": ": typing.Optional[typing.Tuple[typing.Tuple[torch.Tensor]]] = None"}, {"name": "past_key_values", "val": ": typing.Optional[typing.Tuple[typing.Tuple[torch.Tensor]]] = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **input_ids** (`torch.LongTensor`) --
+  Indices of input sequence tokens in the vocabulary of shape `(batch_size, encoder_sequence_length)`.
+- **attention_mask** (`torch.LongTensor`) --
+  Mask to avoid performing attention on padding token indices, of shape
+  `(batch_size, encoder_sequence_length)`. Mask values selected in `[0, 1]`.
+- **decoder_input_ids** (`torch.LongTensor`) --
+  Indices of decoder input sequence tokens in the vocabulary of shape `(batch_size, decoder_sequence_length)`.
+- **encoder_outputs** (`torch.FloatTensor`) --
+  The encoder `last_hidden_state` of shape `(batch_size, encoder_sequence_length, hidden_size)`.
+- **past_key_values** (`tuple(tuple(torch.FloatTensor), *optional*)` --
+  Contains the precomputed key and value hidden states of the attention blocks used to speed up decoding.
+  The tuple is of length `config.n_layers` with each tuple having 2 tensors of shape
+  `(batch_size, num_heads, decoder_sequence_length, embed_size_per_head)` and 2 additional tensors of shape
+  `(batch_size, num_heads, encoder_sequence_length, embed_size_per_head)`.</paramsdesc><paramgroups>0</paramgroups></docstring>
+The `ORTModelForSeq2SeqLM` forward method, overrides the `__call__` special method.
+
+<Tip>
+
+Although the recipe for forward pass needs to be defined within this function, one should call the `Module`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.
+
+</Tip>
+
+
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForSeq2SeqLM.forward.example">
+
+Example of text generation:
+
+```python
+>>> from transformers import AutoTokenizer
+>>> from optimum.onnxruntime import ORTModelForSeq2SeqLM
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/t5-small")
+>>> model = ORTModelForSeq2SeqLM.from_pretrained("optimum/t5-small")
+
+>>> inputs = tokenizer("My name is Eustache and I like to", return_tensors="pt")
+
+>>> gen_tokens = model.generate(**inputs)
+>>> outputs = tokenizer.batch_decode(gen_tokens)
+```
+
+</ExampleCodeBlock>
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForSeq2SeqLM.forward.example-2">
+
+Example using `transformers.pipeline`:
+
+```python
+>>> from transformers import AutoTokenizer, pipeline
+>>> from optimum.onnxruntime import ORTModelForSeq2SeqLM
+
+>>> tokenizer = AutoTokenizer.from_pretrained("optimum/t5-small")
+>>> model = ORTModelForSeq2SeqLM.from_pretrained("optimum/t5-small")
+>>> onnx_translation = pipeline("translation_en_to_de", model=model, tokenizer=tokenizer)
+
+>>> text = "My name is Eustache."
+>>> pred = onnx_translation(text)
+```
+
+</ExampleCodeBlock>
+
+
+</div></div>
+
+<h2 id="optimum.onnxruntime.ORTModelForImageClassification">ORTModelForImageClassification</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.onnxruntime.ORTModelForImageClassification</name><anchor>optimum.onnxruntime.ORTModelForImageClassification</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L799</source><parameters>[{"name": "model", "val": " = None"}, {"name": "config", "val": " = None"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **config** (`transformers.PretrainedConfig`) -- [PretrainedConfig](https://huggingface.co/docs/transformers/main_classes/configuration#transformers.PretrainedConfig) is the Model configuration class with all the parameters of the model.
+  Initializing with a config file does not load the weights associated with the model, only the
+  configuration. Check out the `from_pretrained()` method to load the model weights.
+- **model** (`onnxruntime.InferenceSession`) -- [onnxruntime.InferenceSession](https://onnxruntime.ai/docs/api/python/api_summary.html#inferencesession) is the main class used to run a model. Check out the [load_model()](/docs/optimum/pr_299/en/onnxruntime/modeling_ort#optimum.onnxruntime.ORTModel.load_model) method for more information.</paramsdesc><paramgroups>0</paramgroups></docstring>
+
+Onnx Model for image-classification tasks.
+
+This model inherits from [~`onnxruntime.modeling_ort.ORTModel`]. Check the superclass documentation for the generic methods the
+library implements for all its model (such as downloading or saving)
+
+
+Image Classification model for ONNX.
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>forward</name><anchor>optimum.onnxruntime.ORTModelForImageClassification.forward</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/onnxruntime/modeling_ort.py#L813</source><parameters>[{"name": "pixel_values", "val": ": Tensor"}, {"name": "**kwargs", "val": ""}]</parameters><paramsdesc>- **pixel_values** (`torch.Tensor` of shape `(batch_size, num_channels, height, width)`) --
+  Pixel values corresponding to the images in the current batch.
+  Pixel values can be obtained from encoded images using [`AutoFeatureExtractor`](https://huggingface.co/docs/transformers/autoclass_tutorial#autofeatureextractor).</paramsdesc><paramgroups>0</paramgroups></docstring>
+The `ORTModelForImageClassification` forward method, overrides the `__call__` special method.
+
+<Tip>
+
+Although the recipe for forward pass needs to be defined within this function, one should call the `Module`
+instance afterwards instead of this since the former takes care of running the pre and post processing steps while
+the latter silently ignores them.
+
+</Tip>
+
+
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForImageClassification.forward.example">
+
+Example of image classification:
+
+```python
+>>> import requests
+>>> from PIL import Image
+>>> from optimum.onnxruntime import ORTModelForImageClassification
+>>> from transformers import AutoFeatureExtractor
+
+>>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
+>>> image = Image.open(requests.get(url, stream=True).raw)
+
+>>> preprocessor = AutoFeatureExtractor.from_pretrained("optimum/vit-base-patch16-224")
+>>> model = ORTModelForImageClassification.from_pretrained("optimum/vit-base-patch16-224")
+
+>>> inputs = preprocessor(images=image, return_tensors="pt")
+
+>>> outputs = model(**inputs)
+>>> logits = outputs.logits
+```
+
+</ExampleCodeBlock>
+
+<ExampleCodeBlock anchor="optimum.onnxruntime.ORTModelForImageClassification.forward.example-2">
+
+Example using `transformers.pipeline`:
+
+```python
+>>> import requests
+>>> from PIL import Image
+>>> from transformers import AutoFeatureExtractor, pipeline
+>>> from optimum.onnxruntime import ORTModelForImageClassification
+
+>>> preprocessor = AutoFeatureExtractor.from_pretrained("optimum/vit-base-patch16-224")
+>>> model = ORTModelForImageClassification.from_pretrained("optimum/vit-base-patch16-224")
+>>> onnx_image_classifier = pipeline("image-classification", model=model, feature_extractor=preprocessor)
+
+>>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
+>>> pred = onnx_image_classifier(url)
+```
+
+</ExampleCodeBlock>
+
+
+</div></div>

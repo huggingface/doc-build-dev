@@ -1,0 +1,255 @@
+---
+local: benchmarking
+sections:
+- local: optimum.runs_base.Run
+  title: Run
+- local: optimum.utils.runs.RunConfig
+  title: RunConfig
+- local: optimum.utils.preprocessing.base.DatasetProcessing
+  title: Processing utility methods
+title: Benchmarking
+---
+<script lang="ts">
+import {onMount} from "svelte";
+import Tip from "$lib/Tip.svelte";
+import Youtube from "$lib/Youtube.svelte";
+import Docstring from "$lib/Docstring.svelte";
+import CodeBlock from "$lib/CodeBlock.svelte";
+import CodeBlockFw from "$lib/CodeBlockFw.svelte";
+import DocNotebookDropdown from "$lib/DocNotebookDropdown.svelte";
+import IconCopyLink from "$lib/IconCopyLink.svelte";
+import FrameworkContent from "$lib/FrameworkContent.svelte";
+import Markdown from "$lib/Markdown.svelte";
+import Question from "$lib/Question.svelte";
+import FrameworkSwitchCourse from "$lib/FrameworkSwitchCourse.svelte";
+import InferenceApi from "$lib/InferenceApi.svelte";
+import TokenizersLanguageContent from "$lib/TokenizersLanguageContent.svelte";
+import ExampleCodeBlock from "$lib/ExampleCodeBlock.svelte";
+let fw: "pt" | "tf" = "pt";
+onMount(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    fw = urlParams.get("fw") || "pt";
+});
+</script>
+<svelte:head>
+  <meta name="hf:doc:metadata" content={JSON.stringify(metadata)} >
+</svelte:head>
+
+<!--Copyright 2022 The HuggingFace Team. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
+-->
+
+<h1 id="benchmarking">Benchmarking</h1>
+
+<h2 id="optimum.runs_base.Run">Run</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.runs_base.Run</name><anchor>optimum.runs_base.Run</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/runs_base.py#L51</source><parameters>[{"name": "run_config", "val": ": dict"}]</parameters></docstring>
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>__init__</name><anchor>optimum.runs_base.Run.__init__</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/runs_base.py#L52</source><parameters>[{"name": "run_config", "val": ": dict"}]</parameters><paramsdesc>- **run_config** (dict) -- Parameters to use for the run. See [RunConfig](/docs/optimum/pr_299/en/benchmark#optimum.utils.runs.RunConfig) for the expected keys.</paramsdesc><paramgroups>0</paramgroups></docstring>
+Initialize the Run class holding methods to perform inference and evaluation given a config.
+
+A run compares a transformers model and an optimized model on latency/throughput, model size, and provided metrics.
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>launch</name><anchor>optimum.runs_base.Run.launch</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/runs_base.py#L112</source><parameters>[]</parameters><rettype>`dict`</rettype><retdesc>Finalized run data with metrics stored in the "evaluation" key.</retdesc></docstring>
+Launch inference to compare metrics between the original and optimized model.
+
+These metrics are latency, throughput, model size, and user provided metrics.
+
+
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>load_datasets</name><anchor>optimum.runs_base.Run.load_datasets</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/runs_base.py#L147</source><parameters>[]</parameters></docstring>
+Load evaluation dataset, and if needed, calibration dataset for static quantization.
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>get_calibration_dataset</name><anchor>optimum.runs_base.Run.get_calibration_dataset</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/runs_base.py#L155</source><parameters>[]</parameters><rettype>`datasets.Dataset`</rettype><retdesc>Calibration dataset.</retdesc></docstring>
+Get calibration dataset. The dataset needs to be loaded first with [load_datasets()](/docs/optimum/pr_299/en/benchmark#optimum.runs_base.Run.load_datasets).
+
+
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>get_eval_dataset</name><anchor>optimum.runs_base.Run.get_eval_dataset</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/runs_base.py#L165</source><parameters>[]</parameters><rettype>`datasets.Dataset`</rettype><retdesc>Evaluation dataset.</retdesc></docstring>
+
+Get evaluation dataset.  The dataset needs to be loaded first with [load_datasets()](/docs/optimum/pr_299/en/benchmark#optimum.runs_base.Run.load_datasets).
+
+
+
+
+
+
+</div></div>
+
+<h2 id="optimum.utils.runs.RunConfig">RunConfig</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.utils.runs.RunConfig</name><anchor>optimum.utils.runs.RunConfig</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/utils/runs.py#L268</source><parameters>[{"name": "metrics", "val": ": typing.List[str]"}, {"name": "model_name_or_path", "val": ": str"}, {"name": "task", "val": ": str"}, {"name": "quantization_approach", "val": ": QuantizationApproach"}, {"name": "dataset", "val": ": DatasetArgs"}, {"name": "framework", "val": ": Frameworks"}, {"name": "framework_args", "val": ": FrameworkArgs"}, {"name": "operators_to_quantize", "val": ": typing.Optional[typing.List[str]] = <factory>"}, {"name": "node_exclusion", "val": ": typing.Optional[typing.List[str]] = <factory>"}, {"name": "per_channel", "val": ": typing.Optional[bool] = False"}, {"name": "calibration", "val": ": typing.Optional[optimum.utils.runs.Calibration] = None"}, {"name": "task_args", "val": ": typing.Optional[optimum.utils.runs.TaskArgs] = None"}, {"name": "aware_training", "val": ": typing.Optional[bool] = False"}, {"name": "max_eval_samples", "val": ": typing.Optional[int] = None"}, {"name": "time_benchmark_args", "val": ": typing.Optional[optimum.utils.runs.BenchmarkTimeArgs] = BenchmarkTimeArgs(duration=30, warmup_runs=10)"}, {"name": "batch_sizes", "val": ": typing.Optional[typing.List[int]] = <factory>"}, {"name": "input_lengths", "val": ": typing.Optional[typing.List[int]] = <factory>"}]</parameters><paramsdesc>- **metrics** (`List[str]`) -- List of metrics to evaluate on.
+- **model_name_or_path** (`str`) -- Name of the model hosted on the Hub to use for the run.
+- **task** (`str`) -- Task performed by the model.
+- **quantization_approach** (`QuantizationApproach`) -- Whether to use dynamic or static quantization.
+- **dataset** (`DatasetArgs`) -- Dataset to use. Several keys must be set on top of the dataset name.
+- **framework** (`Frameworks`) -- Name of the framework used (e.g. "onnxruntime").
+- **framework_args** (`FrameworkArgs`) -- Framework-specific arguments.
+- **operators_to_quantize** (`List[str], NoneType]`) -- Operators to quantize, doing no modifications to others (default: `["Add", "MatMul"]`).
+- **node_exclusion** (`List[str], NoneType]`) -- Specific nodes to exclude from being quantized (default: `['layernorm', 'gelu', 'residual', 'gather', 'softmax']`).
+- **per_channel** (`Union[bool, NoneType]`) -- Whether to quantize per channel (default: `False`).
+- **calibration** (`Calibration, NoneType]`) -- Calibration parameters, in case static quantization is used.
+- **task_args** (`TaskArgs, NoneType]`) -- Task-specific arguments (default: `None`).
+- **aware_training** (`Union[bool, NoneType]`) -- Whether the quantization is to be done with Quantization-Aware Training (not supported).
+- **max_eval_samples** (`Union[int, NoneType]`) -- Maximum number of samples to use from the evaluation dataset for evaluation.
+- **time_benchmark_args** (`BenchmarkTimeArgs, NoneType]`) -- Parameters related to time benchmark.
+- **batch_sizes** (`List[int], NoneType]`) -- Batch sizes to include in the run to measure time metrics.
+- **input_lengths** (`List[int], NoneType]`) -- Input lengths to include in the run to measure time metrics.</paramsdesc><paramgroups>0</paramgroups></docstring>
+Class holding the parameters to launch a run.
+
+
+
+
+
+</div>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.utils.runs.Calibration</name><anchor>optimum.utils.runs.Calibration</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/utils/runs.py#L71</source><parameters>[{"name": "method", "val": ": CalibrationMethods"}, {"name": "num_calibration_samples", "val": ": int"}, {"name": "calibration_histogram_percentile", "val": ": typing.Optional[float] = None"}, {"name": "calibration_moving_average", "val": ": typing.Optional[bool] = None"}, {"name": "calibration_moving_average_constant", "val": ": typing.Optional[float] = None"}]</parameters><paramsdesc>- **method** (`CalibrationMethods`) -- Calibration method used, either "minmax", "entropy" or "percentile".
+- **num_calibration_samples** (`int`) -- Number of examples to use for the calibration step resulting from static quantization.
+- **calibration_histogram_percentile** (`Union[float, NoneType]`) -- The percentile used for the percentile calibration method.
+- **calibration_moving_average** (`Union[bool, NoneType]`) -- Whether to compute the moving average of the minimum and maximum values for the minmax calibration method.
+- **calibration_moving_average_constant** (`Union[float, NoneType]`) -- Constant smoothing factor to use when computing the moving average of the minimum and maximum values. Effective only when the selected calibration method is minmax and `calibration_moving_average` is set to True.</paramsdesc><paramgroups>0</paramgroups></docstring>
+Parameters for post-training calibration with static quantization.
+
+
+
+
+
+</div>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.utils.runs.DatasetArgs</name><anchor>optimum.utils.runs.DatasetArgs</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/utils/runs.py#L120</source><parameters>[{"name": "path", "val": ": str"}, {"name": "eval_split", "val": ": str"}, {"name": "data_keys", "val": ": typing.Dict[str, typing.Union[NoneType, str]]"}, {"name": "ref_keys", "val": ": typing.List[str]"}, {"name": "name", "val": ": typing.Optional[str] = None"}, {"name": "calibration_split", "val": ": typing.Optional[str] = None"}]</parameters><paramsdesc>- **path** (`str`) -- Path to the dataset, as in `datasets.load_dataset(path)`.
+- **eval_split** (`str`) -- Dataset split used for evaluation (e.g. "test").
+- **data_keys** (`Union[NoneType, str]]`) -- Dataset columns used as input data. At most two, indicated with "primary" and "secondary".
+- **ref_keys** (`List[str]`) -- Dataset column used for references during evaluation.
+- **name** (`Union[str, NoneType]`) -- Name of the dataset, as in `datasets.load_dataset(path, name)`.
+- **calibration_split** (`Union[str, NoneType]`) -- Dataset split used for calibration (e.g. "train").</paramsdesc><paramgroups>0</paramgroups></docstring>
+Parameters related to the dataset.
+
+
+
+
+
+</div>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.utils.runs.TaskArgs</name><anchor>optimum.utils.runs.TaskArgs</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/utils/runs.py#L141</source><parameters>[{"name": "is_regression", "val": ": typing.Optional[bool] = None"}]</parameters><paramsdesc>- **is_regression** (`Union[bool, NoneType]`) -- Text classification specific. Set whether the task is regression (output = one float).</paramsdesc><paramgroups>0</paramgroups></docstring>
+Task-specific parameters.
+
+
+
+
+
+</div>
+
+<h2 id="optimum.utils.preprocessing.base.DatasetProcessing">Processing utility methods</h2>
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+
+<docstring><name>class optimum.utils.preprocessing.base.DatasetProcessing</name><anchor>optimum.utils.preprocessing.base.DatasetProcessing</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/utils/preprocessing/base.py#L7</source><parameters>[{"name": "dataset_path", "val": ": str"}, {"name": "dataset_name", "val": ": str"}, {"name": "preprocessor", "val": ": typing.Union[transformers.feature_extraction_utils.FeatureExtractionMixin, transformers.tokenization_utils_base.PreTrainedTokenizerBase]"}, {"name": "eval_split", "val": ": str"}, {"name": "static_quantization", "val": ": bool"}, {"name": "data_keys", "val": ": typing.Dict[str, str]"}, {"name": "ref_keys", "val": ": typing.List[str]"}, {"name": "config", "val": ": PretrainedConfig"}, {"name": "task_args", "val": ": typing.Optional[typing.Dict] = None"}, {"name": "num_calibration_samples", "val": ": typing.Optional[int] = None"}, {"name": "calibration_split", "val": ": typing.Optional[str] = None"}, {"name": "max_eval_samples", "val": ": typing.Optional[int] = None"}]</parameters></docstring>
+
+
+
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>__init__</name><anchor>optimum.utils.preprocessing.base.DatasetProcessing.__init__</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/utils/preprocessing/base.py#L8</source><parameters>[{"name": "dataset_path", "val": ": str"}, {"name": "dataset_name", "val": ": str"}, {"name": "preprocessor", "val": ": typing.Union[transformers.feature_extraction_utils.FeatureExtractionMixin, transformers.tokenization_utils_base.PreTrainedTokenizerBase]"}, {"name": "eval_split", "val": ": str"}, {"name": "static_quantization", "val": ": bool"}, {"name": "data_keys", "val": ": typing.Dict[str, str]"}, {"name": "ref_keys", "val": ": typing.List[str]"}, {"name": "config", "val": ": PretrainedConfig"}, {"name": "task_args", "val": ": typing.Optional[typing.Dict] = None"}, {"name": "num_calibration_samples", "val": ": typing.Optional[int] = None"}, {"name": "calibration_split", "val": ": typing.Optional[str] = None"}, {"name": "max_eval_samples", "val": ": typing.Optional[int] = None"}]</parameters><paramsdesc>- **dataset_path** (`str`) -- Dataset path (https://huggingface.co/docs/datasets/v2.2.1/en/package_reference/loading_methods#datasets.load_dataset.path)
+- **dataset_name** (`str`) -- Dataset name (https://huggingface.co/docs/datasets/v2.2.1/en/package_reference/loading_methods#datasets.load_dataset.name)
+- **preprocessor** (`Union[FeatureExtractionMixin, PreTrainedTokenizerBase]`) -- Preprocessor used for evaluation.
+- **eval_split** (`str`) -- Dataset split used for evaluation (e.g. "test").
+- **static_quantization** (`bool`) -- Static quantization is used.
+- **data_keys** (`Dict[str, str]`) -- Map "primary" and "secondary" to data column names.
+- **ref_keys** (`List[str]`) -- References column names.
+- **config** (`PretrainedConfig`) -- Model configuration, useful for some tasks.
+- **task_args(`Dict`,** *optional*) -- Task-specific arguments.
+- **num_calibration_samples** (`int`, *optional*) -- Number of calibration samples for static quantization. Defaults to None.
+- **calibration_split** (`str`, *optional*) -- Calibration split (e.g. "train") for static quantization. Defaults to None.
+- **max_eval_samples** (`int`; *optional*) -- Maximum number of samples to use from the evaluation dataset for evaluation.</paramsdesc><paramgroups>0</paramgroups></docstring>
+Initialize the class in charge of loading datasets, running inference and evaluation.
+
+This class should be task-dependent, backend independent.
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>load_datasets</name><anchor>optimum.utils.preprocessing.base.DatasetProcessing.load_datasets</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/utils/preprocessing/base.py#L58</source><parameters>[]</parameters><rettype>`Dict`</rettype><retdesc>Dictionary holding the datasets.</retdesc></docstring>
+Load calibration dataset if needed, and evaluation dataset.
+
+The evaluation dataset is meant to be used by a pipeline and is therefore not preprocessed. The calibration dataset is preprocessed.
+
+
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>run_inference</name><anchor>optimum.utils.preprocessing.base.DatasetProcessing.run_inference</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/utils/preprocessing/base.py#L68</source><parameters>[{"name": "eval_dataset", "val": ": Dataset"}, {"name": "pipeline", "val": ": Pipeline"}]</parameters><paramsdesc>- **eval_dataset** (`Dataset`) -- Raw dataset to run inference on.
+- **pipeline** (`Pipeline`) -- Pipeline used for inference. Should be initialized beforehand.</paramsdesc><paramgroups>0</paramgroups><rettype>`tuple(List)` comprising labels and predictions</rettype><retdesc>- **labels** are the references for evaluation.
+- **predictions** are the predictions on the dataset using the pipeline.</retdesc></docstring>
+Run inference on the provided dataset using a pipeline, and return all labels, predictions.
+
+
+
+
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>get_metrics</name><anchor>optimum.utils.preprocessing.base.DatasetProcessing.get_metrics</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/utils/preprocessing/base.py#L82</source><parameters>[{"name": "predictions", "val": ""}, {"name": "references", "val": ""}, {"name": "metric", "val": ""}]</parameters><paramsdesc>- **predictions** (`List`) -- Predictions.
+- **references** (`List`) -- References.
+- **metric** (`Metric`) -- Pre-loaded metric to run evaluation on.</paramsdesc><paramgroups>0</paramgroups><rettype>`Dict`</rettype><retdesc>Computed metrics.</retdesc></docstring>
+Compute a metric given pre-formatted predictions and references.
+
+
+
+
+
+
+
+
+</div>
+<div class="docstring border-l-2 border-t-2 pl-4 pt-3.5 border-gray-100 rounded-tl-xl mb-6 mt-8">
+<docstring><name>get_pipeline_kwargs</name><anchor>optimum.utils.preprocessing.base.DatasetProcessing.get_pipeline_kwargs</anchor><source>https://github.com/huggingface/optimum/blob/vr_299/src/optimum/utils/preprocessing/base.py#L95</source><parameters>[]</parameters><rettype>`Dict`</rettype><retdesc>Task-specific kwargs to initialize the pipeline.</retdesc></docstring>
+Get task-specific kwargs to initialize the pipeline.
+
+
+
+
+
+
+</div></div>
