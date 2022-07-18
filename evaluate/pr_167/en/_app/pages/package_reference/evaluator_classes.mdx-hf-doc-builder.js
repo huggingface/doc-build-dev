@@ -103,8 +103,8 @@ results = task_evaluator.compute(
     },
     features=Features({
         "tokens": Value(dtype="string"),
-        "starts": Sequence(feature=Value(dtype="string")),
-        "ends": Sequence(feature=Value(dtype="string")),
+        "starts": Sequence(feature=Value(dtype="int32")),
+        "ends": Sequence(feature=Value(dtype="int32")),
         "ner_tags": Sequence(feature=Value(dtype="string")),
     }),
 )`,highlighted:`dataset = Dataset.from_dict(
@@ -116,8 +116,8 @@ results = task_evaluator.compute(
     },
     features=Features({
         <span class="hljs-string">&quot;tokens&quot;</span>: Value(dtype=<span class="hljs-string">&quot;string&quot;</span>),
-        <span class="hljs-string">&quot;starts&quot;</span>: <span class="hljs-type">Sequence</span>(feature=Value(dtype=<span class="hljs-string">&quot;string&quot;</span>)),
-        <span class="hljs-string">&quot;ends&quot;</span>: <span class="hljs-type">Sequence</span>(feature=Value(dtype=<span class="hljs-string">&quot;string&quot;</span>)),
+        <span class="hljs-string">&quot;starts&quot;</span>: <span class="hljs-type">Sequence</span>(feature=Value(dtype=<span class="hljs-string">&quot;int32&quot;</span>)),
+        <span class="hljs-string">&quot;ends&quot;</span>: <span class="hljs-type">Sequence</span>(feature=Value(dtype=<span class="hljs-string">&quot;int32&quot;</span>)),
         <span class="hljs-string">&quot;ner_tags&quot;</span>: <span class="hljs-type">Sequence</span>(feature=Value(dtype=<span class="hljs-string">&quot;string&quot;</span>)),
     }),
 )`}}),{c(){l=o("p"),b=c("For example, the following dataset format is "),i=o("strong"),d=c("not"),v=c(" accepted by the evaluator:"),s=u(),$(f.$$.fragment)},l(x){l=n(x,"P",{});var I=r(l);b=p(I,"For example, the following dataset format is "),i=n(I,"STRONG",{});var Y=r(i);d=p(Y,"not"),Y.forEach(a),v=p(I," accepted by the evaluator:"),I.forEach(a),s=m(x),w(f.$$.fragment,x)},m(x,I){_(x,l,I),e(l,b),e(l,i),e(i,d),e(l,v),_(x,s,I),y(f,x,I),V=!0},p:tt,i(x){V||(E(f.$$.fragment,x),V=!0)},o(x){q(f.$$.fragment,x),V=!1},d(x){x&&a(l),x&&a(s),k(f,x)}}}function Bo(T){let l,b;return l=new et({props:{anchor:"evaluate.TokenClassificationEvaluator.compute.example-3",$$slots:{default:[Ro]},$$scope:{ctx:T}}}),{c(){$(l.$$.fragment)},l(i){w(l.$$.fragment,i)},m(i,d){y(l,i,d),b=!0},p(i,d){const v={};d&2&&(v.$$scope={dirty:d,ctx:i}),l.$set(v)},i(i){b||(E(l.$$.fragment,i),b=!0)},o(i){q(l.$$.fragment,i),b=!1},d(i){k(l,i)}}}function Uo(T){let l,b,i,d,v,s,f,V,x,I,Y,la,Lt,W,Z,st,ve,ia,ot,ca,St,Ve,pa,Ot,L,_e,da,S,ua,Re,ma,fa,nt,ha,ga,rt,va,_a,ba,ee,zt,Be,$a,Mt,j,be,wa,lt,ya,Ea,te,$e,qa,it,ka,xa,ae,we,ja,ye,Ta,ct,Ca,Pa,Da,se,Ee,Ia,pt,Na,Fa,oe,qe,Aa,dt,La,Sa,ne,ke,Oa,ut,za,Vt,G,re,mt,xe,Ma,ft,Va,Rt,J,le,ht,je,Ra,gt,Ba,Bt,O,Te,Ua,z,Ha,Ue,Ya,Wa,vt,Ga,Ja,_t,Ka,Qa,Xa,R,Ce,Za,bt,es,ts,ie,Ut,K,ce,$t,Pe,as,wt,ss,Ht,M,De,os,N,ns,He,rs,ls,yt,is,cs,Et,ps,ds,qt,us,ms,fs,B,Ie,hs,kt,gs,vs,pe,Yt,Q,de,xt,Ne,_s,jt,bs,Wt,P,Fe,$s,Tt,ws,ys,X,Es,Ye,qs,ks,Ct,xs,js,Ts,Ae,Cs,Pt,Ps,Ds,Is,C,Le,Ns,Dt,Fs,As,Se,Ls,Oe,Ss,Os,zs,ue,Ms,me,Vs,fe,Gt;return s=new Ze({}),ve=new Ze({}),_e=new F({props:{name:"evaluate.evaluator",anchor:"evaluate.evaluator",parameters:[{name:"task",val:": str = None"}],parametersDescription:[{anchor:"evaluate.evaluator.task",description:`<strong>task</strong> (<code>str</code>) &#x2014;
