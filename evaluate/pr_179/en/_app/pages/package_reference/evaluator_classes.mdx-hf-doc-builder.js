@@ -4,9 +4,9 @@ evaluator("sentiment-analysis")`,highlighted:`<span class="hljs-meta">&gt;&gt;&g
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Sentiment analysis evaluator</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>evaluator(<span class="hljs-string">&quot;sentiment-analysis&quot;</span>)`}}),{c(){c=o("p"),x=l("Examples:"),f=d(),_(m.$$.fragment)},l(r){c=s(r,"P",{});var g=n(c);x=i(g,"Examples:"),g.forEach(a),f=p(r),b(m.$$.fragment,r)},m(r,g){v(r,c,g),e(c,x),v(r,f,g),$(m,r,g),q=!0},p:It,i(r){q||(w(m.$$.fragment,r),q=!0)},o(r){E(m.$$.fragment,r),q=!1},d(r){r&&a(c),r&&a(f),y(m,r)}}}function zs(T){let c,x,f,m,q;return m=new Nt({props:{code:`from evaluate import evaluator
 from datasets import Dataset, load_dataset
-e = evaluator("image-classification")
+task_evaluator = evaluator("image-classification")
 data = load_dataset("beans", split="test[:2]")
-results = e.compute(
+results = task_evaluator.compute(
     model_or_pipeline="nateraw/vit-base-beans",
     data=data,
     metric="accuracy",
@@ -16,9 +16,9 @@ results = e.compute(
     random_state=0
 )`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> evaluate <span class="hljs-keyword">import</span> evaluator
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> Dataset, load_dataset
-<span class="hljs-meta">&gt;&gt;&gt; </span>e = evaluator(<span class="hljs-string">&quot;image-classification&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>task_evaluator = evaluator(<span class="hljs-string">&quot;image-classification&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>data = load_dataset(<span class="hljs-string">&quot;beans&quot;</span>, split=<span class="hljs-string">&quot;test[:2]&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>results = e.compute(
+<span class="hljs-meta">&gt;&gt;&gt; </span>results = task_evaluator.compute(
 <span class="hljs-meta">&gt;&gt;&gt; </span>    model_or_pipeline=<span class="hljs-string">&quot;nateraw/vit-base-beans&quot;</span>,
 <span class="hljs-meta">&gt;&gt;&gt; </span>    data=data,
 <span class="hljs-meta">&gt;&gt;&gt; </span>    metric=<span class="hljs-string">&quot;accuracy&quot;</span>,
@@ -47,36 +47,36 @@ with models trained on this type of data, make sure to pass `),f=o("code"),m=l("
 with models trained on this type of data, make sure to pass `),f=s(g,"CODE",{});var J=n(f);m=i(J,"handle_impossible_answer=True"),J.forEach(a),q=i(g," as an argument to the pipeline."),g.forEach(a)},m(r,g){v(r,c,g),e(c,x),e(c,f),e(f,m),e(c,q)},d(r){r&&a(c)}}}function Os(T){let c,x;return c=new Nt({props:{code:`from evaluate import evaluator
 from datasets import Dataset, load_dataset
 from transformers import pipeline
-e = evaluator("question-answering")
+task_evaluator = evaluator("question-answering")
 data = load_dataset("squad_v2", split="validation[:2]")
 pipe = pipeline(
     task="question-answering",
     model="sshleifer/mrm8488/bert-tiny-finetuned-squadv2",
     handle_impossible_answer=True
 )
-results = e.compute(
+results = task_evaluator.compute(
     model_or_pipeline=pipe,
     data=data,
     metric="squad_v2",
 )`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> evaluate <span class="hljs-keyword">import</span> evaluator
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> Dataset, load_dataset
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> pipeline
-<span class="hljs-meta">&gt;&gt;&gt; </span>e = evaluator(<span class="hljs-string">&quot;question-answering&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>task_evaluator = evaluator(<span class="hljs-string">&quot;question-answering&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>data = load_dataset(<span class="hljs-string">&quot;squad_v2&quot;</span>, split=<span class="hljs-string">&quot;validation[:2]&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>pipe = pipeline(
 <span class="hljs-meta">&gt;&gt;&gt; </span>    task=<span class="hljs-string">&quot;question-answering&quot;</span>,
 <span class="hljs-meta">&gt;&gt;&gt; </span>    model=<span class="hljs-string">&quot;sshleifer/mrm8488/bert-tiny-finetuned-squadv2&quot;</span>,
 <span class="hljs-meta">&gt;&gt;&gt; </span>    handle_impossible_answer=<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>results = e.compute(
+<span class="hljs-meta">&gt;&gt;&gt; </span>results = task_evaluator.compute(
 <span class="hljs-meta">&gt;&gt;&gt; </span>    model_or_pipeline=pipe,
 <span class="hljs-meta">&gt;&gt;&gt; </span>    data=data,
 <span class="hljs-meta">&gt;&gt;&gt; </span>    metric=<span class="hljs-string">&quot;squad_v2&quot;</span>,
 <span class="hljs-meta">&gt;&gt;&gt; </span>)`}}),{c(){_(c.$$.fragment)},l(f){b(c.$$.fragment,f)},m(f,m){$(c,f,m),x=!0},p:It,i(f){x||(w(c.$$.fragment,f),x=!0)},o(f){E(c.$$.fragment,f),x=!1},d(f){y(c,f)}}}function Rs(T){let c,x,f,m,q;return m=new Nt({props:{code:`from evaluate import evaluator
 from datasets import Dataset, load_dataset
-e = evaluator("text-classification")
+task_evaluator = evaluator("text-classification")
 data = load_dataset("imdb", split="test[:2]")
-results = e.compute(
+results = task_evaluator.compute(
     model_or_pipeline="huggingface/prunebert-base-uncased-6-finepruned-w-distil-mnli",
     data=data,
     metric="accuracy",
@@ -86,9 +86,9 @@ results = e.compute(
     random_state=0
 )`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> evaluate <span class="hljs-keyword">import</span> evaluator
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> Dataset, load_dataset
-<span class="hljs-meta">&gt;&gt;&gt; </span>e = evaluator(<span class="hljs-string">&quot;text-classification&quot;</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>task_evaluator = evaluator(<span class="hljs-string">&quot;text-classification&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>data = load_dataset(<span class="hljs-string">&quot;imdb&quot;</span>, split=<span class="hljs-string">&quot;test[:2]&quot;</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>results = e.compute(
+<span class="hljs-meta">&gt;&gt;&gt; </span>results = task_evaluator.compute(
 <span class="hljs-meta">&gt;&gt;&gt; </span>    model_or_pipeline=<span class="hljs-string">&quot;huggingface/prunebert-base-uncased-6-finepruned-w-distil-mnli&quot;</span>,
 <span class="hljs-meta">&gt;&gt;&gt; </span>    data=data,
 <span class="hljs-meta">&gt;&gt;&gt; </span>    metric=<span class="hljs-string">&quot;accuracy&quot;</span>,
