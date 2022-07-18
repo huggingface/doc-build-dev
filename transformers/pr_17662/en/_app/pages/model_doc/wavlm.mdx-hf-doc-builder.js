@@ -284,9 +284,9 @@ The dropout probabilitiy for quantized feature encoder states.`,name:"feat_quant
 A tuple of integers defining the number of input and output channels of each 1D convolutional layer in the
 feature encoder. The length of <em>conv_dim</em> defines the number of 1D convolutional layers.`,name:"conv_dim"},{anchor:"transformers.WavLMConfig.conv_stride",description:`<strong>conv_stride</strong> (<code>Tuple[int]</code> or <code>List[int]</code>, <em>optional</em>, defaults to <code>(5, 2, 2, 2, 2, 2, 2)</code>) &#x2014;
 A tuple of integers defining the stride of each 1D convolutional layer in the feature encoder. The length
-of <em>conv_stride</em> defines the number of convolutional layers and has to match the the length of <em>conv_dim</em>.`,name:"conv_stride"},{anchor:"transformers.WavLMConfig.conv_kernel",description:`<strong>conv_kernel</strong> (<code>Tuple[int]</code> or <code>List[int]</code>, <em>optional</em>, defaults to <code>(10, 3, 3, 3, 3, 3, 3)</code>) &#x2014;
+of <em>conv_stride</em> defines the number of convolutional layers and has to match the length of <em>conv_dim</em>.`,name:"conv_stride"},{anchor:"transformers.WavLMConfig.conv_kernel",description:`<strong>conv_kernel</strong> (<code>Tuple[int]</code> or <code>List[int]</code>, <em>optional</em>, defaults to <code>(10, 3, 3, 3, 3, 3, 3)</code>) &#x2014;
 A tuple of integers defining the kernel size of each 1D convolutional layer in the feature encoder. The
-length of <em>conv_kernel</em> defines the number of convolutional layers and has to match the the length of
+length of <em>conv_kernel</em> defines the number of convolutional layers and has to match the length of
 <em>conv_dim</em>.`,name:"conv_kernel"},{anchor:"transformers.WavLMConfig.conv_bias",description:`<strong>conv_bias</strong> (<code>bool</code>, <em>optional</em>, defaults to <code>False</code>) &#x2014;
 Whether the 1D convolutional layers have a bias.`,name:"conv_bias"},{anchor:"transformers.WavLMConfig.num_conv_pos_embeddings",description:`<strong>num_conv_pos_embeddings</strong> (<code>int</code>, <em>optional</em>, defaults to 128) &#x2014;
 Number of convolutional positional embeddings. Defines the kernel size of 1D convolutional positional
@@ -363,7 +363,7 @@ Whether or not to return the hidden states of all layers. See <code>hidden_state
 more detail.`,name:"output_hidden_states"},{anchor:"transformers.WavLMModel.forward.return_dict",description:`<strong>return_dict</strong> (<code>bool</code>, <em>optional</em>) &#x2014;
 Whether or not to return a <a href="/docs/transformers/pr_17662/en/main_classes/output#transformers.utils.ModelOutput">ModelOutput</a> instead of a plain tuple.`,name:"return_dict"}],source:"https://github.com/huggingface/transformers/blob/vr_17662/src/transformers/models/wavlm/modeling_wavlm.py#L1213",returnDescription:`
 <p>A <a
-  href="/docs/transformers/pr_17662/en/model_doc/wav2vec2#transformers.modeling_outputs.Wav2Vec2BaseModelOutput"
+  href="/docs/transformers/pr_17662/en/main_classes/output#transformers.modeling_outputs.Wav2Vec2BaseModelOutput"
 >transformers.modeling_outputs.Wav2Vec2BaseModelOutput</a> or a tuple of
 <code>torch.FloatTensor</code> (if <code>return_dict=False</code> is passed or when <code>config.return_dict=False</code>) comprising various
 elements depending on the configuration (<a
@@ -389,7 +389,7 @@ heads.</p>
 </ul>
 `,returnType:`
 <p><a
-  href="/docs/transformers/pr_17662/en/model_doc/wav2vec2#transformers.modeling_outputs.Wav2Vec2BaseModelOutput"
+  href="/docs/transformers/pr_17662/en/main_classes/output#transformers.modeling_outputs.Wav2Vec2BaseModelOutput"
 >transformers.modeling_outputs.Wav2Vec2BaseModelOutput</a> or <code>tuple(torch.FloatTensor)</code></p>
 `}}),ye=new Zo({props:{$$slots:{default:[al]},$$scope:{ctx:L}}}),Me=new pe({props:{anchor:"transformers.WavLMModel.forward.example",$$slots:{default:[nl]},$$scope:{ctx:L}}}),st=new Oe({}),rt=new X({props:{name:"class transformers.WavLMForCTC",anchor:"transformers.WavLMForCTC",parameters:[{name:"config",val:""}],parametersDescription:[{anchor:"transformers.WavLMForCTC.config",description:`<strong>config</strong> (<a href="/docs/transformers/pr_17662/en/model_doc/wavlm#transformers.WavLMConfig">WavLMConfig</a>) &#x2014; Model configuration class with all the parameters of the model.
 Initializing with a config file does not load the weights associated with the model, only the
