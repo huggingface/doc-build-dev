@@ -305,7 +305,7 @@ the name of the column containing the labels in the dataset specified by <code>d
 We want to map class labels defined by the model in the pipeline to values consistent with those
 defined in the <code>label_column</code> of the <code>data</code> dataset.`,name:"label_mapping"},{anchor:"evaluate.TokenClassificationEvaluator.compute.join_by",description:`<strong>join_by</strong> (<code>str</code>, <em>optional</em>, defaults to <code>&quot; &quot;</code>) &#x2014;
 This evaluator supports dataset whose input column is a list of words. This parameter specifies how to join
-words to generate a string input. This is especially useful for languages that do not separate words by a space.`,name:"join_by"}],source:"https://github.com/huggingface/evaluate/blob/vr_167/src/evaluate/evaluator/token_classification.py#L127",returnDescription:`
+words to generate a string input. This is especially useful for languages that do not separate words by a space.`,name:"join_by"}],source:"https://github.com/huggingface/evaluate/blob/vr_167/src/evaluate/evaluator/token_classification.py#L144",returnDescription:`
 <p>A <code>Dict</code>. The keys represent metric keys calculated for the <code>metric</code> spefied in function arguments. For the
 <code>"simple"</code> strategy, the value is the metric score. For the <code>"bootstrap"</code> strategy, the value is a <code>Dict</code>
 containing the score, the confidence interval and the standard error calculated for each metric key.</p>
