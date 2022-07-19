@@ -1,16 +1,16 @@
 <meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;preprocess&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;nlp&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;tokenize&quot;,&quot;title&quot;:&quot;Tokenize&quot;},{&quot;local&quot;:&quot;pad&quot;,&quot;title&quot;:&quot;Pad&quot;},{&quot;local&quot;:&quot;truncation&quot;,&quot;title&quot;:&quot;Truncation&quot;},{&quot;local&quot;:&quot;build-tensors&quot;,&quot;title&quot;:&quot;Build tensors&quot;}],&quot;title&quot;:&quot;NLP&quot;},{&quot;local&quot;:&quot;audio&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;resample&quot;,&quot;title&quot;:&quot;Resample&quot;},{&quot;local&quot;:&quot;feature-extractor&quot;,&quot;title&quot;:&quot;Feature extractor&quot;},{&quot;local&quot;:&quot;pad-and-truncate&quot;,&quot;title&quot;:&quot;Pad and truncate&quot;}],&quot;title&quot;:&quot;Audio&quot;},{&quot;local&quot;:&quot;vision&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;feature-extractor&quot;,&quot;title&quot;:&quot;Feature extractor&quot;},{&quot;local&quot;:&quot;data-augmentation&quot;,&quot;title&quot;:&quot;Data augmentation&quot;}],&quot;title&quot;:&quot;Vision&quot;},{&quot;local&quot;:&quot;multimodal&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;processor&quot;,&quot;title&quot;:&quot;Processor&quot;}],&quot;title&quot;:&quot;Multimodal&quot;}],&quot;title&quot;:&quot;Preprocess&quot;}" data-svelte="svelte-1phssyn">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/assets/pages/__layout.svelte-659a8e1b.css">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/start-b3bb3165.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/vendor-6b77c823.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/paths-4b3c6e7e.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/pages/__layout.svelte-3f22c1e5.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/pages/preprocessing.mdx-18df6960.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/Tip-39098574.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/Youtube-5c6e11e6.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/IconCopyLink-7a11ce68.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/CodeBlock-3a8b25a8.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/DocNotebookDropdown-f2b55cd8.js">
-	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/Markdown-9acf6d91.js"> 
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/pages/preprocessing.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/Tip-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/Youtube-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/CodeBlock-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/DocNotebookDropdown-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/transformers/pr_13/en/_app/chunks/Markdown-hf-doc-builder.js"> 
 
 
 
@@ -276,7 +276,7 @@ array([[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, 
          <span class="hljs-number">0.</span>        ,  <span class="hljs-number">0.</span>        ], dtype=float32),
  <span class="hljs-string">&#x27;path&#x27;</span>: <span class="hljs-string">&#x27;/root/.cache/huggingface/datasets/downloads/extracted/f14948e0e84be638dd7943ac36518a4cf3324e8b7aa331c5ab11541518e9368c/en-US~JOINT_ACCOUNT/602ba55abb1e6d0fbce92065.wav&#x27;</span>,
  <span class="hljs-string">&#x27;sampling_rate&#x27;</span>: <span class="hljs-number">8000</span>}<!-- HTML_TAG_END --></pre></div>
-<ol><li>Use 🤗 Datasets’ <a href="https://huggingface.co/docs/datasets/package_reference/main_classes.html#datasets.Dataset.cast_column" rel="nofollow"><code>cast_column</code></a> method to upsample the sampling rate to 16kHz:</li></ol>
+<ol><li>Use 🤗 Datasets’ <a href="https://huggingface.co/docs/datasets/main/en/package_reference/main_classes#datasets.Dataset.cast_column" rel="nofollow">cast_column</a> method to upsample the sampling rate to 16kHz:</li></ol>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -540,10 +540,10 @@ array([[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, 
 <p>Awesome, you should now be able to preprocess data for any modality and even combine different modalities! In the next tutorial, learn how to fine-tune a model on your newly preprocessed data.</p>
 
 
-		<script type="module" data-hydrate="5tf6r5">
-		import { start } from "/docs/transformers/pr_13/en/_app/start-b3bb3165.js";
+		<script type="module" data-hydrate="14q1x71">
+		import { start } from "/docs/transformers/pr_13/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="5tf6r5"]').parentNode,
+			target: document.querySelector('[data-hydrate="14q1x71"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_13/en","assets":"/docs/transformers/pr_13/en"},
 			session: {},
 			route: false,
@@ -553,8 +553,8 @@ array([[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, 
 				status: 200,
 				error: null,
 				nodes: [
-					import("/docs/transformers/pr_13/en/_app/pages/__layout.svelte-3f22c1e5.js"),
-						import("/docs/transformers/pr_13/en/_app/pages/preprocessing.mdx-18df6960.js")
+					import("/docs/transformers/pr_13/en/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/transformers/pr_13/en/_app/pages/preprocessing.mdx-hf-doc-builder.js")
 				],
 				params: {}
 			}
