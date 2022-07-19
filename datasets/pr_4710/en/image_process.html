@@ -104,15 +104,15 @@
 	<span>Object Detection
 	</span></h3>
 
-<p>Next, let’s see how to apply transformations to object detection datasets. For this we’ll use <a href="https://albumentations.ai/docs/" rel="nofollow">Albumentations</a>, following their object detection <a href="https://albumentations.ai/docs/examples/example_bboxes/" rel="nofollow">tutorial</a>.</p>
-<p>To run these examples, make sure you have up to date versions of <code>albumentations</code> and <code>cv2</code> installed:</p>
+<p>Object detection models identify something in an image, and object detection datasets are used for applications such as autonomous driving and detecting natural hazards like wildfire. This guide will show you how to apply transformations to an object detection dataset following the <a href="https://albumentations.ai/docs/examples/example_bboxes/" rel="nofollow">tutorial</a> from <a href="https://albumentations.ai/docs/" rel="nofollow">Albumentations</a>.</p>
+<p>To run these examples, make sure you have up-to-date versions of <code>albumentations</code> and <code>cv2</code> installed:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->pip <span class="hljs-keyword">install</span> -U albumentations opencv-python<!-- HTML_TAG_END --></pre></div>
-<p>In this example, the <a href="https://huggingface.co/datasets/cppe-5" rel="nofollow"><code>cppe-5</code></a> dataset is used, which is a dataset for identifying medical personal protective equipments (PPEs) in the context of the COVID-19 pandemic.</p>
-<p>You can load the dataset and take a look at an example:</p>
+<p>In this example, you’ll use the <a href="https://huggingface.co/datasets/cppe-5" rel="nofollow"><code>cppe-5</code></a> dataset for identifying medical personal protective equipment (PPE) in the context of the COVID-19 pandemic.</p>
+<p>Load the dataset and take a look at an example:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -138,11 +138,11 @@
 <li><code>image_id</code>: The image ID.</li>
 <li><code>height</code>: The image height.</li>
 <li><code>width</code>: The image width.</li>
-<li><code>objects</code>: a dictionary containing bounding box metadata for the objects present on the image<ul><li><code>id</code>: the annotation id</li>
-<li><code>area</code>: the area of the bounding box</li>
-<li><code>bbox</code>: the object’s bounding box (in the <a href="https://albumentations.ai/docs/getting_started/bounding_boxes_augmentation/#coco" rel="nofollow">coco</a> format)</li>
-<li><code>category</code>: the object’s category, with possible values including <code>Coverall (0)</code>, <code>Face_Shield (1)</code>, <code>Gloves (2)</code>, <code>Goggles (3)</code> and <code>Mask (4)</code></li></ul></li></ul>
-<p>You can visualize the bboxes on the image using some internal torch utilities. But, to do that, you will need to reference the <code>datasets.ClassLabel</code> feature associated with the category IDs so you can look up the string labels.</p>
+<li><code>objects</code>: A dictionary containing bounding box metadata for the objects in the image:<ul><li><code>id</code>: The annotation id.</li>
+<li><code>area</code>: The area of the bounding box.</li>
+<li><code>bbox</code>: The object’s bounding box (in the <a href="https://albumentations.ai/docs/getting_started/bounding_boxes_augmentation/#coco" rel="nofollow">coco</a> format).</li>
+<li><code>category</code>: The object’s category, with possible values including <code>Coverall (0)</code>, <code>Face_Shield (1)</code>, <code>Gloves (2)</code>, <code>Goggles (3)</code> and <code>Mask (4)</code>.</li></ul></li></ul>
+<p>You can visualize the <code>bboxes</code> on the image using some internal torch utilities. To do that, you will need to reference the <a href="/docs/datasets/pr_4710/en/package_reference/main_classes#datasets.ClassLabel">ClassLabel</a> feature associated with the category IDs so you can look up the string labels:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -166,8 +166,8 @@
 <span class="hljs-meta">... </span>    )
 <span class="hljs-meta">... </span>)<!-- HTML_TAG_END --></pre></div>
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/nateraw/documentation-images/resolve/main/visualize_detection_example.png"></div>
-<p>Using <code>albumentations</code>, we can apply transforms that will effect the Image while also updating the bounding boxes accordingly. In this case, the image is resized to (480, 480), flipped horizontally, and brightened. </p>
-<p>Note that <code>albumentations</code> is expecting the image to be in BGR format, not RGB, so we’ll have to convert our image first before applying the transform.</p>
+<p>With <code>albumentations</code>, you can apply transforms that will affect the image while also updating the <code>bboxes</code> accordingly. In this case, the image is resized to (480, 480), flipped horizontally, and brightened. </p>
+<p><code>albumentations</code> expects the image to be in BGR format, not RGB, so you’ll have to convert the image before applying the transform.</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -188,7 +188,7 @@
 <span class="hljs-meta">... </span>    bboxes=example[<span class="hljs-string">&#x27;objects&#x27;</span>][<span class="hljs-string">&#x27;bbox&#x27;</span>],
 <span class="hljs-meta">... </span>    category=example[<span class="hljs-string">&#x27;objects&#x27;</span>][<span class="hljs-string">&#x27;category&#x27;</span>],
 <span class="hljs-meta">... </span>)<!-- HTML_TAG_END --></pre></div>
-<p>Now when we visualize the result, the image should be flipped but the boxes should still be in the right places.</p>
+<p>Now when you visualize the result, the image should be flipped, but the <code>bboxes</code> should still be in the right places.</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -224,13 +224,13 @@
 <span class="hljs-meta">... </span>        bboxes.append(torch.tensor(out[<span class="hljs-string">&#x27;bboxes&#x27;</span>]))
 <span class="hljs-meta">... </span>        categories.append(out[<span class="hljs-string">&#x27;category&#x27;</span>])
 <span class="hljs-meta">... </span>    <span class="hljs-keyword">return</span> {<span class="hljs-string">&#x27;image&#x27;</span>: images, <span class="hljs-string">&#x27;bbox&#x27;</span>: bboxes, <span class="hljs-string">&#x27;category&#x27;</span>: categories}<!-- HTML_TAG_END --></pre></div>
-<p>Use the <a href="/docs/datasets/pr_4710/en/package_reference/main_classes#datasets.Dataset.set_transform">set_transform()</a> function to apply the transform on-the-fly which consumes less disk space. Note that the randomness of data augmentation may return a different image if you access the same example twice. It is especially useful when training a model with several epochs.</p>
+<p>Use the <a href="/docs/datasets/pr_4710/en/package_reference/main_classes#datasets.Dataset.set_transform">set_transform()</a> function to apply the transform on-the-fly which consumes less disk space. The randomness of data augmentation may return a different image if you access the same example twice. It is especially useful when training a model for several epochs.</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>ds[<span class="hljs-string">&#x27;train&#x27;</span>].set_transform(transforms)<!-- HTML_TAG_END --></pre></div>
-<p>Verify the transform is working by visualizing the 10th example:</p>
+<p>You can verify the transform works by visualizing the 10th example:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -247,10 +247,10 @@
 <div class="flex justify-center"><img src="https://huggingface.co/datasets/nateraw/documentation-images/resolve/main/visualize_detection_example_transformed_2.png"></div>
 
 
-		<script type="module" data-hydrate="1s5461y">
+		<script type="module" data-hydrate="z8agr5">
 		import { start } from "/docs/datasets/pr_4710/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1s5461y"]').parentNode,
+			target: document.querySelector('[data-hydrate="z8agr5"]').parentNode,
 			paths: {"base":"/docs/datasets/pr_4710/en","assets":"/docs/datasets/pr_4710/en"},
 			session: {},
 			route: false,
