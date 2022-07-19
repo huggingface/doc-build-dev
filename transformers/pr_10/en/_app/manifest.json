@@ -12,9 +12,13 @@
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/index.mdx",
       "src/routes/converting_tensorflow_models.mdx",
+      "src/routes/perf_infer_gpu_many.mdx",
       "src/routes/perf_train_gpu_many.mdx",
       "src/routes/autoclass_tutorial.mdx",
+      "src/routes/perf_infer_gpu_one.mdx",
+      "src/routes/perf_infer_special.mdx",
       "src/routes/perf_train_gpu_one.mdx",
+      "src/routes/perf_train_special.mdx",
       "src/routes/pipeline_tutorial.mdx",
       "src/routes/tokenizer_summary.mdx",
       "src/routes/add_new_pipeline.mdx",
@@ -24,6 +28,7 @@
       "src/routes/pad_truncation.mdx",
       "src/routes/perf_infer_cpu.mdx",
       "src/routes/perf_train_cpu.mdx",
+      "src/routes/perf_train_tpu.mdx",
       "src/routes/add_new_model.mdx",
       "src/routes/custom_models.mdx",
       "src/routes/model_sharing.mdx",
@@ -100,6 +105,7 @@
       "src/routes/model_doc/transfo-xl.mdx",
       "src/routes/model_doc/camembert.mdx",
       "src/routes/model_doc/layoutxlm.mdx",
+      "src/routes/model_doc/mobilevit.mdx",
       "src/routes/model_doc/perceiver.mdx",
       "src/routes/model_doc/retribert.mdx",
       "src/routes/model_doc/segformer.mdx",
@@ -112,6 +118,7 @@
       "src/routes/model_doc/dialogpt.mdx",
       "src/routes/model_doc/flaubert.mdx",
       "src/routes/model_doc/gpt_neox.mdx",
+      "src/routes/model_doc/groupvit.mdx",
       "src/routes/model_doc/imagegpt.mdx",
       "src/routes/model_doc/layoutlm.mdx",
       "src/routes/model_doc/reformer.mdx",
@@ -120,6 +127,7 @@
       "src/routes/model_doc/wav2vec2.mdx",
       "src/routes/model_doc/barthez.mdx",
       "src/routes/model_doc/bartpho.mdx",
+      "src/routes/model_doc/codegen.mdx",
       "src/routes/model_doc/deberta.mdx",
       "src/routes/model_doc/electra.mdx",
       "src/routes/model_doc/gpt_neo.mdx",
@@ -150,6 +158,7 @@
       "src/routes/model_doc/mctct.mdx",
       "src/routes/model_doc/mluke.mdx",
       "src/routes/model_doc/mpnet.mdx",
+      "src/routes/model_doc/nezha.mdx",
       "src/routes/model_doc/realm.mdx",
       "src/routes/model_doc/sew-d.mdx",
       "src/routes/model_doc/tapas.mdx",
@@ -175,6 +184,7 @@
       "src/routes/model_doc/gpt2.mdx",
       "src/routes/model_doc/gptj.mdx",
       "src/routes/model_doc/luke.mdx",
+      "src/routes/model_doc/nllb.mdx",
       "src/routes/model_doc/swin.mdx",
       "src/routes/model_doc/vilt.mdx",
       "src/routes/model_doc/xglm.mdx",
@@ -186,9 +196,11 @@
       "src/routes/model_doc/dpt.mdx",
       "src/routes/model_doc/led.mdx",
       "src/routes/model_doc/mt5.mdx",
+      "src/routes/model_doc/mvp.mdx",
       "src/routes/model_doc/opt.mdx",
       "src/routes/model_doc/rag.mdx",
       "src/routes/model_doc/sew.mdx",
+      "src/routes/model_doc/ul2.mdx",
       "src/routes/model_doc/van.mdx",
       "src/routes/model_doc/vit.mdx",
       "src/routes/model_doc/xlm.mdx",
@@ -262,6 +274,16 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/perf_infer_gpu_many.mdx": {
+    "file": "pages/perf_infer_gpu_many.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_gpu_many.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
   "src/routes/perf_train_gpu_many.mdx": {
     "file": "pages/perf_train_gpu_many.mdx-hf-doc-builder.js",
     "src": "src/routes/perf_train_gpu_many.mdx",
@@ -269,6 +291,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
     ]
@@ -286,6 +309,26 @@
       "_Markdown-hf-doc-builder.js"
     ]
   },
+  "src/routes/perf_infer_gpu_one.mdx": {
+    "file": "pages/perf_infer_gpu_one.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_gpu_one.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_infer_special.mdx": {
+    "file": "pages/perf_infer_special.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_infer_special.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
   "src/routes/perf_train_gpu_one.mdx": {
     "file": "pages/perf_train_gpu_one.mdx-hf-doc-builder.js",
     "src": "src/routes/perf_train_gpu_one.mdx",
@@ -296,6 +339,17 @@
       "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_train_special.mdx": {
+    "file": "pages/perf_train_special.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_train_special.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
     ]
   },
   "src/routes/pipeline_tutorial.mdx": {
@@ -330,6 +384,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
     ]
@@ -400,6 +455,17 @@
       "_vendor-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/perf_train_tpu.mdx": {
+    "file": "pages/perf_train_tpu.mdx-hf-doc-builder.js",
+    "src": "src/routes/perf_train_tpu.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
     ]
   },
   "src/routes/add_new_model.mdx": {
@@ -762,6 +828,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
@@ -1394,6 +1461,20 @@
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/mobilevit.mdx": {
+    "file": "pages/model_doc/mobilevit.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/mobilevit.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/perceiver.mdx": {
     "file": "pages/model_doc/perceiver.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/perceiver.mdx",
@@ -1553,6 +1634,20 @@
       "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/groupvit.mdx": {
+    "file": "pages/model_doc/groupvit.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/groupvit.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/imagegpt.mdx": {
     "file": "pages/model_doc/imagegpt.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/imagegpt.mdx",
@@ -1658,6 +1753,20 @@
       "_Docstring-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/model_doc/codegen.mdx": {
+    "file": "pages/model_doc/codegen.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/codegen.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/model_doc/deberta.mdx": {
@@ -2072,6 +2181,20 @@
       "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/nezha.mdx": {
+    "file": "pages/model_doc/nezha.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/nezha.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/realm.mdx": {
     "file": "pages/model_doc/realm.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/realm.mdx",
@@ -2411,6 +2534,19 @@
       "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/nllb.mdx": {
+    "file": "pages/model_doc/nllb.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/nllb.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/swin.mdx": {
     "file": "pages/model_doc/swin.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/swin.mdx",
@@ -2558,6 +2694,20 @@
       "_ExampleCodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/model_doc/mvp.mdx": {
+    "file": "pages/model_doc/mvp.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/mvp.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Docstring-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/model_doc/opt.mdx": {
     "file": "pages/model_doc/opt.mdx-hf-doc-builder.js",
     "src": "src/routes/model_doc/opt.mdx",
@@ -2598,6 +2748,16 @@
       "_CodeBlock-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_ExampleCodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/model_doc/ul2.mdx": {
+    "file": "pages/model_doc/ul2.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_doc/ul2.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js"
     ]
   },
   "src/routes/model_doc/van.mdx": {
