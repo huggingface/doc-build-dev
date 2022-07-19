@@ -600,7 +600,7 @@ if <em>\u201Ctoken_type_ids\u201D</em> is in <code>self.model_input_names</code>
 <p><a href="../glossary#attention-mask">What are attention masks?</a></p>
 </li>
 <li>
-<p><strong>labels</strong> \u2014 List of labels to be fed to a model. (when a <code>word_labels</code> is specified).</p>
+<p><strong>labels</strong> \u2014 List of labels to be fed to a model. (when <code>word_labels</code> is specified).</p>
 </li>
 <li>
 <p><strong>overflowing_tokens</strong> \u2014 List of overflowing tokens sequences (when a <code>max_length</code> is specified and
@@ -732,7 +732,7 @@ if <em>\u201Ctoken_type_ids\u201D</em> is in <code>self.model_input_names</code>
 <p><a href="../glossary#attention-mask">What are attention masks?</a></p>
 </li>
 <li>
-<p><strong>labels</strong> \u2014 List of labels to be fed to a model. (when a <code>word_labels</code> is specified).</p>
+<p><strong>labels</strong> \u2014 List of labels to be fed to a model. (when <code>word_labels</code> is specified).</p>
 </li>
 <li>
 <p><strong>overflowing_tokens</strong> \u2014 List of overflowing tokens sequences (when a <code>max_length</code> is specified and
