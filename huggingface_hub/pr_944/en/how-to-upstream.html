@@ -20,7 +20,7 @@
 <p>Sharing your files and work is a very important aspect of the Hub. The <code>huggingface_hub</code> offers several options for uploading your files to the Hub. You can use these functions independently or integrate them into your library, making it more convenient for your users to interact with the Hub. This guide will show you how to:</p>
 <ul><li>Upload a file with <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_file">upload_file()</a>.</li>
 <li>Upload a folder with <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_folder">upload_folder()</a>.</li>
-<li>Push files with a <code>commit</code> context manager.</li>
+<li>Push files with the <code>commit</code> context manager.</li>
 <li>Push files with the <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.push_to_hub">push_to_hub()</a> function.</li>
 <li>Upload very large files with <a href="https://git-lfs.github.com/" rel="nofollow">Git LFS</a>.</li>
 <li>Use <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.create_commit">create_commit()</a> to push files without Git.</li></ul>
@@ -43,7 +43,7 @@
 	<span>Upload a file
 	</span></h2>
 
-<p>Once you’ve created a repository with the <a href="./how-to-manage#create-a-repository"><code>create_repo</code></a> function, you can upload your files to your repository. Use the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_file">upload_file()</a> function to upload a file. </p>
+<p>Once you’ve created a repository with the <a href="./how-to-manage#create-a-repository"><code>create_repo</code></a> function, you can upload files to your repository with the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_file">upload_file()</a> function. </p>
 <p>Specify the path of the file to upload, where you want to upload the file to in the repository, and the name of the repository you want to add the file to. Depending on your repository type, you can optionally set the repository type as a <code>dataset</code>, <code>model</code> or <code>space</code>.</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -60,7 +60,7 @@
 	<span>Upload a folder
 	</span></h2>
 
-<p>Use the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_folder">upload_folder()</a> function to upload a local folder to a repository. Specify the path of the local folder to upload, where you want to upload the folder to in the repository, and the name of the repository you want to add the folder to. Depending on your repository type, you can optionally set the repository type as a <code>dataset</code>, <code>model</code> or <code>space</code>.</p>
+<p>Use the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_folder">upload_folder()</a> function to upload a local folder to an existing repository. Specify the path of the local folder to upload, where you want to upload the folder to in the repository, and the name of the repository you want to add the folder to. Depending on your repository type, you can optionally set the repository type as a <code>dataset</code>, <code>model</code> or <code>space</code>.</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -69,7 +69,7 @@
 <span class="hljs-meta">&gt;&gt;&gt; </span>api = HfApi()
 <span class="hljs-meta">&gt;&gt;&gt; </span>api.upload_folder(folder_path=<span class="hljs-string">&quot;/path/to/local/folder&quot;</span>,
 <span class="hljs-meta">... </span>                  path_in_repo=<span class="hljs-string">&quot;my-dataset/train&quot;</span>,
-<span class="hljs-meta">... </span>                  repo_id=<span class="hljs-string">&quot;username/test-dataset&quot;</span>
+<span class="hljs-meta">... </span>                  repo_id=<span class="hljs-string">&quot;username/test-dataset&quot;</span>,
 <span class="hljs-meta">... </span>                  repo_type=<span class="hljs-string">&quot;dataset&quot;</span>,
 <span class="hljs-meta">... </span>)
 <span class="hljs-comment"># https://huggingface.co/datasets/username/test-dataset/tree/main/my-dataset/train/</span><!-- HTML_TAG_END --></pre></div>
@@ -90,7 +90,7 @@
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">with</span> Repository(local_dir=<span class="hljs-string">&quot;text-files&quot;</span>, clone_from=<span class="hljs-string">&quot;&lt;user&gt;/text-files&quot;</span>).commit(commit_message=<span class="hljs-string">&quot;My first file :)&quot;</span>):
 <span class="hljs-meta">... </span>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;file.txt&quot;</span>, <span class="hljs-string">&quot;w+&quot;</span>) <span class="hljs-keyword">as</span> f:
 <span class="hljs-meta">... </span>        f.write(json.dumps({<span class="hljs-string">&quot;hey&quot;</span>: <span class="hljs-number">8</span>}))<!-- HTML_TAG_END --></pre></div>
-<p>Here is another example of how to save and upload a file to a repository:</p>
+<p>Here is another example of how to use the <code>commit</code> context manager to save and upload a file to a repository:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -138,7 +138,7 @@
 	<span>push_to_hub
 	</span></h2>
 
-<p>The <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository">Repository</a> class has a <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.push_to_hub">push_to_hub()</a> function to add files, make a commit, and push them to a repository. Unlike the <code>commit</code> context manager, requires you’ll need to pull from a repository first before calling <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.push_to_hub">push_to_hub()</a>.</p>
+<p>The <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository">Repository</a> class has a <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.push_to_hub">push_to_hub()</a> function to add files, make a commit, and push them to a repository. Unlike the <code>commit</code> context manager, you’ll need to pull from a repository first before calling <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.push_to_hub">push_to_hub()</a>.</p>
 <p>For example, if you’ve already cloned a repository from the Hub, then you can initialize the <code>repo</code> from the local directory:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -153,14 +153,14 @@
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>repo.git_pull()
 <span class="hljs-meta">&gt;&gt;&gt; </span>repo.push_to_hub(commit_message=<span class="hljs-string">&quot;Commit my-awesome-file to the Hub&quot;</span>)<!-- HTML_TAG_END --></pre></div>
-<p>However, if you aren’t ready to push a file yet, you can still use <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.git_add">git_add()</a> and <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.git_commit">git_commit()</a> to add and commit your file:</p>
+<p>However, if you aren’t ready to push a file yet, you can use <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.git_add">git_add()</a> and <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.git_commit">git_commit()</a> to only add and commit your file:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>repo.git_add(<span class="hljs-string">&quot;path/to/file&quot;</span>)
 <span class="hljs-meta">&gt;&gt;&gt; </span>repo.git_commit(commit_message=<span class="hljs-string">&quot;add my first model config file :)&quot;</span>)<!-- HTML_TAG_END --></pre></div>
-<p>Once you’re ready, push the file to your repository with <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.git_push">git_push()</a>:</p>
+<p>When you’re ready, push the file to your repository with <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.git_push">git_push()</a>:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -170,13 +170,13 @@
 	<span>Upload with Git LFS
 	</span></h2>
 
-<p>For huge files (&gt;5GB), you need to install a custom transfer agent for Git LFS:</p>
+<p>For large files (&gt;5GB), you need to install a custom transfer agent for Git LFS:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
 	<pre><!-- HTML_TAG_START -->huggingface-cli lfs-enable-largefiles<!-- HTML_TAG_END --></pre></div>
-<p>You should install this for each model repository that contains a model file. Once installed, you are now able to push files larger than 5GB.</p>
+<p>You should install this for each model repository that contains a model file. Once installed, you’ll be able to push files larger than 5GB.</p>
 <h2 class="relative group"><a id="upload-without-git-installed" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#upload-without-git-installed"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>Upload without Git installed
 	</span></h2>
@@ -184,7 +184,7 @@
 
 
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>The <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.create_commit">create_commit()</a> function is a low-level API for working at a commit level. The <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_file">upload_file()</a> and <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_folder">upload_folder()</a> functions are higher-level APIs that use <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.create_commit">create_commit()</a> under the hood. We recommend trying these functions first if you don’t need to work at a lower level.</p></div>
-<p>If you don’t have Git installed on your system, use the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.create_commit">create_commit()</a> function to upload your file. <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.create_commit">create_commit()</a> uses the HTTP protocol to upload files to the Hub. Large and binary files are automatically uploaded with the Git LFS protocol.</p>
+<p>If you don’t have Git installed on your system, use the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.create_commit">create_commit()</a> function to upload your file. <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.create_commit">create_commit()</a> uses the HTTP protocol to upload files to the Hub. Large and binary files are automatically uploaded with Git LFS.</p>
 <p>There are two kinds of operations supported by the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.create_commit">create_commit()</a> function:</p>
 <ul><li><p><code>CommitOperationAdd</code> uploads a file to the Hub. If the file already exists, the file contents are overwritten. This operation accepts two arguments:</p>
 <ul><li><code>path_in_repo</code>: the repository path to upload a file to.</li>
@@ -221,10 +221,10 @@
 <p>For more detailed information about these functions, take a look at the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi">HfApi</a> reference.</p>
 
 
-		<script type="module" data-hydrate="aoedbw">
+		<script type="module" data-hydrate="qnu683">
 		import { start } from "/docs/huggingface_hub/pr_944/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="aoedbw"]').parentNode,
+			target: document.querySelector('[data-hydrate="qnu683"]').parentNode,
 			paths: {"base":"/docs/huggingface_hub/pr_944/en","assets":"/docs/huggingface_hub/pr_944/en"},
 			session: {},
 			route: false,
