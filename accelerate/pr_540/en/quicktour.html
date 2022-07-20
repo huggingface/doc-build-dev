@@ -125,7 +125,7 @@ to create a learning rate scheduler) should go after the call to <a href="/docs/
 calculated through the <a href="/docs/accelerate/pr_540/en/accelerator#accelerate.Accelerator.gather_metrics">gather_metrics()</a> method to automatically remove the duplicated data.</p></div>
 
 
-<div class="course-tip course-tip-orange bg-gradient-to-br dark:bg-gradient-to-r before:border-orange-500 dark:before:border-orange-800 from-orange-50 dark:from-gray-900 to-white dark:to-gray-950 border border-orange-50 text-orange-700 dark:text-gray-400"><p>The <a href="/docs/accelerate/pr_540/en/accelerator#accelerate.Accelerator.gather">gather()</a> and <a href="/docs/accelerate/pr_540/en/accelerator#accelerate.Accelerator.gather_metrics">gather_metrics()</a> methods requires the tensors to be all the same size on each process. If
+<div class="course-tip course-tip-orange bg-gradient-to-br dark:bg-gradient-to-r before:border-orange-500 dark:before:border-orange-800 from-orange-50 dark:from-gray-900 to-white dark:to-gray-950 border border-orange-50 text-orange-700 dark:text-gray-400"><p>The <a href="/docs/accelerate/pr_540/en/accelerator#accelerate.Accelerator.gather">gather()</a> and <a href="/docs/accelerate/pr_540/en/accelerator#accelerate.Accelerator.gather_metrics">gather_metrics()</a> methods require the tensors to be all the same size on each process. If
 you have tensors of different sizes on each process (for instance when dynamically padding to the maximum length in
 a batch), you should use the <a href="/docs/accelerate/pr_540/en/accelerator#accelerate.Accelerator.pad_across_processes">pad_across_processes()</a> method to pad you tensor to the
 biggest size across processes.</p></div>
@@ -411,10 +411,10 @@ controlled by torch).</p></div>
 <p>For more details about the internals, see the <a href="internal">Internals page</a>.</p>
 
 
-		<script type="module" data-hydrate="17c94fu">
+		<script type="module" data-hydrate="18kgdrd">
 		import { start } from "/docs/accelerate/pr_540/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="17c94fu"]').parentNode,
+			target: document.querySelector('[data-hydrate="18kgdrd"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_540/en","assets":"/docs/accelerate/pr_540/en"},
 			session: {},
 			route: false,
