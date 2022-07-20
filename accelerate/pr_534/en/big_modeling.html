@@ -204,10 +204,17 @@ tokenizer.decode(output[<span class="hljs-number">0</span>].tolist())<!-- HTML_T
 	<span>Designing a device map
 	</span></h2>
 
-<p>You can let 🤗 Accelerate handle the device map computation by setting <code>device_map=&quot;auto&quot;</code> or create one yourself, if you want more control over where each layer should go.</p>
+<p>You can let 🤗 Accelerate handle the device map computation by setting <code>device_map</code> to one of the supported options (<code>&quot;auto&quot;</code>, <code>&quot;balanced&quot;</code>, <code>&quot;balanced_low_0&quot;</code>, <code>&quot;sequential&quot;</code>) or create one yourself, if you want more control over where each layer should go.</p>
 
 
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>You can derive all sizes of the model (and thus compute a <code>device_map</code>) on a model that is on the meta device.</p></div>
+<p>All the options will produce the same result when you don’t have enough GPU memory to accomodate the whole model (which is to fit everything that can on the GPU, then offload weights on the CPU or even on the disk if there is not enough RAM). When you have more GPU memory available than the model size, here the difference between each option:</p>
+<ul><li><code>&quot;auto&quot;</code> and <code>&quot;balanced&quot;</code> evenly split the model on all available GPUs, making it possible for you to use a batch size greater than 1.</li>
+<li><code>&quot;balanced_low_0&quot;</code> evenly splits the model on all GPUs except the first one, and only puts on GPU 0 what does not fit on the others. This option is great when you need to use GPU 0 for some processing of the outputs, like when using the <code>generate</code> function for Transformers models</li>
+<li><code>&quot;sequential&quot;</code> will fit what it can on GPU 0, then move on GPU 1 and so forth (so won’t use the last GPUs if it doesn’t need to).</li></ul>
+
+
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>The options <code>&quot;auto&quot;</code> and <code>&quot;balanced&quot;</code> produce the same results for now, but the behavior of <code>&quot;auto&quot;</code> might change in the future if we find a strategy that makes more sense, while <code>&quot;balanced&quot;</code> will stay stable.</p></div>
 <p>First note that you can limit the memory used on each GPU by using the <code>max_memory</code> argument (available in <a href="/docs/accelerate/pr_534/en/big_modeling#accelerate.infer_auto_device_map">infer_auto_device_map()</a> and in all functions using it). When setting <code>max_memory</code>, you should pass along a dictionary containing the GPU identifiers (for instance <code>0</code>, <code>1</code> etc.) and the <code>&quot;cpu&quot;</code> key for the maximum RAM you want used for CPU offload. The values can either be an integer (in bytes) or a string representing a number with its unit, such as <code>&quot;10GiB&quot;</code> or <code>&quot;10GB&quot;</code>.</p>
 <p>Here is an example where we don’t want to use more than 10GiB on each of two GPUs and no more than 30GiB of CPU RAM for the model weights:</p>
 
@@ -558,7 +565,8 @@ The folder checkpoint to load. It can be:</p>
 							<span><!-- HTML_TAG_START --><strong>device_map</strong> (<code>Dict[str, Union[int, str, torch.device]]</code>, <em>optional</em>) &#x2014;
 A map that specifies where each submodule should go. It doesn&#x2019;t need to be refined to each parameter/buffer
 name, once a given module name is inside, every submodule of it will be sent to the same device.</p>
-<p>To have Accelerate compute the most optimized <code>device_map</code> automatically, set <code>device_map=&quot;auto&quot;</code>.<!-- HTML_TAG_END -->
+<p>To have Accelerate compute the most optimized <code>device_map</code> automatically, set <code>device_map=&quot;auto&quot;</code>. For more
+information about each option see <a href="big_modeling#designing-a-device-map">here</a>.<!-- HTML_TAG_END -->
 							</span></span>
 					</li><li class="text-base !pl-4 my-3 rounded "><span class="group flex space-x-1.5 items-start"><a id="accelerate.load_checkpoint_and_dispatch.max_memory" class="header-link block pr-0.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#accelerate.load_checkpoint_and_dispatch.max_memory"><span><svg class="text-smd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 							<span><!-- HTML_TAG_START --><strong>max_memory</strong> (<code>Dict</code>, <em>optional</em>) &#x2014;
@@ -662,10 +670,10 @@ loaded.</p>
 group the checkpoint loading and dispatch in one single call, use <a href="/docs/accelerate/pr_534/en/big_modeling#accelerate.load_checkpoint_and_dispatch">load_checkpoint_and_dispatch()</a>.</p></div></div>
 
 
-		<script type="module" data-hydrate="1mavsn7">
+		<script type="module" data-hydrate="qgxo4s">
 		import { start } from "/docs/accelerate/pr_534/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1mavsn7"]').parentNode,
+			target: document.querySelector('[data-hydrate="qgxo4s"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_534/en","assets":"/docs/accelerate/pr_534/en"},
 			session: {},
 			route: false,
