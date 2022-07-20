@@ -34,10 +34,14 @@
       "src/routes/about_arrow.mdx",
       "src/routes/about_cache.mdx",
       "src/routes/filesystems.mdx",
+      "src/routes/nlp_process.mdx",
       "src/routes/use_dataset.mdx",
+      "src/routes/audio_load.mdx",
+      "src/routes/image_load.mdx",
       "src/routes/quickstart.mdx",
       "src/routes/faiss_es.mdx",
       "src/routes/load_hub.mdx",
+      "src/routes/nlp_load.mdx",
       "src/routes/tutorial.mdx",
       "src/routes/loading.mdx",
       "src/routes/metrics.mdx",
@@ -149,6 +153,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_Docstring-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
@@ -281,7 +286,6 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
-      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js"
     ]
@@ -355,6 +359,17 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
+  "src/routes/nlp_process.mdx": {
+    "file": "pages/nlp_process.mdx-hf-doc-builder.js",
+    "src": "src/routes/nlp_process.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/use_dataset.mdx": {
     "file": "pages/use_dataset.mdx-hf-doc-builder.js",
     "src": "src/routes/use_dataset.mdx",
@@ -369,6 +384,30 @@
       "_IconTensorflow-hf-doc-builder.js"
     ]
   },
+  "src/routes/audio_load.mdx": {
+    "file": "pages/audio_load.mdx-hf-doc-builder.js",
+    "src": "src/routes/audio_load.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/image_load.mdx": {
+    "file": "pages/image_load.mdx-hf-doc-builder.js",
+    "src": "src/routes/image_load.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
   "src/routes/quickstart.mdx": {
     "file": "pages/quickstart.mdx-hf-doc-builder.js",
     "src": "src/routes/quickstart.mdx",
@@ -379,6 +418,7 @@
       "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
+      "_CodeBlockFw-hf-doc-builder.js",
       "_Markdown-hf-doc-builder.js",
       "_IconTensorflow-hf-doc-builder.js"
     ]
@@ -397,6 +437,17 @@
   "src/routes/load_hub.mdx": {
     "file": "pages/load_hub.mdx-hf-doc-builder.js",
     "src": "src/routes/load_hub.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/nlp_load.mdx": {
+    "file": "pages/nlp_load.mdx-hf-doc-builder.js",
+    "src": "src/routes/nlp_load.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
@@ -426,6 +477,7 @@
       "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
+      "_CodeBlockFw-hf-doc-builder.js",
       "_IconTensorflow-hf-doc-builder.js"
     ]
   },
@@ -471,6 +523,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
     ]
   },
@@ -573,6 +626,14 @@
     "file": "chunks/IconTensorflow-hf-doc-builder.js",
     "imports": [
       "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "_CodeBlockFw-hf-doc-builder.js": {
+    "file": "chunks/CodeBlockFw-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
     ]
   }
 }
