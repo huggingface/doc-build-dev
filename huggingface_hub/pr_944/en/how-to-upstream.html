@@ -19,7 +19,7 @@
 <p>Sharing your files and work is an important aspect of the Hub. The <code>huggingface_hub</code> offers several options for uploading your files to the Hub. You can use these functions independently or integrate them into your library, making it more convenient for your users to interact with the Hub. This guide will show you how to push files:</p>
 <ul><li>without using Git.</li>
 <li>that are very large with <a href="https://git-lfs.github.com/" rel="nofollow">Git LFS</a>.</li>
-<li>with with the <code>commit</code> context manager.</li>
+<li>with the <code>commit</code> context manager.</li>
 <li>with the <a href="/docs/huggingface_hub/pr_944/en/package_reference/repository#huggingface_hub.Repository.push_to_hub">push_to_hub()</a> function.</li></ul>
 <p>Whenever you want to upload files to the Hub, you need to log in to your Hugging Face account:</p>
 <ul><li><p>Log in to your Hugging Face account with the following command:</p>
@@ -47,7 +47,7 @@
 	</span></h3>
 
 <p>Once you’ve created a repository with the <a href="./how-to-manage#create-a-repository"><code>create_repo</code></a> function, you can upload a file to your repository with the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_file">upload_file()</a> function. </p>
-<p>Specify the path of the file to upload, where you want to upload the file to in the repository, and the name of the repository you want to add the file to. Depending on your repository type, you can optionally set the repository type as a <code>dataset</code>, <code>model</code> or <code>space</code>.</p>
+<p>Specify the path of the file to upload, where you want to upload the file to in the repository, and the name of the repository you want to add the file to. Depending on your repository type, you can optionally set the repository type as a <code>dataset</code>, <code>model</code>, or <code>space</code>.</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -63,7 +63,7 @@
 	<span>Upload a folder
 	</span></h3>
 
-<p>Use the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_folder">upload_folder()</a> function to upload a local folder to an existing repository. Specify the path of the local folder to upload, where you want to upload the folder to in the repository, and the name of the repository you want to add the folder to. Depending on your repository type, you can optionally set the repository type as a <code>dataset</code>, <code>model</code> or <code>space</code>.</p>
+<p>Use the <a href="/docs/huggingface_hub/pr_944/en/package_reference/hf_api#huggingface_hub.HfApi.upload_folder">upload_folder()</a> function to upload a local folder to an existing repository. Specify the path of the local folder to upload, where you want to upload the folder to in the repository, and the name of the repository you want to add the folder to. Depending on your repository type, you can optionally set the repository type as a <code>dataset</code>, <code>model</code>, or <code>space</code>.</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -115,7 +115,7 @@
 	<span>Push files with Git LFS
 	</span></h2>
 
-<p>Files larger than 10MB are automatically handled by Git LFS. But for very large files (&gt;5GB), you need to install a custom transfer agent for Git LFS:</p>
+<p>Git LFS automatically handles files larger than 10MB. But for very large files (&gt;5GB), you need to install a custom transfer agent for Git LFS:</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
@@ -217,10 +217,10 @@
 	<pre><!-- HTML_TAG_START --><span class="hljs-meta">&gt;&gt;&gt; </span>repo.git_push()<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="x6nrsi">
+		<script type="module" data-hydrate="ei38ay">
 		import { start } from "/docs/huggingface_hub/pr_944/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="x6nrsi"]').parentNode,
+			target: document.querySelector('[data-hydrate="ei38ay"]').parentNode,
 			paths: {"base":"/docs/huggingface_hub/pr_944/en","assets":"/docs/huggingface_hub/pr_944/en"},
 			session: {},
 			route: false,
