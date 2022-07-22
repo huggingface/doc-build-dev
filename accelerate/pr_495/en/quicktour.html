@@ -118,12 +118,14 @@ do with the <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#ac
 
 <div class="course-tip course-tip-orange bg-gradient-to-br dark:bg-gradient-to-r before:border-orange-500 dark:before:border-orange-800 from-orange-50 dark:from-gray-900 to-white dark:to-gray-950 border border-orange-50 text-orange-700 dark:text-gray-400"><p>As for the training dataloader, passing your validation dataloader through
 <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.prepare">prepare()</a> may change it: if you run on X GPUs, it will have its length divided by X
-(since your actual batch size will be multiplied by X), unless you set <code>split_batches=True</code>.</p>
+(since your actual batch size will be multiplied by X), unless you set <code>split_batches=True</code>.</p></div>
 <p>Any instruction using your training dataloader length (for instance if you need the number of total training steps
-to create a learning rate scheduler) should go after the call to <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.prepare">prepare()</a>.</p>
-<p>As some data at the end of the dataset may be duplicated so the batch can divide equally to all workers, metrics should be
-calculated through the <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.gather_for_metrics">gather_for_metrics()</a> method to automatically remove the duplicated data.</p>
-<p>If for some reason you don’t wish to have this automatically done, <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.gather">gather()</a> can be used instead to gather
+to create a learning rate scheduler) should go after the call to <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.prepare">prepare()</a>. </p>
+<p>Some data at the end of the dataset may be duplicated so the batch can divide equally to all workers. As a result metrics
+should be calculated through the <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.gather_for_metrics">gather_for_metrics()</a> method to automatically remove the duplicated data while gathering.</p>
+
+
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>If for some reason you don’t wish to have this automatically done, <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.gather">gather()</a> can be used instead to gather
 the data across all processes and this can manually be done instead.</p></div>
 
 
@@ -438,10 +440,10 @@ controlled by torch).</p></div>
 <p>For more details about the internals, see the <a href="internal">Internals page</a>.</p>
 
 
-		<script type="module" data-hydrate="b4vv1e">
+		<script type="module" data-hydrate="drqaso">
 		import { start } from "/docs/accelerate/pr_495/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="b4vv1e"]').parentNode,
+			target: document.querySelector('[data-hydrate="drqaso"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_495/en","assets":"/docs/accelerate/pr_495/en"},
 			session: {},
 			route: false,
