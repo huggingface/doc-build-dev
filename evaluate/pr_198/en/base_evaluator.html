@@ -1,0 +1,295 @@
+<meta charset="utf-8" /><meta http-equiv="content-security-policy" content=""><meta name="hf:doc:metadata" content="{&quot;local&quot;:&quot;using-the-evaluator-with-transformers-models&quot;,&quot;sections&quot;:[{&quot;local&quot;:&quot;using-a-model-from-the-hub&quot;,&quot;title&quot;:&quot;Using a model from the Hub&quot;},{&quot;local&quot;:&quot;using-a-local-model&quot;,&quot;title&quot;:&quot;Using a local model&quot;},{&quot;local&quot;:&quot;combining-several-metrics&quot;,&quot;title&quot;:&quot;Combining several metrics&quot;},{&quot;local&quot;:&quot;benchmarking-several-models&quot;,&quot;title&quot;:&quot;Benchmarking several models&quot;},{&quot;local&quot;:&quot;evaluator-taskspecific-arguments&quot;,&quot;title&quot;:&quot;Evaluator task-specific arguments&quot;},{&quot;local&quot;:&quot;confidence-intervals&quot;,&quot;title&quot;:&quot;Confidence intervals&quot;},{&quot;local&quot;:&quot;handling-large-datasets&quot;,&quot;title&quot;:&quot;Handling large datasets&quot;}],&quot;title&quot;:&quot;Using the evaluator with transformers models&quot;}" data-svelte="svelte-1phssyn">
+	<link rel="modulepreload" href="/docs/evaluate/pr_198/en/_app/assets/pages/__layout.svelte-hf-doc-builder.css">
+	<link rel="modulepreload" href="/docs/evaluate/pr_198/en/_app/start-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/evaluate/pr_198/en/_app/chunks/vendor-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/evaluate/pr_198/en/_app/chunks/paths-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/evaluate/pr_198/en/_app/pages/__layout.svelte-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/evaluate/pr_198/en/_app/pages/base_evaluator.mdx-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/evaluate/pr_198/en/_app/chunks/Tip-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/evaluate/pr_198/en/_app/chunks/IconCopyLink-hf-doc-builder.js">
+	<link rel="modulepreload" href="/docs/evaluate/pr_198/en/_app/chunks/CodeBlock-hf-doc-builder.js"> 
+
+
+
+
+
+<h1 class="relative group"><a id="using-the-evaluator-with-transformers-models" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#using-the-evaluator-with-transformers-models"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Using the evaluator with transformers models
+	</span></h1>
+
+<p>The <code>Evaluator</code> abstraction allows to evaluate models wrapped in a pipeline, responsible for handling all preprocessing and post-processing. Out-of-the-box, <code>Evaluator</code> supports transformers pipelines for the supported tasks, but custom pipelines can be passed, as showcased in [LINK].</p>
+<p>Currently supported tasks are:</p>
+<ul><li><code>&quot;image-classification&quot;</code>: will use the <a href="/docs/evaluate/pr_198/en/package_reference/evaluator_classes#evaluate.ImageClassificationEvaluator">ImageClassificationEvaluator</a>.</li>
+<li><code>&quot;question-answering&quot;</code>: will use the <a href="/docs/evaluate/pr_198/en/package_reference/evaluator_classes#evaluate.QuestionAnsweringEvaluator">QuestionAnsweringEvaluator</a>.</li>
+<li><code>&quot;text-classification&quot;</code> (alias <code>&quot;sentiment-analysis&quot;</code> available): will use the <a href="/docs/evaluate/pr_198/en/package_reference/evaluator_classes#evaluate.TextClassificationEvaluator">TextClassificationEvaluator</a>.</li>
+<li><code>&quot;token-classification&quot;</code>: will use the <a href="/docs/evaluate/pr_198/en/package_reference/evaluator_classes#evaluate.TokenClassificationEvaluator">TokenClassificationEvaluator</a>.</li></ul>
+<p>Each task has its own set of requirements for the dataset format and pipeline output, make sure to check them out for your custom use case!</p>
+<h2 class="relative group"><a id="using-a-model-from-the-hub" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#using-a-model-from-the-hub"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Using a model from the Hub
+	</span></h2>
+
+<p>Models from the Hugging Face Hub can be loaded out-of-the-box just given the namespace of the model on the Hub.</p>
+
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-keyword">from</span> evaluate <span class="hljs-keyword">import</span> evaluator
+
+task_evaluator = evaluator(<span class="hljs-string">&quot;question-answering&quot;</span>)
+
+data = load_dataset(<span class="hljs-string">&quot;squad&quot;</span>, split=<span class="hljs-string">&quot;validation[:100]&quot;</span>)
+eval_results = task_evaluator.compute(
+    model_or_pipeline=<span class="hljs-string">&quot;distilbert-base-uncased-distilled-squad&quot;</span>,
+    data=data,
+    metric=<span class="hljs-string">&quot;squad&quot;</span>
+)<!-- HTML_TAG_END --></pre></div>
+<p>Results are as follow:</p>
+
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START -->{
+    <span class="hljs-string">&#x27;exact_match&#x27;</span>: <span class="hljs-number">84.0</span>,
+    <span class="hljs-string">&#x27;f1&#x27;</span>: <span class="hljs-number">88.53333333333335</span>,
+    <span class="hljs-string">&#x27;latency_in_seconds&#x27;</span>: <span class="hljs-number">0.009725173320002795</span>,
+    <span class="hljs-string">&#x27;samples_per_second&#x27;</span>: <span class="hljs-number">102.82593092127149</span>,
+    <span class="hljs-string">&#x27;total_time_in_seconds&#x27;</span>: <span class="hljs-number">0.9725173320002796</span>
+}<!-- HTML_TAG_END --></pre></div>
+<p>Note that evaluation results include both the requested metric, and information about the time it took to obtain predictions through the pipeline. These additional time metrics give an useful first information on model speed as inference.</p>
+<h2 class="relative group"><a id="using-a-local-model" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#using-a-local-model"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Using a local model
+	</span></h2>
+
+<p>Local models respecting the format from <code>save_pretrained()</code> (LINK) can be used as well! In this case, the model needs to be loaded into a pipeline first:</p>
+
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START -->
+<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-keyword">from</span> evaluate <span class="hljs-keyword">import</span> evaluator
+<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> pipeline, AutoModelForTokenClassification, AutoTokenizer
+
+model = AutoModelForTokenClassification.from_pretrained(<span class="hljs-string">&quot;/path/to/model/folder/&quot;</span>)
+tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;/path/to/model/folder/&quot;</span>)
+
+pipe = pipeline(task=<span class="hljs-string">&quot;token-classification&quot;</span>, model=model, tokenizer=tokenizer)
+
+data = load_dataset(<span class="hljs-string">&quot;imdb&quot;</span>, split=<span class="hljs-string">&quot;test&quot;</span>).shuffle(seed=<span class="hljs-number">42</span>).select(<span class="hljs-built_in">range</span>(<span class="hljs-number">1000</span>))
+
+task_evaluator = evaluator(<span class="hljs-string">&quot;text-classification&quot;</span>)
+eval_results = task_evaluator.compute(
+    model_or_pipeline=pipe,
+    data=data,
+    metric=<span class="hljs-string">&quot;seqeval&quot;</span>,
+    label_mapping=pipe.model.config.label2id
+)<!-- HTML_TAG_END --></pre></div>
+<h2 class="relative group"><a id="combining-several-metrics" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#combining-several-metrics"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Combining several metrics
+	</span></h2>
+
+<p>The evaluator can perform evaluation on several metrics at once using <code>combine</code>.</p>
+<p>TODO use e.g. text-classification here?</p>
+
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-comment"># TODO EXTEND</span>
+<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-keyword">from</span> evaluate <span class="hljs-keyword">import</span> evaluator
+
+task_evaluator = evaluator(<span class="hljs-string">&quot;text-classification&quot;</span>)
+
+data = load_dataset(<span class="hljs-string">&quot;imdb&quot;</span>, split=<span class="hljs-string">&quot;test&quot;</span>).shuffle(seed=<span class="hljs-number">42</span>).select(<span class="hljs-built_in">range</span>(<span class="hljs-number">1000</span>))
+eval_results = task_evaluator.compute(
+    model_or_pipeline=<span class="hljs-string">&quot;lvwerra/distilbert-imdb&quot;</span>,
+    data=data,
+    metric=<span class="hljs-string">&quot;accuracy&quot;</span>,
+    label_mapping={<span class="hljs-string">&quot;NEGATIVE&quot;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&quot;POSITIVE&quot;</span>: <span class="hljs-number">1</span>}
+)<!-- HTML_TAG_END --></pre></div>
+<h2 class="relative group"><a id="benchmarking-several-models" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#benchmarking-several-models"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Benchmarking several models
+	</span></h2>
+
+<p>Here is an example where several models can be compared thanks to the <code>Evaluator</code> in only a few lines of code, abstracting away the preprocessing, inference, postprocessing, metric computation:</p>
+
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">import</span> traceback
+<span class="hljs-keyword">from</span> tabulate <span class="hljs-keyword">import</span> tabulate
+
+<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-keyword">from</span> evaluate <span class="hljs-keyword">import</span> evaluator
+<span class="hljs-keyword">from</span> tqdm <span class="hljs-keyword">import</span> tqdm
+<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> pipeline
+
+models = [
+    <span class="hljs-string">&quot;xlm-roberta-large-finetuned-conll03-english&quot;</span>,
+    <span class="hljs-string">&quot;dbmdz/bert-large-cased-finetuned-conll03-english&quot;</span>,
+    <span class="hljs-string">&quot;elastic/distilbert-base-uncased-finetuned-conll03-english&quot;</span>,
+    <span class="hljs-string">&quot;dbmdz/electra-large-discriminator-finetuned-conll03-english&quot;</span>,
+    <span class="hljs-string">&quot;gunghio/distilbert-base-multilingual-cased-finetuned-conll2003-ner&quot;</span>,
+    <span class="hljs-string">&quot;philschmid/distilroberta-base-ner-conll2003&quot;</span>,
+    <span class="hljs-string">&quot;Jorgeutd/albert-base-v2-finetuned-ner&quot;</span>,
+]
+models.sort()
+
+device = torch.device(<span class="hljs-string">&quot;cuda:0&quot;</span>) <span class="hljs-keyword">if</span> torch.cuda.is_available() <span class="hljs-keyword">else</span> torch.device(<span class="hljs-string">&quot;cpu&quot;</span>)
+
+data = load_dataset(<span class="hljs-string">&quot;conll2003&quot;</span>, split=<span class="hljs-string">&quot;validation&quot;</span>)
+
+num_samples = <span class="hljs-number">1000</span>
+<span class="hljs-keyword">if</span> num_samples != <span class="hljs-string">&quot;all&quot;</span>:
+    data = data.shuffle(seed=<span class="hljs-number">42</span>).select(<span class="hljs-built_in">range</span>(num_samples))
+
+task_evaluator = evaluator(<span class="hljs-string">&quot;token-classification&quot;</span>)
+
+full_results = []
+evaluated_models = []
+<span class="hljs-keyword">for</span> model <span class="hljs-keyword">in</span> tqdm(models):
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-built_in">print</span>(model)
+        pipe = pipeline(task=<span class="hljs-string">&quot;token-classification&quot;</span>, model=model, device=device)
+
+        eval_results = task_evaluator.compute(
+            model_or_pipeline=pipe, data=data, metric=<span class="hljs-string">&quot;seqeval&quot;</span>, join_by=<span class="hljs-string">&quot; &quot;</span>
+        )
+
+        full_results.append(eval_results)
+        evaluated_models.append(model)
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+        <span class="hljs-built_in">print</span>(model, e)
+        <span class="hljs-built_in">print</span>(traceback.format_exc())
+
+df = pd.DataFrame(full_results, index=evaluated_models)
+df_filtered = df[[<span class="hljs-string">&quot;overall_f1&quot;</span>, <span class="hljs-string">&quot;overall_accuracy&quot;</span>, <span class="hljs-string">&quot;total_time_in_seconds&quot;</span>, <span class="hljs-string">&quot;samples_per_second&quot;</span>, <span class="hljs-string">&quot;latency_in_seconds&quot;</span>]]
+
+<span class="hljs-built_in">print</span>(df_filtered)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;----&quot;</span>)
+<span class="hljs-built_in">print</span>(tabulate(df_filtered, tablefmt=<span class="hljs-string">&quot;pipe&quot;</span>, headers=<span class="hljs-string">&quot;keys&quot;</span>, floatfmt=<span class="hljs-string">&quot;.3f&quot;</span>))<!-- HTML_TAG_END --></pre></div>
+<p>Results:</p>
+<table><thead><tr><th align="left">model</th>
+<th align="right">overall_f1</th>
+<th align="right">overall_accuracy</th>
+<th align="right">total_time_in_seconds</th>
+<th align="right">samples_per_second</th>
+<th align="right">latency_in_seconds</th></tr></thead>
+<tbody><tr><td align="left">Jorgeutd/albert-base-v2-finetuned-ner</td>
+<td align="right">0.941</td>
+<td align="right">0.989</td>
+<td align="right">4.515</td>
+<td align="right">221.468</td>
+<td align="right">0.005</td></tr>
+<tr><td align="left">dbmdz/bert-large-cased-finetuned-conll03-english</td>
+<td align="right">0.962</td>
+<td align="right">0.881</td>
+<td align="right">11.648</td>
+<td align="right">85.850</td>
+<td align="right">0.012</td></tr>
+<tr><td align="left">dbmdz/electra-large-discriminator-finetuned-conll03-english</td>
+<td align="right">0.965</td>
+<td align="right">0.881</td>
+<td align="right">11.456</td>
+<td align="right">87.292</td>
+<td align="right">0.011</td></tr>
+<tr><td align="left">elastic/distilbert-base-uncased-finetuned-conll03-english</td>
+<td align="right">0.940</td>
+<td align="right">0.989</td>
+<td align="right">2.318</td>
+<td align="right">431.378</td>
+<td align="right">0.002</td></tr>
+<tr><td align="left">gunghio/distilbert-base-multilingual-cased-finetuned-conll2003-ner</td>
+<td align="right">0.947</td>
+<td align="right">0.991</td>
+<td align="right">2.376</td>
+<td align="right">420.873</td>
+<td align="right">0.002</td></tr>
+<tr><td align="left">philschmid/distilroberta-base-ner-conll2003</td>
+<td align="right">0.961</td>
+<td align="right">0.994</td>
+<td align="right">2.436</td>
+<td align="right">410.579</td>
+<td align="right">0.002</td></tr>
+<tr><td align="left">xlm-roberta-large-finetuned-conll03-english</td>
+<td align="right">0.969</td>
+<td align="right">0.882</td>
+<td align="right">11.996</td>
+<td align="right">83.359</td>
+<td align="right">0.012</td></tr></tbody></table>
+
+
+<div class="course-tip course-tip-orange bg-gradient-to-br dark:bg-gradient-to-r before:border-orange-500 dark:before:border-orange-800 from-orange-50 dark:from-gray-900 to-white dark:to-gray-950 border border-orange-50 text-orange-700 dark:text-gray-400"><p>The sole results from the <code>Evaluator</code> should probably not be trusted to compare model performances. Outside of the architecture, many parameters may influence performances:</p>
+<ul><li>Hyperparameters used during training</li>
+<li>Training data (some models may have been trained on more data than others)</li>
+<li>Model size</li>
+<li>Training time</li></ul>
+<p>Moreover, the time performances should only be considered as a first proxy, as they include all the processing that goes on in the pipeline. This may include tokenizing, post-processing, that may be different depending on the model, and may not reflect the exact model time performances. Especially, depending on the usage of slow or fast tokenizers, the results may be signifiicantly impacted.</p></div>
+<h2 class="relative group"><a id="evaluator-taskspecific-arguments" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#evaluator-taskspecific-arguments"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Evaluator task-specific arguments
+	</span></h2>
+
+<p>Depending on the task, some task-specific arguments must be set. It is therefore best to check LINK for each task.</p>
+<p>As an example, pipelines for classification tasks may ouput a label as a string, as in sentiment analysis between <code>negative</code>, <code>neutral</code> and <code>positive</code> sentences. To map these predictions to an id, we need an argument <code>label_mapping</code> mapping strings to numbers. In the case of transformers models, you will typically want to pass <code>pipe.model.config.label2id</code>.</p>
+<p>However, beware that some models on the Hub have a label mapping that do not match with the dataset mapping! This may be that there is even no <code>label2id</code>, or that the labels are uninformative (<code>LABEL_0</code>, <code>LABEL_1</code>, etc.), as for <a href="https://huggingface.co/ArBert/albert-base-v2-finetuned-ner/blob/main/config.json" rel="nofollow">this model</a>.</p>
+<p>In such case, it is best to inspect the dataset features in <code>data.features</code>, and, if possible, to use (Dataset.align_labels_with_mapping)[https://huggingface.co/docs/datasets/en/package_reference/main_classes#datasets.Dataset.align_labels_with_mapping] to align the dataset labels with the model’s outputs.</p>
+<p>An other example is for <code>token-classification</code>, as in named entity recoginition (NER) or part of speech tagging (POS), where the common dataset structure assumes a list of words to be tagged as an input. Pipelines assume a single string as an input, and the list of word needs to be joined into a single string, using the <code>join_by</code> parameter, defaulting to <code>&quot; &quot;</code> for space-separated languages.</p>
+<h2 class="relative group"><a id="confidence-intervals" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#confidence-intervals"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Confidence intervals
+	</span></h2>
+
+<p>TODO <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html" rel="nofollow">https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html</a>.</p>
+<h2 class="relative group"><a id="handling-large-datasets" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#handling-large-datasets"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
+	<span>Handling large datasets
+	</span></h2>
+
+<p>The evaluator can be used on large datasets! Below, an example shows how to use it on ImageNet-1k for image classification. Beware that this example will require to download ~150 GB.</p>
+<p>Without specifying a device, the default will be the first GPU if available, else CPU.</p>
+
+	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
+	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
+	Copied</div></button></div>
+	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-keyword">from</span> evaluate <span class="hljs-keyword">import</span> evaluator
+<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> pipeline
+
+data = load_dataset(<span class="hljs-string">&quot;imagenet-1k&quot;</span>, split=<span class="hljs-string">&quot;validation&quot;</span>, use_auth_token=<span class="hljs-literal">True</span>)
+data = data.shuffle(seed=<span class="hljs-number">42</span>).select(<span class="hljs-built_in">range</span>(<span class="hljs-number">500</span>))
+
+pipe = pipeline(
+    task=<span class="hljs-string">&quot;image-classification&quot;</span>,
+    model=<span class="hljs-string">&quot;facebook/deit-small-distilled-patch16-224&quot;</span>
+)
+
+task_evaluator = evaluator(<span class="hljs-string">&quot;image-classification&quot;</span>)
+eval_results = task_evaluator.compute(
+    model_or_pipeline=pipe,
+    data=data,
+    metric=<span class="hljs-string">&quot;accuracy&quot;</span>,
+    label_mapping=pipe.model.config.label2id
+)<!-- HTML_TAG_END --></pre></div>
+
+
+		<script type="module" data-hydrate="o22q4t">
+		import { start } from "/docs/evaluate/pr_198/en/_app/start-hf-doc-builder.js";
+		start({
+			target: document.querySelector('[data-hydrate="o22q4t"]').parentNode,
+			paths: {"base":"/docs/evaluate/pr_198/en","assets":"/docs/evaluate/pr_198/en"},
+			session: {},
+			route: false,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/docs/evaluate/pr_198/en/_app/pages/__layout.svelte-hf-doc-builder.js"),
+						import("/docs/evaluate/pr_198/en/_app/pages/base_evaluator.mdx-hf-doc-builder.js")
+				],
+				params: {}
+			}
+		});
+	</script>
