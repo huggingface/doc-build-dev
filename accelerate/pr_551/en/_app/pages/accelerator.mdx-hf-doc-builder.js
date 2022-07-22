@@ -1,7 +1,5 @@
 import{S as od,i as cd,s as nd,e as o,k as s,w as u,t as r,M as ld,c,d as t,m as i,a as n,x as g,h as a,b as h,G as e,g as x,y as f,q as _,o as v,B as b,v as sd}from"../chunks/vendor-hf-doc-builder.js";import{T as ad}from"../chunks/Tip-hf-doc-builder.js";import{D as $}from"../chunks/Docstring-hf-doc-builder.js";import{C as id}from"../chunks/CodeBlock-hf-doc-builder.js";import{I as dd}from"../chunks/IconCopyLink-hf-doc-builder.js";function pd(Lt){let m,z,E,k,I;return{c(){m=o("p"),z=r("Using this with "),E=o("code"),k=r("dispatch_batches=True"),I=r("  (which is the default for iterable datasets) is currently not supported.")},l(w){m=c(w,"P",{});var T=n(m);z=a(T,"Using this with "),E=c(T,"CODE",{});var C=n(E);k=a(C,"dispatch_batches=True"),C.forEach(t),I=a(T,"  (which is the default for iterable datasets) is currently not supported."),T.forEach(t)},m(w,T){x(w,m,T),e(m,z),e(m,E),e(E,k),e(m,I)},d(w){w&&t(m)}}}function hd(Lt){let m,z,E,k,I,w,T,C,K,oe,U;return{c(){m=o("p"),z=r("Every "),E=o("code"),k=r("object"),I=r(" must have a "),w=o("code"),T=r("load_state_dict"),C=r(" and "),K=o("code"),oe=r("state_dict"),U=r(" function to be stored.")},l(B){m=c(B,"P",{});var D=n(m);z=a(D,"Every "),E=c(D,"CODE",{});var It=n(E);k=a(It,"object"),It.forEach(t),I=a(D," must have a "),w=c(D,"CODE",{});var Ot=n(w);T=a(Ot,"load_state_dict"),Ot.forEach(t),C=a(D," and "),K=c(D,"CODE",{});var je=n(K);oe=a(je,"state_dict"),je.forEach(t),U=a(D," function to be stored."),D.forEach(t)},m(B,D){x(B,m,D),e(m,z),e(m,E),e(E,k),e(m,I),e(m,w),e(w,T),e(m,C),e(m,K),e(K,oe),e(m,U)},d(B){B&&t(m)}}}function md(Lt){let m,z,E,k,I,w,T,C,K,oe,U,B,D,It,Ot,je,P,X,mo,zt,uo,go,nr,fo,_o,vo,Ne,bo,Ct,$o,yo,Eo,S,wo,lr,Ao,xo,sr,Do,ko,ir,To,Po,Lo,J,Io,dr,Oo,zo,pr,Co,Uo,jo,Se,No,Ut,So,qo,va,ce,Vo,hr,Go,Mo,ba,A,ne,mr,Ro,Wo,jt,Fo,Ho,Yo,qe,Ko,ur,Bo,Xo,Jo,Ve,Qo,gr,Zo,ec,tc,Ge,rc,Nt,ac,oc,cc,Me,nc,St,lc,sc,ic,Q,dc,qt,pc,hc,fr,mc,uc,gc,O,fc,le,_c,_r,vc,bc,$c,vr,yc,Ec,se,wc,br,Ac,xc,Dc,$r,kc,Tc,$a,V,Pc,Vt,Lc,Ic,yr,Oc,zc,ya,Re,Ea,ie,wa,d,We,Cc,Er,Uc,jc,wr,Nc,Sc,Fe,de,Ar,qc,Vc,xr,Gc,Mc,Rc,pe,Dr,Wc,Fc,Gt,Hc,Yc,Kc,he,He,Bc,kr,Xc,Jc,me,Ye,Qc,Tr,Zc,en,ue,Ke,tn,Z,rn,Pr,an,on,Lr,cn,nn,ln,ge,Be,sn,Xe,dn,Ir,pn,hn,mn,fe,Je,un,Qe,gn,Or,fn,_n,vn,_e,Ze,bn,et,$n,zr,yn,En,wn,ve,tt,An,Cr,xn,Dn,be,rt,kn,Ur,Tn,Pn,G,at,Ln,ot,In,jr,On,zn,Cn,Nr,Un,jn,$e,ct,Nn,nt,Sn,Sr,qn,Vn,Gn,ye,lt,Mn,st,Rn,qr,Wn,Fn,Hn,Ee,it,Yn,Vr,Kn,Bn,M,dt,Xn,Gr,Jn,Qn,Mr,Zn,el,we,pt,tl,ee,rl,Rr,al,ol,Wr,cl,nl,ll,R,ht,sl,Fr,il,dl,Hr,pl,hl,W,mt,ml,ut,ul,Yr,gl,fl,_l,gt,vl,Kr,bl,$l,yl,Ae,ft,El,Br,wl,Al,j,_t,xl,vt,Dl,Xr,kl,Tl,Pl,Jr,Ll,Il,te,Mt,Qr,Ol,zl,Cl,Rt,Zr,Ul,jl,Nl,Wt,ea,Sl,ql,Vl,xe,bt,Gl,$t,Ml,ta,Rl,Wl,Fl,F,yt,Hl,re,Yl,ra,Kl,Bl,aa,Xl,Jl,Ql,oa,Zl,es,N,Et,ts,q,rs,ca,as,os,na,cs,ns,la,ls,ss,is,sa,ds,ps,De,hs,ke,wt,ms,At,us,ia,gs,fs,_s,Te,xt,vs,da,bs,$s,Pe,Dt,ys,pa,Es,ws,Le,kt,As,ae,xs,ha,Ds,ks,Ft,Ts,Ps,Ls,Ie,Tt,Is,ma,Os,Aa;return w=new dd({}),Re=new id({props:{code:`accelerator = Accelerator(gradient_accumulation_steps=2)
-model, optimizer, training_dataloader = accelerator.prepare(
-    model, optimizer, training_dataloader
-)
+model, optimizer, training_dataloader = accelerator.prepare(model, optimizer, training_dataloader)
 
 for input, label in training_dataloader:
     with accelerator.accumulate(model):
@@ -11,9 +9,7 @@ for input, label in training_dataloader:
         optimizer.step()
         scheduler.step()
         optimizer.zero_grad()`,highlighted:`accelerator = Accelerator(gradient_accumulation_steps=<span class="hljs-number">2</span>)
-model, optimizer, training_dataloader = accelerator.prepare(
-    model, optimizer, training_dataloader
-)
+model, optimizer, training_dataloader = accelerator.prepare(model, optimizer, training_dataloader)
 
 <span class="hljs-keyword">for</span> <span class="hljs-built_in">input</span>, label <span class="hljs-keyword">in</span> training_dataloader:
     <span class="hljs-keyword">with</span> accelerator.accumulate(model):
