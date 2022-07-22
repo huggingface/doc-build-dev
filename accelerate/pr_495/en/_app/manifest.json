@@ -23,8 +23,6 @@
       "src/routes/package_reference/state.mdx",
       "src/routes/package_reference/cli.mdx",
       "src/routes/basic_tutorials/migration.mdx",
-      "src/routes/basic_tutorials/quicktour.mdx",
-      "src/routes/basic_tutorials/notebook.mdx",
       "src/routes/basic_tutorials/overview.mdx",
       "src/routes/basic_tutorials/install.mdx",
       "src/routes/basic_tutorials/launch.mdx",
@@ -33,15 +31,14 @@
       "src/routes/concept_guides/training_tpu.mdx",
       "src/routes/concept_guides/metrics.mdx",
       "src/routes/usage_guides/gradient_accumulation.mdx",
-      "src/routes/usage_guides/mixed_precision.mdx",
       "src/routes/usage_guides/big_modeling.mdx",
       "src/routes/usage_guides/checkpoint.mdx",
       "src/routes/usage_guides/deepspeed.mdx",
       "src/routes/usage_guides/sagemaker.mdx",
       "src/routes/usage_guides/tracking.mdx",
-      "src/routes/usage_guides/logging.mdx",
       "src/routes/usage_guides/memory.mdx",
-      "src/routes/usage_guides/fsdp.mdx"
+      "src/routes/usage_guides/fsdp.mdx",
+      "src/routes/quicktour.mdx"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -221,28 +218,6 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
-  "src/routes/basic_tutorials/quicktour.mdx": {
-    "file": "pages/basic_tutorials/quicktour.mdx-hf-doc-builder.js",
-    "src": "src/routes/basic_tutorials/quicktour.mdx",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-hf-doc-builder.js",
-      "_Tip-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js",
-      "_CodeBlock-hf-doc-builder.js"
-    ]
-  },
-  "src/routes/basic_tutorials/notebook.mdx": {
-    "file": "pages/basic_tutorials/notebook.mdx-hf-doc-builder.js",
-    "src": "src/routes/basic_tutorials/notebook.mdx",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
-    ]
-  },
   "src/routes/basic_tutorials/overview.mdx": {
     "file": "pages/basic_tutorials/overview.mdx-hf-doc-builder.js",
     "src": "src/routes/basic_tutorials/overview.mdx",
@@ -333,16 +308,6 @@
       "_CodeBlock-hf-doc-builder.js"
     ]
   },
-  "src/routes/usage_guides/mixed_precision.mdx": {
-    "file": "pages/usage_guides/mixed_precision.mdx-hf-doc-builder.js",
-    "src": "src/routes/usage_guides/mixed_precision.mdx",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
-    ]
-  },
   "src/routes/usage_guides/big_modeling.mdx": {
     "file": "pages/usage_guides/big_modeling.mdx-hf-doc-builder.js",
     "src": "src/routes/usage_guides/big_modeling.mdx",
@@ -396,19 +361,8 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
-      "_Docstring-hf-doc-builder.js",
-      "_CodeBlock-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
-    ]
-  },
-  "src/routes/usage_guides/logging.mdx": {
-    "file": "pages/usage_guides/logging.mdx-hf-doc-builder.js",
-    "src": "src/routes/usage_guides/logging.mdx",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/usage_guides/memory.mdx": {
@@ -433,6 +387,18 @@
       "_Docstring-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/quicktour.mdx": {
+    "file": "pages/quicktour.mdx-hf-doc-builder.js",
+    "src": "src/routes/quicktour.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
     ]
   },
   "_vendor-hf-doc-builder.js": {
