@@ -14,9 +14,16 @@
       "src/routes/autoclass_tutorial.mdx",
       "src/routes/pipeline_tutorial.mdx",
       "src/routes/create_a_model.mdx",
+      "src/routes/model_sharing.mdx",
+      "src/routes/preprocessing.mdx",
       "src/routes/serialization.mdx",
       "src/routes/installation.mdx",
-      "src/routes/quicktour.mdx"
+      "src/routes/multilingual.mdx",
+      "src/routes/run_scripts.mdx",
+      "src/routes/accelerate.mdx",
+      "src/routes/debugging.mdx",
+      "src/routes/quicktour.mdx",
+      "src/routes/training.mdx"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -58,9 +65,11 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
-      "_CodeBlock-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
-      "_Markdown-hf-doc-builder.js"
+      "_CodeBlock-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js"
     ]
   },
   "src/routes/pipeline_tutorial.mdx": {
@@ -70,8 +79,9 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
-      "_CodeBlock-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/create_a_model.mdx": {
@@ -81,9 +91,41 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
-      "_CodeBlock-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
-      "_Markdown-hf-doc-builder.js"
+      "_CodeBlock-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/model_sharing.mdx": {
+    "file": "pages/model_sharing.mdx-hf-doc-builder.js",
+    "src": "src/routes/model_sharing.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Youtube-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/preprocessing.mdx": {
+    "file": "pages/preprocessing.mdx-hf-doc-builder.js",
+    "src": "src/routes/preprocessing.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Youtube-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js",
+      "_DocNotebookDropdown-hf-doc-builder.js"
     ]
   },
   "src/routes/serialization.mdx": {
@@ -93,9 +135,11 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
-      "_CodeBlock-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
-      "_Markdown-hf-doc-builder.js"
+      "_CodeBlock-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js"
     ]
   },
   "src/routes/installation.mdx": {
@@ -105,8 +149,57 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/multilingual.mdx": {
+    "file": "pages/multilingual.mdx-hf-doc-builder.js",
+    "src": "src/routes/multilingual.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
       "_CodeBlock-hf-doc-builder.js",
-      "_IconCopyLink-hf-doc-builder.js"
+      "_DocNotebookDropdown-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/run_scripts.mdx": {
+    "file": "pages/run_scripts.mdx-hf-doc-builder.js",
+    "src": "src/routes/run_scripts.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/accelerate.mdx": {
+    "file": "pages/accelerate.mdx-hf-doc-builder.js",
+    "src": "src/routes/accelerate.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/debugging.mdx": {
+    "file": "pages/debugging.mdx-hf-doc-builder.js",
+    "src": "src/routes/debugging.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
     ]
   },
   "src/routes/quicktour.mdx": {
@@ -116,9 +209,29 @@
     "isDynamicEntry": true,
     "imports": [
       "_vendor-hf-doc-builder.js",
-      "_CodeBlock-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Youtube-hf-doc-builder.js",
       "_IconCopyLink-hf-doc-builder.js",
-      "_Markdown-hf-doc-builder.js"
+      "_CodeBlock-hf-doc-builder.js",
+      "_DocNotebookDropdown-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/training.mdx": {
+    "file": "pages/training.mdx-hf-doc-builder.js",
+    "src": "src/routes/training.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_Youtube-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js",
+      "_DocNotebookDropdown-hf-doc-builder.js",
+      "_Markdown-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js"
     ]
   },
   "_vendor-hf-doc-builder.js": {
@@ -133,6 +246,12 @@
       "_vendor-hf-doc-builder.js"
     ]
   },
+  "_Tip-hf-doc-builder.js": {
+    "file": "chunks/Tip-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
+  },
   "_CodeBlock-hf-doc-builder.js": {
     "file": "chunks/CodeBlock-hf-doc-builder.js",
     "imports": [
@@ -141,6 +260,25 @@
   },
   "_Markdown-hf-doc-builder.js": {
     "file": "chunks/Markdown-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_IconTensorflow-hf-doc-builder.js"
+    ]
+  },
+  "_IconTensorflow-hf-doc-builder.js": {
+    "file": "chunks/IconTensorflow-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "_Youtube-hf-doc-builder.js": {
+    "file": "chunks/Youtube-hf-doc-builder.js",
+    "imports": [
+      "_vendor-hf-doc-builder.js"
+    ]
+  },
+  "_DocNotebookDropdown-hf-doc-builder.js": {
+    "file": "chunks/DocNotebookDropdown-hf-doc-builder.js",
     "imports": [
       "_vendor-hf-doc-builder.js"
     ]
