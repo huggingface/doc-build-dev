@@ -33,18 +33,17 @@ point (if you run your script on just one GPU or CPU, this won’t do anything).
 <p>A few example cases for when to use this utility are listed below:</p>
 
 
-<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400">Some of these are utilized with the [Accelerator.main_process_first()](/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.main_process_first) context manager, which utilizes [Accelerator.wait_for_everyone()](/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.wait_for_everyone) to 
-run a particular set of code on the main process beforehand before triggering and launching the other processes
-</div>
+<div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>Some of these are utilized with the <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.main_process_first">Accelerator.main_process_first()</a> context manager, which utilizes <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.wait_for_everyone">Accelerator.wait_for_everyone()</a> to
+run a particular set of code on the main process beforehand before triggering and launching the other processes</p></div>
 <ul><li>Downloading a dataset on the main process first and then loading the cached dataset in afterwards</li>
 <li>Saving the <code>state_dict</code> of the model, since you would normally save one file on just the main process</li>
 <li>Loading in the <code>state_dict</code> to a model, optimizer, or scheduler before moving on to training</li></ul>
 
 
-		<script type="module" data-hydrate="1h8h9px">
+		<script type="module" data-hydrate="2irceo">
 		import { start } from "/docs/accelerate/pr_495/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1h8h9px"]').parentNode,
+			target: document.querySelector('[data-hydrate="2irceo"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_495/en","assets":"/docs/accelerate/pr_495/en"},
 			session: {},
 			route: false,
