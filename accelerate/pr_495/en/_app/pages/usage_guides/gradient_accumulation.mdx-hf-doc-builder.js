@@ -30,65 +30,65 @@ gradient_accumulation_steps = <span class="hljs-number">2</span>
     loss.backward()
     <span class="hljs-keyword">if</span> (index+<span class="hljs-number">1</span>) % gradient_accumulation_steps == <span class="hljs-number">0</span>:
         optimizer.<span class="hljs-built_in">step</span>()
-        scheduler.<span class="hljs-built_in">step</span>()`}}),G=new Ye({}),H=new se({props:{code:`+from accelerate import Accelerator
-+accelerator = Accelerator()
+        scheduler.<span class="hljs-built_in">step</span>()`}}),G=new Ye({}),H=new se({props:{code:`+ from accelerate import Accelerator
++ accelerator = Accelerator()
 
-+model, optimizer, training_dataloader, scheduler = accelerator.prepare(
-+    model, optimizer, training_dataloader, scheduler
-+)
++ model, optimizer, training_dataloader, scheduler = accelerator.prepare(
++     model, optimizer, training_dataloader, scheduler
++ )
 
-for index, batch in enumerate(training_dataloader):
-    optimizer.zero_grad()
-    inputs, targets = batch
--    inputs = inputs.to(device)
--    targets = targets.to(device)
-    outputs = model(inputs)
-    loss = loss_function(outputs, targets)
-    loss = loss / gradient_accumulation_steps
-+    accelerator.backward(loss)
-    if (index+1) % gradient_accumulation_steps == 0:
+  for index, batch in enumerate(training_dataloader):
+      optimizer.zero_grad()
+      inputs, targets = batch
+-     inputs = inputs.to(device)
+-     targets = targets.to(device)
+      outputs = model(inputs)
+      loss = loss_function(outputs, targets)
+      loss = loss / gradient_accumulation_steps
++     accelerator.backward(loss)
+      if (index+1) % gradient_accumulation_steps == 0:
         optimizer.step()
-        scheduler.step()`,highlighted:`<span class="hljs-addition">+from accelerate import Accelerator</span>
-<span class="hljs-addition">+accelerator = Accelerator()</span>
+        scheduler.step()`,highlighted:`<span class="hljs-addition">+ from accelerate import Accelerator</span>
+<span class="hljs-addition">+ accelerator = Accelerator()</span>
 
-<span class="hljs-addition">+model, optimizer, training_dataloader, scheduler = accelerator.prepare(</span>
-<span class="hljs-addition">+    model, optimizer, training_dataloader, scheduler</span>
-<span class="hljs-addition">+)</span>
+<span class="hljs-addition">+ model, optimizer, training_dataloader, scheduler = accelerator.prepare(</span>
+<span class="hljs-addition">+     model, optimizer, training_dataloader, scheduler</span>
+<span class="hljs-addition">+ )</span>
 
-for index, batch in enumerate(training_dataloader):
-    optimizer.zero_grad()
-    inputs, targets = batch
-<span class="hljs-deletion">-    inputs = inputs.to(device)</span>
-<span class="hljs-deletion">-    targets = targets.to(device)</span>
-    outputs = model(inputs)
-    loss = loss_function(outputs, targets)
-    loss = loss / gradient_accumulation_steps
-<span class="hljs-addition">+    accelerator.backward(loss)</span>
-    if (index+1) % gradient_accumulation_steps == 0:
+  for index, batch in enumerate(training_dataloader):
+      optimizer.zero_grad()
+      inputs, targets = batch
+<span class="hljs-deletion">-     inputs = inputs.to(device)</span>
+<span class="hljs-deletion">-     targets = targets.to(device)</span>
+      outputs = model(inputs)
+      loss = loss_function(outputs, targets)
+      loss = loss / gradient_accumulation_steps
+<span class="hljs-addition">+     accelerator.backward(loss)</span>
+      if (index+1) % gradient_accumulation_steps == 0:
         optimizer.step()
-        scheduler.step()`}}),N=new Jt({props:{warning:!0,$$slots:{default:[Ut]},$$scope:{ctx:me}}}),Y=new Ye({}),M=new se({props:{code:`from accelerate import Accelerator
--accelerator = Accelerator()
-+accelerator = Accelerator(gradient_accumulation_steps=2)`,highlighted:`from accelerate import Accelerator
-<span class="hljs-deletion">-accelerator = Accelerator()</span>
-<span class="hljs-addition">+accelerator = Accelerator(gradient_accumulation_steps=2)</span>`}}),O=new se({props:{code:`-for index, batch in enumerate(training_dataloader):
-+for batch in training_dataloader:
-+   with accelerator.accumulate(model):
-        optimizer.zero_grad()
-        inputs, targets = batch
-        outputs = model(inputs)`,highlighted:`<span class="hljs-deletion">-for index, batch in enumerate(training_dataloader):</span>
-<span class="hljs-addition">+for batch in training_dataloader:</span>
-<span class="hljs-addition">+   with accelerator.accumulate(model):</span>
-        optimizer.zero_grad()
-        inputs, targets = batch
-        outputs = model(inputs)`}}),R=new se({props:{code:`-loss = loss / gradient_accumulation_steps
-accelerator.backward(loss)
--if (index+1) % gradient_accumulation_steps == 0:
-optimizer.step()
-scheduler.step()`,highlighted:`<span class="hljs-deletion">-loss = loss / gradient_accumulation_steps</span>
-accelerator.backward(loss)
-<span class="hljs-deletion">-if (index+1) % gradient_accumulation_steps == 0:</span>
-optimizer.step()
-scheduler.step()`}}),D=new Ye({}),W=new se({props:{code:`for batch in training_dataloader:
+        scheduler.step()`}}),N=new Jt({props:{warning:!0,$$slots:{default:[Ut]},$$scope:{ctx:me}}}),Y=new Ye({}),M=new se({props:{code:`  from accelerate import Accelerator
+- accelerator = Accelerator()
++ accelerator = Accelerator(gradient_accumulation_steps=2)`,highlighted:`  from accelerate import Accelerator
+<span class="hljs-deletion">- accelerator = Accelerator()</span>
+<span class="hljs-addition">+ accelerator = Accelerator(gradient_accumulation_steps=2)</span>`}}),O=new se({props:{code:`- for index, batch in enumerate(training_dataloader):
++ for batch in training_dataloader:
++    with accelerator.accumulate(model):
+       optimizer.zero_grad()
+       inputs, targets = batch
+       outputs = model(inputs)`,highlighted:`<span class="hljs-deletion">- for index, batch in enumerate(training_dataloader):</span>
+<span class="hljs-addition">+ for batch in training_dataloader:</span>
+<span class="hljs-addition">+    with accelerator.accumulate(model):</span>
+       optimizer.zero_grad()
+       inputs, targets = batch
+       outputs = model(inputs)`}}),R=new se({props:{code:`- loss = loss / gradient_accumulation_steps
+  accelerator.backward(loss)
+- if (index+1) % gradient_accumulation_steps == 0:
+  optimizer.step()
+  scheduler.step()`,highlighted:`<span class="hljs-deletion">- loss = loss / gradient_accumulation_steps</span>
+  accelerator.backward(loss)
+<span class="hljs-deletion">- if (index+1) % gradient_accumulation_steps == 0:</span>
+  optimizer.step()
+  scheduler.step()`}}),D=new Ye({}),W=new se({props:{code:`for batch in training_dataloader:
     with accelerator.accumulate(model):
         optimizer.zero_grad()
         inputs, targets = batch

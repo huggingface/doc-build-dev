@@ -26,11 +26,11 @@ model.to(device)
 
 accelerator = Accelerator()`,highlighted:`<span class="hljs-keyword">from</span> accelerate <span class="hljs-keyword">import</span> Accelerator
 
-accelerator = Accelerator()`}}),K=new oe({}),Q=new ve({props:{code:`-device = 'cuda'
-+device = accelerator.device
-model.to(device)`,highlighted:`<span class="hljs-deletion">-device = &#x27;cuda&#x27;</span>
-<span class="hljs-addition">+device = accelerator.device</span>
-model.to(device)`}}),V=new oe({}),X=new ve({props:{code:`model, optimizer, training_dataloader, scheduler = accelerator.prepare(
+accelerator = Accelerator()`}}),K=new oe({}),Q=new ve({props:{code:`- device = 'cuda'
++ device = accelerator.device
+  model.to(device)`,highlighted:`<span class="hljs-deletion">- device = &#x27;cuda&#x27;</span>
+<span class="hljs-addition">+ device = accelerator.device</span>
+  model.to(device)`}}),V=new oe({}),X=new ve({props:{code:`model, optimizer, training_dataloader, scheduler = accelerator.prepare(
     model, optimizer, training_dataloader, scheduler
 )`,highlighted:`<span class="hljs-built_in">model,</span> optimizer, training_dataloader, scheduler = accelerator.prepare(
 <span class="hljs-built_in">    model,</span> optimizer, training_dataloader, scheduler

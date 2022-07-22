@@ -102,51 +102,51 @@ class MyCustomTracker(GeneralTracker):
 accelerator = Accelerator(log_with=tracker)`,highlighted:`tracker = MyCustomTracker(<span class="hljs-string">&quot;some_run_name&quot;</span>)
 accelerator = Accelerator(log_with=tracker)`}}),oe=new x({props:{code:`tracker = MyCustomTracker("some_run_name")
 accelerator = Accelerator(log_with=[tracker, "all"])`,highlighted:`tracker = MyCustomTracker(<span class="hljs-string">&quot;some_run_name&quot;</span>)
-accelerator = Accelerator(log_with=[tracker, <span class="hljs-string">&quot;all&quot;</span>])`}}),ne=new Ut({}),ie=new x({props:{code:`from accelerate import Accelerator
+accelerator = Accelerator(log_with=[tracker, <span class="hljs-string">&quot;all&quot;</span>])`}}),ne=new Ut({}),ie=new x({props:{code:`  from accelerate import Accelerator
 + import neptune.new as neptune
 
-accelerator = Accelerator()
+  accelerator = Accelerator()
 + run = neptune.init(...)
 
-my_model, my_optimizer, my_training_dataloader = accelerate.prepare(my_model, my_optimizer, my_training_dataloader)
-device = accelerator.device
-my_model.to(device)
+  my_model, my_optimizer, my_training_dataloader = accelerate.prepare(my_model, my_optimizer, my_training_dataloader)
+  device = accelerator.device
+  my_model.to(device)
 
-for iteration in config["num_iterations"]:
-    for batch in my_training_dataloader:
-        my_optimizer.zero_grad()
-        inputs, targets = batch
-        inputs = inputs.to(device)
-        targets = targets.to(device)
-        outputs = my_model(inputs)
-        loss = my_loss_function(outputs, targets)
-        total_loss += loss
-        accelerator.backward(loss)
-        my_optimizer.step()
-+       if accelerator.is_main_process:
-+           run["logs/training/batch/loss"].log(loss)`,highlighted:`from accelerate import Accelerator
+  for iteration in config["num_iterations"]:
+      for batch in my_training_dataloader:
+          my_optimizer.zero_grad()
+          inputs, targets = batch
+          inputs = inputs.to(device)
+          targets = targets.to(device)
+          outputs = my_model(inputs)
+          loss = my_loss_function(outputs, targets)
+          total_loss += loss
+          accelerator.backward(loss)
+          my_optimizer.step()
++         if accelerator.is_main_process:
++             run["logs/training/batch/loss"].log(loss)`,highlighted:`  from accelerate import Accelerator
 <span class="hljs-addition">+ import neptune.new as neptune</span>
 
-accelerator = Accelerator()
+  accelerator = Accelerator()
 <span class="hljs-addition">+ run = neptune.init(...)</span>
 
-my_model, my_optimizer, my_training_dataloader = accelerate.prepare(my_model, my_optimizer, my_training_dataloader)
-device = accelerator.device
-my_model.to(device)
+  my_model, my_optimizer, my_training_dataloader = accelerate.prepare(my_model, my_optimizer, my_training_dataloader)
+  device = accelerator.device
+  my_model.to(device)
 
-for iteration in config[&quot;num_iterations&quot;]:
-    for batch in my_training_dataloader:
-        my_optimizer.zero_grad()
-        inputs, targets = batch
-        inputs = inputs.to(device)
-        targets = targets.to(device)
-        outputs = my_model(inputs)
-        loss = my_loss_function(outputs, targets)
-        total_loss += loss
-        accelerator.backward(loss)
-        my_optimizer.step()
-<span class="hljs-addition">+       if accelerator.is_main_process:</span>
-<span class="hljs-addition">+           run[&quot;logs/training/batch/loss&quot;].log(loss)</span>`}}),{c(){A=l("meta"),tt=p(),q=l("h1"),O=l("a"),be=l("span"),d(G.$$.fragment),Ft=p(),$e=l("span"),Ht=r("Tracking"),at=p(),R=l("p"),Jt=r(`There are a large number of experiment tracking API\u2019s available, however getting them all to work with in a multi-processing environment can oftentimes be complex.
+  for iteration in config[&quot;num_iterations&quot;]:
+      for batch in my_training_dataloader:
+          my_optimizer.zero_grad()
+          inputs, targets = batch
+          inputs = inputs.to(device)
+          targets = targets.to(device)
+          outputs = my_model(inputs)
+          loss = my_loss_function(outputs, targets)
+          total_loss += loss
+          accelerator.backward(loss)
+          my_optimizer.step()
+<span class="hljs-addition">+         if accelerator.is_main_process:</span>
+<span class="hljs-addition">+             run[&quot;logs/training/batch/loss&quot;].log(loss)</span>`}}),{c(){A=l("meta"),tt=p(),q=l("h1"),O=l("a"),be=l("span"),d(G.$$.fragment),Ft=p(),$e=l("span"),Ht=r("Tracking"),at=p(),R=l("p"),Jt=r(`There are a large number of experiment tracking API\u2019s available, however getting them all to work with in a multi-processing environment can oftentimes be complex.
 \u{1F917} Accelerate provides a general tracking API that can be used to log useful items during your script through `),ce=l("a"),Kt=r("log()"),rt=p(),T=l("h2"),L=l("a"),Ee=l("span"),d(U.$$.fragment),Qt=p(),je=l("span"),Vt=r("Integrated Trackers"),st=p(),z=l("p"),Xt=r("Currently "),Ae=l("code"),Yt=r("Accelerate"),Zt=r(" supports three trackers out-of-the-box:"),lt=p(),w=l("ul"),qe=l("li"),ea=r("TensorBoard"),ta=p(),Te=l("li"),aa=r("WandB"),ra=p(),Ce=l("li"),sa=r("CometML"),ot=p(),k=l("p"),la=r("To use any of them, pass in the selected type(s) to the "),Ie=l("code"),oa=r("log_with"),na=r(" parameter in "),Pe=l("code"),ia=r("Accelerate"),ca=r(":"),nt=p(),d(F.$$.fragment),it=p(),D=l("p"),pa=r("At the start of your experiment "),pe=l("a"),ma=r("init_trackers()"),ua=r(" should be used to setup your project, and potentially add any experiment hyperparameters to be logged:"),ct=p(),d(H.$$.fragment),pt=p(),b=l("p"),da=r("When you are ready to log any data, "),me=l("a"),ha=r("log()"),fa=r(` should be used.
 A `),xe=l("code"),_a=r("step"),ga=r(" can also be passed in to correlate the data with a particular step in the training loop."),mt=p(),d(J.$$.fragment),ut=p(),S=l("p"),ya=r("Once you\u2019ve finished training, make sure to run "),ue=l("a"),va=r("end_training()"),wa=r(" so that all the trackers can run their finish functionalities if they have any."),dt=p(),d(K.$$.fragment),ht=p(),de=l("p"),ka=r("A full example is below:"),ft=p(),d(Q.$$.fragment),_t=p(),C=l("h2"),N=l("a"),Oe=l("span"),d(V.$$.fragment),ba=p(),Le=l("span"),$a=r("Implementing Custom Trackers"),gt=p(),$=l("p"),Ea=r("To implement a new tracker to be used in "),ze=l("code"),ja=r("Accelerator"),Aa=r(", a new one can be made through implementing the "),De=l("code"),qa=r("~GeneralTracker"),Ta=r(` class.
 Every tracker must implement three functions:`),yt=p(),E=l("ul"),X=l("li"),Se=l("code"),Ca=r("__init__"),Ia=r(": "),Y=l("ul"),Z=l("li"),Pa=r("Should store a "),Ne=l("code"),xa=r("run_name"),Oa=r(" and initialize the tracker API of the integrated library."),La=p(),ee=l("li"),za=r("If a tracker stores their data locally (such as TensorBoard), a "),Be=l("code"),Da=r("logging_dir"),Sa=r(" parameter can be added."),Na=p(),te=l("li"),Me=l("code"),Ba=r("store_init_configuration"),Ma=r(": "),We=l("ul"),ae=l("li"),Wa=r("Should take in a "),Ge=l("code"),Ga=r("values"),Ra=r(" dictionary and store them as a one-time experiment configuration"),Ua=p(),re=l("li"),Re=l("code"),Fa=r("log"),Ha=r(": "),Ue=l("ul"),I=l("li"),Ja=r("Should take in a "),Fe=l("code"),Ka=r("values"),Qa=r(" dictionary and a "),He=l("code"),Va=r("step"),Xa=r(", and should log them to the run"),vt=p(),he=l("p"),Ya=r("A brief example can be seen below with an integration with Weights and Biases, containing only the relevent information:"),wt=p(),d(se.$$.fragment),kt=p(),v=l("p"),Za=r("When you are ready to build your "),Je=l("code"),er=r("Accelerator"),tr=r(" object, pass in an "),Ke=l("strong"),ar=r("instance"),rr=r(" of your tracker to "),Qe=l("code"),sr=r("log_with"),lr=r(` to have it automatically

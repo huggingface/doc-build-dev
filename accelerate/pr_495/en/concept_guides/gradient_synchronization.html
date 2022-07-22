@@ -36,13 +36,13 @@ ddp_model = DistributedDataParallel(model)<!-- HTML_TAG_END --></pre></div>
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START --><span class="hljs-addition">+from accelerate import Accelerator</span>
-<span class="hljs-addition">+accelerator = Accelerator()</span>
-import torch.nn as nn
-<span class="hljs-deletion">-from torch.nn.parallel import DistributedDataParallel</span>
+	<pre><!-- HTML_TAG_START --><span class="hljs-addition">+ from accelerate import Accelerator</span>
+<span class="hljs-addition">+ accelerator = Accelerator()</span>
+  import torch.nn as nn
+<span class="hljs-deletion">- from torch.nn.parallel import DistributedDataParallel</span>
 
-model = nn.Linear(10,10)
-<span class="hljs-addition">+model = accelerator.prepare(model)</span><!-- HTML_TAG_END --></pre></div>
+  model = nn.Linear(10,10)
+<span class="hljs-addition">+ model = accelerator.prepare(model)</span><!-- HTML_TAG_END --></pre></div>
 <h2 class="relative group"><a id="the-slowdown-in-gradient-accumulation" class="header-link block pr-1.5 text-lg no-hover:hidden with-hover:absolute with-hover:p-1.5 with-hover:opacity-0 with-hover:group-hover:opacity-100 with-hover:right-full" href="#the-slowdown-in-gradient-accumulation"><span><svg class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M167.594 88.393a8.001 8.001 0 0 1 0 11.314l-67.882 67.882a8 8 0 1 1-11.314-11.315l67.882-67.881a8.003 8.003 0 0 1 11.314 0zm-28.287 84.86l-28.284 28.284a40 40 0 0 1-56.567-56.567l28.284-28.284a8 8 0 0 0-11.315-11.315l-28.284 28.284a56 56 0 0 0 79.196 79.197l28.285-28.285a8 8 0 1 0-11.315-11.314zM212.852 43.14a56.002 56.002 0 0 0-79.196 0l-28.284 28.284a8 8 0 1 0 11.314 11.314l28.284-28.284a40 40 0 0 1 56.568 56.567l-28.285 28.285a8 8 0 0 0 11.315 11.314l28.284-28.284a56.065 56.065 0 0 0 0-79.196z" fill="currentColor"></path></svg></span></a>
 	<span>The slowdown in gradient accumulation
 	</span></h2>
@@ -87,19 +87,19 @@ context manager will trigger the synchronization. See an example below:</p>
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
 	<div class="absolute pointer-events-none transition-opacity bg-black text-white py-1 px-2 leading-tight rounded font-normal shadow left-1/2 top-full transform -translate-x-1/2 translate-y-2 opacity-0"><div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-black border-4 border-t-0" style="border-left-color: transparent; border-right-color: transparent; "></div>
 	Copied</div></button></div>
-	<pre><!-- HTML_TAG_START -->ddp_model, dataloader = accelerator.prepare(model, dataloader)
+	<pre><!-- HTML_TAG_START -->  ddp_model, dataloader = accelerator.prepare(model, dataloader)
 
-for index, batch in enumerate(dataloader):
-    input, target = batch
-    # Trigger gradient synchronization on the last batch
-    if index != (len(dataloader)-1):
-<span class="hljs-deletion">-       with ddp_model.no_sync():</span>
-<span class="hljs-addition">+       with accelerator.no_sync(model):</span>
-            # Gradients only accumulate
-            ddp_model(input).backward()
-    else:
-        # Gradients finally sync
-        ddp_model(input).backward()<!-- HTML_TAG_END --></pre></div>
+  for index, batch in enumerate(dataloader):
+      input, target = batch
+      # Trigger gradient synchronization on the last batch
+      if index != (len(dataloader)-1):
+<span class="hljs-deletion">-         with ddp_model.no_sync():</span>
+<span class="hljs-addition">+         with accelerator.no_sync(model):</span>
+              # Gradients only accumulate
+              ddp_model(input).backward()
+      else:
+          # Gradients finally sync
+          ddp_model(input).backward()<!-- HTML_TAG_END --></pre></div>
 <p>As you may expect, the <a href="/docs/accelerate/pr_495/en/package_reference/accelerator#accelerate.Accelerator.accumulate">Accelerator.accumulate()</a> function wraps around this conditional check by keeping track of the current batch number, leaving you with the final
 gradient accumulation API:</p>
 
@@ -117,10 +117,10 @@ gradient accumulation API:</p>
         accelerator.backward(loss)<!-- HTML_TAG_END --></pre></div>
 
 
-		<script type="module" data-hydrate="gqw49x">
+		<script type="module" data-hydrate="4k3sud">
 		import { start } from "/docs/accelerate/pr_495/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="gqw49x"]').parentNode,
+			target: document.querySelector('[data-hydrate="4k3sud"]').parentNode,
 			paths: {"base":"/docs/accelerate/pr_495/en","assets":"/docs/accelerate/pr_495/en"},
 			session: {},
 			route: false,

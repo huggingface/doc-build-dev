@@ -6,19 +6,19 @@ ddp_model = DistributedDataParallel(model)`,highlighted:`<span class="hljs-keywo
 <span class="hljs-keyword">from</span> torch.nn.parallel <span class="hljs-keyword">import</span> DistributedDataParallel
 
 model = nn.Linear(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)
-ddp_model = DistributedDataParallel(model)`}}),B=new ve({props:{code:`+from accelerate import Accelerator
-+accelerator = Accelerator()
-import torch.nn as nn
--from torch.nn.parallel import DistributedDataParallel
+ddp_model = DistributedDataParallel(model)`}}),B=new ve({props:{code:`+ from accelerate import Accelerator
++ accelerator = Accelerator()
+  import torch.nn as nn
+- from torch.nn.parallel import DistributedDataParallel
 
-model = nn.Linear(10,10)
-+model = accelerator.prepare(model)`,highlighted:`<span class="hljs-addition">+from accelerate import Accelerator</span>
-<span class="hljs-addition">+accelerator = Accelerator()</span>
-import torch.nn as nn
-<span class="hljs-deletion">-from torch.nn.parallel import DistributedDataParallel</span>
+  model = nn.Linear(10,10)
++ model = accelerator.prepare(model)`,highlighted:`<span class="hljs-addition">+ from accelerate import Accelerator</span>
+<span class="hljs-addition">+ accelerator = Accelerator()</span>
+  import torch.nn as nn
+<span class="hljs-deletion">- from torch.nn.parallel import DistributedDataParallel</span>
 
-model = nn.Linear(10,10)
-<span class="hljs-addition">+model = accelerator.prepare(model)</span>`}}),H=new Ja({}),U=new Ja({}),M=new ve({props:{code:`ddp_model, dataloader = accelerator.prepare(model, dataloader)
+  model = nn.Linear(10,10)
+<span class="hljs-addition">+ model = accelerator.prepare(model)</span>`}}),H=new Ja({}),U=new Ja({}),M=new ve({props:{code:`ddp_model, dataloader = accelerator.prepare(model, dataloader)
 
 for index, batch in enumerate(dataloader):
     input, target = batch
@@ -40,31 +40,31 @@ for index, batch in enumerate(dataloader):
             ddp_model(<span class="hljs-built_in">input</span>).backward()
     <span class="hljs-keyword">else</span>:
         <span class="hljs-comment"># Gradients finally sync</span>
-        ddp_model(<span class="hljs-built_in">input</span>).backward()`}}),Y=new ve({props:{code:`ddp_model, dataloader = accelerator.prepare(model, dataloader)
+        ddp_model(<span class="hljs-built_in">input</span>).backward()`}}),Y=new ve({props:{code:`  ddp_model, dataloader = accelerator.prepare(model, dataloader)
 
-for index, batch in enumerate(dataloader):
-    input, target = batch
-    # Trigger gradient synchronization on the last batch
-    if index != (len(dataloader)-1):
--       with ddp_model.no_sync():
-+       with accelerator.no_sync(model):
-            # Gradients only accumulate
-            ddp_model(input).backward()
-    else:
-        # Gradients finally sync
-        ddp_model(input).backward()`,highlighted:`ddp_model, dataloader = accelerator.prepare(model, dataloader)
+  for index, batch in enumerate(dataloader):
+      input, target = batch
+      # Trigger gradient synchronization on the last batch
+      if index != (len(dataloader)-1):
+-         with ddp_model.no_sync():
++         with accelerator.no_sync(model):
+              # Gradients only accumulate
+              ddp_model(input).backward()
+      else:
+          # Gradients finally sync
+          ddp_model(input).backward()`,highlighted:`  ddp_model, dataloader = accelerator.prepare(model, dataloader)
 
-for index, batch in enumerate(dataloader):
-    input, target = batch
-    # Trigger gradient synchronization on the last batch
-    if index != (len(dataloader)-1):
-<span class="hljs-deletion">-       with ddp_model.no_sync():</span>
-<span class="hljs-addition">+       with accelerator.no_sync(model):</span>
-            # Gradients only accumulate
-            ddp_model(input).backward()
-    else:
-        # Gradients finally sync
-        ddp_model(input).backward()`}}),J=new ve({props:{code:`ddp_model, dataloader = accelerator.prepare(model, dataloader)
+  for index, batch in enumerate(dataloader):
+      input, target = batch
+      # Trigger gradient synchronization on the last batch
+      if index != (len(dataloader)-1):
+<span class="hljs-deletion">-         with ddp_model.no_sync():</span>
+<span class="hljs-addition">+         with accelerator.no_sync(model):</span>
+              # Gradients only accumulate
+              ddp_model(input).backward()
+      else:
+          # Gradients finally sync
+          ddp_model(input).backward()`}}),J=new ve({props:{code:`ddp_model, dataloader = accelerator.prepare(model, dataloader)
 
 for batch in dataloader:
     with accelerator.accumulate(model):
