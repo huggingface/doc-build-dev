@@ -23,6 +23,7 @@
       "src/routes/package_reference/state.mdx",
       "src/routes/package_reference/cli.mdx",
       "src/routes/basic_tutorials/migration.mdx",
+      "src/routes/basic_tutorials/quicktour.mdx",
       "src/routes/basic_tutorials/notebook.mdx",
       "src/routes/basic_tutorials/overview.mdx",
       "src/routes/basic_tutorials/install.mdx",
@@ -211,6 +212,18 @@
   "src/routes/basic_tutorials/migration.mdx": {
     "file": "pages/basic_tutorials/migration.mdx-hf-doc-builder.js",
     "src": "src/routes/basic_tutorials/migration.mdx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-hf-doc-builder.js",
+      "_Tip-hf-doc-builder.js",
+      "_IconCopyLink-hf-doc-builder.js",
+      "_CodeBlock-hf-doc-builder.js"
+    ]
+  },
+  "src/routes/basic_tutorials/quicktour.mdx": {
+    "file": "pages/basic_tutorials/quicktour.mdx-hf-doc-builder.js",
+    "src": "src/routes/basic_tutorials/quicktour.mdx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
