@@ -122,13 +122,14 @@ Detected cat <span class="hljs-keyword">with</span> confidence <span class="hljs
 instance afterwards instead of this since the former takes care of running the pre and post processing steps while
 the latter silently ignores them.`)},l(p){u=a(p,"P",{});var _=i(u);E=n(_,"Although the recipe for forward pass needs to be defined within this function, one should call the "),g=a(_,"CODE",{});var U=i(g);f=n(U,"Module"),U.forEach(t),T=n(_,`
 instance afterwards instead of this since the former takes care of running the pre and post processing steps while
-the latter silently ignores them.`),_.forEach(t)},m(p,_){m(p,u,_),e(u,E),e(u,g),e(g,f),e(u,T)},d(p){p&&t(u)}}}function h_(z){let u,E,g,f,T;return f=new qo({props:{code:`from transformers import DetrFeatureExtractor, DetrForSegmentation
-from transformers.models.detr.feature_extraction_detr import rgb_to_id
-import torch
-from PIL import Image
-import numpy
+the latter silently ignores them.`),_.forEach(t)},m(p,_){m(p,u,_),e(u,E),e(u,g),e(g,f),e(u,T)},d(p){p&&t(u)}}}function h_(z){let u,E,g,f,T;return f=new qo({props:{code:`import io
 import requests
-import io
+from PIL import Image
+import torch
+import numpy
+
+from transformers import DetrFeatureExtractor, DetrForSegmentation
+from transformers.models.detr.feature_extraction_detr import rgb_to_id
 
 url = "http://images.cocodataset.org/val2017/000000039769.jpg"
 image = Image.open(requests.get(url, stream=True).raw)
@@ -151,13 +152,14 @@ panoptic_seg = Image.open(io.BytesIO(result["png_string"]))
 panoptic_seg = numpy.array(panoptic_seg, dtype=numpy.uint8)
 # retrieve the ids corresponding to each mask
 panoptic_seg_id = rgb_to_id(panoptic_seg)
-panoptic_seg_id.shape`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> DetrFeatureExtractor, DetrForSegmentation
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers.models.detr.feature_extraction_detr <span class="hljs-keyword">import</span> rgb_to_id
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> numpy
+panoptic_seg_id.shape`,highlighted:`<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> io
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> requests
-<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> io
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> torch
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> numpy
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> DetrFeatureExtractor, DetrForSegmentation
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> transformers.models.detr.feature_extraction_detr <span class="hljs-keyword">import</span> rgb_to_id
 
 <span class="hljs-meta">&gt;&gt;&gt; </span>url = <span class="hljs-string">&quot;http://images.cocodataset.org/val2017/000000039769.jpg&quot;</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>image = Image.<span class="hljs-built_in">open</span>(requests.get(url, stream=<span class="hljs-literal">True</span>).raw)
