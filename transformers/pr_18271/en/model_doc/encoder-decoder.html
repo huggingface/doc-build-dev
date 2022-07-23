@@ -69,7 +69,7 @@ To do so, the <code>EncoderDecoderModel</code> class provides a <a href="/docs/t
 	<span>Loading an existing <code>EncoderDecoderModel</code> checkpoint and perform inference.
 	</span></h2>
 
-<p>To load fine-tuned checkpoints of the <code>EncoderDecoderModel</code> class, [‘EncoderDecoderModel`] provides the <code>from_pretrained(...)</code> method just like any other model architecture in Transformers.</p>
+<p>To load fine-tuned checkpoints of the <code>EncoderDecoderModel</code> class, <a href="/docs/transformers/pr_18271/en/model_doc/encoder-decoder#transformers.EncoderDecoderModel">EncoderDecoderModel</a> provides the <code>from_pretrained(...)</code> method just like any other model architecture in Transformers.</p>
 <p>To perform inference, one uses the <code>generate</code> method, which allows to autoregressively generate text. This method supports various forms of decoding, such as greedy, beam search and multinomial sampling.</p>
 
 	<div class="code-block relative"><div class="absolute top-2.5 right-4"><button class="inline-flex items-center relative text-sm focus:text-green-500 cursor-pointer focus:outline-none transition duration-200 ease-in-out opacity-0 mx-0.5   text-gray-600 " title="code excerpt" type="button"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg>
@@ -1315,10 +1315,10 @@ checkpoints.</p>
 <span class="hljs-meta">&gt;&gt;&gt; </span>model = FlaxEncoderDecoderModel.from_pretrained(<span class="hljs-string">&quot;./bert2gpt2&quot;</span>)<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="6catwb">
+		<script type="module" data-hydrate="9hkw7d">
 		import { start } from "/docs/transformers/pr_18271/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="6catwb"]').parentNode,
+			target: document.querySelector('[data-hydrate="9hkw7d"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_18271/en","assets":"/docs/transformers/pr_18271/en"},
 			session: {},
 			route: false,
