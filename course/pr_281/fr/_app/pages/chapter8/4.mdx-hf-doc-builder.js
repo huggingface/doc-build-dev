@@ -1,4 +1,5 @@
-import{S as db,i as cb,s as mb,e as l,k as p,w as c,t as a,M as fb,c as i,d as s,m as d,x as m,a as u,h as n,b as q,G as t,g as o,y as f,q as v,o as h,B as _,v as vb}from"../../chunks/vendor-hf-doc-builder.js";import{T as Ht}from"../../chunks/Tip-hf-doc-builder.js";import{Y as hb}from"../../chunks/Youtube-hf-doc-builder.js";import{I as M}from"../../chunks/IconCopyLink-hf-doc-builder.js";import{C as $}from"../../chunks/CodeBlock-hf-doc-builder.js";import{D as _b}from"../../chunks/DocNotebookDropdown-hf-doc-builder.js";import{F as bb}from"../../chunks/FrameworkSwitchCourse-hf-doc-builder.js";function qb(P){let b,E,g,j,y;return{c(){b=l("p"),E=a("\u270F\uFE0F "),g=l("em"),j=a("A votre tour !"),y=a(" V\xE9rifiez que tout semble correct avec le deuxi\xE8me \xE9l\xE9ment du jeu de donn\xE9es d\u2019entra\xEEnement.")},l(k){b=i(k,"P",{});var z=u(b);E=n(z,"\u270F\uFE0F "),g=i(z,"EM",{});var w=u(g);j=n(w,"A votre tour !"),w.forEach(s),y=n(z," V\xE9rifiez que tout semble correct avec le deuxi\xE8me \xE9l\xE9ment du jeu de donn\xE9es d\u2019entra\xEEnement."),z.forEach(s)},m(k,z){o(k,b,z),t(b,E),t(b,g),t(g,j),t(b,y)},d(k){k&&s(b)}}}function $b(P){let b,E,g,j,y;return{c(){b=l("p"),E=a("Dans la prochaine partie du cours, nous examinerons des techniques plus avanc\xE9es qui peuvent vous aider \xE0 r\xE9duire votre empreinte m\xE9moire et vous permettre de "),g=l("i"),j=a("finetuner"),y=a(" les plus grands mod\xE8les.")},l(k){b=i(k,"P",{});var z=u(b);E=n(z,"Dans la prochaine partie du cours, nous examinerons des techniques plus avanc\xE9es qui peuvent vous aider \xE0 r\xE9duire votre empreinte m\xE9moire et vous permettre de "),g=i(z,"I",{});var w=u(g);j=n(w,"finetuner"),w.forEach(s),y=n(z," les plus grands mod\xE8les."),z.forEach(s)},m(k,z){o(k,b,z),t(b,E),t(b,g),t(g,j),t(b,y)},d(k){k&&s(b)}}}function gb(P){let b,E,g,j,y,k,z,w;return{c(){b=l("p"),E=a("\u{1F4A1} Vous devriez toujours vous assurer que vous pouvez ex\xE9cuter "),g=l("code"),j=a("trainer.evaluate()"),y=a(" avant de lancer "),k=l("code"),z=a("trainer.train()"),w=a(", pour \xE9viter de gaspiller beaucoup de ressources de calcul avant de tomber sur une erreur.")},l(S){b=i(S,"P",{});var x=u(b);E=n(x,"\u{1F4A1} Vous devriez toujours vous assurer que vous pouvez ex\xE9cuter "),g=i(x,"CODE",{});var Z=u(g);j=n(Z,"trainer.evaluate()"),Z.forEach(s),y=n(x," avant de lancer "),k=i(x,"CODE",{});var N=u(k);z=n(N,"trainer.train()"),N.forEach(s),w=n(x,", pour \xE9viter de gaspiller beaucoup de ressources de calcul avant de tomber sur une erreur."),x.forEach(s)},m(S,x){o(S,b,x),t(b,E),t(b,g),t(g,j),t(b,y),t(b,k),t(k,z),t(b,w)},d(S){S&&s(b)}}}function kb(P){let b,E,g,j,y,k,z,w,S,x,Z;return{c(){b=l("p"),E=a("\u{1F4A1} Si vous utilisez une boucle d\u2019entra\xEEnement manuelle, les m\xEAmes \xE9tapes s\u2019appliquent pour d\xE9boguer votre pipeline d\u2019entra\xEEnement, mais il est plus facile de les s\xE9parer. Assurez-vous cependant de ne pas avoir oubli\xE9 le "),g=l("code"),j=a("model.eval()"),y=a(" ou le "),k=l("code"),z=a("model.train()"),w=a(" aux bons endroits, ou le "),S=l("code"),x=a("zero_grad()"),Z=a(" \xE0 chaque \xE9tape !")},l(N){b=i(N,"P",{});var C=u(b);E=n(C,"\u{1F4A1} Si vous utilisez une boucle d\u2019entra\xEEnement manuelle, les m\xEAmes \xE9tapes s\u2019appliquent pour d\xE9boguer votre pipeline d\u2019entra\xEEnement, mais il est plus facile de les s\xE9parer. Assurez-vous cependant de ne pas avoir oubli\xE9 le "),g=i(C,"CODE",{});var js=u(g);j=n(js,"model.eval()"),js.forEach(s),y=n(C," ou le "),k=i(C,"CODE",{});var L=u(k);z=n(L,"model.train()"),L.forEach(s),w=n(C," aux bons endroits, ou le "),S=i(C,"CODE",{});var Bt=u(S);x=n(Bt,"zero_grad()"),Bt.forEach(s),Z=n(C," \xE0 chaque \xE9tape !"),C.forEach(s)},m(N,C){o(N,b,C),t(b,E),t(b,g),t(g,j),t(b,y),t(b,k),t(k,z),t(b,w),t(b,S),t(S,x),t(b,Z)},d(N){N&&s(b)}}}function jb(P){let b,E;return{c(){b=l("p"),E=a("\u26A0\uFE0F Si vous effectuez un entra\xEEnement distribu\xE9, imprimez des \xE9chantillons de votre ensemble de donn\xE9es dans chaque processus et v\xE9rifiez par trois fois que vous obtenez la m\xEAme chose. Un bug courant consiste \xE0 avoir une source d\u2019al\xE9a dans la cr\xE9ation des donn\xE9es qui fait que chaque processus a une version diff\xE9rente du jeu de donn\xE9es.")},l(g){b=i(g,"P",{});var j=u(b);E=n(j,"\u26A0\uFE0F Si vous effectuez un entra\xEEnement distribu\xE9, imprimez des \xE9chantillons de votre ensemble de donn\xE9es dans chaque processus et v\xE9rifiez par trois fois que vous obtenez la m\xEAme chose. Un bug courant consiste \xE0 avoir une source d\u2019al\xE9a dans la cr\xE9ation des donn\xE9es qui fait que chaque processus a une version diff\xE9rente du jeu de donn\xE9es."),j.forEach(s)},m(g,j){o(g,b,j),t(b,E)},d(g){g&&s(b)}}}function Eb(P){let b,E;return{c(){b=l("p"),E=a("\u{1F4A1} Si vos donn\xE9es d\u2019entra\xEEnement ne sont pas \xE9quilibr\xE9es, veillez \xE0 cr\xE9er un batch de donn\xE9es d\u2019entra\xEEnement contenant toutes les \xE9tiquettes.")},l(g){b=i(g,"P",{});var j=u(b);E=n(j,"\u{1F4A1} Si vos donn\xE9es d\u2019entra\xEEnement ne sont pas \xE9quilibr\xE9es, veillez \xE0 cr\xE9er un batch de donn\xE9es d\u2019entra\xEEnement contenant toutes les \xE9tiquettes."),j.forEach(s)},m(g,j){o(g,b,j),t(b,E)},d(g){g&&s(b)}}}function zb(P){let b,E,g,j,y;return{c(){b=l("p"),E=a("\u26A0\uFE0F Vous devrez recr\xE9er votre mod\xE8le et votre "),g=l("code"),j=a("Trainer"),y=a(" apr\xE8s ce test, car le mod\xE8le obtenu ne sera probablement pas capable de r\xE9cup\xE9rer et d\u2019apprendre quelque chose d\u2019utile sur votre jeu de donn\xE9es complet.")},l(k){b=i(k,"P",{});var z=u(b);E=n(z,"\u26A0\uFE0F Vous devrez recr\xE9er votre mod\xE8le et votre "),g=i(z,"CODE",{});var w=u(g);j=n(w,"Trainer"),w.forEach(s),y=n(z," apr\xE8s ce test, car le mod\xE8le obtenu ne sera probablement pas capable de r\xE9cup\xE9rer et d\u2019apprendre quelque chose d\u2019utile sur votre jeu de donn\xE9es complet."),z.forEach(s)},m(k,z){o(k,b,z),t(b,E),t(b,g),t(g,j),t(b,y)},d(k){k&&s(b)}}}function yb(P){let b,E,g,j,y,k,z,w,S,x,Z,N,C,js,L,Bt,Or,Du,Tu,Yt,Su,Lu,Vr,Uu,Nu,Qn,ue,ge,Ir,Es,Mu,Fr,Ou,Zn,zs,Xn,X,Vu,Gr,Iu,Fu,Wr,Gu,Wu,eo,ke,Ru,Rr,Hu,Bu,so,ee,Yu,Hr,Ju,Ku,ys,Qu,Zu,to,ws,ro,Jt,Xu,ao,xs,no,pe,je,Br,Cs,ep,Yr,sp,oo,Ee,tp,Jr,rp,ap,lo,ze,np,Kr,op,lp,io,Ps,uo,As,po,se,ip,Qr,up,pp,Zr,dp,cp,co,A,mp,Xr,fp,vp,ea,hp,_p,sa,bp,qp,ta,$p,gp,ra,kp,jp,mo,Ds,fo,Kt,Ep,vo,Ts,ho,ye,zp,aa,yp,wp,_o,Ss,bo,Qt,xp,qo,we,Cp,na,Pp,Ap,$o,Ls,go,Us,ko,Zt,Dp,jo,Ns,Eo,Ms,zo,U,Tp,oa,Sp,Lp,la,Up,Np,ia,Mp,Op,ua,Vp,Ip,yo,Os,wo,Vs,xo,te,Fp,Is,Gp,Wp,pa,Rp,Hp,Co,xe,Bp,da,Yp,Jp,Po,Fs,Ao,Gs,Do,Ce,Kp,ca,Qp,Zp,To,Ws,So,Rs,Lo,Xt,Xp,Uo,Hs,No,Bs,Mo,re,ed,ma,sd,td,fa,rd,ad,Oo,Ys,Vo,Js,Io,ae,nd,va,od,ld,ha,id,ud,Fo,Pe,pd,_a,dd,cd,Go,Ae,Wo,er,md,Ro,sr,fd,Ho,de,De,ba,Ks,vd,qa,hd,Bo,D,_d,$a,bd,qd,ga,$d,gd,ka,kd,jd,ja,Ed,zd,Ea,yd,wd,Yo,Qs,Jo,ne,xd,za,Cd,Pd,ya,Ad,Dd,Ko,Zs,Qo,O,Td,wa,Sd,Ld,xa,Ud,Nd,Ca,Md,Od,Zo,Xs,Xo,et,el,V,Vd,Pa,Id,Fd,Aa,Gd,Wd,Da,Rd,Hd,sl,I,Bd,Ta,Yd,Jd,Sa,Kd,Qd,La,Zd,Xd,tl,st,rl,tr,ec,al,tt,nl,rr,sc,ol,ar,tc,ll,rt,il,T,rc,Ua,ac,nc,Na,oc,lc,Ma,ic,uc,Oa,pc,dc,Va,cc,mc,ul,at,pl,nr,fc,dl,or,vc,cl,ce,Te,Ia,nt,hc,Fa,_c,ml,lr,bc,fl,ot,vl,F,qc,Ga,$c,gc,Wa,kc,jc,Ra,Ec,zc,hl,Se,yc,Ha,wc,xc,_l,Le,Cc,Ba,Pc,Ac,bl,Ue,Dc,Ya,Tc,Sc,ql,lt,$l,it,gl,Ne,Lc,Ja,Uc,Nc,kl,ut,jl,pt,El,ir,Mc,zl,dt,yl,Me,Oc,Ka,Vc,Ic,wl,ct,xl,ur,Fc,Cl,mt,Pl,Oe,Gc,Qa,Wc,Rc,Al,me,Ve,Za,ft,Hc,Xa,Bc,Dl,pr,Yc,Tl,Ie,Jc,en,Kc,Qc,Sl,vt,Ll,dr,Zc,Ul,oe,Xc,sn,em,sm,tn,tm,rm,Nl,ht,Ml,Fe,am,rn,nm,om,Ol,fe,Ge,an,_t,lm,cr,im,nn,um,Vl,We,pm,on,dm,cm,Il,mr,mm,Fl,Re,Gl,ve,He,ln,bt,fm,un,vm,Wl,Be,hm,pn,_m,bm,Rl,qt,Hl,$t,Bl,fr,qm,Yl,Ye,$m,dn,gm,km,Jl,gt,Kl,kt,Ql,Je,Zl,vr,jm,Xl,jt,ei,Ke,Em,cn,zm,ym,si,Et,ti,G,wm,mn,xm,Cm,fn,Pm,Am,vn,Dm,Tm,ri,zt,ai,yt,ni,W,Sm,hn,Lm,Um,_n,Nm,Mm,bn,Om,Vm,oi,wt,li,xt,ii,Qe,Im,qn,Fm,Gm,ui,Ct,pi,Pt,di,hr,Wm,ci,_r,Rm,mi,At,fi,Ze,Hm,$n,Bm,Ym,vi,Xe,hi,he,es,gn,Dt,Jm,kn,Km,_i,br,Qm,bi,_e,ss,jn,Tt,Zm,En,Xm,qi,ts,ef,zn,sf,tf,$i,R,yn,rf,af,wn,nf,of,xn,lf,uf,Cn,pf,gi,rs,ki,as,df,Pn,cf,mf,ji,qr,ff,Ei,$r,vf,zi,be,ns,An,St,hf,Dn,_f,yi,gr,bf,wi,le,qf,Tn,$f,gf,Sn,kf,jf,xi,Lt,Ci,os,Pi,ls,Ef,Ln,zf,yf,Ai,Ut,Di,Nt,Ti,kr,wf,Si,jr,xf,Li,is,Ui,qe,us,Un,Mt,Cf,Nn,Pf,Ni,ps,Af,Mn,Df,Tf,Mi,ds,Sf,On,Lf,Uf,Oi,Er,Nf,Vi,$e,cs,Vn,Ot,Mf,In,Of,Ii,ms,Vf,Vt,If,Ff,Fi,zr,Gf,Gi,H,yr,It,Wf,Rf,Hf,wr,Ft,Bf,Yf,Jf,xr,Gt,Kf,Qf,Zf,Cr,Wt,Xf,ev,Wi,B,sv,Fn,tv,rv,Gn,av,nv,Wn,ov,lv,Ri;return g=new bb({props:{fw:P[0]}}),w=new M({}),C=new _b({props:{classNames:"absolute z-10 right-0 top-0",options:[{label:"Google Colab",value:"https://colab.research.google.com/github/huggingface/notebooks/blob/master/course/chapter8/section4_pt.ipynb"},{label:"Aws Studio",value:"https://studiolab.sagemaker.aws/import/github/huggingface/notebooks/blob/master/course/chapter8/section4_pt.ipynb"}]}}),Es=new M({}),zs=new hb({props:{id:"L-WSwUWde1U"}}),ws=new $({props:{code:`from datasets import load_dataset, load_metric
+import{S as db,i as cb,s as mb,e as l,k as p,w as c,t as a,M as fb,c as i,d as s,m as d,x as m,a as u,h as n,b as q,G as t,g as o,y as f,q as v,o as h,B as _,v as vb}from"../../chunks/vendor-hf-doc-builder.js";import{T as Ht}from"../../chunks/Tip-hf-doc-builder.js";import{Y as hb}from"../../chunks/Youtube-hf-doc-builder.js";import{I as M}from"../../chunks/IconCopyLink-hf-doc-builder.js";import{C as $}from"../../chunks/CodeBlock-hf-doc-builder.js";import{D as _b}from"../../chunks/DocNotebookDropdown-hf-doc-builder.js";import{F as bb}from"../../chunks/FrameworkSwitchCourse-hf-doc-builder.js";function qb(P){let b,E,g,j,y;return{c(){b=l("p"),E=a("\u270F\uFE0F "),g=l("em"),j=a("A votre tour !"),y=a(" V\xE9rifiez que tout semble correct avec le deuxi\xE8me \xE9l\xE9ment du jeu de donn\xE9es d\u2019entra\xEEnement.")},l(k){b=i(k,"P",{});var z=u(b);E=n(z,"\u270F\uFE0F "),g=i(z,"EM",{});var w=u(g);j=n(w,"A votre tour !"),w.forEach(s),y=n(z," V\xE9rifiez que tout semble correct avec le deuxi\xE8me \xE9l\xE9ment du jeu de donn\xE9es d\u2019entra\xEEnement."),z.forEach(s)},m(k,z){o(k,b,z),t(b,E),t(b,g),t(g,j),t(b,y)},d(k){k&&s(b)}}}function $b(P){let b,E,g,j,y;return{c(){b=l("p"),E=a("Dans la prochaine partie du cours, nous examinerons des techniques plus avanc\xE9es qui peuvent vous aider \xE0 r\xE9duire votre empreinte m\xE9moire et vous permettre de "),g=l("i"),j=a("finetuner"),y=a(" les plus grands mod\xE8les.")},l(k){b=i(k,"P",{});var z=u(b);E=n(z,"Dans la prochaine partie du cours, nous examinerons des techniques plus avanc\xE9es qui peuvent vous aider \xE0 r\xE9duire votre empreinte m\xE9moire et vous permettre de "),g=i(z,"I",{});var w=u(g);j=n(w,"finetuner"),w.forEach(s),y=n(z," les plus grands mod\xE8les."),z.forEach(s)},m(k,z){o(k,b,z),t(b,E),t(b,g),t(g,j),t(b,y)},d(k){k&&s(b)}}}function gb(P){let b,E,g,j,y,k,z,w;return{c(){b=l("p"),E=a("\u{1F4A1} Vous devriez toujours vous assurer que vous pouvez ex\xE9cuter "),g=l("code"),j=a("trainer.evaluate()"),y=a(" avant de lancer "),k=l("code"),z=a("trainer.train()"),w=a(", pour \xE9viter de gaspiller beaucoup de ressources de calcul avant de tomber sur une erreur.")},l(S){b=i(S,"P",{});var x=u(b);E=n(x,"\u{1F4A1} Vous devriez toujours vous assurer que vous pouvez ex\xE9cuter "),g=i(x,"CODE",{});var Z=u(g);j=n(Z,"trainer.evaluate()"),Z.forEach(s),y=n(x," avant de lancer "),k=i(x,"CODE",{});var N=u(k);z=n(N,"trainer.train()"),N.forEach(s),w=n(x,", pour \xE9viter de gaspiller beaucoup de ressources de calcul avant de tomber sur une erreur."),x.forEach(s)},m(S,x){o(S,b,x),t(b,E),t(b,g),t(g,j),t(b,y),t(b,k),t(k,z),t(b,w)},d(S){S&&s(b)}}}function kb(P){let b,E,g,j,y,k,z,w,S,x,Z;return{c(){b=l("p"),E=a("\u{1F4A1} Si vous utilisez une boucle d\u2019entra\xEEnement manuelle, les m\xEAmes \xE9tapes s\u2019appliquent pour d\xE9boguer votre pipeline d\u2019entra\xEEnement, mais il est plus facile de les s\xE9parer. Assurez-vous cependant de ne pas avoir oubli\xE9 le "),g=l("code"),j=a("model.eval()"),y=a(" ou le "),k=l("code"),z=a("model.train()"),w=a(" aux bons endroits, ou le "),S=l("code"),x=a("zero_grad()"),Z=a(" \xE0 chaque \xE9tape !")},l(N){b=i(N,"P",{});var C=u(b);E=n(C,"\u{1F4A1} Si vous utilisez une boucle d\u2019entra\xEEnement manuelle, les m\xEAmes \xE9tapes s\u2019appliquent pour d\xE9boguer votre pipeline d\u2019entra\xEEnement, mais il est plus facile de les s\xE9parer. Assurez-vous cependant de ne pas avoir oubli\xE9 le "),g=i(C,"CODE",{});var js=u(g);j=n(js,"model.eval()"),js.forEach(s),y=n(C," ou le "),k=i(C,"CODE",{});var L=u(k);z=n(L,"model.train()"),L.forEach(s),w=n(C," aux bons endroits, ou le "),S=i(C,"CODE",{});var Bt=u(S);x=n(Bt,"zero_grad()"),Bt.forEach(s),Z=n(C," \xE0 chaque \xE9tape !"),C.forEach(s)},m(N,C){o(N,b,C),t(b,E),t(b,g),t(g,j),t(b,y),t(b,k),t(k,z),t(b,w),t(b,S),t(S,x),t(b,Z)},d(N){N&&s(b)}}}function jb(P){let b,E;return{c(){b=l("p"),E=a("\u26A0\uFE0F Si vous effectuez un entra\xEEnement distribu\xE9, imprimez des \xE9chantillons de votre ensemble de donn\xE9es dans chaque processus et v\xE9rifiez par trois fois que vous obtenez la m\xEAme chose. Un bug courant consiste \xE0 avoir une source d\u2019al\xE9a dans la cr\xE9ation des donn\xE9es qui fait que chaque processus a une version diff\xE9rente du jeu de donn\xE9es.")},l(g){b=i(g,"P",{});var j=u(b);E=n(j,"\u26A0\uFE0F Si vous effectuez un entra\xEEnement distribu\xE9, imprimez des \xE9chantillons de votre ensemble de donn\xE9es dans chaque processus et v\xE9rifiez par trois fois que vous obtenez la m\xEAme chose. Un bug courant consiste \xE0 avoir une source d\u2019al\xE9a dans la cr\xE9ation des donn\xE9es qui fait que chaque processus a une version diff\xE9rente du jeu de donn\xE9es."),j.forEach(s)},m(g,j){o(g,b,j),t(b,E)},d(g){g&&s(b)}}}function Eb(P){let b,E;return{c(){b=l("p"),E=a("\u{1F4A1} Si vos donn\xE9es d\u2019entra\xEEnement ne sont pas \xE9quilibr\xE9es, veillez \xE0 cr\xE9er un batch de donn\xE9es d\u2019entra\xEEnement contenant toutes les \xE9tiquettes.")},l(g){b=i(g,"P",{});var j=u(b);E=n(j,"\u{1F4A1} Si vos donn\xE9es d\u2019entra\xEEnement ne sont pas \xE9quilibr\xE9es, veillez \xE0 cr\xE9er un batch de donn\xE9es d\u2019entra\xEEnement contenant toutes les \xE9tiquettes."),j.forEach(s)},m(g,j){o(g,b,j),t(b,E)},d(g){g&&s(b)}}}function zb(P){let b,E,g,j,y;return{c(){b=l("p"),E=a("\u26A0\uFE0F Vous devrez recr\xE9er votre mod\xE8le et votre "),g=l("code"),j=a("Trainer"),y=a(" apr\xE8s ce test, car le mod\xE8le obtenu ne sera probablement pas capable de r\xE9cup\xE9rer et d\u2019apprendre quelque chose d\u2019utile sur votre jeu de donn\xE9es complet.")},l(k){b=i(k,"P",{});var z=u(b);E=n(z,"\u26A0\uFE0F Vous devrez recr\xE9er votre mod\xE8le et votre "),g=i(z,"CODE",{});var w=u(g);j=n(w,"Trainer"),w.forEach(s),y=n(z," apr\xE8s ce test, car le mod\xE8le obtenu ne sera probablement pas capable de r\xE9cup\xE9rer et d\u2019apprendre quelque chose d\u2019utile sur votre jeu de donn\xE9es complet."),z.forEach(s)},m(k,z){o(k,b,z),t(b,E),t(b,g),t(g,j),t(b,y)},d(k){k&&s(b)}}}function yb(P){let b,E,g,j,y,k,z,w,S,x,Z,N,C,js,L,Bt,Or,Du,Tu,Yt,Su,Lu,Vr,Uu,Nu,Qn,ue,ge,Ir,Es,Mu,Fr,Ou,Zn,zs,Xn,X,Vu,Gr,Iu,Fu,Wr,Gu,Wu,eo,ke,Ru,Rr,Hu,Bu,so,ee,Yu,Hr,Ju,Ku,ys,Qu,Zu,to,ws,ro,Jt,Xu,ao,xs,no,pe,je,Br,Cs,ep,Yr,sp,oo,Ee,tp,Jr,rp,ap,lo,ze,np,Kr,op,lp,io,Ps,uo,As,po,se,ip,Qr,up,pp,Zr,dp,cp,co,A,mp,Xr,fp,vp,ea,hp,_p,sa,bp,qp,ta,$p,gp,ra,kp,jp,mo,Ds,fo,Kt,Ep,vo,Ts,ho,ye,zp,aa,yp,wp,_o,Ss,bo,Qt,xp,qo,we,Cp,na,Pp,Ap,$o,Ls,go,Us,ko,Zt,Dp,jo,Ns,Eo,Ms,zo,U,Tp,oa,Sp,Lp,la,Up,Np,ia,Mp,Op,ua,Vp,Ip,yo,Os,wo,Vs,xo,te,Fp,Is,Gp,Wp,pa,Rp,Hp,Co,xe,Bp,da,Yp,Jp,Po,Fs,Ao,Gs,Do,Ce,Kp,ca,Qp,Zp,To,Ws,So,Rs,Lo,Xt,Xp,Uo,Hs,No,Bs,Mo,re,ed,ma,sd,td,fa,rd,ad,Oo,Ys,Vo,Js,Io,ae,nd,va,od,ld,ha,id,ud,Fo,Pe,pd,_a,dd,cd,Go,Ae,Wo,er,md,Ro,sr,fd,Ho,de,De,ba,Ks,vd,qa,hd,Bo,D,_d,$a,bd,qd,ga,$d,gd,ka,kd,jd,ja,Ed,zd,Ea,yd,wd,Yo,Qs,Jo,ne,xd,za,Cd,Pd,ya,Ad,Dd,Ko,Zs,Qo,O,Td,wa,Sd,Ld,xa,Ud,Nd,Ca,Md,Od,Zo,Xs,Xo,et,el,V,Vd,Pa,Id,Fd,Aa,Gd,Wd,Da,Rd,Hd,sl,I,Bd,Ta,Yd,Jd,Sa,Kd,Qd,La,Zd,Xd,tl,st,rl,tr,ec,al,tt,nl,rr,sc,ol,ar,tc,ll,rt,il,T,rc,Ua,ac,nc,Na,oc,lc,Ma,ic,uc,Oa,pc,dc,Va,cc,mc,ul,at,pl,nr,fc,dl,or,vc,cl,ce,Te,Ia,nt,hc,Fa,_c,ml,lr,bc,fl,ot,vl,F,qc,Ga,$c,gc,Wa,kc,jc,Ra,Ec,zc,hl,Se,yc,Ha,wc,xc,_l,Le,Cc,Ba,Pc,Ac,bl,Ue,Dc,Ya,Tc,Sc,ql,lt,$l,it,gl,Ne,Lc,Ja,Uc,Nc,kl,ut,jl,pt,El,ir,Mc,zl,dt,yl,Me,Oc,Ka,Vc,Ic,wl,ct,xl,ur,Fc,Cl,mt,Pl,Oe,Gc,Qa,Wc,Rc,Al,me,Ve,Za,ft,Hc,Xa,Bc,Dl,pr,Yc,Tl,Ie,Jc,en,Kc,Qc,Sl,vt,Ll,dr,Zc,Ul,oe,Xc,sn,em,sm,tn,tm,rm,Nl,ht,Ml,Fe,am,rn,nm,om,Ol,fe,Ge,an,_t,lm,cr,im,nn,um,Vl,We,pm,on,dm,cm,Il,mr,mm,Fl,Re,Gl,ve,He,ln,bt,fm,un,vm,Wl,Be,hm,pn,_m,bm,Rl,qt,Hl,$t,Bl,fr,qm,Yl,Ye,$m,dn,gm,km,Jl,gt,Kl,kt,Ql,Je,Zl,vr,jm,Xl,jt,ei,Ke,Em,cn,zm,ym,si,Et,ti,G,wm,mn,xm,Cm,fn,Pm,Am,vn,Dm,Tm,ri,zt,ai,yt,ni,W,Sm,hn,Lm,Um,_n,Nm,Mm,bn,Om,Vm,oi,wt,li,xt,ii,Qe,Im,qn,Fm,Gm,ui,Ct,pi,Pt,di,hr,Wm,ci,_r,Rm,mi,At,fi,Ze,Hm,$n,Bm,Ym,vi,Xe,hi,he,es,gn,Dt,Jm,kn,Km,_i,br,Qm,bi,_e,ss,jn,Tt,Zm,En,Xm,qi,ts,ef,zn,sf,tf,$i,R,yn,rf,af,wn,nf,of,xn,lf,uf,Cn,pf,gi,rs,ki,as,df,Pn,cf,mf,ji,qr,ff,Ei,$r,vf,zi,be,ns,An,St,hf,Dn,_f,yi,gr,bf,wi,le,qf,Tn,$f,gf,Sn,kf,jf,xi,Lt,Ci,os,Pi,ls,Ef,Ln,zf,yf,Ai,Ut,Di,Nt,Ti,kr,wf,Si,jr,xf,Li,is,Ui,qe,us,Un,Mt,Cf,Nn,Pf,Ni,ps,Af,Mn,Df,Tf,Mi,ds,Sf,On,Lf,Uf,Oi,Er,Nf,Vi,$e,cs,Vn,Ot,Mf,In,Of,Ii,ms,Vf,Vt,If,Ff,Fi,zr,Gf,Gi,H,yr,It,Wf,Rf,Hf,wr,Ft,Bf,Yf,Jf,xr,Gt,Kf,Qf,Zf,Cr,Wt,Xf,ev,Wi,B,sv,Fn,tv,rv,Gn,av,nv,Wn,ov,lv,Ri;return g=new bb({props:{fw:P[0]}}),w=new M({}),C=new _b({props:{classNames:"absolute z-10 right-0 top-0",options:[{label:"Google Colab",value:"https://colab.research.google.com/github/huggingface/notebooks/blob/master/course/chapter8/section4_pt.ipynb"},{label:"Aws Studio",value:"https://studiolab.sagemaker.aws/import/github/huggingface/notebooks/blob/master/course/chapter8/section4_pt.ipynb"}]}}),Es=new M({}),zs=new hb({props:{id:"L-WSwUWde1U"}}),ws=new $({props:{code:`from datasets import load_dataset
+import evaluate
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -28,7 +29,7 @@ args = TrainingArguments(
     weight_decay=0.01,
 )
 
-metric = load_metric("glue", "mnli")
+metric = evaluate.load("glue", "mnli")
 
 
 def compute_metrics(eval_pred):
@@ -43,7 +44,8 @@ trainer = Trainer(
     eval_dataset=raw_datasets["validation_matched"],
     compute_metrics=compute_metrics,
 )
-trainer.train()`,highlighted:`<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset, load_metric
+trainer.train()`,highlighted:`<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-keyword">import</span> evaluate
 <span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -73,7 +75,7 @@ args = TrainingArguments(
     weight_decay=<span class="hljs-number">0.01</span>,
 )
 
-metric = load_metric(<span class="hljs-string">&quot;glue&quot;</span>, <span class="hljs-string">&quot;mnli&quot;</span>)
+metric = evaluate.load(<span class="hljs-string">&quot;glue&quot;</span>, <span class="hljs-string">&quot;mnli&quot;</span>)
 
 
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">compute_metrics</span>(<span class="hljs-params">eval_pred</span>):
@@ -94,7 +96,8 @@ trainer.train()`}}),xs=new $({props:{code:"'ValueError: You have to specify eith
  'premise': 'Conceptually cream skimming has two basic dimensions - product and geography.'}`,highlighted:`{<span class="hljs-string">&#x27;hypothesis&#x27;</span>: <span class="hljs-string">&#x27;Product and geography are what make cream skimming work. &#x27;</span>,
  <span class="hljs-string">&#x27;idx&#x27;</span>: <span class="hljs-number">0</span>,
  <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-number">1</span>,
- <span class="hljs-string">&#x27;premise&#x27;</span>: <span class="hljs-string">&#x27;Conceptually cream skimming has two basic dimensions - product and geography.&#x27;</span>}`}}),Ds=new $({props:{code:`from datasets import load_dataset, load_metric
+ <span class="hljs-string">&#x27;premise&#x27;</span>: <span class="hljs-string">&#x27;Conceptually cream skimming has two basic dimensions - product and geography.&#x27;</span>}`}}),Ds=new $({props:{code:`from datasets import load_dataset
+import evaluate
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -124,7 +127,7 @@ args = TrainingArguments(
     weight_decay=0.01,
 )
 
-metric = load_metric("glue", "mnli")
+metric = evaluate.load("glue", "mnli")
 
 
 def compute_metrics(eval_pred):
@@ -139,7 +142,8 @@ trainer = Trainer(
     eval_dataset=tokenized_datasets["validation_matched"],
     compute_metrics=compute_metrics,
 )
-trainer.train()`,highlighted:`<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset, load_metric
+trainer.train()`,highlighted:`<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-keyword">import</span> evaluate
 <span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -169,7 +173,7 @@ args = TrainingArguments(
     weight_decay=<span class="hljs-number">0.01</span>,
 )
 
-metric = load_metric(<span class="hljs-string">&quot;glue&quot;</span>, <span class="hljs-string">&quot;mnli&quot;</span>)
+metric = evaluate.load(<span class="hljs-string">&quot;glue&quot;</span>, <span class="hljs-string">&quot;mnli&quot;</span>)
 
 
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">compute_metrics</span>(<span class="hljs-params">eval_pred</span>):
@@ -216,7 +220,8 @@ ValueError: expected sequence of length 45 at dim 1 (got 76)`,highlighted:`~/git
 
 ValueError: expected sequence of length <span class="hljs-number">45</span> at dim <span class="hljs-number">1</span> (got <span class="hljs-number">76</span>)`}}),Xs=new $({props:{code:`data_collator = trainer.get_train_dataloader().collate_fn
 data_collator`,highlighted:`data_collator = trainer.get_train_dataloader().collate_fn
-data_collator`}}),et=new $({props:{code:"<function transformers.data.data_collator.default_data_collator(features: List[InputDataClass], return_tensors='pt') -> Dict[str, Any]>",highlighted:'&lt;function transformers.data.data_collator.default_data_collator(features: <span class="hljs-type">List</span>[InputDataClass], return_tensors=<span class="hljs-string">&#x27;pt&#x27;</span>) -&gt; <span class="hljs-type">Dict</span>[<span class="hljs-built_in">str</span>, <span class="hljs-type">Any</span>]&gt;'}}),st=new $({props:{code:`from datasets import load_dataset, load_metric
+data_collator`}}),et=new $({props:{code:"<function transformers.data.data_collator.default_data_collator(features: List[InputDataClass], return_tensors='pt') -> Dict[str, Any]>",highlighted:'&lt;function transformers.data.data_collator.default_data_collator(features: <span class="hljs-type">List</span>[InputDataClass], return_tensors=<span class="hljs-string">&#x27;pt&#x27;</span>) -&gt; <span class="hljs-type">Dict</span>[<span class="hljs-built_in">str</span>, <span class="hljs-type">Any</span>]&gt;'}}),st=new $({props:{code:`from datasets import load_dataset
+import evaluate
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -247,7 +252,7 @@ args = TrainingArguments(
     weight_decay=0.01,
 )
 
-metric = load_metric("glue", "mnli")
+metric = evaluate.load("glue", "mnli")
 
 
 def compute_metrics(eval_pred):
@@ -266,7 +271,8 @@ trainer = Trainer(
     data_collator=data_collator,
     tokenizer=tokenizer,
 )
-trainer.train()`,highlighted:`<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset, load_metric
+trainer.train()`,highlighted:`<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-keyword">import</span> evaluate
 <span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -297,7 +303,7 @@ args = TrainingArguments(
     weight_decay=<span class="hljs-number">0.01</span>,
 )
 
-metric = load_metric(<span class="hljs-string">&quot;glue&quot;</span>, <span class="hljs-string">&quot;mnli&quot;</span>)
+metric = evaluate.load(<span class="hljs-string">&quot;glue&quot;</span>, <span class="hljs-string">&quot;mnli&quot;</span>)
 
 
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">compute_metrics</span>(<span class="hljs-params">eval_pred</span>):
@@ -338,7 +344,8 @@ IndexError: Target 2 is out of bounds.`,highlighted:`~/.pyenv/versions/<span cla
    <span class="hljs-number">2389</span>     <span class="hljs-keyword">elif</span> dim == <span class="hljs-number">4</span>:
    <span class="hljs-number">2390</span>         ret = torch._C._nn.nll_loss2d(<span class="hljs-built_in">input</span>, target, weight, _Reduction.get_enum(reduction), ignore_index)
 
-IndexError: Target <span class="hljs-number">2</span> <span class="hljs-keyword">is</span> out of bounds.`}}),ut=new $({props:{code:"trainer.model.config.num_labels",highlighted:"trainer.model.config.num_labels"}}),pt=new $({props:{code:"2",highlighted:'<span class="hljs-number">2</span>'}}),dt=new $({props:{code:`from datasets import load_dataset, load_metric
+IndexError: Target <span class="hljs-number">2</span> <span class="hljs-keyword">is</span> out of bounds.`}}),ut=new $({props:{code:"trainer.model.config.num_labels",highlighted:"trainer.model.config.num_labels"}}),pt=new $({props:{code:"2",highlighted:'<span class="hljs-number">2</span>'}}),dt=new $({props:{code:`from datasets import load_dataset
+import evaluate
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -369,7 +376,7 @@ args = TrainingArguments(
     weight_decay=0.01,
 )
 
-metric = load_metric("glue", "mnli")
+metric = evaluate.load("glue", "mnli")
 
 
 def compute_metrics(eval_pred):
@@ -387,7 +394,8 @@ trainer = Trainer(
     compute_metrics=compute_metrics,
     data_collator=data_collator,
     tokenizer=tokenizer,
-)`,highlighted:`<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset, load_metric
+)`,highlighted:`<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-keyword">import</span> evaluate
 <span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -418,7 +426,7 @@ args = TrainingArguments(
     weight_decay=<span class="hljs-number">0.01</span>,
 )
 
-metric = load_metric(<span class="hljs-string">&quot;glue&quot;</span>, <span class="hljs-string">&quot;mnli&quot;</span>)
+metric = evaluate.load(<span class="hljs-string">&quot;glue&quot;</span>, <span class="hljs-string">&quot;mnli&quot;</span>)
 
 
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">compute_metrics</span>(<span class="hljs-params">eval_pred</span>):
@@ -505,7 +513,8 @@ compute_metrics((predictions, labels))`,highlighted:`<span class="hljs-keyword">
 
 
 compute_metrics((predictions, labels))`}}),Pt=new $({props:{code:"{'accuracy': 0.625}",highlighted:'{<span class="hljs-string">&#x27;accuracy&#x27;</span>: <span class="hljs-number">0.625</span>}'}}),At=new $({props:{code:`import numpy as np
-from datasets import load_dataset, load_metric
+from datasets import load_dataset
+import evaluate
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -536,7 +545,7 @@ args = TrainingArguments(
     weight_decay=0.01,
 )
 
-metric = load_metric("glue", "mnli")
+metric = evaluate.load("glue", "mnli")
 
 
 def compute_metrics(eval_pred):
@@ -557,7 +566,8 @@ trainer = Trainer(
     tokenizer=tokenizer,
 )
 trainer.train()`,highlighted:`<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
-<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset, load_metric
+<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_dataset
+<span class="hljs-keyword">import</span> evaluate
 <span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -588,7 +598,7 @@ args = TrainingArguments(
     weight_decay=<span class="hljs-number">0.01</span>,
 )
 
-metric = load_metric(<span class="hljs-string">&quot;glue&quot;</span>, <span class="hljs-string">&quot;mnli&quot;</span>)
+metric = evaluate.load(<span class="hljs-string">&quot;glue&quot;</span>, <span class="hljs-string">&quot;mnli&quot;</span>)
 
 
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">compute_metrics</span>(<span class="hljs-params">eval_pred</span>):

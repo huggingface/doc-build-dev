@@ -413,7 +413,9 @@ sentence[start:end]<!-- HTML_TAG_END --></pre></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PreTrainedTokenizerFast
 
 wrapped_tokenizer = PreTrainedTokenizerFast(
-    tokenizer_object=tokenizer, bos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>, eos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
+    tokenizer_object=tokenizer,
+    bos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
+    eos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
 )<!-- HTML_TAG_END --></pre></div>
 <p>ou :</p>
 
@@ -572,10 +574,10 @@ wrapped_tokenizer = XLNetTokenizerFast(tokenizer_object=tokenizer)<!-- HTML_TAG_
 <p>Maintenant que vous avez vu comment les différentes briques sont utilisées pour construire des <em>tokenizers</em> existants, vous devriez être capable d’écrire n’importe quel <em>tokenizer</em> que vous voulez avec la bibliothèque 🤗 <em>Tokenizers</em> et pouvoir l’utiliser dans 🤗 <em>Transformers</em>.</p>
 
 
-		<script type="module" data-hydrate="1wf52sr">
+		<script type="module" data-hydrate="s24wmj">
 		import { start } from "/docs/course/pr_281/fr/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1wf52sr"]').parentNode,
+			target: document.querySelector('[data-hydrate="s24wmj"]').parentNode,
 			paths: {"base":"/docs/course/pr_281/fr","assets":"/docs/course/pr_281/fr"},
 			session: {},
 			route: false,

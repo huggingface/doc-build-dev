@@ -364,7 +364,8 @@ for epoch in range(num_train_epochs):
     for step, batch in enumerate(eval_dataloader):
         with torch.no_grad():
             generated_tokens = accelerator.unwrap_model(model).generate(
-                batch["input_ids"], attention_mask=batch["attention_mask"],
+                batch["input_ids"],
+                attention_mask=batch["attention_mask"],
             )
 
             generated_tokens = accelerator.pad_across_processes(
@@ -434,7 +435,8 @@ progress_bar = tqdm(<span class="hljs-built_in">range</span>(num_training_steps)
     <span class="hljs-keyword">for</span> step, batch <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(eval_dataloader):
         <span class="hljs-keyword">with</span> torch.no_grad():
             generated_tokens = accelerator.unwrap_model(model).generate(
-                batch[<span class="hljs-string">&quot;input_ids&quot;</span>], attention_mask=batch[<span class="hljs-string">&quot;attention_mask&quot;</span>],
+                batch[<span class="hljs-string">&quot;input_ids&quot;</span>],
+                attention_mask=batch[<span class="hljs-string">&quot;attention_mask&quot;</span>],
             )
 
             generated_tokens = accelerator.pad_across_processes(
@@ -712,11 +714,11 @@ max_target_length = <span class="hljs-number">30</span>
     model_inputs[<span class="hljs-string">&quot;labels&quot;</span>] = labels[<span class="hljs-string">&quot;input_ids&quot;</span>]
     <span class="hljs-keyword">return</span> model_inputs`}}),pl=new z({props:{code:"tokenized_datasets = books_dataset.map(preprocess_function, batched=True)",highlighted:'tokenized_datasets = books_dataset.<span class="hljs-built_in">map</span>(preprocess_function, batched=<span class="hljs-literal">True</span>)'}}),ht=new zt({props:{$$slots:{default:[vf]},$$scope:{ctx:B}}}),ml=new wu({props:{id:"TMshhnrEXlg"}}),ul=new z({props:{code:`generated_summary = "I absolutely loved reading the Hunger Games"
 reference_summary = "I loved reading the Hunger Games"`,highlighted:`generated_summary = <span class="hljs-string">&quot;I absolutely loved reading the Hunger Games&quot;</span>
-reference_summary = <span class="hljs-string">&quot;I loved reading the Hunger Games&quot;</span>`}}),_t=new zt({props:{$$slots:{default:[$f]},$$scope:{ctx:B}}}),fl=new z({props:{code:"!pip install rouge_score",highlighted:"!pip install rouge_score"}}),_l=new z({props:{code:`from datasets import load_metric
+reference_summary = <span class="hljs-string">&quot;I loved reading the Hunger Games&quot;</span>`}}),_t=new zt({props:{$$slots:{default:[$f]},$$scope:{ctx:B}}}),fl=new z({props:{code:"!pip install rouge_score",highlighted:"!pip install rouge_score"}}),_l=new z({props:{code:`import evaluate
 
-rouge_score = load_metric("rouge")`,highlighted:`<span class="hljs-keyword">from</span> datasets <span class="hljs-keyword">import</span> load_metric
+rouge_score = evaluate.load("rouge")`,highlighted:`<span class="hljs-keyword">import</span> evaluate
 
-rouge_score = load_metric(<span class="hljs-string">&quot;rouge&quot;</span>)`}}),bl=new z({props:{code:`scores = rouge_score.compute(
+rouge_score = evaluate.load(<span class="hljs-string">&quot;rouge&quot;</span>)`}}),bl=new z({props:{code:`scores = rouge_score.compute(
     predictions=[generated_summary], references=[reference_summary]
 )
 scores`,highlighted:`scores = rouge_score.compute(
