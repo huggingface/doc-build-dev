@@ -53,7 +53,7 @@
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Target image sizes (height, width) to rescale box predictions [batch_size, 2]</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>target_sizes = torch.Tensor([[<span class="hljs-number">480</span>, <span class="hljs-number">640</span>]])
+<span class="hljs-meta">&gt;&gt;&gt; </span>target_sizes = torch.Tensor([image.size[::-<span class="hljs-number">1</span>]])
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Convert outputs (bounding boxes and class logits) to COCO API</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>results = processor.post_process(outputs=outputs, target_sizes=target_sizes)
 
@@ -1302,7 +1302,7 @@ the latter silently ignores them.</p></div>
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Target image sizes (height, width) to rescale box predictions [batch_size, 2]</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>target_sizes = torch.Tensor([[<span class="hljs-number">480</span>, <span class="hljs-number">640</span>]])
+<span class="hljs-meta">&gt;&gt;&gt; </span>target_sizes = torch.Tensor([image.size[::-<span class="hljs-number">1</span>]])
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Convert outputs (bounding boxes and class logits) to COCO API</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>results = processor.post_process(outputs=outputs, target_sizes=target_sizes)
 
@@ -1319,10 +1319,10 @@ Detected a photo of a cat <span class="hljs-keyword">with</span> confidence <spa
 Detected a photo of a cat <span class="hljs-keyword">with</span> confidence <span class="hljs-number">0.298</span> at location [<span class="hljs-number">348.06</span>, <span class="hljs-number">20.56</span>, <span class="hljs-number">642.33</span>, <span class="hljs-number">372.61</span>]<!-- HTML_TAG_END --></pre></div></div></div></div>
 
 
-		<script type="module" data-hydrate="17fyqu9">
+		<script type="module" data-hydrate="1qoo141">
 		import { start } from "/docs/transformers/pr_18257/en/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="17fyqu9"]').parentNode,
+			target: document.querySelector('[data-hydrate="1qoo141"]').parentNode,
 			paths: {"base":"/docs/transformers/pr_18257/en","assets":"/docs/transformers/pr_18257/en"},
 			session: {},
 			route: false,
