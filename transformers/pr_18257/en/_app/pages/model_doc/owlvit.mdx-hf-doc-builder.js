@@ -173,7 +173,7 @@ inputs = processor(text=texts, images=image, return_tensors="pt")
 outputs = model(**inputs)
 
 # Target image sizes (height, width) to rescale box predictions [batch_size, 2]
-target_sizes = torch.Tensor([[480, 640]])
+target_sizes = torch.Tensor([image.size[::-1]])
 # Convert outputs (bounding boxes and class logits) to COCO API
 results = processor.post_process(outputs=outputs, target_sizes=target_sizes)
 
@@ -200,7 +200,7 @@ for box, score, label in zip(boxes, scores, labels):
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Target image sizes (height, width) to rescale box predictions [batch_size, 2]</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>target_sizes = torch.Tensor([[<span class="hljs-number">480</span>, <span class="hljs-number">640</span>]])
+<span class="hljs-meta">&gt;&gt;&gt; </span>target_sizes = torch.Tensor([image.size[::-<span class="hljs-number">1</span>]])
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Convert outputs (bounding boxes and class logits) to COCO API</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>results = processor.post_process(outputs=outputs, target_sizes=target_sizes)
 
@@ -230,7 +230,7 @@ inputs = processor(text=texts, images=image, return_tensors="pt")
 outputs = model(**inputs)
 
 # Target image sizes (height, width) to rescale box predictions [batch_size, 2]
-target_sizes = torch.Tensor([[480, 640]])
+target_sizes = torch.Tensor([image.size[::-1]])
 # Convert outputs (bounding boxes and class logits) to COCO API
 results = processor.post_process(outputs=outputs, target_sizes=target_sizes)
 
@@ -258,7 +258,7 @@ for box, score, label in zip(boxes, scores, labels):
 <span class="hljs-meta">&gt;&gt;&gt; </span>outputs = model(**inputs)
 
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Target image sizes (height, width) to rescale box predictions [batch_size, 2]</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>target_sizes = torch.Tensor([[<span class="hljs-number">480</span>, <span class="hljs-number">640</span>]])
+<span class="hljs-meta">&gt;&gt;&gt; </span>target_sizes = torch.Tensor([image.size[::-<span class="hljs-number">1</span>]])
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Convert outputs (bounding boxes and class logits) to COCO API</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>results = processor.post_process(outputs=outputs, target_sizes=target_sizes)
 
