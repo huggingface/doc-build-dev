@@ -118,12 +118,18 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 
 classifier = pipeline("sentiment-analysis")
 classifier(
-    ["I've been waiting for a HuggingFace course my whole life.", "I hate this so much!",]
+    [
+        "I've been waiting for a HuggingFace course my whole life.",
+        "I hate this so much!",
+    ]
 )`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> pipeline
 
 classifier = pipeline(<span class="hljs-string">&quot;sentiment-analysis&quot;</span>)
 classifier(
-    [<span class="hljs-string">&quot;I&#x27;ve been waiting for a HuggingFace course my whole life.&quot;</span>, <span class="hljs-string">&quot;I hate this so much!&quot;</span>,]
+    [
+        <span class="hljs-string">&quot;I&#x27;ve been waiting for a HuggingFace course my whole life.&quot;</span>,
+        <span class="hljs-string">&quot;I hate this so much!&quot;</span>,
+    ]
 )`}}),Oe=new I({props:{code:`[{'label': 'POSITIVE', 'score': 0.9598047137260437},
  {'label': 'NEGATIVE', 'score': 0.9994558095932007}]`,highlighted:`[{<span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;POSITIVE&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.9598047137260437</span>},
  {<span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;NEGATIVE&#x27;</span>, <span class="hljs-string">&#x27;score&#x27;</span>: <span class="hljs-number">0.9994558095932007</span>}]`}}),Be=new I({props:{code:`from transformers import AutoTokenizer

@@ -432,7 +432,9 @@ sentence[start:end]<!-- HTML_TAG_END --></pre></div>
 	<pre><!-- HTML_TAG_START --><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PreTrainedTokenizerFast
 
 wrapped_tokenizer = PreTrainedTokenizerFast(
-    tokenizer_object=tokenizer, bos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>, eos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
+    tokenizer_object=tokenizer,
+    bos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
+    eos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
 )<!-- HTML_TAG_END --></pre></div>
 <p>หรือ :</p>
 
@@ -596,10 +598,10 @@ wrapped_tokenizer = XLNetTokenizerFast(tokenizer_object=tokenizer)<!-- HTML_TAG_
 <p>ตอนนี้ คุณก็ได้เรียนรู้ขั้นตอนในการสร้าง tokenizer ขึ้นมาเองแล้ว โดยการใช้เครื่องมือจาก 🤗 Tokenizers library และได้เรียนวิธีการนำ tokenizer ของคุณไปใช้ใน 🤗 Transformers อีกด้วย</p>
 
 
-		<script type="module" data-hydrate="6qvz1g">
+		<script type="module" data-hydrate="djk3ms">
 		import { start } from "/docs/course/pr_281/th/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="6qvz1g"]').parentNode,
+			target: document.querySelector('[data-hydrate="djk3ms"]').parentNode,
 			paths: {"base":"/docs/course/pr_281/th","assets":"/docs/course/pr_281/th"},
 			session: {},
 			route: false,

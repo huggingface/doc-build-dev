@@ -39,7 +39,10 @@
 
 classifier = pipeline(<span class="hljs-string">&quot;sentiment-analysis&quot;</span>)
 classifier(
-    [<span class="hljs-string">&quot;I&#x27;ve been waiting for a HuggingFace course my whole life.&quot;</span>, <span class="hljs-string">&quot;I hate this so much!&quot;</span>,]
+    [
+        <span class="hljs-string">&quot;I&#x27;ve been waiting for a HuggingFace course my whole life.&quot;</span>,
+        <span class="hljs-string">&quot;I hate this so much!&quot;</span>,
+    ]
 )<!-- HTML_TAG_END --></pre></div>
 <p>获得:</p>
 
@@ -210,10 +213,10 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>试试看！</strong> 选择两个（或更多）你自己的文本并在管道中运行它们。然后自己复制在这里看到的步骤，并检查是否获得相同的结果！</p></div>
 
 
-		<script type="module" data-hydrate="1lryak9">
+		<script type="module" data-hydrate="cysw6r">
 		import { start } from "/docs/course/pr_281/zh-CN/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="1lryak9"]').parentNode,
+			target: document.querySelector('[data-hydrate="cysw6r"]').parentNode,
 			paths: {"base":"/docs/course/pr_281/zh-CN","assets":"/docs/course/pr_281/zh-CN"},
 			session: {},
 			route: false,

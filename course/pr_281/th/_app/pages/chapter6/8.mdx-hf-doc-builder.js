@@ -123,11 +123,15 @@ start, end = encoding.offsets[<span class="hljs-number">4</span>]
 sentence[start:end]`}}),wt=new z({props:{code:"' test'",highlighted:'<span class="hljs-string">&#x27; test&#x27;</span>'}}),qt=new z({props:{code:"tokenizer.decoder = decoders.ByteLevel()",highlighted:"tokenizer.decoder = decoders.ByteLevel()"}}),Tt=new z({props:{code:"tokenizer.decode(encoding.ids)",highlighted:"tokenizer.decode(encoding.ids)"}}),Dt=new z({props:{code:`"Let's test this tokenizer."`,highlighted:'<span class="hljs-string">&quot;Let&#x27;s test this tokenizer.&quot;</span>'}}),Ct=new z({props:{code:`from transformers import PreTrainedTokenizerFast
 
 wrapped_tokenizer = PreTrainedTokenizerFast(
-    tokenizer_object=tokenizer, bos_token="<|endoftext|>", eos_token="<|endoftext|>",
+    tokenizer_object=tokenizer,
+    bos_token="<|endoftext|>",
+    eos_token="<|endoftext|>",
 )`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> PreTrainedTokenizerFast
 
 wrapped_tokenizer = PreTrainedTokenizerFast(
-    tokenizer_object=tokenizer, bos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>, eos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
+    tokenizer_object=tokenizer,
+    bos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
+    eos_token=<span class="hljs-string">&quot;&lt;|endoftext|&gt;&quot;</span>,
 )`}}),yt=new z({props:{code:`from transformers import GPT2TokenizerFast
 
 wrapped_tokenizer = GPT2TokenizerFast(tokenizer_object=tokenizer)`,highlighted:`<span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> GPT2TokenizerFast

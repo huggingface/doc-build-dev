@@ -43,7 +43,10 @@
 
 classifier = pipeline(<span class="hljs-string">&quot;sentiment-analysis&quot;</span>)
 classifier(
-    [<span class="hljs-string">&quot;I&#x27;ve been waiting for a HuggingFace course my whole life.&quot;</span>, <span class="hljs-string">&quot;I hate this so much!&quot;</span>,]
+    [
+        <span class="hljs-string">&quot;I&#x27;ve been waiting for a HuggingFace course my whole life.&quot;</span>,
+        <span class="hljs-string">&quot;I hate this so much!&quot;</span>,
+    ]
 )<!-- HTML_TAG_END --></pre></div>
 <p>tendo o resultado:</p>
 
@@ -229,10 +232,10 @@ predictions = torch.nn.functional.softmax(outputs.logits, dim=-<span class="hljs
 <div class="course-tip  bg-gradient-to-br dark:bg-gradient-to-r before:border-green-500 dark:before:border-green-800 from-green-50 dark:from-gray-900 to-white dark:to-gray-950 border border-green-50 text-green-700 dark:text-gray-400"><p>✏️ <strong>Experimente!</strong> Escolha duas (ou mais) textos próprios e passe-os através do pipeline <code>sentiment-analysis</code>. Em seguida, replique as etapas que você mesmo viu aqui e verifique se você obtém os mesmos resultados!</p></div>
 
 
-		<script type="module" data-hydrate="9248yq">
+		<script type="module" data-hydrate="zpgkh4">
 		import { start } from "/docs/course/pr_281/pt/_app/start-hf-doc-builder.js";
 		start({
-			target: document.querySelector('[data-hydrate="9248yq"]').parentNode,
+			target: document.querySelector('[data-hydrate="zpgkh4"]').parentNode,
 			paths: {"base":"/docs/course/pr_281/pt","assets":"/docs/course/pr_281/pt"},
 			session: {},
 			route: false,

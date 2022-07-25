@@ -23,9 +23,9 @@ print(f"RAM used: {psutil.Process().memory_info().rss / (1024 * 1024):.2f} MB")`
 
 <span class="hljs-comment"># Process.memory_info is expressed in bytes, so convert to megabytes</span>
 <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;RAM used: <span class="hljs-subst">{psutil.Process().memory_info().rss / (<span class="hljs-number">1024</span> * <span class="hljs-number">1024</span>):<span class="hljs-number">.2</span>f}</span> MB&quot;</span>)`}}),Le=new q({props:{code:"RAM used: 5678.33 MB",highlighted:'RAM used: <span class="hljs-number">5678.33</span> MB'}}),Ue=new q({props:{code:`print(f"Number of files in dataset : {pubmed_dataset.dataset_size}")
-size_gb = pubmed_dataset.dataset_size / (1024 ** 3)
+size_gb = pubmed_dataset.dataset_size / (1024**3)
 print(f"Dataset size (cache file) : {size_gb:.2f} GB")`,highlighted:`<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Number of files in dataset : <span class="hljs-subst">{pubmed_dataset.dataset_size}</span>&quot;</span>)
-size_gb = pubmed_dataset.dataset_size / (<span class="hljs-number">1024</span> ** <span class="hljs-number">3</span>)
+size_gb = pubmed_dataset.dataset_size / (<span class="hljs-number">1024</span>**<span class="hljs-number">3</span>)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Dataset size (cache file) : <span class="hljs-subst">{size_gb:<span class="hljs-number">.2</span>f}</span> GB&quot;</span>)`}}),He=new q({props:{code:`Number of files in dataset : 20979437051
 Dataset size (cache file) : 19.54 GB`,highlighted:`Number of files <span class="hljs-keyword">in</span> dataset : <span class="hljs-number">20979437051</span>
 Dataset size (cache file) : <span class="hljs-number">19.54</span> GB`}}),ue=new xs({props:{$$slots:{default:[bi]},$$scope:{ctx:U}}}),Ye=new q({props:{code:`import timeit
